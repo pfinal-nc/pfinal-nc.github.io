@@ -10,7 +10,7 @@
     <meta name="description" content="php开发需要了解进程和线程，因为也会遇到多线程的开发。那什么是进程和线程呢？ 进程 进程是程序执行是的一个实例，进程能够分配给cpu和内存等资源。进程一般包括指令集和系统资源，其中指令集就是你的代码，系统资源就是指cpu、内存以及I&#x2F;O等。  线程 线程是进程的一个执行流，线程不能分配系统资源，它是进程的一部分，比进程更小的独立运行的单位。  进程和线程的关系 进程就像地主，有土地（系">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PHP进程线程解析">
-<meta property="og:url" content="http://example.com/2022/07/04/PHP%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E8%A7%A3%E6%9E%90/index.html">
+<meta property="og:url" content="https://friday-go.icu/2022/07/04/PHP%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E8%A7%A3%E6%9E%90/index.html">
 <meta property="og:site_name" content="PFinalClub">
 <meta property="og:description" content="php开发需要了解进程和线程，因为也会遇到多线程的开发。那什么是进程和线程呢？ 进程 进程是程序执行是的一个实例，进程能够分配给cpu和内存等资源。进程一般包括指令集和系统资源，其中指令集就是你的代码，系统资源就是指cpu、内存以及I&#x2F;O等。  线程 线程是进程的一个执行流，线程不能分配系统资源，它是进程的一部分，比进程更小的独立运行的单位。  进程和线程的关系 进程就像地主，有土地（系">
 <meta property="og:locale" content="zh_CN">
@@ -98,17 +98,17 @@
     <br/>
     <div id="share" style="display: none">
       <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2022/07/04/PHP%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E8%A7%A3%E6%9E%90/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2022/07/04/PHP%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E8%A7%A3%E6%9E%90/&text=PHP进程线程解析"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2022/07/04/PHP%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E8%A7%A3%E6%9E%90/&title=PHP进程线程解析"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2022/07/04/PHP%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E8%A7%A3%E6%9E%90/&is_video=false&description=PHP进程线程解析"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=PHP进程线程解析&body=Check out this article: http://example.com/2022/07/04/PHP%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E8%A7%A3%E6%9E%90/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2022/07/04/PHP%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E8%A7%A3%E6%9E%90/&title=PHP进程线程解析"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2022/07/04/PHP%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E8%A7%A3%E6%9E%90/&title=PHP进程线程解析"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2022/07/04/PHP%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E8%A7%A3%E6%9E%90/&title=PHP进程线程解析"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2022/07/04/PHP%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E8%A7%A3%E6%9E%90/&title=PHP进程线程解析"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2022/07/04/PHP%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E8%A7%A3%E6%9E%90/&name=PHP进程线程解析&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2022/07/04/PHP%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E8%A7%A3%E6%9E%90/&t=PHP进程线程解析"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://friday-go.icu/2022/07/04/PHP%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E8%A7%A3%E6%9E%90/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://friday-go.icu/2022/07/04/PHP%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E8%A7%A3%E6%9E%90/&text=PHP进程线程解析"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://friday-go.icu/2022/07/04/PHP%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E8%A7%A3%E6%9E%90/&title=PHP进程线程解析"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://friday-go.icu/2022/07/04/PHP%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E8%A7%A3%E6%9E%90/&is_video=false&description=PHP进程线程解析"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=PHP进程线程解析&body=Check out this article: https://friday-go.icu/2022/07/04/PHP%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E8%A7%A3%E6%9E%90/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://friday-go.icu/2022/07/04/PHP%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E8%A7%A3%E6%9E%90/&title=PHP进程线程解析"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://friday-go.icu/2022/07/04/PHP%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E8%A7%A3%E6%9E%90/&title=PHP进程线程解析"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://friday-go.icu/2022/07/04/PHP%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E8%A7%A3%E6%9E%90/&title=PHP进程线程解析"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://friday-go.icu/2022/07/04/PHP%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E8%A7%A3%E6%9E%90/&title=PHP进程线程解析"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://friday-go.icu/2022/07/04/PHP%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E8%A7%A3%E6%9E%90/&name=PHP进程线程解析&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://friday-go.icu/2022/07/04/PHP%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E8%A7%A3%E6%9E%90/&t=PHP进程线程解析"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -236,17 +236,17 @@
 
     <div id="share-footer" style="display: none">
       <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2022/07/04/PHP%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E8%A7%A3%E6%9E%90/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2022/07/04/PHP%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E8%A7%A3%E6%9E%90/&text=PHP进程线程解析"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2022/07/04/PHP%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E8%A7%A3%E6%9E%90/&title=PHP进程线程解析"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2022/07/04/PHP%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E8%A7%A3%E6%9E%90/&is_video=false&description=PHP进程线程解析"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=PHP进程线程解析&body=Check out this article: http://example.com/2022/07/04/PHP%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E8%A7%A3%E6%9E%90/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2022/07/04/PHP%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E8%A7%A3%E6%9E%90/&title=PHP进程线程解析"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2022/07/04/PHP%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E8%A7%A3%E6%9E%90/&title=PHP进程线程解析"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2022/07/04/PHP%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E8%A7%A3%E6%9E%90/&title=PHP进程线程解析"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2022/07/04/PHP%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E8%A7%A3%E6%9E%90/&title=PHP进程线程解析"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2022/07/04/PHP%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E8%A7%A3%E6%9E%90/&name=PHP进程线程解析&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2022/07/04/PHP%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E8%A7%A3%E6%9E%90/&t=PHP进程线程解析"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://friday-go.icu/2022/07/04/PHP%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E8%A7%A3%E6%9E%90/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://friday-go.icu/2022/07/04/PHP%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E8%A7%A3%E6%9E%90/&text=PHP进程线程解析"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://friday-go.icu/2022/07/04/PHP%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E8%A7%A3%E6%9E%90/&title=PHP进程线程解析"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://friday-go.icu/2022/07/04/PHP%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E8%A7%A3%E6%9E%90/&is_video=false&description=PHP进程线程解析"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=PHP进程线程解析&body=Check out this article: https://friday-go.icu/2022/07/04/PHP%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E8%A7%A3%E6%9E%90/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://friday-go.icu/2022/07/04/PHP%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E8%A7%A3%E6%9E%90/&title=PHP进程线程解析"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://friday-go.icu/2022/07/04/PHP%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E8%A7%A3%E6%9E%90/&title=PHP进程线程解析"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://friday-go.icu/2022/07/04/PHP%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E8%A7%A3%E6%9E%90/&title=PHP进程线程解析"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://friday-go.icu/2022/07/04/PHP%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E8%A7%A3%E6%9E%90/&title=PHP进程线程解析"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://friday-go.icu/2022/07/04/PHP%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E8%A7%A3%E6%9E%90/&name=PHP进程线程解析&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://friday-go.icu/2022/07/04/PHP%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E8%A7%A3%E6%9E%90/&t=PHP进程线程解析"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>

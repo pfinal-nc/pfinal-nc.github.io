@@ -10,7 +10,7 @@
     <meta name="description" content="个人理解在项目中使用消息队列一般是有如下几个原因：  1.把瞬间服务器的请求处理换成异步处理，缓解服务器的压力   2.实现数据顺序排列获取   redis 队列 实现 异步处理的效果  123456789101112131415&lt;?php&#x2F;** * 请求过来以后,如果数据过大,导致响应速度过慢,则可以先把要处理的数据保存到redis中, 然后直接去响应 *&#x2F;&#x2F;&#x2F;redis数据入队操作">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PHP之异步处理">
-<meta property="og:url" content="http://example.com/2022/07/04/PHP%E4%B9%8B%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86/index.html">
+<meta property="og:url" content="https://friday-go.icu/2022/07/04/PHP%E4%B9%8B%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86/index.html">
 <meta property="og:site_name" content="PFinalClub">
 <meta property="og:description" content="个人理解在项目中使用消息队列一般是有如下几个原因：  1.把瞬间服务器的请求处理换成异步处理，缓解服务器的压力   2.实现数据顺序排列获取   redis 队列 实现 异步处理的效果  123456789101112131415&lt;?php&#x2F;** * 请求过来以后,如果数据过大,导致响应速度过慢,则可以先把要处理的数据保存到redis中, 然后直接去响应 *&#x2F;&#x2F;&#x2F;redis数据入队操作">
 <meta property="og:locale" content="zh_CN">
@@ -98,17 +98,17 @@
     <br/>
     <div id="share" style="display: none">
       <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2022/07/04/PHP%E4%B9%8B%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2022/07/04/PHP%E4%B9%8B%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86/&text=PHP之异步处理"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2022/07/04/PHP%E4%B9%8B%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86/&title=PHP之异步处理"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2022/07/04/PHP%E4%B9%8B%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86/&is_video=false&description=PHP之异步处理"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=PHP之异步处理&body=Check out this article: http://example.com/2022/07/04/PHP%E4%B9%8B%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2022/07/04/PHP%E4%B9%8B%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86/&title=PHP之异步处理"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2022/07/04/PHP%E4%B9%8B%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86/&title=PHP之异步处理"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2022/07/04/PHP%E4%B9%8B%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86/&title=PHP之异步处理"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2022/07/04/PHP%E4%B9%8B%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86/&title=PHP之异步处理"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2022/07/04/PHP%E4%B9%8B%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86/&name=PHP之异步处理&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2022/07/04/PHP%E4%B9%8B%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86/&t=PHP之异步处理"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://friday-go.icu/2022/07/04/PHP%E4%B9%8B%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://friday-go.icu/2022/07/04/PHP%E4%B9%8B%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86/&text=PHP之异步处理"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://friday-go.icu/2022/07/04/PHP%E4%B9%8B%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86/&title=PHP之异步处理"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://friday-go.icu/2022/07/04/PHP%E4%B9%8B%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86/&is_video=false&description=PHP之异步处理"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=PHP之异步处理&body=Check out this article: https://friday-go.icu/2022/07/04/PHP%E4%B9%8B%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://friday-go.icu/2022/07/04/PHP%E4%B9%8B%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86/&title=PHP之异步处理"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://friday-go.icu/2022/07/04/PHP%E4%B9%8B%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86/&title=PHP之异步处理"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://friday-go.icu/2022/07/04/PHP%E4%B9%8B%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86/&title=PHP之异步处理"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://friday-go.icu/2022/07/04/PHP%E4%B9%8B%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86/&title=PHP之异步处理"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://friday-go.icu/2022/07/04/PHP%E4%B9%8B%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86/&name=PHP之异步处理&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://friday-go.icu/2022/07/04/PHP%E4%B9%8B%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86/&t=PHP之异步处理"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -255,17 +255,17 @@
 
     <div id="share-footer" style="display: none">
       <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2022/07/04/PHP%E4%B9%8B%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2022/07/04/PHP%E4%B9%8B%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86/&text=PHP之异步处理"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2022/07/04/PHP%E4%B9%8B%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86/&title=PHP之异步处理"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2022/07/04/PHP%E4%B9%8B%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86/&is_video=false&description=PHP之异步处理"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=PHP之异步处理&body=Check out this article: http://example.com/2022/07/04/PHP%E4%B9%8B%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2022/07/04/PHP%E4%B9%8B%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86/&title=PHP之异步处理"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2022/07/04/PHP%E4%B9%8B%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86/&title=PHP之异步处理"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2022/07/04/PHP%E4%B9%8B%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86/&title=PHP之异步处理"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2022/07/04/PHP%E4%B9%8B%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86/&title=PHP之异步处理"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2022/07/04/PHP%E4%B9%8B%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86/&name=PHP之异步处理&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2022/07/04/PHP%E4%B9%8B%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86/&t=PHP之异步处理"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://friday-go.icu/2022/07/04/PHP%E4%B9%8B%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://friday-go.icu/2022/07/04/PHP%E4%B9%8B%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86/&text=PHP之异步处理"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://friday-go.icu/2022/07/04/PHP%E4%B9%8B%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86/&title=PHP之异步处理"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://friday-go.icu/2022/07/04/PHP%E4%B9%8B%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86/&is_video=false&description=PHP之异步处理"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=PHP之异步处理&body=Check out this article: https://friday-go.icu/2022/07/04/PHP%E4%B9%8B%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://friday-go.icu/2022/07/04/PHP%E4%B9%8B%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86/&title=PHP之异步处理"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://friday-go.icu/2022/07/04/PHP%E4%B9%8B%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86/&title=PHP之异步处理"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://friday-go.icu/2022/07/04/PHP%E4%B9%8B%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86/&title=PHP之异步处理"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://friday-go.icu/2022/07/04/PHP%E4%B9%8B%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86/&title=PHP之异步处理"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://friday-go.icu/2022/07/04/PHP%E4%B9%8B%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86/&name=PHP之异步处理&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://friday-go.icu/2022/07/04/PHP%E4%B9%8B%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86/&t=PHP之异步处理"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>

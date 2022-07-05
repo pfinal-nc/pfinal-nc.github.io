@@ -10,7 +10,7 @@
     <meta name="description" content="容器和虚拟机的区别一直在使用 Docker 来开发一些东西,编排一些环境, 但是没有做一个深入到底层的了解与总结，被问到 容器与虚拟机的区别的时候, 没法系统的去总结, 这里做个笔记。 容器与虚拟机容器和虚拟机它们的目的很相似：即将应用程序和它的依赖放到一个可以在任何环境运行的自足单元中。 此外，容器和虚拟机消除了对物理硬件的需求，从而在能源消耗和成本效益方面能让我们更有效地使用计算资源， 容器和">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Docker 的核心">
-<meta property="og:url" content="http://example.com/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/index.html">
+<meta property="og:url" content="https://friday-go.icu/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/index.html">
 <meta property="og:site_name" content="PFinalClub">
 <meta property="og:description" content="容器和虚拟机的区别一直在使用 Docker 来开发一些东西,编排一些环境, 但是没有做一个深入到底层的了解与总结，被问到 容器与虚拟机的区别的时候, 没法系统的去总结, 这里做个笔记。 容器与虚拟机容器和虚拟机它们的目的很相似：即将应用程序和它的依赖放到一个可以在任何环境运行的自足单元中。 此外，容器和虚拟机消除了对物理硬件的需求，从而在能源消耗和成本效益方面能让我们更有效地使用计算资源， 容器和">
 <meta property="og:locale" content="zh_CN">
@@ -98,17 +98,17 @@
     <br/>
     <div id="share" style="display: none">
       <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&text=Docker 的核心"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&title=Docker 的核心"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&is_video=false&description=Docker 的核心"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=Docker 的核心&body=Check out this article: http://example.com/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&title=Docker 的核心"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&title=Docker 的核心"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&title=Docker 的核心"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&title=Docker 的核心"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&name=Docker 的核心&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&t=Docker 的核心"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://friday-go.icu/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://friday-go.icu/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&text=Docker 的核心"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://friday-go.icu/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&title=Docker 的核心"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://friday-go.icu/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&is_video=false&description=Docker 的核心"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Docker 的核心&body=Check out this article: https://friday-go.icu/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://friday-go.icu/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&title=Docker 的核心"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://friday-go.icu/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&title=Docker 的核心"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://friday-go.icu/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&title=Docker 的核心"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://friday-go.icu/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&title=Docker 的核心"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://friday-go.icu/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&name=Docker 的核心&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://friday-go.icu/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&t=Docker 的核心"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -279,17 +279,17 @@
 
     <div id="share-footer" style="display: none">
       <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&text=Docker 的核心"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&title=Docker 的核心"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&is_video=false&description=Docker 的核心"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=Docker 的核心&body=Check out this article: http://example.com/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&title=Docker 的核心"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&title=Docker 的核心"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&title=Docker 的核心"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&title=Docker 的核心"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&name=Docker 的核心&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&t=Docker 的核心"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://friday-go.icu/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://friday-go.icu/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&text=Docker 的核心"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://friday-go.icu/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&title=Docker 的核心"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://friday-go.icu/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&is_video=false&description=Docker 的核心"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Docker 的核心&body=Check out this article: https://friday-go.icu/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://friday-go.icu/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&title=Docker 的核心"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://friday-go.icu/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&title=Docker 的核心"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://friday-go.icu/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&title=Docker 的核心"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://friday-go.icu/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&title=Docker 的核心"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://friday-go.icu/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&name=Docker 的核心&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://friday-go.icu/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&t=Docker 的核心"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
