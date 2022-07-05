@@ -18,8 +18,8 @@ http://example.com/2022/07/04/Laravel%20Carbon%20%E7%B1%BB%E4%BD%BF%E7%94%A8/
 http://example.com/about/index.html
 http://example.com/2019/01/16/2019-1-16-Laravel%20%E6%89%8B%E5%B7%A5%E6%9E%84%E5%BB%BA/
 http://example.com/2019/10/27/2019-10-27-PHP%20%E9%9D%A2%E8%AF%95%E9%A3%8E%E8%BD%A6%E7%AE%97%E6%B3%95/
-http://example.com/search/index.html
 http://example.com/tags/index.html
+http://example.com/search/index.html
 http://example.com/categories/index.html
 http://example.com/2021/06/25/TCP%20IP%20HTTP%20%E5%AD%A6%E4%B9%A0/
 http://example.com/2022/03/18/2022-03-18-Redis%E6%9C%AA%E6%8E%88%E6%9D%83%E6%BC%8F%E6%B4%9E/
@@ -40,8 +40,8 @@ http://example.com/tags/MySql/
 http://example.com/tags/Redis/
 http://example.com/tags/%E6%B8%97%E9%80%8F/
 http://example.com/tags/mysql/
-http://example.com/tags/redis/
 http://example.com/tags/Web/
+http://example.com/tags/redis/
 http://example.com/tags/TCP/
 http://example.com/tags/IP/
 http://example.com/tags/HTTP/
