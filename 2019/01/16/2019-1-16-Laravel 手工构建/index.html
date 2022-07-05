@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="手工构建laravel框架构建过程分为项目初始化,路由组件添加,控制器模块添加,模型组件添加和视图组件添加。 项目初始化:首先在服务器的web目录下创建一个lara文件夹,在根目录下创建一个 composer.json文件,内容如下: 12345&amp;#123;   &quot;require&quot;:&amp;#123;   &amp;#125;&amp;#125; 除过上面的方法以外 还可以 用 composer 初">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Laravel 手工构建">
+<meta property="og:url" content="http://example.com/2019/01/16/2019-1-16-Laravel%20%E6%89%8B%E5%B7%A5%E6%9E%84%E5%BB%BA/index.html">
+<meta property="og:site_name" content="PFinalClub">
+<meta property="og:description" content="手工构建laravel框架构建过程分为项目初始化,路由组件添加,控制器模块添加,模型组件添加和视图组件添加。 项目初始化:首先在服务器的web目录下创建一个lara文件夹,在根目录下创建一个 composer.json文件,内容如下: 12345&amp;#123;   &quot;require&quot;:&amp;#123;   &amp;#125;&amp;#125; 除过上面的方法以外 还可以 用 composer 初">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-01-16T02:00:02.000Z">
+<meta property="article:modified_time" content="2022-06-30T03:48:15.162Z">
+<meta property="article:author" content="PFinal南丞">
+<meta property="article:tag" content="Laravel">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Laravel 手工构建</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2154665617309406"
+     crossorigin="anonymous"></script>
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a href="/links/">友情连接</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://github.com/pfinal-nc">项目</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="上一篇" href="/2019/10/27/2019-10-27-PHP%20%E9%9D%A2%E8%AF%95%E9%A3%8E%E8%BD%A6%E7%AE%97%E6%B3%95/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2019/01/16/2019-1-16-Laravel%20%E6%89%8B%E5%B7%A5%E6%9E%84%E5%BB%BA/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2019/01/16/2019-1-16-Laravel%20%E6%89%8B%E5%B7%A5%E6%9E%84%E5%BB%BA/&text=Laravel 手工构建"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2019/01/16/2019-1-16-Laravel%20%E6%89%8B%E5%B7%A5%E6%9E%84%E5%BB%BA/&title=Laravel 手工构建"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2019/01/16/2019-1-16-Laravel%20%E6%89%8B%E5%B7%A5%E6%9E%84%E5%BB%BA/&is_video=false&description=Laravel 手工构建"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Laravel 手工构建&body=Check out this article: http://example.com/2019/01/16/2019-1-16-Laravel%20%E6%89%8B%E5%B7%A5%E6%9E%84%E5%BB%BA/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2019/01/16/2019-1-16-Laravel%20%E6%89%8B%E5%B7%A5%E6%9E%84%E5%BB%BA/&title=Laravel 手工构建"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2019/01/16/2019-1-16-Laravel%20%E6%89%8B%E5%B7%A5%E6%9E%84%E5%BB%BA/&title=Laravel 手工构建"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2019/01/16/2019-1-16-Laravel%20%E6%89%8B%E5%B7%A5%E6%9E%84%E5%BB%BA/&title=Laravel 手工构建"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2019/01/16/2019-1-16-Laravel%20%E6%89%8B%E5%B7%A5%E6%9E%84%E5%BB%BA/&title=Laravel 手工构建"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2019/01/16/2019-1-16-Laravel%20%E6%89%8B%E5%B7%A5%E6%9E%84%E5%BB%BA/&name=Laravel 手工构建&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2019/01/16/2019-1-16-Laravel%20%E6%89%8B%E5%B7%A5%E6%9E%84%E5%BB%BA/&t=Laravel 手工构建"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%8B%E5%B7%A5%E6%9E%84%E5%BB%BAlaravel%E6%A1%86%E6%9E%B6"><span class="toc-number">1.</span> <span class="toc-text">手工构建laravel框架</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-number">1.0.1.</span> <span class="toc-text">项目初始化:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E8%B7%AF%E7%94%B1%E7%BB%84%E4%BB%B6"><span class="toc-number">1.0.2.</span> <span class="toc-text">添加路由组件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E6%8E%A7%E5%88%B6%E5%99%A8%E6%A8%A1%E5%9D%97"><span class="toc-number">1.0.3.</span> <span class="toc-text">添加控制器模块</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E6%A8%A1%E5%9E%8B%E7%BB%84%E4%BB%B6"><span class="toc-number">1.0.4.</span> <span class="toc-text">添加模型组件</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%A8%A1%E5%9E%8B%E7%B1%BB%E5%88%9B%E5%BB%BA"><span class="toc-number">1.0.4.1.</span> <span class="toc-text">模型类创建</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E8%A7%86%E5%9B%BE%E7%BB%84%E4%BB%B6"><span class="toc-number">1.0.5.</span> <span class="toc-text">添加视图组件</span></a></li></ol></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Laravel 手工构建
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">南丞</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-01-16T02:00:02.000Z" itemprop="datePublished">2019-01-16</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/Web/">Web</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/Laravel/" rel="tag">Laravel</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="手工构建laravel框架"><a href="#手工构建laravel框架" class="headerlink" title="手工构建laravel框架"></a>手工构建laravel框架</h2><p>构建过程分为项目初始化,路由组件添加,控制器模块添加,模型组件添加和视图组件添加。</p>
+<h4 id="项目初始化"><a href="#项目初始化" class="headerlink" title="项目初始化:"></a>项目初始化:</h4><p>首先在服务器的web目录下创建一个lara文件夹,在根目录下创建一个 <strong>composer.json</strong>文件,内容如下:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">   &quot;require&quot;:&#123;</span><br><span class="line"></span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>除过上面的方法以外 还可以 用 composer 初始化,然后运行 <strong>composer update</strong> 执行成功以后 lara 文件夹下 会自动生成自动加载文件目录如下:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">lara</span><br><span class="line">  |</span><br><span class="line">  |--vendor</span><br><span class="line">       |</span><br><span class="line">       |--composer</span><br><span class="line">            |</span><br><span class="line">            |--autoload_classmap.php </span><br><span class="line">            ...</span><br><span class="line">       |--autoload.php</span><br><span class="line">  |--composer.json         </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="添加路由组件"><a href="#添加路由组件" class="headerlink" title="添加路由组件"></a>添加路由组件</h4><p>完成项目初始化后,将进行第一个组件的添加, 首先登陆 composer 的包 网站 找到 <strong>route</strong>组件,其中可以看到组件名 <strong>illuminate&#x2F;routing</strong>组件的详细信息, 这个组件中也有一个composer.json文件 文件中有所依赖的其他组件,包括 <strong>symfony&#x2F;routing</strong>等组件,但是该组件还有一个 <strong>illuminate&#x2F;events</strong>组件没有包含,需要在添加路由组件时一起添加,所以修改 composer.json 文件如下:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">   &quot;require&quot;:&#123;</span><br><span class="line">      &quot;illuminate/routing&quot;:&quot;*&quot;</span><br><span class="line">      &quot;illuminate/events&quot;:&quot;*&quot;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>修改后然后执行 compoer update 命令，然后就会看到在vendor 目录下多了该插件的目录,或者我们可以修改 composer.json文件,直接运行下面命令,也会完成组件的安装:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">composer require &quot;illuminate/routing&quot;:&quot;*&quot;</span><br><span class="line">composer require &quot;illuminate/events&quot;:&quot;*&quot;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>在完成路由组件的添加后该如何使用呢? 首先需要添加两个文件,一个是路由文件,另外一个事服务器程序入口文件。按照laravel框架的架构, 我们在 lara目录下创建一个app目录, 该目录主要存储项目开发的文件, 在该目录下创建一个Http目录，该目录用户存储处理Http请求的文件,在http目录下在创建一个routes.php文件,该文件就是索要创建的路由文件,添加路由文件只要代码如下:</p>
+<p><strong>routes.php</strong></p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="variable">$app</span>[<span class="string">&#x27;route&#x27;</span>]-&gt;<span class="title function_ invoke__">get</span>(<span class="string">&#x27;/&#x27;</span>,function()&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">&#x27;&lt;h1&gt;路由成功&lt;/h1&gt;&#x27;</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>创建程序入口文件,按照laravel框架架构,public下面 有一个 index.php:</p>
+<p><strong>index.php</strong></p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">// 调用自动加载文件, 添加自动加载函数</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">require</span> <span class="keyword">__DIR__</span>.<span class="string">&#x27;/../vendor/autoload.php&#x27;</span>;</span><br><span class="line"><span class="comment">//实例化服务容器,注册事件,路由服务提供者</span></span><br><span class="line"></span><br><span class="line"><span class="variable">$app</span> = <span class="keyword">new</span> <span class="title class_">Illuminate\Container\Container</span>;</span><br><span class="line"><span class="title function_ invoke__">with</span>(<span class="keyword">new</span> <span class="title class_">Illuminate\Events\EventServiceProvider</span>(<span class="variable">$app</span>))-&gt;<span class="title function_ invoke__">register</span>();</span><br><span class="line"><span class="title function_ invoke__">with</span>(<span class="keyword">new</span> <span class="title class_">Illuminate\Routing\RoutingServiceProvider</span>(<span class="variable">$app</span>))-&gt;<span class="title function_ invoke__">register</span>();</span><br><span class="line"></span><br><span class="line"><span class="comment">//加载路由</span></span><br><span class="line"><span class="keyword">require</span> <span class="keyword">__DIR__</span> .<span class="string">&#x27;/../routes/routes.php&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//实例化请求并分发处理请求</span></span><br><span class="line"><span class="variable">$request</span> = <span class="title class_">Illuminate\Http\Request</span>::<span class="title function_ invoke__">createFromGlobals</span>();</span><br><span class="line"><span class="variable">$response</span> = <span class="variable">$app</span>[<span class="string">&#x27;router&#x27;</span>]-&gt;<span class="title function_ invoke__">dispatch</span>(<span class="variable">$request</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//返回请求想要</span></span><br><span class="line"><span class="variable">$response</span>-&gt;<span class="title function_ invoke__">send</span>();</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>完成上述两个文件的添加后,通过访问网站根目录就可以得到相应的路由响应.在laravel 框架中一些功能 的生成都需要服务容器来实现,即, <strong>Illuminate\Container\Container</strong> 类的实例, 服务容器用于服务注册和解析,也就是说向服务容器注册能够实现某些功能的实例或回调函数,当需要使用这个功能从服务器中获取相应的实例来完成.</p>
+<h4 id="添加控制器模块"><a href="#添加控制器模块" class="headerlink" title="添加控制器模块"></a>添加控制器模块</h4><p>按照laravel 目录架构, 在Http目录下创建Controllers目录.为了实现文件自动加载,这里使用 psr-4 进行自动加载.修改composer.json文件如下:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;require&quot;: &#123;</span><br><span class="line">        &quot;illuminate/routing&quot;: &quot;*&quot;,</span><br><span class="line">        &quot;illuminate/events&quot;: &quot;*&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">	&quot;authoload&quot;:&#123;</span><br><span class="line">		&quot;psr-4&quot;:&#123;</span><br><span class="line">			&quot;App\\&quot;:&quot;app/&quot;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>修改完composer.json后, 执行命令 <strong>composer dump-autoload</strong> 更新自动加载文件.</p>
+<p>然后在Controllers 目录下 新建 indexController 控制器文件,内容如下:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title class_">App</span>\<span class="title class_">Http</span>\<span class="title class_">Controllers</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">IndexController</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">index</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="string">&#x27;&lt;h1&gt;控制器成功&lt;/h1&gt;&#x27;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然后在路由文件中 <strong>routes.php</strong> 中添加一条路由配置,内容如下:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="variable">$app</span>[<span class="string">&#x27;router&#x27;</span>]-&gt;<span class="title function_ invoke__">get</span>(<span class="string">&#x27;/&#x27;</span>,function()&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">123</span>;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="variable">$app</span>[<span class="string">&#x27;router&#x27;</span>]-&gt;<span class="title function_ invoke__">get</span>(<span class="string">&#x27;welcom&#x27;</span>,<span class="string">&#x27;App\Http\Controllers\IndexController@index&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<p>然后通过访问这个路由就会得到响应。</p>
+<h4 id="添加模型组件"><a href="#添加模型组件" class="headerlink" title="添加模型组件"></a>添加模型组件</h4><p>模型组件相当于MVC中的M 主要实现数据处理功能, laravel 框架中的 模型组件是 <strong>illuminate&#x2F;database</strong> 来完成的。同理, 安装 组件 修改 <strong>composer.json</strong>文件运行 <strong>composer update</strong> 或者通过 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">composer require &quot;illuminate/database&quot;:&quot;*&quot; </span><br></pre></td></tr></table></figure>
+<p>来完成安装。</p>
+<p><strong>illuminate&#x2F;database</strong> 组件主要用来操作数据库, 提供了两种数据库操作的方式:</p>
+<ul>
+<li><p>查询构造器方式</p>
+</li>
+<li><p>Eloquent ORM 方式</p>
+</li>
+</ul>
+<p>这里使用Eloquent ORM 方式, 通过该方式操作数据库非常简单。按照 laravel框架的目录架构, 在lara 目录下创建config 文件夹, 该文件夹用于存放整个应用程序的配置文件,在该文件夹下创建 <strong>database.php</strong> 文件,用于存储对数据库的配置信息,内容如下:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> [</span><br><span class="line">	<span class="string">&#x27;driver&#x27;</span>=&gt;<span class="string">&#x27;mysql&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;host&#x27;</span>=&gt;<span class="string">&#x27;localhost&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;database&#x27;</span>=&gt;<span class="string">&#x27;test&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;username&#x27;</span>=&gt;<span class="string">&#x27;root&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;password&#x27;</span>=&gt;<span class="string">&#x27;root&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;charset&#x27;</span>=&gt;<span class="string">&#x27;utf8&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;collation&#x27;</span>=&gt;<span class="string">&#x27;utf8_general_ci&#x27;</span>,</span><br><span class="line">	<span class="string">&#x27;prefix&#x27;</span>=&gt;<span class="string">&#x27;&#x27;</span></span><br><span class="line">];</span><br></pre></td></tr></table></figure>
+
+<p>在完成数据库配置后需要启动 <strong>Eloquent ORM</strong> 模块,这部分工作在入口文件(<strong>index.php</strong>)中实现的,具体内容是:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">// 调用自动加载文件, 添加自动加载函数</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">require</span> <span class="keyword">__DIR__</span>.<span class="string">&#x27;/../vendor/autoload.php&#x27;</span>;</span><br><span class="line"><span class="comment">//实例化服务容器,注册事件,路由服务提供者</span></span><br><span class="line"></span><br><span class="line"><span class="variable">$app</span> = <span class="keyword">new</span> <span class="title class_">Illuminate\Container\Container</span>;</span><br><span class="line"><span class="title function_ invoke__">with</span>(<span class="keyword">new</span> <span class="title class_">Illuminate\Events\EventServiceProvider</span>(<span class="variable">$app</span>))-&gt;<span class="title function_ invoke__">register</span>();</span><br><span class="line"><span class="title function_ invoke__">with</span>(<span class="keyword">new</span> <span class="title class_">Illuminate\Routing\RoutingServiceProvider</span>(<span class="variable">$app</span>))-&gt;<span class="title function_ invoke__">register</span>();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//启动 Eloquent ORM 模块并进行相关配置</span></span><br><span class="line"></span><br><span class="line"><span class="variable">$manager</span> = <span class="keyword">new</span> <span class="title class_">Illuminate\Database\Capsule\Manager</span>();</span><br><span class="line"><span class="comment">//加入数据库配置文件</span></span><br><span class="line"><span class="variable">$manager</span>-&gt;<span class="title function_ invoke__">addConnection</span>(<span class="keyword">require</span> <span class="string">&#x27;../config/database.php&#x27;</span>);</span><br><span class="line"><span class="variable">$manager</span>-&gt;<span class="title function_ invoke__">bootEloquent</span>();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//加载路由</span></span><br><span class="line"><span class="keyword">require</span> <span class="keyword">__DIR__</span> .<span class="string">&#x27;/../routes/routes.php&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//实例化请求并分发处理请求</span></span><br><span class="line"><span class="variable">$request</span> = <span class="title class_">Illuminate\Http\Request</span>::<span class="title function_ invoke__">createFromGlobals</span>();</span><br><span class="line"><span class="variable">$response</span> = <span class="variable">$app</span>[<span class="string">&#x27;router&#x27;</span>]-&gt;<span class="title function_ invoke__">dispatch</span>(<span class="variable">$request</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//返回请求想要</span></span><br><span class="line"><span class="variable">$response</span>-&gt;<span class="title function_ invoke__">send</span>();</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>通过 addConnection() 函数完成数据库相关配置, 并通过 bootEloquent() 函数完成数据库 Eloquent ORM 模块的启动.在启动完成后,就可以操作数据库了。</p>
+<p>Eloquent ORM 方式操作数据库需要两个步骤:</p>
+<ul>
+<li><p>创建模型类</p>
+</li>
+<li><p>通过模型类的方法操作数据库。</p>
+</li>
+</ul>
+<h5 id="模型类创建"><a href="#模型类创建" class="headerlink" title="模型类创建"></a>模型类创建</h5><p>与laravel 框架目录一致， 在app目录下创建 Models目录 在里面创建一个模型类,代码如下:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title class_">App</span>\<span class="title class_">Models</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">Illuminate</span>\<span class="title">Database</span>\<span class="title">Eloquent</span>\<span class="title">Model</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Menu</span> <span class="keyword">extends</span> <span class="title">Model</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	<span class="keyword">protected</span> <span class="variable">$table</span> = <span class="string">&quot;menus&quot;</span>;</span><br><span class="line">	<span class="keyword">public</span> <span class="variable">$timestamps</span> = <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>模型创建完后, 操作数据库,查询数据, 修改  IndexController代码:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title class_">App</span>\<span class="title class_">Http</span>\<span class="title class_">Controllers</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">App</span>\<span class="title">Models</span>\<span class="title">Menu</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">IndexController</span>  </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">index</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="variable">$menu</span> = <span class="title class_">Menu</span>::<span class="title function_ invoke__">first</span>();</span><br><span class="line">		<span class="variable">$data</span> = <span class="variable">$menu</span>-&gt;<span class="title function_ invoke__">getAttributes</span>();</span><br><span class="line">		<span class="keyword">echo</span> <span class="string">&#x27;&lt;pre&gt;&#x27;</span>;</span><br><span class="line">		<span class="title function_ invoke__">var_dump</span>(<span class="variable">$data</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在浏览器窗口访问,运行结果如下:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">array</span>(<span class="number">10</span>) &#123;</span><br><span class="line">  [<span class="string">&quot;id&quot;</span>]=&gt;</span><br><span class="line">  <span class="keyword">int</span>(<span class="number">1</span>)</span><br><span class="line">  [<span class="string">&quot;name&quot;</span>]=&gt;</span><br><span class="line">  <span class="keyword">string</span>(<span class="number">6</span>) <span class="string">&quot;系统&quot;</span></span><br><span class="line">  [<span class="string">&quot;url&quot;</span>]=&gt;</span><br><span class="line">  <span class="keyword">string</span>(<span class="number">11</span>) <span class="string">&quot;admin/menus&quot;</span></span><br><span class="line">  [<span class="string">&quot;slug&quot;</span>]=&gt;</span><br><span class="line">  <span class="keyword">string</span>(<span class="number">13</span>) <span class="string">&quot;system.manage&quot;</span></span><br><span class="line">  [<span class="string">&quot;icon&quot;</span>]=&gt;</span><br><span class="line">  <span class="keyword">string</span>(<span class="number">10</span>) <span class="string">&quot;fa fa-cogs&quot;</span></span><br><span class="line">  [<span class="string">&quot;parent_id&quot;</span>]=&gt;</span><br><span class="line">  <span class="keyword">int</span>(<span class="number">0</span>)</span><br><span class="line">  [<span class="string">&quot;heightlight_url&quot;</span>]=&gt;</span><br><span class="line">  <span class="keyword">string</span>(<span class="number">0</span>) <span class="string">&quot;&quot;</span></span><br><span class="line">  [<span class="string">&quot;sort&quot;</span>]=&gt;</span><br><span class="line">  <span class="keyword">int</span>(<span class="number">0</span>)</span><br><span class="line">  [<span class="string">&quot;created_at&quot;</span>]=&gt;</span><br><span class="line">  <span class="keyword">string</span>(<span class="number">19</span>) <span class="string">&quot;2017-08-15 13:07:48&quot;</span></span><br><span class="line">  [<span class="string">&quot;updated_at&quot;</span>]=&gt;</span><br><span class="line">  <span class="keyword">string</span>(<span class="number">19</span>) <span class="string">&quot;2017-08-15 13:07:48&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>至此, 模型组件添加完成。</p>
+<h4 id="添加视图组件"><a href="#添加视图组件" class="headerlink" title="添加视图组件"></a>添加视图组件</h4><p>laravel 框架中的视图组件是 <strong>illuminate&#x2F;view</strong>, 该组件可以将视图以模板的方式创建,在其他数控中可以调用,继承已经创建的模板。同理, 安装 组件 修改 <strong>composer.json</strong>文件运行 <strong>composer update</strong> 或者通过 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">composer require &quot;illuminate/view&quot;:&quot;*&quot; </span><br></pre></td></tr></table></figure>
+<p>来完成安装。</p>
+<p>视图组件的使用更需要四步:</p>
+<ul>
+<li><p>添加视图模板文件和编译文件的存储路径</p>
+</li>
+<li><p>对视图进行相关配置和服务注册</p>
+</li>
+<li><p>使用视图文件</p>
+</li>
+<li><p>创建视图模板文件</p>
+</li>
+</ul>
+<p>按照laravel 框架目录结构,新建 <strong>resources</strong> 目录,在resources目录中新建 <strong>views</strong> 目录用来存放模板文件, 模板编译文件放在 <strong>storage&#x2F;framework&#x2F;views&#x2F;</strong> 目录下.</p>
+<p>接下来完成视图组件的相关配置和服务注册，同理,修改 入口文件 <strong>index.php</strong>,内容如下:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">// 调用自动加载文件, 添加自动加载函数</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">require</span> <span class="keyword">__DIR__</span>.<span class="string">&#x27;/../vendor/autoload.php&#x27;</span>;</span><br><span class="line"><span class="comment">//实例化服务容器,注册事件,路由服务提供者</span></span><br><span class="line"></span><br><span class="line"><span class="variable">$app</span> = <span class="keyword">new</span> <span class="title class_">Illuminate\Container\Container</span>;</span><br><span class="line"><span class="comment">// 通过服务容器中的 setInstance() 静态方法 将服务容器实例添加为静态属性, 这样就可以在任何位置获取服务容器实例</span></span><br><span class="line"><span class="title class_">Illuminate\Container\Container</span>::<span class="title function_ invoke__">setInstance</span>(<span class="variable">$app</span>);</span><br><span class="line"><span class="title function_ invoke__">with</span>(<span class="keyword">new</span> <span class="title class_">Illuminate\Events\EventServiceProvider</span>(<span class="variable">$app</span>))-&gt;<span class="title function_ invoke__">register</span>();</span><br><span class="line"><span class="title function_ invoke__">with</span>(<span class="keyword">new</span> <span class="title class_">Illuminate\Routing\RoutingServiceProvider</span>(<span class="variable">$app</span>))-&gt;<span class="title function_ invoke__">register</span>();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//启动 Eloquent ORM 模块并进行相关配置</span></span><br><span class="line"><span class="variable">$manager</span> = <span class="keyword">new</span> <span class="title class_">Illuminate\Database\Capsule\Manager</span>();</span><br><span class="line"><span class="comment">//加入数据库配置文件</span></span><br><span class="line"><span class="variable">$manager</span>-&gt;<span class="title function_ invoke__">addConnection</span>(<span class="keyword">require</span> <span class="string">&#x27;../config/database.php&#x27;</span>);</span><br><span class="line"><span class="variable">$manager</span>-&gt;<span class="title function_ invoke__">bootEloquent</span>();</span><br><span class="line"></span><br><span class="line"><span class="comment">//通过服务容器实例的instancce()方法 将服务名称为 config 和 Fluent的实例进行绑定,主要用于存储视图慕课的配置信息。</span></span><br><span class="line"><span class="variable">$app</span>-&gt;<span class="title function_ invoke__">instance</span>(<span class="string">&#x27;config&#x27;</span>,<span class="keyword">new</span> <span class="title class_">Illuminate\Support\Fluent</span>());</span><br><span class="line"><span class="comment">//配置模板编译目录路径</span></span><br><span class="line"><span class="variable">$app</span>[<span class="string">&#x27;config&#x27;</span>][<span class="string">&#x27;view.compiled&#x27;</span>] = <span class="string">&quot;D:\\phpStudy\\WWW\\test\\lara\\storage\\framework\\views&quot;</span>;</span><br><span class="line"><span class="variable">$app</span>[<span class="string">&#x27;config&#x27;</span>][<span class="string">&#x27;view.paths&#x27;</span>] = [<span class="string">&quot;D:\\phpStudy\\WWW\\test\\lara\\resources\\views&quot;</span>];</span><br><span class="line"><span class="title function_ invoke__">with</span>(<span class="keyword">new</span> <span class="title class_">Illuminate\View\ViewServiceProvider</span>(<span class="variable">$app</span>))-&gt;<span class="title function_ invoke__">register</span>();</span><br><span class="line"><span class="title function_ invoke__">with</span>(<span class="keyword">new</span> <span class="title class_">Illuminate\Filesystem\FilesystemServiceProvider</span>(<span class="variable">$app</span>))-&gt;<span class="title function_ invoke__">register</span>();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//加载路由</span></span><br><span class="line"><span class="keyword">require</span> <span class="keyword">__DIR__</span> .<span class="string">&#x27;/../routes/routes.php&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//实例化请求并分发处理请求</span></span><br><span class="line"><span class="variable">$request</span> = <span class="title class_">Illuminate\Http\Request</span>::<span class="title function_ invoke__">createFromGlobals</span>();</span><br><span class="line"><span class="variable">$response</span> = <span class="variable">$app</span>[<span class="string">&#x27;router&#x27;</span>]-&gt;<span class="title function_ invoke__">dispatch</span>(<span class="variable">$request</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//返回请求想要</span></span><br><span class="line"><span class="variable">$response</span>-&gt;<span class="title function_ invoke__">send</span>();</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>接下来使用一下模板, 在 <strong>resouecs&#x2F;views</strong> 目录先新建一个 模板文件  <strong>index.balde.php</strong>, 然后去修改  <strong>IndexController</strong> 控制器,加载这个模板:</p>
+<p><strong>IndexController.php</strong> 代码如下:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title class_">App</span>\<span class="title class_">Http</span>\<span class="title class_">Controllers</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">App</span>\<span class="title">Models</span>\<span class="title">Menu</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">IndexController</span>  </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">index</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="variable">$menu</span> = <span class="title class_">Menu</span>::<span class="title function_ invoke__">first</span>();</span><br><span class="line">		<span class="variable">$data</span> = <span class="variable">$menu</span>-&gt;<span class="title function_ invoke__">getAttributes</span>();</span><br><span class="line">		<span class="variable">$app</span> = <span class="title class_">\Illuminate\Container\Container</span>::<span class="title function_ invoke__">getInstance</span>();</span><br><span class="line">		<span class="variable">$factory</span> = <span class="variable">$app</span>-&gt;<span class="title function_ invoke__">make</span>(<span class="string">&#x27;view&#x27;</span>);</span><br><span class="line">		<span class="keyword">return</span> <span class="variable">$factory</span>-&gt;<span class="title function_ invoke__">make</span>(<span class="string">&#x27;index&#x27;</span>)-&gt;<span class="title function_ invoke__">with</span>(<span class="string">&#x27;data&#x27;</span>,<span class="variable">$data</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>首先通过 getInstance() 静态方法获取服务容器实例, 然后通过容器获取服务名称 为 view 的实例对象即 为视图创建工厂类(Illuminate\View\Factory)实例, 接着通过视图创建工厂的make()方法来创建视图实例对象,其中参数维视图文件名称,最后通过视图实例的with() 方法添加数据。</p>
+<p><strong>index.blade.php</strong> 代码如下:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>这个是查询的数据<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">pre</span>&gt;</span></span><br><span class="line">&#123;&#123; print_r($data) &#125;&#125;</span><br></pre></td></tr></table></figure>
+<p>至此, 通过几个简单的步骤 Laravel 框架的骨骼就出来了, 具体代码:</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/Neroxiezi/LaravelTechnicalDetails/tree/master/lara">代码地址</a></p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/search/">搜索</a></li>
+         
+          <li><a href="/links/">友情连接</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="https://github.com/pfinal-nc">项目</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%8B%E5%B7%A5%E6%9E%84%E5%BB%BAlaravel%E6%A1%86%E6%9E%B6"><span class="toc-number">1.</span> <span class="toc-text">手工构建laravel框架</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-number">1.0.1.</span> <span class="toc-text">项目初始化:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E8%B7%AF%E7%94%B1%E7%BB%84%E4%BB%B6"><span class="toc-number">1.0.2.</span> <span class="toc-text">添加路由组件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E6%8E%A7%E5%88%B6%E5%99%A8%E6%A8%A1%E5%9D%97"><span class="toc-number">1.0.3.</span> <span class="toc-text">添加控制器模块</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E6%A8%A1%E5%9E%8B%E7%BB%84%E4%BB%B6"><span class="toc-number">1.0.4.</span> <span class="toc-text">添加模型组件</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%A8%A1%E5%9E%8B%E7%B1%BB%E5%88%9B%E5%BB%BA"><span class="toc-number">1.0.4.1.</span> <span class="toc-text">模型类创建</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E8%A7%86%E5%9B%BE%E7%BB%84%E4%BB%B6"><span class="toc-number">1.0.5.</span> <span class="toc-text">添加视图组件</span></a></li></ol></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2019/01/16/2019-1-16-Laravel%20%E6%89%8B%E5%B7%A5%E6%9E%84%E5%BB%BA/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2019/01/16/2019-1-16-Laravel%20%E6%89%8B%E5%B7%A5%E6%9E%84%E5%BB%BA/&text=Laravel 手工构建"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2019/01/16/2019-1-16-Laravel%20%E6%89%8B%E5%B7%A5%E6%9E%84%E5%BB%BA/&title=Laravel 手工构建"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2019/01/16/2019-1-16-Laravel%20%E6%89%8B%E5%B7%A5%E6%9E%84%E5%BB%BA/&is_video=false&description=Laravel 手工构建"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Laravel 手工构建&body=Check out this article: http://example.com/2019/01/16/2019-1-16-Laravel%20%E6%89%8B%E5%B7%A5%E6%9E%84%E5%BB%BA/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2019/01/16/2019-1-16-Laravel%20%E6%89%8B%E5%B7%A5%E6%9E%84%E5%BB%BA/&title=Laravel 手工构建"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2019/01/16/2019-1-16-Laravel%20%E6%89%8B%E5%B7%A5%E6%9E%84%E5%BB%BA/&title=Laravel 手工构建"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2019/01/16/2019-1-16-Laravel%20%E6%89%8B%E5%B7%A5%E6%9E%84%E5%BB%BA/&title=Laravel 手工构建"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2019/01/16/2019-1-16-Laravel%20%E6%89%8B%E5%B7%A5%E6%9E%84%E5%BB%BA/&title=Laravel 手工构建"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2019/01/16/2019-1-16-Laravel%20%E6%89%8B%E5%B7%A5%E6%9E%84%E5%BB%BA/&name=Laravel 手工构建&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2019/01/16/2019-1-16-Laravel%20%E6%89%8B%E5%B7%A5%E6%9E%84%E5%BB%BA/&t=Laravel 手工构建"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2022
+    PFinal南丞
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a href="/links/">友情连接</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://github.com/pfinal-nc">项目</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EVR51H8CSN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-EVR51H8CSN');
+    </script>
+
+<!-- Baidu Analytics -->
+
+  <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?ffe26c1d637f36349728c74bb031faa2";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+        </script>
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>

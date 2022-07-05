@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="容器和虚拟机的区别一直在使用 Docker 来开发一些东西,编排一些环境, 但是没有做一个深入到底层的了解与总结，被问到 容器与虚拟机的区别的时候, 没法系统的去总结, 这里做个笔记。 容器与虚拟机容器和虚拟机它们的目的很相似：即将应用程序和它的依赖放到一个可以在任何环境运行的自足单元中。 此外，容器和虚拟机消除了对物理硬件的需求，从而在能源消耗和成本效益方面能让我们更有效地使用计算资源， 容器和">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Docker 的核心">
+<meta property="og:url" content="http://example.com/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/index.html">
+<meta property="og:site_name" content="PFinalClub">
+<meta property="og:description" content="容器和虚拟机的区别一直在使用 Docker 来开发一些东西,编排一些环境, 但是没有做一个深入到底层的了解与总结，被问到 容器与虚拟机的区别的时候, 没法系统的去总结, 这里做个笔记。 容器与虚拟机容器和虚拟机它们的目的很相似：即将应用程序和它的依赖放到一个可以在任何环境运行的自足单元中。 此外，容器和虚拟机消除了对物理硬件的需求，从而在能源消耗和成本效益方面能让我们更有效地使用计算资源， 容器和">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-06-26T02:00:02.000Z">
+<meta property="article:modified_time" content="2022-06-30T02:12:21.742Z">
+<meta property="article:author" content="PFinal南丞">
+<meta property="article:tag" content="Docker">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Docker 的核心</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2154665617309406"
+     crossorigin="anonymous"></script>
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a href="/links/">友情连接</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://github.com/pfinal-nc">项目</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="上一篇" href="/2022/02/24/2022-02-24-MySql%E7%B4%A2%E5%BC%95%E7%9B%B8%E5%85%B3/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/2021/06/25/TCP%20IP%20HTTP%20%E5%AD%A6%E4%B9%A0/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&text=Docker 的核心"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&title=Docker 的核心"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&is_video=false&description=Docker 的核心"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Docker 的核心&body=Check out this article: http://example.com/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&title=Docker 的核心"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&title=Docker 的核心"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&title=Docker 的核心"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&title=Docker 的核心"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&name=Docker 的核心&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&t=Docker 的核心"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%B9%E5%99%A8%E5%92%8C%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.</span> <span class="toc-text">容器和虚拟机的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%B9%E5%99%A8%E4%B8%8E%E8%99%9A%E6%8B%9F%E6%9C%BA"><span class="toc-number">2.</span> <span class="toc-text">容器与虚拟机</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E6%9C%BA"><span class="toc-number">3.</span> <span class="toc-text">虚拟机</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%B9%E5%99%A8"><span class="toc-number">4.</span> <span class="toc-text">容器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B"><span class="toc-number">5.</span> <span class="toc-text">进程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C"><span class="toc-number">6.</span> <span class="toc-text">网络</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Docker 的核心
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">南丞</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2021-06-26T02:00:02.000Z" itemprop="datePublished">2021-06-26</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/">服务器</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/Docker/" rel="tag">Docker</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h4 id="容器和虚拟机的区别"><a href="#容器和虚拟机的区别" class="headerlink" title="容器和虚拟机的区别"></a>容器和虚拟机的区别</h4><p>一直在使用 Docker 来开发一些东西,编排一些环境, 但是没有做一个深入到底层的了解与总结，被问到 容器与虚拟机的区别的时候, 没法系统的去总结, 这里做个笔记。</p>
+<h4 id="容器与虚拟机"><a href="#容器与虚拟机" class="headerlink" title="容器与虚拟机"></a>容器与虚拟机</h4><p>容器和虚拟机它们的目的很相似：即将应用程序和它的依赖放到一个可以在任何环境运行的自足单元中。</p>
+<p>此外，容器和虚拟机消除了对物理硬件的需求，从而在能源消耗和成本效益方面能让我们更有效地使用计算资源，</p>
+<p>容器和虚拟机的主要区别在于它们的架构方式</p>
+<h4 id="虚拟机"><a href="#虚拟机" class="headerlink" title="虚拟机"></a>虚拟机</h4><p>虚拟机 是共享一个服务器的物理资源的操作系统.它是主机硬件上的Guest，因此也被称为Guest虚拟机。虚拟机由几层组成。支持虚拟化的层是hypervisor。</p>
+<blockquote>
+<p><em>hypervisor</em> 是能让虚拟机在其上运行的软件,固件或者硬件， 虚拟机管理程序本身会在物理机上运行,称为”主机”。主机为虚拟机提供思源,包括 RAM和CPU.这些资源在虚拟机之间被划分并且可以根据需要进行分配。所以如果一个虚拟机上运行了资源占用更大的应用程序, 相较于其他运行在同一个主机的虚拟机可以给其分配更多的资源.</p>
+</blockquote>
+<p>运行在主机上的虚拟机包含了应用以及运行这个应用所需要的全部依赖,它还带有一个自己的完整虚拟硬件栈,包括虚拟化的网络适配器,储存和CPU。从虚拟机内部看,访客机的操作都认为其使用的都是自己的专用资源.从外部看,我们知道他是一个虚拟机和其他虚拟机一起共享主机提供的资源.</p>
+<p>由于虚拟机拥有自己的操作系统，管理程序为虚拟机管理和执行访客操作系统提供了一个平台。它允许主机与作为客户端运行的虚拟机之间共享资源.</p>
+<h4 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h4><p>与提供硬件虚拟化的虚拟机不同,容器通过抽象”用户空间”来提供操作系统级别的虚拟化.不依赖与操作系统,运行应用程序的环境,它通过Linux的<em>Namespaces</em> 和 <em>Cgroups</em> 技术对应用程序进程进行隔离和限制的, Namespace 的作用是隔离, 它让应用进程只能看到该 <em>Namespaces</em> 内的世界;而 <em>Cgroups</em>的作用是限制分配给进程的宿主机资源.但对于宿主机来说 这些被隔离了的进程跟其他进程并没有太大的区别.</p>
+<p>容器只是运行在宿主机上的一种特殊的进程，多个容器之间使用的还是同一个宿主机的操作系统内核。</p>
+<p><strong>Namespaces</strong></p>
+<p>命名空间(namespaces) 是Linux用于分离进程树,网络借口,挂载点以及进程间通信等资源的方法.在日常时候, 并没有运行多个完全分离的服务的需要.但是如果在服务器上启动了多个服务，这些服务其实会互相影响的,每一个服务都能看到其他服务的进程.也可以访问宿主机器上的任意文件.这是不愿意看到的，而Docker容器其实就通过Linux的Namespaces 对不同的容器实现了隔离。</p>
+<p>Linux 的命名空间机制 提供了以下七种不同的命名空间：</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>宏定义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>IPC</td>
+<td>CLONE_NEWIPC</td>
+</tr>
+<tr>
+<td>Network</td>
+<td>CLONE_NEWNET</td>
+</tr>
+<tr>
+<td>Mount</td>
+<td>CLONE_NEWNS</td>
+</tr>
+<tr>
+<td>PID</td>
+<td>CLONE_NEWPID</td>
+</tr>
+<tr>
+<td>User</td>
+<td>CLONE_NEWUSER</td>
+</tr>
+<tr>
+<td>UTS</td>
+<td>CLONE_NEWUTS</td>
+</tr>
+<tr>
+<td>Cgroup</td>
+<td>CLONE_NEWCGROUP</td>
+</tr>
+</tbody></table>
+<p>这七个选项在创建新的进程时设置新进程应该在哪些资源上与宿主机器进行隔离。</p>
+<ul>
+<li><p><em>IPC</em>: 用于隔离进程间通讯所需的资源，PID命名空间和IPC命名空间可以组合起来用，同一个IPC名字空间内的进程可以彼<br>此看见，允许进行交互，不同空间进程无法交互；</p>
+</li>
+<li><p><em>Network</em>: 为进程提供一个完全独立的网络协议栈的试图.包括网络设备接口, IPv4和IPv6 协议栈, IP 路由表,防火墙规则,sockets 等等.一个Network Namespace 提供了一份独立的网络环境, 就跟一个独立的系统一样</p>
+</li>
+<li><p><em>Mount</em>: 每个进程都存在与一个 mount Namespace 里面, mount Namespace 为进程提供了一个文件层视图. 如果不设定这个flag，子进程和父进程将共享一个 mount Namespace。其后子进程调用mount或umount将会影响到所有该Namespace内的进程。如果子进程在一个独立的mount Namespace里面，就可以调用mount或umount建立一份新的文件层次视图；</p>
+</li>
+<li><p><em>PID</em>：：linux通过命名空间管理进程号，同一个进程，在不同的命名空间进程号不同！进程命名空间是一个父子结构，子空<br>间对于父空间可见；</p>
+</li>
+<li><p><em>User</em>：用于隔离用户；</p>
+</li>
+<li><p><em>UTS</em>：用于隔离主机名；</p>
+</li>
+</ul>
+<p>&#x2F;proc&#x2F;[pid]&#x2F;ns 目录下会包含进程所属的 namespace 信息，可以使用 <code>ll /proc/$$/ns</code> 命令查看当前进程所属namespace信息</p>
+<h4 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h4><p>进程是 Linux 以及现在操作系统中非常重要的概念，它表示一个正在执行的程序，也是在现代分时系统中的一个任务单元。</p>
+<p>在 Linux系统的进程中 有两个特殊的进程,一个是 pid 为1 的 &#x2F;sbin&#x2F;init 进程, 另一个是  pid为2 的 kthreadd 进程,这两个进程都是 被Linux 中的上帝进程 idle 创建出来的  其中pid 1 负责执行内核的一部分初始化工作和系统配置, 也会创建一些类似 getty 的注册进程 pid 2 负责管理和调度其他的内核进程</p>
+<h4 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h4><p>docker run 启动的容器其实都具有单独的网络命名空间 Docker有四种不同的网络模式，HOST，Container,None Bridage 模式. 默认是网桥模式 </p>
+<p>在网桥模式下  当Docker 在主机上启动之后会创建新的虚拟网桥 docker0,随后在该主机上启动全部服务在默认情况下与该网桥相连接.</p>
+<p>默认情况下, 每一个容器在创建时都会创建一对虚拟网卡,两个虚拟网卡组成了数据通道，其中一个会放在创建的容器中, 会加入到名为 docker0网桥中。可以使用 <code>brctl show</code> 来查看当前网桥的接口。</p>
+<p>docker0 会为每一个容器分配一个新的 IP 地址并将 docker0 的 IP 地址设置为默认的网关。网桥 docker0 通过 iptables 中的配置与宿主机器上的网卡相连，所有符合条件的请求都会通过 iptables 转发到 docker0 并由网桥分发给对应的机器。</p>
+<p>Docker 通过 Linux 的命名空间实现了网络的隔离，又通过 iptables 进行数据包转发，让 Docker 容器能够优雅地为宿主机器或者其他容器提供服务。</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/search/">搜索</a></li>
+         
+          <li><a href="/links/">友情连接</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="https://github.com/pfinal-nc">项目</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%B9%E5%99%A8%E5%92%8C%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.</span> <span class="toc-text">容器和虚拟机的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%B9%E5%99%A8%E4%B8%8E%E8%99%9A%E6%8B%9F%E6%9C%BA"><span class="toc-number">2.</span> <span class="toc-text">容器与虚拟机</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E6%9C%BA"><span class="toc-number">3.</span> <span class="toc-text">虚拟机</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%B9%E5%99%A8"><span class="toc-number">4.</span> <span class="toc-text">容器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B"><span class="toc-number">5.</span> <span class="toc-text">进程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C"><span class="toc-number">6.</span> <span class="toc-text">网络</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&text=Docker 的核心"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&title=Docker 的核心"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&is_video=false&description=Docker 的核心"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Docker 的核心&body=Check out this article: http://example.com/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&title=Docker 的核心"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&title=Docker 的核心"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&title=Docker 的核心"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&title=Docker 的核心"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&name=Docker 的核心&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2021/06/26/2021-6-24-Docker%20%E7%9A%84%E6%A0%B8%E5%BF%83/&t=Docker 的核心"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2022
+    PFinal南丞
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a href="/links/">友情连接</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://github.com/pfinal-nc">项目</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EVR51H8CSN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-EVR51H8CSN');
+    </script>
+
+<!-- Baidu Analytics -->
+
+  <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?ffe26c1d637f36349728c74bb031faa2";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+        </script>
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>

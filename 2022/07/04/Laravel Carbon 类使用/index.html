@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="Laravel Carbon 类使用Carbon 时间处理应用:123456789101112131415echo Carbon::now();                                                 &#x2F;&#x2F; 获取当前时间echo Carbon::now(&amp;#x27;Arctic&#x2F;Longyearbyen&amp;#x27;);">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Laravel Carbon 类使用">
+<meta property="og:url" content="http://example.com/2022/07/04/Laravel%20Carbon%20%E7%B1%BB%E4%BD%BF%E7%94%A8/index.html">
+<meta property="og:site_name" content="PFinalClub">
+<meta property="og:description" content="Laravel Carbon 类使用Carbon 时间处理应用:123456789101112131415echo Carbon::now();                                                 &#x2F;&#x2F; 获取当前时间echo Carbon::now(&amp;#x27;Arctic&#x2F;Longyearbyen&amp;#x27;);">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-07-04T02:00:02.000Z">
+<meta property="article:modified_time" content="2022-07-04T02:25:27.625Z">
+<meta property="article:author" content="PFinal南丞">
+<meta property="article:tag" content="Laravel">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Laravel Carbon 类使用</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2154665617309406"
+     crossorigin="anonymous"></script>
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a href="/links/">友情连接</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://github.com/pfinal-nc">项目</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="上一篇" href="/2022/07/04/PHP%E4%B9%8B%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/2022/03/18/2022-03-18-Redis%E6%9C%AA%E6%8E%88%E6%9D%83%E6%BC%8F%E6%B4%9E/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2022/07/04/Laravel%20Carbon%20%E7%B1%BB%E4%BD%BF%E7%94%A8/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2022/07/04/Laravel%20Carbon%20%E7%B1%BB%E4%BD%BF%E7%94%A8/&text=Laravel Carbon 类使用"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2022/07/04/Laravel%20Carbon%20%E7%B1%BB%E4%BD%BF%E7%94%A8/&title=Laravel Carbon 类使用"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2022/07/04/Laravel%20Carbon%20%E7%B1%BB%E4%BD%BF%E7%94%A8/&is_video=false&description=Laravel Carbon 类使用"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Laravel Carbon 类使用&body=Check out this article: http://example.com/2022/07/04/Laravel%20Carbon%20%E7%B1%BB%E4%BD%BF%E7%94%A8/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2022/07/04/Laravel%20Carbon%20%E7%B1%BB%E4%BD%BF%E7%94%A8/&title=Laravel Carbon 类使用"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2022/07/04/Laravel%20Carbon%20%E7%B1%BB%E4%BD%BF%E7%94%A8/&title=Laravel Carbon 类使用"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2022/07/04/Laravel%20Carbon%20%E7%B1%BB%E4%BD%BF%E7%94%A8/&title=Laravel Carbon 类使用"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2022/07/04/Laravel%20Carbon%20%E7%B1%BB%E4%BD%BF%E7%94%A8/&title=Laravel Carbon 类使用"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2022/07/04/Laravel%20Carbon%20%E7%B1%BB%E4%BD%BF%E7%94%A8/&name=Laravel Carbon 类使用&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2022/07/04/Laravel%20Carbon%20%E7%B1%BB%E4%BD%BF%E7%94%A8/&t=Laravel Carbon 类使用"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Laravel-Carbon-%E7%B1%BB%E4%BD%BF%E7%94%A8"><span class="toc-number">1.</span> <span class="toc-text">Laravel Carbon 类使用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Carbon-%E6%97%B6%E9%97%B4%E5%A4%84%E7%90%86%E5%BA%94%E7%94%A8"><span class="toc-number">1.0.0.1.</span> <span class="toc-text">Carbon 时间处理应用:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E4%B8%80%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">1.0.0.2.</span> <span class="toc-text">获取一个字符串</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%97%A5%E6%9C%9F%E8%A7%A3%E6%9E%90"><span class="toc-number">1.0.0.3.</span> <span class="toc-text">日期解析:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E6%97%A5%E6%9C%9F"><span class="toc-number">1.0.0.4.</span> <span class="toc-text">构造日期</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E6%97%A5%E6%9C%9F%E4%BF%A1%E6%81%AF"><span class="toc-number">1.0.0.5.</span> <span class="toc-text">获取日期信息:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%97%A5%E6%9C%9F%E6%93%8D%E4%BD%9C"><span class="toc-number">1.0.0.6.</span> <span class="toc-text">日期操作:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%97%A5%E6%9C%9F%E6%AF%94%E8%BE%83"><span class="toc-number">1.0.0.7.</span> <span class="toc-text">日期比较:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E7%89%B9%E6%AE%8A%E6%97%B6%E9%97%B4"><span class="toc-number">1.0.0.8.</span> <span class="toc-text">获取特殊时间:</span></a></li></ol></li></ol></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Laravel Carbon 类使用
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">南丞</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2022-07-04T02:00:02.000Z" itemprop="datePublished">2022-07-04</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/Web/">Web</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/Laravel/" rel="tag">Laravel</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="Laravel-Carbon-类使用"><a href="#Laravel-Carbon-类使用" class="headerlink" title="Laravel Carbon 类使用"></a>Laravel Carbon 类使用</h1><h4 id="Carbon-时间处理应用"><a href="#Carbon-时间处理应用" class="headerlink" title="Carbon 时间处理应用:"></a>Carbon 时间处理应用:</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">echo</span> <span class="title class_">Carbon</span>::<span class="title function_ invoke__">now</span>();                                                 <span class="comment">// 获取当前时间</span></span><br><span class="line"><span class="keyword">echo</span> <span class="title class_">Carbon</span>::<span class="title function_ invoke__">now</span>(<span class="string">&#x27;Arctic/Longyearbyen&#x27;</span>);                         <span class="comment">//获取指定时区的时间</span></span><br><span class="line"><span class="keyword">echo</span> <span class="title class_">Carbon</span>::<span class="title function_ invoke__">now</span>(<span class="keyword">new</span> <span class="title class_">\DateTimeZone</span>(<span class="string">&#x27;Europe/London&#x27;</span>));            <span class="comment">//获取指定时区的时间</span></span><br><span class="line"><span class="keyword">echo</span> <span class="title class_">Carbon</span>::<span class="title function_ invoke__">today</span>();                                               <span class="comment">//获取今天时间 时分秒是 00-00-00</span></span><br><span class="line"><span class="keyword">echo</span>  <span class="title class_">Carbon</span>::<span class="title function_ invoke__">tomorrow</span>(<span class="string">&#x27;Europe/London&#x27;</span>);                         <span class="comment">// 获取明天的时间</span></span><br><span class="line"><span class="keyword">echo</span> <span class="title class_">Carbon</span>::<span class="title function_ invoke__">yesterday</span>();                                           <span class="comment">// 获取昨天的时间</span></span><br><span class="line"><span class="keyword">echo</span> <span class="title class_">Carbon</span>::<span class="title function_ invoke__">now</span>()-&gt;timestamp;                                           <span class="comment">// 获取当前的时间戳</span></span><br><span class="line"><span class="comment">//以上结果输出的是一个Carbon 类型的日期时间对象</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Carbon &#123;#179 ▼</span></span><br><span class="line"><span class="comment"> * +&quot;date&quot;: &quot;2016-06-14 00:00:00.000000&quot;</span></span><br><span class="line"><span class="comment"> * +&quot;timezone_type&quot;: 3</span></span><br><span class="line"><span class="comment"> * +&quot;timezone&quot;: &quot;UTC&quot;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="获取一个字符串"><a href="#获取一个字符串" class="headerlink" title="获取一个字符串"></a>获取一个字符串</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">echo</span> <span class="title class_">Carbon</span>::<span class="title function_ invoke__">today</span>()-&gt;<span class="title function_ invoke__">toDateTimeString</span>();                            <span class="comment">// 获取当天的时间 带时分秒</span></span><br><span class="line"><span class="keyword">echo</span> <span class="title class_">Carbon</span>::<span class="title function_ invoke__">yesterday</span>()-&gt;<span class="title function_ invoke__">toDateTimeString</span>();</span><br><span class="line"><span class="keyword">echo</span> <span class="title class_">Carbon</span>::<span class="title function_ invoke__">tomorrow</span>()-&gt;<span class="title function_ invoke__">toDateTimeString</span>();</span><br><span class="line"><span class="keyword">echo</span> <span class="title class_">Carbon</span>::<span class="title function_ invoke__">today</span>()-&gt;<span class="title function_ invoke__">toDateString</span>();                                <span class="comment">// 获取当天的时间 不带时分秒</span></span><br><span class="line"><span class="keyword">echo</span> <span class="title class_">Carbon</span>::<span class="title function_ invoke__">yesterday</span>()-&gt;<span class="title function_ invoke__">toDateString</span>();</span><br><span class="line"><span class="keyword">echo</span> <span class="title class_">Carbon</span>::<span class="title function_ invoke__">tomorrow</span>()-&gt;<span class="title function_ invoke__">toDateString</span>();</span><br></pre></td></tr></table></figure>
+<h4 id="日期解析"><a href="#日期解析" class="headerlink" title="日期解析:"></a>日期解析:</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">echo</span> <span class="title class_">Carbon</span>::<span class="title function_ invoke__">parse</span>(<span class="string">&#x27;2018-12-27&#x27;</span>)-&gt;<span class="title function_ invoke__">toDateString</span>();             <span class="comment">//2018-12-27</span></span><br><span class="line"><span class="keyword">echo</span> <span class="title class_">Carbon</span>::<span class="title function_ invoke__">parse</span>(<span class="string">&#x27;2016-12-27&#x27;</span>)-&gt;<span class="title function_ invoke__">toDateTimeString</span>();         <span class="comment">//2018-12-27 00:00:00</span></span><br><span class="line"><span class="keyword">echo</span> <span class="title class_">Carbon</span>::<span class="title function_ invoke__">parse</span>(<span class="string">&#x27;2016-12-27 00:10:25&#x27;</span>)-&gt;<span class="title function_ invoke__">toDateTimeString</span>(); <span class="comment">//2018-12-27 00:10:25</span></span><br><span class="line"><span class="keyword">echo</span> <span class="title class_">Carbon</span>::<span class="title function_ invoke__">parse</span>(<span class="string">&#x27;2016-12-27 00:10:25&#x27;</span>)-&gt;timestamp;       <span class="comment">//获取某个日期的时间戳</span></span><br><span class="line"><span class="keyword">echo</span> <span class="title class_">Carbon</span>::<span class="title function_ invoke__">parse</span>(<span class="string">&#x27;today&#x27;</span>)-&gt;<span class="title function_ invoke__">toDateTimeString</span>();            <span class="comment">//获取当天的时间</span></span><br><span class="line"><span class="keyword">echo</span> <span class="title class_">Carbon</span>::<span class="title function_ invoke__">parse</span>(<span class="string">&#x27;yesterday&#x27;</span>)-&gt;<span class="title function_ invoke__">toDateTimeString</span>();        <span class="comment">//获取昨天的时间</span></span><br><span class="line"><span class="keyword">echo</span> <span class="title class_">Carbon</span>::<span class="title function_ invoke__">parse</span>(<span class="string">&#x27;tomorrow&#x27;</span>)-&gt;<span class="title function_ invoke__">toDateTimeString</span>();         <span class="comment">// 获取明天的时间</span></span><br><span class="line"><span class="keyword">echo</span> <span class="title class_">Carbon</span>::<span class="title function_ invoke__">parse</span>(<span class="string">&#x27;2 days ago&#x27;</span>)-&gt;<span class="title function_ invoke__">toDateTimeString</span>();       <span class="comment">// 获取两天之前的时间</span></span><br><span class="line"><span class="keyword">echo</span> <span class="title class_">Carbon</span>::<span class="title function_ invoke__">parse</span>(<span class="string">&#x27;+3 days&#x27;</span>)-&gt;<span class="title function_ invoke__">toDateTimeString</span>();       <span class="comment">// 获取两天之后的时间</span></span><br><span class="line"><span class="keyword">echo</span> <span class="title class_">Carbon</span>::<span class="title function_ invoke__">parse</span>(<span class="string">&#x27;+2 weeks&#x27;</span>)-&gt;<span class="title function_ invoke__">toDateTimeString</span>();      <span class="comment">// 获取两周之后的时间</span></span><br><span class="line"><span class="keyword">echo</span> <span class="title class_">Carbon</span>::<span class="title function_ invoke__">parse</span>(<span class="string">&#x27;+4 months&#x27;</span>)-&gt;<span class="title function_ invoke__">toDateTimeString</span>();      <span class="comment">// 获取两月之后的时间</span></span><br><span class="line"><span class="keyword">echo</span> <span class="title class_">Carbon</span>::<span class="title function_ invoke__">parse</span>(<span class="string">&#x27;-1 year&#x27;</span>)-&gt;<span class="title function_ invoke__">toDateTimeString</span>();      <span class="comment">// 获取上一年的今天时间</span></span><br><span class="line"><span class="keyword">echo</span> <span class="title class_">Carbon</span>::<span class="title function_ invoke__">parse</span>(<span class="string">&#x27;next wednesday&#x27;</span>)-&gt;<span class="title function_ invoke__">toDateTimeString</span>(); <span class="comment">// 获取下周三的时间</span></span><br><span class="line"><span class="keyword">echo</span> <span class="title class_">Carbon</span>::<span class="title function_ invoke__">parse</span>(<span class="string">&#x27;last friday&#x27;</span>)-&gt;<span class="title function_ invoke__">toDateTimeString</span>();    <span class="comment">// 获取最后一个周五的时间</span></span><br><span class="line"><span class="title function_ invoke__">var_dump</span>(<span class="title class_">Carbon</span>::<span class="title function_ invoke__">now</span>()-&gt;<span class="title function_ invoke__">isWeekday</span>());  <span class="comment">//是否是工作日</span></span><br><span class="line"><span class="title function_ invoke__">var_dump</span>(<span class="title class_">Carbon</span>::<span class="title function_ invoke__">parse</span>(<span class="string">&#x27;2018-12-29&#x27;</span>)-&gt;<span class="title function_ invoke__">isWeekday</span>());</span><br><span class="line"><span class="title function_ invoke__">var_dump</span>(<span class="title class_">Carbon</span>::<span class="title function_ invoke__">now</span>()-&gt;<span class="title function_ invoke__">isWeekend</span>());  <span class="comment">//是否是休息日</span></span><br><span class="line"><span class="title function_ invoke__">var_dump</span>(<span class="title class_">Carbon</span>::<span class="title function_ invoke__">parse</span>(<span class="string">&#x27;2018-12-29&#x27;</span>)-&gt;<span class="title function_ invoke__">isWeekend</span>());</span><br><span class="line"><span class="title function_ invoke__">var_dump</span>(<span class="title class_">Carbon</span>::<span class="title function_ invoke__">parse</span>(<span class="string">&#x27;2018-12-26&#x27;</span>)-&gt;<span class="title function_ invoke__">isYesterday</span>()); <span class="comment">//是否是昨天</span></span><br><span class="line"><span class="title function_ invoke__">var_dump</span>(<span class="title class_">Carbon</span>::<span class="title function_ invoke__">parse</span>(<span class="string">&#x27;2018-12-26&#x27;</span>)-&gt;<span class="title function_ invoke__">isToday</span>()); <span class="comment">//是否是今天</span></span><br><span class="line"><span class="title function_ invoke__">var_dump</span>(<span class="title class_">Carbon</span>::<span class="title function_ invoke__">parse</span>(<span class="string">&#x27;2018-12-26&#x27;</span>)-&gt;<span class="title function_ invoke__">isTomorrow</span>()); <span class="comment">//是否是明天</span></span><br><span class="line"><span class="title function_ invoke__">var_dump</span>(<span class="title class_">Carbon</span>::<span class="title function_ invoke__">createFromDate</span>(<span class="number">1991</span>,<span class="number">10</span>,<span class="number">24</span>)-&gt;<span class="title function_ invoke__">isBirthday</span>()); <span class="comment">//今天是否是生日</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="构造日期"><a href="#构造日期" class="headerlink" title="构造日期"></a>构造日期</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">echo</span> <span class="title class_">Carbon</span>::<span class="title function_ invoke__">createFromDate</span>(<span class="string">&#x27;2018&#x27;</span>, <span class="string">&#x27;12&#x27;</span>, <span class="string">&#x27;27&#x27;</span>);  <span class="comment">//2018-12-27 02:21:53   构造年月</span></span><br><span class="line"><span class="keyword">echo</span> <span class="title class_">Carbon</span>::<span class="title function_ invoke__">createFromDate</span>(<span class="string">&#x27;2018&#x27;</span>, <span class="string">&#x27;12&#x27;</span>, <span class="string">&#x27;27&#x27;</span>,<span class="string">&#x27;Asia/Taipei&#x27;</span>);  <span class="comment">//2018-12-27 10:22:12  //根据时区构造年月</span></span><br><span class="line"><span class="keyword">echo</span> <span class="title class_">Carbon</span>::<span class="title function_ invoke__">createFromTime</span>(<span class="string">&#x27;12&#x27;</span>, <span class="string">&#x27;59&#x27;</span>, <span class="string">&#x27;52&#x27;</span>);   <span class="comment">// 给当前时间构造时分秒</span></span><br><span class="line"><span class="keyword">echo</span> <span class="title class_">Carbon</span>::<span class="title function_ invoke__">create</span>(<span class="string">&#x27;2018&#x27;</span>, <span class="string">&#x27;12&#x27;</span>, <span class="string">&#x27;27&#x27;</span>, <span class="string">&#x27;12&#x27;</span>, <span class="string">&#x27;59&#x27;</span>, <span class="string">&#x27;52&#x27;</span>, <span class="string">&#x27;Asia/Taipei&#x27;</span>); <span class="comment">//构造完整的时分秒</span></span><br><span class="line"><span class="keyword">echo</span> <span class="title class_">Carbon</span>::<span class="title function_ invoke__">createFromFormat</span>(<span class="string">&#x27;Y/m/d H&#x27;</span>, <span class="string">&#x27;2018/05/21 22&#x27;</span>)-&gt;<span class="title function_ invoke__">toDateTimeString</span>(); <span class="comment">// 构造指定格式的时间</span></span><br><span class="line"><span class="keyword">echo</span> <span class="title class_">Carbon</span>::<span class="title function_ invoke__">createFromTimeStamp</span>(<span class="number">1545877701</span>)-&gt;<span class="title function_ invoke__">toDateTimeString</span>();    <span class="comment">//指定时间戳构建时间</span></span><br><span class="line"><span class="keyword">echo</span> <span class="title class_">Carbon</span>::<span class="title function_ invoke__">createFromTimeStamp</span>(<span class="number">1545877701</span>,<span class="string">&#x27;Asia/Taipei&#x27;</span>)-&gt;<span class="title function_ invoke__">toDateTimeString</span>();    <span class="comment">//指定时间戳和时区构建时间</span></span><br><span class="line"><span class="keyword">echo</span> <span class="title class_">Carbon</span>::<span class="title function_ invoke__">createFromTimeStampUTC</span>(<span class="number">1545877701</span>)-&gt;<span class="title function_ invoke__">toDateTimeString</span>();    <span class="comment">//指定时间戳和时区构建时间</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="获取日期信息"><a href="#获取日期信息" class="headerlink" title="获取日期信息:"></a>获取日期信息:</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$time</span> = <span class="title class_">Carbon</span>::<span class="title function_ invoke__">now</span>();</span><br><span class="line"><span class="title function_ invoke__">var_dump</span>(<span class="variable">$time</span>-&gt;year);   <span class="comment">//获取当前的年</span></span><br><span class="line"><span class="title function_ invoke__">var_dump</span>(<span class="variable">$time</span>-&gt;month);   <span class="comment">//获取当前的月</span></span><br><span class="line"><span class="title function_ invoke__">var_dump</span>(<span class="variable">$time</span>-&gt;day);   <span class="comment">//获取当前的日</span></span><br><span class="line"><span class="title function_ invoke__">var_dump</span>(<span class="variable">$time</span>-&gt;hour);   <span class="comment">//获取当前的时</span></span><br><span class="line"><span class="title function_ invoke__">var_dump</span>(<span class="variable">$time</span>-&gt;minute);   <span class="comment">//获取当前的分</span></span><br><span class="line"><span class="title function_ invoke__">var_dump</span>(<span class="variable">$time</span>-&gt;second);   <span class="comment">//获取当前的秒</span></span><br><span class="line"><span class="title function_ invoke__">var_dump</span>(<span class="variable">$time</span>-&gt;micro);   <span class="comment">//获取当前的毫秒</span></span><br><span class="line"><span class="title function_ invoke__">var_dump</span>(<span class="variable">$time</span>-&gt;dayOfWeek);   <span class="comment">//获取当前时间是这周的第几天</span></span><br><span class="line"><span class="title function_ invoke__">var_dump</span>(<span class="variable">$time</span>-&gt;dayOfYear);   <span class="comment">//获取当前时间是今年的第几天</span></span><br><span class="line"><span class="title function_ invoke__">var_dump</span>(<span class="variable">$time</span>-&gt;weekOfMonth);   <span class="comment">//获取当前时间所以在周是当前月的第几周</span></span><br><span class="line"><span class="title function_ invoke__">var_dump</span>(<span class="variable">$time</span>-&gt;weekOfYear);   <span class="comment">//获取当前时间所以在周是当前年的第几周</span></span><br><span class="line"><span class="title function_ invoke__">var_dump</span>(<span class="variable">$time</span>-&gt;daysInMonth);   <span class="comment">//获取当月是多少天</span></span><br><span class="line"><span class="title function_ invoke__">var_dump</span>(<span class="title class_">Carbon</span>::<span class="title function_ invoke__">createFromDate</span>(<span class="number">1991</span>, <span class="number">10</span>, <span class="number">24</span>)-&gt;age); <span class="comment">//获取当前时间 距离 1991,10,24 多少年, 也就是你多少岁了</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="日期操作"><a href="#日期操作" class="headerlink" title="日期操作:"></a>日期操作:</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">echo</span> <span class="title class_">Carbon</span>::<span class="title function_ invoke__">now</span>()-&gt;<span class="title function_ invoke__">addDays</span>(<span class="number">25</span>);   <span class="comment">//当前时间加上25天</span></span><br><span class="line"><span class="keyword">echo</span> <span class="title class_">Carbon</span>::<span class="title function_ invoke__">now</span>()-&gt;<span class="title function_ invoke__">addWeeks</span>(<span class="number">3</span>);   <span class="comment">//当前时间加上3周</span></span><br><span class="line"><span class="keyword">echo</span> <span class="title class_">Carbon</span>::<span class="title function_ invoke__">now</span>()-&gt;<span class="title function_ invoke__">addHours</span>(<span class="number">25</span>);   <span class="comment">//当前时间加25小时</span></span><br><span class="line"><span class="keyword">echo</span> <span class="title class_">Carbon</span>::<span class="title function_ invoke__">now</span>()-&gt;<span class="title function_ invoke__">subHours</span>(<span class="number">2</span>);    <span class="comment">//当前时间减2小时</span></span><br><span class="line"><span class="keyword">echo</span> <span class="title class_">Carbon</span>::<span class="title function_ invoke__">now</span>()-&gt;<span class="title function_ invoke__">addHours</span>(<span class="number">2</span>)-&gt;<span class="title function_ invoke__">addMinutes</span>(<span class="number">12</span>);</span><br><span class="line"><span class="keyword">echo</span> <span class="title class_">Carbon</span>::<span class="title function_ invoke__">now</span>()-&gt;<span class="title function_ invoke__">modify</span>(<span class="string">&#x27;+25 days&#x27;</span>); <span class="comment">//当前时间加上25天</span></span><br><span class="line"><span class="keyword">echo</span> <span class="title class_">Carbon</span>::<span class="title function_ invoke__">now</span>()-&gt;<span class="title function_ invoke__">modify</span>(<span class="string">&#x27;-2 days&#x27;</span>); <span class="comment">//当前时间减2天</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="日期比较"><a href="#日期比较" class="headerlink" title="日期比较:"></a>日期比较:</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">echo</span> <span class="title class_">Carbon</span>::<span class="title function_ invoke__">now</span>()-&gt;tzName;   <span class="comment">//获取当前时区</span></span><br><span class="line"><span class="variable">$first</span> = <span class="title class_">Carbon</span>::<span class="title function_ invoke__">create</span>(<span class="number">2018</span>, <span class="number">12</span>, <span class="number">5</span>, <span class="number">23</span>, <span class="number">26</span>, <span class="number">11</span>);</span><br><span class="line"><span class="variable">$second</span> = <span class="title class_">Carbon</span>::<span class="title function_ invoke__">create</span>(<span class="number">2018</span>, <span class="number">9</span>, <span class="number">5</span>, <span class="number">20</span>, <span class="number">26</span>, <span class="number">11</span>);</span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$first</span>-&gt;<span class="title function_ invoke__">toDateTimeString</span>();</span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$second</span>-&gt;<span class="title function_ invoke__">toDateTimeString</span>();</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * min –返回最小日期。</span></span><br><span class="line"><span class="comment"> * max – 返回最大日期。</span></span><br><span class="line"><span class="comment"> * eq – 判断两个日期是否相等。</span></span><br><span class="line"><span class="comment"> * gt – 判断第一个日期是否比第二个日期大。</span></span><br><span class="line"><span class="comment"> * lt – 判断第一个日期是否比第二个日期小。</span></span><br><span class="line"><span class="comment"> * gte – 判断第一个日期是否大于等于第二个日期。</span></span><br><span class="line"><span class="comment"> * lte – 判断第一个日期是否小于等于第二个日期。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="title function_ invoke__">var_dump</span>(<span class="variable">$first</span>-&gt;<span class="title function_ invoke__">eq</span>(<span class="variable">$second</span>));</span><br><span class="line"><span class="title function_ invoke__">var_dump</span>(<span class="variable">$first</span>-&gt;<span class="title function_ invoke__">ne</span>(<span class="variable">$second</span>));</span><br><span class="line"><span class="title function_ invoke__">var_dump</span>(<span class="variable">$first</span>-&gt;<span class="title function_ invoke__">gt</span>(<span class="variable">$second</span>));</span><br><span class="line"><span class="title function_ invoke__">var_dump</span>(<span class="variable">$first</span>-&gt;<span class="title function_ invoke__">gte</span>(<span class="variable">$second</span>));</span><br><span class="line"><span class="title function_ invoke__">var_dump</span>(<span class="variable">$first</span>-&gt;<span class="title function_ invoke__">lt</span>(<span class="variable">$second</span>));</span><br><span class="line"><span class="title function_ invoke__">var_dump</span>(<span class="variable">$first</span>-&gt;<span class="title function_ invoke__">lte</span>(<span class="variable">$second</span>));</span><br><span class="line"><span class="comment">//区间比较</span></span><br><span class="line"><span class="variable">$first</span> = <span class="title class_">Carbon</span>::<span class="title function_ invoke__">create</span>(<span class="number">2018</span>, <span class="number">10</span>, <span class="number">5</span>, <span class="number">1</span>);</span><br><span class="line"><span class="variable">$second</span> = <span class="title class_">Carbon</span>::<span class="title function_ invoke__">create</span>(<span class="number">2018</span>, <span class="number">10</span>, <span class="number">5</span>, <span class="number">5</span>);</span><br><span class="line"><span class="title function_ invoke__">var_dump</span>(<span class="title class_">Carbon</span>::<span class="title function_ invoke__">create</span>(<span class="number">2018</span>, <span class="number">10</span>, <span class="number">5</span>, <span class="number">3</span>)-&gt;<span class="title function_ invoke__">between</span>(<span class="variable">$first</span>, <span class="variable">$second</span>));          <span class="comment">// bool(true)</span></span><br><span class="line"><span class="title function_ invoke__">var_dump</span>(<span class="title class_">Carbon</span>::<span class="title function_ invoke__">create</span>(<span class="number">2018</span>, <span class="number">10</span>, <span class="number">5</span>, <span class="number">5</span>)-&gt;<span class="title function_ invoke__">between</span>(<span class="variable">$first</span>, <span class="variable">$second</span>));          <span class="comment">// bool(true)</span></span><br><span class="line"><span class="title function_ invoke__">var_dump</span>(<span class="title class_">Carbon</span>::<span class="title function_ invoke__">create</span>(<span class="number">2018</span>, <span class="number">10</span>, <span class="number">5</span>, <span class="number">5</span>)-&gt;<span class="title function_ invoke__">between</span>(<span class="variable">$first</span>, <span class="variable">$second</span>, <span class="literal">false</span>));   <span class="comment">// bool(false)</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="获取特殊时间"><a href="#获取特殊时间" class="headerlink" title="获取特殊时间:"></a>获取特殊时间:</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">echo</span> <span class="title class_">Carbon</span>::<span class="title function_ invoke__">now</span>()-&gt;<span class="title function_ invoke__">startOfDay</span>();  <span class="comment">//今天开始时间</span></span><br><span class="line"><span class="keyword">echo</span> <span class="title class_">Carbon</span>::<span class="title function_ invoke__">now</span>()-&gt;<span class="title function_ invoke__">endOfDay</span>();  <span class="comment">//今天结束时间</span></span><br><span class="line"><span class="keyword">echo</span> <span class="title class_">Carbon</span>::<span class="title function_ invoke__">now</span>()-&gt;<span class="title function_ invoke__">startOfWeek</span>(); <span class="comment">//这周开始时间紧</span></span><br><span class="line"><span class="keyword">echo</span> <span class="title class_">Carbon</span>::<span class="title function_ invoke__">now</span>()-&gt;<span class="title function_ invoke__">endOfWeek</span>(); <span class="comment">//这周结束时间</span></span><br><span class="line"><span class="keyword">echo</span> <span class="title class_">Carbon</span>::<span class="title function_ invoke__">now</span>()-&gt;<span class="title function_ invoke__">startOfMonth</span>(); <span class="comment">//这月开始时间</span></span><br><span class="line"><span class="keyword">echo</span> <span class="title class_">Carbon</span>::<span class="title function_ invoke__">now</span>()-&gt;<span class="title function_ invoke__">endOfMonth</span>(); <span class="comment">//这月开始时间</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/search/">搜索</a></li>
+         
+          <li><a href="/links/">友情连接</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="https://github.com/pfinal-nc">项目</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Laravel-Carbon-%E7%B1%BB%E4%BD%BF%E7%94%A8"><span class="toc-number">1.</span> <span class="toc-text">Laravel Carbon 类使用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Carbon-%E6%97%B6%E9%97%B4%E5%A4%84%E7%90%86%E5%BA%94%E7%94%A8"><span class="toc-number">1.0.0.1.</span> <span class="toc-text">Carbon 时间处理应用:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E4%B8%80%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">1.0.0.2.</span> <span class="toc-text">获取一个字符串</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%97%A5%E6%9C%9F%E8%A7%A3%E6%9E%90"><span class="toc-number">1.0.0.3.</span> <span class="toc-text">日期解析:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E6%97%A5%E6%9C%9F"><span class="toc-number">1.0.0.4.</span> <span class="toc-text">构造日期</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E6%97%A5%E6%9C%9F%E4%BF%A1%E6%81%AF"><span class="toc-number">1.0.0.5.</span> <span class="toc-text">获取日期信息:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%97%A5%E6%9C%9F%E6%93%8D%E4%BD%9C"><span class="toc-number">1.0.0.6.</span> <span class="toc-text">日期操作:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%97%A5%E6%9C%9F%E6%AF%94%E8%BE%83"><span class="toc-number">1.0.0.7.</span> <span class="toc-text">日期比较:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E7%89%B9%E6%AE%8A%E6%97%B6%E9%97%B4"><span class="toc-number">1.0.0.8.</span> <span class="toc-text">获取特殊时间:</span></a></li></ol></li></ol></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2022/07/04/Laravel%20Carbon%20%E7%B1%BB%E4%BD%BF%E7%94%A8/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2022/07/04/Laravel%20Carbon%20%E7%B1%BB%E4%BD%BF%E7%94%A8/&text=Laravel Carbon 类使用"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2022/07/04/Laravel%20Carbon%20%E7%B1%BB%E4%BD%BF%E7%94%A8/&title=Laravel Carbon 类使用"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2022/07/04/Laravel%20Carbon%20%E7%B1%BB%E4%BD%BF%E7%94%A8/&is_video=false&description=Laravel Carbon 类使用"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Laravel Carbon 类使用&body=Check out this article: http://example.com/2022/07/04/Laravel%20Carbon%20%E7%B1%BB%E4%BD%BF%E7%94%A8/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2022/07/04/Laravel%20Carbon%20%E7%B1%BB%E4%BD%BF%E7%94%A8/&title=Laravel Carbon 类使用"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2022/07/04/Laravel%20Carbon%20%E7%B1%BB%E4%BD%BF%E7%94%A8/&title=Laravel Carbon 类使用"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2022/07/04/Laravel%20Carbon%20%E7%B1%BB%E4%BD%BF%E7%94%A8/&title=Laravel Carbon 类使用"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2022/07/04/Laravel%20Carbon%20%E7%B1%BB%E4%BD%BF%E7%94%A8/&title=Laravel Carbon 类使用"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2022/07/04/Laravel%20Carbon%20%E7%B1%BB%E4%BD%BF%E7%94%A8/&name=Laravel Carbon 类使用&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2022/07/04/Laravel%20Carbon%20%E7%B1%BB%E4%BD%BF%E7%94%A8/&t=Laravel Carbon 类使用"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2022
+    PFinal南丞
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a href="/links/">友情连接</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://github.com/pfinal-nc">项目</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EVR51H8CSN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-EVR51H8CSN');
+    </script>
+
+<!-- Baidu Analytics -->
+
+  <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?ffe26c1d637f36349728c74bb031faa2";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+        </script>
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>

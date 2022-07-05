@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="$_SERVER是一个包含了诸如头信息(header)、路径(path)、以及脚本位置(script locations)等等信息的数组。 这个数组中的项目由 Web 服务器创建。不能保证每个服务器都提供全部项目；服务器可能会忽略一些，或者提供一些没有在这里列举出来的项目。 下表列出了所有 $_SERVER 变量中的重要元素:   元素&#x2F;代码 描述    $_SERVER[‘PHP_SE">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PHP之SERVER详解">
+<meta property="og:url" content="http://example.com/2022/07/04/PHP%E4%B9%8BSERVER%E8%AF%A6%E8%A7%A3/index.html">
+<meta property="og:site_name" content="PFinalClub">
+<meta property="og:description" content="$_SERVER是一个包含了诸如头信息(header)、路径(path)、以及脚本位置(script locations)等等信息的数组。 这个数组中的项目由 Web 服务器创建。不能保证每个服务器都提供全部项目；服务器可能会忽略一些，或者提供一些没有在这里列举出来的项目。 下表列出了所有 $_SERVER 变量中的重要元素:   元素&#x2F;代码 描述    $_SERVER[‘PHP_SE">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-07-04T07:25:57.000Z">
+<meta property="article:modified_time" content="2022-07-04T07:46:45.633Z">
+<meta property="article:author" content="PFinal南丞">
+<meta property="article:tag" content="PHP">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>PHP之SERVER详解</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2154665617309406"
+     crossorigin="anonymous"></script>
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a href="/links/">友情连接</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://github.com/pfinal-nc">项目</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="上一篇" href="/2022/07/04/PHP%E8%BF%9B%E7%A8%8B%E7%BA%BF%E7%A8%8B%E8%A7%A3%E6%9E%90/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/2022/07/04/php-fpm%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%AF%A6%E8%A7%A3/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2022/07/04/PHP%E4%B9%8BSERVER%E8%AF%A6%E8%A7%A3/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2022/07/04/PHP%E4%B9%8BSERVER%E8%AF%A6%E8%A7%A3/&text=PHP之SERVER详解"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2022/07/04/PHP%E4%B9%8BSERVER%E8%AF%A6%E8%A7%A3/&title=PHP之SERVER详解"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2022/07/04/PHP%E4%B9%8BSERVER%E8%AF%A6%E8%A7%A3/&is_video=false&description=PHP之SERVER详解"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=PHP之SERVER详解&body=Check out this article: http://example.com/2022/07/04/PHP%E4%B9%8BSERVER%E8%AF%A6%E8%A7%A3/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2022/07/04/PHP%E4%B9%8BSERVER%E8%AF%A6%E8%A7%A3/&title=PHP之SERVER详解"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2022/07/04/PHP%E4%B9%8BSERVER%E8%AF%A6%E8%A7%A3/&title=PHP之SERVER详解"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2022/07/04/PHP%E4%B9%8BSERVER%E8%AF%A6%E8%A7%A3/&title=PHP之SERVER详解"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2022/07/04/PHP%E4%B9%8BSERVER%E8%AF%A6%E8%A7%A3/&title=PHP之SERVER详解"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2022/07/04/PHP%E4%B9%8BSERVER%E8%AF%A6%E8%A7%A3/&name=PHP之SERVER详解&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2022/07/04/PHP%E4%B9%8BSERVER%E8%AF%A6%E8%A7%A3/&t=PHP之SERVER详解"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8B%E8%A1%A8%E5%88%97%E5%87%BA%E4%BA%86%E6%89%80%E6%9C%89-SERVER-%E5%8F%98%E9%87%8F%E4%B8%AD%E7%9A%84%E9%87%8D%E8%A6%81%E5%85%83%E7%B4%A0"><span class="toc-number">1.</span> <span class="toc-text">下表列出了所有 $_SERVER 变量中的重要元素:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BE%8B%E5%A6%82"><span class="toc-number">2.</span> <span class="toc-text">例如:</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        PHP之SERVER详解
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">PFinal南丞</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2022-07-04T07:25:57.000Z" itemprop="datePublished">2022-07-04</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/PHP/">PHP</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/PHP/" rel="tag">PHP</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p><strong>$_SERVER</strong>是一个包含了诸如头信息(header)、路径(path)、以及脚本位置(script locations)等等信息的数组。</p>
+<p>这个数组中的项目由 Web 服务器创建。不能保证每个服务器都提供全部项目；服务器可能会忽略一些，或者提供一些没有在这里列举出来的项目。</p>
+<h4 id="下表列出了所有-SERVER-变量中的重要元素"><a href="#下表列出了所有-SERVER-变量中的重要元素" class="headerlink" title="下表列出了所有 $_SERVER 变量中的重要元素:"></a>下表列出了所有 $_SERVER 变量中的重要元素:</h4><table>
+<thead>
+<tr>
+<th>元素&#x2F;代码</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$_SERVER[‘PHP_SELF’]</td>
+<td>当前执行脚本的文件名，与 document root 有关。</td>
+</tr>
+<tr>
+<td>$_SERVER[‘GATEWAY_INTERFACE’]</td>
+<td>服务器使用的 CGI 规范的版本。</td>
+</tr>
+<tr>
+<td>$_SERVER[‘SERVER_ADDR’]</td>
+<td>当前运行脚本所在的服务器的 IP 地址。</td>
+</tr>
+<tr>
+<td>$_SERVER[‘SERVER_NAME’]</td>
+<td>当前运行脚本所在的服务器的主机名。如果脚本运行于虚拟主机中，该名称是由那个虚拟主机所设置的值决定。</td>
+</tr>
+<tr>
+<td>$_SERVER[‘SERVER_SOFTWARE’]</td>
+<td>服务器标识字符串，在响应请求时的头信息中给出。</td>
+</tr>
+<tr>
+<td>$_SERVER[‘SERVER_PROTOCOL’]</td>
+<td>请求页面时通信协议的名称和版本。</td>
+</tr>
+<tr>
+<td>$_SERVER[‘REQUEST_METHOD’]</td>
+<td>访问页面使用的请求方法。</td>
+</tr>
+<tr>
+<td>$_SERVER[‘REQUEST_TIME’]</td>
+<td>请求开始时的时间戳。从 PHP 5.1.0 起可用。</td>
+</tr>
+<tr>
+<td>$_SERVER[‘QUERY_STRING’]</td>
+<td>query string（查询字符串），如果有的话，通过它进行页面访问。</td>
+</tr>
+<tr>
+<td>$_SERVER[‘HTTP_ACCEPT’]</td>
+<td>当前请求头中 Accept: 项的内容，如果存在的话。</td>
+</tr>
+<tr>
+<td>$_SERVER[‘HTTP_ACCEPT_CHARSET’]</td>
+<td>当前请求头中 Accept-Charset: 项的内容，如果存在的话。</td>
+</tr>
+<tr>
+<td>$_SERVER[‘HTTP_HOST’]</td>
+<td>当前请求头中 Host: 项的内容，如果存在的话。</td>
+</tr>
+<tr>
+<td>$_SERVER[‘HTTP_REFERER’]</td>
+<td>引导用户代理到当前页的前一页的地址（如果存在）。由 user agent 设置决定。并不是所有的用户代理都会设置该项，有的还提供了修改 HTTP_REFERER 的功能。简言之，该值并不可信。)</td>
+</tr>
+<tr>
+<td>$_SERVER[‘HTTPS’]</td>
+<td>如果脚本是通过 HTTPS 协议被访问，则被设为一个非空的值。</td>
+</tr>
+<tr>
+<td>$_SERVER[‘REMOTE_ADDR’]</td>
+<td>浏览当前页面的用户的 IP 地址。</td>
+</tr>
+<tr>
+<td>$_SERVER[‘REMOTE_HOST’]</td>
+<td>浏览当前页面的用户的主机名。DNS 反向解析不依赖于用户的 REMOTE_ADDR。</td>
+</tr>
+<tr>
+<td>$_SERVER[‘REMOTE_PORT’]</td>
+<td>用户机器上连接到 Web 服务器所使用的端口号。</td>
+</tr>
+<tr>
+<td>$_SERVER[‘SCRIPT_FILENAME’]</td>
+<td>当前执行脚本的绝对路径。</td>
+</tr>
+<tr>
+<td>$_SERVER[‘SERVER_ADMIN’]</td>
+<td>该值指明了 Apache 服务器配置文件中的 SERVER_ADMIN 参数。如果脚本运行在一个虚拟主机上，则该值是那个虚拟主机的值。</td>
+</tr>
+<tr>
+<td>$_SERVER[‘SERVER_PORT’]</td>
+<td>Web 服务器使用的端口。默认值为 “80”。如果使用 SSL 安全连接，则这个值为用户设置的 HTTP 端口。</td>
+</tr>
+<tr>
+<td>$_SERVER[‘SERVER_SIGNATURE’]</td>
+<td>包含了服务器版本和虚拟主机名的字符串。</td>
+</tr>
+<tr>
+<td>$_SERVER[‘PATH_TRANSLATED’]</td>
+<td>当前脚本所在文件系统（非文档根目录）的基本路径。这是在服务器进行虚拟到真实路径的映像后的结果。</td>
+</tr>
+<tr>
+<td>$_SERVER[‘SCRIPT_NAME’]</td>
+<td>包含当前脚本的路径。这在页面需要指向自己时非常有用。<strong>FILE</strong> 常量包含当前脚本(例如包含文件)的完整路径和文件名。</td>
+</tr>
+<tr>
+<td>$_SERVER[‘SCRIPT_URI’]</td>
+<td>URI 用来指定要访问的页面。例如 “&#x2F;index.html”。</td>
+</tr>
+</tbody></table>
+<h4 id="例如"><a href="#例如" class="headerlink" title="例如:"></a>例如:</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_ invoke__">Array</span></span><br><span class="line">(</span><br><span class="line">    [USER] =&gt; _www</span><br><span class="line">    [HOME] =&gt; /Library/WebServer</span><br><span class="line">    [HTTP_ACCEPT_LANGUAGE] =&gt; zh-CN,zh;q=<span class="number">0.9</span>,en;q=<span class="number">0.8</span>,zh-TW;q=<span class="number">0.7</span></span><br><span class="line">    [HTTP_ACCEPT_ENCODING] =&gt; gzip, deflate, br</span><br><span class="line">    [HTTP_ACCEPT] =&gt; text/html,application/xhtml+xml,application/xml;q=<span class="number">0.9</span>,image/webp,image/apng,*<span class="comment">/*;q=0.8</span></span><br><span class="line"><span class="comment">    [HTTP_UPGRADE_INSECURE_REQUESTS] =&gt; 1</span></span><br><span class="line"><span class="comment">    [HTTP_USER_AGENT] =&gt; Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36</span></span><br><span class="line"><span class="comment">    [HTTP_CACHE_CONTROL] =&gt; max-age=0</span></span><br><span class="line"><span class="comment">    [HTTP_CONNECTION] =&gt; keep-alive</span></span><br><span class="line"><span class="comment">    [HTTP_HOST] =&gt; localhost</span></span><br><span class="line"><span class="comment">    [REDIRECT_STATUS] =&gt; 200</span></span><br><span class="line"><span class="comment">    [SERVER_NAME] =&gt; localhost</span></span><br><span class="line"><span class="comment">    [SERVER_PORT] =&gt; 80</span></span><br><span class="line"><span class="comment">    [SERVER_ADDR] =&gt; 127.0.0.1</span></span><br><span class="line"><span class="comment">    [REMOTE_PORT] =&gt; 53993</span></span><br><span class="line"><span class="comment">    [REMOTE_ADDR] =&gt; 127.0.0.1</span></span><br><span class="line"><span class="comment">    [SERVER_SOFTWARE] =&gt; nginx/1.10.3</span></span><br><span class="line"><span class="comment">    [GATEWAY_INTERFACE] =&gt; CGI/1.1</span></span><br><span class="line"><span class="comment">    [REQUEST_SCHEME] =&gt; http</span></span><br><span class="line"><span class="comment">    [SERVER_PROTOCOL] =&gt; HTTP/1.1</span></span><br><span class="line"><span class="comment">    [DOCUMENT_ROOT] =&gt; /Users/qiuzi/www</span></span><br><span class="line"><span class="comment">    [DOCUMENT_URI] =&gt; /i.php</span></span><br><span class="line"><span class="comment">    [REQUEST_URI] =&gt; /i.php</span></span><br><span class="line"><span class="comment">    [SCRIPT_NAME] =&gt; /i.php</span></span><br><span class="line"><span class="comment">    [CONTENT_LENGTH] =&gt; </span></span><br><span class="line"><span class="comment">    [CONTENT_TYPE] =&gt; </span></span><br><span class="line"><span class="comment">    [REQUEST_METHOD] =&gt; GET</span></span><br><span class="line"><span class="comment">    [QUERY_STRING] =&gt; </span></span><br><span class="line"><span class="comment">    [SCRIPT_FILENAME] =&gt; /Users/qiuzi/www/i.php</span></span><br><span class="line"><span class="comment">    [FCGI_ROLE] =&gt; RESPONDER</span></span><br><span class="line"><span class="comment">    [PHP_SELF] =&gt; /i.php</span></span><br><span class="line"><span class="comment">    [REQUEST_TIME_FLOAT] =&gt; 1513262160.1324</span></span><br><span class="line"><span class="comment">    [REQUEST_TIME] =&gt; 1513262160</span></span><br><span class="line"><span class="comment">)</span></span><br><span class="line"><span class="comment"></span></span><br></pre></td></tr></table></figure>
+
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/search/">搜索</a></li>
+         
+          <li><a href="/links/">友情连接</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="https://github.com/pfinal-nc">项目</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8B%E8%A1%A8%E5%88%97%E5%87%BA%E4%BA%86%E6%89%80%E6%9C%89-SERVER-%E5%8F%98%E9%87%8F%E4%B8%AD%E7%9A%84%E9%87%8D%E8%A6%81%E5%85%83%E7%B4%A0"><span class="toc-number">1.</span> <span class="toc-text">下表列出了所有 $_SERVER 变量中的重要元素:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BE%8B%E5%A6%82"><span class="toc-number">2.</span> <span class="toc-text">例如:</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2022/07/04/PHP%E4%B9%8BSERVER%E8%AF%A6%E8%A7%A3/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2022/07/04/PHP%E4%B9%8BSERVER%E8%AF%A6%E8%A7%A3/&text=PHP之SERVER详解"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2022/07/04/PHP%E4%B9%8BSERVER%E8%AF%A6%E8%A7%A3/&title=PHP之SERVER详解"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2022/07/04/PHP%E4%B9%8BSERVER%E8%AF%A6%E8%A7%A3/&is_video=false&description=PHP之SERVER详解"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=PHP之SERVER详解&body=Check out this article: http://example.com/2022/07/04/PHP%E4%B9%8BSERVER%E8%AF%A6%E8%A7%A3/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2022/07/04/PHP%E4%B9%8BSERVER%E8%AF%A6%E8%A7%A3/&title=PHP之SERVER详解"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2022/07/04/PHP%E4%B9%8BSERVER%E8%AF%A6%E8%A7%A3/&title=PHP之SERVER详解"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2022/07/04/PHP%E4%B9%8BSERVER%E8%AF%A6%E8%A7%A3/&title=PHP之SERVER详解"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2022/07/04/PHP%E4%B9%8BSERVER%E8%AF%A6%E8%A7%A3/&title=PHP之SERVER详解"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2022/07/04/PHP%E4%B9%8BSERVER%E8%AF%A6%E8%A7%A3/&name=PHP之SERVER详解&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2022/07/04/PHP%E4%B9%8BSERVER%E8%AF%A6%E8%A7%A3/&t=PHP之SERVER详解"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2022
+    PFinal南丞
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a href="/links/">友情连接</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://github.com/pfinal-nc">项目</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EVR51H8CSN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-EVR51H8CSN');
+    </script>
+
+<!-- Baidu Analytics -->
+
+  <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?ffe26c1d637f36349728c74bb031faa2";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+        </script>
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>
