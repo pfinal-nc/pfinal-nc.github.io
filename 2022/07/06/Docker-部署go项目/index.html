@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="baidu-site-verification" content="code-qgPh7OZm0c" />
+    <meta name="description" content="Docker部署 Go Web 示例准备 GoWeb 代码123456789101112131415161718192021222324252627282930package mainimport (	&quot;fmt&quot;	&quot;log&quot;	&quot;net&#x2F;http&quot;)func sayHello(w http.ResponseWriter, r *http.R">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Docker 部署go项目">
+<meta property="og:url" content="https://friday-go.icu/2022/07/06/Docker-%E9%83%A8%E7%BD%B2go%E9%A1%B9%E7%9B%AE/index.html">
+<meta property="og:site_name" content="PFinalClub">
+<meta property="og:description" content="Docker部署 Go Web 示例准备 GoWeb 代码123456789101112131415161718192021222324252627282930package mainimport (	&quot;fmt&quot;	&quot;log&quot;	&quot;net&#x2F;http&quot;)func sayHello(w http.ResponseWriter, r *http.R">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-07-06T07:35:40.000Z">
+<meta property="article:modified_time" content="2022-07-06T08:02:58.545Z">
+<meta property="article:author" content="PFinal南丞">
+<meta property="article:tag" content="Go">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Docker 部署go项目</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2154665617309406"
+     crossorigin="anonymous"></script>
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a href="/links/">友情连接</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://github.com/pfinal-nc">项目</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/2022/07/04/%E5%B8%B8%E8%A7%81Header%E8%AF%A6%E8%A7%A3/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://friday-go.icu/2022/07/06/Docker-%E9%83%A8%E7%BD%B2go%E9%A1%B9%E7%9B%AE/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://friday-go.icu/2022/07/06/Docker-%E9%83%A8%E7%BD%B2go%E9%A1%B9%E7%9B%AE/&text=Docker 部署go项目"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://friday-go.icu/2022/07/06/Docker-%E9%83%A8%E7%BD%B2go%E9%A1%B9%E7%9B%AE/&title=Docker 部署go项目"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://friday-go.icu/2022/07/06/Docker-%E9%83%A8%E7%BD%B2go%E9%A1%B9%E7%9B%AE/&is_video=false&description=Docker 部署go项目"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Docker 部署go项目&body=Check out this article: https://friday-go.icu/2022/07/06/Docker-%E9%83%A8%E7%BD%B2go%E9%A1%B9%E7%9B%AE/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://friday-go.icu/2022/07/06/Docker-%E9%83%A8%E7%BD%B2go%E9%A1%B9%E7%9B%AE/&title=Docker 部署go项目"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://friday-go.icu/2022/07/06/Docker-%E9%83%A8%E7%BD%B2go%E9%A1%B9%E7%9B%AE/&title=Docker 部署go项目"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://friday-go.icu/2022/07/06/Docker-%E9%83%A8%E7%BD%B2go%E9%A1%B9%E7%9B%AE/&title=Docker 部署go项目"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://friday-go.icu/2022/07/06/Docker-%E9%83%A8%E7%BD%B2go%E9%A1%B9%E7%9B%AE/&title=Docker 部署go项目"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://friday-go.icu/2022/07/06/Docker-%E9%83%A8%E7%BD%B2go%E9%A1%B9%E7%9B%AE/&name=Docker 部署go项目&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://friday-go.icu/2022/07/06/Docker-%E9%83%A8%E7%BD%B2go%E9%A1%B9%E7%9B%AE/&t=Docker 部署go项目"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Docker%E9%83%A8%E7%BD%B2-Go-Web-%E7%A4%BA%E4%BE%8B"><span class="toc-number">1.</span> <span class="toc-text">Docker部署 Go Web 示例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%86%E5%A4%87-GoWeb-%E4%BB%A3%E7%A0%81"><span class="toc-number">1.0.1.</span> <span class="toc-text">准备 GoWeb 代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E5%86%99-Dockerfile"><span class="toc-number">1.0.2.</span> <span class="toc-text">编写 Dockerfile</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%84%E5%BB%BA%E9%95%9C%E5%83%8F"><span class="toc-number">1.0.3.</span> <span class="toc-text">构建镜像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%99%E9%95%9C%E5%83%8F%E6%89%93%E6%A0%87%E7%AD%BE-%E7%84%B6%E5%90%8E%E4%B8%8A%E4%BC%A0%E5%88%B0-%E7%A7%81%E6%9C%89%E9%95%9C%E5%83%8F%E4%BB%93%E5%BA%93"><span class="toc-number">1.0.4.</span> <span class="toc-text">给镜像打标签 然后上传到 私有镜像仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E4%BB%93%E5%BA%93%E6%98%AF%E5%90%A6%E6%9C%89%E9%95%9C%E5%83%8F"><span class="toc-number">1.0.5.</span> <span class="toc-text">查看仓库是否有镜像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8B%89%E5%8F%96%E9%95%9C%E5%83%8F%E8%BF%90%E8%A1%8C"><span class="toc-number">1.0.6.</span> <span class="toc-text">服务器拉取镜像运行</span></a></li></ol></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Docker 部署go项目
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">PFinal南丞</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2022-07-06T07:35:40.000Z" itemprop="datePublished">2022-07-06</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/Web/">Web</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/Go/" rel="tag">Go</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="Docker部署-Go-Web-示例"><a href="#Docker部署-Go-Web-示例" class="headerlink" title="Docker部署 Go Web 示例"></a>Docker部署 Go Web 示例</h1><h3 id="准备-GoWeb-代码"><a href="#准备-GoWeb-代码" class="headerlink" title="准备 GoWeb 代码"></a>准备 GoWeb 代码</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">&quot;fmt&quot;</span></span><br><span class="line">	<span class="string">&quot;log&quot;</span></span><br><span class="line">	<span class="string">&quot;net/http&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">sayHello</span><span class="params">(w http.ResponseWriter, r *http.Request)</span></span> &#123;</span><br><span class="line">	_, _ = fmt.Fprintf(w, <span class="string">&quot;Hello PFinal&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">getConfig</span><span class="params">(w http.ResponseWriter, r *http.Request)</span></span> &#123;</span><br><span class="line">	appId := r.FormValue(<span class="string">&quot;app_id&quot;</span>)</span><br><span class="line">	<span class="keyword">if</span> appId == <span class="string">&quot;&quot;</span> &#123;</span><br><span class="line">		_, _ = fmt.Fprintf(w, <span class="string">&quot;请传递参数&quot;</span>)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line">	_, _ = fmt.Fprintf(w, <span class="string">&quot;获取对应的配置:&quot;</span> + appId)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	http.HandleFunc(<span class="string">&quot;/&quot;</span>, sayHello) <span class="comment">//注册URI路径与相应的处理函数</span></span><br><span class="line">	http.HandleFunc(<span class="string">&quot;/get_config&quot;</span>, getConfig) <span class="comment">//注册URI路径与相应的处理函数</span></span><br><span class="line">	log.Println(<span class="string">&quot;【默认项目】服务启动成功 监听端口 8989&quot;</span>)</span><br><span class="line">	er := http.ListenAndServe(<span class="string">&quot;0.0.0.0:8989&quot;</span>, <span class="literal">nil</span>)</span><br><span class="line">	<span class="keyword">if</span> er != <span class="literal">nil</span> &#123;</span><br><span class="line">		log.Fatal(<span class="string">&quot;ListenAndServe: &quot;</span>, er)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>上面的代码通过8989端口对外提供服务。</p>
+</blockquote>
+<h3 id="编写-Dockerfile"><a href="#编写-Dockerfile" class="headerlink" title="编写 Dockerfile"></a>编写 Dockerfile</h3><blockquote>
+<p>分阶段构建,通过仅保留二进制文件来减小镜像大小.使用分阶段构建技术，剥离了使用golang:alpine作为编译镜像来编译得到二进制可执行文件的过程，并基于scratch生成一个简单的、非常小的新镜像</p>
+</blockquote>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> golang:alpine AS builder</span><br><span class="line"></span><br><span class="line"><span class="comment"># 为我们的镜像设置必要的环境变量</span></span><br><span class="line"><span class="keyword">ENV</span> GO111MODULE=on \</span><br><span class="line">    CGO_ENABLED=<span class="number">0</span> \</span><br><span class="line">    GOOS=linux \</span><br><span class="line">    GOARCH=amd64</span><br><span class="line"></span><br><span class="line"><span class="comment"># 移动到工作目录：/build</span></span><br><span class="line"><span class="keyword">WORKDIR</span><span class="language-bash"> /build</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 将代码复制到容器中</span></span><br><span class="line"><span class="keyword">COPY</span><span class="language-bash"> . .</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"> go mod init app &amp;&amp; go mod tidy</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 将我们的代码编译成二进制可执行文件app</span></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"> go build -o app .</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 移动到用于存放生成的二进制文件的 /dist 目录</span></span><br><span class="line"><span class="keyword">WORKDIR</span><span class="language-bash"> /dist</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 将二进制文件从 /build 目录复制到这里</span></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"> <span class="built_in">cp</span> /build/app .</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## 声明服务端口</span></span><br><span class="line"><span class="comment">#EXPOSE 8989</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">## 启动容器时运行的命令</span></span><br><span class="line"><span class="comment">#CMD [&quot;/dist/app&quot;]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">###################</span></span><br><span class="line"><span class="comment"># 接下来创建一个小镜像</span></span><br><span class="line"><span class="comment">###################</span></span><br><span class="line"><span class="keyword">FROM</span> scratch</span><br><span class="line"><span class="comment"># 从builder镜像中把/dist/app 拷贝到当前目录</span></span><br><span class="line"><span class="keyword">COPY</span><span class="language-bash"> --from=builder /build/app /</span></span><br><span class="line"><span class="keyword">EXPOSE</span> <span class="number">8989</span></span><br><span class="line"><span class="comment"># 需要运行的命令</span></span><br><span class="line"><span class="keyword">ENTRYPOINT</span><span class="language-bash"> [<span class="string">&quot;/app&quot;</span>]</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="构建镜像"><a href="#构建镜像" class="headerlink" title="构建镜像"></a>构建镜像</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build . -t web</span><br></pre></td></tr></table></figure>
+<p>构建完成后,本地运行,然后 测试一下:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker run -p 8989:8989 web</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl http://172.31.1.40:8989 </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>输出: <em>Hello PFinal</em></p>
+<h3 id="给镜像打标签-然后上传到-私有镜像仓库"><a href="#给镜像打标签-然后上传到-私有镜像仓库" class="headerlink" title="给镜像打标签 然后上传到 私有镜像仓库"></a>给镜像打标签 然后上传到 私有镜像仓库</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">docker tag web:latest 172.31.1.40:5000/pfinalclub/web:v1</span><br><span class="line"></span><br><span class="line">docker push 172.31.1.40:5000/pfinalclub/web:v1</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>172.31.1.40:5000  是私有仓库地址</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://yeasy.gitbook.io/docker_practice/repository/registry">Docker 搭建私有化</a></p>
+<h3 id="查看仓库是否有镜像"><a href="#查看仓库是否有镜像" class="headerlink" title="查看仓库是否有镜像"></a>查看仓库是否有镜像</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl http://172.31.1.40:5000/v2/_catalog</span><br></pre></td></tr></table></figure>
+<p>输出:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&quot;repositories&quot;:[&quot;pfinalclub/web&quot;]&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="服务器拉取镜像运行"><a href="#服务器拉取镜像运行" class="headerlink" title="服务器拉取镜像运行"></a>服务器拉取镜像运行</h3><ul>
+<li>拉取镜像</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker pull 172.31.1.40:5000/pfinalclub/web:v1</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ul>
+<li>运行镜像容器</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">docker run -p 8981:8981 127.0.0.1:5000/pfinalclub/web</span><br><span class="line"></span><br><span class="line">docker run -p 8981:8982 127.0.0.1:5000/pfinalclub/web</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+  </div>
+</article>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-2154665617309406"
+     data-ad-slot="6705631031"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/search/">搜索</a></li>
+         
+          <li><a href="/links/">友情连接</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="https://github.com/pfinal-nc">项目</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Docker%E9%83%A8%E7%BD%B2-Go-Web-%E7%A4%BA%E4%BE%8B"><span class="toc-number">1.</span> <span class="toc-text">Docker部署 Go Web 示例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%86%E5%A4%87-GoWeb-%E4%BB%A3%E7%A0%81"><span class="toc-number">1.0.1.</span> <span class="toc-text">准备 GoWeb 代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E5%86%99-Dockerfile"><span class="toc-number">1.0.2.</span> <span class="toc-text">编写 Dockerfile</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%84%E5%BB%BA%E9%95%9C%E5%83%8F"><span class="toc-number">1.0.3.</span> <span class="toc-text">构建镜像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%99%E9%95%9C%E5%83%8F%E6%89%93%E6%A0%87%E7%AD%BE-%E7%84%B6%E5%90%8E%E4%B8%8A%E4%BC%A0%E5%88%B0-%E7%A7%81%E6%9C%89%E9%95%9C%E5%83%8F%E4%BB%93%E5%BA%93"><span class="toc-number">1.0.4.</span> <span class="toc-text">给镜像打标签 然后上传到 私有镜像仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E4%BB%93%E5%BA%93%E6%98%AF%E5%90%A6%E6%9C%89%E9%95%9C%E5%83%8F"><span class="toc-number">1.0.5.</span> <span class="toc-text">查看仓库是否有镜像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8B%89%E5%8F%96%E9%95%9C%E5%83%8F%E8%BF%90%E8%A1%8C"><span class="toc-number">1.0.6.</span> <span class="toc-text">服务器拉取镜像运行</span></a></li></ol></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://friday-go.icu/2022/07/06/Docker-%E9%83%A8%E7%BD%B2go%E9%A1%B9%E7%9B%AE/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://friday-go.icu/2022/07/06/Docker-%E9%83%A8%E7%BD%B2go%E9%A1%B9%E7%9B%AE/&text=Docker 部署go项目"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://friday-go.icu/2022/07/06/Docker-%E9%83%A8%E7%BD%B2go%E9%A1%B9%E7%9B%AE/&title=Docker 部署go项目"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://friday-go.icu/2022/07/06/Docker-%E9%83%A8%E7%BD%B2go%E9%A1%B9%E7%9B%AE/&is_video=false&description=Docker 部署go项目"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Docker 部署go项目&body=Check out this article: https://friday-go.icu/2022/07/06/Docker-%E9%83%A8%E7%BD%B2go%E9%A1%B9%E7%9B%AE/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://friday-go.icu/2022/07/06/Docker-%E9%83%A8%E7%BD%B2go%E9%A1%B9%E7%9B%AE/&title=Docker 部署go项目"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://friday-go.icu/2022/07/06/Docker-%E9%83%A8%E7%BD%B2go%E9%A1%B9%E7%9B%AE/&title=Docker 部署go项目"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://friday-go.icu/2022/07/06/Docker-%E9%83%A8%E7%BD%B2go%E9%A1%B9%E7%9B%AE/&title=Docker 部署go项目"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://friday-go.icu/2022/07/06/Docker-%E9%83%A8%E7%BD%B2go%E9%A1%B9%E7%9B%AE/&title=Docker 部署go项目"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://friday-go.icu/2022/07/06/Docker-%E9%83%A8%E7%BD%B2go%E9%A1%B9%E7%9B%AE/&name=Docker 部署go项目&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://friday-go.icu/2022/07/06/Docker-%E9%83%A8%E7%BD%B2go%E9%A1%B9%E7%9B%AE/&t=Docker 部署go项目"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2022
+    PFinal南丞
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a href="/links/">友情连接</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://github.com/pfinal-nc">项目</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EVR51H8CSN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-EVR51H8CSN');
+    </script>
+
+<!-- Baidu Analytics -->
+
+  <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?ffe26c1d637f36349728c74bb031faa2";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+        </script>
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>
