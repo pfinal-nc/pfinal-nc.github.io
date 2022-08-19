@@ -16,11 +16,13 @@
 <meta property="og:site_name" content="PFinalClub">
 <meta property="og:description" content="Elasticsearch 使用了有一段时间了, 一直没有做深入的学习,最近深入的学习总结一下. ES主要的功能 分布式的搜索引擎和数据分析引擎 全文检索，结构化检索，数据分析 对海量数据进行近实时的处理速度快  ES的存储结构Es是面向文档型数据库, 一条数据在这里就是一个文档,用JSON作为文档序列的格式,当一个对象被序列化成为 JSON，它被称为一个 JSON 文档 。 123456&amp;#12">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/pkg/20220819101001.jpg">
 <meta property="article:published_time" content="2021-05-27T02:00:02.000Z">
-<meta property="article:modified_time" content="2022-06-30T02:12:21.740Z">
+<meta property="article:modified_time" content="2022-08-19T02:12:38.456Z">
 <meta property="article:author" content="PFinal南丞">
 <meta property="article:tag" content="Elasticsearch">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/pkg/20220819101001.jpg">
     
     
       
@@ -222,7 +224,8 @@
 </ol>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">elasticsearch:</span></span><br><span class="line">  <span class="attr">image:</span> <span class="string">elasticsearch:7.7.0</span></span><br><span class="line">  <span class="attr">ports:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;9200:9200&quot;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;9300:9300&quot;</span></span><br><span class="line">  <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./conf/elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./elasticsearch/data:/usr/share/elasticsearch/data</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./elasticsearch/plugins:/usr/share/elasticsearch/plugins</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./log/elasticsearch/:/usr/share/elasticsearch/logs</span></span><br><span class="line">  <span class="attr">user:</span> <span class="string">$&#123;ES_UID&#125;</span></span><br><span class="line">  <span class="attr">command:</span> [<span class="string">&quot;sh&quot;</span>, <span class="string">&quot;-c&quot;</span>, <span class="string">&quot;./bin/elasticsearch&quot;</span>]    </span><br><span class="line">  <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;ES_JAVA_OPTS=-Xms2g -Xmx2g&quot;</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;discovery.type=single-node&quot;</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;COMPOSE_PROJECT_NAME=elasticsearch-server&quot;</span></span><br></pre></td></tr></table></figure>
 
-
+<hr>
+<p><img src="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/pkg/20220819101001.jpg"></p>
 
   </div>
 </article>
