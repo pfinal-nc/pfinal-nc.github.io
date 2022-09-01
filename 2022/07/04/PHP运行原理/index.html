@@ -18,9 +18,8 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/pkg/20220704172250.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/pkg/20220704172410.jpg">
-<meta property="og:image" content="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/pkg/20220819101001.jpg">
 <meta property="article:published_time" content="2022-07-04T08:29:12.000Z">
-<meta property="article:modified_time" content="2022-08-19T02:13:29.663Z">
+<meta property="article:modified_time" content="2022-08-30T03:55:43.075Z">
 <meta property="article:author" content="PFinal南丞">
 <meta property="article:tag" content="PHP">
 <meta name="twitter:card" content="summary">
@@ -240,8 +239,6 @@
 <p>PHP中的局部变量和全局变量是如何实现的？对于一个请求，任意时刻PHP都可以看到两个符号表(symbol_table和active_symbol_table)，其中前者用来维护全局变量。后者是一个指针，指向当前活动的变量符号表，当程序进入到某个函数中时，zend就会为它分配一个符号表x同时将active_symbol_table指向a。通过这样的方式实现全局、局部变量的区分。</p>
 <p>获取变量值：PHP的符号表是通过hash_table实现的，对于每个变量都分配唯一标识，获取的时候根据标识从表中找到相应zval返回。</p>
 <p>函数中使用全局变量：在函数中，我们可以通过显式申明global来使用全局变量。在active_symbol_table中创建symbol_table中同名变量的引用，如果symbol_table中没有同名变量则会先创建。</p>
-<hr>
-<p><img src="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/pkg/20220819101001.jpg"></p>
 
   </div>
 </article>

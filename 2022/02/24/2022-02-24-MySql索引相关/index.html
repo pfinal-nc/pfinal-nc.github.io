@@ -16,13 +16,11 @@
 <meta property="og:site_name" content="PFinalClub">
 <meta property="og:description" content="Mysql知识点(一)MySQL 有关权限的表MySQL服务器通过权限表来控制用户对数据库的访问，权限表存放在mysql数据库里，由mysql_install_db脚本初始化。这些权限表分别user，db，table_priv，columns_priv和host。  user权限表：记录允许连接到服务器的用户帐号信息，里面的权限是全局级的。db权限表：记录各个帐号在各个数据库上的操作权限。tabl">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/pkg/20220819101001.jpg">
 <meta property="article:published_time" content="2022-02-24T02:00:02.000Z">
-<meta property="article:modified_time" content="2022-08-19T02:18:58.039Z">
+<meta property="article:modified_time" content="2022-08-30T03:55:16.245Z">
 <meta property="article:author" content="PFinal南丞">
 <meta property="article:tag" content="MySql">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/pkg/20220819101001.jpg">
     
     
       
@@ -331,8 +329,6 @@
 <p>两种锁的使用场景</p>
 <p>从上面对两种锁的介绍，我们知道两种锁各有优缺点，不可认为一种好于另一种，像乐观锁适用于写比较少的情况下（多读场景），即冲突真的很少发生的时候，这样可以省去了锁的开销，加大了系统的整个吞吐量。</p>
 <p>但如果是多写的情况，一般会经常产生冲突，这就会导致上层应用会不断的进行retry，这样反倒是降低了性能，所以一般多写的场景下用悲观锁就比较合适。</p>
-<hr>
-<p><img src="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/pkg/20220819101001.jpg"></p>
 
   </div>
 </article>

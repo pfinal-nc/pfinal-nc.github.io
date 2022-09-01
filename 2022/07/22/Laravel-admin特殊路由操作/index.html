@@ -20,9 +20,8 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/pkg/20220722144356.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/pkg/20220722145722.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/pkg/20220722150533.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/pkg/20220819101001.jpg">
 <meta property="article:published_time" content="2022-07-22T06:18:00.000Z">
-<meta property="article:modified_time" content="2022-08-19T02:18:21.091Z">
+<meta property="article:modified_time" content="2022-08-30T03:55:34.956Z">
 <meta property="article:author" content="PFinal南丞">
 <meta property="article:tag" content="Laravel">
 <meta name="twitter:card" content="summary">
@@ -218,8 +217,13 @@
 <p><img src="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/pkg/20220722150533.png"></p>
 <p>最后重写了一下 <strong>RowAction</strong> 中的 <strong>retrieveModel</strong> 方法,指定一下model对应的表:</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@param</span> Request $request</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@return</span> mixed</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">   <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">retrieveModel</span>(<span class="params">Request <span class="variable">$request</span></span>): <span class="title">mixed</span></span></span><br><span class="line"><span class="function">   </span>&#123;</span><br><span class="line">       <span class="keyword">if</span> (!<span class="variable">$key</span> = <span class="variable">$request</span>-&gt;<span class="title function_ invoke__">get</span>(<span class="string">&#x27;_key&#x27;</span>)) &#123;</span><br><span class="line">           <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="variable">$modelClass</span> = <span class="title function_ invoke__">str_replace</span>(<span class="string">&#x27;_&#x27;</span>, <span class="string">&#x27;\\&#x27;</span>, <span class="variable">$request</span>-&gt;<span class="title function_ invoke__">get</span>(<span class="string">&#x27;_model&#x27;</span>));</span><br><span class="line">       <span class="keyword">if</span> (<span class="variable language_">$this</span>-&gt;<span class="title function_ invoke__">modelUseSoftDeletes</span>(<span class="variable">$modelClass</span>)) &#123;</span><br><span class="line">           <span class="keyword">return</span> <span class="variable">$modelClass</span>::<span class="title function_ invoke__">withTrashed</span>()-&gt;<span class="title function_ invoke__">findOrFail</span>(<span class="variable">$key</span>);</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">if</span> (<span class="variable">$app_uuid</span> = <span class="variable">$request</span>-&gt;<span class="title function_ invoke__">get</span>(<span class="string">&#x27;app_uuid&#x27;</span>)) &#123;</span><br><span class="line">           <span class="variable">$obj</span> = <span class="keyword">new</span> <span class="variable">$modelClass</span>;</span><br><span class="line">           <span class="variable">$obj</span>-&gt;<span class="title function_ invoke__">setTable</span>(<span class="string">&#x27;app_channel_&#x27;</span> . <span class="variable">$app_uuid</span>);</span><br><span class="line">           <span class="keyword">return</span> <span class="variable">$obj</span>-&gt;<span class="title function_ invoke__">findOrFail</span>(<span class="variable">$key</span>);</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span> <span class="variable">$modelClass</span>::<span class="title function_ invoke__">findOrFail</span>(<span class="variable">$key</span>);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<p><img src="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/pkg/20220819101001.jpg"></p>
+
+
+
+
+
+
+
 
   </div>
 </article>
