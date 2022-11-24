@@ -1,3 +1,4 @@
+https://friday-go.icu/2022/11/23/Redis%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/
 https://friday-go.icu/2022/08/23/Git-%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/
 https://friday-go.icu/2022/08/22/PHP%E9%92%A9%E5%AD%90%E7%9A%84%E5%BA%94%E7%94%A8/
 https://friday-go.icu/2022/08/22/Tmux-%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/
