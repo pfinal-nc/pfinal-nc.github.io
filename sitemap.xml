@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://friday-go.icu/links/index.html</loc>
+    
+    <lastmod>2022-12-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://friday-go.icu/2022/11/23/Redis%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/</loc>
     
     <lastmod>2022-11-24</lastmod>
@@ -263,15 +272,6 @@
   </url>
   
   <url>
-    <loc>https://friday-go.icu/links/index.html</loc>
-    
-    <lastmod>2022-07-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://friday-go.icu/search/index.html</loc>
     
     <lastmod>2022-06-30</lastmod>
@@ -384,13 +384,6 @@
   </url>
   
   <url>
-    <loc>https://friday-go.icu/tags/MySql/</loc>
-    <lastmod>2022-12-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://friday-go.icu/tags/Redis/</loc>
     <lastmod>2022-12-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -399,6 +392,13 @@
   
   <url>
     <loc>https://friday-go.icu/tags/%E6%B8%97%E9%80%8F/</loc>
+    <lastmod>2022-12-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://friday-go.icu/tags/MySql/</loc>
     <lastmod>2022-12-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -505,14 +505,14 @@
   </url>
   
   <url>
-    <loc>https://friday-go.icu/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
+    <loc>https://friday-go.icu/categories/%E6%B8%97%E9%80%8F/</loc>
     <lastmod>2022-12-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://friday-go.icu/categories/%E6%B8%97%E9%80%8F/</loc>
+    <loc>https://friday-go.icu/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
     <lastmod>2022-12-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
