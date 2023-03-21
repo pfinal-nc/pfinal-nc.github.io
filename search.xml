@@ -4,6 +4,38 @@
   
     
     <entry>
+      <title>mysql分库分表</title>
+      <link href="/2023/03/21/mysql%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8/"/>
+      <url>/2023/03/21/mysql%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Redis使用场景(缓存)</title>
+      <link href="/2023/03/07/Redis%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF-%E7%BC%93%E5%AD%98/"/>
+      <url>/2023/03/07/Redis%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF-%E7%BC%93%E5%AD%98/</url>
+      
+        <content type="html"><![CDATA[<p>Redis使用场景(缓存)</p><h4 id="PHP连接redis"><a href="#PHP连接redis" class="headerlink" title="PHP连接redis"></a>PHP连接redis</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">getRedis</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="variable">$redis</span> = <span class="keyword">new</span> <span class="title class_">\Redis</span>();</span><br><span class="line">    <span class="variable">$redis</span>-&gt;<span class="title function_ invoke__">connect</span>(<span class="title function_ invoke__">env</span>(<span class="string">&quot;REDIS_MASTER&quot;</span>,<span class="string">&#x27;127.0.0.1&#x27;</span>),<span class="number">6379</span>);</span><br><span class="line">    <span class="variable">$redis</span>-&gt;<span class="title function_ invoke__">auth</span>(<span class="title function_ invoke__">env</span>(<span class="string">&#x27;REDIS_AUTH&#x27;</span>,<span class="string">&#x27;123456&#x27;</span>));</span><br><span class="line">    <span class="keyword">return</span> <span class="variable">$redis</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Redis </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Redis基本知识总结</title>
       <link href="/2022/11/24/Redis%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"/>
       <url>/2022/11/24/Redis%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/</url>
