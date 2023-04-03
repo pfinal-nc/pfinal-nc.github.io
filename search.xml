@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>常用网站搜集</title>
+      <link href="/2023/04/03/%E5%B8%B8%E7%94%A8%E7%BD%91%E7%AB%99%E6%90%9C%E9%9B%86/"/>
+      <url>/2023/04/03/%E5%B8%B8%E7%94%A8%E7%BD%91%E7%AB%99%E6%90%9C%E9%9B%86/</url>
+      
+        <content type="html"><![CDATA[<h3 id="镜像站"><a href="#镜像站" class="headerlink" title="镜像站"></a>镜像站</h3><ul><li><p>npmmirror 中国镜像站: <a href="https://www.npmmirror.com/">https://www.npmmirror.com/</a></p></li><li><p>开源镜像: <a href="https://npmmirror.com/mirrors">https://npmmirror.com/mirrors</a></p></li><li><p>Node.js 镜像: <a href="https://npmmirror.com/mirrors/node">https://npmmirror.com/mirrors/node</a></p></li><li><p>alinode 镜像: <a href="https://npmmirror.com/mirrors/alinode">https://npmmirror.com/mirrors/alinode</a></p></li><li><p>ChromeDriver 镜像: <a href="https://npmmirror.com/mirrors/chromedriver">https://npmmirror.com/mirrors/chromedriver</a></p></li><li><p>OperaDriver 镜像: <a href="https://npmmirror.com/mirrors/operadriver">https://npmmirror.com/mirrors/operadriver</a></p></li><li><p>Selenium 镜像: <a href="https://npmmirror.com/mirrors/selenium">https://npmmirror.com/mirrors/selenium</a></p></li><li><p>electron 镜像: <a href="https://npmmirror.com/mirrors/electron">https://npmmirror.com/mirrors/electron</a></p></li></ul><h3 id="工具类网站"><a href="#工具类网站" class="headerlink" title="工具类网站"></a>工具类网站</h3><ul><li><p>百度字体编辑器: <a href="https://kekee000.github.io/fonteditor/">https://kekee000.github.io/fonteditor/</a></p></li><li><p>在线查看: onnx 结构：<a href="https://netron.app/">https://netron.app/</a></p></li><li><p>字符文字: <a href="http://patorjk.com/software/taag">http://patorjk.com/software/tag</a></p></li><li><p>根据文字生成字符画:<a href="http://patorjk.com/software/tag">http://patorjk.com/software/tag</a>、<a href="http://www.network-science.de/ascii/">http://www.network-science.de/ascii/</a></p></li><li><p>astexplorer: <a href="https://astexplorer.net/">https://astexplorer.net/</a></p></li><li><p>astexplorer(国内): <a href="https://blogz.gitee.io/ast/">https://blogz.gitee.io/ast/</a></p></li><li><p>JSob混淆: <a href="https://obfuscator.io/">https://obfuscator.io/</a></p></li></ul><h1 id=""><a href="#" class="headerlink" title=""></a></h1>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>mysql分库分表</title>
       <link href="/2023/03/21/mysql%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8/"/>
       <url>/2023/03/21/mysql%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8/</url>
