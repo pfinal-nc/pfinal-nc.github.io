@@ -468,14 +468,14 @@
   </url>
   
   <url>
-    <loc>https://friday-go.icu/tags/%E5%B7%A5%E5%85%B7/</loc>
+    <loc>https://friday-go.icu/tags/Go/</loc>
     <lastmod>2023-05-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://friday-go.icu/tags/Go/</loc>
+    <loc>https://friday-go.icu/tags/%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2023-05-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
