@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="baidu-site-verification" content="code-qgPh7OZm0c" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2154665617309406"
+     crossorigin="anonymous"></script>
+    <meta name="description" content="概念:  webpack 是一个用于现代 JavaScript 应用程序的 静态模块打包工具。当 webpack 处理应用程序时，它会在内部从一个或多个入口点构建一个 依赖图(dependency sgraph)，然后将你项目中所需的每一个模块组合成一个或多个 bundles。所有的资源都是通过JavaScript渲染出来的。 识别: 如下图所示:    查看 网页源代码,大部分都是由script">
+<meta property="og:type" content="article">
+<meta property="og:title" content="爬虫JS逆向Webpack技巧记录">
+<meta property="og:url" content="https://friday-go.icu/2023/05/15/%E7%88%AC%E8%99%ABJS%E9%80%86%E5%90%91Webpack%E6%8A%80%E5%B7%A7%E8%AE%B0%E5%BD%95/index.html">
+<meta property="og:site_name" content="PFinalClub">
+<meta property="og:description" content="概念:  webpack 是一个用于现代 JavaScript 应用程序的 静态模块打包工具。当 webpack 处理应用程序时，它会在内部从一个或多个入口点构建一个 依赖图(dependency sgraph)，然后将你项目中所需的每一个模块组合成一个或多个 bundles。所有的资源都是通过JavaScript渲染出来的。 识别: 如下图所示:    查看 网页源代码,大部分都是由script">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202305151419884.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202305160910831.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202305160951192.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202305160944584.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202305161006212.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202305161020050.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202305161035140.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202305161038581.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202305161044042.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202305161050194.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202305161052841.png">
+<meta property="article:published_time" content="2023-05-15T03:55:12.000Z">
+<meta property="article:modified_time" content="2023-05-16T02:53:37.049Z">
+<meta property="article:author" content="PFinal南丞">
+<meta property="article:tag" content="逆向">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202305151419884.png">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>爬虫JS逆向Webpack技巧记录</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body class="mx-auto px3 ltr" style="width:60%;">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a href="/links/">友情连接</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/2023/05/09/%E7%88%AC%E8%99%AB%E5%B8%B8%E8%A7%81%E7%9A%84%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86%E7%AE%97%E6%B3%95%E7%89%B9%E5%BE%81%E6%94%B6%E9%9B%86/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://friday-go.icu/2023/05/15/%E7%88%AC%E8%99%ABJS%E9%80%86%E5%90%91Webpack%E6%8A%80%E5%B7%A7%E8%AE%B0%E5%BD%95/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://friday-go.icu/2023/05/15/%E7%88%AC%E8%99%ABJS%E9%80%86%E5%90%91Webpack%E6%8A%80%E5%B7%A7%E8%AE%B0%E5%BD%95/&text=爬虫JS逆向Webpack技巧记录"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://friday-go.icu/2023/05/15/%E7%88%AC%E8%99%ABJS%E9%80%86%E5%90%91Webpack%E6%8A%80%E5%B7%A7%E8%AE%B0%E5%BD%95/&title=爬虫JS逆向Webpack技巧记录"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://friday-go.icu/2023/05/15/%E7%88%AC%E8%99%ABJS%E9%80%86%E5%90%91Webpack%E6%8A%80%E5%B7%A7%E8%AE%B0%E5%BD%95/&is_video=false&description=爬虫JS逆向Webpack技巧记录"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=爬虫JS逆向Webpack技巧记录&body=Check out this article: https://friday-go.icu/2023/05/15/%E7%88%AC%E8%99%ABJS%E9%80%86%E5%90%91Webpack%E6%8A%80%E5%B7%A7%E8%AE%B0%E5%BD%95/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://friday-go.icu/2023/05/15/%E7%88%AC%E8%99%ABJS%E9%80%86%E5%90%91Webpack%E6%8A%80%E5%B7%A7%E8%AE%B0%E5%BD%95/&title=爬虫JS逆向Webpack技巧记录"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://friday-go.icu/2023/05/15/%E7%88%AC%E8%99%ABJS%E9%80%86%E5%90%91Webpack%E6%8A%80%E5%B7%A7%E8%AE%B0%E5%BD%95/&title=爬虫JS逆向Webpack技巧记录"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://friday-go.icu/2023/05/15/%E7%88%AC%E8%99%ABJS%E9%80%86%E5%90%91Webpack%E6%8A%80%E5%B7%A7%E8%AE%B0%E5%BD%95/&title=爬虫JS逆向Webpack技巧记录"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://friday-go.icu/2023/05/15/%E7%88%AC%E8%99%ABJS%E9%80%86%E5%90%91Webpack%E6%8A%80%E5%B7%A7%E8%AE%B0%E5%BD%95/&title=爬虫JS逆向Webpack技巧记录"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://friday-go.icu/2023/05/15/%E7%88%AC%E8%99%ABJS%E9%80%86%E5%90%91Webpack%E6%8A%80%E5%B7%A7%E8%AE%B0%E5%BD%95/&name=爬虫JS逆向Webpack技巧记录&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://friday-go.icu/2023/05/15/%E7%88%AC%E8%99%ABJS%E9%80%86%E5%90%91Webpack%E6%8A%80%E5%B7%A7%E8%AE%B0%E5%BD%95/&t=爬虫JS逆向Webpack技巧记录"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A6%82%E5%BF%B5"><span class="toc-number">1.</span> <span class="toc-text">概念:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%86%E5%88%AB"><span class="toc-number">2.</span> <span class="toc-text">识别:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E6%9E%84"><span class="toc-number">3.</span> <span class="toc-text">结构:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%A7%8D"><span class="toc-number">3.1.</span> <span class="toc-text">第一种:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%A7%8D"><span class="toc-number">3.2.</span> <span class="toc-text">第二种</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%A7%8D"><span class="toc-number">3.3.</span> <span class="toc-text">第三种</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%86%E5%90%91%E6%89%A3%E5%8F%96JS%E6%80%9D%E8%B7%AF-%E4%B8%80"><span class="toc-number">4.</span> <span class="toc-text">逆向扣取JS思路(一)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%86%E5%90%91%E6%89%A3%E5%8F%96JS%E6%80%9D%E8%B7%AF-%E4%B8%80-1"><span class="toc-number">5.</span> <span class="toc-text">逆向扣取JS思路(一)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E6%80%9D%E8%B7%AF%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0"><span class="toc-number">5.1.</span> <span class="toc-text">其他思路持续更新</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        爬虫JS逆向Webpack技巧记录
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">PFinal南丞</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2023-05-15T03:55:12.000Z" itemprop="datePublished">2023-05-15</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/%E7%88%AC%E8%99%AB/">爬虫</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/%E9%80%86%E5%90%91/" rel="tag">逆向</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="概念"><a href="#概念" class="headerlink" title="概念:"></a>概念:</h2><p>  webpack 是一个用于现代 JavaScript 应用程序的 静态模块打包工具。当 webpack 处理应用程序时，它会在内部从一个或多个入口点构建一个 依赖图(dependency sgraph)，然后将你项目中所需的每一个模块组合成一个或多个 bundles。所有的资源都是通过JavaScript渲染出来的。</p>
+<h2 id="识别"><a href="#识别" class="headerlink" title="识别:"></a>识别:</h2><ol>
+<li>如下图所示:</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202305151419884.png"></p>
+<blockquote>
+<p>查看 网页源代码,大部分都是由script标签构成</p>
+</blockquote>
+<ol start="2">
+<li>如图:</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202305160910831.png"></p>
+<blockquote>
+<p>大部分的webpack 都是可以找到 webpack这个js文件的</p>
+</blockquote>
+<h2 id="结构"><a href="#结构" class="headerlink" title="结构:"></a>结构:</h2><p>webpack 打包后的js 结构基本上都是 有一个自执行函数用来做加载器 加载模块的,常见的结构如下:</p>
+<h3 id="第一种"><a href="#第一种" class="headerlink" title="第一种:"></a>第一种:</h3><p><img src="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202305160951192.png"></p>
+<p>如图所示:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">!<span class="title function_">funcion</span>(<span class="params"><span class="string">&#x27;形参&#x27;</span></span>)&#123;<span class="string">&quot;加载器&quot;</span>;&#125;([<span class="string">&quot;模块&quot;</span>]) <span class="comment">// 模块以数组的形式存储,数组中每个元素都是函数</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">d</span>(<span class="params">n</span>) &#123;.....&#125; <span class="comment">// 这个函数叫做加载器,也可以叫做分发器,所有的模块都是从这个函数加载并执行.</span></span><br><span class="line"><span class="title function_">d</span>(<span class="number">0</span>)  <span class="comment">// 使用加载器调用第一个模块</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="第二种"><a href="#第二种" class="headerlink" title="第二种"></a>第二种</h3><p><img src="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202305160944584.png"></p>
+<p>如图所示:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">!<span class="title function_">funcion</span>(<span class="params"><span class="string">&#x27;形参&#x27;</span></span>)&#123;<span class="string">&quot;加载器&quot;</span>;&#125;(&#123;<span class="string">&quot;模块&quot;</span>&#125;) <span class="comment">// 模块以对象的形式存储,元素都为函数对象</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">d</span>(<span class="params">n</span>) &#123;.....&#125; <span class="comment">// 这个函数叫做加载器,也可以叫做分发器,所有的模块都是从这个函数加载并执行.</span></span><br><span class="line"><span class="title function_">d</span>(<span class="string">&#x27;1x2y&#x27;</span>)  <span class="comment">// 使用加载器调用1x2y执行</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="第三种"><a href="#第三种" class="headerlink" title="第三种"></a>第三种</h3><p><img src="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202305161006212.png"></p>
+<p><strong>如上图所示,第三种也是最常见的一种.如果模块比较多，就会将模块打包成JS文件, 然后定义一个全局变量 window[“webpackJsonp”] &#x3D; [ ]，它的作用是存储需要动态导入的模块，然后重写 window[“webpackJsonp”] 数组的 push( ) 方法为 webpackJsonpCallback( ),也就是说 window[“webpackJsonp”].push( ) 其实执行的是 webpackJsonpCallback( ),window[“webpackJsonp”].push( )接收三个参数,第一个参数是模块的ID,第二个参数是 一个数组或者对象,里面定义大量的函数,第三个参数是要调用的函数(可选)。</strong></p>
+<p>每一个JS模块文件开头都是</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(<span class="variable language_">window</span>.<span class="property">webpackJsonp</span> = <span class="variable language_">window</span>.<span class="property">webpackJsonp</span> || []).<span class="title function_">push</span>([[<span class="number">2</span>],&#123;&#125;]) <span class="comment">// 其中 2 是模块的id  &#123;&#125; 中是要调用的函数对象</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="逆向扣取JS思路-一"><a href="#逆向扣取JS思路-一" class="headerlink" title="逆向扣取JS思路(一)"></a>逆向扣取JS思路(一)</h2><ol>
+<li>首先找加密参数入口</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202305161020050.png"></p>
+<p>如上图所示,加密参数 <em>sign</em></p>
+<ol start="2">
+<li>找到加载器函数</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202305161035140.png"></p>
+<blockquote>
+<p>如上图所示 找到类似这种<strong>n(‘xx’)</strong> 调用加载模块的函数然后打断点刷新网页,鼠标移动上去就基本能够找到加载器函数，如下图所示:</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202305161038581.png"></p>
+<ol start="3">
+<li><p>在加载器函数中的call()方法或者apply()方法打上断点，将加密函数所在的模块和与其相关的模块一起扣取下来。</p>
+</li>
+<li><p>将加密参数升为全局变量导出</p>
+</li>
+</ol>
+<h2 id="逆向扣取JS思路-一-1"><a href="#逆向扣取JS思路-一-1" class="headerlink" title="逆向扣取JS思路(一)"></a>逆向扣取JS思路(一)</h2><ol>
+<li>找到加密参数函数入口,确定加密函数所在的模块。</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202305161044042.png"></p>
+<ol start="2">
+<li>找到加密模块 扣下来</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202305161050194.png"></p>
+<p>如上图的所示,m函数所在的模块加载了其他模块依次找一下,找到如下图所示的加密模块</p>
+<p><img src="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202305161052841.png"></p>
+<ol start="3">
+<li>在本地依次往上扣取代码,然后报错 缺啥补啥</li>
+</ol>
+<p>扣下上面的加密模块以后 然后开始补齐其他所缺的函数及其一些参数就可以试试看了</p>
+<blockquote>
+<p>注意: 在加密函数(方法)和加密函数(方法)后打上两个断点，断点在加密函数(方法)断住后，追入到加载器函数,然后在加载器后面下断点(类似 return e[n].call(r.exports, r, r.exports, d) )，跳转到加载器后面的断点，在控制台输入HooK函数(根据不同的加载器函数改变HooK函数代码),取消加载器后面的断点,跳转到加密函数(方法)后的断点,在控制台输入window._wbpk<br>后得到所有与加密函数有关的模块代码。</p>
+</blockquote>
+<h3 id="其他思路持续更新"><a href="#其他思路持续更新" class="headerlink" title="其他思路持续更新"></a>其他思路持续更新</h3>
+  </div>
+</article>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2154665617309406"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-2154665617309406"
+     data-ad-slot="6705631031"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/search/">搜索</a></li>
+         
+          <li><a href="/links/">友情连接</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A6%82%E5%BF%B5"><span class="toc-number">1.</span> <span class="toc-text">概念:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%86%E5%88%AB"><span class="toc-number">2.</span> <span class="toc-text">识别:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E6%9E%84"><span class="toc-number">3.</span> <span class="toc-text">结构:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%A7%8D"><span class="toc-number">3.1.</span> <span class="toc-text">第一种:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%A7%8D"><span class="toc-number">3.2.</span> <span class="toc-text">第二种</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%A7%8D"><span class="toc-number">3.3.</span> <span class="toc-text">第三种</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%86%E5%90%91%E6%89%A3%E5%8F%96JS%E6%80%9D%E8%B7%AF-%E4%B8%80"><span class="toc-number">4.</span> <span class="toc-text">逆向扣取JS思路(一)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%86%E5%90%91%E6%89%A3%E5%8F%96JS%E6%80%9D%E8%B7%AF-%E4%B8%80-1"><span class="toc-number">5.</span> <span class="toc-text">逆向扣取JS思路(一)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E6%80%9D%E8%B7%AF%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0"><span class="toc-number">5.1.</span> <span class="toc-text">其他思路持续更新</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://friday-go.icu/2023/05/15/%E7%88%AC%E8%99%ABJS%E9%80%86%E5%90%91Webpack%E6%8A%80%E5%B7%A7%E8%AE%B0%E5%BD%95/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://friday-go.icu/2023/05/15/%E7%88%AC%E8%99%ABJS%E9%80%86%E5%90%91Webpack%E6%8A%80%E5%B7%A7%E8%AE%B0%E5%BD%95/&text=爬虫JS逆向Webpack技巧记录"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://friday-go.icu/2023/05/15/%E7%88%AC%E8%99%ABJS%E9%80%86%E5%90%91Webpack%E6%8A%80%E5%B7%A7%E8%AE%B0%E5%BD%95/&title=爬虫JS逆向Webpack技巧记录"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://friday-go.icu/2023/05/15/%E7%88%AC%E8%99%ABJS%E9%80%86%E5%90%91Webpack%E6%8A%80%E5%B7%A7%E8%AE%B0%E5%BD%95/&is_video=false&description=爬虫JS逆向Webpack技巧记录"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=爬虫JS逆向Webpack技巧记录&body=Check out this article: https://friday-go.icu/2023/05/15/%E7%88%AC%E8%99%ABJS%E9%80%86%E5%90%91Webpack%E6%8A%80%E5%B7%A7%E8%AE%B0%E5%BD%95/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://friday-go.icu/2023/05/15/%E7%88%AC%E8%99%ABJS%E9%80%86%E5%90%91Webpack%E6%8A%80%E5%B7%A7%E8%AE%B0%E5%BD%95/&title=爬虫JS逆向Webpack技巧记录"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://friday-go.icu/2023/05/15/%E7%88%AC%E8%99%ABJS%E9%80%86%E5%90%91Webpack%E6%8A%80%E5%B7%A7%E8%AE%B0%E5%BD%95/&title=爬虫JS逆向Webpack技巧记录"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://friday-go.icu/2023/05/15/%E7%88%AC%E8%99%ABJS%E9%80%86%E5%90%91Webpack%E6%8A%80%E5%B7%A7%E8%AE%B0%E5%BD%95/&title=爬虫JS逆向Webpack技巧记录"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://friday-go.icu/2023/05/15/%E7%88%AC%E8%99%ABJS%E9%80%86%E5%90%91Webpack%E6%8A%80%E5%B7%A7%E8%AE%B0%E5%BD%95/&title=爬虫JS逆向Webpack技巧记录"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://friday-go.icu/2023/05/15/%E7%88%AC%E8%99%ABJS%E9%80%86%E5%90%91Webpack%E6%8A%80%E5%B7%A7%E8%AE%B0%E5%BD%95/&name=爬虫JS逆向Webpack技巧记录&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://friday-go.icu/2023/05/15/%E7%88%AC%E8%99%ABJS%E9%80%86%E5%90%91Webpack%E6%8A%80%E5%B7%A7%E8%AE%B0%E5%BD%95/&t=爬虫JS逆向Webpack技巧记录"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2023
+    PFinal南丞
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a href="/links/">友情连接</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EVR51H8CSN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-EVR51H8CSN');
+    </script>
+
+<!-- Baidu Analytics -->
+
+  <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?ffe26c1d637f36349728c74bb031faa2";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+        </script>
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>
