@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://friday-go.icu/2019/01/16/2019-1-16-Laravel%20%E6%89%8B%E5%B7%A5%E6%9E%84%E5%BB%BA/</loc>
+    <lastmod>2023-07-25</lastmod>
+  </url>
+  <url>
     <loc>https://friday-go.icu/2022/07/04/php-fpm%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%AF%A6%E8%A7%A3/</loc>
     <lastmod>2023-07-25</lastmod>
   </url>
@@ -121,10 +125,6 @@
     <lastmod>2022-08-30</lastmod>
   </url>
   <url>
-    <loc>https://friday-go.icu/2019/01/16/2019-1-16-Laravel%20%E6%89%8B%E5%B7%A5%E6%9E%84%E5%BB%BA/</loc>
-    <lastmod>2022-08-30</lastmod>
-  </url>
-  <url>
     <loc>https://friday-go.icu/2022/08/23/Git-%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</loc>
     <lastmod>2022-08-30</lastmod>
   </url>
@@ -153,11 +153,11 @@
     <lastmod>2022-08-19</lastmod>
   </url>
   <url>
-    <loc>https://friday-go.icu/2021/06/19/2021-6-19-Go%20%E5%AD%A6%E4%B9%A0(%E4%B8%80)/</loc>
+    <loc>https://friday-go.icu/2021/06/18/2021-6-18-Go%20%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2022-06-30</lastmod>
   </url>
   <url>
-    <loc>https://friday-go.icu/2021/06/18/2021-6-18-Go%20%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>https://friday-go.icu/2021/06/19/2021-6-19-Go%20%E5%AD%A6%E4%B9%A0(%E4%B8%80)/</loc>
     <lastmod>2022-06-30</lastmod>
   </url>
   <url>
