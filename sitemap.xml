@@ -407,7 +407,7 @@
   </url>
   
   <url>
-    <loc>https://friday-go.icu/tags/index.html</loc>
+    <loc>https://friday-go.icu/search/index.html</loc>
     
     <lastmod>2022-06-30</lastmod>
     
@@ -416,7 +416,7 @@
   </url>
   
   <url>
-    <loc>https://friday-go.icu/search/index.html</loc>
+    <loc>https://friday-go.icu/tags/index.html</loc>
     
     <lastmod>2022-06-30</lastmod>
     
@@ -469,6 +469,13 @@
   </url>
   
   <url>
+    <loc>https://friday-go.icu/tags/MySql/</loc>
+    <lastmod>2023-10-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://friday-go.icu/tags/Docker/</loc>
     <lastmod>2023-10-11</lastmod>
     <changefreq>weekly</changefreq>
@@ -477,13 +484,6 @@
   
   <url>
     <loc>https://friday-go.icu/tags/LNMP/</loc>
-    <lastmod>2023-10-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://friday-go.icu/tags/MySql/</loc>
     <lastmod>2023-10-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -532,14 +532,14 @@
   </url>
   
   <url>
-    <loc>https://friday-go.icu/tags/Web/</loc>
+    <loc>https://friday-go.icu/tags/Python/</loc>
     <lastmod>2023-10-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://friday-go.icu/tags/Python/</loc>
+    <loc>https://friday-go.icu/tags/Web/</loc>
     <lastmod>2023-10-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -611,14 +611,14 @@
   </url>
   
   <url>
-    <loc>https://friday-go.icu/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
+    <loc>https://friday-go.icu/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
     <lastmod>2023-10-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://friday-go.icu/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
+    <loc>https://friday-go.icu/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
     <lastmod>2023-10-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
