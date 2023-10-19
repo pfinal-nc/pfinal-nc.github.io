@@ -212,10 +212,10 @@
 <h4 id="最定义Faker-数据类型"><a href="#最定义Faker-数据类型" class="headerlink" title="最定义Faker 数据类型"></a>最定义Faker 数据类型</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">from faker import Faker</span><br><span class="line">from faker.providers import BaseProvider</span><br><span class="line"></span><br><span class="line"># 创建自定义Provider</span><br><span class="line">class CustomProvider(BaseProvider):</span><br><span class="line">    def customize_type(self):</span><br><span class="line">        return &#x27;test_Faker_customize_type&#x27;</span><br><span class="line"></span><br><span class="line"># 添加Provider</span><br><span class="line">fake = Faker()</span><br><span class="line">fake.add_provider(CustomProvider)</span><br><span class="line">print(fake.customize_type())</span><br></pre></td></tr></table></figure>
   </div>
 </article>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2154665617309406"
-     crossorigin="anonymous"></script>
+<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2154665617309406"
+     crossorigin="anonymous"></script> -->
 <!-- 推荐广告 -->
-<ins class="adsbygoogle"
+<!-- <ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-2154665617309406"
      data-ad-slot="9190957443"
@@ -223,7 +223,7 @@
      data-full-width-responsive="true"></ins>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+</script> -->
 
 
 

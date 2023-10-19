@@ -346,10 +346,10 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="comment"># @Time    : 2023/5/9 10:09</span></span><br><span class="line"><span class="comment"># @Author  : PFinal南丞 &lt;lampxiezi@163.com</span></span><br><span class="line"><span class="comment"># @File    : rsa_demo.py.py</span></span><br><span class="line"><span class="comment"># @Software: PyCharm</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> rsa <span class="keyword">as</span> rsa</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">rsa_encrypt</span>(<span class="params">pu_key, t</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;Encrypt&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">return</span> rsa.encrypt(t.encode(<span class="string">&quot;utf-8&quot;</span>), pu_key)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">rsa_decrypt</span>(<span class="params">pr_key, t</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;私钥解密&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">return</span> rsa.decrypt(t, pr_key).decode(<span class="string">&quot;utf-8&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    public_key, private_key = rsa.newkeys(<span class="number">512</span>)  <span class="comment"># 生成公钥、私钥</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;公钥：&#x27;</span>, public_key)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;私钥：&#x27;</span>, private_key)</span><br><span class="line">    text = <span class="string">&#x27;I love Python!&#x27;</span>  <span class="comment"># 加密对象</span></span><br><span class="line">    encrypted_str = rsa_encrypt(public_key, text)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;加密字符串：&#x27;</span>, encrypted_str)</span><br><span class="line">    decrypted_str = rsa_decrypt(private_key, encrypted_str)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;解密字符串：&#x27;</span>, decrypted_str)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
   </div>
 </article>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2154665617309406"
-     crossorigin="anonymous"></script>
+<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2154665617309406"
+     crossorigin="anonymous"></script> -->
 <!-- 推荐广告 -->
-<ins class="adsbygoogle"
+<!-- <ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-2154665617309406"
      data-ad-slot="9190957443"
@@ -357,7 +357,7 @@
      data-full-width-responsive="true"></ins>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+</script> -->
 
 
 
