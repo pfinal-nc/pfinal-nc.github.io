@@ -522,13 +522,6 @@
   </url>
   
   <url>
-    <loc>https://friday-go.icu/tags/golang/</loc>
-    <lastmod>2023-12-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://friday-go.icu/tags/PHP/</loc>
     <lastmod>2023-12-22</lastmod>
     <changefreq>weekly</changefreq>
@@ -543,6 +536,20 @@
   </url>
   
   <url>
+    <loc>https://friday-go.icu/tags/Elasticsearch/</loc>
+    <lastmod>2023-12-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://friday-go.icu/tags/golang/</loc>
+    <lastmod>2023-12-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://friday-go.icu/tags/Docker/</loc>
     <lastmod>2023-12-22</lastmod>
     <changefreq>weekly</changefreq>
@@ -551,13 +558,6 @@
   
   <url>
     <loc>https://friday-go.icu/tags/LNMP/</loc>
-    <lastmod>2023-12-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://friday-go.icu/tags/Elasticsearch/</loc>
     <lastmod>2023-12-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -606,14 +606,14 @@
   </url>
   
   <url>
-    <loc>https://friday-go.icu/tags/Web/</loc>
+    <loc>https://friday-go.icu/tags/Mysql/</loc>
     <lastmod>2023-12-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://friday-go.icu/tags/Mysql/</loc>
+    <loc>https://friday-go.icu/tags/Web/</loc>
     <lastmod>2023-12-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -685,6 +685,13 @@
   </url>
   
   <url>
+    <loc>https://friday-go.icu/categories/%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2023-12-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://friday-go.icu/categories/Go/</loc>
     <lastmod>2023-12-22</lastmod>
     <changefreq>weekly</changefreq>
@@ -699,13 +706,6 @@
   </url>
   
   <url>
-    <loc>https://friday-go.icu/categories/%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2023-12-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://friday-go.icu/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
     <lastmod>2023-12-22</lastmod>
     <changefreq>weekly</changefreq>
@@ -713,14 +713,14 @@
   </url>
   
   <url>
-    <loc>https://friday-go.icu/categories/Web/</loc>
+    <loc>https://friday-go.icu/categories/%E6%B8%97%E9%80%8F/</loc>
     <lastmod>2023-12-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://friday-go.icu/categories/%E6%B8%97%E9%80%8F/</loc>
+    <loc>https://friday-go.icu/categories/Web/</loc>
     <lastmod>2023-12-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
