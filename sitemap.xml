@@ -452,6 +452,15 @@
   </url>
   
   <url>
+    <loc>https://friday-go.icu/2021/06/18/2021-6-18-Go%20%E5%AD%A6%E4%B9%A0/</loc>
+    
+    <lastmod>2022-06-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://friday-go.icu/2021/06/19/2021-6-19-Go%20%E5%AD%A6%E4%B9%A0(%E4%B8%80)/</loc>
     
     <lastmod>2022-06-30</lastmod>
@@ -462,15 +471,6 @@
   
   <url>
     <loc>https://friday-go.icu/2021/06/23/2021-6-23-%E5%9F%BA%E4%BA%8EDocker%E7%9A%84LNMP%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</loc>
-    
-    <lastmod>2022-06-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://friday-go.icu/2021/06/18/2021-6-18-Go%20%E5%AD%A6%E4%B9%A0/</loc>
     
     <lastmod>2022-06-30</lastmod>
     
@@ -515,13 +515,6 @@
 
   
   <url>
-    <loc>https://friday-go.icu/tags/Laravel/</loc>
-    <lastmod>2024-01-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://friday-go.icu/tags/PHP/</loc>
     <lastmod>2024-01-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -530,6 +523,20 @@
   
   <url>
     <loc>https://friday-go.icu/tags/%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2024-01-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://friday-go.icu/tags/Laravel/</loc>
+    <lastmod>2024-01-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://friday-go.icu/tags/Elasticsearch/</loc>
     <lastmod>2024-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -551,13 +558,6 @@
   
   <url>
     <loc>https://friday-go.icu/tags/LNMP/</loc>
-    <lastmod>2024-01-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://friday-go.icu/tags/Elasticsearch/</loc>
     <lastmod>2024-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -599,14 +599,14 @@
   </url>
   
   <url>
-    <loc>https://friday-go.icu/tags/mysql/</loc>
+    <loc>https://friday-go.icu/tags/Mysql/</loc>
     <lastmod>2024-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://friday-go.icu/tags/Mysql/</loc>
+    <loc>https://friday-go.icu/tags/mysql/</loc>
     <lastmod>2024-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -685,6 +685,13 @@
   </url>
   
   <url>
+    <loc>https://friday-go.icu/categories/%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2024-01-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://friday-go.icu/categories/Go/</loc>
     <lastmod>2024-01-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -693,13 +700,6 @@
   
   <url>
     <loc>https://friday-go.icu/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
-    <lastmod>2024-01-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://friday-go.icu/categories/%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2024-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
