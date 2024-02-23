@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="baidu-site-verification" content="code-qgPh7OZm0c" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2154665617309406"
+     crossorigin="anonymous"></script>
+    <meta name="description" content="基本关键点Go 程序的执行顺序:  按顺序导入所有被 main 包引用的其他包, 然后在每个包中执行如下流程 如果该包又导入了其他的包, 则从第一步开始递归执行, 但是每个包只会被导入一次 然后以相反的顺序在每个包中初始化常量和变量 如果该包有init函数的话 则调用函数 在完成这一切之后 main 也执行同样的过程, 最后调用 main函数开始执行程序  Go 代码中关键字 和 保留字">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Go 学习">
+<meta property="og:url" content="https://friday-go.icu/2021-6-18-Go%20%E5%AD%A6%E4%B9%A0.html">
+<meta property="og:site_name" content="PFinalClub">
+<meta property="og:description" content="基本关键点Go 程序的执行顺序:  按顺序导入所有被 main 包引用的其他包, 然后在每个包中执行如下流程 如果该包又导入了其他的包, 则从第一步开始递归执行, 但是每个包只会被导入一次 然后以相反的顺序在每个包中初始化常量和变量 如果该包有init函数的话 则调用函数 在完成这一切之后 main 也执行同样的过程, 最后调用 main函数开始执行程序  Go 代码中关键字 和 保留字">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-06-18T02:00:02.000Z">
+<meta property="article:modified_time" content="2022-06-30T02:12:21.000Z">
+<meta property="article:author" content="PFinal南丞">
+<meta property="article:tag" content="golang">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Go 学习</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<style>
+  body {
+    width:60%;
+  }
+  @media screen and (max-width:768px) {
+    body {
+      width: 100%;
+    }
+  }
+</style>
+<body class="mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a href="/links/">友情连接</a></li><!--
+     --><!--
+       --><li><a href="/project/">个人项目</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="上一篇" href="/2021-6-19-Go%20%E5%AD%A6%E4%B9%A0(%E4%B8%80).html"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/2021-5-27-Elasticsearch%20%E5%AD%A6%E4%B9%A0.html"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://friday-go.icu/2021-6-18-Go%20%E5%AD%A6%E4%B9%A0.html"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://friday-go.icu/2021-6-18-Go%20%E5%AD%A6%E4%B9%A0.html&text=Go 学习"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://friday-go.icu/2021-6-18-Go%20%E5%AD%A6%E4%B9%A0.html&title=Go 学习"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://friday-go.icu/2021-6-18-Go%20%E5%AD%A6%E4%B9%A0.html&is_video=false&description=Go 学习"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Go 学习&body=Check out this article: https://friday-go.icu/2021-6-18-Go%20%E5%AD%A6%E4%B9%A0.html"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://friday-go.icu/2021-6-18-Go%20%E5%AD%A6%E4%B9%A0.html&title=Go 学习"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://friday-go.icu/2021-6-18-Go%20%E5%AD%A6%E4%B9%A0.html&title=Go 学习"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://friday-go.icu/2021-6-18-Go%20%E5%AD%A6%E4%B9%A0.html&title=Go 学习"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://friday-go.icu/2021-6-18-Go%20%E5%AD%A6%E4%B9%A0.html&title=Go 学习"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://friday-go.icu/2021-6-18-Go%20%E5%AD%A6%E4%B9%A0.html&name=Go 学习&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://friday-go.icu/2021-6-18-Go%20%E5%AD%A6%E4%B9%A0.html&t=Go 学习"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E5%85%B3%E9%94%AE%E7%82%B9"><span class="toc-number">1.</span> <span class="toc-text">基本关键点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E9%87%8F"><span class="toc-number">2.</span> <span class="toc-text">常量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%98%E9%87%8F"><span class="toc-number">3.</span> <span class="toc-text">变量</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Go 学习
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">南丞</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2021-06-18T02:00:02.000Z" itemprop="datePublished">2021-06-18</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/Go/">Go</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/golang/" rel="tag">golang</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h4 id="基本关键点"><a href="#基本关键点" class="headerlink" title="基本关键点"></a>基本关键点</h4><p><strong>Go 程序的执行顺序:</strong></p>
+<ol>
+<li>按顺序导入所有被 <em>main</em> 包引用的其他包, 然后在每个包中执行如下流程</li>
+<li>如果该包又导入了其他的包, 则从第一步开始递归执行, 但是每个包只会被导入一次</li>
+<li>然后以相反的顺序在每个包中初始化常量和变量 如果该包有init函数的话 则调用函数</li>
+<li>在完成这一切之后 main 也执行同样的过程, 最后调用 main函数开始执行程序</li>
+</ol>
+<p><strong>Go 代码中关键字 和 保留字</strong></p>
+<table>
+<tr>
+  <td>break</td>
+  <td>default</td>
+  <td>func</td>
+  <td>interface</td>
+  <td>select</td>
+</tr>
+<tr>
+  <td>case</td>
+  <td>defer</td>
+  <td>go</td>
+  <td>map</td>
+  <td>struct</td>
+</tr>
+<tr>
+  <td>chan</td>
+  <td>else</td>
+  <td>goto</td>
+  <td>package</td>
+  <td>switch</td>
+</tr>
+<tr>
+  <td>const</td>
+  <td>fallthrough</td>
+  <td>if</td>
+  <td>range</td>
+  <td>type</td>
+</tr>
+<tr>
+  <td>continue</td>
+  <td>for</td>
+  <td>import</td>
+  <td>return</td>
+  <td>var</td>
+</tr>
+</table>
+
+<p><strong>Go 代码中预定义标识符</strong></p>
+<table>
+  <tr>
+    <td>append</td>
+    <td>bool</td>
+    <td>byte</td>
+    <td>cap</td>
+    <td>close</td>
+    <td>complex</td>
+    <td>complex64</td>
+    <td>complex128</td>
+    <td>uint16</td>    
+  </tr>
+    <tr>
+    <td>copy</td>
+    <td>false</td>
+    <td>float32</td>
+    <td>float64</td>
+    <td>imag</td>
+    <td>int</td>
+    <td>int8</td>
+    <td>int16</td>
+    <td>uint32</td>    
+  </tr>
+  <tr>
+    <td>int32</td>
+    <td>int64</td>
+    <td>iota</td>
+    <td>len</td>
+    <td>make</td>
+    <td>new</td>
+    <td>nil</td>
+    <td>panic</td>
+    <td>uint64</td>    
+  </tr>
+    <tr>
+    <td>print</td>
+    <td>println</td>
+    <td>real</td>
+    <td>recover</td>
+    <td>string</td>
+    <td>true</td>
+    <td>uint</td>
+    <td>uint8</td>
+    <td>uintptr</td>    
+  </tr>
+</table>
+
+<p><strong>Go 中的数据类型</strong></p>
+<p>变量或常量 包含数据, 这些数据可以有不同的数据类型,简称类型.使用 var声明的变量值会初始化为该类型的零值。类型定义了某个变量的集合与可对其进行操作的集合.</p>
+<p>类型可以是</p>
+<p>  基本类型  int,float,bool,string</p>
+<p>  结构化的  struct array slice map channel</p>
+<p>  描述行为的  interface</p>
+<h4 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h4><p>常量使用 <strong>const</strong>定义, 用于存储不会改变的数据。存储在常量中的数据类型只可以是布尔型、数字型（整数型、浮点型和复数）和字符串型。</p>
+<p>在Go 语言中, 可以省略类型说明符[type] 因为编译器可以根据变量的值来推断其类型</p>
+<ul>
+<li>显示类型定义: const b string &#x3D; “abc”</li>
+<li>隐式类型定义: const b &#x3D; “abc”</li>
+</ul>
+<p>一个没有指定类型的常量被使用时, 会根据其使用环境而推断出它所需要具备的类型。换句话说, 未定义类型的常量会在必要时刻根据上下文来获得相关类型.</p>
+<p>常量的值必须是能够在编译时就能够确定的</p>
+<p>因为在编译期间自定义函数均属于未知  因此无法用于常量的赋值, 但内置函数可以使用</p>
+<p>数字型的常量是没有大小和符号的, 并且可以使用任何精度而不会导致溢出:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const Ln2 = 0.693147180559945309417232121458\</span><br><span class="line">			176568075500134360255254120680009</span><br><span class="line">const Log2E = 1/Ln2 // this is a precise reciprocal</span><br><span class="line">const Billion = 1e9 // float constant</span><br><span class="line">const hardEight = (1 &lt;&lt; 100) &gt;&gt; 97</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h4><p>声明变量的一般形式是 var.<br>需要注意的是, Go和许多编程语言不同. 它在声明变量时将变了的类型放在变量的名称之后.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var a, b *int</span><br><span class="line"></span><br><span class="line">var (</span><br><span class="line">	a int</span><br><span class="line">	b bool</span><br><span class="line">	str string</span><br><span class="line">)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>这种写法主要用于声明包级别的全局变量，当你在函数体内声明局部变量时，应使用简短声明语法 :&#x3D;</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a := 1</span><br></pre></td></tr></table></figure>
+
+<p><strong>打印</strong></p>
+<p>函数 Printf 可以在 fmt 包外部使用，这是因为它以大写字母 P 开头，该函数主要用于打印输出到控制台。通常使用的格式化字符串作为第一个参数：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">func Printf(format string, list of variables to be printed)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>格式化字符串可以含有一个或多个的格式化标识符，例如：%..，其中 .. 可以被不同类型所对应的标识符替换，如 %s 代表字符串标识符、%v 代表使用类型的默认输出格式的标识符。这些标识符所对应的值从格式化字符串后的第一个逗号开始按照相同顺序添加，如果参数超过 1 个则同样需要使用逗号分隔。使用这些占位符可以很好地控制格式化输出的文本。</p>
+<p>函数 <em>fmt.Sprintf</em> 与 <em>fmt.Printf</em> 的作用是完全相同的，不过前者将格式化后的字符串以返回值的形式返回给调用者，因此你可以在程序中使用包含变量的字符串</p>
+<p>函数 <em>fmt.Print</em> 和 <em>fmt.Println</em> 会自动使用格式化标识符 %v 对字符串进行格式化，两者都会在每个参数之间自动增加空格，而后者还会在字符串的最后加上一个换行符。例如：</p>
+
+  </div>
+</article>
+<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2154665617309406"
+     crossorigin="anonymous"></script> -->
+<!-- 推荐广告 -->
+<!-- <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2154665617309406"
+     data-ad-slot="9190957443"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> -->
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/search/">搜索</a></li>
+         
+          <li><a href="/links/">友情连接</a></li>
+         
+          <li><a href="/project/">个人项目</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E5%85%B3%E9%94%AE%E7%82%B9"><span class="toc-number">1.</span> <span class="toc-text">基本关键点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E9%87%8F"><span class="toc-number">2.</span> <span class="toc-text">常量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%98%E9%87%8F"><span class="toc-number">3.</span> <span class="toc-text">变量</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://friday-go.icu/2021-6-18-Go%20%E5%AD%A6%E4%B9%A0.html"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://friday-go.icu/2021-6-18-Go%20%E5%AD%A6%E4%B9%A0.html&text=Go 学习"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://friday-go.icu/2021-6-18-Go%20%E5%AD%A6%E4%B9%A0.html&title=Go 学习"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://friday-go.icu/2021-6-18-Go%20%E5%AD%A6%E4%B9%A0.html&is_video=false&description=Go 学习"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Go 学习&body=Check out this article: https://friday-go.icu/2021-6-18-Go%20%E5%AD%A6%E4%B9%A0.html"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://friday-go.icu/2021-6-18-Go%20%E5%AD%A6%E4%B9%A0.html&title=Go 学习"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://friday-go.icu/2021-6-18-Go%20%E5%AD%A6%E4%B9%A0.html&title=Go 学习"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://friday-go.icu/2021-6-18-Go%20%E5%AD%A6%E4%B9%A0.html&title=Go 学习"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://friday-go.icu/2021-6-18-Go%20%E5%AD%A6%E4%B9%A0.html&title=Go 学习"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://friday-go.icu/2021-6-18-Go%20%E5%AD%A6%E4%B9%A0.html&name=Go 学习&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://friday-go.icu/2021-6-18-Go%20%E5%AD%A6%E4%B9%A0.html&t=Go 学习"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2024
+    PFinal南丞
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a href="/links/">友情连接</a></li><!--
+     --><!--
+       --><li><a href="/project/">个人项目</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EVR51H8CSN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-EVR51H8CSN');
+    </script>
+
+<!-- Baidu Analytics -->
+
+  <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?8df0b5cb0dbad92cfb64ca6d88e8572a";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+  </script>
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>

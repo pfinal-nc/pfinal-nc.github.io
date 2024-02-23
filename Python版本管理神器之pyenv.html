@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="baidu-site-verification" content="code-qgPh7OZm0c" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2154665617309406"
+     crossorigin="anonymous"></script>
+    <meta name="description" content="前言之前一直在用 virtualenv 和 virtualenvwrapper 这两个工具管理 Python 虚拟环境，但是有个问题，就是想要创建指定版本的虚拟环境就必须先安装指定的 Python 版本，比如我想创建一个基于 Python3.6 的虚拟环境，那么我首先得安装 Python3.6（不管是直接安装还是源码安装，总之比较麻烦），然后在基于安装好的版本去创建虚拟环境，自从知道了 pyenv">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python版本管理神器之pyenv">
+<meta property="og:url" content="https://friday-go.icu/Python%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E7%A5%9E%E5%99%A8%E4%B9%8Bpyenv.html">
+<meta property="og:site_name" content="PFinalClub">
+<meta property="og:description" content="前言之前一直在用 virtualenv 和 virtualenvwrapper 这两个工具管理 Python 虚拟环境，但是有个问题，就是想要创建指定版本的虚拟环境就必须先安装指定的 Python 版本，比如我想创建一个基于 Python3.6 的虚拟环境，那么我首先得安装 Python3.6（不管是直接安装还是源码安装，总之比较麻烦），然后在基于安装好的版本去创建虚拟环境，自从知道了 pyenv">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-04-27T03:41:50.000Z">
+<meta property="article:modified_time" content="2023-04-27T03:57:45.160Z">
+<meta property="article:author" content="PFinal南丞">
+<meta property="article:tag" content="工具">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Python版本管理神器之pyenv</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<style>
+  body {
+    width:60%;
+  }
+  @media screen and (max-width:768px) {
+    body {
+      width: 100%;
+    }
+  }
+</style>
+<body class="mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a href="/links/">友情连接</a></li><!--
+     --><!--
+       --><li><a href="/project/">个人项目</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="上一篇" href="/%E7%88%AC%E8%99%AB%E5%B8%B8%E8%A7%81%E7%9A%84%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86%E7%AE%97%E6%B3%95.html"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/Python%E5%8D%8F%E7%A8%8B.html"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://friday-go.icu/Python%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E7%A5%9E%E5%99%A8%E4%B9%8Bpyenv.html"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://friday-go.icu/Python%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E7%A5%9E%E5%99%A8%E4%B9%8Bpyenv.html&text=Python版本管理神器之pyenv"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://friday-go.icu/Python%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E7%A5%9E%E5%99%A8%E4%B9%8Bpyenv.html&title=Python版本管理神器之pyenv"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://friday-go.icu/Python%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E7%A5%9E%E5%99%A8%E4%B9%8Bpyenv.html&is_video=false&description=Python版本管理神器之pyenv"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Python版本管理神器之pyenv&body=Check out this article: https://friday-go.icu/Python%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E7%A5%9E%E5%99%A8%E4%B9%8Bpyenv.html"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://friday-go.icu/Python%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E7%A5%9E%E5%99%A8%E4%B9%8Bpyenv.html&title=Python版本管理神器之pyenv"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://friday-go.icu/Python%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E7%A5%9E%E5%99%A8%E4%B9%8Bpyenv.html&title=Python版本管理神器之pyenv"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://friday-go.icu/Python%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E7%A5%9E%E5%99%A8%E4%B9%8Bpyenv.html&title=Python版本管理神器之pyenv"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://friday-go.icu/Python%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E7%A5%9E%E5%99%A8%E4%B9%8Bpyenv.html&title=Python版本管理神器之pyenv"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://friday-go.icu/Python%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E7%A5%9E%E5%99%A8%E4%B9%8Bpyenv.html&name=Python版本管理神器之pyenv&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://friday-go.icu/Python%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E7%A5%9E%E5%99%A8%E4%B9%8Bpyenv.html&t=Python版本管理神器之pyenv"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-number">2.</span> <span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ubuntu%E5%AE%89%E8%A3%85"><span class="toc-number">3.</span> <span class="toc-text">Ubuntu安装</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD"><span class="toc-number">3.1.</span> <span class="toc-text">下载</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BC%96%E8%BE%91-bashrc-%E6%96%87%E4%BB%B6"><span class="toc-number">3.2.</span> <span class="toc-text">编辑 .bashrc 文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-Python-%E4%BE%9D%E8%B5%96"><span class="toc-number">3.3.</span> <span class="toc-text">安装 Python 依赖</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E4%BD%BF%E7%94%A8"><span class="toc-number">3.4.</span> <span class="toc-text">测试使用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-Python-%E6%8C%87%E5%AE%9A%E7%89%88%E6%9C%AC"><span class="toc-number">3.5.</span> <span class="toc-text">安装 Python 指定版本</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-virtualenv"><span class="toc-number">4.</span> <span class="toc-text">安装 virtualenv</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83"><span class="toc-number">5.</span> <span class="toc-text">创建虚拟环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-number">6.</span> <span class="toc-text">常用命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AE%E9%A2%98"><span class="toc-number">7.</span> <span class="toc-text">问题</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Python版本管理神器之pyenv
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">PFinal南丞</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2023-04-27T03:41:50.000Z" itemprop="datePublished">2023-04-27</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag">工具</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>之前一直在用 virtualenv 和 virtualenvwrapper 这两个工具管理 Python 虚拟环境，但是有个问题，就是想要创建指定版本的虚拟环境就必须先安装指定的 Python 版本，比如我想创建一个基于 Python3.6 的虚拟环境，那么我首先得安装 Python3.6（不管是直接安装还是源码安装，总之比较麻烦），然后在基于安装好的版本去创建虚拟环境，自从知道了 pyenv 这个神器之后，就几乎不用上述工具了。 ～ pyenv 好像对 Windows 平台不太友好。</p>
+<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><blockquote>
+<p>GitHub <a target="_blank" rel="noopener" href="https://github.com/pyenv/pyenv">https://github.com/pyenv/pyenv</a></p>
+</blockquote>
+<h3 id="Ubuntu安装"><a href="#Ubuntu安装" class="headerlink" title="Ubuntu安装"></a>Ubuntu安装</h3><h4 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h4><ul>
+<li>方式一（速度慢）：</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/yyuu/pyenv.git ~/.pyenv</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>方式二（速度快）：</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash</span><br></pre></td></tr></table></figure>
+
+<p>执行上述操作之后，会将 pyenv 安装到当前用户的 ～&#x2F;.pyenv 目录下</p>
+<h4 id="编辑-bashrc-文件"><a href="#编辑-bashrc-文件" class="headerlink" title="编辑 .bashrc 文件"></a>编辑 .bashrc 文件</h4><ol>
+<li>打开 .bascrc 文件</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.bashrc</span><br></pre></td></tr></table></figure>
+
+<p>2 .将一下内容复制到末尾</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">export PYENV_ROOT=/root/.pyenv</span><br><span class="line">export PATH=$PYENV_ROOT/bin:$PATH</span><br><span class="line">export PATH=$PYENV_ROOT/shims:$PATH</span><br><span class="line">eval &quot;$(pyenv init -)&quot;</span><br></pre></td></tr></table></figure>
+<p>3.更新 .bashrc 文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="安装-Python-依赖"><a href="#安装-Python-依赖" class="headerlink" title="安装 Python 依赖"></a>安装 Python 依赖</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install make build-essential libssl-dev zlib1g-dev</span><br><span class="line">sudo apt-get install libbz2-dev libreadline-dev libsqlite3-dev wget curl</span><br><span class="line">sudo apt-get install llvm libncurses5-dev libncursesw5-dev</span><br><span class="line">sudo apt-get update</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="测试使用"><a href="#测试使用" class="headerlink" title="测试使用"></a>测试使用</h4><p>查看是否安装成功</p>
+<ul>
+<li>查看当前安装版本</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">IN:</span><br><span class="line">	pyenv --version</span><br><span class="line">OUT:</span><br><span class="line">	pyenv 1.2.27-34-gbba1289e</span><br></pre></td></tr></table></figure>
+<ul>
+<li>查看当前所有 Python 版本<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">IN:</span><br><span class="line">	pyenv versions</span><br><span class="line">OUT:</span><br><span class="line">	* system (set by /root/.pyenv/version)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>表示当前只有系统默认的版本</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="安装-Python-指定版本"><a href="#安装-Python-指定版本" class="headerlink" title="安装 Python 指定版本"></a>安装 Python 指定版本</h4><ul>
+<li>查看当前所有可安装版本<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pyenv install --list</span><br></pre></td></tr></table></figure></li>
+<li>安装想要安装的版本（这里选择 Python3.6.5）</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">IN:</span><br><span class="line">	pyenv install 3.6.5</span><br><span class="line">OUT:</span><br><span class="line">  Downloading Python-3.6.5.tar.xz...</span><br><span class="line">  -&gt; https://www.python.org/ftp/python/3.6.5/Python-3.6.5.tar.xz</span><br><span class="line">  Installing Python-3.6.5...</span><br><span class="line">  Installed Python-3.6.5 to /root/.pyenv/versions/3.6.5</span><br></pre></td></tr></table></figure>
+<ul>
+<li>再次查看所有 Python 版本</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">IN:</span><br><span class="line">	pyenv versions</span><br><span class="line">OUT:</span><br><span class="line">  * system (set by /root/.pyenv/version)</span><br><span class="line">    3.6.5</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>切换 Python 版本</p>
+<p>  有三种切换方式 glocal local shell*</p>
+<p>  glocal 全局环境，在未再次使用 glocal切换环境之前，一直使用此环境。</p>
+<p>  local 本次登录环境，重启后，则环境失效，并返回当前glocal的环境。</p>
+<p>  shell 局部（临时）环境。关闭命令行窗口，则环境失效，并返回当前glocal的环境。</p>
+<p>  pyenv glocal 3.6.5</p>
+</li>
+<li><p>卸载指定版本</p>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pyenv uninstall 3.6.5</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装-virtualenv"><a href="#安装-virtualenv" class="headerlink" title="安装 virtualenv"></a>安装 virtualenv</h3><ul>
+<li>下载</li>
+</ul>
+<blockquote>
+<p>pyenv 已经帮我们以 plugin 的形式安装好了，如果未安装，则需要我们手动安装一下</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>编辑 .bashrc 文件</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.bashrc</span><br></pre></td></tr></table></figure>
+<ul>
+<li>将以下内容复制到末尾<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">eval &quot;$(pyenv virtualenv-init -)&quot;</span><br></pre></td></tr></table></figure></li>
+<li>更新 .bashrc 文件</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
+
+<h3 id="创建虚拟环境"><a href="#创建虚拟环境" class="headerlink" title="创建虚拟环境"></a>创建虚拟环境</h3><ul>
+<li><p>使用说明： pyenv virtualenv 3.6.5 <a href="%E8%87%AA%E5%AE%9A%E4%B9%89%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E5%90%8D">virtual_name</a></p>
+</li>
+<li><p>实际使用：pyenv virtualenv 3.6.5 test</p>
+</li>
+<li><p>进入虚拟环境</p>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pyenv activate test</span><br></pre></td></tr></table></figure>
+<ul>
+<li>退出虚拟环境<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pyenv deactivate</span><br></pre></td></tr></table></figure></li>
+<li>删除虚拟环境</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pyenv uninstall test</span><br></pre></td></tr></table></figure>
+<p>输入yes即可</p>
+<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><p>使用方式: pyenv &lt;命令&gt; [&lt;参数&gt;]</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">命令:</span><br><span class="line">  commands    查看所有命令</span><br><span class="line">  local       设置或显示本地的 Python 版本（当前目录及其子目录）</span><br><span class="line">  global      设置或显示全局 Python 版本</span><br><span class="line">  shell       设置或显示 shell 指定的 Python 版本（本次会话）</span><br><span class="line">  install     安装指定 Python 版本</span><br><span class="line">  uninstall   卸载指定 Python 版本)</span><br><span class="line">  version     显示当前的 Python 版本及其本地路径</span><br><span class="line">  versions    查看所有已经安装的版本</span><br><span class="line">  which       显示安装路径</span><br></pre></td></tr></table></figure>
+<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>1.切换不成功<br>如果遇到切换之后，Python版本还是系统的默认版本的话，就需要配置一下环境变量，在 ~&#x2F;.zshrc 或 ~&#x2F;.bash_profile 文件最后写入：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if which pyenv &gt; /dev/null;</span><br><span class="line">  then eval &quot;$(pyenv init -)&quot;;</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>转自: <a target="_blank" rel="noopener" href="https://www.mankvis.com/blogs/2021051401.html"> 健康快乐每一天–Python版本管理神器之pyenv</a></p>
+
+  </div>
+</article>
+<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2154665617309406"
+     crossorigin="anonymous"></script> -->
+<!-- 推荐广告 -->
+<!-- <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2154665617309406"
+     data-ad-slot="9190957443"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> -->
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/search/">搜索</a></li>
+         
+          <li><a href="/links/">友情连接</a></li>
+         
+          <li><a href="/project/">个人项目</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-number">2.</span> <span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ubuntu%E5%AE%89%E8%A3%85"><span class="toc-number">3.</span> <span class="toc-text">Ubuntu安装</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD"><span class="toc-number">3.1.</span> <span class="toc-text">下载</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BC%96%E8%BE%91-bashrc-%E6%96%87%E4%BB%B6"><span class="toc-number">3.2.</span> <span class="toc-text">编辑 .bashrc 文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-Python-%E4%BE%9D%E8%B5%96"><span class="toc-number">3.3.</span> <span class="toc-text">安装 Python 依赖</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E4%BD%BF%E7%94%A8"><span class="toc-number">3.4.</span> <span class="toc-text">测试使用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-Python-%E6%8C%87%E5%AE%9A%E7%89%88%E6%9C%AC"><span class="toc-number">3.5.</span> <span class="toc-text">安装 Python 指定版本</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-virtualenv"><span class="toc-number">4.</span> <span class="toc-text">安装 virtualenv</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83"><span class="toc-number">5.</span> <span class="toc-text">创建虚拟环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-number">6.</span> <span class="toc-text">常用命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AE%E9%A2%98"><span class="toc-number">7.</span> <span class="toc-text">问题</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://friday-go.icu/Python%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E7%A5%9E%E5%99%A8%E4%B9%8Bpyenv.html"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://friday-go.icu/Python%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E7%A5%9E%E5%99%A8%E4%B9%8Bpyenv.html&text=Python版本管理神器之pyenv"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://friday-go.icu/Python%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E7%A5%9E%E5%99%A8%E4%B9%8Bpyenv.html&title=Python版本管理神器之pyenv"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://friday-go.icu/Python%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E7%A5%9E%E5%99%A8%E4%B9%8Bpyenv.html&is_video=false&description=Python版本管理神器之pyenv"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Python版本管理神器之pyenv&body=Check out this article: https://friday-go.icu/Python%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E7%A5%9E%E5%99%A8%E4%B9%8Bpyenv.html"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://friday-go.icu/Python%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E7%A5%9E%E5%99%A8%E4%B9%8Bpyenv.html&title=Python版本管理神器之pyenv"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://friday-go.icu/Python%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E7%A5%9E%E5%99%A8%E4%B9%8Bpyenv.html&title=Python版本管理神器之pyenv"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://friday-go.icu/Python%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E7%A5%9E%E5%99%A8%E4%B9%8Bpyenv.html&title=Python版本管理神器之pyenv"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://friday-go.icu/Python%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E7%A5%9E%E5%99%A8%E4%B9%8Bpyenv.html&title=Python版本管理神器之pyenv"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://friday-go.icu/Python%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E7%A5%9E%E5%99%A8%E4%B9%8Bpyenv.html&name=Python版本管理神器之pyenv&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://friday-go.icu/Python%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E7%A5%9E%E5%99%A8%E4%B9%8Bpyenv.html&t=Python版本管理神器之pyenv"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2024
+    PFinal南丞
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a href="/links/">友情连接</a></li><!--
+     --><!--
+       --><li><a href="/project/">个人项目</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EVR51H8CSN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-EVR51H8CSN');
+    </script>
+
+<!-- Baidu Analytics -->
+
+  <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?8df0b5cb0dbad92cfb64ca6d88e8572a";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+  </script>
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>
