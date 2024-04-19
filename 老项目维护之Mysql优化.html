@@ -11,13 +11,13 @@
      crossorigin="anonymous"></script>
     <meta name="description" content="最近维护一个CRM的老项目，项目由于数据量比较大, 导致查询速度很慢, 经常出现超时的情况, 下面记录一下具体的优化方法和优化效果。 优化老项目,老生常淡的几点: 1. 数据库优化 2. 代码结构优化 3. 缓存优化 4. 资源优化 ...  数据库优化">
 <meta property="og:type" content="article">
-<meta property="og:title" content="老项目维护优化">
+<meta property="og:title" content="老项目维护优化(一)">
 <meta property="og:url" content="https://friday-go.icu/%E8%80%81%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E4%B9%8BMysql%E4%BC%98%E5%8C%96.html">
 <meta property="og:site_name" content="PFinalClub">
 <meta property="og:description" content="最近维护一个CRM的老项目，项目由于数据量比较大, 导致查询速度很慢, 经常出现超时的情况, 下面记录一下具体的优化方法和优化效果。 优化老项目,老生常淡的几点: 1. 数据库优化 2. 代码结构优化 3. 缓存优化 4. 资源优化 ...  数据库优化">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-04-02T10:31:53.000Z">
-<meta property="article:modified_time" content="2024-04-03T08:52:00.617Z">
+<meta property="article:modified_time" content="2024-04-03T08:54:06.428Z">
 <meta property="article:author" content="PFinal南丞">
 <meta property="article:tag" content="mysql">
 <meta name="twitter:card" content="summary">
@@ -40,7 +40,7 @@
       
     
     <!-- title -->
-    <title>老项目维护优化</title>
+    <title>老项目维护优化(一)</title>
     <!-- styles -->
     
 <link rel="stylesheet" href="/css/style.css">
@@ -93,6 +93,8 @@
     <span id="actions">
       <ul>
         
+        <li><a class="icon" aria-label="上一篇" href="/%E8%80%81%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E4%B9%8BMysql%E4%BC%98%E5%8C%96-%E4%B8%80.html"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
         
         <li><a class="icon" aria-label="下一篇" href="/Go%E7%BB%88%E7%AB%AFURL%E6%A3%80%E6%B5%8B%E5%B0%8F%E5%B7%A5%E5%85%B7.html"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
         
@@ -108,15 +110,15 @@
     <div id="share" style="display: none">
       <ul>
   <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://friday-go.icu/%E8%80%81%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E4%B9%8BMysql%E4%BC%98%E5%8C%96.html"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://friday-go.icu/%E8%80%81%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E4%B9%8BMysql%E4%BC%98%E5%8C%96.html&text=老项目维护优化"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://friday-go.icu/%E8%80%81%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E4%B9%8BMysql%E4%BC%98%E5%8C%96.html&title=老项目维护优化"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://friday-go.icu/%E8%80%81%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E4%B9%8BMysql%E4%BC%98%E5%8C%96.html&is_video=false&description=老项目维护优化"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=老项目维护优化&body=Check out this article: https://friday-go.icu/%E8%80%81%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E4%B9%8BMysql%E4%BC%98%E5%8C%96.html"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://friday-go.icu/%E8%80%81%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E4%B9%8BMysql%E4%BC%98%E5%8C%96.html&title=老项目维护优化"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://friday-go.icu/%E8%80%81%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E4%B9%8BMysql%E4%BC%98%E5%8C%96.html&title=老项目维护优化"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://friday-go.icu/%E8%80%81%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E4%B9%8BMysql%E4%BC%98%E5%8C%96.html&title=老项目维护优化"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://friday-go.icu/%E8%80%81%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E4%B9%8BMysql%E4%BC%98%E5%8C%96.html&title=老项目维护优化"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://friday-go.icu/%E8%80%81%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E4%B9%8BMysql%E4%BC%98%E5%8C%96.html&name=老项目维护优化&description=&lt;p&gt;最近维护一个CRM的老项目，项目由于数据量比较大, 导致查询速度很慢, 经常出现超时的情况, 下面记录一下具体的优化方法和优化效果。&lt;/p&gt;
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://friday-go.icu/%E8%80%81%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E4%B9%8BMysql%E4%BC%98%E5%8C%96.html&text=老项目维护优化(一)"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://friday-go.icu/%E8%80%81%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E4%B9%8BMysql%E4%BC%98%E5%8C%96.html&title=老项目维护优化(一)"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://friday-go.icu/%E8%80%81%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E4%B9%8BMysql%E4%BC%98%E5%8C%96.html&is_video=false&description=老项目维护优化(一)"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=老项目维护优化(一)&body=Check out this article: https://friday-go.icu/%E8%80%81%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E4%B9%8BMysql%E4%BC%98%E5%8C%96.html"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://friday-go.icu/%E8%80%81%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E4%B9%8BMysql%E4%BC%98%E5%8C%96.html&title=老项目维护优化(一)"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://friday-go.icu/%E8%80%81%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E4%B9%8BMysql%E4%BC%98%E5%8C%96.html&title=老项目维护优化(一)"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://friday-go.icu/%E8%80%81%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E4%B9%8BMysql%E4%BC%98%E5%8C%96.html&title=老项目维护优化(一)"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://friday-go.icu/%E8%80%81%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E4%B9%8BMysql%E4%BC%98%E5%8C%96.html&title=老项目维护优化(一)"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://friday-go.icu/%E8%80%81%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E4%B9%8BMysql%E4%BC%98%E5%8C%96.html&name=老项目维护优化(一)&description=&lt;p&gt;最近维护一个CRM的老项目，项目由于数据量比较大, 导致查询速度很慢, 经常出现超时的情况, 下面记录一下具体的优化方法和优化效果。&lt;/p&gt;
 &lt;p&gt;优化老项目,老生常淡的几点:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;1. 数据库优化
 2. 代码结构优化
@@ -125,7 +127,7 @@
 ...
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id=&#34;数据库优化&#34;&gt;&lt;a href=&#34;#数据库优化&#34; class=&#34;headerlink&#34; title=&#34;数据库优化&#34;&gt;&lt;/a&gt;数据库优化&lt;/h3&gt;"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://friday-go.icu/%E8%80%81%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E4%B9%8BMysql%E4%BC%98%E5%8C%96.html&t=老项目维护优化"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://friday-go.icu/%E8%80%81%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E4%B9%8BMysql%E4%BC%98%E5%8C%96.html&t=老项目维护优化(一)"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -142,7 +144,7 @@
   <header>
     
     <h1 class="posttitle" itemprop="name headline">
-        老项目维护优化
+        老项目维护优化(一)
     </h1>
 
 
@@ -285,15 +287,15 @@ b. 第二点, 简化 ORM的乱用,比如只需要查询一个字段的 就直接
     <div id="share-footer" style="display: none">
       <ul>
   <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://friday-go.icu/%E8%80%81%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E4%B9%8BMysql%E4%BC%98%E5%8C%96.html"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://friday-go.icu/%E8%80%81%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E4%B9%8BMysql%E4%BC%98%E5%8C%96.html&text=老项目维护优化"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://friday-go.icu/%E8%80%81%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E4%B9%8BMysql%E4%BC%98%E5%8C%96.html&title=老项目维护优化"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://friday-go.icu/%E8%80%81%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E4%B9%8BMysql%E4%BC%98%E5%8C%96.html&is_video=false&description=老项目维护优化"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=老项目维护优化&body=Check out this article: https://friday-go.icu/%E8%80%81%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E4%B9%8BMysql%E4%BC%98%E5%8C%96.html"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://friday-go.icu/%E8%80%81%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E4%B9%8BMysql%E4%BC%98%E5%8C%96.html&title=老项目维护优化"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://friday-go.icu/%E8%80%81%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E4%B9%8BMysql%E4%BC%98%E5%8C%96.html&title=老项目维护优化"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://friday-go.icu/%E8%80%81%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E4%B9%8BMysql%E4%BC%98%E5%8C%96.html&title=老项目维护优化"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://friday-go.icu/%E8%80%81%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E4%B9%8BMysql%E4%BC%98%E5%8C%96.html&title=老项目维护优化"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://friday-go.icu/%E8%80%81%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E4%B9%8BMysql%E4%BC%98%E5%8C%96.html&name=老项目维护优化&description=&lt;p&gt;最近维护一个CRM的老项目，项目由于数据量比较大, 导致查询速度很慢, 经常出现超时的情况, 下面记录一下具体的优化方法和优化效果。&lt;/p&gt;
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://friday-go.icu/%E8%80%81%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E4%B9%8BMysql%E4%BC%98%E5%8C%96.html&text=老项目维护优化(一)"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://friday-go.icu/%E8%80%81%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E4%B9%8BMysql%E4%BC%98%E5%8C%96.html&title=老项目维护优化(一)"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://friday-go.icu/%E8%80%81%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E4%B9%8BMysql%E4%BC%98%E5%8C%96.html&is_video=false&description=老项目维护优化(一)"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=老项目维护优化(一)&body=Check out this article: https://friday-go.icu/%E8%80%81%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E4%B9%8BMysql%E4%BC%98%E5%8C%96.html"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://friday-go.icu/%E8%80%81%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E4%B9%8BMysql%E4%BC%98%E5%8C%96.html&title=老项目维护优化(一)"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://friday-go.icu/%E8%80%81%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E4%B9%8BMysql%E4%BC%98%E5%8C%96.html&title=老项目维护优化(一)"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://friday-go.icu/%E8%80%81%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E4%B9%8BMysql%E4%BC%98%E5%8C%96.html&title=老项目维护优化(一)"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://friday-go.icu/%E8%80%81%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E4%B9%8BMysql%E4%BC%98%E5%8C%96.html&title=老项目维护优化(一)"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://friday-go.icu/%E8%80%81%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E4%B9%8BMysql%E4%BC%98%E5%8C%96.html&name=老项目维护优化(一)&description=&lt;p&gt;最近维护一个CRM的老项目，项目由于数据量比较大, 导致查询速度很慢, 经常出现超时的情况, 下面记录一下具体的优化方法和优化效果。&lt;/p&gt;
 &lt;p&gt;优化老项目,老生常淡的几点:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;1. 数据库优化
 2. 代码结构优化
@@ -302,7 +304,7 @@ b. 第二点, 简化 ORM的乱用,比如只需要查询一个字段的 就直接
 ...
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id=&#34;数据库优化&#34;&gt;&lt;a href=&#34;#数据库优化&#34; class=&#34;headerlink&#34; title=&#34;数据库优化&#34;&gt;&lt;/a&gt;数据库优化&lt;/h3&gt;"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://friday-go.icu/%E8%80%81%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E4%B9%8BMysql%E4%BC%98%E5%8C%96.html&t=老项目维护优化"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://friday-go.icu/%E8%80%81%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E4%B9%8BMysql%E4%BC%98%E5%8C%96.html&t=老项目维护优化(一)"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
