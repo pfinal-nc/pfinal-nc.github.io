@@ -515,15 +515,6 @@
   </url>
   
   <url>
-    <loc>https://friday-go.icu/categories/index.html</loc>
-    
-    <lastmod>2022-06-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://friday-go.icu/search/index.html</loc>
     
     <lastmod>2022-06-30</lastmod>
@@ -534,6 +525,15 @@
   
   <url>
     <loc>https://friday-go.icu/tags/index.html</loc>
+    
+    <lastmod>2022-06-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://friday-go.icu/categories/index.html</loc>
     
     <lastmod>2022-06-30</lastmod>
     
@@ -558,7 +558,14 @@
   </url>
   
   <url>
-    <loc>https://friday-go.icu/tags/Golang/</loc>
+    <loc>https://friday-go.icu/tags/PHP/</loc>
+    <lastmod>2024-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://friday-go.icu/tags/%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2024-05-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -566,6 +573,13 @@
   
   <url>
     <loc>https://friday-go.icu/tags/Elasticsearch/</loc>
+    <lastmod>2024-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://friday-go.icu/tags/Golang/</loc>
     <lastmod>2024-05-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -580,20 +594,6 @@
   
   <url>
     <loc>https://friday-go.icu/tags/LNMP/</loc>
-    <lastmod>2024-05-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://friday-go.icu/tags/PHP/</loc>
-    <lastmod>2024-05-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://friday-go.icu/tags/%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2024-05-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -714,14 +714,14 @@
   </url>
   
   <url>
-    <loc>https://friday-go.icu/categories/Golang/</loc>
+    <loc>https://friday-go.icu/categories/%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2024-05-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://friday-go.icu/categories/%E5%B7%A5%E5%85%B7/</loc>
+    <loc>https://friday-go.icu/categories/Golang/</loc>
     <lastmod>2024-05-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
