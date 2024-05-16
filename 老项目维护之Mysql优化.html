@@ -351,7 +351,7 @@ b. 第二点, 简化 ORM的乱用,比如只需要查询一个字段的 就直接
     document.addEventListener('visibilitychange', function() {
       if (document.visibilityState === 'hidden') {
         setInterval(function() {
-          if(document.title) {
+          if(!document.title) {
             document.title = '❤ 你快回来,我等不及了!';
           }else{
             document.title = '';

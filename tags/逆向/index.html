@@ -218,7 +218,7 @@
     document.addEventListener('visibilitychange', function() {
       if (document.visibilityState === 'hidden') {
         setInterval(function() {
-          if(document.title) {
+          if(!document.title) {
             document.title = '❤ 你快回来,我等不及了!';
           }else{
             document.title = '';
