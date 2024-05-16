@@ -515,6 +515,15 @@
   </url>
   
   <url>
+    <loc>https://friday-go.icu/categories/index.html</loc>
+    
+    <lastmod>2022-06-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://friday-go.icu/search/index.html</loc>
     
     <lastmod>2022-06-30</lastmod>
@@ -532,15 +541,6 @@
     <priority>0.6</priority>
   </url>
   
-  <url>
-    <loc>https://friday-go.icu/categories/index.html</loc>
-    
-    <lastmod>2022-06-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
 
   <url>
     <loc>https://friday-go.icu/</loc>
@@ -551,13 +551,6 @@
 
   
   <url>
-    <loc>https://friday-go.icu/tags/Laravel/</loc>
-    <lastmod>2024-05-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://friday-go.icu/tags/PHP/</loc>
     <lastmod>2024-05-16</lastmod>
     <changefreq>weekly</changefreq>
@@ -566,6 +559,13 @@
   
   <url>
     <loc>https://friday-go.icu/tags/%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2024-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://friday-go.icu/tags/Laravel/</loc>
     <lastmod>2024-05-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

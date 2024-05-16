@@ -303,7 +303,13 @@
   <script>
     document.addEventListener('visibilitychange', function() {
       if (document.visibilityState === 'hidden') {
-        document.title = '你快回来,我等不及了!';
+        setInterval(function() {
+          if(document.title) {
+            document.title = '❤ 你快回来,我等不及了!';
+          }else{
+            document.title = '';
+          }
+        }, 1000);
       } else {
         document.title = 'GO语言开发终端小工具后续';
       }
