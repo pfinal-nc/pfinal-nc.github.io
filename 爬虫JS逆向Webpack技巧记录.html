@@ -356,13 +356,7 @@
   <script>
     document.addEventListener('visibilitychange', function() {
       if (document.visibilityState === 'hidden') {
-        setInterval(function() {
-          if(!document.title) {
-            document.title = '❤ 你快回来,我等不及了!';
-          }else{
-            document.title = ' ';
-          }
-        }, 1000);
+        document.title = '❤ 你快回来,我等不及了!';
       } else {
         document.title = '爬虫JS逆向Webpack技巧记录';
       }

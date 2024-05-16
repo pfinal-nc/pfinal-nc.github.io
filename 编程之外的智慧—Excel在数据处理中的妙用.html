@@ -335,13 +335,7 @@
   <script>
     document.addEventListener('visibilitychange', function() {
       if (document.visibilityState === 'hidden') {
-        setInterval(function() {
-          if(!document.title) {
-            document.title = '❤ 你快回来,我等不及了!';
-          }else{
-            document.title = ' ';
-          }
-        }, 1000);
+        document.title = '❤ 你快回来,我等不及了!';
       } else {
         document.title = '编程之外的智慧-Excel在数据处理中的妙用';
       }
