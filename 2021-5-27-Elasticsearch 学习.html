@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="baidu-site-verification" content="code-qgPh7OZm0c" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2154665617309406"
+     crossorigin="anonymous"></script>
+    <meta name="description" content="Elasticsearch 使用了有一段时间了, 一直没有做深入的学习,最近深入的学习总结一下. ES主要的功能 分布式的搜索引擎和数据分析引擎 全文检索，结构化检索，数据分析 对海量数据进行近实时的处理速度快  ES的存储结构Es是面向文档型数据库, 一条数据在这里就是一个文档,用JSON作为文档序列的格式,当一个对象被序列化成为 JSON，它被称为一个 JSON 文档 。 123456&amp;#12">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Elasticsearch 学习">
+<meta property="og:url" content="https://friday-go.icu/2021-5-27-Elasticsearch%20%E5%AD%A6%E4%B9%A0.html">
+<meta property="og:site_name" content="PFinalClub">
+<meta property="og:description" content="Elasticsearch 使用了有一段时间了, 一直没有做深入的学习,最近深入的学习总结一下. ES主要的功能 分布式的搜索引擎和数据分析引擎 全文检索，结构化检索，数据分析 对海量数据进行近实时的处理速度快  ES的存储结构Es是面向文档型数据库, 一条数据在这里就是一个文档,用JSON作为文档序列的格式,当一个对象被序列化成为 JSON，它被称为一个 JSON 文档 。 123456&amp;#12">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/pkg/20220819101001.jpg">
+<meta property="article:published_time" content="2021-05-27T02:00:02.000Z">
+<meta property="article:modified_time" content="2022-08-19T02:12:38.000Z">
+<meta property="article:author" content="PFinal南丞">
+<meta property="article:tag" content="Elasticsearch">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/pkg/20220819101001.jpg">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Elasticsearch 学习</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<style>
+  body {
+    width:60%;
+  }
+  @media screen and (max-width:768px) {
+    body {
+      width: 100%;
+    }
+  }
+</style>
+<body class="mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a href="/links/">友情连接</a></li><!--
+     --><!--
+       --><li><a href="/project/">个人项目</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="上一篇" href="/2021-6-18-Go%20%E5%AD%A6%E4%B9%A0.html"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/2019-10-27-PHP%20%E9%9D%A2%E8%AF%95%E9%A3%8E%E8%BD%A6%E7%AE%97%E6%B3%95.html"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://friday-go.icu/2021-5-27-Elasticsearch%20%E5%AD%A6%E4%B9%A0.html"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://friday-go.icu/2021-5-27-Elasticsearch%20%E5%AD%A6%E4%B9%A0.html&text=Elasticsearch 学习"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://friday-go.icu/2021-5-27-Elasticsearch%20%E5%AD%A6%E4%B9%A0.html&title=Elasticsearch 学习"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://friday-go.icu/2021-5-27-Elasticsearch%20%E5%AD%A6%E4%B9%A0.html&is_video=false&description=Elasticsearch 学习"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Elasticsearch 学习&body=Check out this article: https://friday-go.icu/2021-5-27-Elasticsearch%20%E5%AD%A6%E4%B9%A0.html"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://friday-go.icu/2021-5-27-Elasticsearch%20%E5%AD%A6%E4%B9%A0.html&title=Elasticsearch 学习"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://friday-go.icu/2021-5-27-Elasticsearch%20%E5%AD%A6%E4%B9%A0.html&title=Elasticsearch 学习"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://friday-go.icu/2021-5-27-Elasticsearch%20%E5%AD%A6%E4%B9%A0.html&title=Elasticsearch 学习"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://friday-go.icu/2021-5-27-Elasticsearch%20%E5%AD%A6%E4%B9%A0.html&title=Elasticsearch 学习"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://friday-go.icu/2021-5-27-Elasticsearch%20%E5%AD%A6%E4%B9%A0.html&name=Elasticsearch 学习&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://friday-go.icu/2021-5-27-Elasticsearch%20%E5%AD%A6%E4%B9%A0.html&t=Elasticsearch 学习"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#ES%E4%B8%BB%E8%A6%81%E7%9A%84%E5%8A%9F%E8%83%BD"><span class="toc-number">1.</span> <span class="toc-text">ES主要的功能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ES%E7%9A%84%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84"><span class="toc-number">2.</span> <span class="toc-text">ES的存储结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ES%E7%9A%84%E6%A0%B8%E5%BF%83"><span class="toc-number">3.</span> <span class="toc-text">ES的核心</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ES%E4%B8%AD%E7%9A%84%E5%87%A0%E4%B8%AA%E6%A6%82%E5%BF%B5"><span class="toc-number">4.</span> <span class="toc-text">ES中的几个概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Docker-%E5%AE%89%E8%A3%85-ES"><span class="toc-number">5.</span> <span class="toc-text">Docker 安装 ES</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Elasticsearch 学习
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">南丞</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2021-05-27T02:00:02.000Z" itemprop="datePublished">2021-05-27</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/%E5%B7%A5%E5%85%B7/">工具</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/Elasticsearch/" rel="tag">Elasticsearch</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>Elasticsearch 使用了有一段时间了, 一直没有做深入的学习,最近深入的学习总结一下.</p>
+<h4 id="ES主要的功能"><a href="#ES主要的功能" class="headerlink" title="ES主要的功能"></a>ES主要的功能</h4><ul>
+<li>分布式的搜索引擎和数据分析引擎</li>
+<li>全文检索，结构化检索，数据分析</li>
+<li>对海量数据进行近实时的处理速度快</li>
+</ul>
+<h4 id="ES的存储结构"><a href="#ES的存储结构" class="headerlink" title="ES的存储结构"></a>ES的存储结构</h4><p>Es是面向文档型数据库, 一条数据在这里就是一个文档,用JSON作为文档序列的格式,当一个对象被序列化成为 JSON，它被称为一个 JSON 文档 。</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span><span class="string">&quot;PFinal社区&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;members&quot;</span><span class="punctuation">:</span><span class="number">1000</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;desc&quot;</span><span class="punctuation">:</span><span class="string">&quot;PHP学习&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>关系数据库     ⇒ 数据库 ⇒ 表  ⇒ 列(Columns)</p>
+</blockquote>
+<blockquote>
+<p>Elasticsearch    ⇒ 索引(Index)  ⇒ 文档(Docments)  ⇒ 字段(Fields)  </p>
+</blockquote>
+<p>在ES中以文档存储,每个文档都有自己的元数据存放自己的信息,其中:</p>
+<h4 id="ES的核心"><a href="#ES的核心" class="headerlink" title="ES的核心"></a>ES的核心</h4><ol>
+<li><p><strong>Cluster:集群</strong></p>
+<p> ES可以作为单个搜索服务器,不过在大数据集的时候 ES可以运行在许多互相合作的服务器上,形成集群，一个集群就是由一个或多个节点组织在一起，它们共同持有整个的数据，并一起提供索引和搜索功能。</p>
+</li>
+<li><p><strong>Node: 节点</strong></p>
+<p> 节点是集群中的一个服务器，作为集群的一部分，它存储数据，参与集群的索引和搜索功能。一个节点可以通过配置集群名称的方式来加入一个指定的集群。默认情况下，每个节点都会被安排加入到一个叫做“elasticsearch”的集群中，</p>
+</li>
+<li><p><strong>Shard: 分片</strong></p>
+<p> 当有大量的文档时，由于内存的限制、磁盘处理能力不足、无法足够快的响应客户端的请求等，一个节点可能不够。或者单个节点处理搜索请求，响应太慢。这种情况下，数据可以分为较小的分片。每个分片放到不同的服务器上。 每个分片本身也是一个功能完善并且独立的“索引”，这个“索引”可以被放置到集群中的任何节点上。</p>
+</li>
+<li><p><strong>Replia: 副本</strong></p>
+<p> 为提高查询吞吐量或实现高可用性，可以使用分片副本。 副本是一个分片的精确复制，每个分片可以有零个或多个副本。ES中可以有许多相同的分片，其中之一被选择更改索引操作，这种特殊的分片称为主分片。 </p>
+<p> 当主分片丢失时，如：该分片所在的数据不可用时，集群将副本提升为新的主分片。</p>
+</li>
+</ol>
+<h4 id="ES中的几个概念"><a href="#ES中的几个概念" class="headerlink" title="ES中的几个概念"></a>ES中的几个概念</h4><ol>
+<li><p><strong>正向索引</strong></p>
+<p> 正排表是以文档的ID为关键字，表中记录文档中每个字的位置信息，查找时扫描表中每个文档中字的信息直到找出所有包含查询关键字的文档。</p>
+<p> 这种组织方法在建立索引的时候结构比较简单，建立比较方便且易于维护;因为索引是基于文档建立的，若是有新的文档加入，直接为该文档建立一个新的索引块，挂接在原来索引文件的后面。若是有文档删除，则直接找到该文档号文档对应的索引信息，将其直接删除。但是在查询的时候需对所有的文档进行扫描以确保没有遗漏，这样就使得检索时间大大延长，检索效率低下。     </p>
+</li>
+<li><p><strong>倒排索引</strong></p>
+<p> 倒排表以字或词为关键字进行索引，表中关键字所对应的记录表项记录了出现这个字或词的所有文档，一个表项就是一个字表段，它记录该文档的ID和字符在该文档中出现的位置情况。</p>
+<p> 由于每个字或词对应的文档数量在动态变化，所以倒排表的建立和维护都较为复杂，但是在查询的时候由于可以一次得到查询关键字所对应的所有文档，所以效率高于正排表。在全文检索中，检索的快速响应是一个最为关键的性能，而索引建立由于在后台进行，尽管效率相对低一些，但不会影响整个搜索引擎的效率。</p>
+</li>
+</ol>
+<p><em>正排索引是从文档到关键字的映射（已知文档求关键字），倒排索引是从关键字到文档的映射（已知关键字求文档）。</em></p>
+<ol start="3">
+<li><p><strong>分片关系</strong></p>
+<p> 在 ES 中为了应对并发更新的问题上, ES 采用主从模式, 主分片的数据作为权威数据, 写入的过程优先写入主分片, 成功执行后再写入副分片, 在数据恢复阶段的时候亦是以主分片的数据为基准.</p>
+<p> 一个 ES 索引包含很多个分片, 一个分片就是一个 Lucene 索引, 一个 Lucene 索引包含很多个分段, 一个分段是由多个倒排索引组成, 一个倒排索引包含若干个文档数据, 一个文档数据由若干个词构成, 词是经过分词器处理和语言处理最后的结果。</p>
+</li>
+<li><p><strong>ES 分词器(Analyzer)</strong></p>
+<p> 分词器的作用是：把文本内容的词按一定规则进行切割分离,对应的是Analyzer 类,这是一个抽象基类,切分词的具体规则是由子类继承实现的,所以对于不同的语言的条件下,需要用不同的分词器。在创建索引时和数据搜索时都会用到分词器,并且使用的分词器需要统一,否则将会出现数据检索为空的情况</p>
+</li>
+</ol>
+<h4 id="Docker-安装-ES"><a href="#Docker-安装-ES" class="headerlink" title="Docker 安装 ES"></a>Docker 安装 ES</h4><ol>
+<li>docker-composer 编排es集群</li>
+</ol>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;2.2&#x27;</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">es01:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">elasticsearch:7.5.1</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">es01</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">node.name=es01</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">cluster.name=es-docker-cluster</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">discovery.seed_hosts=es02</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">cluster.initial_master_nodes=es01,es02</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">bootstrap.memory_lock=true</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;ES_JAVA_OPTS=-Xms512m -Xmx512m&quot;</span></span><br><span class="line">    <span class="attr">ulimits:</span></span><br><span class="line">      <span class="attr">memlock:</span></span><br><span class="line">        <span class="attr">soft:</span> <span class="number">-1</span></span><br><span class="line">        <span class="attr">hard:</span> <span class="number">-1</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">data01:/usr/share/elasticsearch/data</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">9200</span><span class="string">:9200</span></span><br><span class="line">    <span class="attr">networks:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">elastic</span></span><br><span class="line">  <span class="attr">es02:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">elasticsearch:7.5.1</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">es02</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">node.name=es02</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">cluster.name=es-docker-cluster</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">discovery.seed_hosts=es01</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">cluster.initial_master_nodes=es01,es02</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">bootstrap.memory_lock=true</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;ES_JAVA_OPTS=-Xms512m -Xmx512m&quot;</span></span><br><span class="line">    <span class="attr">ulimits:</span></span><br><span class="line">      <span class="attr">memlock:</span></span><br><span class="line">        <span class="attr">soft:</span> <span class="number">-1</span></span><br><span class="line">        <span class="attr">hard:</span> <span class="number">-1</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">data02:/usr/share/elasticsearch/data</span></span><br><span class="line">    <span class="attr">networks:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">elastic</span></span><br><span class="line">  <span class="attr">kibana:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">kibana:7.5.1</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">kibana</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;5601:5601&quot;</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">I18N_LOCALE:</span> <span class="string">zh-CN</span> <span class="comment">#汉化</span></span><br><span class="line">    <span class="attr">networks:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">elastic</span></span><br><span class="line">    <span class="attr">links:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">es01:elasticsearch</span></span><br><span class="line"><span class="attr">volumes:</span></span><br><span class="line">  <span class="attr">data01:</span></span><br><span class="line">    <span class="attr">driver:</span> <span class="string">local</span></span><br><span class="line">  <span class="attr">data02:</span></span><br><span class="line">    <span class="attr">driver:</span> <span class="string">local</span></span><br><span class="line"><span class="attr">networks:</span></span><br><span class="line">  <span class="attr">elastic:</span></span><br><span class="line">    <span class="attr">driver:</span> <span class="string">bridge</span></span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>docker-composer 编排单点</li>
+</ol>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">elasticsearch:</span></span><br><span class="line">  <span class="attr">image:</span> <span class="string">elasticsearch:7.7.0</span></span><br><span class="line">  <span class="attr">ports:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;9200:9200&quot;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;9300:9300&quot;</span></span><br><span class="line">  <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./conf/elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./elasticsearch/data:/usr/share/elasticsearch/data</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./elasticsearch/plugins:/usr/share/elasticsearch/plugins</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./log/elasticsearch/:/usr/share/elasticsearch/logs</span></span><br><span class="line">  <span class="attr">user:</span> <span class="string">$&#123;ES_UID&#125;</span></span><br><span class="line">  <span class="attr">command:</span> [<span class="string">&quot;sh&quot;</span>, <span class="string">&quot;-c&quot;</span>, <span class="string">&quot;./bin/elasticsearch&quot;</span>]    </span><br><span class="line">  <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;ES_JAVA_OPTS=-Xms2g -Xmx2g&quot;</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;discovery.type=single-node&quot;</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;COMPOSE_PROJECT_NAME=elasticsearch-server&quot;</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><img src="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/pkg/20220819101001.jpg"></p>
+
+  </div>
+</article>
+<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2154665617309406"
+     crossorigin="anonymous"></script> -->
+<!-- 推荐广告 -->
+<!-- <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2154665617309406"
+     data-ad-slot="9190957443"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> -->
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/search/">搜索</a></li>
+         
+          <li><a href="/links/">友情连接</a></li>
+         
+          <li><a href="/project/">个人项目</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#ES%E4%B8%BB%E8%A6%81%E7%9A%84%E5%8A%9F%E8%83%BD"><span class="toc-number">1.</span> <span class="toc-text">ES主要的功能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ES%E7%9A%84%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84"><span class="toc-number">2.</span> <span class="toc-text">ES的存储结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ES%E7%9A%84%E6%A0%B8%E5%BF%83"><span class="toc-number">3.</span> <span class="toc-text">ES的核心</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ES%E4%B8%AD%E7%9A%84%E5%87%A0%E4%B8%AA%E6%A6%82%E5%BF%B5"><span class="toc-number">4.</span> <span class="toc-text">ES中的几个概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Docker-%E5%AE%89%E8%A3%85-ES"><span class="toc-number">5.</span> <span class="toc-text">Docker 安装 ES</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://friday-go.icu/2021-5-27-Elasticsearch%20%E5%AD%A6%E4%B9%A0.html"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://friday-go.icu/2021-5-27-Elasticsearch%20%E5%AD%A6%E4%B9%A0.html&text=Elasticsearch 学习"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://friday-go.icu/2021-5-27-Elasticsearch%20%E5%AD%A6%E4%B9%A0.html&title=Elasticsearch 学习"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://friday-go.icu/2021-5-27-Elasticsearch%20%E5%AD%A6%E4%B9%A0.html&is_video=false&description=Elasticsearch 学习"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Elasticsearch 学习&body=Check out this article: https://friday-go.icu/2021-5-27-Elasticsearch%20%E5%AD%A6%E4%B9%A0.html"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://friday-go.icu/2021-5-27-Elasticsearch%20%E5%AD%A6%E4%B9%A0.html&title=Elasticsearch 学习"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://friday-go.icu/2021-5-27-Elasticsearch%20%E5%AD%A6%E4%B9%A0.html&title=Elasticsearch 学习"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://friday-go.icu/2021-5-27-Elasticsearch%20%E5%AD%A6%E4%B9%A0.html&title=Elasticsearch 学习"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://friday-go.icu/2021-5-27-Elasticsearch%20%E5%AD%A6%E4%B9%A0.html&title=Elasticsearch 学习"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://friday-go.icu/2021-5-27-Elasticsearch%20%E5%AD%A6%E4%B9%A0.html&name=Elasticsearch 学习&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://friday-go.icu/2021-5-27-Elasticsearch%20%E5%AD%A6%E4%B9%A0.html&t=Elasticsearch 学习"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2024
+    PFinal南丞
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a href="/links/">友情连接</a></li><!--
+     --><!--
+       --><li><a href="/project/">个人项目</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+  <script>
+    document.addEventListener('visibilitychange', function() {
+      if (document.visibilityState === 'hidden') {
+        document.title = '你快回来,我等不及了!';
+      } else {
+        document.title = 'Elasticsearch 学习';
+      }
+    })
+  </script>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EVR51H8CSN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-EVR51H8CSN');
+    </script>
+
+<!-- Baidu Analytics -->
+
+  <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?8df0b5cb0dbad92cfb64ca6d88e8572a";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+  </script>
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>

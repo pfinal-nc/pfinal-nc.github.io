@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="baidu-site-verification" content="code-qgPh7OZm0c" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2154665617309406"
+     crossorigin="anonymous"></script>
+    <meta name="description" content="​	最近在刷抖音的时候, 发现有很多的 无人直播的直播间, 但是 经常有 发弹幕 没有人回应,或者 进入没有欢迎语, 于是尝试着做一个小工具,来辅助直播.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基于Wails的抖音直播工具">
+<meta property="og:url" content="https://friday-go.icu/%E5%9F%BA%E4%BA%8EWails%E7%9A%84%E6%8A%96%E9%9F%B3%E7%9B%B4%E6%92%AD%E5%B7%A5%E5%85%B7.html">
+<meta property="og:site_name" content="PFinalClub">
+<meta property="og:description" content="​	最近在刷抖音的时候, 发现有很多的 无人直播的直播间, 但是 经常有 发弹幕 没有人回应,或者 进入没有欢迎语, 于是尝试着做一个小工具,来辅助直播.">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202402221811105.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202402221614497.png">
+<meta property="article:published_time" content="2024-02-22T08:29:34.000Z">
+<meta property="article:modified_time" content="2024-02-23T11:13:53.557Z">
+<meta property="article:author" content="PFinal南丞">
+<meta property="article:tag" content="Golang">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202402221811105.png">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>基于Wails的抖音直播工具</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<style>
+  body {
+    width:60%;
+  }
+  @media screen and (max-width:768px) {
+    body {
+      width: 100%;
+    }
+  }
+</style>
+<body class="mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a href="/links/">友情连接</a></li><!--
+     --><!--
+       --><li><a href="/project/">个人项目</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="上一篇" href="/%E5%BC%80%E5%8F%91%E6%8F%90%E5%8D%87%E6%95%88%E7%8E%87%E7%9A%84%E5%B0%8F%E5%B7%A5%E5%85%B7.html"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/Golang%E6%8F%90%E5%8D%87%E6%95%88%E7%8E%87%E7%9A%84%E5%B0%8F%E5%B7%A5%E5%85%B7.html"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://friday-go.icu/%E5%9F%BA%E4%BA%8EWails%E7%9A%84%E6%8A%96%E9%9F%B3%E7%9B%B4%E6%92%AD%E5%B7%A5%E5%85%B7.html"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://friday-go.icu/%E5%9F%BA%E4%BA%8EWails%E7%9A%84%E6%8A%96%E9%9F%B3%E7%9B%B4%E6%92%AD%E5%B7%A5%E5%85%B7.html&text=基于Wails的抖音直播工具"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://friday-go.icu/%E5%9F%BA%E4%BA%8EWails%E7%9A%84%E6%8A%96%E9%9F%B3%E7%9B%B4%E6%92%AD%E5%B7%A5%E5%85%B7.html&title=基于Wails的抖音直播工具"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://friday-go.icu/%E5%9F%BA%E4%BA%8EWails%E7%9A%84%E6%8A%96%E9%9F%B3%E7%9B%B4%E6%92%AD%E5%B7%A5%E5%85%B7.html&is_video=false&description=基于Wails的抖音直播工具"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=基于Wails的抖音直播工具&body=Check out this article: https://friday-go.icu/%E5%9F%BA%E4%BA%8EWails%E7%9A%84%E6%8A%96%E9%9F%B3%E7%9B%B4%E6%92%AD%E5%B7%A5%E5%85%B7.html"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://friday-go.icu/%E5%9F%BA%E4%BA%8EWails%E7%9A%84%E6%8A%96%E9%9F%B3%E7%9B%B4%E6%92%AD%E5%B7%A5%E5%85%B7.html&title=基于Wails的抖音直播工具"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://friday-go.icu/%E5%9F%BA%E4%BA%8EWails%E7%9A%84%E6%8A%96%E9%9F%B3%E7%9B%B4%E6%92%AD%E5%B7%A5%E5%85%B7.html&title=基于Wails的抖音直播工具"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://friday-go.icu/%E5%9F%BA%E4%BA%8EWails%E7%9A%84%E6%8A%96%E9%9F%B3%E7%9B%B4%E6%92%AD%E5%B7%A5%E5%85%B7.html&title=基于Wails的抖音直播工具"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://friday-go.icu/%E5%9F%BA%E4%BA%8EWails%E7%9A%84%E6%8A%96%E9%9F%B3%E7%9B%B4%E6%92%AD%E5%B7%A5%E5%85%B7.html&title=基于Wails的抖音直播工具"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://friday-go.icu/%E5%9F%BA%E4%BA%8EWails%E7%9A%84%E6%8A%96%E9%9F%B3%E7%9B%B4%E6%92%AD%E5%B7%A5%E5%85%B7.html&name=基于Wails的抖音直播工具&description=&lt;p&gt;​	最近在刷抖音的时候, 发现有很多的 无人直播的直播间, 但是 经常有 发弹幕 没有人回应,或者 进入没有欢迎语, 于是尝试着做一个小工具,来辅助直播.&lt;/p&gt;"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://friday-go.icu/%E5%9F%BA%E4%BA%8EWails%E7%9A%84%E6%8A%96%E9%9F%B3%E7%9B%B4%E6%92%AD%E5%B7%A5%E5%85%B7.html&t=基于Wails的抖音直播工具"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text">项目介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84"><span class="toc-number">2.</span> <span class="toc-text">项目结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E5%8E%9F%E7%90%86"><span class="toc-number">3.</span> <span class="toc-text">项目原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E6%88%AA%E5%9B%BE"><span class="toc-number">4.</span> <span class="toc-text">项目截图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%8E%E7%BB%AD"><span class="toc-number">5.</span> <span class="toc-text">后续</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E5%9C%B0%E5%9D%80"><span class="toc-number">5.1.</span> <span class="toc-text">项目地址</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        基于Wails的抖音直播工具
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">PFinal南丞</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2024-02-22T08:29:34.000Z" itemprop="datePublished">2024-02-22</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/Golang/">Golang</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/Golang/" rel="tag">Golang</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>​	最近在刷抖音的时候, 发现有很多的 无人直播的直播间, 但是 经常有 发弹幕 没有人回应,或者 进入没有欢迎语, 于是尝试着做一个小工具,来辅助直播.</p>
+<span id="more"></span>
+
+<h2 id="项目介绍"><a href="#项目介绍" class="headerlink" title="项目介绍"></a>项目介绍</h2><p>​	基于Wails 框架, 开发的一个抖音直播工具, 主要功能是</p>
+<ul>
+<li>进入直播间</li>
+<li>自动监听人员的进入</li>
+<li>自动监听弹幕</li>
+<li>自动监听礼物</li>
+<li>自动监听关注</li>
+</ul>
+<h2 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h2><p><img src="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202402221811105.png"></p>
+<h2 id="项目原理"><a href="#项目原理" class="headerlink" title="项目原理"></a>项目原理</h2><p>通过抖音网页版弹幕数据抓取 , 然后通过Wails 框架将数据渲染到前端, 实现自动监听弹幕, 礼物, 关注等功能.</p>
+<p>核心代码如下:</p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(d *DouyinLiveWebFetcher)</span></span> connectWebSocket() &#123;</span><br><span class="line">	d.RoomID()</span><br><span class="line">	wss := <span class="string">&quot;wss://webcast3-ws-web-lq.douyin.com/webcast/im/push/v2/?&quot;</span> +</span><br><span class="line">		<span class="string">&quot;app_name=douyin_web&amp;version_code=180800&amp;webcast_sdk_version=1.3.0&amp;update_version_code=1.3.0&quot;</span> +</span><br><span class="line">		<span class="string">&quot;&amp;compress=gzip&quot;</span> +</span><br><span class="line">		<span class="string">&quot;&amp;internal_ext=internal_src:dim|wss_push_room_id:&quot;</span> + d.roomID +</span><br><span class="line">		<span class="string">&quot;|wss_push_did:&quot;</span> + d.roomID +</span><br><span class="line">		<span class="string">&quot;|dim_log_id:202302171547011A160A7BAA76660E13ED|fetch_time:1676620021641|seq:1|wss_info:0-1676&quot;</span> +</span><br><span class="line">		<span class="string">&quot;620021641-0-0|wrds_kvs:WebcastRoomStatsMessage-1676620020691146024_WebcastRoomRankMessage-167661&quot;</span> +</span><br><span class="line">		<span class="string">&quot;9972726895075_AudienceGiftSyncData-1676619980834317696_HighlightContainerSyncData-2&amp;cursor=t-1676&quot;</span> +</span><br><span class="line">		<span class="string">&quot;620021641_r-1_d-1_u-1_h-1&quot;</span> +</span><br><span class="line">		<span class="string">&quot;&amp;host=https://live.douyin.com&amp;aid=6383&amp;live_id=1&quot;</span> +</span><br><span class="line">		<span class="string">&quot;&amp;did_rule=3&amp;debug=false&amp;endpoint=live_pc&amp;support_wrds=1&amp;&quot;</span> +</span><br><span class="line">		<span class="string">&quot;im_path=/webcast/im/fetch/&amp;user_unique_id=&quot;</span> + d.roomID +</span><br><span class="line">		<span class="string">&quot;&amp;device_platform=web&amp;cookie_enabled=true&amp;screen_width=1440&amp;screen_height=900&amp;browser_language=zh&amp;&quot;</span> +</span><br><span class="line">		<span class="string">&quot;browser_platform=MacIntel&amp;browser_name=Mozilla&amp;&quot;</span> +</span><br><span class="line">		<span class="string">&quot;browser_version=5.0%20(Macintosh;%20Intel%20Mac%20OS%20X%2010_15_7)%20AppleWebKit/537.36%20(KHTML,%20&quot;</span> +</span><br><span class="line">		<span class="string">&quot;like%20Gecko)%20Chrome/110.0.0.0%20Safari/537.36&amp;&quot;</span> +</span><br><span class="line">		<span class="string">&quot;browser_online=true&amp;tz_name=Asia/Shanghai&amp;identity=audience&amp;room_id=&quot;</span> + d.roomID +</span><br><span class="line">		<span class="string">&quot;&amp;heartbeatDuration=0&amp;signature=00000000&quot;</span></span><br><span class="line">	dialer := websocket.DefaultDialer</span><br><span class="line">	header := http.Header&#123;<span class="string">&quot;Cookie&quot;</span>: []<span class="type">string</span>&#123;fmt.Sprintf(<span class="string">&quot;ttwid=%s&quot;</span>, d.Ttwid())&#125;, <span class="string">&quot;User-Agent&quot;</span>: []<span class="type">string</span>&#123;d.userAgent&#125;&#125;</span><br><span class="line">	c, _, err := dialer.Dial(wss, header)</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		log.Fatal(<span class="string">&quot;WebSocket connection error: &quot;</span>, err)</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">defer</span> <span class="function"><span class="keyword">func</span><span class="params">(c *websocket.Conn)</span></span> &#123;</span><br><span class="line">		_ = c.Close()</span><br><span class="line">	&#125;(c)</span><br><span class="line">	d.ws = c</span><br><span class="line">	d.wsOnOpen()</span><br><span class="line">	d.wsLoop()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>由于网页直播间使用的 是 connectWebSocket 进行通信的 所以 用 go 构造了一个 socket 服务用来连接 直播间的 socket 通信, 并且解析消息, 消息的结构做了一个 <strong>protobuf</strong> 文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">syntax = &quot;proto3&quot;;</span><br><span class="line">package lib;</span><br><span class="line">option go_package = &quot;../lib&quot;;</span><br><span class="line">message Response &#123;</span><br><span class="line">  repeated Message messagesList = 1;</span><br><span class="line">  string cursor = 2;</span><br><span class="line">  uint64 fetchInterval = 3;</span><br><span class="line">  uint64 now = 4;</span><br><span class="line">  string internalExt = 5;</span><br><span class="line">  uint32 fetchType = 6;</span><br><span class="line">  map&lt;string, string&gt; routeParams = 7;</span><br><span class="line">  uint64 heartbeatDuration = 8;</span><br><span class="line">  bool needAck = 9;</span><br><span class="line">  string pushServer = 10;</span><br><span class="line">  string liveCursor = 11;</span><br><span class="line">  bool historyNoMore = 12;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">message Message&#123;</span><br><span class="line">  string method = 1;</span><br><span class="line">  bytes payload = 2;</span><br><span class="line">  int64 msgId = 3;</span><br><span class="line">  int32 msgType = 4;</span><br><span class="line">  int64 offset = 5;</span><br><span class="line">  bool needWrdsStore = 6;</span><br><span class="line">  int64 wrdsVersion = 7;</span><br><span class="line">  string wrdsSubKey = 8;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>然后生成成 消息结构体 来进行消息的解析 </p>
+<h2 id="项目截图"><a href="#项目截图" class="headerlink" title="项目截图"></a>项目截图</h2><p><img src="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202402221614497.png"></p>
+<p>效果如上图所示</p>
+<h2 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h2><p>目前项目只是实现了 基本的监听, 后续会继续完善下面的功能</p>
+<ul>
+<li><input disabled="" type="checkbox"> 弹幕发送</li>
+<li><input disabled="" type="checkbox"> 入场欢迎的语音 </li>
+<li><input disabled="" type="checkbox"> 直播间的礼物感谢功能</li>
+</ul>
+<h3 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a>项目地址</h3><p><a target="_blank" rel="noopener" href="https://github.com/pfinal-nc/pf_douying/tree/master">https://github.com/pfinal-nc/pf_douying/tree/master</a></p>
+
+  </div>
+</article>
+<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2154665617309406"
+     crossorigin="anonymous"></script> -->
+<!-- 推荐广告 -->
+<!-- <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2154665617309406"
+     data-ad-slot="9190957443"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> -->
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/search/">搜索</a></li>
+         
+          <li><a href="/links/">友情连接</a></li>
+         
+          <li><a href="/project/">个人项目</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text">项目介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84"><span class="toc-number">2.</span> <span class="toc-text">项目结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E5%8E%9F%E7%90%86"><span class="toc-number">3.</span> <span class="toc-text">项目原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E6%88%AA%E5%9B%BE"><span class="toc-number">4.</span> <span class="toc-text">项目截图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%8E%E7%BB%AD"><span class="toc-number">5.</span> <span class="toc-text">后续</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E5%9C%B0%E5%9D%80"><span class="toc-number">5.1.</span> <span class="toc-text">项目地址</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://friday-go.icu/%E5%9F%BA%E4%BA%8EWails%E7%9A%84%E6%8A%96%E9%9F%B3%E7%9B%B4%E6%92%AD%E5%B7%A5%E5%85%B7.html"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://friday-go.icu/%E5%9F%BA%E4%BA%8EWails%E7%9A%84%E6%8A%96%E9%9F%B3%E7%9B%B4%E6%92%AD%E5%B7%A5%E5%85%B7.html&text=基于Wails的抖音直播工具"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://friday-go.icu/%E5%9F%BA%E4%BA%8EWails%E7%9A%84%E6%8A%96%E9%9F%B3%E7%9B%B4%E6%92%AD%E5%B7%A5%E5%85%B7.html&title=基于Wails的抖音直播工具"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://friday-go.icu/%E5%9F%BA%E4%BA%8EWails%E7%9A%84%E6%8A%96%E9%9F%B3%E7%9B%B4%E6%92%AD%E5%B7%A5%E5%85%B7.html&is_video=false&description=基于Wails的抖音直播工具"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=基于Wails的抖音直播工具&body=Check out this article: https://friday-go.icu/%E5%9F%BA%E4%BA%8EWails%E7%9A%84%E6%8A%96%E9%9F%B3%E7%9B%B4%E6%92%AD%E5%B7%A5%E5%85%B7.html"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://friday-go.icu/%E5%9F%BA%E4%BA%8EWails%E7%9A%84%E6%8A%96%E9%9F%B3%E7%9B%B4%E6%92%AD%E5%B7%A5%E5%85%B7.html&title=基于Wails的抖音直播工具"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://friday-go.icu/%E5%9F%BA%E4%BA%8EWails%E7%9A%84%E6%8A%96%E9%9F%B3%E7%9B%B4%E6%92%AD%E5%B7%A5%E5%85%B7.html&title=基于Wails的抖音直播工具"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://friday-go.icu/%E5%9F%BA%E4%BA%8EWails%E7%9A%84%E6%8A%96%E9%9F%B3%E7%9B%B4%E6%92%AD%E5%B7%A5%E5%85%B7.html&title=基于Wails的抖音直播工具"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://friday-go.icu/%E5%9F%BA%E4%BA%8EWails%E7%9A%84%E6%8A%96%E9%9F%B3%E7%9B%B4%E6%92%AD%E5%B7%A5%E5%85%B7.html&title=基于Wails的抖音直播工具"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://friday-go.icu/%E5%9F%BA%E4%BA%8EWails%E7%9A%84%E6%8A%96%E9%9F%B3%E7%9B%B4%E6%92%AD%E5%B7%A5%E5%85%B7.html&name=基于Wails的抖音直播工具&description=&lt;p&gt;​	最近在刷抖音的时候, 发现有很多的 无人直播的直播间, 但是 经常有 发弹幕 没有人回应,或者 进入没有欢迎语, 于是尝试着做一个小工具,来辅助直播.&lt;/p&gt;"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://friday-go.icu/%E5%9F%BA%E4%BA%8EWails%E7%9A%84%E6%8A%96%E9%9F%B3%E7%9B%B4%E6%92%AD%E5%B7%A5%E5%85%B7.html&t=基于Wails的抖音直播工具"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2024
+    PFinal南丞
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a href="/links/">友情连接</a></li><!--
+     --><!--
+       --><li><a href="/project/">个人项目</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+  <script>
+    document.addEventListener('visibilitychange', function() {
+      if (document.visibilityState === 'hidden') {
+        document.title = '你快回来,我等不及了!';
+      } else {
+        document.title = '基于Wails的抖音直播工具';
+      }
+    })
+  </script>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EVR51H8CSN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-EVR51H8CSN');
+    </script>
+
+<!-- Baidu Analytics -->
+
+  <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?8df0b5cb0dbad92cfb64ca6d88e8572a";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+  </script>
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>

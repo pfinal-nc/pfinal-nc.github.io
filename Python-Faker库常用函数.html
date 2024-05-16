@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="baidu-site-verification" content="code-qgPh7OZm0c" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2154665617309406"
+     crossorigin="anonymous"></script>
+    <meta name="description" content="FakerFaker是一个Python包，主要用来创建伪数据，使用Faker包，无需再手动生成或者手写随机数来生成数据，只需要调用Faker提供的方法，即可完成数据的生成 常见的语言代号：简体中文：zh_CN 繁体中文：zh_TW 美国英文：en_US 英国英文：en_GB 德文：de_DE 日文：ja_JP 韩文：ko_KR 法文：fr_FR 设置生成的语言: 1fake &#x3D; Faker(loc">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python-Faker库常用函数">
+<meta property="og:url" content="https://friday-go.icu/Python-Faker%E5%BA%93%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0.html">
+<meta property="og:site_name" content="PFinalClub">
+<meta property="og:description" content="FakerFaker是一个Python包，主要用来创建伪数据，使用Faker包，无需再手动生成或者手写随机数来生成数据，只需要调用Faker提供的方法，即可完成数据的生成 常见的语言代号：简体中文：zh_CN 繁体中文：zh_TW 美国英文：en_US 英国英文：en_GB 德文：de_DE 日文：ja_JP 韩文：ko_KR 法文：fr_FR 设置生成的语言: 1fake &#x3D; Faker(loc">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-04-05T14:10:20.000Z">
+<meta property="article:modified_time" content="2023-04-06T01:06:55.424Z">
+<meta property="article:author" content="PFinal南丞">
+<meta property="article:tag" content="Python">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Python-Faker库常用函数</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<style>
+  body {
+    width:60%;
+  }
+  @media screen and (max-width:768px) {
+    body {
+      width: 100%;
+    }
+  }
+</style>
+<body class="mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a href="/links/">友情连接</a></li><!--
+     --><!--
+       --><li><a href="/project/">个人项目</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="上一篇" href="/Python%E5%8D%8F%E7%A8%8B.html"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/Python%E5%B8%B8%E7%94%A8%E7%BD%91%E7%AB%99%E6%90%9C%E9%9B%86.html"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://friday-go.icu/Python-Faker%E5%BA%93%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0.html"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://friday-go.icu/Python-Faker%E5%BA%93%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0.html&text=Python-Faker库常用函数"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://friday-go.icu/Python-Faker%E5%BA%93%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0.html&title=Python-Faker库常用函数"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://friday-go.icu/Python-Faker%E5%BA%93%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0.html&is_video=false&description=Python-Faker库常用函数"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Python-Faker库常用函数&body=Check out this article: https://friday-go.icu/Python-Faker%E5%BA%93%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0.html"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://friday-go.icu/Python-Faker%E5%BA%93%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0.html&title=Python-Faker库常用函数"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://friday-go.icu/Python-Faker%E5%BA%93%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0.html&title=Python-Faker库常用函数"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://friday-go.icu/Python-Faker%E5%BA%93%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0.html&title=Python-Faker库常用函数"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://friday-go.icu/Python-Faker%E5%BA%93%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0.html&title=Python-Faker库常用函数"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://friday-go.icu/Python-Faker%E5%BA%93%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0.html&name=Python-Faker库常用函数&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://friday-go.icu/Python-Faker%E5%BA%93%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0.html&t=Python-Faker库常用函数"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Faker"><span class="toc-number">1.</span> <span class="toc-text">Faker</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E8%AF%AD%E8%A8%80%E4%BB%A3%E5%8F%B7%EF%BC%9A"><span class="toc-number">1.0.1.</span> <span class="toc-text">常见的语言代号：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0"><span class="toc-number">1.0.2.</span> <span class="toc-text">常用函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%80%E5%AE%9A%E4%B9%89Faker-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.0.3.</span> <span class="toc-text">最定义Faker 数据类型</span></a></li></ol></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Python-Faker库常用函数
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">PFinal南丞</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2023-04-05T14:10:20.000Z" itemprop="datePublished">2023-04-05</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/Python/">Python</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/Python/" rel="tag">Python</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Faker"><a href="#Faker" class="headerlink" title="Faker"></a>Faker</h2><p>Faker是一个Python包，主要用来创建伪数据，使用Faker包，无需再手动生成或者手写随机数来生成数据，只需要调用Faker提供的方法，即可完成数据的生成</p>
+<h4 id="常见的语言代号："><a href="#常见的语言代号：" class="headerlink" title="常见的语言代号："></a>常见的语言代号：</h4><p>简体中文：zh_CN</p>
+<p>繁体中文：zh_TW</p>
+<p>美国英文：en_US</p>
+<p>英国英文：en_GB</p>
+<p>德文：de_DE</p>
+<p>日文：ja_JP</p>
+<p>韩文：ko_KR</p>
+<p>法文：fr_FR</p>
+<p>设置生成的语言:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fake = Faker(locale=<span class="string">&#x27;zh_CN&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h4><p>1、地理信息类</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">fake.city_suffix()：市，县</span><br><span class="line">fake.country()：国家</span><br><span class="line">fake.country_code()：国家编码</span><br><span class="line">fake.district()：区</span><br><span class="line">fake.geo_coordinate()：地理坐标</span><br><span class="line">fake.latitude()：地理坐标(纬度)</span><br><span class="line">fake.longitude()：地理坐标(经度)</span><br><span class="line">fake.postcode()：邮编</span><br><span class="line">fake.province()：省份</span><br><span class="line">fake.address()：详细地址</span><br><span class="line">fake.street_address()：街道地址</span><br><span class="line">fake.street_name()：街道名</span><br><span class="line">fake.street_suffix()：街、路</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>2、基础信息类</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">ssn()：生成身份证号</span><br><span class="line">bs()：随机公司服务名</span><br><span class="line">company()：随机公司名（长）</span><br><span class="line">company_prefix()：随机公司名（短）</span><br><span class="line">company_suffix()：公司性质</span><br><span class="line">credit_card_expire()：随机信用卡到期日</span><br><span class="line">credit_card_full()：生成完整信用卡信息</span><br><span class="line">credit_card_number()：信用卡号</span><br><span class="line">credit_card_provider()：信用卡类型</span><br><span class="line">credit_card_security_code()：信用卡安全码</span><br><span class="line">job()：随机职位</span><br><span class="line">first_name_female()：女性名</span><br><span class="line">first_name_male()：男性名</span><br><span class="line">last_name_female()：女姓</span><br><span class="line">last_name_male()：男姓</span><br><span class="line">name()：随机生成全名</span><br><span class="line">name_female()：男性全名</span><br><span class="line">name_male()：女性全名</span><br><span class="line">phone_number()：随机生成手机号</span><br><span class="line">phonenumber_prefix()：随机生成手机号段</span><br></pre></td></tr></table></figure>
+
+<p>3、计算机基础、Internet信息类</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ascii_company_email()：随机ASCII公司邮箱名</span><br><span class="line">ascii_email()：随机ASCII邮箱：</span><br><span class="line">company_email()：</span><br><span class="line">email()：</span><br><span class="line">safe_email()：安全邮箱</span><br></pre></td></tr></table></figure>
+
+<p>4、网络基础信息类</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">domain_name()：生成域名</span><br><span class="line">domain_word()：域词(即，不包含后缀)</span><br><span class="line">ipv4()：随机IP4地址</span><br><span class="line">ipv6()：随机IP6地址</span><br><span class="line">mac_address()：随机MAC地址</span><br><span class="line">tld()：网址域名后缀(.com,.net.cn,等等，不包括.)</span><br><span class="line">uri()：随机URI地址</span><br><span class="line">uri_extension()：网址文件后缀</span><br><span class="line">uri_page()：网址文件（不包含后缀）</span><br><span class="line">uri_path()：网址文件路径（不包含文件名）</span><br><span class="line">url()：随机URL地址</span><br><span class="line">user_name()：随机用户名</span><br><span class="line">image_url()：随机URL地址</span><br></pre></td></tr></table></figure>
+
+<p>5、浏览器信息类</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">chrome()：随机生成Chrome的浏览器user_agent信息</span><br><span class="line">firefox()：随机生成FireFox的浏览器user_agent信息</span><br><span class="line">internet_explorer()：随机生成IE的浏览器user_agent信息</span><br><span class="line">opera()：随机生成Opera的浏览器user_agent信息</span><br><span class="line">safari()：随机生成Safari的浏览器user_agent信息</span><br><span class="line">linux_platform_token()：随机Linux信息</span><br><span class="line">user_agent()：随机user_agent信息</span><br></pre></td></tr></table></figure>
+
+<p>6、数字类</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">numerify()：三位随机数字</span><br><span class="line"></span><br><span class="line">random_digit()：0~9随机数</span><br><span class="line"></span><br><span class="line">random_digit_not_null()：1~9的随机数</span><br><span class="line"></span><br><span class="line">random_int()：随机数字，默认0~9999，可以通过设置min,max来设置</span><br><span class="line"></span><br><span class="line">random_number()：随机数字，参数digits设置生成的数字位数</span><br><span class="line"></span><br><span class="line">pyfloat()：</span><br><span class="line"></span><br><span class="line">left_digits=5 #生成的整数位数, right_digits=2 #生成的小数位数, positive=True #是否只有正数</span><br><span class="line"></span><br><span class="line">pyint()：随机Int数字（参考random_int()参数）</span><br><span class="line"></span><br><span class="line">pydecimal()：随机Decimal数字（参考pyfloat参数）</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>7、文本、加密类</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">pystr()：随机字符串</span><br><span class="line"></span><br><span class="line">random_element()：随机字母</span><br><span class="line"></span><br><span class="line">random_letter()：随机字母</span><br><span class="line"></span><br><span class="line">paragraph()：随机生成一个段落</span><br><span class="line"></span><br><span class="line">paragraphs()：随机生成多个段落</span><br><span class="line"></span><br><span class="line">sentence()：随机生成一句话</span><br><span class="line"></span><br><span class="line">sentences()：随机生成多句话，与段落类似</span><br><span class="line"></span><br><span class="line">text()：随机生成一篇文章</span><br><span class="line"></span><br><span class="line">word()：随机生成词语</span><br><span class="line"></span><br><span class="line">words()：随机生成多个词语，用法与段落，句子，类似</span><br><span class="line"></span><br><span class="line">binary()：随机生成二进制编码</span><br><span class="line"></span><br><span class="line">boolean()：True/False</span><br><span class="line"></span><br><span class="line">language_code()：随机生成两位语言编码</span><br><span class="line"></span><br><span class="line">locale()：随机生成语言/国际 信息</span><br><span class="line"></span><br><span class="line">md5()：随机生成MD5</span><br><span class="line"></span><br><span class="line">null_boolean()：NULL/True/False</span><br><span class="line"></span><br><span class="line">password()：随机生成密码,可选参数：length：密码长度；special_chars：是否能使用特殊字符；digits：是否包含数字；upper_case：是否包含大写字母；lower_case：是否包含小写字母</span><br><span class="line"></span><br><span class="line">sha1()：随机SHA1</span><br><span class="line"></span><br><span class="line">sha256()：随机SHA256</span><br><span class="line"></span><br><span class="line">uuid4()：随机UUID</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>8、时间信息类</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">date()：随机日期</span><br><span class="line"></span><br><span class="line">date_between()：随机生成指定范围内日期，参数：start_date，end_date</span><br><span class="line"></span><br><span class="line">date_between_dates()：随机生成指定范围内日期，用法同上</span><br><span class="line"></span><br><span class="line">date_object()：随机生产从1970-1-1到指定日期的随机日期。</span><br><span class="line"></span><br><span class="line">date_time()：随机生成指定时间（1970年1月1日至今）</span><br><span class="line"></span><br><span class="line">date_time_ad()：生成公元1年到现在的随机时间</span><br><span class="line"></span><br><span class="line">date_time_between()：用法同dates</span><br><span class="line"></span><br><span class="line">future_date()：未来日期</span><br><span class="line"></span><br><span class="line">future_datetime()：未来时间</span><br><span class="line"></span><br><span class="line">month()：随机月份</span><br><span class="line"></span><br><span class="line">month_name()：随机月份（英文）</span><br><span class="line"></span><br><span class="line">past_date()：随机生成已经过去的日期</span><br><span class="line"></span><br><span class="line">past_datetime()：随机生成已经过去的时间</span><br><span class="line"></span><br><span class="line">time()：随机24小时时间</span><br><span class="line"></span><br><span class="line">timedelta()：随机获取时间差</span><br><span class="line"></span><br><span class="line">time_object()：随机24小时时间，time对象</span><br><span class="line"></span><br><span class="line">time_series()：随机TimeSeries对象</span><br><span class="line"></span><br><span class="line">timezone()：随机时区</span><br><span class="line"></span><br><span class="line">unix_time()：随机Unix时间</span><br><span class="line"></span><br><span class="line">year()：随机年份</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>9、python 相关方法</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">profile()：随机生成档案信息</span><br><span class="line"></span><br><span class="line">simple_profile()：随机生成简单档案信息</span><br><span class="line"></span><br><span class="line">pyiterable()</span><br><span class="line"></span><br><span class="line">pylist()</span><br><span class="line"></span><br><span class="line">pyset()</span><br><span class="line"></span><br><span class="line">pystruct()</span><br><span class="line"></span><br><span class="line">pytuple()</span><br><span class="line"></span><br><span class="line">pydict()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="最定义Faker-数据类型"><a href="#最定义Faker-数据类型" class="headerlink" title="最定义Faker 数据类型"></a>最定义Faker 数据类型</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">from faker import Faker</span><br><span class="line">from faker.providers import BaseProvider</span><br><span class="line"></span><br><span class="line"># 创建自定义Provider</span><br><span class="line">class CustomProvider(BaseProvider):</span><br><span class="line">    def customize_type(self):</span><br><span class="line">        return &#x27;test_Faker_customize_type&#x27;</span><br><span class="line"></span><br><span class="line"># 添加Provider</span><br><span class="line">fake = Faker()</span><br><span class="line">fake.add_provider(CustomProvider)</span><br><span class="line">print(fake.customize_type())</span><br></pre></td></tr></table></figure>
+  </div>
+</article>
+<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2154665617309406"
+     crossorigin="anonymous"></script> -->
+<!-- 推荐广告 -->
+<!-- <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2154665617309406"
+     data-ad-slot="9190957443"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> -->
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/search/">搜索</a></li>
+         
+          <li><a href="/links/">友情连接</a></li>
+         
+          <li><a href="/project/">个人项目</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Faker"><span class="toc-number">1.</span> <span class="toc-text">Faker</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E8%AF%AD%E8%A8%80%E4%BB%A3%E5%8F%B7%EF%BC%9A"><span class="toc-number">1.0.1.</span> <span class="toc-text">常见的语言代号：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0"><span class="toc-number">1.0.2.</span> <span class="toc-text">常用函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%80%E5%AE%9A%E4%B9%89Faker-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.0.3.</span> <span class="toc-text">最定义Faker 数据类型</span></a></li></ol></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://friday-go.icu/Python-Faker%E5%BA%93%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0.html"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://friday-go.icu/Python-Faker%E5%BA%93%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0.html&text=Python-Faker库常用函数"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://friday-go.icu/Python-Faker%E5%BA%93%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0.html&title=Python-Faker库常用函数"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://friday-go.icu/Python-Faker%E5%BA%93%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0.html&is_video=false&description=Python-Faker库常用函数"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Python-Faker库常用函数&body=Check out this article: https://friday-go.icu/Python-Faker%E5%BA%93%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0.html"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://friday-go.icu/Python-Faker%E5%BA%93%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0.html&title=Python-Faker库常用函数"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://friday-go.icu/Python-Faker%E5%BA%93%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0.html&title=Python-Faker库常用函数"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://friday-go.icu/Python-Faker%E5%BA%93%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0.html&title=Python-Faker库常用函数"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://friday-go.icu/Python-Faker%E5%BA%93%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0.html&title=Python-Faker库常用函数"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://friday-go.icu/Python-Faker%E5%BA%93%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0.html&name=Python-Faker库常用函数&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://friday-go.icu/Python-Faker%E5%BA%93%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0.html&t=Python-Faker库常用函数"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2024
+    PFinal南丞
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a href="/links/">友情连接</a></li><!--
+     --><!--
+       --><li><a href="/project/">个人项目</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+  <script>
+    document.addEventListener('visibilitychange', function() {
+      if (document.visibilityState === 'hidden') {
+        document.title = '你快回来,我等不及了!';
+      } else {
+        document.title = 'Python-Faker库常用函数';
+      }
+    })
+  </script>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EVR51H8CSN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-EVR51H8CSN');
+    </script>
+
+<!-- Baidu Analytics -->
+
+  <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?8df0b5cb0dbad92cfb64ca6d88e8572a";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+  </script>
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>

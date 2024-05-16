@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="baidu-site-verification" content="code-qgPh7OZm0c" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2154665617309406"
+     crossorigin="anonymous"></script>
+    <meta name="description" content="背景前面一直在折腾 Go 开发终端命令小工具,在开发的过程中使用效果还不错。  经常使用,被运营小姐姐看到, 然后问说有没有什么小工具,可以检测推广的URL 是否被微信给屏蔽了, 于是接着更新 终端命令小工具, 增加 URL 检测功能。 效果如图 运行命令1pf_tools pf_cwx [urlstring]  代码实现12345678910111213141516171819202122232">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Go终端URL检测小工具">
+<meta property="og:url" content="https://friday-go.icu/Go%E7%BB%88%E7%AB%AFURL%E6%A3%80%E6%B5%8B%E5%B0%8F%E5%B7%A5%E5%85%B7.html">
+<meta property="og:site_name" content="PFinalClub">
+<meta property="og:description" content="背景前面一直在折腾 Go 开发终端命令小工具,在开发的过程中使用效果还不错。  经常使用,被运营小姐姐看到, 然后问说有没有什么小工具,可以检测推广的URL 是否被微信给屏蔽了, 于是接着更新 终端命令小工具, 增加 URL 检测功能。 效果如图 运行命令1pf_tools pf_cwx [urlstring]  代码实现12345678910111213141516171819202122232">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202312150919993.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202403050921393.png">
+<meta property="article:published_time" content="2024-03-05T03:46:43.000Z">
+<meta property="article:modified_time" content="2024-03-05T04:04:04.432Z">
+<meta property="article:author" content="PFinal南丞">
+<meta property="article:tag" content="Golang">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202312150919993.png">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Go终端URL检测小工具</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<style>
+  body {
+    width:60%;
+  }
+  @media screen and (max-width:768px) {
+    body {
+      width: 100%;
+    }
+  }
+</style>
+<body class="mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a href="/links/">友情连接</a></li><!--
+     --><!--
+       --><li><a href="/project/">个人项目</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="上一篇" href="/%E8%80%81%E9%A1%B9%E7%9B%AE%E7%BB%B4%E6%8A%A4%E4%B9%8BMysql%E4%BC%98%E5%8C%96.html"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/%E5%BC%80%E5%8F%91%E6%8F%90%E5%8D%87%E6%95%88%E7%8E%87%E7%9A%84%E5%B0%8F%E5%B7%A5%E5%85%B7.html"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://friday-go.icu/Go%E7%BB%88%E7%AB%AFURL%E6%A3%80%E6%B5%8B%E5%B0%8F%E5%B7%A5%E5%85%B7.html"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://friday-go.icu/Go%E7%BB%88%E7%AB%AFURL%E6%A3%80%E6%B5%8B%E5%B0%8F%E5%B7%A5%E5%85%B7.html&text=Go终端URL检测小工具"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://friday-go.icu/Go%E7%BB%88%E7%AB%AFURL%E6%A3%80%E6%B5%8B%E5%B0%8F%E5%B7%A5%E5%85%B7.html&title=Go终端URL检测小工具"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://friday-go.icu/Go%E7%BB%88%E7%AB%AFURL%E6%A3%80%E6%B5%8B%E5%B0%8F%E5%B7%A5%E5%85%B7.html&is_video=false&description=Go终端URL检测小工具"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Go终端URL检测小工具&body=Check out this article: https://friday-go.icu/Go%E7%BB%88%E7%AB%AFURL%E6%A3%80%E6%B5%8B%E5%B0%8F%E5%B7%A5%E5%85%B7.html"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://friday-go.icu/Go%E7%BB%88%E7%AB%AFURL%E6%A3%80%E6%B5%8B%E5%B0%8F%E5%B7%A5%E5%85%B7.html&title=Go终端URL检测小工具"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://friday-go.icu/Go%E7%BB%88%E7%AB%AFURL%E6%A3%80%E6%B5%8B%E5%B0%8F%E5%B7%A5%E5%85%B7.html&title=Go终端URL检测小工具"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://friday-go.icu/Go%E7%BB%88%E7%AB%AFURL%E6%A3%80%E6%B5%8B%E5%B0%8F%E5%B7%A5%E5%85%B7.html&title=Go终端URL检测小工具"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://friday-go.icu/Go%E7%BB%88%E7%AB%AFURL%E6%A3%80%E6%B5%8B%E5%B0%8F%E5%B7%A5%E5%85%B7.html&title=Go终端URL检测小工具"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://friday-go.icu/Go%E7%BB%88%E7%AB%AFURL%E6%A3%80%E6%B5%8B%E5%B0%8F%E5%B7%A5%E5%85%B7.html&name=Go终端URL检测小工具&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://friday-go.icu/Go%E7%BB%88%E7%AB%AFURL%E6%A3%80%E6%B5%8B%E5%B0%8F%E5%B7%A5%E5%85%B7.html&t=Go终端URL检测小工具"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%83%8C%E6%99%AF"><span class="toc-number">1.</span> <span class="toc-text">背景</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%88%E6%9E%9C%E5%A6%82%E5%9B%BE"><span class="toc-number">2.</span> <span class="toc-text">效果如图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E5%91%BD%E4%BB%A4"><span class="toc-number">3.</span> <span class="toc-text">运行命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="toc-number">4.</span> <span class="toc-text">代码实现</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B"><span class="toc-number">5.</span> <span class="toc-text">开发过程</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E5%90%8E-%E9%99%84%E4%B8%8A-%E9%A1%B9%E7%9B%AE%E5%9C%B0%E5%9D%80"><span class="toc-number"></span> <span class="toc-text">最后,附上 项目地址:</span></a>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Go终端URL检测小工具
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">PFinal南丞</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2024-03-05T03:46:43.000Z" itemprop="datePublished">2024-03-05</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/Golang/">Golang</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/Golang/" rel="tag">Golang</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h4 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h4><p>前面一直在折腾 Go 开发终端命令小工具,在开发的过程中使用效果还不错。</p>
+<p><img src="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202312150919993.png"></p>
+<p>经常使用,被运营小姐姐看到, 然后问说有没有什么小工具,可以检测推广的URL 是否被微信给屏蔽了, 于是接着更新 终端命令小工具, 增加 URL 检测功能。</p>
+<h4 id="效果如图"><a href="#效果如图" class="headerlink" title="效果如图"></a>效果如图</h4><p><img src="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202403050921393.png"></p>
+<h4 id="运行命令"><a href="#运行命令" class="headerlink" title="运行命令"></a>运行命令</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pf_tools pf_cwx [urlstring]</span><br></pre></td></tr></table></figure>
+
+<h4 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h4><figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">GetWxUrlInfo</span><span class="params">(urlString <span class="type">string</span>)</span></span> &#123;</span><br><span class="line">	api := <span class="string">&quot;https://cgi.urlsec.qq.com/index.php?m=url&amp;a=validUrl&amp;url=&quot;</span> + urlString</span><br><span class="line">	resp, err := http.Get(api)</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		fmt.Println(<span class="string">&quot;请求失败:&quot;</span>, err)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">defer</span> <span class="function"><span class="keyword">func</span><span class="params">(Body io.ReadCloser)</span></span> &#123;</span><br><span class="line">		_ = Body.Close()</span><br><span class="line">	&#125;(resp.Body)</span><br><span class="line"></span><br><span class="line">	out, _ := io.ReadAll(resp.Body)</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		fmt.Println(<span class="string">&quot;读取响应失败:&quot;</span>, err)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> err := ui.Init(); err != <span class="literal">nil</span> &#123;</span><br><span class="line">		log.Fatalf(<span class="string">&quot;failed to initialize termui: %v&quot;</span>, err)</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">defer</span> ui.Close()</span><br><span class="line">	table := widgets.NewTable()</span><br><span class="line">	table.Title = <span class="string">&quot;微信URL安全检测&quot;</span></span><br><span class="line">	<span class="comment">// table.BorderStyle = ui.NewStyle(ui.ColorRed)</span></span><br><span class="line">	table.Rows = [][]<span class="type">string</span>&#123;</span><br><span class="line">		[]<span class="type">string</span>&#123;<span class="string">&quot;网址&quot;</span>, <span class="string">&quot;检测结果      &quot;</span>&#125;,</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//fmt.Println(string(out))</span></span><br><span class="line">	urlResponse := &amp;WxUrlInfo&#123;&#125;</span><br><span class="line">	<span class="keyword">if</span> err := json.Unmarshal(out, &amp;urlResponse); err != <span class="literal">nil</span> &#123;</span><br><span class="line">		fmt.Println(<span class="string">&quot;解析json失败:&quot;</span>, err)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line">	enStr := <span class="string">&quot;网址未被微信屏蔽&quot;</span></span><br><span class="line">	<span class="keyword">if</span> urlResponse.ReCode == <span class="number">0</span> &#123;</span><br><span class="line">		enStr = <span class="string">&quot;网址被微信屏蔽&quot;</span></span><br><span class="line">	&#125;</span><br><span class="line">	table.Rows = <span class="built_in">append</span>(table.Rows, []<span class="type">string</span>&#123;urlString, enStr&#125;)</span><br><span class="line">	table.TextStyle = ui.NewStyle(ui.ColorGreen)</span><br><span class="line">	table.TitleStyle = ui.NewStyle(ui.ColorGreen)</span><br><span class="line">	table.SetRect(<span class="number">0</span>, <span class="number">0</span>, <span class="number">80</span>, <span class="number">5</span>)</span><br><span class="line">	ui.Render(table)</span><br><span class="line">	uiEvents := ui.PollEvents()</span><br><span class="line">	<span class="keyword">for</span> &#123;</span><br><span class="line">		e := &lt;-uiEvents</span><br><span class="line">		<span class="keyword">switch</span> e.ID &#123;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">&quot;q&quot;</span>:</span><br><span class="line">			<span class="keyword">return</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>核心 其实就是 使用 golang 调用 <a target="_blank" rel="noopener" href="https://cgi.urlsec.qq.com/index.php">https://cgi.urlsec.qq.com/index.php</a>  这个接口 用来检测 是否被 屏蔽, 目前来说 检测效果还不错. 至少满足 小姐姐的需求, 再啰嗦一下, Golang 的 <strong>cobra</strong> 确实不错, 值得一试.</p>
+<h4 id="开发过程"><a href="#开发过程" class="headerlink" title="开发过程"></a>开发过程</h4><p>因为前面已经,整好了 cobra-cli的环境, 所以在 小工具的开发过程中, 只需要 敲入</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cobra-cli add pf_cwx_url</span><br></pre></td></tr></table></figure>
+<p>直接会在项目的 cmd 目录中 生成 文件 pfCwxUrl.go,代码如下:</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">Copyright © 2024 NAME HERE &lt;EMAIL ADDRESS&gt;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">package</span> cmd</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">&quot;fmt&quot;</span></span><br><span class="line"></span><br><span class="line">	<span class="string">&quot;github.com/spf13/cobra&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment">// pfTestCmd represents the pfTest command</span></span><br><span class="line"><span class="keyword">var</span> pfCwxUrlCmd = &amp;cobra.Command&#123;</span><br><span class="line">	Use:   <span class="string">&quot;pfCwxUrlCmd&quot;</span>,</span><br><span class="line">	Short: <span class="string">&quot;A brief description of your command&quot;</span>,</span><br><span class="line">	Long: <span class="string">`A longer description that spans multiple lines and likely contains examples</span></span><br><span class="line"><span class="string">and usage of using your command. For example:</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Cobra is a CLI library for Go that empowers applications.</span></span><br><span class="line"><span class="string">This application is a tool to generate the needed files</span></span><br><span class="line"><span class="string">to quickly create a Cobra application.`</span>,</span><br><span class="line">	Run: <span class="function"><span class="keyword">func</span><span class="params">(cmd *cobra.Command, args []<span class="type">string</span>)</span></span> &#123;</span><br><span class="line">		fmt.Println(<span class="string">&quot;pfCwxUrlCmd called&quot;</span>)</span><br><span class="line">	&#125;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">init</span><span class="params">()</span></span> &#123;</span><br><span class="line">	rootCmd.AddCommand(pfCwxUrlCmd)</span><br><span class="line"></span><br><span class="line">	<span class="comment">// Here you will define your flags and configuration settings.</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">// Cobra supports Persistent Flags which will work for this command</span></span><br><span class="line">	<span class="comment">// and all subcommands, e.g.:</span></span><br><span class="line">	<span class="comment">// pfTestCmd.PersistentFlags().String(&quot;foo&quot;, &quot;&quot;, &quot;A help for foo&quot;)</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">// Cobra supports local flags which will only run when this command</span></span><br><span class="line">	<span class="comment">// is called directly, e.g.:</span></span><br><span class="line">	<span class="comment">// pfTestCmd.Flags().BoolP(&quot;toggle&quot;, &quot;t&quot;, false, &quot;Help message for toggle&quot;)</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>然后直接修改 代码中的:</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Use:   <span class="string">&quot;pf_cwx&quot;</span>,</span><br><span class="line">Short: <span class="string">&quot;微信域名拦截检测&quot;</span>,</span><br><span class="line">Long:  <span class="string">`检测域名是否被微信拦截`</span>,</span><br></pre></td></tr></table></figure>
+
+<p>Run 方法下就是 应对的业务逻辑, 我这里的结构是如下:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">├── LICENSE</span><br><span class="line">├── README.md</span><br><span class="line">├── cmd</span><br><span class="line">│   ├── pfB64.go</span><br><span class="line">│   ├── pfCd.go</span><br><span class="line">│   ├── pfCwxUrl.go</span><br><span class="line">│   ├── pfM.go</span><br><span class="line">│   ├── pfMd5.go</span><br><span class="line">│   ├── pfS.go</span><br><span class="line">│   ├── pfT.go</span><br><span class="line">│   ├── pfTest.go</span><br><span class="line">│   ├── pfWt.go</span><br><span class="line">│   └── root.go</span><br><span class="line">├── go.mod</span><br><span class="line">├── go.sum</span><br><span class="line">├── main.go</span><br><span class="line">├── pak</span><br><span class="line">│   ├── base64_cry.go</span><br><span class="line">│   ├── clear.go</span><br><span class="line">│   ├── md5.go</span><br><span class="line">│   ├── mobile.go</span><br><span class="line">│   ├── phone.dat</span><br><span class="line">│   ├── speak.go</span><br><span class="line">│   ├── stime.go</span><br><span class="line">│   ├── weather.go</span><br><span class="line">│   └── wxurl.go</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>所有的 业务流程代码是放在 pak 的 所以 Run的代码修改成了下面的:</p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Run: <span class="function"><span class="keyword">func</span><span class="params">(cmd *cobra.Command, args []<span class="type">string</span>)</span></span> &#123;</span><br><span class="line">	<span class="keyword">if</span> <span class="built_in">len</span>(args) == <span class="number">0</span> &#123;</span><br><span class="line">		_ = cmd.Help()</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> pak.CheckUrl(args[<span class="number">0</span>]) == <span class="literal">false</span> &#123;</span><br><span class="line">		_ = cmd.Help()</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line">	pak.GetWxUrlInfo(args[<span class="number">0</span>])</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>然后 运行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go run main.go pf_cwx https://www.baidu.com</span><br></pre></td></tr></table></figure>
+<p>测试没有问题以后直接</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">go install</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>本地就可以用命令来愉快的玩耍了 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pf_tools pf_cwx &quot;https://www.baidu.com&quot;</span><br></pre></td></tr></table></figure>
+
+<h3 id="最后-附上-项目地址"><a href="#最后-附上-项目地址" class="headerlink" title="最后,附上 项目地址:"></a>最后,附上 项目地址:</h3><p><a target="_blank" rel="noopener" href="https://github.com/PFinal-tool/pf_tools">https://github.com/PFinal-tool/pf_tools</a></p>
+
+  </div>
+</article>
+<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2154665617309406"
+     crossorigin="anonymous"></script> -->
+<!-- 推荐广告 -->
+<!-- <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2154665617309406"
+     data-ad-slot="9190957443"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> -->
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/search/">搜索</a></li>
+         
+          <li><a href="/links/">友情连接</a></li>
+         
+          <li><a href="/project/">个人项目</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%83%8C%E6%99%AF"><span class="toc-number">1.</span> <span class="toc-text">背景</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%88%E6%9E%9C%E5%A6%82%E5%9B%BE"><span class="toc-number">2.</span> <span class="toc-text">效果如图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E5%91%BD%E4%BB%A4"><span class="toc-number">3.</span> <span class="toc-text">运行命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="toc-number">4.</span> <span class="toc-text">代码实现</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B"><span class="toc-number">5.</span> <span class="toc-text">开发过程</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E5%90%8E-%E9%99%84%E4%B8%8A-%E9%A1%B9%E7%9B%AE%E5%9C%B0%E5%9D%80"><span class="toc-number"></span> <span class="toc-text">最后,附上 项目地址:</span></a>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://friday-go.icu/Go%E7%BB%88%E7%AB%AFURL%E6%A3%80%E6%B5%8B%E5%B0%8F%E5%B7%A5%E5%85%B7.html"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://friday-go.icu/Go%E7%BB%88%E7%AB%AFURL%E6%A3%80%E6%B5%8B%E5%B0%8F%E5%B7%A5%E5%85%B7.html&text=Go终端URL检测小工具"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://friday-go.icu/Go%E7%BB%88%E7%AB%AFURL%E6%A3%80%E6%B5%8B%E5%B0%8F%E5%B7%A5%E5%85%B7.html&title=Go终端URL检测小工具"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://friday-go.icu/Go%E7%BB%88%E7%AB%AFURL%E6%A3%80%E6%B5%8B%E5%B0%8F%E5%B7%A5%E5%85%B7.html&is_video=false&description=Go终端URL检测小工具"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Go终端URL检测小工具&body=Check out this article: https://friday-go.icu/Go%E7%BB%88%E7%AB%AFURL%E6%A3%80%E6%B5%8B%E5%B0%8F%E5%B7%A5%E5%85%B7.html"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://friday-go.icu/Go%E7%BB%88%E7%AB%AFURL%E6%A3%80%E6%B5%8B%E5%B0%8F%E5%B7%A5%E5%85%B7.html&title=Go终端URL检测小工具"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://friday-go.icu/Go%E7%BB%88%E7%AB%AFURL%E6%A3%80%E6%B5%8B%E5%B0%8F%E5%B7%A5%E5%85%B7.html&title=Go终端URL检测小工具"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://friday-go.icu/Go%E7%BB%88%E7%AB%AFURL%E6%A3%80%E6%B5%8B%E5%B0%8F%E5%B7%A5%E5%85%B7.html&title=Go终端URL检测小工具"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://friday-go.icu/Go%E7%BB%88%E7%AB%AFURL%E6%A3%80%E6%B5%8B%E5%B0%8F%E5%B7%A5%E5%85%B7.html&title=Go终端URL检测小工具"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://friday-go.icu/Go%E7%BB%88%E7%AB%AFURL%E6%A3%80%E6%B5%8B%E5%B0%8F%E5%B7%A5%E5%85%B7.html&name=Go终端URL检测小工具&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://friday-go.icu/Go%E7%BB%88%E7%AB%AFURL%E6%A3%80%E6%B5%8B%E5%B0%8F%E5%B7%A5%E5%85%B7.html&t=Go终端URL检测小工具"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2024
+    PFinal南丞
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a href="/links/">友情连接</a></li><!--
+     --><!--
+       --><li><a href="/project/">个人项目</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+  <script>
+    document.addEventListener('visibilitychange', function() {
+      if (document.visibilityState === 'hidden') {
+        document.title = '你快回来,我等不及了!';
+      } else {
+        document.title = 'Go终端URL检测小工具';
+      }
+    })
+  </script>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EVR51H8CSN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-EVR51H8CSN');
+    </script>
+
+<!-- Baidu Analytics -->
+
+  <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?8df0b5cb0dbad92cfb64ca6d88e8572a";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+  </script>
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>
