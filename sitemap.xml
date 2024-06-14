@@ -602,7 +602,14 @@
   </url>
   
   <url>
-    <loc>https://friday-go.icu/tags/LNMP/</loc>
+    <loc>https://friday-go.icu/tags/Redis/</loc>
+    <lastmod>2024-06-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://friday-go.icu/tags/%E6%B8%97%E9%80%8F/</loc>
     <lastmod>2024-06-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -616,14 +623,7 @@
   </url>
   
   <url>
-    <loc>https://friday-go.icu/tags/Redis/</loc>
-    <lastmod>2024-06-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://friday-go.icu/tags/%E6%B8%97%E9%80%8F/</loc>
+    <loc>https://friday-go.icu/tags/LNMP/</loc>
     <lastmod>2024-06-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -665,13 +665,6 @@
   </url>
   
   <url>
-    <loc>https://friday-go.icu/tags/redis/</loc>
-    <lastmod>2024-06-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://friday-go.icu/tags/TCP/</loc>
     <lastmod>2024-06-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -694,6 +687,13 @@
   
   <url>
     <loc>https://friday-go.icu/tags/Nginx/</loc>
+    <lastmod>2024-06-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://friday-go.icu/tags/redis/</loc>
     <lastmod>2024-06-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -744,14 +744,14 @@
   </url>
   
   <url>
-    <loc>https://friday-go.icu/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
+    <loc>https://friday-go.icu/categories/%E6%B8%97%E9%80%8F/</loc>
     <lastmod>2024-06-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://friday-go.icu/categories/%E6%B8%97%E9%80%8F/</loc>
+    <loc>https://friday-go.icu/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
     <lastmod>2024-06-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
