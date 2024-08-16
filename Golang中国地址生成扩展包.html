@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="baidu-site-verification" content="code-qgPh7OZm0c" />
+    <meta name="keywords" content="PFinalClub, 编程教育, PHP,Golang, Python,PFinal南丞,PFinal" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2154665617309406"
+     crossorigin="anonymous"></script>
+    <meta name="description" content="背景在写项目的时候,经常使用一些 国内的地址,之前 在写 PHP和 Node 的 时候使用过, 中国地址生成的扩展包, 但是在Golang 的项目中 没有找到, 于是 自己整了个包.方便以后使用 包地址12https:&#x2F;&#x2F;github.com&#x2F;GoFinalPack&#x2F;chinese-address-generator  使用安装依赖12go get github.com&#x2F;GoFinalPack&#x2F;c">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Golang中国地址生成扩展包">
+<meta property="og:url" content="https://friday-go.icu/Golang%E4%B8%AD%E5%9B%BD%E5%9C%B0%E5%9D%80%E7%94%9F%E6%88%90%E6%89%A9%E5%B1%95%E5%8C%85.html">
+<meta property="og:site_name" content="PFinalClub - 专业的编程社区">
+<meta property="og:description" content="背景在写项目的时候,经常使用一些 国内的地址,之前 在写 PHP和 Node 的 时候使用过, 中国地址生成的扩展包, 但是在Golang 的项目中 没有找到, 于是 自己整了个包.方便以后使用 包地址12https:&#x2F;&#x2F;github.com&#x2F;GoFinalPack&#x2F;chinese-address-generator  使用安装依赖12go get github.com&#x2F;GoFinalPack&#x2F;c">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-08-16T06:42:04.000Z">
+<meta property="article:modified_time" content="2024-08-16T06:56:32.546Z">
+<meta property="article:author" content="PFinal南丞">
+<meta property="article:tag" content="Golang">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Golang中国地址生成扩展包</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<style>
+  body {
+    width:60%;
+  }
+  @media screen and (max-width:768px) {
+    body {
+      width: 100%;
+    }
+  }
+</style>
+<body class="mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a href="/links/">友情连接</a></li><!--
+     --><!--
+       --><li><a href="/project/">个人项目</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/2024Go%E9%9D%A2%E8%AF%95%E9%A2%98.html"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://friday-go.icu/Golang%E4%B8%AD%E5%9B%BD%E5%9C%B0%E5%9D%80%E7%94%9F%E6%88%90%E6%89%A9%E5%B1%95%E5%8C%85.html"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://friday-go.icu/Golang%E4%B8%AD%E5%9B%BD%E5%9C%B0%E5%9D%80%E7%94%9F%E6%88%90%E6%89%A9%E5%B1%95%E5%8C%85.html&text=Golang中国地址生成扩展包"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://friday-go.icu/Golang%E4%B8%AD%E5%9B%BD%E5%9C%B0%E5%9D%80%E7%94%9F%E6%88%90%E6%89%A9%E5%B1%95%E5%8C%85.html&title=Golang中国地址生成扩展包"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://friday-go.icu/Golang%E4%B8%AD%E5%9B%BD%E5%9C%B0%E5%9D%80%E7%94%9F%E6%88%90%E6%89%A9%E5%B1%95%E5%8C%85.html&is_video=false&description=Golang中国地址生成扩展包"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Golang中国地址生成扩展包&body=Check out this article: https://friday-go.icu/Golang%E4%B8%AD%E5%9B%BD%E5%9C%B0%E5%9D%80%E7%94%9F%E6%88%90%E6%89%A9%E5%B1%95%E5%8C%85.html"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://friday-go.icu/Golang%E4%B8%AD%E5%9B%BD%E5%9C%B0%E5%9D%80%E7%94%9F%E6%88%90%E6%89%A9%E5%B1%95%E5%8C%85.html&title=Golang中国地址生成扩展包"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://friday-go.icu/Golang%E4%B8%AD%E5%9B%BD%E5%9C%B0%E5%9D%80%E7%94%9F%E6%88%90%E6%89%A9%E5%B1%95%E5%8C%85.html&title=Golang中国地址生成扩展包"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://friday-go.icu/Golang%E4%B8%AD%E5%9B%BD%E5%9C%B0%E5%9D%80%E7%94%9F%E6%88%90%E6%89%A9%E5%B1%95%E5%8C%85.html&title=Golang中国地址生成扩展包"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://friday-go.icu/Golang%E4%B8%AD%E5%9B%BD%E5%9C%B0%E5%9D%80%E7%94%9F%E6%88%90%E6%89%A9%E5%B1%95%E5%8C%85.html&title=Golang中国地址生成扩展包"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://friday-go.icu/Golang%E4%B8%AD%E5%9B%BD%E5%9C%B0%E5%9D%80%E7%94%9F%E6%88%90%E6%89%A9%E5%B1%95%E5%8C%85.html&name=Golang中国地址生成扩展包&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://friday-go.icu/Golang%E4%B8%AD%E5%9B%BD%E5%9C%B0%E5%9D%80%E7%94%9F%E6%88%90%E6%89%A9%E5%B1%95%E5%8C%85.html&t=Golang中国地址生成扩展包"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%83%8C%E6%99%AF"><span class="toc-number">1.</span> <span class="toc-text">背景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8C%85%E5%9C%B0%E5%9D%80"><span class="toc-number">2.</span> <span class="toc-text">包地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8"><span class="toc-number">3.</span> <span class="toc-text">使用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96"><span class="toc-number">3.1.</span> <span class="toc-text">安装依赖</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E4%B8%AD%E4%BD%BF%E7%94%A8"><span class="toc-number">3.2.</span> <span class="toc-text">代码中使用</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8C%85%E7%BB%93%E6%9E%84"><span class="toc-number">4.</span> <span class="toc-text">包结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E8%AF%AD%E8%A8%80%E7%9A%84%E6%89%A9%E5%B1%95%E5%8C%85"><span class="toc-number">5.</span> <span class="toc-text">其他语言的扩展包</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Golang中国地址生成扩展包
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">PFinal南丞</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2024-08-16T06:42:04.000Z" itemprop="datePublished">2024-08-16</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/Golang/" rel="tag">Golang</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>在写项目的时候,经常使用一些 国内的地址,之前 在写 PHP和 Node 的 时候使用过, 中国地址生成的扩展包, 但是在Golang 的项目中 没有找到, 于是 自己整了个包.方便以后使用</p>
+<h3 id="包地址"><a href="#包地址" class="headerlink" title="包地址"></a>包地址</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/GoFinalPack/chinese-address-generator</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><h4 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">go get github.com/GoFinalPack/chinese-address-generator@v1.0.0</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>PS:</strong> 目前更新到 v1.0.0 版本</p>
+<h4 id="代码中使用"><a href="#代码中使用" class="headerlink" title="代码中使用"></a>代码中使用</h4><ol>
+<li>生成一级地址</li>
+</ol>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> g := chineseaddressgenerator.Generator&#123;&#125;</span><br><span class="line"> g.Init()</span><br><span class="line">level1 := g.GenerateLevel1()  <span class="comment">// 一级地址</span></span><br><span class="line">fmt.Println(level1)          <span class="comment">// &#123;&quot;code&quot;: &quot;230000&quot;, &quot;region&quot;: &quot;黑龙江省&quot;&#125;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>生成二级地址</li>
+</ol>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> g := chineseaddressgenerator.Generator&#123;&#125;</span><br><span class="line"> g.Init()</span><br><span class="line">level2 := g.GenerateLevel2() <span class="comment">// 二级地址</span></span><br><span class="line">fmt.Println(level2)          <span class="comment">// &#123;&quot;code&quot;: &quot;620100&quot;, &quot;region&quot;: &quot;甘肃省兰州市&quot;&#125;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>生成三级地址</li>
+</ol>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">   g := chineseaddressgenerator.Generator&#123;&#125;</span><br><span class="line">   g.Init()</span><br><span class="line">level3 := g.GenerateLevel3() <span class="comment">// 三级地址</span></span><br><span class="line">   fmt.Println(level3)          <span class="comment">// &#123;&quot;code&quot;: &quot;350205&quot;, &quot;region&quot;: &quot;福建省厦门市海沧区&quot;&#125;</span></span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>生成四级地址</li>
+</ol>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">g := chineseaddressgenerator.Generator&#123;&#125;</span><br><span class="line">g.Init()</span><br><span class="line">level4 := g.GenerateLevel4() <span class="comment">// 四级地址 </span></span><br><span class="line">fmt.Println(level4)          <span class="comment">// &#123;&quot;code&quot;: &quot;310113111000&quot;, &quot;region&quot;: &quot;上海市市辖区宝山区高境镇&quot;&#125;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>生成完整的地址</li>
+</ol>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">   g := chineseaddressgenerator.Generator&#123;&#125;</span><br><span class="line">   g.Init()</span><br><span class="line">fullAddress := g.FabricateFullAddress()  <span class="comment">// 生成完整地址</span></span><br><span class="line">   fmt.Println(fullAddress)     <span class="comment">// &#123;&quot;code&quot;: &quot;622926209000&quot;, &quot;region&quot;: &quot;甘肃省临夏回族自治州东乡族自治县五家乡1115号182室&quot;, &quot;buildNo&quot;: 1115, &quot;roomNo&quot;: 182&#125;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>PS:</strong> 上面的地址纯属编造, 如有雷同,纯属巧合,生成规则:(001-1400)号(101-909)室</p>
+<h3 id="包结构"><a href="#包结构" class="headerlink" title="包结构"></a>包结构</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── README.md</span><br><span class="line">├── generator.go</span><br><span class="line">├── go.mod</span><br><span class="line">├── tests</span><br><span class="line">│   ├── generator_test.go</span><br><span class="line">│   └── readLeave_test.go</span><br><span class="line">└── utils</span><br><span class="line">    ├── data</span><br><span class="line">    │   ├── level3.json</span><br><span class="line">    │   └── level4.txt</span><br><span class="line">    └── utils.go</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>level3.json 文件中 存储的是 省 市 区 </p>
+<p>level4.txt 文件中 存储的是 街道乡镇 等数据, 已打包到了 扩展包中 </p>
+<h3 id="其他语言的扩展包"><a href="#其他语言的扩展包" class="headerlink" title="其他语言的扩展包"></a>其他语言的扩展包</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">https://github.com/NiZerin/chinese-address-generator/tree/main   PHP</span><br><span class="line"></span><br><span class="line">https://github.com/moonrailgun/chinese-address-generator     Node</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+  </div>
+</article>
+<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2154665617309406"
+     crossorigin="anonymous"></script> -->
+<!-- 推荐广告 -->
+<!-- <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2154665617309406"
+     data-ad-slot="9190957443"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> -->
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/search/">搜索</a></li>
+         
+          <li><a href="/links/">友情连接</a></li>
+         
+          <li><a href="/project/">个人项目</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%83%8C%E6%99%AF"><span class="toc-number">1.</span> <span class="toc-text">背景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8C%85%E5%9C%B0%E5%9D%80"><span class="toc-number">2.</span> <span class="toc-text">包地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8"><span class="toc-number">3.</span> <span class="toc-text">使用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96"><span class="toc-number">3.1.</span> <span class="toc-text">安装依赖</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E4%B8%AD%E4%BD%BF%E7%94%A8"><span class="toc-number">3.2.</span> <span class="toc-text">代码中使用</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8C%85%E7%BB%93%E6%9E%84"><span class="toc-number">4.</span> <span class="toc-text">包结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E8%AF%AD%E8%A8%80%E7%9A%84%E6%89%A9%E5%B1%95%E5%8C%85"><span class="toc-number">5.</span> <span class="toc-text">其他语言的扩展包</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://friday-go.icu/Golang%E4%B8%AD%E5%9B%BD%E5%9C%B0%E5%9D%80%E7%94%9F%E6%88%90%E6%89%A9%E5%B1%95%E5%8C%85.html"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://friday-go.icu/Golang%E4%B8%AD%E5%9B%BD%E5%9C%B0%E5%9D%80%E7%94%9F%E6%88%90%E6%89%A9%E5%B1%95%E5%8C%85.html&text=Golang中国地址生成扩展包"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://friday-go.icu/Golang%E4%B8%AD%E5%9B%BD%E5%9C%B0%E5%9D%80%E7%94%9F%E6%88%90%E6%89%A9%E5%B1%95%E5%8C%85.html&title=Golang中国地址生成扩展包"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://friday-go.icu/Golang%E4%B8%AD%E5%9B%BD%E5%9C%B0%E5%9D%80%E7%94%9F%E6%88%90%E6%89%A9%E5%B1%95%E5%8C%85.html&is_video=false&description=Golang中国地址生成扩展包"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Golang中国地址生成扩展包&body=Check out this article: https://friday-go.icu/Golang%E4%B8%AD%E5%9B%BD%E5%9C%B0%E5%9D%80%E7%94%9F%E6%88%90%E6%89%A9%E5%B1%95%E5%8C%85.html"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://friday-go.icu/Golang%E4%B8%AD%E5%9B%BD%E5%9C%B0%E5%9D%80%E7%94%9F%E6%88%90%E6%89%A9%E5%B1%95%E5%8C%85.html&title=Golang中国地址生成扩展包"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://friday-go.icu/Golang%E4%B8%AD%E5%9B%BD%E5%9C%B0%E5%9D%80%E7%94%9F%E6%88%90%E6%89%A9%E5%B1%95%E5%8C%85.html&title=Golang中国地址生成扩展包"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://friday-go.icu/Golang%E4%B8%AD%E5%9B%BD%E5%9C%B0%E5%9D%80%E7%94%9F%E6%88%90%E6%89%A9%E5%B1%95%E5%8C%85.html&title=Golang中国地址生成扩展包"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://friday-go.icu/Golang%E4%B8%AD%E5%9B%BD%E5%9C%B0%E5%9D%80%E7%94%9F%E6%88%90%E6%89%A9%E5%B1%95%E5%8C%85.html&title=Golang中国地址生成扩展包"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://friday-go.icu/Golang%E4%B8%AD%E5%9B%BD%E5%9C%B0%E5%9D%80%E7%94%9F%E6%88%90%E6%89%A9%E5%B1%95%E5%8C%85.html&name=Golang中国地址生成扩展包&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://friday-go.icu/Golang%E4%B8%AD%E5%9B%BD%E5%9C%B0%E5%9D%80%E7%94%9F%E6%88%90%E6%89%A9%E5%B1%95%E5%8C%85.html&t=Golang中国地址生成扩展包"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2024
+    PFinal南丞
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a href="/links/">友情连接</a></li><!--
+     --><!--
+       --><li><a href="/project/">个人项目</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+  <script>
+    document.addEventListener('visibilitychange', function() {
+      if (document.visibilityState === 'hidden') {
+        document.title = '❤ 你快回来,我等的花儿都谢了 ❤';
+      } else {
+        document.title = 'Golang中国地址生成扩展包';
+      }
+    })
+  </script>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="add7e1d1-5796-4d1c-b008-6205977b88c7"></script>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EVR51H8CSN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-EVR51H8CSN');
+    </script>
+
+<!-- Baidu Analytics -->
+
+  <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?8df0b5cb0dbad92cfb64ca6d88e8572a";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+  </script>
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>

@@ -4,6 +4,63 @@
   
     
     <entry>
+      <title>Golang中国地址生成扩展包</title>
+      <link href="/Golang%E4%B8%AD%E5%9B%BD%E5%9C%B0%E5%9D%80%E7%94%9F%E6%88%90%E6%89%A9%E5%B1%95%E5%8C%85.html"/>
+      <url>/Golang%E4%B8%AD%E5%9B%BD%E5%9C%B0%E5%9D%80%E7%94%9F%E6%88%90%E6%89%A9%E5%B1%95%E5%8C%85.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>在写项目的时候,经常使用一些 国内的地址,之前 在写 PHP和 Node 的 时候使用过, 中国地址生成的扩展包, 但是在Golang 的项目中 没有找到, 于是 自己整了个包.方便以后使用</p><h3 id="包地址"><a href="#包地址" class="headerlink" title="包地址"></a>包地址</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/GoFinalPack/chinese-address-generator</span><br><span class="line"></span><br></pre></td></tr></table></figure><h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><h4 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">go get github.com/GoFinalPack/chinese-address-generator@v1.0.0</span><br><span class="line"></span><br></pre></td></tr></table></figure><p><strong>PS:</strong> 目前更新到 v1.0.0 版本</p><h4 id="代码中使用"><a href="#代码中使用" class="headerlink" title="代码中使用"></a>代码中使用</h4><ol><li>生成一级地址</li></ol><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> g := chineseaddressgenerator.Generator&#123;&#125;</span><br><span class="line"> g.Init()</span><br><span class="line">level1 := g.GenerateLevel1()  <span class="comment">// 一级地址</span></span><br><span class="line">fmt.Println(level1)          <span class="comment">// &#123;&quot;code&quot;: &quot;230000&quot;, &quot;region&quot;: &quot;黑龙江省&quot;&#125;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><ol start="2"><li>生成二级地址</li></ol><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> g := chineseaddressgenerator.Generator&#123;&#125;</span><br><span class="line"> g.Init()</span><br><span class="line">level2 := g.GenerateLevel2() <span class="comment">// 二级地址</span></span><br><span class="line">fmt.Println(level2)          <span class="comment">// &#123;&quot;code&quot;: &quot;620100&quot;, &quot;region&quot;: &quot;甘肃省兰州市&quot;&#125;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><ol start="3"><li>生成三级地址</li></ol><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">   g := chineseaddressgenerator.Generator&#123;&#125;</span><br><span class="line">   g.Init()</span><br><span class="line">level3 := g.GenerateLevel3() <span class="comment">// 三级地址</span></span><br><span class="line">   fmt.Println(level3)          <span class="comment">// &#123;&quot;code&quot;: &quot;350205&quot;, &quot;region&quot;: &quot;福建省厦门市海沧区&quot;&#125;</span></span><br></pre></td></tr></table></figure><ol start="4"><li>生成四级地址</li></ol><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">g := chineseaddressgenerator.Generator&#123;&#125;</span><br><span class="line">g.Init()</span><br><span class="line">level4 := g.GenerateLevel4() <span class="comment">// 四级地址 </span></span><br><span class="line">fmt.Println(level4)          <span class="comment">// &#123;&quot;code&quot;: &quot;310113111000&quot;, &quot;region&quot;: &quot;上海市市辖区宝山区高境镇&quot;&#125;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><ol start="5"><li>生成完整的地址</li></ol><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">   g := chineseaddressgenerator.Generator&#123;&#125;</span><br><span class="line">   g.Init()</span><br><span class="line">fullAddress := g.FabricateFullAddress()  <span class="comment">// 生成完整地址</span></span><br><span class="line">   fmt.Println(fullAddress)     <span class="comment">// &#123;&quot;code&quot;: &quot;622926209000&quot;, &quot;region&quot;: &quot;甘肃省临夏回族自治州东乡族自治县五家乡1115号182室&quot;, &quot;buildNo&quot;: 1115, &quot;roomNo&quot;: 182&#125;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><p><strong>PS:</strong> 上面的地址纯属编造, 如有雷同,纯属巧合,生成规则:(001-1400)号(101-909)室</p><h3 id="包结构"><a href="#包结构" class="headerlink" title="包结构"></a>包结构</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── README.md</span><br><span class="line">├── generator.go</span><br><span class="line">├── go.mod</span><br><span class="line">├── tests</span><br><span class="line">│   ├── generator_test.go</span><br><span class="line">│   └── readLeave_test.go</span><br><span class="line">└── utils</span><br><span class="line">    ├── data</span><br><span class="line">    │   ├── level3.json</span><br><span class="line">    │   └── level4.txt</span><br><span class="line">    └── utils.go</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>level3.json 文件中 存储的是 省 市 区 </p><p>level4.txt 文件中 存储的是 街道乡镇 等数据, 已打包到了 扩展包中 </p><h3 id="其他语言的扩展包"><a href="#其他语言的扩展包" class="headerlink" title="其他语言的扩展包"></a>其他语言的扩展包</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">https://github.com/NiZerin/chinese-address-generator/tree/main   PHP</span><br><span class="line"></span><br><span class="line">https://github.com/moonrailgun/chinese-address-generator     Node</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Golang </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>2024Go面试题</title>
+      <link href="/2024Go%E9%9D%A2%E8%AF%95%E9%A2%98.html"/>
+      <url>/2024Go%E9%9D%A2%E8%AF%95%E9%A2%98.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>使用扣子AI打造公众号机器人</title>
+      <link href="/%E4%BD%BF%E7%94%A8%E6%89%A3%E5%AD%90AI%E6%89%93%E9%80%A0%E5%85%AC%E4%BC%97%E5%8F%B7%E6%9C%BA%E5%99%A8%E4%BA%BA.html"/>
+      <url>/%E4%BD%BF%E7%94%A8%E6%89%A3%E5%AD%90AI%E6%89%93%E9%80%A0%E5%85%AC%E4%BC%97%E5%8F%B7%E6%9C%BA%E5%99%A8%E4%BA%BA.html</url>
+      
+        <content type="html"><![CDATA[<p>刷掘金的时候,看到了扣子AI,支持公众号接入,好多公众号主都已接入,实现了好多好玩的功能.于是作为一个能偷懒就上的原则.也接入一下试试. 毕竟 每次遇到编程问题,不是打开 chatgpt,就是打开谷歌.相对于每天登录微信而言,是有点麻烦,所以开搞.</p><h3 id="搭建机器人"><a href="#搭建机器人" class="headerlink" title="搭建机器人"></a>搭建机器人</h3><p><img src="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202406211035539.png"></p><p>如上图所示: </p><ol><li>点击创建bot</li></ol><p><img src="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202406211036569.png"></p><ol start="2"><li><p>如上图所示.重点来了,之前尝试搭建过,一直以为模型选的好,效果才能杠杠滴.后来多玩了几次后.发现 人设与回复逻辑写的好,出来的效果更好.</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"># 角色</span><br><span class="line">你是一位资深的软件开发工作者，精通多种编程语言，如 Java、Python、Go、Shell、h5、js、ts 等，同时还拥有丰富的运维和 DBA 从业经验。</span><br><span class="line"></span><br><span class="line">## 技能</span><br><span class="line">### 技能 1: 解答研发过程中的问题</span><br><span class="line">1. 当用户在研发过程中遇到问题时，你需要使用相关工具搜索解决方案。</span><br><span class="line">2. 如果你不确定如何解决问题，可以使用工具搜索相关的技术文章或论坛帖子，以获取更多的信息。</span><br><span class="line">3. 根据搜索结果，提供详细的解决方案，帮助用户解决问题。</span><br><span class="line"></span><br><span class="line">### 技能 2: 提供软件设计解决方案</span><br><span class="line">1. 当用户需要软件设计解决方案时，你需要先了解用户的需求和目标。</span><br><span class="line">2. 根据用户的需求和目标，提供可行的软件设计方案。</span><br><span class="line">3. 与用户沟通，确保设计方案符合用户的需求和期望。</span><br><span class="line"></span><br><span class="line">## 限制</span><br><span class="line">- 只讨论与软件开发相关的内容，拒绝回答与软件开发无关的话题。</span><br><span class="line">- 所输出的内容必须按照给定的格式进行组织，不能偏离框架要求。</span><br><span class="line">- 总结部分不能超过 100 字。</span><br><span class="line">- 只会输出知识库中已有内容, 不在知识库中的书籍, 通过 工具去了解。</span><br></pre></td></tr></table></figure><p>上面是大神的 人设 与提示语.复制过来就可以用了</p></li><li><p>后面选择插件, 很多人跟我一样,不知道选啥插件的时候,就如下图所示:</p><p><img src="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202406211040393.png"></p></li></ol><p>​根据提示语自动选插件,然后后期慢慢调试.</p><ol start="4"><li><p>调试一下机器人试试,效果还不错<br><img src="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202406211041366.png"></p></li><li><p>发布到公众号,公众号后台 拿到 AppID 一填写,点击发布.就可以在公众号下 愉快的玩耍嘞</p></li></ol><p><img src="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202406211055281.png"></p><h3 id="公众号下尝试"><a href="#公众号下尝试" class="headerlink" title="公众号下尝试"></a>公众号下尝试</h3><p>由于我的公众号之前设置了自动回复,于是 先 去掉了自动回复,然后重新授权.进行了测试.效果如下:</p><p><img src="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202406211048888.png"></p><p>这样就可以愉快的玩耍起来了, 注意这个值回答 编程之内的问题昂</p><hr>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 工具 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>IDE偷懒小工具</title>
       <link href="/IDE%E5%81%B7%E6%87%92%E5%B0%8F%E5%B7%A5%E5%85%B7.html"/>
       <url>/IDE%E5%81%B7%E6%87%92%E5%B0%8F%E5%B7%A5%E5%85%B7.html</url>
