@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="baidu-site-verification" content="code-qgPh7OZm0c" />
+    <meta name="keywords" content="PFinalClub, 编程教育, PHP,Golang, Python,PFinal南丞,PFinal" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2154665617309406"
+     crossorigin="anonymous"></script>
+    <meta name="description" content="背景如果你和我一样有丰富的 PHP 项目经验，可能已经习惯了使用命令行工具来快速创建项目，比如用 laravel new example-app 这个命令几秒钟就能生成一个完整的 Laravel 项目。然而，当你转向 Golang 开发时，可能会觉得起步稍显繁琐，需要自己手动整理目录结构和配置文件。这种时候，我会想：要是 Golang 也有类似的工具该多好啊！于是，我翻遍了 GitHub，最终找到">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Create Go App CLI 一款快速创建Golang项目的工具">
+<meta property="og:url" content="https://friday-go.icu/Create-Go-App-CLI-%E4%B8%80%E6%AC%BE%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BAGolang%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%B7%A5%E5%85%B7.html">
+<meta property="og:site_name" content="PFinalClub - 专业的编程社区">
+<meta property="og:description" content="背景如果你和我一样有丰富的 PHP 项目经验，可能已经习惯了使用命令行工具来快速创建项目，比如用 laravel new example-app 这个命令几秒钟就能生成一个完整的 Laravel 项目。然而，当你转向 Golang 开发时，可能会觉得起步稍显繁琐，需要自己手动整理目录结构和配置文件。这种时候，我会想：要是 Golang 也有类似的工具该多好啊！于是，我翻遍了 GitHub，最终找到">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202408201333737.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202408201333650.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202408201335809.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202408201428436.png">
+<meta property="article:published_time" content="2024-08-20T01:44:03.000Z">
+<meta property="article:modified_time" content="2024-08-20T07:20:47.102Z">
+<meta property="article:author" content="PFinal南丞">
+<meta property="article:tag" content="-- golang">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202408201333737.png">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Create Go App CLI 一款快速创建Golang项目的工具</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<style>
+  body {
+    width:60%;
+  }
+  @media screen and (max-width:768px) {
+    body {
+      width: 100%;
+    }
+  }
+</style>
+<body class="mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a href="/links/">友情连接</a></li><!--
+     --><!--
+       --><li><a href="/project/">个人项目</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/Golang%E4%B8%AD%E5%9B%BD%E5%9C%B0%E5%9D%80%E7%94%9F%E6%88%90%E6%89%A9%E5%B1%95%E5%8C%85.html"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://friday-go.icu/Create-Go-App-CLI-%E4%B8%80%E6%AC%BE%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BAGolang%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%B7%A5%E5%85%B7.html"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://friday-go.icu/Create-Go-App-CLI-%E4%B8%80%E6%AC%BE%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BAGolang%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%B7%A5%E5%85%B7.html&text=Create Go App CLI 一款快速创建Golang项目的工具"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://friday-go.icu/Create-Go-App-CLI-%E4%B8%80%E6%AC%BE%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BAGolang%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%B7%A5%E5%85%B7.html&title=Create Go App CLI 一款快速创建Golang项目的工具"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://friday-go.icu/Create-Go-App-CLI-%E4%B8%80%E6%AC%BE%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BAGolang%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%B7%A5%E5%85%B7.html&is_video=false&description=Create Go App CLI 一款快速创建Golang项目的工具"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Create Go App CLI 一款快速创建Golang项目的工具&body=Check out this article: https://friday-go.icu/Create-Go-App-CLI-%E4%B8%80%E6%AC%BE%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BAGolang%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%B7%A5%E5%85%B7.html"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://friday-go.icu/Create-Go-App-CLI-%E4%B8%80%E6%AC%BE%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BAGolang%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%B7%A5%E5%85%B7.html&title=Create Go App CLI 一款快速创建Golang项目的工具"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://friday-go.icu/Create-Go-App-CLI-%E4%B8%80%E6%AC%BE%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BAGolang%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%B7%A5%E5%85%B7.html&title=Create Go App CLI 一款快速创建Golang项目的工具"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://friday-go.icu/Create-Go-App-CLI-%E4%B8%80%E6%AC%BE%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BAGolang%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%B7%A5%E5%85%B7.html&title=Create Go App CLI 一款快速创建Golang项目的工具"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://friday-go.icu/Create-Go-App-CLI-%E4%B8%80%E6%AC%BE%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BAGolang%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%B7%A5%E5%85%B7.html&title=Create Go App CLI 一款快速创建Golang项目的工具"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://friday-go.icu/Create-Go-App-CLI-%E4%B8%80%E6%AC%BE%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BAGolang%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%B7%A5%E5%85%B7.html&name=Create Go App CLI 一款快速创建Golang项目的工具&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://friday-go.icu/Create-Go-App-CLI-%E4%B8%80%E6%AC%BE%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BAGolang%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%B7%A5%E5%85%B7.html&t=Create Go App CLI 一款快速创建Golang项目的工具"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%83%8C%E6%99%AF"><span class="toc-number">1.</span> <span class="toc-text">背景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E5%85%B7%E4%BB%8B%E7%BB%8D"><span class="toc-number">2.</span> <span class="toc-text">工具介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE%E7%9A%84%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA"><span class="toc-number">2.1.</span> <span class="toc-text">创建项目的效果展示</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84"><span class="toc-number">2.2.</span> <span class="toc-text">项目结构:</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95"><span class="toc-number">3.</span> <span class="toc-text">安装方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97"><span class="toc-number">4.</span> <span class="toc-text">使用指南</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%94%AF%E6%8C%81%E7%9A%84%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6"><span class="toc-number">4.1.</span> <span class="toc-text">支持的后端框架</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%94%AF%E6%8C%81%E7%9A%84%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6"><span class="toc-number">4.2.</span> <span class="toc-text">支持的前端框架</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AE"><span class="toc-number">5.</span> <span class="toc-text">项目配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">6.</span> <span class="toc-text">总结</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Create Go App CLI 一款快速创建Golang项目的工具
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">PFinal南丞</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2024-08-20T01:44:03.000Z" itemprop="datePublished">2024-08-20</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/golang/" rel="tag">-- golang</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>如果你和我一样有丰富的 PHP 项目经验，可能已经习惯了使用命令行工具来快速创建项目，比如用 laravel new example-app 这个命令几秒钟就能生成一个完整的 Laravel 项目。然而，当你转向 Golang 开发时，可能会觉得起步稍显繁琐，需要自己手动整理目录结构和配置文件。这种时候，我会想：要是 Golang 也有类似的工具该多好啊！于是，我翻遍了 GitHub，最终找到了一个可以解决这个问题的工具，它就是——Create Go App CLI。</p>
+<h3 id="工具介绍"><a href="#工具介绍" class="headerlink" title="工具介绍"></a>工具介绍</h3><p>Create Go App CLI 是一个极其方便的工具，只需要运行一个简单的命令，就可以生成一个包括后端（Golang）、前端（JavaScript、TypeScript）以及自动化部署（Ansible、Docker）配置的生产就绪项目。你不再需要为设置项目基础架构而发愁，Create Go App CLI 已经为你做好了这一切。</p>
+<h4 id="创建项目的效果展示"><a href="#创建项目的效果展示" class="headerlink" title="创建项目的效果展示"></a>创建项目的效果展示</h4><p>选择后端框架时，你可以看到类似下图的选项界面：</p>
+<p><img src="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202408201333737.png"></p>
+<p>接着，你可以选择前端框架或库的扩展：</p>
+<p><img src="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202408201333650.png"></p>
+<p>最后，还可以选择 Web 服务器或代理服务器：</p>
+<p><img src="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202408201335809.png"></p>
+<h4 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构:"></a>项目结构:</h4><p>假设我们选择了 chi 作为后端框架，生成的项目目录结构大致如下：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">├── Makefile</span><br><span class="line">├── backend</span><br><span class="line">│   ├── Dockerfile</span><br><span class="line">│   ├── LICENSE</span><br><span class="line">│   ├── Makefile</span><br><span class="line">│   ├── README.md</span><br><span class="line">│   ├── api_test.http</span><br><span class="line">│   ├── cmd</span><br><span class="line">│   │   └── run.go</span><br><span class="line">│   ├── go.mod</span><br><span class="line">│   ├── go.sum</span><br><span class="line">│   ├── internal</span><br><span class="line">│   │   ├── config</span><br><span class="line">│   │   │   └── config.go</span><br><span class="line">│   │   └── router</span><br><span class="line">│   │       ├── healthcheck</span><br><span class="line">│   │       │   ├── handlers.go</span><br><span class="line">│   │       │   └── routes.go</span><br><span class="line">│   │       └── router.go</span><br><span class="line">│   └── main.go</span><br><span class="line">├── frontend</span><br><span class="line">│   ├── README.md</span><br><span class="line">│   ├── index.html</span><br><span class="line">│   ├── package.json</span><br><span class="line">│   ├── public</span><br><span class="line">│   │   └── vite.svg</span><br><span class="line">│   ├── src</span><br><span class="line">│   │   ├── App.vue</span><br><span class="line">│   │   ├── assets</span><br><span class="line">│   │   │   └── vue.svg</span><br><span class="line">│   │   ├── components</span><br><span class="line">│   │   │   └── HelloWorld.vue</span><br><span class="line">│   │   ├── main.js</span><br><span class="line">│   │   └── style.css</span><br><span class="line">│   └── vite.config.js</span><br><span class="line">├── hosts.ini</span><br><span class="line">├── playbook.yml</span><br><span class="line">└── roles</span><br><span class="line">    ├── backend</span><br><span class="line">    │   └── tasks</span><br><span class="line">    │       └── main.yml</span><br><span class="line">    ├── docker</span><br><span class="line">    │   └── tasks</span><br><span class="line">    │       └── main.yml</span><br><span class="line">    ├── postgres</span><br><span class="line">    │   └── tasks</span><br><span class="line">    │       └── main.yml</span><br><span class="line">    └── redis</span><br><span class="line">        └── tasks</span><br><span class="line">            └── main.yml</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>可以看到，生成的项目不仅包含了后端的 Golang 代码，还集成了前端框架的配置文件和自动化部署的脚本，几乎涵盖了一个生产环境中所需的所有内容。</p>
+<h3 id="安装方法"><a href="#安装方法" class="headerlink" title="安装方法"></a>安装方法</h3><ul>
+<li>go install 安装</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go install github.com/create-go-app/cli/v4/cmd/cgapp@latest</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>homebrew 安装:</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Tap a new formula:</span></span><br><span class="line">brew tap create-go-app/tap</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Installation:</span></span><br><span class="line">brew install create-go-app/tap/cgapp</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h3><p>安装完成后，你就可以在命令行里直接创建项目了。以下是一个简单的使用示例：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">mkdir web # 创建一个项目的目录</span><br><span class="line">cd web </span><br><span class="line">cgapp create  # 就可以在web目录夏创建了</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>在生成的项目目录中，你会发现一个 hosts.ini 文件，稍作修改后，你就可以直接将项目部署到服务器上了。</p>
+<h4 id="支持的后端框架"><a href="#支持的后端框架" class="headerlink" title="支持的后端框架"></a>支持的后端框架</h4><p>Create Go App CLI 提供了三种 Golang 后端框架的支持：</p>
+<ul>
+<li><p>net&#x2F;http: 使用 Golang 内置的 net&#x2F;http 包创建的后端模板，适合简单的 REST API 项目，支持 CRUD 和 JWT 身份验证  (<a target="_blank" rel="noopener" href="https://github.com/create-go-app/net_http-go-template">https://github.com/create-go-app/net_http-go-template</a>)</p>
+</li>
+<li><p>fiber: 功能更为强大的框架，支持 CRUD、JWT 身份验证、令牌刷新、数据库和缓存操作等复杂功能 (<a target="_blank" rel="noopener" href="https://gofiber.io/">https://gofiber.io</a>)</p>
+</li>
+<li><p>chi: 支持几乎所有的 Web 开发需求，是一个功能全面的 Go Web 框架  (<a target="_blank" rel="noopener" href="https://go-chi.io/#/">https://go-chi.io/#/</a>)</p>
+</li>
+</ul>
+<h4 id="支持的前端框架"><a href="#支持的前端框架" class="headerlink" title="支持的前端框架"></a>支持的前端框架</h4><p>CLI 工具支持多种前端框架或库，如下所示:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">[?] Choose a frontend framework/library:  [Use arrows to move, type to filter, ? for more help]</span><br><span class="line">&gt; none</span><br><span class="line">  vanilla</span><br><span class="line">  vanilla-ts</span><br><span class="line">  react</span><br><span class="line">  react-ts</span><br><span class="line">  react-swc</span><br><span class="line">  react-swc-ts</span><br><span class="line">  preact</span><br><span class="line">  preact-ts</span><br><span class="line">  next</span><br><span class="line">  next-ts</span><br><span class="line">  nuxt</span><br><span class="line">  vue</span><br><span class="line">  vue-ts</span><br><span class="line">  svelte</span><br><span class="line">  svelte-ts</span><br><span class="line">  solid</span><br><span class="line">  solid-ts</span><br><span class="line">  lit</span><br><span class="line">  lit-ts</span><br><span class="line">  qwik</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>个人建议：Vue 是个不错的选择，尤其适合构建现代化的 Web 应用。</p>
+<h3 id="项目配置"><a href="#项目配置" class="headerlink" title="项目配置"></a>项目配置</h3><p><img src="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202408201428436.png"></p>
+<p>生成的项目自带 .env.example 配置文件。你只需要把这个文件复制并重命名为 .env，然后稍作配置就可以直接运行项目了。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>Create Go App CLI 是一个为 Golang 项目开发者量身定制的利器，不仅简化了项目的创建过程，还提供了多种选择和配置，使得从后端到前端、从开发到部署都变得更加高效。如果你希望快速构建一个功能全面的 Golang 项目，这个工具绝对值得一试。</p>
+<p>更多功能和详细使用说明，可以参考官方的 Wiki，里面有更丰富的内容供你探索。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wiki 地址:</span><br><span class="line"></span><br><span class="line">https://github.com/create-go-app/cli</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+  </div>
+</article>
+<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2154665617309406"
+     crossorigin="anonymous"></script> -->
+<!-- 推荐广告 -->
+<!-- <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2154665617309406"
+     data-ad-slot="9190957443"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> -->
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/search/">搜索</a></li>
+         
+          <li><a href="/links/">友情连接</a></li>
+         
+          <li><a href="/project/">个人项目</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%83%8C%E6%99%AF"><span class="toc-number">1.</span> <span class="toc-text">背景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E5%85%B7%E4%BB%8B%E7%BB%8D"><span class="toc-number">2.</span> <span class="toc-text">工具介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE%E7%9A%84%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA"><span class="toc-number">2.1.</span> <span class="toc-text">创建项目的效果展示</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84"><span class="toc-number">2.2.</span> <span class="toc-text">项目结构:</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95"><span class="toc-number">3.</span> <span class="toc-text">安装方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97"><span class="toc-number">4.</span> <span class="toc-text">使用指南</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%94%AF%E6%8C%81%E7%9A%84%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6"><span class="toc-number">4.1.</span> <span class="toc-text">支持的后端框架</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%94%AF%E6%8C%81%E7%9A%84%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6"><span class="toc-number">4.2.</span> <span class="toc-text">支持的前端框架</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AE"><span class="toc-number">5.</span> <span class="toc-text">项目配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">6.</span> <span class="toc-text">总结</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://friday-go.icu/Create-Go-App-CLI-%E4%B8%80%E6%AC%BE%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BAGolang%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%B7%A5%E5%85%B7.html"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://friday-go.icu/Create-Go-App-CLI-%E4%B8%80%E6%AC%BE%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BAGolang%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%B7%A5%E5%85%B7.html&text=Create Go App CLI 一款快速创建Golang项目的工具"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://friday-go.icu/Create-Go-App-CLI-%E4%B8%80%E6%AC%BE%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BAGolang%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%B7%A5%E5%85%B7.html&title=Create Go App CLI 一款快速创建Golang项目的工具"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://friday-go.icu/Create-Go-App-CLI-%E4%B8%80%E6%AC%BE%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BAGolang%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%B7%A5%E5%85%B7.html&is_video=false&description=Create Go App CLI 一款快速创建Golang项目的工具"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Create Go App CLI 一款快速创建Golang项目的工具&body=Check out this article: https://friday-go.icu/Create-Go-App-CLI-%E4%B8%80%E6%AC%BE%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BAGolang%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%B7%A5%E5%85%B7.html"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://friday-go.icu/Create-Go-App-CLI-%E4%B8%80%E6%AC%BE%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BAGolang%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%B7%A5%E5%85%B7.html&title=Create Go App CLI 一款快速创建Golang项目的工具"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://friday-go.icu/Create-Go-App-CLI-%E4%B8%80%E6%AC%BE%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BAGolang%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%B7%A5%E5%85%B7.html&title=Create Go App CLI 一款快速创建Golang项目的工具"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://friday-go.icu/Create-Go-App-CLI-%E4%B8%80%E6%AC%BE%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BAGolang%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%B7%A5%E5%85%B7.html&title=Create Go App CLI 一款快速创建Golang项目的工具"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://friday-go.icu/Create-Go-App-CLI-%E4%B8%80%E6%AC%BE%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BAGolang%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%B7%A5%E5%85%B7.html&title=Create Go App CLI 一款快速创建Golang项目的工具"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://friday-go.icu/Create-Go-App-CLI-%E4%B8%80%E6%AC%BE%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BAGolang%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%B7%A5%E5%85%B7.html&name=Create Go App CLI 一款快速创建Golang项目的工具&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://friday-go.icu/Create-Go-App-CLI-%E4%B8%80%E6%AC%BE%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BAGolang%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%B7%A5%E5%85%B7.html&t=Create Go App CLI 一款快速创建Golang项目的工具"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2024
+    PFinal南丞
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a href="/links/">友情连接</a></li><!--
+     --><!--
+       --><li><a href="/project/">个人项目</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+  <script>
+    document.addEventListener('visibilitychange', function() {
+      if (document.visibilityState === 'hidden') {
+        document.title = '❤ 你快回来,我等的花儿都谢了 ❤';
+      } else {
+        document.title = 'Create Go App CLI 一款快速创建Golang项目的工具';
+      }
+    })
+  </script>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="add7e1d1-5796-4d1c-b008-6205977b88c7"></script>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EVR51H8CSN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-EVR51H8CSN');
+    </script>
+
+<!-- Baidu Analytics -->
+
+  <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?8df0b5cb0dbad92cfb64ca6d88e8572a";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+  </script>
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>
