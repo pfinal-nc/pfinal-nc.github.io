@@ -660,13 +660,6 @@
   </url>
   
   <url>
-    <loc>https://friday-go.icu/tags/Golang/</loc>
-    <lastmod>2024-08-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://friday-go.icu/tags/Docker/</loc>
     <lastmod>2024-08-27</lastmod>
     <changefreq>weekly</changefreq>
@@ -675,6 +668,13 @@
   
   <url>
     <loc>https://friday-go.icu/tags/LNMP/</loc>
+    <lastmod>2024-08-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://friday-go.icu/tags/Golang/</loc>
     <lastmod>2024-08-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -823,14 +823,14 @@
   </url>
   
   <url>
-    <loc>https://friday-go.icu/categories/Golang/</loc>
+    <loc>https://friday-go.icu/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
     <lastmod>2024-08-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://friday-go.icu/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
+    <loc>https://friday-go.icu/categories/Golang/</loc>
     <lastmod>2024-08-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
