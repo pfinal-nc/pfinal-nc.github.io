@@ -6,7 +6,7 @@
   <link href="https://friday-go.icu/atom.xml" rel="self"/>
   
   <link href="https://friday-go.icu/"/>
-  <updated>2024-08-28T02:09:14.892Z</updated>
+  <updated>2024-09-02T01:43:52.512Z</updated>
   <id>https://friday-go.icu/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>基于`Wails` 的Redis客户端</title>
+    <link href="https://friday-go.icu/%E5%9F%BA%E4%BA%8Ewails-%E7%9A%84Redis%E5%AE%A2%E6%88%B7%E7%AB%AF.html"/>
+    <id>https://friday-go.icu/%E5%9F%BA%E4%BA%8Ewails-%E7%9A%84Redis%E5%AE%A2%E6%88%B7%E7%AB%AF.html</id>
+    <published>2024-09-02T00:53:26.000Z</published>
+    <updated>2024-09-02T01:43:52.512Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在最近的一段时间里，我一直在使用 <code>Wails</code> 开发一些桌面小工具。经过一段时间的使用，我愈发感受到 <code>Wails</code> 的强大和便捷。与传统的桌面开发框架相比，<code>Wails</code> 提供了极为简洁的开发体验，让我能够更加专注于功能的实现而不必担心繁琐的环境配置。同时，我也在不断探索基于 <code>Wails</code> 的开源项目，发现了许多令人惊喜的作品。其中，令我印象深刻的是一位开发者打造的 <code>Wails</code> 桌面版 Redis 客户端——Tiny RDM（Tiny Redis Desktop Manager）。这个项目以「开源&#x2F;免费&#x2F;高颜值&#x2F;跨平台&#x2F;轻量&#x2F;功能齐全」为卖点，毫不逊色于市面上的其他主流 Redis 客户端，强烈推荐给各位有需求的朋友。</p><h2 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a>项目地址</h2><p>如果你对这个项目感兴趣，可以通过以下链接访问：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://redis.tinycraft.cc/</span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="项目截图"><a href="#项目截图" class="headerlink" title="项目截图"></a>项目截图</h2><p>为了更直观地展示 Tiny RDM 的界面设计和功能布局，这里附上几张项目的截图</p><p><img src="https://github.com//tiny-craft/tiny-rdm/raw/main/screenshots/dark_zh.png" alt="image"></p><p><img src="https://github.com//tiny-craft/tiny-rdm/raw/main/screenshots/dark_zh2.png" alt="image"></p><h2 id="功能特点"><a href="#功能特点" class="headerlink" title="功能特点"></a>功能特点</h2><p>Tiny RDM 具备以下亮点功能：</p><ul><li>极度轻量，基于Webview2，无内嵌浏览器（感谢<code>Wails</code>）</li><li>界面精美易用，提供浅色&#x2F;深色主题（感谢Naive UI 和 IconPark）</li><li>多国语言支持：英文&#x2F;中文（需要更多语言支持？点我贡献语言）</li><li>更好用的连接管理：支持SSH隧道&#x2F;SSL&#x2F;哨兵模式&#x2F;集群模式&#x2F;HTTP代理&#x2F;SOCKS5代理</li><li>可视化键值操作，增删查改一应俱全</li><li>支持多种数据查看格式以及转码&#x2F;解压方式</li><li>采用SCAN分段加载，可轻松处理数百万键列表</li><li>操作命令执行日志展示</li><li>提供命令行操作</li><li>提供慢日志展示</li><li>List&#x2F;Hash&#x2F;Set&#x2F;Sorted Set的分段加载和查询</li><li>List&#x2F;Hash&#x2F;Set&#x2F;Sorted Set值的转码显示</li><li>内置高级编辑器Monaco Editor</li><li>支持命令实时监控</li><li>支持导入&#x2F;导出数据</li><li>支持发布订阅</li><li>支持导入&#x2F;导出连接配置</li><li>自定义数据展示编码&#x2F;解码(这是操作指引)</li></ul><p><strong>PS:</strong> 更多详细信息，请移步 <code>Tiny RDM</code> (<a href="https://github.com/tiny-craft/tiny-rdm/tree/main">https://github.com/tiny-craft/tiny-rdm/tree/main</a>) 查看.</p><h2 id="使用-Wails-开发的优劣盘点"><a href="#使用-Wails-开发的优劣盘点" class="headerlink" title="使用 Wails 开发的优劣盘点"></a>使用 <code>Wails</code> 开发的优劣盘点</h2><h3 id="优势"><a href="#优势" class="headerlink" title="优势"></a>优势</h3><ol><li><p>打包包体极小：Wails 的打包非常轻量，生成的安装包体积非常小，这对于需要频繁分发的小工具尤为重要。</p></li><li><p>开发体验接近 Web 全栈开发：Wails 允许开发者使用前端技术栈（如 Vue.js、React）进行界面开发，同时使用 Go 语言处理后端逻辑，这种全栈开发体验极大地提高了开发效率。</p></li><li><p>前后端自动绑定：只要在 Go 中声明要导出的结构体实例，编写接口方法后，Wails 会自动生成相应的 JavaScript 方法声明。这样前端可以直接调用后端接口，实现前后端数据的无缝交互。无论是 Go 端的结构体还是 JavaScript 端的数组&#x2F;对象，都能友好地进行转换。此外，Wails 还支持基于通知的双端通讯，非常适合频繁的数据传输。</p></li><li><p>可自定义资源服务：基于 Web 的应用程序一个显著的优势就是可以自定义资源路径，通过这种方式，可以灵活地决定本地资源的读取路径，甚至读取远程资源文件。这为资源的热更新提供了可能性，开发者可以更便捷地推送前端更新。</p></li></ol><h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><ol><li><p>兼容性一般：由于 Wails 依赖 Webview，在不同系统或环境下，Webview 的表现可能有所不同，这会导致某些功能的兼容性问题。</p></li><li><p>运行效率一般：前后端语言不一致会导致某些复杂逻辑和数据操作需要在 Go 端处理，然后再发送给前端进行展示。这个过程中涉及的前后端通讯会产生一定的开销。另外，Web 前端的处理能力存在上限，在处理复杂界面（如树形列表）时，操作量大可能会导致应用卡顿甚至假死。</p></li><li><p>系统级接口不足：相比 Tauri 和 Electron，Wails 提供的系统级接口较少。例如，监听主窗口尺寸和位置变化并实时保存的功能只能通过一些“黑科技”实现，如新开一个 goroutine 定时获取窗口状态等。此外，一些常用功能如多窗口支持和系统上下文菜单，Wails 目前也不支持。</p></li><li><p>没有原生自更新：虽然 Wails 的资源管理器支持前端页面的热更新，但涉及到 Go 端逻辑的更改，仍然需要重新安装应用。在如今快速迭代的开发环境中，自更新功能可以极大地提升用户体验。目前 Wails 官方已将自更新功能加入到 roadmap 中（#1178），相信未来这一点会得到改善，甚至成为它的一个优势。</p></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;在最近的一段时间里，我一直在使用 &lt;code&gt;Wails&lt;/code&gt; 开发一些桌面小工具。经过一段时间的使用，我愈发感受到 &lt;code&gt;W</summary>
+      
+    
+    
+    
+    <category term="go" scheme="https://friday-go.icu/categories/go/"/>
+    
+    
+    <category term="redis" scheme="https://friday-go.icu/tags/redis/"/>
+    
+    <category term="go" scheme="https://friday-go.icu/tags/go/"/>
+    
+    <category term="wails" scheme="https://friday-go.icu/tags/wails/"/>
+    
+  </entry>
   
   <entry>
     <title>用Wails和Vue.js打造跨平台桌面应用</title>
