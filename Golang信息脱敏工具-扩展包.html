@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="baidu-site-verification" content="code-qgPh7OZm0c" />
+    <meta name="keywords" content="PFinalClub, 编程教育, PHP,Golang, Python,PFinal南丞,PFinal" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2154665617309406"
+     crossorigin="anonymous"></script>
+    <meta name="description" content="背景在数据处理或清洗项目中，我们经常需要对敏感信息进行脱敏处理。这些敏感信息包括但不限于身份证号、手机号、邮箱地址和银行卡号等。为了简化这类任务，可以编写一个 Golang 的脱敏扩展包。该包封装了一些常用的脱敏方法，以便在未来的开发中能更方便地进行敏感信息的处理，确保数据的安全和隐私保护。 包地址该脱敏扩展包的代码托管在 GitHub 上，可以通过以下链接访问和下载： 12https:&#x2F;&#x2F;git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Golang 脱敏扩展包：简化敏感信息处理的利器">
+<meta property="og:url" content="https://friday-go.icu/Golang%E4%BF%A1%E6%81%AF%E8%84%B1%E6%95%8F%E5%B7%A5%E5%85%B7-%E6%89%A9%E5%B1%95%E5%8C%85.html">
+<meta property="og:site_name" content="PFinalClub - 专业的编程社区">
+<meta property="og:description" content="背景在数据处理或清洗项目中，我们经常需要对敏感信息进行脱敏处理。这些敏感信息包括但不限于身份证号、手机号、邮箱地址和银行卡号等。为了简化这类任务，可以编写一个 Golang 的脱敏扩展包。该包封装了一些常用的脱敏方法，以便在未来的开发中能更方便地进行敏感信息的处理，确保数据的安全和隐私保护。 包地址该脱敏扩展包的代码托管在 GitHub 上，可以通过以下链接访问和下载： 12https:&#x2F;&#x2F;git">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202409021605246.png">
+<meta property="article:published_time" content="2024-09-02T07:55:10.000Z">
+<meta property="article:modified_time" content="2024-09-03T03:44:04.731Z">
+<meta property="article:author" content="PFinal南丞">
+<meta property="article:tag" content="工具">
+<meta property="article:tag" content="Go">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202409021605246.png">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Golang 脱敏扩展包：简化敏感信息处理的利器</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+  
+<meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="PFinalClub - 专业的编程社区" type="application/atom+xml">
+</head>
+
+<style>
+  body {
+    width:60%;
+  }
+  @media screen and (max-width:768px) {
+    body {
+      width: 100%;
+    }
+  }
+</style>
+<body class="mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a href="/links/">友情连接</a></li><!--
+     --><!--
+       --><li><a href="/project/">个人项目</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/%E5%9F%BA%E4%BA%8Ewails-%E7%9A%84Redis%E5%AE%A2%E6%88%B7%E7%AB%AF.html"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://friday-go.icu/Golang%E4%BF%A1%E6%81%AF%E8%84%B1%E6%95%8F%E5%B7%A5%E5%85%B7-%E6%89%A9%E5%B1%95%E5%8C%85.html"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://friday-go.icu/Golang%E4%BF%A1%E6%81%AF%E8%84%B1%E6%95%8F%E5%B7%A5%E5%85%B7-%E6%89%A9%E5%B1%95%E5%8C%85.html&text=Golang 脱敏扩展包：简化敏感信息处理的利器"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://friday-go.icu/Golang%E4%BF%A1%E6%81%AF%E8%84%B1%E6%95%8F%E5%B7%A5%E5%85%B7-%E6%89%A9%E5%B1%95%E5%8C%85.html&title=Golang 脱敏扩展包：简化敏感信息处理的利器"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://friday-go.icu/Golang%E4%BF%A1%E6%81%AF%E8%84%B1%E6%95%8F%E5%B7%A5%E5%85%B7-%E6%89%A9%E5%B1%95%E5%8C%85.html&is_video=false&description=Golang 脱敏扩展包：简化敏感信息处理的利器"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Golang 脱敏扩展包：简化敏感信息处理的利器&body=Check out this article: https://friday-go.icu/Golang%E4%BF%A1%E6%81%AF%E8%84%B1%E6%95%8F%E5%B7%A5%E5%85%B7-%E6%89%A9%E5%B1%95%E5%8C%85.html"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://friday-go.icu/Golang%E4%BF%A1%E6%81%AF%E8%84%B1%E6%95%8F%E5%B7%A5%E5%85%B7-%E6%89%A9%E5%B1%95%E5%8C%85.html&title=Golang 脱敏扩展包：简化敏感信息处理的利器"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://friday-go.icu/Golang%E4%BF%A1%E6%81%AF%E8%84%B1%E6%95%8F%E5%B7%A5%E5%85%B7-%E6%89%A9%E5%B1%95%E5%8C%85.html&title=Golang 脱敏扩展包：简化敏感信息处理的利器"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://friday-go.icu/Golang%E4%BF%A1%E6%81%AF%E8%84%B1%E6%95%8F%E5%B7%A5%E5%85%B7-%E6%89%A9%E5%B1%95%E5%8C%85.html&title=Golang 脱敏扩展包：简化敏感信息处理的利器"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://friday-go.icu/Golang%E4%BF%A1%E6%81%AF%E8%84%B1%E6%95%8F%E5%B7%A5%E5%85%B7-%E6%89%A9%E5%B1%95%E5%8C%85.html&title=Golang 脱敏扩展包：简化敏感信息处理的利器"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://friday-go.icu/Golang%E4%BF%A1%E6%81%AF%E8%84%B1%E6%95%8F%E5%B7%A5%E5%85%B7-%E6%89%A9%E5%B1%95%E5%8C%85.html&name=Golang 脱敏扩展包：简化敏感信息处理的利器&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://friday-go.icu/Golang%E4%BF%A1%E6%81%AF%E8%84%B1%E6%95%8F%E5%B7%A5%E5%85%B7-%E6%89%A9%E5%B1%95%E5%8C%85.html&t=Golang 脱敏扩展包：简化敏感信息处理的利器"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%83%8C%E6%99%AF"><span class="toc-number">1.</span> <span class="toc-text">背景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8C%85%E5%9C%B0%E5%9D%80"><span class="toc-number">2.</span> <span class="toc-text">包地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8"><span class="toc-number">3.</span> <span class="toc-text">使用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">3.1.</span> <span class="toc-text">安装</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B"><span class="toc-number">4.</span> <span class="toc-text">使用示例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%BB%98%E8%AE%A4%E7%9A%84%E8%84%B1%E6%95%8F"><span class="toc-number">4.1.</span> <span class="toc-text">默认的脱敏</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E8%84%B1%E6%95%8F"><span class="toc-number">4.2.</span> <span class="toc-text">自定义脱敏</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8C%85%E7%BB%93%E6%9E%84"><span class="toc-number">5.</span> <span class="toc-text">包结构</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Golang 脱敏扩展包：简化敏感信息处理的利器
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">PFinal南丞</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2024-09-02T07:55:10.000Z" itemprop="datePublished">2024-09-02</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/Go/">Go</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/Go/" rel="tag">Go</a>, <a class="tag-link-link" href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag">工具</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>在数据处理或清洗项目中，我们经常需要对敏感信息进行脱敏处理。这些敏感信息包括但不限于身份证号、手机号、邮箱地址和银行卡号等。为了简化这类任务，可以编写一个 Golang 的脱敏扩展包。该包封装了一些常用的脱敏方法，以便在未来的开发中能更方便地进行敏感信息的处理，确保数据的安全和隐私保护。</p>
+<h3 id="包地址"><a href="#包地址" class="headerlink" title="包地址"></a>包地址</h3><p>该脱敏扩展包的代码托管在 <code>GitHub</code> 上，可以通过以下链接访问和下载：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/GoFinalPack/pf_util</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202409021605246.png"></p>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>要使用这个脱敏扩展包，使用 go get 命令来安装最新版本的包</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">go get github.com/GoFinalPack/pf_util</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>PS: 目前更新到 v1.0.0 版本</p>
+<h3 id="使用示例"><a href="#使用示例" class="headerlink" title="使用示例"></a>使用示例</h3><h4 id="默认的脱敏"><a href="#默认的脱敏" class="headerlink" title="默认的脱敏"></a>默认的脱敏</h4><p>以下是一些使用默认脱敏方法的示例代码：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">&quot;fmt&quot;</span></span><br><span class="line">	<span class="string">&quot;pf_util&quot;</span></span><br><span class="line">	<span class="string">&quot;testing&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @Author: PFinal南丞</span></span><br><span class="line"><span class="comment"> * @Author: lampxiezi@163.com</span></span><br><span class="line"><span class="comment"> * @Date: 2024/9/2</span></span><br><span class="line"><span class="comment"> * @Desc:</span></span><br><span class="line"><span class="comment"> * @Project: pf_util</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">TestDesensitizedUtilUserId</span><span class="params">(T *testing.T)</span></span> &#123;</span><br><span class="line">	d := pf_util.DesensitizedUtil&#123;&#125;</span><br><span class="line">	res := d.SetType(<span class="number">0</span>).Desensitized(<span class="string">&quot;10000&quot;</span>) <span class="comment">// 0 不暴露</span></span><br><span class="line">	fmt.Println(res)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">TestDesensitizedUtilName</span><span class="params">(T *testing.T)</span></span> &#123;</span><br><span class="line">	d := pf_util.DesensitizedUtil&#123;&#125;</span><br><span class="line">	res := d.SetType(<span class="number">1</span>).Desensitized(<span class="string">&quot;黄宗泽&quot;</span>) <span class="comment">// 0 不暴露</span></span><br><span class="line">	fmt.Println(res)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">TestDesensitizedUtilIDcard</span><span class="params">(T *testing.T)</span></span> &#123;</span><br><span class="line">	d := pf_util.DesensitizedUtil&#123;&#125;</span><br><span class="line">	res := d.SetType(<span class="number">2</span>).Desensitized(<span class="string">&quot;51343620000320711X&quot;</span>) <span class="comment">// 5***************1X</span></span><br><span class="line">	fmt.Println(res)</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><code>Desensitized</code> 方法提供了默认的脱敏功能，其中 SetType 方法用于设置脱敏类型。以下是支持的脱敏类型：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span>	 不暴露  直接返回 <span class="number">0</span></span><br><span class="line"><span class="number">1</span>	ChineseName 姓名脱敏</span><br><span class="line"><span class="number">2</span>	IdCard 身份证脱敏</span><br><span class="line"><span class="number">3</span>	FixedPhone 固定电话脱敏</span><br><span class="line"><span class="number">4</span>	MobilePhone 手机号脱敏</span><br><span class="line"><span class="number">5</span>	<span class="selector-tag">ADDRESS</span> 地址脱敏</span><br><span class="line"><span class="number">6</span>	EMAIL 邮箱脱敏</span><br><span class="line"><span class="number">7</span>	PASSWORD 密码脱敏</span><br><span class="line"><span class="number">8</span>	CarLicense 车牌号脱敏</span><br><span class="line"><span class="number">9</span>	BankCard 银行卡脱敏</span><br><span class="line"><span class="number">10</span>	IPV4 IPV4脱敏</span><br><span class="line"><span class="number">11</span>	IPV6 IPV6脱敏</span><br><span class="line"><span class="number">12</span>	FirstMask 前几位脱敏</span><br><span class="line"><span class="number">13</span>	ClearToNull 清空</span><br><span class="line"><span class="number">14</span>	ClearToEmpty 清空</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="自定义脱敏"><a href="#自定义脱敏" class="headerlink" title="自定义脱敏"></a>自定义脱敏</h4><p>还可以使用 Method 方法进行自定义脱敏。以下是自定义脱敏的示例代码</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">TestCustomerIDcard</span><span class="params">(T *testing.T)</span></span> &#123;</span><br><span class="line">	d := pf_util.DesensitizedUtil&#123;&#125;</span><br><span class="line">	res := d.Method(<span class="string">&quot;idCardNum&quot;</span>, <span class="string">&quot;51343620000320711X&quot;</span>, <span class="number">4</span>, <span class="number">2</span>) <span class="comment">// 5134************1X</span></span><br><span class="line">	fmt.Println(res)</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>PS:</strong> </p>
+<p><code>Method</code> 方法允许你进行更灵活的脱敏处理。第一个参数指定脱敏类型，第二个参数是需要脱敏的内容，第三个参数是脱敏的长度，第四个参数是脱敏的位置。例如</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">d.Method(<span class="string">&quot;idCardNum&quot;</span>, <span class="string">&quot;51343620000320711X&quot;</span>, <span class="number">4</span>, <span class="number">2</span>) <span class="comment">// 5134************1X</span></span><br><span class="line">d.Method(<span class="string">&quot;address&quot;</span>, <span class="string">&quot;四川省成都市高新区天府三街&quot;</span>, <span class="number">8</span>) <span class="comment">// 四川省成都市*******</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="包结构"><a href="#包结构" class="headerlink" title="包结构"></a>包结构</h3><p>该包的结构如下所示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">├── README.md</span><br><span class="line">├── go.mod</span><br><span class="line">├── pf_util.go</span><br><span class="line">├── tests</span><br><span class="line">│   └── pf_utile_test.go</span><br><span class="line">└── utils</span><br><span class="line">    └── DesensitizedUtil.go</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>其中，<code>DesensitizedUtil.go</code> 文件提供了默认的脱敏方法和自定义脱敏方法。这些方法帮助你在开发中轻松实现敏感信息的脱敏处理。</p>
+
+  </div>
+</article>
+<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2154665617309406"
+     crossorigin="anonymous"></script> -->
+<!-- 推荐广告 -->
+<!-- <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2154665617309406"
+     data-ad-slot="9190957443"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> -->
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/search/">搜索</a></li>
+         
+          <li><a href="/links/">友情连接</a></li>
+         
+          <li><a href="/project/">个人项目</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%83%8C%E6%99%AF"><span class="toc-number">1.</span> <span class="toc-text">背景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8C%85%E5%9C%B0%E5%9D%80"><span class="toc-number">2.</span> <span class="toc-text">包地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8"><span class="toc-number">3.</span> <span class="toc-text">使用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">3.1.</span> <span class="toc-text">安装</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B"><span class="toc-number">4.</span> <span class="toc-text">使用示例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%BB%98%E8%AE%A4%E7%9A%84%E8%84%B1%E6%95%8F"><span class="toc-number">4.1.</span> <span class="toc-text">默认的脱敏</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E8%84%B1%E6%95%8F"><span class="toc-number">4.2.</span> <span class="toc-text">自定义脱敏</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8C%85%E7%BB%93%E6%9E%84"><span class="toc-number">5.</span> <span class="toc-text">包结构</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://friday-go.icu/Golang%E4%BF%A1%E6%81%AF%E8%84%B1%E6%95%8F%E5%B7%A5%E5%85%B7-%E6%89%A9%E5%B1%95%E5%8C%85.html"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://friday-go.icu/Golang%E4%BF%A1%E6%81%AF%E8%84%B1%E6%95%8F%E5%B7%A5%E5%85%B7-%E6%89%A9%E5%B1%95%E5%8C%85.html&text=Golang 脱敏扩展包：简化敏感信息处理的利器"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://friday-go.icu/Golang%E4%BF%A1%E6%81%AF%E8%84%B1%E6%95%8F%E5%B7%A5%E5%85%B7-%E6%89%A9%E5%B1%95%E5%8C%85.html&title=Golang 脱敏扩展包：简化敏感信息处理的利器"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://friday-go.icu/Golang%E4%BF%A1%E6%81%AF%E8%84%B1%E6%95%8F%E5%B7%A5%E5%85%B7-%E6%89%A9%E5%B1%95%E5%8C%85.html&is_video=false&description=Golang 脱敏扩展包：简化敏感信息处理的利器"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Golang 脱敏扩展包：简化敏感信息处理的利器&body=Check out this article: https://friday-go.icu/Golang%E4%BF%A1%E6%81%AF%E8%84%B1%E6%95%8F%E5%B7%A5%E5%85%B7-%E6%89%A9%E5%B1%95%E5%8C%85.html"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://friday-go.icu/Golang%E4%BF%A1%E6%81%AF%E8%84%B1%E6%95%8F%E5%B7%A5%E5%85%B7-%E6%89%A9%E5%B1%95%E5%8C%85.html&title=Golang 脱敏扩展包：简化敏感信息处理的利器"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://friday-go.icu/Golang%E4%BF%A1%E6%81%AF%E8%84%B1%E6%95%8F%E5%B7%A5%E5%85%B7-%E6%89%A9%E5%B1%95%E5%8C%85.html&title=Golang 脱敏扩展包：简化敏感信息处理的利器"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://friday-go.icu/Golang%E4%BF%A1%E6%81%AF%E8%84%B1%E6%95%8F%E5%B7%A5%E5%85%B7-%E6%89%A9%E5%B1%95%E5%8C%85.html&title=Golang 脱敏扩展包：简化敏感信息处理的利器"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://friday-go.icu/Golang%E4%BF%A1%E6%81%AF%E8%84%B1%E6%95%8F%E5%B7%A5%E5%85%B7-%E6%89%A9%E5%B1%95%E5%8C%85.html&title=Golang 脱敏扩展包：简化敏感信息处理的利器"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://friday-go.icu/Golang%E4%BF%A1%E6%81%AF%E8%84%B1%E6%95%8F%E5%B7%A5%E5%85%B7-%E6%89%A9%E5%B1%95%E5%8C%85.html&name=Golang 脱敏扩展包：简化敏感信息处理的利器&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://friday-go.icu/Golang%E4%BF%A1%E6%81%AF%E8%84%B1%E6%95%8F%E5%B7%A5%E5%85%B7-%E6%89%A9%E5%B1%95%E5%8C%85.html&t=Golang 脱敏扩展包：简化敏感信息处理的利器"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2024
+    PFinal南丞
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a href="/links/">友情连接</a></li><!--
+     --><!--
+       --><li><a href="/project/">个人项目</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+  <script>
+    document.addEventListener('visibilitychange', function() {
+      if (document.visibilityState === 'hidden') {
+        document.title = '❤ 你快回来,我等的花儿都谢了 ❤';
+      } else {
+        document.title = 'Golang 脱敏扩展包：简化敏感信息处理的利器';
+      }
+    })
+  </script>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="add7e1d1-5796-4d1c-b008-6205977b88c7"></script>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EVR51H8CSN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-EVR51H8CSN');
+    </script>
+
+<!-- Baidu Analytics -->
+
+  <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?8df0b5cb0dbad92cfb64ca6d88e8572a";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+  </script>
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>
