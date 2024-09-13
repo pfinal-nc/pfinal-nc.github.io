@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="baidu-site-verification" content="code-qgPh7OZm0c" />
+    <meta name="keywords" content="PFinalClub, 编程教育, PHP,Golang, Python,PFinal南丞,PFinal" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2154665617309406"
+     crossorigin="anonymous"></script>
+    <meta name="description" content="在上一篇文章中，我们介绍了如何使用 wails 与第三方扩展包 getlantern&#x2F;systray 配合开发带有托盘功能的系统工具。由于 wails v2 版本并不原生支持 systray 类似的托盘功能，因此我们通过将 getlantern&#x2F;systray 作为子程序运行，并且通过进程间通信来解决这一问题。 这篇文章将详细讲解如何实现两个进程之间的通信，并完善相关功能。  进程间通信在这个项目">
+<meta property="og:type" content="article">
+<meta property="og:title" content="wails 和 gopsutil 构建系统工具应用(二)">
+<meta property="og:url" content="https://friday-go.icu/wails-%E5%92%8C-gopsutil-%E6%9E%84%E5%BB%BA%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7%E5%BA%94%E7%94%A8-%E4%BA%8C.html">
+<meta property="og:site_name" content="PFinalClub - 专业的编程社区">
+<meta property="og:description" content="在上一篇文章中，我们介绍了如何使用 wails 与第三方扩展包 getlantern&#x2F;systray 配合开发带有托盘功能的系统工具。由于 wails v2 版本并不原生支持 systray 类似的托盘功能，因此我们通过将 getlantern&#x2F;systray 作为子程序运行，并且通过进程间通信来解决这一问题。 这篇文章将详细讲解如何实现两个进程之间的通信，并完善相关功能。  进程间通信在这个项目">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202409131025744.png">
+<meta property="article:published_time" content="2024-09-13T02:21:44.000Z">
+<meta property="article:modified_time" content="2024-09-13T03:08:11.526Z">
+<meta property="article:author" content="PFinal南丞">
+<meta property="article:tag" content="Golang">
+<meta property="article:tag" content="工具">
+<meta property="article:tag" content="Go">
+<meta property="article:tag" content="wails">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202409131025744.png">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>wails 和 gopsutil 构建系统工具应用(二)</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+  
+<meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="PFinalClub - 专业的编程社区" type="application/atom+xml">
+</head>
+
+<style>
+  body {
+    width:60%;
+  }
+  @media screen and (max-width:768px) {
+    body {
+      width: 100%;
+    }
+  }
+</style>
+<body class="mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a href="/links/">友情连接</a></li><!--
+     --><!--
+       --><li><a href="/project/">个人项目</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/Golang%E7%B3%BB%E7%BB%9F%E5%BA%93%E4%B9%8Bgopsutil.html"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://friday-go.icu/wails-%E5%92%8C-gopsutil-%E6%9E%84%E5%BB%BA%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7%E5%BA%94%E7%94%A8-%E4%BA%8C.html"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://friday-go.icu/wails-%E5%92%8C-gopsutil-%E6%9E%84%E5%BB%BA%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7%E5%BA%94%E7%94%A8-%E4%BA%8C.html&text=wails 和 gopsutil 构建系统工具应用(二)"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://friday-go.icu/wails-%E5%92%8C-gopsutil-%E6%9E%84%E5%BB%BA%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7%E5%BA%94%E7%94%A8-%E4%BA%8C.html&title=wails 和 gopsutil 构建系统工具应用(二)"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://friday-go.icu/wails-%E5%92%8C-gopsutil-%E6%9E%84%E5%BB%BA%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7%E5%BA%94%E7%94%A8-%E4%BA%8C.html&is_video=false&description=wails 和 gopsutil 构建系统工具应用(二)"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=wails 和 gopsutil 构建系统工具应用(二)&body=Check out this article: https://friday-go.icu/wails-%E5%92%8C-gopsutil-%E6%9E%84%E5%BB%BA%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7%E5%BA%94%E7%94%A8-%E4%BA%8C.html"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://friday-go.icu/wails-%E5%92%8C-gopsutil-%E6%9E%84%E5%BB%BA%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7%E5%BA%94%E7%94%A8-%E4%BA%8C.html&title=wails 和 gopsutil 构建系统工具应用(二)"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://friday-go.icu/wails-%E5%92%8C-gopsutil-%E6%9E%84%E5%BB%BA%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7%E5%BA%94%E7%94%A8-%E4%BA%8C.html&title=wails 和 gopsutil 构建系统工具应用(二)"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://friday-go.icu/wails-%E5%92%8C-gopsutil-%E6%9E%84%E5%BB%BA%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7%E5%BA%94%E7%94%A8-%E4%BA%8C.html&title=wails 和 gopsutil 构建系统工具应用(二)"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://friday-go.icu/wails-%E5%92%8C-gopsutil-%E6%9E%84%E5%BB%BA%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7%E5%BA%94%E7%94%A8-%E4%BA%8C.html&title=wails 和 gopsutil 构建系统工具应用(二)"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://friday-go.icu/wails-%E5%92%8C-gopsutil-%E6%9E%84%E5%BB%BA%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7%E5%BA%94%E7%94%A8-%E4%BA%8C.html&name=wails 和 gopsutil 构建系统工具应用(二)&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://friday-go.icu/wails-%E5%92%8C-gopsutil-%E6%9E%84%E5%BB%BA%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7%E5%BA%94%E7%94%A8-%E4%BA%8C.html&t=wails 和 gopsutil 构建系统工具应用(二)"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1"><span class="toc-number">1.</span> <span class="toc-text">进程间通信</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E8%B0%83%E6%95%B4%E7%AA%97%E5%8F%A3%E5%A4%A7%E5%B0%8F"><span class="toc-number">2.</span> <span class="toc-text">动态调整窗口大小</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%80%E5%90%8E"><span class="toc-number">3.</span> <span class="toc-text">最后</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        wails 和 gopsutil 构建系统工具应用(二)
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">PFinal南丞</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2024-09-13T02:21:44.000Z" itemprop="datePublished">2024-09-13</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/Go/">Go</a> › <a class="category-link" href="/categories/Go/go/">go</a> › <a class="category-link" href="/categories/Go/go/Golang/">Golang</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/Go/" rel="tag">Go</a>, <a class="tag-link-link" href="/tags/Golang/" rel="tag">Golang</a>, <a class="tag-link-link" href="/tags/wails/" rel="tag">wails</a>, <a class="tag-link-link" href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag">工具</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>在上一篇文章中，我们介绍了如何使用 <code>wails</code> 与第三方扩展包 <code>getlantern/systray</code> 配合开发带有托盘功能的系统工具。由于 <code>wails</code> v2 版本并不原生支持 <code>systray</code> 类似的托盘功能，因此我们通过将 <code>getlantern/systray</code> 作为子程序运行，并且通过进程间通信来解决这一问题。</p>
+<p>这篇文章将详细讲解如何实现两个进程之间的通信，并完善相关功能。</p>
+<p><img src="https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202409131025744.png"></p>
+<h2 id="进程间通信"><a href="#进程间通信" class="headerlink" title="进程间通信"></a>进程间通信</h2><p>在这个项目中，使用管道（<code>pipe</code>）来在主程序和子进程之间进行数据通信。管道是一种非常轻量的通信方式，适用于本地的进程间通信场景。</p>
+<p><strong><code>wails</code> 的启动与关闭</strong></p>
+<p>在 <code>wails</code> 的应用中，需要在程序启动和关闭时处理与子进程的通信。为此，在 <code>OnStartup</code> 和 <code>OnShutdown</code> 回调中设置相应的逻辑：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">OnStartup:        app.startup,  </span><br><span class="line">OnShutdown:       app.closeup,</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>管道的创建与管理</strong></p>
+<p><code>app.go</code>  在 <code>startup</code> 方法中,创建了两个管道,一个用于主程序向子进程发送数据，另一个用于接收子进程发送的数据。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(a *App)</span></span> startup(ctx context.Context) &#123;  </span><br><span class="line">    a.ctx = ctx  </span><br><span class="line">    <span class="comment">// 创建两个管道：一个用于发送数据，一个用于接收数据  </span></span><br><span class="line">    sendPipeR, sendPipeW, err := os.Pipe() <span class="comment">// 用于主程序向子进程发送数据  </span></span><br><span class="line">    <span class="keyword">if</span> err != <span class="literal">nil</span> &#123;  </span><br><span class="line">       fmt.Println(<span class="string">&quot;创建发送管道失败:&quot;</span>, err)  </span><br><span class="line">       <span class="keyword">return</span>  </span><br><span class="line">    &#125;  </span><br><span class="line">    receivePipeR, receivePipeW, err := os.Pipe() <span class="comment">// 用于子进程向主程序发送数据  </span></span><br><span class="line">    <span class="keyword">if</span> err != <span class="literal">nil</span> &#123;  </span><br><span class="line">       fmt.Println(<span class="string">&quot;创建接收管道失败:&quot;</span>, err)  </span><br><span class="line">       <span class="keyword">return</span>  </span><br><span class="line">    &#125;  </span><br><span class="line">    a.sendPipeW = sendPipeW       <span class="comment">// 主程序向子进程写  </span></span><br><span class="line">    a.sendPipeR = sendPipeR       <span class="comment">// 主程序向子进程写  </span></span><br><span class="line">    a.receivePipeR = receivePipeR <span class="comment">// 主程序从子进程读  </span></span><br><span class="line">    a.receivePipeW = receivePipeW <span class="comment">// 主程序从子进程读  </span></span><br><span class="line">  </span><br><span class="line">    <span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;  </span><br><span class="line">       <span class="comment">// 启动 systray_run.go 程序  </span></span><br><span class="line">       cmd := exec.Command(<span class="string">&quot;go&quot;</span>, <span class="string">&quot;run&quot;</span>, <span class="string">&quot;./pak/sys_run/systray_run.go&quot;</span>)  </span><br><span class="line">       cmd.Stdin = a.sendPipeR  </span><br><span class="line">       cmd.Stdout = a.receivePipeW  </span><br><span class="line">       cmd.Stderr = os.Stderr  </span><br><span class="line">       <span class="keyword">if</span> err := cmd.Start(); err != <span class="literal">nil</span> &#123;  </span><br><span class="line">          fmt.Println(<span class="string">&quot;启动 systray_run.go 失败:&quot;</span>, err)  </span><br><span class="line">          <span class="keyword">return</span>  </span><br><span class="line">       &#125;  </span><br><span class="line">       <span class="keyword">if</span> err := cmd.Wait(); err != <span class="literal">nil</span> &#123;  </span><br><span class="line">          fmt.Println(<span class="string">&quot;systray_run.go 执行失败:&quot;</span>, err)  </span><br><span class="line">       &#125;    &#125;()  </span><br><span class="line">    a.monitorPipe()  </span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><code>monitorPipe</code> 方法监听子进程向主程序发送的数据，并根据接收到的指令进行操作，例如退出程序、显示或隐藏主窗口：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(a *App)</span></span> monitorPipe() &#123;  </span><br><span class="line">    reader := bufio.NewReader(a.receivePipeR)  </span><br><span class="line">    <span class="keyword">for</span> &#123;  </span><br><span class="line">       line, err := reader.ReadString(<span class="string">&#x27;\n&#x27;</span>) <span class="comment">// 读取一行直到换行符  </span></span><br><span class="line">       <span class="keyword">if</span> err != <span class="literal">nil</span> &#123;  </span><br><span class="line">          <span class="keyword">if</span> err == io.EOF &#123;  </span><br><span class="line">             fmt.Println(<span class="string">&quot;管道关闭&quot;</span>)  </span><br><span class="line">             <span class="keyword">break</span> <span class="comment">// 管道关闭，结束读取  </span></span><br><span class="line">          &#125;  </span><br><span class="line">          fmt.Println(<span class="string">&quot;读取管道数据失败:&quot;</span>, err)  </span><br><span class="line">          <span class="keyword">continue</span>  </span><br><span class="line">       &#125;  </span><br><span class="line">       <span class="comment">// 处理从 systray_run.go 中接收到的输出  </span></span><br><span class="line">       fmt.Printf(<span class="string">&quot;从 systray_run.go 接收到: %s&quot;</span>, line)  </span><br><span class="line">       <span class="keyword">switch</span> line &#123;  </span><br><span class="line">       <span class="keyword">case</span> <span class="string">&quot;systray_run: quit\n&quot;</span>:  </span><br><span class="line">          fmt.Println(<span class="string">&quot;收到退出请求&quot;</span>)  </span><br><span class="line">          closeType = <span class="number">1</span>  </span><br><span class="line">          runtime.Quit(a.ctx)  </span><br><span class="line">          <span class="keyword">break</span>  </span><br><span class="line">       <span class="keyword">case</span> <span class="string">&quot;systray_run: panel show\n&quot;</span>:  </span><br><span class="line">          fmt.Println(<span class="string">&quot;收到控制面板请求&quot;</span>)  </span><br><span class="line">          runtime.WindowShow(a.ctx)    <span class="comment">// 窗口显示</span></span><br><span class="line">          <span class="keyword">break</span>  </span><br><span class="line">       <span class="keyword">case</span> <span class="string">&quot;systray_run: panel hide\n&quot;</span>:  </span><br><span class="line">          fmt.Println(<span class="string">&quot;收到控制面板请求&quot;</span>)  </span><br><span class="line">          runtime.WindowHide(a.ctx)   <span class="comment">// 窗口隐藏</span></span><br><span class="line">          <span class="keyword">break</span>  </span><br><span class="line">       &#125;  </span><br><span class="line">    &#125;&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>子程序 <code>systray</code> 的实现</strong></p>
+<p>在 <code>systray_run.go</code> 中，托盘菜单设置了“控制面板”和“退出”选项。点击这些选项时，发送相应的指令给主程序。以下是主要的实现逻辑：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main  </span><br><span class="line">  </span><br><span class="line"><span class="keyword">import</span> (  </span><br><span class="line">    <span class="string">&quot;bufio&quot;</span>  </span><br><span class="line">    <span class="string">&quot;fmt&quot;</span>    <span class="string">&quot;github.com/getlantern/systray&quot;</span>    <span class="string">&quot;github.com/getlantern/systray/example/icon&quot;</span>    <span class="string">&quot;io&quot;</span>    <span class="string">&quot;os&quot;</span>)  </span><br><span class="line">  </span><br><span class="line"><span class="keyword">var</span> show = <span class="literal">true</span>  </span><br><span class="line">  </span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">onReady</span><span class="params">()</span></span> &#123;  </span><br><span class="line">    systray.SetIcon(icon.Data)  </span><br><span class="line">    systray.SetTitle(<span class="string">&quot;CPU usage: 0%&quot;</span>)  </span><br><span class="line">    systray.SetTooltip(<span class="string">&quot;PFinal南丞&quot;</span>)  </span><br><span class="line">    Panel := systray.AddMenuItem(<span class="string">&quot;控制面板&quot;</span>, <span class="string">&quot;Panel&quot;</span>)  </span><br><span class="line">    mQuit := systray.AddMenuItem(<span class="string">&quot;退出&quot;</span>, <span class="string">&quot;Quit the whole app&quot;</span>)  </span><br><span class="line">    <span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;  </span><br><span class="line">       <span class="keyword">for</span> &#123;  </span><br><span class="line">          <span class="keyword">select</span> &#123;  </span><br><span class="line">          <span class="keyword">case</span> &lt;-Panel.ClickedCh:  </span><br><span class="line">             toggerPanel()  </span><br><span class="line">          <span class="keyword">case</span> &lt;-mQuit.ClickedCh:  </span><br><span class="line">             sendQuitMessage()  </span><br><span class="line">          &#125;       &#125;    &#125;()    <span class="keyword">go</span> ListenToMain()  </span><br><span class="line">    mQuit.SetIcon(icon.Data)  </span><br><span class="line">    Panel.SetIcon(icon.Data)  </span><br><span class="line">    <span class="comment">// 启动 TCP 服务器  </span></span><br><span class="line">    systray.Run(onReady, <span class="literal">nil</span>)  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">ListenToMain</span><span class="params">()</span></span> &#123;  </span><br><span class="line">    reader := bufio.NewReader(os.Stdin)  </span><br><span class="line">    <span class="keyword">for</span> &#123;  </span><br><span class="line">       line, err := reader.ReadString(<span class="string">&#x27;\n&#x27;</span>)  </span><br><span class="line">       <span class="keyword">if</span> err != <span class="literal">nil</span> &#123;  </span><br><span class="line">          <span class="keyword">if</span> err == io.EOF &#123;  </span><br><span class="line">             fmt.Println(<span class="string">&quot;管道关闭&quot;</span>)  </span><br><span class="line">             <span class="keyword">break</span> <span class="comment">// 管道关闭，结束读取  </span></span><br><span class="line">          &#125;  </span><br><span class="line">          fmt.Println(<span class="string">&quot;读取标准输入失败:&quot;</span>, err)  </span><br><span class="line">          <span class="keyword">continue</span>  </span><br><span class="line">       &#125;  </span><br><span class="line">       fmt.Println(<span class="string">&quot;从标准输入读取到:&quot;</span> + line)  </span><br><span class="line">       <span class="keyword">if</span> line == <span class="string">&quot;quit\n&quot;</span> &#123;  </span><br><span class="line">          fmt.Println(<span class="string">&quot;收到退出请求&quot;</span>)  </span><br><span class="line">          <span class="comment">// 可以添加其他处理逻辑  </span></span><br><span class="line">          systray.Quit() <span class="comment">// 根据需要执行退出操作  </span></span><br><span class="line">       &#125;  </span><br><span class="line">    &#125;&#125;  </span><br><span class="line">  </span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">sendQuitMessage</span><span class="params">()</span></span> &#123;  </span><br><span class="line">    <span class="comment">// 发送退出消息给主程序  </span></span><br><span class="line">    _, _ = fmt.Fprintln(os.Stdout, <span class="string">&quot;systray_run: quit&quot;</span>) <span class="comment">// 发送特定的退出消息  </span></span><br><span class="line">    systray.Quit()  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line"><span class="keyword">var</span> toggerPanel = <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;  </span><br><span class="line">    <span class="keyword">if</span> show &#123;  </span><br><span class="line">       show = <span class="literal">false</span>  </span><br><span class="line">       <span class="comment">// 发送退出消息给主程序  </span></span><br><span class="line">       _, _ = fmt.Fprintln(os.Stdout, <span class="string">&quot;systray_run: panel hide&quot;</span>) <span class="comment">// 发送特定的退出消息  </span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;  </span><br><span class="line">       show = <span class="literal">true</span>  </span><br><span class="line">       <span class="comment">// 发送退出消息给主程序  </span></span><br><span class="line">       _, _ = fmt.Fprintln(os.Stdout, <span class="string">&quot;systray_run: panel show&quot;</span>) <span class="comment">// 发送特定的退出消息  </span></span><br><span class="line">    &#125;  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;  </span><br><span class="line">    onReady()  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>通过 <code>ListenToMain</code> 方法，监听来自 <code>wails</code> 主程序的消息，做出相应的操作，比如当接收到 <code>quit</code> 消息时，托盘程序将退出。</p>
+<p>通过上面, 实现了 <code>wails</code> 与 <code>systray</code> 的协同工作，并通过管道实现了两个进程之间的通信。此方法不仅解决了 <code>wails</code> 原生不支持托盘功能的问题，还为今后多进程应用的开发提供了很好的参考</p>
+<h2 id="动态调整窗口大小"><a href="#动态调整窗口大小" class="headerlink" title="动态调整窗口大小"></a>动态调整窗口大小</h2><p>在之前的项目中，遇到了一个挑战：即如何在不同游戏之间保持窗口大小的一致性。这个问题最终通过查阅 <code>wails</code> 的文档得到了解决。发现可以动态地调整窗口大小，因此在代码中添加了对 <code>runtime.WindowSetSize</code> 和 <code>runtime.WindowReload</code> 的调用，以实现在游戏间切换时自动调整窗口尺寸的功能。</p>
+<p>具体来说，<code>Greet</code> 方法不仅返回问候信息，还在每次调用时动态地设置了窗口大小，并重新加载了窗口，确保了用户体验的一致性和流畅性。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(a *App)</span></span> Greet(name <span class="type">string</span>) <span class="type">string</span> &#123;  </span><br><span class="line">    runtime.WindowSetSize(a.ctx, <span class="number">1000</span>, <span class="number">500</span>)    <span class="comment">// 动态设置窗口大小</span></span><br><span class="line">    runtime.WindowReload(a.ctx)                <span class="comment">// 重新加载窗口</span></span><br><span class="line">    <span class="keyword">return</span> fmt.Sprintf(<span class="string">&quot;Hello %s, It&#x27;s show time!&quot;</span>, name)  </span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>通过上述功能的开发,实现了 <code>窗口</code>与 <code>托盘程序</code>的联动, 接下来就可以动手开发, 监听系统的功能了.</p>
+
+  </div>
+</article>
+<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2154665617309406"
+     crossorigin="anonymous"></script> -->
+<!-- 推荐广告 -->
+<!-- <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2154665617309406"
+     data-ad-slot="9190957443"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> -->
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/search/">搜索</a></li>
+         
+          <li><a href="/links/">友情连接</a></li>
+         
+          <li><a href="/project/">个人项目</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1"><span class="toc-number">1.</span> <span class="toc-text">进程间通信</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E8%B0%83%E6%95%B4%E7%AA%97%E5%8F%A3%E5%A4%A7%E5%B0%8F"><span class="toc-number">2.</span> <span class="toc-text">动态调整窗口大小</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%80%E5%90%8E"><span class="toc-number">3.</span> <span class="toc-text">最后</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://friday-go.icu/wails-%E5%92%8C-gopsutil-%E6%9E%84%E5%BB%BA%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7%E5%BA%94%E7%94%A8-%E4%BA%8C.html"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://friday-go.icu/wails-%E5%92%8C-gopsutil-%E6%9E%84%E5%BB%BA%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7%E5%BA%94%E7%94%A8-%E4%BA%8C.html&text=wails 和 gopsutil 构建系统工具应用(二)"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://friday-go.icu/wails-%E5%92%8C-gopsutil-%E6%9E%84%E5%BB%BA%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7%E5%BA%94%E7%94%A8-%E4%BA%8C.html&title=wails 和 gopsutil 构建系统工具应用(二)"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://friday-go.icu/wails-%E5%92%8C-gopsutil-%E6%9E%84%E5%BB%BA%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7%E5%BA%94%E7%94%A8-%E4%BA%8C.html&is_video=false&description=wails 和 gopsutil 构建系统工具应用(二)"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=wails 和 gopsutil 构建系统工具应用(二)&body=Check out this article: https://friday-go.icu/wails-%E5%92%8C-gopsutil-%E6%9E%84%E5%BB%BA%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7%E5%BA%94%E7%94%A8-%E4%BA%8C.html"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://friday-go.icu/wails-%E5%92%8C-gopsutil-%E6%9E%84%E5%BB%BA%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7%E5%BA%94%E7%94%A8-%E4%BA%8C.html&title=wails 和 gopsutil 构建系统工具应用(二)"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://friday-go.icu/wails-%E5%92%8C-gopsutil-%E6%9E%84%E5%BB%BA%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7%E5%BA%94%E7%94%A8-%E4%BA%8C.html&title=wails 和 gopsutil 构建系统工具应用(二)"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://friday-go.icu/wails-%E5%92%8C-gopsutil-%E6%9E%84%E5%BB%BA%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7%E5%BA%94%E7%94%A8-%E4%BA%8C.html&title=wails 和 gopsutil 构建系统工具应用(二)"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://friday-go.icu/wails-%E5%92%8C-gopsutil-%E6%9E%84%E5%BB%BA%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7%E5%BA%94%E7%94%A8-%E4%BA%8C.html&title=wails 和 gopsutil 构建系统工具应用(二)"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://friday-go.icu/wails-%E5%92%8C-gopsutil-%E6%9E%84%E5%BB%BA%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7%E5%BA%94%E7%94%A8-%E4%BA%8C.html&name=wails 和 gopsutil 构建系统工具应用(二)&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://friday-go.icu/wails-%E5%92%8C-gopsutil-%E6%9E%84%E5%BB%BA%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7%E5%BA%94%E7%94%A8-%E4%BA%8C.html&t=wails 和 gopsutil 构建系统工具应用(二)"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2024
+    PFinal南丞
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a href="/links/">友情连接</a></li><!--
+     --><!--
+       --><li><a href="/project/">个人项目</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+  <script>
+    document.addEventListener('visibilitychange', function() {
+      if (document.visibilityState === 'hidden') {
+        document.title = '❤ 你快回来,我等的花儿都谢了 ❤';
+      } else {
+        document.title = 'wails 和 gopsutil 构建系统工具应用(二)';
+      }
+    })
+  </script>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="add7e1d1-5796-4d1c-b008-6205977b88c7"></script>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EVR51H8CSN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-EVR51H8CSN');
+    </script>
+
+<!-- Baidu Analytics -->
+
+  <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?8df0b5cb0dbad92cfb64ca6d88e8572a";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+  </script>
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>
