@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="baidu-site-verification" content="code-qgPh7OZm0c" />
+    <meta name="keywords" content="PFinalClub, 编程教育, PHP,Golang, Python,PFinal南丞,PFinal" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2154665617309406"
+     crossorigin="anonymous"></script>
+    <meta name="description" content="在开发的时候，User-Agent 字符串是浏览器发送给服务器的一串信息，用于标识浏览器的类型、版本、操作系统以及设备类型等。解析 User-Agent 字符串可以帮助开发者获取用户的设备信息，从而提供更精准的服务，例如页面适配、内容推荐等。 以下是我常用的两个 User-Agent 解析库，这些工具可以帮助简化设备识别过程。 mssola&#x2F;useragentmssola&#x2F;userage">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Go 语言的高性能 User-Agent 解析库">
+<meta property="og:url" content="https://friday-go.icu/Go%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84User-Agent%E8%A7%A3%E6%9E%90%E5%88%A9%E5%99%A8%EF%BC%9Auseragent%E4%B8%8Ego-useragent%E5%BA%93%E8%AF%A6%E8%A7%A3.html">
+<meta property="og:site_name" content="PFinalClub - 专业的编程社区">
+<meta property="og:description" content="在开发的时候，User-Agent 字符串是浏览器发送给服务器的一串信息，用于标识浏览器的类型、版本、操作系统以及设备类型等。解析 User-Agent 字符串可以帮助开发者获取用户的设备信息，从而提供更精准的服务，例如页面适配、内容推荐等。 以下是我常用的两个 User-Agent 解析库，这些工具可以帮助简化设备识别过程。 mssola&#x2F;useragentmssola&#x2F;userage">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-09-14T01:10:25.000Z">
+<meta property="article:modified_time" content="2024-09-14T01:32:33.652Z">
+<meta property="article:author" content="PFinal南丞">
+<meta property="article:tag" content="Golang">
+<meta property="article:tag" content="经验">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Go 语言的高性能 User-Agent 解析库</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+  
+<meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="PFinalClub - 专业的编程社区" type="application/atom+xml">
+</head>
+
+<style>
+  body {
+    width:60%;
+  }
+  @media screen and (max-width:768px) {
+    body {
+      width: 100%;
+    }
+  }
+</style>
+<body class="mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a href="/links/">友情连接</a></li><!--
+     --><!--
+       --><li><a href="/project/">个人项目</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/wails-%E5%92%8C-gopsutil-%E6%9E%84%E5%BB%BA%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7%E5%BA%94%E7%94%A8-%E4%BA%8C.html"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://friday-go.icu/Go%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84User-Agent%E8%A7%A3%E6%9E%90%E5%88%A9%E5%99%A8%EF%BC%9Auseragent%E4%B8%8Ego-useragent%E5%BA%93%E8%AF%A6%E8%A7%A3.html"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://friday-go.icu/Go%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84User-Agent%E8%A7%A3%E6%9E%90%E5%88%A9%E5%99%A8%EF%BC%9Auseragent%E4%B8%8Ego-useragent%E5%BA%93%E8%AF%A6%E8%A7%A3.html&text=Go 语言的高性能 User-Agent 解析库"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://friday-go.icu/Go%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84User-Agent%E8%A7%A3%E6%9E%90%E5%88%A9%E5%99%A8%EF%BC%9Auseragent%E4%B8%8Ego-useragent%E5%BA%93%E8%AF%A6%E8%A7%A3.html&title=Go 语言的高性能 User-Agent 解析库"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://friday-go.icu/Go%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84User-Agent%E8%A7%A3%E6%9E%90%E5%88%A9%E5%99%A8%EF%BC%9Auseragent%E4%B8%8Ego-useragent%E5%BA%93%E8%AF%A6%E8%A7%A3.html&is_video=false&description=Go 语言的高性能 User-Agent 解析库"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Go 语言的高性能 User-Agent 解析库&body=Check out this article: https://friday-go.icu/Go%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84User-Agent%E8%A7%A3%E6%9E%90%E5%88%A9%E5%99%A8%EF%BC%9Auseragent%E4%B8%8Ego-useragent%E5%BA%93%E8%AF%A6%E8%A7%A3.html"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://friday-go.icu/Go%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84User-Agent%E8%A7%A3%E6%9E%90%E5%88%A9%E5%99%A8%EF%BC%9Auseragent%E4%B8%8Ego-useragent%E5%BA%93%E8%AF%A6%E8%A7%A3.html&title=Go 语言的高性能 User-Agent 解析库"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://friday-go.icu/Go%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84User-Agent%E8%A7%A3%E6%9E%90%E5%88%A9%E5%99%A8%EF%BC%9Auseragent%E4%B8%8Ego-useragent%E5%BA%93%E8%AF%A6%E8%A7%A3.html&title=Go 语言的高性能 User-Agent 解析库"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://friday-go.icu/Go%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84User-Agent%E8%A7%A3%E6%9E%90%E5%88%A9%E5%99%A8%EF%BC%9Auseragent%E4%B8%8Ego-useragent%E5%BA%93%E8%AF%A6%E8%A7%A3.html&title=Go 语言的高性能 User-Agent 解析库"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://friday-go.icu/Go%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84User-Agent%E8%A7%A3%E6%9E%90%E5%88%A9%E5%99%A8%EF%BC%9Auseragent%E4%B8%8Ego-useragent%E5%BA%93%E8%AF%A6%E8%A7%A3.html&title=Go 语言的高性能 User-Agent 解析库"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://friday-go.icu/Go%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84User-Agent%E8%A7%A3%E6%9E%90%E5%88%A9%E5%99%A8%EF%BC%9Auseragent%E4%B8%8Ego-useragent%E5%BA%93%E8%AF%A6%E8%A7%A3.html&name=Go 语言的高性能 User-Agent 解析库&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://friday-go.icu/Go%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84User-Agent%E8%A7%A3%E6%9E%90%E5%88%A9%E5%99%A8%EF%BC%9Auseragent%E4%B8%8Ego-useragent%E5%BA%93%E8%AF%A6%E8%A7%A3.html&t=Go 语言的高性能 User-Agent 解析库"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#mssola-x2F-useragent"><span class="toc-number">1.</span> <span class="toc-text">mssola&#x2F;useragent</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#go-useragent"><span class="toc-number">2.</span> <span class="toc-text">go-useragent</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">2.1.</span> <span class="toc-text">总结</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Go 语言的高性能 User-Agent 解析库
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">PFinal南丞</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2024-09-14T01:10:25.000Z" itemprop="datePublished">2024-09-14</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/Golang/">Golang</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/Golang/" rel="tag">Golang</a>, <a class="tag-link-link" href="/tags/%E7%BB%8F%E9%AA%8C/" rel="tag">经验</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>在开发的时候，<code>User-Agent</code> 字符串是浏览器发送给服务器的一串信息，用于标识浏览器的类型、版本、操作系统以及设备类型等。解析 User-Agent 字符串可以帮助开发者获取用户的设备信息，从而提供更精准的服务，例如页面适配、内容推荐等。</p>
+<p>以下是我常用的两个 <code>User-Agent</code> 解析库，这些工具可以帮助简化设备识别过程。</p>
+<h2 id="mssola-x2F-useragent"><a href="#mssola-x2F-useragent" class="headerlink" title="mssola&#x2F;useragent"></a>mssola&#x2F;useragent</h2><p><code>mssola/useragent</code> 是一个小巧简洁的 <code>User-Agent</code> 解析库，它的使用非常便捷。</p>
+<p><strong>安装</strong></p>
+<p>通过下面的命令来安装此库：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">go get -u github.com/mssola/useragent</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>使用</strong></p>
+<p>下面是一个简单的示例代码，展示了如何解析 <code>User-Agent</code> 字符串并提取其中的信息：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">    <span class="string">&quot;fmt&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;github.com/mssola/useragent&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="comment">// The &quot;New&quot; function will create a new UserAgent object and it will parse</span></span><br><span class="line">    <span class="comment">// the given string. If you need to parse more strings, you can re-use</span></span><br><span class="line">    <span class="comment">// this object and call: ua.Parse(&quot;another string&quot;)</span></span><br><span class="line">    ua := useragent.New(<span class="string">&quot;Mozilla/5.0 (Linux; U; Android 2.3.7; en-us; Nexus One Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1&quot;</span>)</span><br><span class="line"></span><br><span class="line">    fmt.Printf(<span class="string">&quot;%v\n&quot;</span>, ua.Mobile())   <span class="comment">// =&gt; true  </span></span><br><span class="line">    fmt.Printf(<span class="string">&quot;%v\n&quot;</span>, ua.Bot())      <span class="comment">// =&gt; false</span></span><br><span class="line">    fmt.Printf(<span class="string">&quot;%v\n&quot;</span>, ua.Mozilla())  <span class="comment">// =&gt; &quot;5.0&quot;</span></span><br><span class="line">    fmt.Printf(<span class="string">&quot;%v\n&quot;</span>, ua.Model())    <span class="comment">// =&gt; &quot;Nexus One&quot;</span></span><br><span class="line"></span><br><span class="line">    fmt.Printf(<span class="string">&quot;%v\n&quot;</span>, ua.Platform()) <span class="comment">// =&gt; &quot;Linux&quot;</span></span><br><span class="line">    fmt.Printf(<span class="string">&quot;%v\n&quot;</span>, ua.OS())       <span class="comment">// =&gt; &quot;Android 2.3.7&quot;</span></span><br><span class="line"></span><br><span class="line">    name, version := ua.Engine()</span><br><span class="line">    fmt.Printf(<span class="string">&quot;%v\n&quot;</span>, name)          <span class="comment">// =&gt; &quot;AppleWebKit&quot;</span></span><br><span class="line">    fmt.Printf(<span class="string">&quot;%v\n&quot;</span>, version)       <span class="comment">// =&gt; &quot;533.1&quot;</span></span><br><span class="line"></span><br><span class="line">    name, version = ua.Browser()</span><br><span class="line">    fmt.Printf(<span class="string">&quot;%v\n&quot;</span>, name)          <span class="comment">// =&gt; &quot;Android&quot;</span></span><br><span class="line">    fmt.Printf(<span class="string">&quot;%v\n&quot;</span>, version)       <span class="comment">// =&gt; &quot;4.0&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// Let&#x27;s see an example with a bot.</span></span><br><span class="line"></span><br><span class="line">    ua.Parse(<span class="string">&quot;Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)&quot;</span>)</span><br><span class="line"></span><br><span class="line">    fmt.Printf(<span class="string">&quot;%v\n&quot;</span>, ua.Bot())      <span class="comment">// =&gt; true</span></span><br><span class="line"></span><br><span class="line">    name, version = ua.Browser()</span><br><span class="line">    fmt.Printf(<span class="string">&quot;%v\n&quot;</span>, name)          <span class="comment">// =&gt; Googlebot</span></span><br><span class="line">    fmt.Printf(<span class="string">&quot;%v\n&quot;</span>, version)       <span class="comment">// =&gt; 2.1</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>通过以上代码，可以方便地检测常用信息，如是否是移动设备、是否是机器人等。此外，它还能提取操作系统、平台、浏览器引擎等信息。</p>
+<h2 id="go-useragent"><a href="#go-useragent" class="headerlink" title="go-useragent"></a>go-useragent</h2><p><code>go-useragent</code> 是另一款高效的 <code>User-Agent</code> 解析库，相较于其他库，它具有以下显著优势：</p>
+<ul>
+<li><strong>高性能</strong>：<code>go-useragent</code> 使用 Trie 树结构来匹配 <code>User-Agent</code> 字符串，解析速度极快，能够达到亚微秒级别。</li>
+<li><strong>轻量级</strong>：此库的代码简洁易懂，依赖较少，非常适合集成到各种 Go 项目中。</li>
+<li><strong>高准确性</strong>：<code>go-useragent</code> 的规则库定期更新，保证解析结果的准确性。</li>
+</ul>
+<p><strong>安装</strong></p>
+<p>安装 <code>go-useragent</code> 的命令如下：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">go get github.com/medama-io/go-useragent</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>使用</strong><br>以下是一个示例，展示如何使用该库解析 <code>User-Agent</code>：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">&quot;fmt&quot;</span></span><br><span class="line">	<span class="string">&quot;github.com/medama-io/go-useragent&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="comment">// Create a new parser. Initialize only once during application startup.</span></span><br><span class="line">	ua := useragent.NewParser()</span><br><span class="line"></span><br><span class="line">	<span class="comment">// Example user-agent string.</span></span><br><span class="line">	str := <span class="string">&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36&quot;</span></span><br><span class="line"></span><br><span class="line">	agent := ua.Parse(str)</span><br><span class="line"></span><br><span class="line">	fmt.Println(agent.GetBrowser())  <span class="comment">// Chrome</span></span><br><span class="line">	fmt.Println(agent.GetOS())       <span class="comment">// Windows</span></span><br><span class="line">	fmt.Println(agent.GetVersion())  <span class="comment">// 118.0.0.0</span></span><br><span class="line">	fmt.Println(agent.IsDesktop())  <span class="comment">// true</span></span><br><span class="line">	fmt.Println(agent.IsMobile())   <span class="comment">// false</span></span><br><span class="line">	fmt.Println(agent.IsTablet())   <span class="comment">// false</span></span><br><span class="line">	fmt.Println(agent.IsTV())       <span class="comment">// false</span></span><br><span class="line">	fmt.Println(agent.IsBot())      <span class="comment">// false</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">// Helper functions.</span></span><br><span class="line">	fmt.Println(agent.GetMajorVersion())  <span class="comment">// 118</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>这两个 <code>User-Agent</code> 解析库都非常实用，适合不同的开发需求。<code>mssola/useragent</code> 更加小巧简洁，提供了常见的检测功能，而 <code>go-useragent</code> 则在性能和准确性方面表现突出，适合需要高性能解析的场景。在选择解析库时，建议根据具体的项目需求进行选择。</p>
+
+  </div>
+</article>
+<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2154665617309406"
+     crossorigin="anonymous"></script> -->
+<!-- 推荐广告 -->
+<!-- <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2154665617309406"
+     data-ad-slot="9190957443"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> -->
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/search/">搜索</a></li>
+         
+          <li><a href="/links/">友情连接</a></li>
+         
+          <li><a href="/project/">个人项目</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#mssola-x2F-useragent"><span class="toc-number">1.</span> <span class="toc-text">mssola&#x2F;useragent</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#go-useragent"><span class="toc-number">2.</span> <span class="toc-text">go-useragent</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">2.1.</span> <span class="toc-text">总结</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://friday-go.icu/Go%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84User-Agent%E8%A7%A3%E6%9E%90%E5%88%A9%E5%99%A8%EF%BC%9Auseragent%E4%B8%8Ego-useragent%E5%BA%93%E8%AF%A6%E8%A7%A3.html"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://friday-go.icu/Go%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84User-Agent%E8%A7%A3%E6%9E%90%E5%88%A9%E5%99%A8%EF%BC%9Auseragent%E4%B8%8Ego-useragent%E5%BA%93%E8%AF%A6%E8%A7%A3.html&text=Go 语言的高性能 User-Agent 解析库"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://friday-go.icu/Go%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84User-Agent%E8%A7%A3%E6%9E%90%E5%88%A9%E5%99%A8%EF%BC%9Auseragent%E4%B8%8Ego-useragent%E5%BA%93%E8%AF%A6%E8%A7%A3.html&title=Go 语言的高性能 User-Agent 解析库"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://friday-go.icu/Go%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84User-Agent%E8%A7%A3%E6%9E%90%E5%88%A9%E5%99%A8%EF%BC%9Auseragent%E4%B8%8Ego-useragent%E5%BA%93%E8%AF%A6%E8%A7%A3.html&is_video=false&description=Go 语言的高性能 User-Agent 解析库"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Go 语言的高性能 User-Agent 解析库&body=Check out this article: https://friday-go.icu/Go%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84User-Agent%E8%A7%A3%E6%9E%90%E5%88%A9%E5%99%A8%EF%BC%9Auseragent%E4%B8%8Ego-useragent%E5%BA%93%E8%AF%A6%E8%A7%A3.html"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://friday-go.icu/Go%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84User-Agent%E8%A7%A3%E6%9E%90%E5%88%A9%E5%99%A8%EF%BC%9Auseragent%E4%B8%8Ego-useragent%E5%BA%93%E8%AF%A6%E8%A7%A3.html&title=Go 语言的高性能 User-Agent 解析库"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://friday-go.icu/Go%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84User-Agent%E8%A7%A3%E6%9E%90%E5%88%A9%E5%99%A8%EF%BC%9Auseragent%E4%B8%8Ego-useragent%E5%BA%93%E8%AF%A6%E8%A7%A3.html&title=Go 语言的高性能 User-Agent 解析库"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://friday-go.icu/Go%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84User-Agent%E8%A7%A3%E6%9E%90%E5%88%A9%E5%99%A8%EF%BC%9Auseragent%E4%B8%8Ego-useragent%E5%BA%93%E8%AF%A6%E8%A7%A3.html&title=Go 语言的高性能 User-Agent 解析库"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://friday-go.icu/Go%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84User-Agent%E8%A7%A3%E6%9E%90%E5%88%A9%E5%99%A8%EF%BC%9Auseragent%E4%B8%8Ego-useragent%E5%BA%93%E8%AF%A6%E8%A7%A3.html&title=Go 语言的高性能 User-Agent 解析库"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://friday-go.icu/Go%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84User-Agent%E8%A7%A3%E6%9E%90%E5%88%A9%E5%99%A8%EF%BC%9Auseragent%E4%B8%8Ego-useragent%E5%BA%93%E8%AF%A6%E8%A7%A3.html&name=Go 语言的高性能 User-Agent 解析库&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://friday-go.icu/Go%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84User-Agent%E8%A7%A3%E6%9E%90%E5%88%A9%E5%99%A8%EF%BC%9Auseragent%E4%B8%8Ego-useragent%E5%BA%93%E8%AF%A6%E8%A7%A3.html&t=Go 语言的高性能 User-Agent 解析库"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2024
+    PFinal南丞
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a href="/links/">友情连接</a></li><!--
+     --><!--
+       --><li><a href="/project/">个人项目</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+  <script>
+    document.addEventListener('visibilitychange', function() {
+      if (document.visibilityState === 'hidden') {
+        document.title = '❤ 你快回来,我等的花儿都谢了 ❤';
+      } else {
+        document.title = 'Go 语言的高性能 User-Agent 解析库';
+      }
+    })
+  </script>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="add7e1d1-5796-4d1c-b008-6205977b88c7"></script>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EVR51H8CSN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-EVR51H8CSN');
+    </script>
+
+<!-- Baidu Analytics -->
+
+  <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?8df0b5cb0dbad92cfb64ca6d88e8572a";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+  </script>
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>
