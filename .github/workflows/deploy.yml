@@ -82,9 +82,11 @@ jobs:
           source: ./docs/.vitepress/dist
           destination: ./_site
 
-        # 上传 _site 的资源，用于后续部署
+       # 上传构建好的资源，用于后续部署
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist  # 或者 _site，取决于你的构建输出目录
 
   # 部署任务
   deploy:
@@ -94,6 +96,15 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages  # 切换到 gh-pages 分支
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist  # 使用构建输出的目录，比如 dist 或 _site
+          target_branch: gh-pages  # 将构建输出部署到 gh-pages 分支
