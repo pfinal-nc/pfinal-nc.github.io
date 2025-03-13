@@ -97,3 +97,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          target_branch: gh-pages  # 指定 gh-pages 作为部署分支
