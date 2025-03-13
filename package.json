@@ -1,0 +1,35 @@
+{
+  "name": "PFianlClub",
+  "version": "1.0.0",
+  "private": true,
+  "author": "粥里有勺糖",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "serve": "vitepress serve docs"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.3.1",
+    "@sugarat/theme": "^0.5.4",
+    "element-plus": "^2.7.2",
+    "vue": "3.5.12"
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "devDependencies": {
+    "pagefind": "^1.3.0",
+    "sass": "^1.76.0",
+    "typescript": "^5.4.5",
+    "vitepress": "1.6.3"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@algolia/client-search",
+        "search-insights"
+      ]
+    }
+  }
+}
