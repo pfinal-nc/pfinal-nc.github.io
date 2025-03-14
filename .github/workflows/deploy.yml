@@ -41,9 +41,16 @@ jobs:
       - name: Build
         run: pnpm build
 
+      - name: Prepare CNAME
+        run: |
+          echo "friday-go.icu" > ./docs/.vitepress/dist/CNAME
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs/.vitepress/dist
           commit_message: 'deploy: update site'
+          keep_files: true # 保留已存在的文件
+          enable_jekyll: false
+          cname: friday-go.icu # 设置 CNAME
