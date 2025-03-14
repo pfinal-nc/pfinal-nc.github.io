@@ -3,4 +3,4 @@ Allow: /
 Disallow: /404.html
 
 # Sitemap
-Sitemap: https://pfinalclub.com/sitemap.xml
+Sitemap: https://friday-go.icu/sitemap.xml

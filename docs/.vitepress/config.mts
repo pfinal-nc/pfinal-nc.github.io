@@ -4,6 +4,9 @@ import { defineConfig } from 'vitepress'
 import { blogTheme } from './blog-theme'
 
 export default defineConfig({
+  sitemap: {
+    hostname:'https://friday-go.icu'
+  },
   extends: blogTheme,
   lang: 'zh-cn',
   title: 'PFinalClub',
