@@ -20,7 +20,11 @@ export default defineConfig({
     ['meta', { property: 'og:url', content: 'https://friday-go.icu' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:title', content: 'PFinalClub' }],
-    ['meta', { name: 'twitter:description', content: 'PFinalClub是一个专注于PHP、Golang、Python、微服务、云原生等技术的开发者社区' }]
+    ['meta', { name: 'twitter:description', content: 'PFinalClub是一个专注于PHP、Golang、Python、微服务、云原生等技术的开发者社区' }],
+    ['script',{
+      src:"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2154665617309406",
+      crossorigin:"anonymous"
+    }]
   ],
   themeConfig: {
     outline: {
