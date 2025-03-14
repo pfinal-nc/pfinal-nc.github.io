@@ -14,7 +14,7 @@ descriptionHTML: '
 </pre>'
 ---
 
-## 常用快捷键
+# Tmux 常用快捷键
 
 ```
 # 新建会话

@@ -7,7 +7,10 @@ tag:
  - Laravel 
 description: 手工构建laravel 框架,详细介绍了从项目初始化到添加各个组件的完整过程。
 keywords: Laravel, 构建, 手工, 框架, 手工构建, PHP
+sticky: true
 ---
+
+#  Laravel 手工构建
 
 
 ## 手工构建laravel框架
