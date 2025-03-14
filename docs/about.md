@@ -2,6 +2,7 @@
 title: PFinal南丞
 date: 2025-03-13 15:46:00
 author: PFinal南丞
+hidden: true
 ---
 # 关于作者
 
@@ -38,6 +39,6 @@ author: PFinal南丞
 <br>
 <font color="#2bbc8a">   工作:   打杂 </font> 
 <br>
-<font color="#2bbc8a">   称号:   人体描边艺术家, 废话扯淡专家 </font> 
+<font color="#2bbc8a">   称号:   人体描边艺术家, 废话扯淡专家 </font>
 
 

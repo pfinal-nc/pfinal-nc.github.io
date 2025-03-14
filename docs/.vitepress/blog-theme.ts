@@ -1,21 +1,6 @@
 // 主题独有配置
 import { getThemeConfig } from '@sugarat/theme/node'
 
-// 开启RSS支持（RSS配置）
-// import type { Theme } from '@sugarat/theme'
-
-// const baseUrl = 'https://sugarat.top'
-// const RSS: Theme.RSSOptions = {
-//   title: '粥里有勺糖',
-//   baseUrl,
-//   copyright: 'Copyright (c) 2018-present, 粥里有勺糖',
-//   description: '你的指尖,拥有改变世界的力量（大前端相关技术分享）',
-//   language: 'zh-cn',
-//   image: 'https://img.cdn.sugarat.top/mdImg/MTY3NDk5NTE2NzAzMA==674995167030',
-//   favicon: 'https://sugarat.top/favicon.ico',
-// }
-
-// 所有配置项，详见文档: https://theme.sugarat.top/
 const blogTheme = getThemeConfig({
   // 开启RSS支持
   // RSS,
@@ -25,7 +10,7 @@ const blogTheme = getThemeConfig({
   // search: false,
 
   // markdown 图表支持（会增加一定的构建耗时）
-  // mermaid: true
+  // mermaid: trues
 
   // 页脚
   footer: {
@@ -40,29 +25,46 @@ const blogTheme = getThemeConfig({
     //   name: '公网安备xxxxx',
     //   link: 'https://www.beian.gov.cn/portal/index.do'
     // },
+    version: false,
+    
   },
-
   // 主题色修改
   themeColor: 'el-blue',
 
   // 文章默认作者
   author: 'PFinal南丞',
 
+  // 文章过滤
+  recommend: {
+    // 文章过滤
+    filter: (page) => {
+      console.log(page.meta)
+      return page.meta.hidden !== true
+    },
+  },
+
   // 友链
   friend: [
     {
-      nickname: '粥里有勺糖',
+      nickname: 'PHP武器库',
       des: '你的指尖用于改变世界的力量',
       avatar:
-        'https://img.cdn.sugarat.top/mdImg/MTY3NDk5NTE2NzAzMA==674995167030',
-      url: 'https://sugarat.top',
+        'https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202503140939616.jpg',
+      url: 'https://phpreturn.com',
     },
     {
-      nickname: 'Vitepress',
-      des: 'Vite & Vue Powered Static Site Generator',
+      nickname: '技术胖',
+      des: '技术胖的个人博客',
       avatar:
-        'https://vitepress.dev/vitepress-logo-large.webp',
-      url: 'https://vitepress.dev/',
+        'https://jspang.com/img/avatar.jpg',
+      url: 'https://jspang.com',
+    },
+    {
+      nickname: '满江风雪',
+      des: '时光漫漫，何妨扬眉淡笑，心境从容？',
+      avatar:
+        'https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202503140939616.jpg',
+      url: 'https://forever.run',
     },
   ],
 
@@ -70,10 +72,10 @@ const blogTheme = getThemeConfig({
   popover: {
     title: '公告',
     body: [
-      { type: 'text', content: '👇公众号👇---👇 微信 👇' },
+      { type: 'text', content: '👇公众号👇' },
       {
         type: 'image',
-        src: 'https://img.cdn.sugarat.top/mdImg/MTYxNTAxODc2NTIxMA==615018765210~fmt.webp'
+        src: 'https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202503140949946.png',
       },
       {
         type: 'text',
@@ -81,22 +83,22 @@ const blogTheme = getThemeConfig({
       },
       {
         type: 'text',
-        content: '文章首/文尾有群二维码',
+        content: '文章首/文尾二维码',
         style: 'padding-top:0'
       },
       {
         type: 'button',
         content: '作者博客',
-        link: 'https://sugarat.top'
+        link: 'https://friday-go.icu'
       },
-      {
-        type: 'button',
-        content: '加群交流',
-        props: {
-          type: 'success'
-        },
-        link: 'https://theme.sugarat.top/group.html',
-      }
+      // {
+      //   type: 'button',
+      //   content: '加群交流',
+      //   props: {
+      //     type: 'success'
+      //   },
+      //   link: 'https://theme.sugarat.top/group.html',
+      // }
     ],
     duration: 0
   },

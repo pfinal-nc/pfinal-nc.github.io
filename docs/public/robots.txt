@@ -1,2 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /404.html
+
+# Sitemap
+Sitemap: https://pfinalclub.com/sitemap.xml
