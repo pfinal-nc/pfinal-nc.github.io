@@ -4,7 +4,6 @@ date: 2022-03-13 15:46:00
 keywords: Tmux, 常用快捷键, 工具
 tag:
   - 工具
-top: 1  
 sticky: true
 description: Tmux 常用快捷键
 descriptionHTML: '
