@@ -58,22 +58,27 @@ jobs:
     needs: build
     environment:
       name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }} # 添加环境 URL 关联
     steps:
       - name: Checkout gh-pages branch
         uses: actions/checkout@v4
         with:
-          ref: gh-pages  # ✅ 切换到 gh-pages 分支
+          ref: gh-pages
+          token: ${{ secrets.GITHUB_TOKEN }} # 显式指定 token
 
       - name: Download built artifact
-        uses: actions/download-artifact@v4  # [!code --] 旧版本 v3 → 新版本 v4
+        uses: actions/download-artifact@v4
         with:
           name: github-pages
-          path: ./  # ✅ 下载到当前目录
+          path: ./
 
       - name: Deploy to gh-pages
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }} # 传递 token
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git add .
-          git commit -m "Deploy to GitHub Pages" || echo "No changes to commit"
+          git commit -m "Deploy: $(date +'%Y-%m-%d %H:%M:%S')"
           git push origin gh-pages
