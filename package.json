@@ -2,7 +2,7 @@
   "name": "PFianlClub",
   "version": "1.0.0",
   "private": true,
-  "author": "粥里有勺糖",
+  "author": "PFinalClub",
   "license": "MIT",
   "scripts": {
     "dev": "vitepress dev docs",
