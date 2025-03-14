@@ -3,7 +3,11 @@ import { defineConfig } from 'vitepress'
 // 导入主题的配置
 import { blogTheme } from './blog-theme'
 
+const base = 'https://www.friday-go.icu'
+
+
 export default defineConfig({
+  base,
   extends: blogTheme,
   lang: 'zh-cn',
   title: 'PFinalClub',
