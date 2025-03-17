@@ -66,6 +66,13 @@ const blogTheme = getThemeConfig({
         'https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202503140939616.jpg',
       url: 'https://forever.run',
     },
+    {
+      nickname: '廖雪峰',
+      des: '廖雪峰的官方网站 (liaoxuefeng.com) 研究互联网产品和技术，提供原创中文精品教程',
+      avatar:
+        'https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202503140939616.jpg',
+      url: 'https://liaoxuefeng.com',
+    },
   ],
 
   // 公告

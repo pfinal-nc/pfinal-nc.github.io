@@ -14,7 +14,7 @@ export default defineConfig({
   lastUpdated: true,
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
-    ['meta', { name: 'keywords', content: 'PHP社区,Golang开发,Python教程,Laravel框架,Docker容器,微服务架构,云原生,技术博客,架构设计,性能优化,DevOps,PFinalClub,开发者社区,编程社区,后端开发,AI' }],
+    ['meta', { name: 'keywords', content: 'pfinalclub, git, gitsite, javascript, node, jquery, python, php, laravel, sql, database, linux, operating system, os, cpu, verilog, risc-v, bitcoin, ethereum, ai, 教程, 软件, 编程, 开发, 运维, 云计算, 网络, 互联网, 比特币, 以太坊, 操作系统, 智能合约, 数字货币, 爬虫, 逆向' }],
     ['meta', { name: 'author', content: 'PFinal南丞' }],
     ['meta', { name: 'robots', content: 'index,follow' }],
     ['meta', { property: 'og:title', content: 'PFinalClub' }],
