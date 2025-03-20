@@ -24,7 +24,7 @@ sticky: true
 
 实现思路很简单, 就是 变量项目下的所有目录, 找到 .DS_Store 文件, 然后删除
 
-```golang
+```go
 
 type ClearPath struct {
 	Path string
@@ -71,7 +71,7 @@ cobra-cli add pf_cd  # 添加一个 pf_cd 命令进去
 
 生成指定的 *pfCd.go* 文件, 然后对文件进行修改:
 
-```golang
+```go
 /*
 Copyright © 2024 NAME HERE <EMAIL ADDRESS>
 */

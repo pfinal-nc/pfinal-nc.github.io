@@ -33,7 +33,7 @@ pf_tools pf_cwx [urlstring]
 
 #### 代码实现
 
-```golang
+```go
 func GetWxUrlInfo(urlString string) {
 	api := "https://cgi.urlsec.qq.com/index.php?m=url&a=validUrl&url=" + urlString
 	resp, err := http.Get(api)
@@ -183,7 +183,7 @@ Run 方法下就是 应对的业务逻辑, 我这里的结构是如下:
 ```
 所有的 业务流程代码是放在 pak 的 所以 Run的代码修改成了下面的:
 
-```golang
+```go
 
 	Run: func(cmd *cobra.Command, args []string) {
 		if len(args) == 0 {
