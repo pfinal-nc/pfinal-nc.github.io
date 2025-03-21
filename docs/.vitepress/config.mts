@@ -25,9 +25,12 @@ export default defineConfig({
     ['meta', { name: 'twitter:title', content: 'PFinalClub' }],
     ['meta', { name: 'twitter:description', content: 'PFinalClub是一个专注于PHP、Golang、Python、微服务、云原生等技术的开发者社区' }],
     // 内联 JS 示例（这里使用了 obfuscated 代码）
-    ['script', { 'data-cfasync': 'false', type: 'text/javascript', src: '/js/inline-script.js', async: '', onerror: '_fnotkgr()', onload: '_uyqgfsdq()' }],
-    // 引入外部脚本示例
-    ['script', { 'data-zone': '9114325','data-cfasync': 'false', type: 'text/javascript', src: '//madurird.com/tag.min.js', async: '', onerror: '_fnotkgr()', onload: '_uyqgfsdq()' }]
+    ['script', {},`
+       (function(s, u, z, p) {
+    s.src = u,
+    s.setAttribute('data-zone', z),
+    p.appendChild(s);
+})(document.createElement('script'), 'https://shebudriftaiter.net/tag.min.js', 9114325, document.body || document.documentElement) ;`],
   ],
   themeConfig: {
     outline: {
