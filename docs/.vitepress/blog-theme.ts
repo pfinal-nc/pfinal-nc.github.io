@@ -80,6 +80,13 @@ const blogTheme = getThemeConfig({
         'https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202503140939616.jpg',
       url: 'https://so1n.me',
     },
+    {
+      nickname: 'LuLublog',
+      des: 'lulublog记录php工作和学习笔记',
+      avatar:
+        'https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202503140939616.jpg',
+      url: 'https://lulublog.cn',
+    }
   ],
 
   // 公告
