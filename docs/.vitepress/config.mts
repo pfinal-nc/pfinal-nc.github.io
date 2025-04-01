@@ -29,6 +29,18 @@ export default defineConfig({
       crossorigin: 'anonymous',
       async: 'async'
     }],
+    [
+      'script',
+      {
+        async: '',
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-EVR51H8CSN'
+      }
+    ],
+    [
+      'script',
+      {},
+      "window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'G-EVR51H8CSN');"
+    ]
   ],
   themeConfig: {
     outline: {
