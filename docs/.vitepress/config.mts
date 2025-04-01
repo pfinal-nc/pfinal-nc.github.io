@@ -47,15 +47,21 @@ export default defineConfig({
     ]
   ],
   transformPageData(pageData,ctx) {
-    // 判断是否是文章详情页
-    if (!pageData.frontmatter.layout) {  
-     const articleKeywords = pageData.frontmatter.keywords
-     if (articleKeywords) {
-       pageData.frontmatter.keywords = `${articleKeywords},${BASE_KEYWORDS}`
-     }
-     BASE_KEYWORDS = `${articleKeywords},${BASE_KEYWORDS}`
-     console.log('文章关键词',)
-    }
+    // 判断是否为文章详情页（这里假设详情页没有设置 layout）
+  if (!pageData.frontmatter.layout) {
+    const articleKeywords = pageData.frontmatter.keywords;
+    // 拼接动态关键词
+    const newKeywords = articleKeywords 
+      ? `${articleKeywords},${BASE_KEYWORDS}` 
+      : BASE_KEYWORDS;
+    // 确保 head 数组存在
+    pageData.frontmatter.head = pageData.frontmatter.head || [];
+    // 添加或覆盖 meta keywords 标签
+    pageData.frontmatter.head.push([
+      'meta',
+      { name: 'keywords', content: newKeywords }
+    ]);
+  }
  }, 
   themeConfig: {
     outline: {
