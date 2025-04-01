@@ -11,16 +11,6 @@ export default defineConfig({
   sitemap: {
     hostname:'https://friday-go.icu'
   },
-  transformPageData(pageData) {
-     // 判断是否是文章详情页
-     if (!pageData.frontmatter.layout) {  
-      const articleKeywords = pageData.frontmatter.keywords
-      if (articleKeywords) {
-        pageData.frontmatter.keywords = `${articleKeywords},${BASE_KEYWORDS}`
-      }
-      BASE_KEYWORDS = `${articleKeywords},${BASE_KEYWORDS}`
-     }
-  }, 
   extends: blogTheme,
   lang: 'zh-cn',
   title: 'PFinalClub',
@@ -56,6 +46,17 @@ export default defineConfig({
       "window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'G-EVR51H8CSN');"
     ]
   ],
+  transformPageData(pageData,ctx) {
+    // 判断是否是文章详情页
+    if (!pageData.frontmatter.layout) {  
+     const articleKeywords = pageData.frontmatter.keywords
+     if (articleKeywords) {
+       pageData.frontmatter.keywords = `${articleKeywords},${BASE_KEYWORDS}`
+     }
+     BASE_KEYWORDS = `${articleKeywords},${BASE_KEYWORDS}`
+     console.log('文章关键词',)
+    }
+ }, 
   themeConfig: {
     outline: {
       level: [2, 3],

@@ -38,7 +38,6 @@ const blogTheme = getThemeConfig({
   recommend: {
     // 文章过滤
     filter: (page) => {
-      console.log(page.meta)
       return page.meta.hidden !== true
     },
   },
