@@ -3,10 +3,24 @@ import { defineConfig } from 'vitepress'
 // 导入主题的配置
 import { blogTheme } from './blog-theme'
 
+// 全局基础关键词
+let BASE_KEYWORDS = 'pfinalclub, git, gitsite, javascript, node, jquery, python, php, laravel, sql, database, linux, operating system, os, cpu, verilog, risc-v, bitcoin, ethereum, ai, 教程, 软件, 编程, 开发, 运维, 云计算, 网络, 互联网, 比特币, 以太坊, 操作系统, 智能合约, 数字货币, 爬虫, 逆向'
+
+
 export default defineConfig({
   sitemap: {
     hostname:'https://friday-go.icu'
   },
+  transformPageData(pageData) {
+     // 判断是否是文章详情页
+     if (!pageData.frontmatter.layout) {  
+      const articleKeywords = pageData.frontmatter.keywords
+      if (articleKeywords) {
+        pageData.frontmatter.keywords = `${articleKeywords},${BASE_KEYWORDS}`
+      }
+      BASE_KEYWORDS = `${articleKeywords},${BASE_KEYWORDS}`
+     }
+  }, 
   extends: blogTheme,
   lang: 'zh-cn',
   title: 'PFinalClub',
@@ -14,7 +28,7 @@ export default defineConfig({
   lastUpdated: true,
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
-    ['meta', { name: 'keywords', content: 'pfinalclub, git, gitsite, javascript, node, jquery, python, php, laravel, sql, database, linux, operating system, os, cpu, verilog, risc-v, bitcoin, ethereum, ai, 教程, 软件, 编程, 开发, 运维, 云计算, 网络, 互联网, 比特币, 以太坊, 操作系统, 智能合约, 数字货币, 爬虫, 逆向' }],
+    ['meta', { name: 'keywords', content: BASE_KEYWORDS }],
     ['meta', { name: 'author', content: 'PFinal南丞' }],
     ['meta', { name: 'robots', content: 'index,follow' }],
     ['meta', { property: 'og:title', content: 'PFinalClub' }],
