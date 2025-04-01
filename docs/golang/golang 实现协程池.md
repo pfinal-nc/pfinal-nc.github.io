@@ -2,7 +2,7 @@
 title: Golang 实现协程池
 date: 2024-11-09 11:31:32
 tags:
-    - Golang
+    - golang
 description: 详细介绍Golang实现协程池的方法，包括协程池的概念、应用场景、实现方式等，帮助开发者更好地利用Golang的协程池功能，提高程序的性能和响应速度。
 author: PFinal南丞
 keywords: Golang, 协程池, 实现, 方法, 协程, 池, 概念, 应用, 场景, 实现方式, 协程池功能, 性能, 响应速度
