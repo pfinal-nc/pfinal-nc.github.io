@@ -32,7 +32,7 @@ export default defineConfig({
     [
       'script',
       {},
-      "(function(d,z,s){s.src='https://'+d+'/401/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('groleegni.net',9154483,document.createElement('script'))"
+      "(function(s,u,z,p){s.src=u,s.setAttribute('data-zone',z),p.appendChild(s);})(document.createElement('script'),'https://shebudriftaiter.net/tag.min.js',9114325,document.body||document.documentElement)"
     ]
   ],
   transformPageData(pageData,ctx) {
