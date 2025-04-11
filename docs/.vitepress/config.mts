@@ -29,7 +29,7 @@ export default defineConfig({
     ['meta', { name: 'twitter:title', content: 'PFinalClub' }],
     ['meta', { name: 'twitter:description', content: 'PFinalClub是一个专注于PHP、Golang、Python、微服务、云原生等技术的开发者社区。提供原创技术文章、实战教程、架构设计、性能优化、DevOps等专业内容，助力开发者提升全方位技术能力。' }],
     ['meta', {name:'360-site-verification', content:'bafd565a2170482bd9ff0c063ba5a41a'}],
-    ['meta', {name:'baidu-site-verification', content:'codeva-TJ3TmwLlMS'}],
+    ['meta', {name:'yandex-verification', content:'20badebe204f6b0b'}],
     ['script', {}, `(function(d,z,s){s.src='https://'+d+'/400/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('vemtoutcheeg.com',9114535,document.createElement('script'))`],
     // ['script', {}, `(function(d,z,s){s.src='https://'+d+'/401/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('groleegni.net',9154483,document.createElement('script'))`],
   ],
