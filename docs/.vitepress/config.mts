@@ -31,7 +31,7 @@ export default defineConfig({
     ['meta', {name:'360-site-verification', content:'bafd565a2170482bd9ff0c063ba5a41a'}],
     ['meta', {name:'baidu-site-verification', content:'codeva-TJ3TmwLlMS'}],
     ['script', {}, `(function(d,z,s){s.src='https://'+d+'/400/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('vemtoutcheeg.com',9114535,document.createElement('script'))`],
-    ['script', {}, `(function(d,z,s){s.src='https://'+d+'/401/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('groleegni.net',9154483,document.createElement('script'))`],
+    // ['script', {}, `(function(d,z,s){s.src='https://'+d+'/401/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('groleegni.net',9154483,document.createElement('script'))`],
   ],
   transformPageData(pageData,ctx) {
     // 判断是否为文章详情页（这里假设详情页没有设置 layout）
