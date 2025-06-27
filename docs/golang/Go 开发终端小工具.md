@@ -7,7 +7,6 @@ tags:
 description: 详细介绍golang开发终端小工具,包括天气查询和手机归属地查询等功能,使用cobra库来开发命令行小工具。
 author: PFinal南丞
 keywords: Go 开发终端小工具, golang, 工具, 开发, 编程, 终端, 天气查询, 手机归属地查询, cobra库, 命令行小工具
-top: 1
 sticky: true
 
 ---
