@@ -6,7 +6,7 @@ tags:
 
 description: 介绍Composer配置文件的基本概念和使用方法，包括配置文件的位置、依赖管理、包管理、版本控制等。
 author: PFinal南丞
-keywords: Composer, 配置文件, 依赖管理, 包管理, 版本控制
+keywords: Composer, 配置文件, 依赖管理, 包管理, 版本控制,AI,ai
 ---
 
 # Composer配置文件说明

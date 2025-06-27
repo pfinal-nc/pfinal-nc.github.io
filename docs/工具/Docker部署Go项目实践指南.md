@@ -6,7 +6,7 @@ tags:
   - 工具
   - Docker
 description: "Docker部署Go项目实践指南"
-keywords: Docker, 部署, Go, 项目, 实践, 指南
+keywords: Docker, 部署, Go, 项目, 实践, 指南,AI,ai
 ---
 
 # Docker部署Go项目实践指南

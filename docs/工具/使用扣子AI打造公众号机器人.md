@@ -5,7 +5,7 @@ tags:
   - 工具
 description: 使用扣子AI打造公众号机器人
 author: PFinal南丞
-keywords: 使用扣子AI打造公众号机器人, AI,机器人 , 公众号
+keywords: 使用扣子AI打造公众号机器人, AI,机器人 , 公众号,AI,ai
 ---
 # 使用扣子AI打造公众号机器人
 
