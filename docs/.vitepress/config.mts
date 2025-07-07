@@ -8,6 +8,7 @@ let BASE_KEYWORDS = 'pfinalclub, git, gitsite, javascript, node, jquery, python,
 
 
 export default defineConfig({
+  base: './', // 审核阶段用相对路径
   sitemap: {
     hostname:'https://friday-go.icu'
   },
