@@ -41,6 +41,9 @@ jobs:
       - name: Build
         run: pnpm build
 
+      - name: Fix preload links in HTML
+        run: node scripts/fix-preload.js
+
       - name: Prepare CNAME
         run: |
           echo "friday-go.icu" > ./docs/.vitepress/dist/CNAME
