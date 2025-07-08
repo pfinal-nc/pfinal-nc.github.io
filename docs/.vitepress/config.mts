@@ -12,10 +12,8 @@ function removePreload(): Plugin {
     name: 'remove-preload',
     enforce: 'post',
     transformIndexHtml(html: string) {
-      return html.replace(
-        /\s*<link rel="(?:module)?preload"[^>]*>/gm,
-        ''
-      )
+       // 更宽松的正则，兼容属性顺序和大小写
+       return html.replace(/<link[^>]+rel=["'](?:module)?preload["'][^>]*>/gi, '')
     }
   }
 }
