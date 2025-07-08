@@ -1,3 +1,11 @@
+/*
+ * @Author: pfinal liuxuzhu@smm.cn
+ * @Date: 2025-03-24 08:59:57
+ * @LastEditors: pfinal liuxuzhu@smm.cn
+ * @LastEditTime: 2025-07-08 16:36:47
+ * @FilePath: /pfinal-vue-blog/docs/.vitepress/config.mts
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 import { defineConfig } from 'vitepress'
 
 // 导入主题的配置
@@ -8,6 +16,7 @@ let BASE_KEYWORDS = 'pfinalclub, git, gitsite, javascript, node, jquery, python,
 
 
 export default defineConfig({
+  base: 'https://friday-go.icu',
   sitemap: {
     hostname:'https://friday-go.icu'
   },
