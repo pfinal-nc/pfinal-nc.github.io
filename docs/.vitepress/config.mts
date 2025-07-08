@@ -1,15 +1,39 @@
+/*
+ * @Author: pfinal liuxuzhu@smm.cn
+ * @Date: 2025-03-24 08:59:57
+ * @LastEditors: pfinal liuxuzhu@smm.cn
+ * @LastEditTime: 2025-07-08 16:55:06
+ * @FilePath: /pfinal-vue-blog/docs/.vitepress/config.mts
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 import { defineConfig } from 'vitepress'
-
+import type { Plugin } from 'vite'
 // 导入主题的配置
 import { blogTheme } from './blog-theme'
 
 // 全局基础关键词
 let BASE_KEYWORDS = 'pfinalclub, git, gitsite, javascript, node, jquery, python, php, laravel, sql, database, linux, operating system, os, cpu, verilog, risc-v, bitcoin, ethereum, ai, 教程, 软件, 编程, 开发, 运维, 云计算, 网络, 互联网, 比特币, 以太坊, 操作系统, 智能合约, 数字货币, 爬虫, 逆向'
 
+// 自定义插件：移除所有 preload 和 modulepreload link 标签
+function removePreload(): Plugin {
+  return {
+    name: 'remove-preload',
+    enforce: 'post',
+    transformIndexHtml(html: string) {
+      return html.replace(
+        /\s*<link rel="(?:module)?preload"[^>]*>/gm,
+        ''
+      )
+    }
+  }
+}
 
 export default defineConfig({
   sitemap: {
     hostname:'https://friday-go.icu'
+  },
+  vite: {
+    plugins: [removePreload()]
   },
   extends: blogTheme,
   lang: 'zh-cn',
