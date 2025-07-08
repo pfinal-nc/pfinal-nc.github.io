@@ -2,7 +2,7 @@
  * @Author: pfinal liuxuzhu@smm.cn
  * @Date: 2025-03-24 08:59:57
  * @LastEditors: pfinal liuxuzhu@smm.cn
- * @LastEditTime: 2025-07-08 16:55:06
+ * @LastEditTime: 2025-07-08 16:58:48
  * @FilePath: /pfinal-vue-blog/docs/.vitepress/config.mts
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -32,6 +32,7 @@ export default defineConfig({
   sitemap: {
     hostname:'https://friday-go.icu'
   },
+  
   vite: {
     plugins: [removePreload()]
   },
