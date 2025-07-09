@@ -1,9 +1,9 @@
 ---
-title: Python Version Management Tool - pyenv
+title: Python Version Management Tool pyenv
 date: 2023-04-27 22:10:20
 author: PFinal Nancheng
 tags: 
-    - python
+    - Python
 keywords: Python Version Management Tool pyenv, python, tool, python version management, pyenv tutorial, python environment configuration
 description: Detailed introduction to pyenv, a powerful Python version management tool, including installation, configuration, version switching, virtual environment management, and other core functions to help developers easily manage multiple Python versions.
 ---
