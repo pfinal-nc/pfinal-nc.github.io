@@ -66,25 +66,25 @@ const blogTheme = getThemeConfig({
   friend: getFriendByLocale('en'),
   // 公告
   popover: {
-    title: '公告',
+    title: 'Announcement',
     body: [
-      { type: 'text', content: '👇公众号👇' },
+      { type: 'text', content: '👇Official Account👇' },
       {
         type: 'image',
         src: 'https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202503140949946.png',
       },
       {
         type: 'text',
-        content: '欢迎大家加群&私信交流'
+        content: 'Welcome to join the group & private message'
       },
       {
         type: 'text',
-        content: '文章首/文尾二维码',
+        content: 'Article first/tail QR code',
         style: 'padding-top:0'
       },
       {
         type: 'button',
-        content: '作者博客',
+        content: 'Author Blog',
         link: 'https://friday-go.icu'
       },
     ],
