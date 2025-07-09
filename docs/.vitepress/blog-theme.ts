@@ -63,7 +63,7 @@ const blogTheme = getThemeConfig({
       return page.meta.hidden !== true
     },
   },
-  friend: getFriendByLocale('zh-CN'),
+  friend: getFriendByLocale('en'),
   // 公告
   popover: {
     title: '公告',
