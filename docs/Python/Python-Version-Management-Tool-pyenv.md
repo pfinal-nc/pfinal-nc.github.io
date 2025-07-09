@@ -144,7 +144,9 @@ OUT:
 ```
     vim ~/.bashrc
 ```
+
 - Copy the following content to the end
+
 ```
     eval "$(pyenv virtualenv-init -)"
 ```
@@ -166,6 +168,7 @@ OUT:
    pyenv activate test
 ```
 - Exit the virtual environment
+
 ```
    pyenv deactivate
 ```
