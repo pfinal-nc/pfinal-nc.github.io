@@ -1,19 +1,20 @@
 ---
 layout: home
-# 首页部分元素定制
+# Homepage Elements Customization
 blog:
  title: 'PFianlClub'
  logo: /logo.png
- author: PFinal南丞
+ author: PFinalClub
  name: 'PFianlClub'
- motto: 专注编程技术分享的开发者社区
+ motto: A developer community dedicated to sharing programming knowledge
  inspiring:
-  - 千万不要因为走得太久，而忘记了我们为什么出发
-  - 人生就像一场修行，你不可能一开始就修成正果
-  - 无论多么沉重的负担，也不要忘记微笑；无论多么漫长的路程，也不要忘记坚持
-  - 生活的真谛不在繁华，而在于淡泊
- # 设置 inspiringTimeout 可以实现自动切换
+  - No matter how far you go, never forget why you started
+  - Life is a journey of growth; no one achieves mastery overnight
+  - However heavy the burden, always remember to smile; however long the road, always keep going
+  - True meaning in life lies not in extravagance, but in simplicity
+ # Set inspiringTimeout to enable automatic rotation
  inspiringTimeout: 3000
  pageSize: 6
- minScreenAvatar: true
----
+ minScreenAvatar: true,
+ 
+--- 

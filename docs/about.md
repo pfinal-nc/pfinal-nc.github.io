@@ -1,44 +1,41 @@
 ---
-title: PFinal南丞
+title: PFinalClub
 date: 2025-03-13 15:46:00
-author: PFinal南丞
+author: PFinalClub
 hidden: true
 ---
-# 关于作者
+# About the Author
 
-> 技术路上的苦行僧
+> An ascetic on the road of technology
 
 <font color="#2bbc8a">
-    - Web 开发者，热爱开源，Laravel 脑残粉，代码洁癖患者。
+    - Web developer, open-source enthusiast, die-hard Laravel fan, code perfectionist.
 </font>
 <br>
 <font color="#2bbc8a">
-    - 并不特别聪明，也并不特别勤奋，没事儿喜欢瞎折腾。喜欢简单安静的生活。
+    - Not particularly smart, nor especially diligent, likes to tinker around. Enjoys a simple and quiet life.
 </font>
 <br>
 <font color="#2bbc8a">
-    - 喜欢音乐、喝茶、钓鱼、独处、发呆
+    - Likes music, tea, fishing, solitude, and daydreaming.
 </font>
 
-## 技能
+## Skills
 
-- PHP 略熟 靠这个混饭吃
-- Python 略懂 写爬虫 整些运维小工具
-- Go 略懂 写写工具 配合PHP 写工作业务
-- 前端 杂七杂八 搞点特效 偶尔写写业务
-- Linux 略懂 瞎折腾 偶尔整点服务器
-- 数据库 略懂 瞎折腾 偶尔整点数据库
-- 偶尔搞点鸿蒙 APP, Chrome 插件, 小程序
+- PHP: Fairly familiar, makes a living with it
+- Python: Knows a bit, writes crawlers and some ops tools
+- Go: Knows a bit, writes tools and works with PHP for business tasks
+- Frontend: Dabbles in effects, occasionally writes business code
+- Linux: Knows a bit, tinkers around, sometimes manages servers
+- Database: Knows a bit, tinkers around, sometimes manages databases
+- Occasionally works on HarmonyOS apps, Chrome extensions, and mini-programs
 
+## Contact
 
-## 联系
- 
-<font color="#2bbc8a">   昵称:   PFinal南丞</font>
+<font color="#2bbc8a">   Nickname:   PFinal Nancheng</font>
 <br>
-<font color="#2bbc8a">   邮件:   lampxiezi@163.com</font> 
+<font color="#2bbc8a">   Email:   lampxiezi@163.com</font> 
 <br>
-<font color="#2bbc8a">   工作:   打杂 </font> 
+<font color="#2bbc8a">   Job:   Jack of all trades </font> 
 <br>
-<font color="#2bbc8a">   称号:   人体描边艺术家, 废话扯淡专家 </font>
-
-
+<font color="#2bbc8a">   Title:   Human Outline Artist, Nonsense Expert </font>

@@ -1,6 +1,28 @@
 // 主题独有配置
 import { getThemeConfig } from '@sugarat/theme/node'
 
+
+const friend_zh = [
+  { nickname: 'PHP武器库', des: '你的指尖用于改变世界的力量', avatar: 'https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202503140939616.jpg', url: 'https://phpreturn.com' },
+  { nickname: '技术胖', des: '技术胖的个人博客', avatar: 'https://jspang.com/img/avatar.jpg', url: 'https://jspang.com' },
+  { nickname: '满江风雪', des: '时光漫漫，何妨扬眉淡笑，心境从容？', avatar: 'https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202503140939616.jpg', url: 'https://forever.run' },
+  { nickname: '廖雪峰', des: '廖雪峰的官方网站 (liaoxuefeng.com) 研究互联网产品和技术，提供原创中文精品教程', avatar: 'https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202503140939616.jpg', url: 'https://liaoxuefeng.com' },
+  { nickname: 'so1n-python', des: 'so1n 研究互联网产品和技术，提供原创中文精品教程', avatar: 'https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202503140939616.jpg', url: 'https://so1n.me' },
+  { nickname: 'LuLublog', des: 'lulublog记录php工作和学习笔记', avatar: 'https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202503140939616.jpg', url: 'https://lulublog.cn' }
+]
+const friend_en = [
+  { nickname: 'PHP Arsenal', des: 'The power at your fingertips to change the world', avatar: 'https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202503140939616.jpg', url: 'https://phpreturn.com' },
+  { nickname: 'JSPang', des: 'JSPang Personal Blog', avatar: 'https://jspang.com/img/avatar.jpg', url: 'https://jspang.com' },
+  { nickname: 'Manjiang Snow', des: 'Time flows, keep a calm mind and a gentle smile', avatar: 'https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202503140939616.jpg', url: 'https://forever.run' },
+  { nickname: 'Liao Xuefeng', des: 'Official site with original Chinese tech tutorials', avatar: 'https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202503140939616.jpg', url: 'https://liaoxuefeng.com' },
+  { nickname: 'so1n-python', des: 'so1n: Original Chinese tech tutorials', avatar: 'https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202503140939616.jpg', url: 'https://so1n.me' },
+  { nickname: 'LuLublog', des: 'LuLublog: PHP work and study notes', avatar: 'https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202503140939616.jpg', url: 'https://lulublog.cn' }
+]
+
+function getFriendByLocale(locale) {
+  return locale === 'zh-CN' ? friend_zh : friend_en
+}
+
 const blogTheme = getThemeConfig({
   // 开启RSS支持
   // RSS,
@@ -41,53 +63,7 @@ const blogTheme = getThemeConfig({
       return page.meta.hidden !== true
     },
   },
-
-  // 友链
-  friend: [
-    {
-      nickname: 'PHP武器库',
-      des: '你的指尖用于改变世界的力量',
-      avatar:
-        'https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202503140939616.jpg',
-      url: 'https://phpreturn.com',
-    },
-    {
-      nickname: '技术胖',
-      des: '技术胖的个人博客',
-      avatar:
-        'https://jspang.com/img/avatar.jpg',
-      url: 'https://jspang.com',
-    },
-    {
-      nickname: '满江风雪',
-      des: '时光漫漫，何妨扬眉淡笑，心境从容？',
-      avatar:
-        'https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202503140939616.jpg',
-      url: 'https://forever.run',
-    },
-    {
-      nickname: '廖雪峰',
-      des: '廖雪峰的官方网站 (liaoxuefeng.com) 研究互联网产品和技术，提供原创中文精品教程',
-      avatar:
-        'https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202503140939616.jpg',
-      url: 'https://liaoxuefeng.com',
-    },
-    {
-      nickname: 'so1n-python',
-      des: 'so1n 研究互联网产品和技术，提供原创中文精品教程',
-      avatar:
-        'https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202503140939616.jpg',
-      url: 'https://so1n.me',
-    },
-    {
-      nickname: 'LuLublog',
-      des: 'lulublog记录php工作和学习笔记',
-      avatar:
-        'https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202503140939616.jpg',
-      url: 'https://lulublog.cn',
-    }
-  ],
-
+  friend: getFriendByLocale('zh-CN'),
   // 公告
   popover: {
     title: '公告',
@@ -111,14 +87,6 @@ const blogTheme = getThemeConfig({
         content: '作者博客',
         link: 'https://friday-go.icu'
       },
-      // {
-      //   type: 'button',
-      //   content: '加群交流',
-      //   props: {
-      //     type: 'success'
-      //   },
-      //   link: 'https://theme.sugarat.top/group.html',
-      // }
     ],
     duration: 0
   },
