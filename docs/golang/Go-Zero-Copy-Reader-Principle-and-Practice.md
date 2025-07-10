@@ -1,5 +1,5 @@
 ---
-title: Go Zero-Copy Reader: Principle and Practice
+title: Go Zero-Copy Reader Principle and Practice
 date: 2025-07-03 12:30:00
 tags:
     - golang
@@ -7,7 +7,7 @@ tags:
     - IO optimization
     - programming technology
 description: Combining practical cases, this article deeply and clearly introduces the principle, implementation, technical challenges, and best practices of zero-copy readers in Go.
-author: PFinal南尧
+author: PFinal南丞
 keywords: Go, zero-copy, IO, performance optimization, reader, practice, programming, technology, experience sharing
 sticky: true
 ---
