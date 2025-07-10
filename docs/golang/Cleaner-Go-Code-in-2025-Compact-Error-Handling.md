@@ -1,11 +1,11 @@
 ---
-title: Cleaner Go Code in 2025: Compact Error Handling
+title: Cleaner Go Code in 2025 Compact Error Handling
 date: 2025-07-08 10:00:00
 tags:
   - golang
   - error handling
   - programming technology
-author: PFinal南尧
+author: PFinal南丞
 keywords: golang, error management, programming practice, PFinalClub
 description: In 2025, error management in Go code is becoming more compact and elegant. This article combines real-world cases and personal experience to share how to handle Go errors in a cleaner way, making your code more robust and maintainable.
 ---
