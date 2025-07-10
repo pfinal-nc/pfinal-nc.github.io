@@ -5,7 +5,9 @@ tags:
   - SaaS
   - Entrepreneurship
   - Programming Technology
-author: PFinal南尧
+
+author: PFinal南丞
+
 keywords: SaaS, Entrepreneurship, Micro Product, Programming, PFinalClub
 description: Have you ever wondered what 'blue oceans' still exist in the SaaS field? This article shares 9 micro SaaS startup ideas with little competition but huge demand, along with practical advice and technical implementation ideas.
 ---

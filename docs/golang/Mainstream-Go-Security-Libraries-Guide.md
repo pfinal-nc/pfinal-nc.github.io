@@ -4,7 +4,9 @@ data: 2024-04-10 11:46:43
 tags:
     - golang
 description: Detailed introduction to the usage of mainstream Go security libraries, including crypto, encoding, hash, math, rand, strconv, time, etc., to help developers better protect the security of their applications.
-author: PFinal南尧
+
+author: PFinal南丞
+
 keywords: Go Security Libraries Guide, Go, Security Libraries, Guide, crypto, encoding, hash, math, rand, strconv, time
 ---
 

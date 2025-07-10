@@ -7,7 +7,9 @@ tags:
     - golang
     - programming technology
 description: Combining practical cases, this article details how to efficiently develop MCP servers in the VS Code environment, covering environment setup, debugging tips, common issues, and best practices.
+
 author: PFinal南丞
+
 keywords: VS Code, MCP, server, development, quick start, golang, practice, technology, experience sharing
 sticky: true
 ---

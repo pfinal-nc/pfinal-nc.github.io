@@ -7,7 +7,9 @@ tags:
     - MCP
     - programming technology
 description: Combining practical cases, this article details how to use Go to build an efficient remote storage MCP server, covering architecture design, key implementation, technical challenges, and best practices.
-author: PFinal南尧
+
+author: PFinal南丞
+
 keywords: Go, remote storage, MCP, server, architecture design, concurrency, practice, programming, technology, experience sharing
 sticky: true
 ---
