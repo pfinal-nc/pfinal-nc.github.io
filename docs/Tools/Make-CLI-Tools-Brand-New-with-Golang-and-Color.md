@@ -5,7 +5,7 @@ tags:
     - golang
     - tools
 description: Introduction to a tool for quickly creating Golang projects and enhancing CLI output with colors.
-author: PFinal Nancheng
+author: PFinal南丞
 keywords: Make CLI Tools Brand New, golang, tools, project, quick, AI, color
 sticky: true
 ---

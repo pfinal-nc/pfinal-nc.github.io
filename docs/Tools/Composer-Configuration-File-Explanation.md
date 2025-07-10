@@ -5,7 +5,7 @@ tags:
     - PHP
 
 description: Introduction to the basic concepts and usage of Composer configuration files, including file location, dependency management, package management, version control, etc.
-author: PFinal Nancheng
+author: PFinal南丞
 keywords: Composer, configuration file, dependency management, package management, version control, AI, ai
 ---
 

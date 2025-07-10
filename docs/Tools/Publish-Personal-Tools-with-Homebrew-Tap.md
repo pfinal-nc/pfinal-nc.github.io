@@ -4,7 +4,7 @@ date: 2024-08-21 09:49:32
 tags:
   - tools
 description: Introduction to a tool for quickly creating Golang projects and distributing them via Homebrew Tap.
-author: PFinal Nancheng
+author: PFinal南丞
 keywords: Publish Personal Tools with Homebrew Tap, golang, project creation, quick creation, tools, project, quick, AI, ai
 ---
 

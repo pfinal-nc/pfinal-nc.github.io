@@ -4,7 +4,7 @@ date: 2023-04-07 09:28:47
 tags:
     - python
 description: Learning Python coroutines
-author: PFinal南尧
+author: PFinal南丞
 keywords: Python, coroutine, concurrency, programming, asyncio, async IO, Future, Task
 ---
 

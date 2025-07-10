@@ -4,7 +4,7 @@ date: 2023-04-03 21:58:33
 tags:
     - python
 description: Collection of commonly used Python website resources
-author: PFinal Nancheng
+author: PFinal南丞
 keywords: Python, website, collection, resources, development, programming, tools, mirror sites, crawler
 ---
 # Python Useful Websites Collection

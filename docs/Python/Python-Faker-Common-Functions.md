@@ -4,7 +4,7 @@ date: 2023-04-05 22:10:20
 tags:
     - python
 description: Common functions of the Faker library
-author: PFinal Nancheng
+author: PFinal南丞
 keywords: Python, library, function, common, Faker, generate, data, test, mock
 ---
 

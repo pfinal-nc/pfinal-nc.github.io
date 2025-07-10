@@ -6,7 +6,7 @@ tags:
   - python
   - Webpack
 description: Crawler JS reverse engineering Webpack tips
-author: PFinal南尧
+author: PFinal南丞
 keywords: Crawler JS Reverse Engineering Webpack Tips, crawler, JS, Webpack
 ---
 # Crawler JS Reverse Engineering Webpack Tips
