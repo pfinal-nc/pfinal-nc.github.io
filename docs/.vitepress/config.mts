@@ -60,7 +60,16 @@ export default defineConfig({
     }
   },
   sitemap: {
-    hostname: 'https://friday-go.icu'
+    hostname: 'https://friday-go.icu',
+    transformItems: (items) => {
+      items.push({
+        url: '/zh/',
+        changefreq: 'daily',
+        priority: 1,
+        lastmod: new Date().toISOString()
+      })
+      return items
+    }
   },
   extends: blogTheme,
   lang: 'en-US',
