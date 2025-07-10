@@ -111,6 +111,7 @@ OUT:
   * system (set by /root/.pyenv/version)
     3.6.5
 ```
+
 - Switch Python version
 
     There are three switching methods: global, local, shell*
@@ -181,7 +182,9 @@ Type yes to confirm
 
 ### Common commands
 
+```
 Usage: pyenv <command> [<parameter>]
+```
 
 ```
 Commands:
