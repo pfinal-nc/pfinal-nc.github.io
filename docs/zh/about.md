@@ -6,39 +6,51 @@ hidden: true
 ---
 # 关于作者
 
-> 技术路上的苦行僧
+> 技术路上的苦行僧，热爱分享与创造
 
 <font color="#2bbc8a">
-    - Web 开发者，热爱开源，Laravel 脑残粉，代码洁癖患者。
+    - 全栈开发者，开源践行者，Laravel & Go 爱好者，代码洁癖患者。
 </font>
 <br>
 <font color="#2bbc8a">
-    - 并不特别聪明，也并不特别勤奋，没事儿喜欢瞎折腾。喜欢简单安静的生活。
+    - 喜欢钻研新技术，乐于折腾，追求极致的代码体验。
 </font>
 <br>
 <font color="#2bbc8a">
-    - 喜欢音乐、喝茶、钓鱼、独处、发呆
+    - 生活简单安静，热爱音乐、喝茶、钓鱼、独处与发呆。
 </font>
 
-## 技能
+## 技能标签
 
-- PHP 略熟 靠这个混饭吃
-- Python 略懂 写爬虫 整些运维小工具
-- Go 略懂 写写工具 配合PHP 写工作业务
-- 前端 杂七杂八 搞点特效 偶尔写写业务
-- Linux 略懂 瞎折腾 偶尔整点服务器
-- 数据库 略懂 瞎折腾 偶尔整点数据库
-- 偶尔搞点鸿蒙 APP, Chrome 插件, 小程序
+- PHP：多年实战，主力语言，专注高效后端开发
+- Go：热衷工具开发，提升生产力，拥抱云原生
+- Python：爬虫、自动化与运维脚本小能手
+- 前端：Vue、特效、交互，偶尔写写业务
+- Linux：服务器运维与自动化部署
+- 数据库：MySQL/Redis 等常用数据库实践
+- 也会玩鸿蒙 APP、Chrome 插件、小程序等新玩意
 
+## 个人理念
 
-## 联系
- 
-<font color="#2bbc8a">   昵称:   PFinal南丞</font>
-<br>
-<font color="#2bbc8a">   邮件:   lampxiezi@163.com</font> 
-<br>
-<font color="#2bbc8a">   工作:   打杂 </font> 
-<br>
-<font color="#2bbc8a">   称号:   人体描边艺术家, 废话扯淡专家 </font>
+> "代码改变世界，分享成就自我。"
 
+- 坚信技术的力量，乐于在社区中传递价值
+- 追求代码的优雅与高效，拒绝重复造轮子
+- 享受技术带来的乐趣，也尊重生活的本真
+
+## 联系方式
+
+<font color="#2bbc8a">昵称：PFinal南丞</font><br>
+<font color="#2bbc8a">邮箱：lampxiezi@163.com</font><br>
+<font color="#2bbc8a">职业：全栈开发 & 技术布道</font><br>
+<font color="#2bbc8a">标签：极简主义者、开源爱好者、生活体验家</font>
+
+## 个人网站
+
+<font color="#2bbc8a">博客主页：</font> <a href="https://pfinal.com" target="_blank">https://pfinal.com</a><br>
+<font color="#2bbc8a">GitHub：</font> <a href="https://github.com/pfinal-nc" target="_blank">https://github.com/pfinal-nc</a>
+
+---
+
+欢迎交流与合作，一起用代码探索更大的世界！
 
