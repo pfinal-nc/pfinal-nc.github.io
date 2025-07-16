@@ -10,6 +10,7 @@ description: Combining practical cases, this article deeply and clearly introduc
 author: PFinal南丞
 keywords: Go, zero-copy, IO, performance optimization, reader, practice, programming, technology, experience sharing
 sticky: true
+top: 1
 ---
 
 # Go Zero-Copy Reader: The Secret Weapon for High-Performance IO

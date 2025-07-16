@@ -8,6 +8,7 @@ description: Introduces some small tools that can improve Golang development eff
 author: PFinal南丞
 keywords: Golang, tools, efficiency, improvement, small tools, code quality, development, programming, tools, auto-formatting, auto-import, code completion, AI
 sticky: true
+top: 1
 ---
 
 # Small Tools to Boost Golang Development Efficiency
