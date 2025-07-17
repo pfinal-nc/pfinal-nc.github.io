@@ -5,7 +5,7 @@ tags:
     - python
     - crawler
 description: Feature collection of common encryption and decryption algorithms for crawlers
-author: PFinal Nancheng
+author: PFinal南丞
 keywords: crawler, encryption, decryption, algorithm, feature, collection
 ---
 
