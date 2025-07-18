@@ -1,6 +1,6 @@
 ---
 title: PHP 8.5 NoDiscard Attribute - The Ultimate Guide to Eliminating Silent Errors
-date: 2024-12-19 10:30:00
+date: 2025-07-19 10:30:00
 tags:
     - PHP
     - PHP8.5
