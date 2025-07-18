@@ -5,7 +5,7 @@ tags:
     - PHP
 description: PHP $_SESSION 引发的Bug
 author: PFinal南丞
-keywords: PHP, 会话, 引发, Bug, PHP_SESSION, $_SESSION, 会话管理
+keywords: PHP, 会话, 引发, Bug, PHP_SESSION, $_SESSION, 会话管理, PHP $_SESSION 引发的Bug, PHP会话管理, PHP会话存储, PHP会话配置, PHP会话安全, PHP会话问题, PHP会话调试, PHP会话最佳实践, PHP会话教程, PHP会话机制, PHP会话存储路径, PHP会话故障排除
 ---
 
 # PHP $_SESSION 引发的Bug

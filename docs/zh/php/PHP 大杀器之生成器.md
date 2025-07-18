@@ -5,7 +5,7 @@ tags:
     - PHP
 description: PHP 大杀器之生成器
 author: PFinal南丞
-keywords: PHP, 生成器, 解析, PHP生成器, PHP生成器解析, PHP生成器解析
+keywords: PHP, 生成器, 解析, PHP生成器, PHP生成器解析, PHP生成器解析, PHP 大杀器之生成器, PHP生成器编程, PHP yield关键字, PHP内存优化, PHP迭代器, PHP生成器教程, PHP生成器最佳实践, PHP生成器应用, PHP生成器性能优化, PHP生成器内存管理, PHP生成器实战, PHP生成器技术
 ---
 
 # PHP 大杀器之生成器

@@ -6,7 +6,7 @@ tag:
     - PHP
     - Laravel 
 description: 手工构建laravel 框架,详细介绍了从项目初始化到添加各个组件的完整过程。
-keywords: Laravel, 构建, 手工, 框架, 手工构建, PHP
+keywords: Laravel, 构建, 手工, 框架, 手工构建, PHP, Laravel手工构建, Laravel框架构建, Laravel项目初始化, Laravel路由组件, Laravel控制器模块, Laravel模型组件, Laravel视图组件, Laravel服务容器, Laravel自动加载, Laravel Composer, Laravel框架架构, Laravel开发教程, Laravel实战指南
 ---
 
 #  Laravel 手工构建

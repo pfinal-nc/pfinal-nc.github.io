@@ -1,5 +1,5 @@
 ---
-title: 提升Wails应用性能：探索Go-Cache的高效内存缓存方案
+title: 提升Wails应用性能-探索Go-Cache的高效内存缓存方案
 date: 2023-09-30 17:22:37
 tags:
     - golang

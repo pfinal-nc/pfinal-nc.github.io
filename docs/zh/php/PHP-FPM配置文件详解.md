@@ -4,7 +4,7 @@ date: 2023-04-27 22:10:20
 author: PFinal南丞
 tags:
     - PHP
-keywords: PHP-FPM配置文件解析, php, 工具, php-fpm配置文件, php-fpm配置文件解析, php-fpm配置文件详解
+keywords: PHP-FPM配置文件解析, php, 工具, php-fpm配置文件, php-fpm配置文件解析, php-fpm配置文件详解, PHP-FPM配置文件详解, PHP-FPM配置优化, PHP-FPM进程管理, PHP-FPM性能调优, PHP-FPM日志配置, PHP-FPM安全配置, PHP-FPM服务器配置, PHP-FPM最佳实践, PHP-FPM配置教程, PHP-FPM高并发配置, PHP-FPM监控配置
 description: 详细介绍PHP-FPM配置文件解析，包括配置文件的基本结构、常用配置项、进程管理、日志记录等内容，帮助开发者更好地配置和管理PHP-FPM服务。
 ---
 

@@ -5,7 +5,7 @@ tags:
     - PHP
 description: PHP $_SERVER详解
 author: PFinal南丞
-keywords: PHP, $_SERVER
+keywords: PHP, $_SERVER, PHP $_SERVER详解, PHP服务器变量, PHP环境变量, PHP请求信息, PHP服务器信息, PHP $_SERVER数组, PHP服务器配置, PHP请求处理, PHP服务器变量详解, PHP $_SERVER教程, PHP服务器环境, PHP请求头信息, PHP服务器状态
 ---
 
 # PHP $_SERVER详解

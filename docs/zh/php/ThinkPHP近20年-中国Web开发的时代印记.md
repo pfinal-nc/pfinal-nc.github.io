@@ -6,7 +6,7 @@ tag:
     - PHP
     - ThinkPHP 
 description: 从2006年的初出茅庐，到如今的ThinkPHP 8.1.3，中国Web开发的故事里，ThinkPHP始终是一抹亮色。
-keywords: PHP,ThinkPHP, PFinalClub, 框架, PHP, ThinkPHP 8.1.3
+keywords: PHP,ThinkPHP, PFinalClub, 框架, PHP, ThinkPHP 8.1.3, ThinkPHP近20年中国Web开发的时代印记, ThinkPHP框架发展史, ThinkPHP版本演进, ThinkPHP路由系统优化, ThinkPHP日志系统, ThinkPHP性能优化, ThinkPHP升级指南, ThinkPHP最佳实践, ThinkPHP中国Web开发, ThinkPHP框架历史, ThinkPHP技术发展
 ---
 
 # ThinkPHP近20年——中国Web开发的时代印记
