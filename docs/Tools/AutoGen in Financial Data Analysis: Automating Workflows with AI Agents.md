@@ -1,5 +1,5 @@
 ---
-title: AutoGen in Financial Data Analysis: Building Enterprise-Grade Intelligent Analysis Systems
+title: AutoGen in Financial Data Analysis Building Enterprise-Grade Intelligent Analysis Systems
 date: 2025-07-21 09:49:32
 tags:
   - Tools
