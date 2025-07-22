@@ -25,7 +25,9 @@ export default defineConfig({
         logo: '/logo.png',
         nav: [
           { text: 'Home', link: '/' },
-          { text: 'About', link: '/about' }
+          { text: 'About', link: '/about' },
+          { text: 'Contact', link: '/contact' },
+          { text: 'Privacy Policy', link: '/privacy-policy' }
         ],
         socialLinks: [
           { icon: 'github', link: 'https://github.com/pfinal-nc' },
@@ -50,7 +52,9 @@ export default defineConfig({
         logo: '/logo.png',
         nav: [
           { text: '首页', link: '/zh/' },
-          { text: '关于作者', link: '/zh/about' }
+          { text: '关于作者', link: '/zh/about' },
+          { text: '联系我们', link: '/zh/contact' },
+          { text: '隐私政策', link: '/zh/privacy-policy' }
         ],
         socialLinks: [
           { icon: 'github', link: 'https://github.com/pfinal-nc' },
