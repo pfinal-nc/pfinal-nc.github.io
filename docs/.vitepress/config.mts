@@ -65,15 +65,14 @@ export default defineConfig({
   },
   sitemap: {
     hostname: 'https://friday-go.icu',
-    // transformItems: (items) => {
-    //   items.push({
-    //     url: '/zh/',
-    //     changefreq: 'daily',
-    //     priority: 1,
-    //     lastmod: new Date().toISOString()
-    //   })
-    //   return items
-    // }
+    transformItems: (items) => {
+      return items.map(item => ({
+        ...item,
+        changefreq: 'weekly',
+        priority: 0.8,
+        lastmod: new Date().toISOString()
+      }))
+    }
   },
   extends: blogTheme,
   lang: 'en-US',
