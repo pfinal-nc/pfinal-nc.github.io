@@ -1,5 +1,5 @@
 ---
-title: Cleaner Go Code in 2025: Compact Error Handling
+title: Cleaner Go Code in 2025 Compact Error Handling
 date: 2025-07-08 10:00:00
 tags:
   - golang
