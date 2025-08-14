@@ -3,7 +3,6 @@ Allow: /
 Disallow: /404.html
 Disallow: /.git/
 Disallow: /private/
-Crawl-delay: 10
 
 # Sitemap
 Sitemap: https://friday-go.icu/sitemap.xml
