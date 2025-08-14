@@ -4,7 +4,7 @@ import type { Plugin } from 'vite'
 import { blogTheme } from './blog-theme'
 
 // 全局基础关键词
-let BASE_KEYWORDS = 'pfinalclub, git, gitsite, javascript, node, jquery, python, php, laravel, sql, database, linux, operating system, os, cpu, verilog, risc-v, bitcoin, ethereum, ai, 教程, 软件, 编程, 开发, 运维, 云计算, 网络, 互联网, 比特币, 以太坊, 操作系统, 智能合约, 数字货币, 爬虫, 逆向'
+// let BASE_KEYWORDS = 'pfinalclub, git, gitsite, javascript, node, jquery, python, php, laravel, sql, database, linux, operating system, os, cpu, verilog, risc-v, bitcoin, ethereum, ai, 教程, 软件, 编程, 开发, 运维, 云计算, 网络, 互联网, 比特币, 以太坊, 操作系统, 智能合约, 数字货币, 爬虫, 逆向'
 
 
 export default defineConfig({
@@ -81,7 +81,6 @@ export default defineConfig({
   lastUpdated: true,
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
-    ['meta', { name: 'keywords', content: BASE_KEYWORDS }],
     ['meta', { name: 'author', content: 'PFinal南丞' }],
     ['meta', { name: 'robots', content: 'index,follow' }],
     ['meta', { property: 'og:title', content: 'PFinalClub' }],
