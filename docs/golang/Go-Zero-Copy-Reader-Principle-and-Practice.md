@@ -1,5 +1,5 @@
 ---
-title: Go Zero-Copy Reader: Principle and Practice
+title: Go Zero-Copy Reader Principle and Practice
 date: 2025-07-03 12:30:00
 tags:
     - golang

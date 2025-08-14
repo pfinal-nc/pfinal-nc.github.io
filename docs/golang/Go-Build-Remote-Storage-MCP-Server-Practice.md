@@ -1,5 +1,5 @@
 ---
-title: Building a Remote Storage MCP Server in Go: Practice and Insights
+title: Building a Remote Storage MCP Server in Go Practice and Insights
 date: 2025-07-01 12:00:00
 tags:
     - golang
