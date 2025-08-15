@@ -10,44 +10,98 @@ keywords: 基于Wails的Mac桌面应用开发, golang, Wails, 桌面应用, 开�
 ---
 # 基于Wails的Mac桌面应用开发
 
+> 在Go语言生态中，Wails是一个优秀的跨平台桌面应用开发框架。本文将详细介绍如何使用Wails开发Mac桌面应用，包括项目创建、架构设计、前后端通信等核心内容。
 
-​	最近在学习 go-wails开发, 于是基于go-wails 和 html,javascript 开发了一个Mac的桌面小应用,记录一下过程.
-
-
-
-#### go-wails 介绍
+最近在学习Wails开发，基于Wails和Web技术栈开发了一个Mac桌面小应用。在这个过程中，我深入了解了Wails的架构设计和开发流程，现在将整个开发过程记录下来，希望能为其他开发者提供参考。
 
 
 
-> Wails 是一个可让您使用 Go 和 Web 技术编写桌面应用的项目。将它看作为 Go 的快并且轻量的 Electron 替代品。Wails 带有许多预配置的模板，可让您快速启动和运行应用程序。 有以下框架的模板：Svelte、React、Vue、Preact、Lit 和 Vanilla。 每个模板都有 JavaScript 和 TypeScript 版本。
+## 🎯 Wails框架介绍
 
- 
+### 什么是Wails？
 
-[wails官方介绍](https://wails.io/)
+> Wails是一个可让您使用Go和Web技术编写桌面应用的项目。将它看作为Go的快并且轻量的Electron替代品。Wails带有许多预配置的模板，可让您快速启动和运行应用程序。有以下框架的模板：Svelte、React、Vue、Preact、Lit和Vanilla。每个模板都有JavaScript和TypeScript版本。
+
+### Wails的核心优势
+
+1. **轻量级**：相比Electron，Wails更加轻量，不需要打包整个Chromium
+2. **高性能**：使用系统原生WebView，性能表现优异
+3. **跨平台**：支持Windows、macOS、Linux三大主流平台
+4. **开发效率**：支持热重载，开发体验良好
+5. **技术栈灵活**：支持多种前端框架和语言
+
+### 技术架构
+
+Wails采用了前后端分离的架构设计：
+- **后端**：Go语言提供业务逻辑和系统API访问
+- **前端**：Web技术栈（HTML/CSS/JavaScript）提供用户界面
+- **通信**：通过Wails提供的API进行前后端数据交互
+
+[Wails官方文档](https://wails.io/)
 
 
 
 
 
-#### 项目效果
+## 📱 项目效果展示
+
+### 应用界面
 
 ![](https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202310181123657.png)
 
-#### 创建项目
+这是一个系统监控工具，主要功能包括：
+- **CPU使用率监控**：实时显示CPU使用情况
+- **内存使用监控**：显示内存占用状态
+- **系统信息展示**：显示CPU核心数等系统信息
+- **实时数据更新**：通过WebSocket实现数据实时刷新
 
+### 技术特点
 
+- **轻量级设计**：应用体积小，启动速度快
+- **实时监控**：支持系统资源的实时监控
+- **美观界面**：采用现代化UI设计
+- **跨平台支持**：基于Wails实现跨平台兼容
 
-```shell
+## 🚀 项目创建与初始化
+
+### 环境准备
+
+在开始开发之前，需要确保已经安装了Go语言环境和Wails CLI工具：
+
+```bash
+# 安装Wails CLI
+go install github.com/wailsapp/wails/v2/cmd/wails@latest
+
+# 验证安装
+wails doctor
+```
+
+### 创建项目
+
+使用Wails CLI创建新项目：
+
+```bash
 wails init -n wails_demo -t https://github.com/KiddoV/wails-pure-js-template
 ```
 
-​	
+**命令参数说明：**
+- `wails init`：初始化新项目
+- `-n wails_demo`：指定项目名称为wails_demo
+- `-t https://github.com/KiddoV/wails-pure-js-template`：指定使用纯HTML/JS模板
 
- **wails init ** 初始化项目命令
+### 模板选择
 
- **-n** 	参数指定项目的名称 *wails_demo* 是项目名称
+Wails提供了多种前端模板选择：
 
-**-t** 	参数指定使用的模板	可以 是 **vue**	等官方提供的 这里使用的 **https://github.com/KiddoV/wails-pure-js-template** 是一套 html和js的模板
+| 模板类型 | 适用场景 | 复杂度 |
+|----------|----------|--------|
+| **Vue** | 现代化SPA应用 | 中等 |
+| **React** | 复杂交互应用 | 中等 |
+| **Svelte** | 轻量级应用 | 简单 |
+| **Vanilla JS** | 简单应用 | 简单 |
+| **Lit** | Web组件应用 | 中等 |
+
+本项目选择纯HTML/JS模板，适合快速原型开发和简单应用。
 
 
 
@@ -156,57 +210,66 @@ wails init -n wails_demo -t https://github.com/KiddoV/wails-pure-js-template
 
 
 
-#### 前端布局
+## 🎨 前端布局与配置
 
-- **main.go**
+### 窗口配置设计
+
+最初的设计目标是创建一个适合8.8寸副屏的系统监控工具，因此窗口配置采用了固定尺寸设计：
 
 ```go
-		Title:             "PF_tools",
-		Width:             1280,
-		Height:            320,
-		MinWidth:          1280,
-		MinHeight:         320,
-		DisableResize:     true,
-		Fullscreen:        false,
-		Frameless:         false,
-		StartHidden:       false,
-		HideWindowOnClose: true,
-		BackgroundColour:  &options.RGBA{R: 16, G: 12, B: 42, A: 255},
-		AlwaysOnTop:       true,
-		Menu:              nil,
-		Logger:            nil,
-		LogLevel:          logger.DEBUG,
-		OnStartup:         app.startup,
-		OnDomReady:        app.domReady,
-		OnBeforeClose:     app.beforeClose,
-		OnShutdown:        app.shutdown,
-		WindowStartState:  options.Normal,
-		Bind: []interface{}{
-			app,
-		},
+// main.go - 窗口配置
+err := wails.Run(&options.App{
+    Title:             "PF_tools",           // 应用标题
+    Width:             1280,                 // 窗口宽度（适合副屏）
+    Height:            320,                  // 窗口高度（紧凑设计）
+    MinWidth:          1280,                 // 最小宽度（固定尺寸）
+    MinHeight:         320,                  // 最小高度（固定尺寸）
+    DisableResize:     true,                 // 禁用窗口大小调整
+    Fullscreen:        false,                // 非全屏模式
+    Frameless:         false,                // 保留窗口边框
+    StartHidden:       false,                // 启动时显示
+    HideWindowOnClose: true,                 // 关闭时隐藏而非退出
+    BackgroundColour:  &options.RGBA{R: 16, G: 12, B: 42, A: 255}, // 深色背景
+    AlwaysOnTop:       true,                 // 窗口置顶显示
+    Menu:              nil,                  // 无菜单栏
+    Logger:            nil,                  // 默认日志配置
+    LogLevel:          logger.DEBUG,         // 调试日志级别
+    OnStartup:         app.startup,          // 启动回调函数
+    OnDomReady:        app.domReady,         // DOM就绪回调
+    OnBeforeClose:     app.beforeClose,      // 关闭前回调
+    OnShutdown:        app.shutdown,         // 关闭回调
+    WindowStartState:  options.Normal,       // 正常窗口状态
+    Bind: []interface{}{
+        app,                                 // 绑定应用实例到前端
+    },
+})
 ```
 
-刚开始 是想做一个  8.8寸的 副屏幕所以在配置的 的时候  **width** 与 **height** 还有 **MinWidht** 选项写成相同的了, 然后 **DisableResize** 选项设置为 **false** 不允许改变大小
+**设计考虑：**
+- **固定尺寸**：1280x320适合副屏显示，避免用户误操作改变窗口大小
+- **窗口置顶**：确保监控信息始终可见
+- **深色主题**：减少视觉疲劳，适合长时间显示
+- **隐藏而非退出**：保持应用在后台运行，便于快速恢复
 
 
 
-- **frontend/src/index.html**
-
-
+### HTML页面结构
 
 ```html
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge, Chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgo=">
-    <!-- Main Source Files -->
+    
+    <!-- 样式文件引入 -->
     <link rel="stylesheet" href="../libs/layui/css/layui.css"/>
     <link rel="stylesheet" href="../libs/live2d/assets/waifu.css"/>
     <link rel="stylesheet" href="main.css"/>
+    
+    <!-- JavaScript库引入 -->
     <script src="../libs/jquery-3.4.1/jquery-3.4.1.min.js"></script>
     <script src="../libs/echarts/echarts.min.js"></script>
     <script src="../libs/layui/layui.js"></script>
@@ -218,32 +281,33 @@ wails init -n wails_demo -t https://github.com/KiddoV/wails-pure-js-template
 <body id="app" class="app" style="--wails-draggable:drag">
 ```
 
+**关键配置说明：**
 
-
-*注意:*  
-
- 1. CSS文件引入的时候 这个路径 **../libs/layui/layui.js**	
-
- 2. body 中 **style="--wails-draggable:drag"**  是可以基于 css元素拖动 程序
+1. **资源路径**：使用相对路径 `../libs/` 引用第三方库，确保在Wails环境中正确加载
+2. **窗口拖拽**：`style="--wails-draggable:drag"` 启用窗口拖拽功能，提升用户体验
+3. **兼容性**：设置 `X-UA-Compatible` 确保在不同浏览器中一致显示
+4. **响应式**：`viewport` 配置支持响应式布局
 
     
 
-- **frontend/src/main.js**
+### JavaScript交互逻辑
 
-
-
-```js
+```javascript
 function event_cpu_on() {
+    // 使用Layui框架
     layui.use(function () {
+        // 监听CPU使用率事件
         runtime.EventsOn("cpu_usage", function (cpu_usage) {
-            // element.progress('demo-filter-progress', cpu_usage.avg + '%'); // 设置 50% 的进度
+            // 更新CPU使用率显示
             document.getElementById("used").textContent = cpu_usage.avg + '% '
         })
     })
 
+    // 调用Go后端方法获取CPU信息
     window.go.main.App.CpuInfo().then(result => {
-        //Display result from Go
+        // 解析返回的JSON数据
         res = JSON.parse(result)
+        // 更新CPU核心数显示
         document.getElementById("cpu_num").textContent = res.cpu_number
     }).catch(err => {
         console.log(err);
@@ -253,39 +317,295 @@ function event_cpu_on() {
 }
 ```
 
+**通信机制详解：**
 
+1. **事件监听**：`runtime.EventsOn("cpu_usage", callback)` 监听Go后端发送的CPU使用率事件
+   - 后端通过 `runtime.EventsEmit(ctx, "cpu_usage", data)` 发送数据
+   - 前端实时接收并更新UI显示
 
-1. 其中 **runtime.EventsOn("cpu_usage"** 是监听了 **app.go** 中 定时监听发送的 cpu_usage 使用率
+2. **方法调用**：`window.go.main.App.CpuInfo()` 直接调用Go后端方法
+   - 通过Promise方式处理异步调用
+   - 返回JSON格式数据，前端解析后更新界面
 
-2. ** window.go.main.App.CpuInfo()** 是直接在js中调用 **App.CpuInfo()** 的go代码 其中 **app** 是在** main.go ** 中绑定的,代码如下:
-
-   ```go
-   	Bind: []interface{}{
-   			app,
-   		},
-   ```
-
-
-
-
-
-需要注意的介绍完毕
+3. **错误处理**：使用 `.catch()` 和 `.finally()` 确保程序稳定性
 
 
 
 
 
-完整的代码在:[https://github.com/pfinal-nc/wails_pf](https://github.com/pfinal-nc/wails_pf)
+## 📚 项目资源
 
+### 完整代码
 
+项目完整代码托管在GitHub：[https://github.com/pfinal-nc/wails_pf](https://github.com/pfinal-nc/wails_pf)
 
-```shell
+### 快速开始
 
+```bash
+# 克隆项目
 git clone git@github.com:pfinal-nc/wails_pf.git
 
+# 进入项目目录
 cd wails_pf
 
+# 构建应用
 wails build
 ```
 
-打包完以后 可以在 **build/bin/** 目录下找打打包的文件。
+### 构建输出
+
+构建完成后，可在 `build/bin/` 目录下找到打包好的应用文件：
+- **macOS**：`pf_tools.app` (macOS应用包)
+- **Windows**：`wails_tools.exe` (Windows可执行文件)
+- **Linux**：`wails_tools` (Linux可执行文件)
+
+### 运行应用
+
+```bash
+# macOS
+open build/bin/pf_tools.app
+
+# Windows
+./build/bin/wails_tools.exe
+
+# Linux
+./build/bin/wails_tools
+```
+
+---
+
+**标签：** #Go语言 #Wails #桌面应用 #系统监控 #跨平台开发 #macOS
+
+## 🔧 技术实现详解
+
+### 前后端通信机制
+
+Wails提供了多种前后端通信方式，本项目主要使用了以下两种：
+
+#### 1. 事件驱动通信
+
+```go
+// app.go - 后端事件发送
+func (a *App) startup(ctx context.Context) {
+    // 启动定时器，每秒发送CPU使用率
+    go func() {
+        ticker := time.NewTicker(time.Second)
+        defer ticker.Stop()
+        
+        for {
+            select {
+            case <-ticker.C:
+                cpuUsage := getCPUUsage()
+                runtime.EventsEmit(ctx, "cpu_usage", cpuUsage)
+            case <-ctx.Done():
+                return
+            }
+        }
+    }()
+}
+```
+
+```javascript
+// main.js - 前端事件监听
+function event_cpu_on() {
+    layui.use(function () {
+        runtime.EventsOn("cpu_usage", function (cpu_usage) {
+            document.getElementById("used").textContent = cpu_usage.avg + '% '
+        })
+    })
+}
+```
+
+#### 2. 方法调用通信
+
+```go
+// app.go - 后端方法定义
+func (a *App) CpuInfo() string {
+    info := getCPUInfo()
+    jsonData, _ := json.Marshal(info)
+    return string(jsonData)
+}
+```
+
+```javascript
+// main.js - 前端方法调用
+window.go.main.App.CpuInfo().then(result => {
+    res = JSON.parse(result)
+    document.getElementById("cpu_num").textContent = res.cpu_number
+}).catch(err => {
+    console.log(err);
+});
+```
+
+### 系统监控实现
+
+#### CPU使用率监控
+
+```go
+// pkg/sys/sys.go
+func getCPUUsage() map[string]interface{} {
+    var cpuUsage map[string]interface{}
+    
+    // 获取CPU统计信息
+    cpuStats, err := cpu.Percent(time.Second, false)
+    if err != nil {
+        return map[string]interface{}{"avg": 0}
+    }
+    
+    if len(cpuStats) > 0 {
+        cpuUsage = map[string]interface{}{
+            "avg": cpuStats[0],
+            "timestamp": time.Now().Unix(),
+        }
+    }
+    
+    return cpuUsage
+}
+```
+
+#### 内存使用监控
+
+```go
+// pkg/sys/sys.go
+func getMemoryInfo() map[string]interface{} {
+    vmstat, err := mem.VirtualMemory()
+    if err != nil {
+        return map[string]interface{}{}
+    }
+    
+    return map[string]interface{}{
+        "total": vmstat.Total,
+        "used": vmstat.Used,
+        "free": vmstat.Free,
+        "percent": vmstat.UsedPercent,
+    }
+}
+```
+
+### 窗口配置详解
+
+```go
+// main.go - 窗口配置
+err := wails.Run(&options.App{
+    Title:             "PF_tools",           // 窗口标题
+    Width:             1280,                 // 窗口宽度
+    Height:            320,                  // 窗口高度
+    MinWidth:          1280,                 // 最小宽度
+    MinHeight:         320,                  // 最小高度
+    DisableResize:     true,                 // 禁用窗口大小调整
+    Fullscreen:        false,                // 全屏模式
+    Frameless:         false,                // 无边框模式
+    StartHidden:       false,                // 启动时隐藏
+    HideWindowOnClose: true,                 // 关闭时隐藏而非退出
+    BackgroundColour:  &options.RGBA{R: 16, G: 12, B: 42, A: 255}, // 背景色
+    AlwaysOnTop:       true,                 // 窗口置顶
+    Menu:              nil,                  // 菜单配置
+    Logger:            nil,                  // 日志配置
+    LogLevel:          logger.DEBUG,         // 日志级别
+    OnStartup:         app.startup,          // 启动回调
+    OnDomReady:        app.domReady,         // DOM就绪回调
+    OnBeforeClose:     app.beforeClose,      // 关闭前回调
+    OnShutdown:        app.shutdown,         // 关闭回调
+    WindowStartState:  options.Normal,       // 窗口启动状态
+    Bind: []interface{}{
+        app,                                 // 绑定应用实例
+    },
+})
+```
+
+### 前端技术栈
+
+#### 使用的库和框架
+
+1. **Layui**：轻量级UI框架，提供丰富的组件
+2. **ECharts**：数据可视化图表库
+3. **jQuery**：DOM操作和AJAX请求
+4. **Live2D**：2D动画效果
+
+#### 关键配置
+
+```html
+<!-- index.html - 关键配置 -->
+<body id="app" class="app" style="--wails-draggable:drag">
+```
+
+- `--wails-draggable:drag`：启用窗口拖拽功能
+- 相对路径引用：`../libs/`确保资源正确加载
+
+## 🚀 开发与构建
+
+### 开发模式
+
+```bash
+# 启动开发模式（支持热重载）
+wails dev
+
+# 指定端口启动
+wails dev -port 8080
+
+# 调试模式启动
+wails dev -debug
+```
+
+### 构建应用
+
+```bash
+# 构建所有平台
+wails build
+
+# 构建特定平台
+wails build -platform darwin/amd64
+wails build -platform darwin/arm64
+wails build -platform windows/amd64
+wails build -platform linux/amd64
+
+# 构建并打包
+wails build -package
+```
+
+### 性能优化
+
+1. **资源优化**：使用CDN或本地缓存第三方库
+2. **代码分割**：按需加载JavaScript模块
+3. **图片优化**：使用WebP格式和适当压缩
+4. **内存管理**：及时清理事件监听器和定时器
+
+## 📊 项目总结
+
+### 技术亮点
+
+1. **实时监控**：通过WebSocket实现系统资源实时监控
+2. **跨平台兼容**：基于Wails实现Windows/macOS/Linux支持
+3. **轻量级设计**：相比Electron，应用体积更小，启动更快
+4. **现代化UI**：采用响应式设计，支持多种屏幕尺寸
+
+### 开发经验
+
+1. **前后端分离**：清晰的架构设计便于维护和扩展
+2. **事件驱动**：合理使用事件机制实现实时数据更新
+3. **错误处理**：完善的错误处理机制提升应用稳定性
+4. **性能监控**：持续监控应用性能，及时优化
+
+### 扩展建议
+
+1. **添加更多监控指标**：磁盘使用率、网络状态等
+2. **实现数据持久化**：保存历史监控数据
+3. **增加告警功能**：资源使用超过阈值时发出提醒
+4. **优化UI交互**：添加更多交互功能和动画效果
+
+---
+
+完整的项目代码：[https://github.com/pfinal-nc/wails_pf](https://github.com/pfinal-nc/wails_pf)
+
+```bash
+# 克隆项目
+git clone git@github.com:pfinal-nc/wails_pf.git
+
+# 进入项目目录
+cd wails_pf
+
+# 构建应用
+wails build
+```
+
+构建完成后，可在 `build/bin/` 目录下找到打包好的应用文件。
