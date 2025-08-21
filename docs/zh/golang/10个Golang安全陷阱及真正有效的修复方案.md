@@ -2,9 +2,9 @@
 title: 10个Golang安全陷阱 — 以及真正有效的修复方案
 date: 2025-01-27 14:30:00
 tags:
-    - golang
-    - security
-    - best-practices
+  - golang
+  - security
+  - best-practices
 author: PFinal南丞
 keywords: golang安全, go安全, web安全, 身份验证, 授权, 输入验证, SQL注入, XSS, CSRF, 安全编码
 description: 发现Go开发中的10个关键安全陷阱，学习在生产环境中真正有效的、经过实战检验的解决方案。
