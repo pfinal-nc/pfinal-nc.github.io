@@ -1,6 +1,6 @@
 ---
 title: 10个Golang安全陷阱 — 以及真正有效的修复方案
-date: 2025-01-27 14:30:00
+date: 2025-08-20 14:30:00
 tags:
   - golang
   - security
