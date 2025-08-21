@@ -164,67 +164,6 @@ keywords: VSCode, 快捷键, 工具, 开发效率, 编辑器
 | `Cmd + K Cmd + 0` | 折叠所有区域 |
 | `Cmd + K Cmd + J` | 展开所有区域 |
 
-## 工作区管理
-
-| 快捷键 | 功能 |
-|--------|------|
-| `Cmd + Option + W` | 保存工作区 |
-| `Cmd + R` | 打开最近的工作区 |
-| `Cmd + K Cmd + O` | 打开文件夹 |
-| `Cmd + K F` | 关闭工作区 |
-
-## 代码重构
-
-| 快捷键 | 功能 |
-|--------|------|
-| `F2` | 重命名符号 |
-| `Cmd + .` | 快速修复/重构 |
-| `Shift + Option + F` | 格式化整个文件 |
-| `Cmd + K Cmd + I` | 显示悬停信息 |
-| `Option + Shift + O` | 组织导入 |
-
-## 智能提示
-
-| 快捷键 | 功能 |
-|--------|------|
-| `Ctrl + Space` | 触发建议 |
-| `Cmd + I` | 触发参数提示 |
-| `Tab` | 接受建议 |
-| `Cmd + K Cmd + I` | 显示文档 |
-
-## Windows与MacOS快捷键对照
-
-| 功能 | MacOS | Windows |
-|------|--------|---------|
-| 命令面板 | `Cmd + Shift + P` | `Ctrl + Shift + P` |
-| 快速打开 | `Cmd + P` | `Ctrl + P` |
-| 设置 | `Cmd + ,` | `Ctrl + ,` |
-| 保存 | `Cmd + S` | `Ctrl + S` |
-| 复制行 | `Shift + Option + Up/Down` | `Shift + Alt + Up/Down` |
-| 移动行 | `Option + Up/Down` | `Alt + Up/Down` |
-
-## 性能优化技巧
-
-- 使用 `Cmd + Shift + P` 然后输入 `Developer: Show Running Extensions` 查看影响性能的扩展
-- 使用 `Cmd + Shift + P` 然后输入 `Developer: Open Process Explorer` 监控 VSCode 性能
-- 定期清理工作区缓存：`Cmd + Shift + P` > `Developer: Reload Window`
-
-## 代码片段使用
-
-| 快捷键 | 功能 |
-|--------|------|
-| `Cmd + Shift + P` > `Snippets` | 配置用户代码片段 |
-| `Tab` | 展开代码片段 |
-| `Shift + Tab` | 在代码片段内跳转 |
-
-## 任务运行器
-
-| 快捷键 | 功能 |
-|--------|------|
-| `Cmd + Shift + B` | 运行构建任务 |
-| `Cmd + Shift + T` | 运行测试任务 |
-| `Cmd + Shift + P` > `Tasks` | 显示所有任务 |
-
 这些快捷键涵盖了VSCode的大部分常用功能。熟练掌握它们将大大提高你的编码效率。建议从最常用的快捷键开始练习，逐步熟悉其他功能。
 
 ## 小贴士
