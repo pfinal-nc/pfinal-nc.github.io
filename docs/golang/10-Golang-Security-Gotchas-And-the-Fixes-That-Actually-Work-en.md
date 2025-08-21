@@ -1,14 +1,13 @@
 ---
 title: 10 Golang Security Gotchas — And the Fixes That Actually Work
-date: 2025-01-27 14:30:00
+date: 2025-08-20 14:30:00
 tags:
     - golang
     - security
     - best-practices
 author: PFinal南丞
 keywords: golang security, go security, web security, authentication, authorization, input validation, SQL injection, XSS, CSRF, secure coding
-description: Discover 10 critical security pitfalls in Go development and learn practical battle-tested 
-solutions that actually work in production environments.
+description: Discover 10 critical security pitfalls in Go development and learn practical battle-tested solutions that actually work in production environments.
 ---
 
 ## Introduction: Why Go Security Matters More Than Ever
