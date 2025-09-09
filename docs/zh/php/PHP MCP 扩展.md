@@ -1,3 +1,17 @@
+---
+title: PHP MCP扩展-我的开源实践与思考
+date: 2025-09-09 10:30:00
+tags:
+    - PHP
+    - MCP
+    - 开源
+    - 大语言模型
+    - Workerman
+description: 分享我开发pfinalclub/php-mcp扩展的经历，探讨MCP协议对PHP生态的重要意义，以及为什么选择Workerman作为技术栈。
+author: PFinal南丞
+keywords: PHP, MCP, 模型上下文协议, PHP MCP扩展, pfinalclub, Workerman, 大语言模型, PHP AI集成, 开源项目, PHP开发, MCP协议, PHP生态, 智能应用开发
+---
+
 
 # PHP MCP扩展：我的开源实践与思考
 
