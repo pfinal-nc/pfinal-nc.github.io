@@ -14,6 +14,6 @@ blog:
   - 生活的真谛不在繁华，而在于淡泊
  # 设置 inspiringTimeout 可以实现自动切换
  inspiringTimeout: 3000
- pageSize: 6
+ pageSize: 15
  minScreenAvatar: true
 ---

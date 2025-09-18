@@ -14,7 +14,7 @@ blog:
   - True meaning in life lies not in extravagance, but in simplicity
  # Set inspiringTimeout to enable automatic rotation
  inspiringTimeout: 3000
- pageSize: 6
+ pageSize: 15
  minScreenAvatar: true,
  
 --- 
