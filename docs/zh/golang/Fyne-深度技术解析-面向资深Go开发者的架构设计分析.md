@@ -1112,9 +1112,9 @@ func (eh *ErrorHandler) HandlePanic() {
 - [Fyne 架构设计文档](https://developer.fyne.io/architecture/)
 
 **相关文章：**
-- [Fyne vs Wails：深度对比分析](../golang/Fyne-vs-Wails-Deep-Comparison-Choosing-the-Best-Go-Desktop-Framework.md)
-- [Go 桌面应用开发最佳实践](./Go-Desktop-Application-Development-Best-Practices.md)
-- [Wails 教程系列：核心概念详解](../wails-tutorial-series/03-core-concepts.md)
+- [Fyne vs Wails：深度对比分析](/zh/golang/Fyne-vs-Wails-Deep-Comparison-Choosing-the-Best-Go-Desktop-Framework)
+- [Go 桌面应用开发最佳实践](/zh/golang/Go-Desktop-Application-Development-Best-Practices)
+- [Wails 教程系列：核心概念详解](/zh/wails-tutorial-series/03-core-concepts)
 
 **实用工具：**
 - [Fyne Doctor](https://github.com/wbtools/fyne-doctor) - Fyne 开发环境诊断工具
