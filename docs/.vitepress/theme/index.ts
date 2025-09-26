@@ -40,32 +40,32 @@ function addAdBanner() {
   if (document.getElementById('ad-container')) return;
   
   // 创建广告容器
-  const adContainer = document.createElement('div');
-  adContainer.id = 'ad-container';
-  adContainer.className = 'ad-container';
+  // const adContainer = document.createElement('div');
+  // adContainer.id = 'ad-container';
+  // adContainer.className = 'ad-container';
   
   // 创建iframe
-  const adIframe = document.createElement('iframe');
-  adIframe.className = 'ad-iframe';
-  adIframe.src = 'https://otieu.com/4/9894528';
-  adIframe.frameBorder = '0';
+  // const adIframe = document.createElement('iframe');
+  // adIframe.className = 'ad-iframe';
+  // adIframe.src = 'https://otieu.com/4/9894528';
+  // adIframe.frameBorder = '0';
   
-  // 创建关闭按钮
-  const closeBtn = document.createElement('button');
-  closeBtn.className = 'ad-close-btn';
-  closeBtn.innerHTML = '×';
-  closeBtn.onclick = function() {
-    adContainer.style.display = 'none';
-    // 设置cookie，24小时内不再显示
-    document.cookie = 'adClosed=true; max-age=86400; path=/';
-  };
+  // // 创建关闭按钮
+  // const closeBtn = document.createElement('button');
+  // closeBtn.className = 'ad-close-btn';
+  // closeBtn.innerHTML = '×';
+  // closeBtn.onclick = function() {
+  //   adContainer.style.display = 'none';
+  //   // 设置cookie，24小时内不再显示
+  //   document.cookie = 'adClosed=true; max-age=86400; path=/';
+  // };
   
-  // 组装广告框
-  adContainer.appendChild(adIframe);
-  adContainer.appendChild(closeBtn);
+  // // 组装广告框
+  // adContainer.appendChild(adIframe);
+  // adContainer.appendChild(closeBtn);
   
-  // 添加到页面
-  document.body.appendChild(adContainer);
+  // // 添加到页面
+  // document.body.appendChild(adContainer);
 }
 
 export default theme
