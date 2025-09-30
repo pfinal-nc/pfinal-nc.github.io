@@ -6,7 +6,7 @@ tags:
     - Wails
 description: 基于Wails的Mac桌面应用开发
 author: PFinal南丞
-keywords: 基于Wails的Mac桌面应用开发, golang, Wails, 桌面应用, 开发
+keywords: Wails, Golang, Go, GUI, 桌面应用, Mac, macOS, 跨平台, Wails教程, Wails指南, Wails安装, Wails初始化, Wails开发, Wails构建, Go GUI, Golang GUI, Go桌面开发, Golang桌面开发, Wails for Mac, WebView2, WebKit, React, Vue, Svelte, Go-JavaScript绑定, IPC, wails v2, wails v3
 ---
 # 基于Wails的Mac桌面应用开发
 
@@ -66,28 +66,52 @@ Wails采用了前后端分离的架构设计：
 
 ### 环境准备
 
-在开始开发之前，需要确保已经安装了Go语言环境和Wails CLI工具：
+在开始开发之前，请确保满足以下先决条件：
+
+*   **Go**: Wails 需要 Go 1.18 或更高版本。
+*   **NPM**: 大多数模板都需要 NPM。
+*   **平台特定依赖**:
+    *   **macOS**: Xcode 命令行工具。你可以通过运行 `xcode-select --install` 来安装。
+
+安装完先决条件后，你可以安装 Wails CLI：
 
 ```bash
-# 安装Wails CLI
+# 安装 Wails CLI
 go install github.com/wailsapp/wails/v2/cmd/wails@latest
+```
 
-# 验证安装
+安装后，运行 `wails doctor` 来检查你的系统是否准备好进行 Wails 开发。此命令将检查所有必需的依赖项，并在缺少依赖项时提供如何安装它们的说明。
+
+```bash
+# 验证安装并检查依赖项
 wails doctor
 ```
 
 ### 创建项目
 
-使用Wails CLI创建新项目：
+使用 `wails init` 命令来创建一个新项目。你可以指定一个项目名称和一个前端模板。
+
+要使用特定的模板创建项目，你可以使用 `-t` 标志。Wails 为流行的前端框架提供了模板：
+
+```bash
+# 使用默认的 Svelte 模板创建一个新项目
+wails init -n my-project
+
+# 使用 React 模板创建一个新项目
+wails init -n my-react-app -t react
+
+# 使用 Vue 模板创建一个新项目
+wails init -n my-vue-app -t vue
+
+# 使用 Vanilla JavaScript 模板创建一个新项目
+wails init -n my-vanilla-app -t vanilla
+```
+
+在本教程中，我们将使用一个纯 HTML/JS 模板来保持简单：
 
 ```bash
 wails init -n wails_demo -t https://github.com/KiddoV/wails-pure-js-template
 ```
-
-**命令参数说明：**
-- `wails init`：初始化新项目
-- `-n wails_demo`：指定项目名称为wails_demo
-- `-t https://github.com/KiddoV/wails-pure-js-template`：指定使用纯HTML/JS模板
 
 ### 模板选择
 

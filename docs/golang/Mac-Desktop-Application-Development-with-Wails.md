@@ -8,7 +8,7 @@ tags:
     - macos
 description: Mac desktop application development based on Wails framework
 author: PFinal南丞
-keywords: Mac desktop application development with Wails, golang, Wails, desktop applications, development
+keywords: Wails, Golang, Go, GUI, Desktop, Mac, macOS, Cross-Platform, Wails Tutorial, Wails Guide, Wails Setup, Wails Init, Wails Dev, Wails Build, Go GUI, Golang GUI, Go Desktop, Golang Desktop, Wails for Mac, WebView2, WebKit, React, Vue, Svelte, Go-JavaScript Binding, IPC, wails v2, wails v3
 ---
 
 # Mac Desktop Application Development with Wails
@@ -63,28 +63,52 @@ This is a system monitoring tool with main features including:
 
 ### Environment Preparation
 
-Before starting development, ensure that Go language environment and Wails CLI tools are installed:
+Before starting development, ensure that the following prerequisites are met:
+
+*   **Go**: Wails requires Go version 1.18 or newer.
+*   **NPM**: For most templates, you will need NPM.
+*   **Platform-Specific Dependencies**:
+    *   **macOS**: Xcode Command Line Tools. You can install them by running `xcode-select --install`.
+
+Once the prerequisites are installed, you can install the Wails CLI:
 
 ```bash
 # Install Wails CLI
 go install github.com/wailsapp/wails/v2/cmd/wails@latest
+```
 
-# Verify installation
+After installation, run `wails doctor` to check if your system is ready for Wails development. This command will check for all the required dependencies and provide instructions on how to install them if they are missing.
+
+```bash
+# Verify installation and check dependencies
 wails doctor
 ```
 
 ### Create Project
 
-Use Wails CLI to create a new project:
+Use the `wails init` command to create a new project. You can specify a project name and a frontend template.
+
+To create a project with a specific template, you can use the `-t` flag. Wails provides templates for popular frontend frameworks:
+
+```bash
+# Create a new project with the default Svelte template
+wails init -n my-project
+
+# Create a new project with a React template
+wails init -n my-react-app -t react
+
+# Create a new project with a Vue template
+wails init -n my-vue-app -t vue
+
+# Create a new project with a Vanilla JavaScript template
+wails init -n my-vanilla-app -t vanilla
+```
+
+In this tutorial, we will use a pure HTML/JS template to keep things simple:
 
 ```bash
 wails init -n wails_demo -t https://github.com/KiddoV/wails-pure-js-template
 ```
-
-**Command Parameter Description:**
-- `wails init`: Initialize new project
-- `-n wails_demo`: Specify project name as wails_demo
-- `-t https://github.com/KiddoV/wails-pure-js-template`: Specify using pure HTML/JS template
 
 ### Template Selection
 

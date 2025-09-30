@@ -8,7 +8,7 @@ tags:
     - cross-platform-development
 description: Deep comparison of Fyne and Wails, two Go desktop application development frameworks, analyzing architecture design, performance, development experience and other dimensions to help developers choose the most suitable technical solution
 author: PFinal南丞
-keywords: Fyne, Wails, golang, desktop applications, GUI frameworks, cross-platform development, Go desktop apps, performance comparison, development experience
+keywords: Fyne, Wails, Golang, Go, GUI, Desktop, Cross-Platform, Tauri, Electron, Gio, Lorca, WebView, Go GUI, Golang GUI, Go Desktop, Golang Desktop, Fyne vs Wails, Wails vs Tauri, Wails vs Electron, Best Golang GUI, Performance, Bundle Size, Memory Usage, Security, Learning Curve, Ecosystem, IPC, wails v2, wails v3
 ---
 
 # Fyne vs Wails Deep Comparison: Choosing the Best Go Desktop Framework
@@ -722,6 +722,17 @@ I've created a simple decision matrix to help with selection:
 | **Native Experience** | 10/10 | 6/10 |
 
 According to this matrix, if your project focuses more on performance and native experience, choose Fyne; if it focuses more on UI complexity and development efficiency, choose Wails.
+
+## 🚀 The Broader Go Desktop Ecosystem
+
+While Fyne and Wails are two of the most popular choices for Go desktop development, the ecosystem is broader. Here are a few other noteworthy projects:
+
+*   **Gio (gioui.org):** An immediate mode GUI library that is gaining popularity. It's known for its performance and is a great choice for custom UIs and graphics-intensive applications.
+*   **Lorca:** A very lightweight library that connects to an existing Chrome or Edge installation on the user's machine. It's a good option for simple applications or when you want to keep the binary size as small as possible.
+*   **WebView:** A cross-platform webview library that can be used to create hybrid applications. It's a good choice if you need more control over the webview than what Wails provides.
+*   **Go-GTK and Go-Qt:** Bindings for the popular GTK and Qt toolkits. These are good options if you have experience with these toolkits or if you need to integrate with existing C/C++ codebases.
+
+Each of these frameworks has its own strengths and weaknesses, and the best choice depends on the specific needs of your project.
 
 ## 🚀 Future Development Trends
 

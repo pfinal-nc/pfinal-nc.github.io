@@ -8,7 +8,7 @@ tags:
     - 跨平台开发
 description: 深入对比Fyne和Wails两个Go桌面应用开发框架，从架构设计、性能表现、开发体验等多个维度进行分析，帮助开发者选择最适合的技术方案
 author: PFinal南丞
-keywords: Fyne, Wails, golang, 桌面应用, GUI框架, 跨平台开发, Go桌面应用, 性能对比, 开发体验
+keywords: Fyne, Wails, Golang, Go, GUI, 桌面应用, 跨平台, Tauri, Electron, Gio, Lorca, WebView, Go GUI, Golang GUI, Go桌面开发, Golang桌面开发, Fyne vs Wails, Wails vs Tauri, Wails vs Electron, 最佳Golang GUI框架, 性能, 打包大小, 内存占用, 安全性, 学习曲线, 生态系统, IPC, wails v2, wails v3
 ---
 
 # Fyne与Wails深度对比：选择最适合你的Go桌面应用框架
@@ -722,6 +722,17 @@ func (a *App) GetCachedData(key string) interface{} {
 | **原生体验** | 10/10 | 6/10 |
 
 根据这个矩阵，如果项目更注重性能和原生体验，选择Fyne；如果更注重UI复杂度和开发效率，选择Wails。
+
+## 🚀 更广阔的Go桌面开发生态
+
+虽然Fyne和Wails是Go桌面开发的两个最受欢迎的选择，但生态系统远不止于此。这里还有一些其他值得关注的项目：
+
+*   **Gio (gioui.org):** 一个越来越受欢迎的即时模式GUI库。它以其性能而闻名，是自定义UI和图形密集型应用的绝佳选择。
+*   **Lorca:** 一个非常轻量级的库，可以连接到用户机器上现有的Chrome或Edge浏览器。对于简单的应用或者希望保持二进制文件尽可能小的场景，这是一个不错的选择。
+*   **WebView:** 一个跨平台的webview库，可用于创建混合应用。如果你需要比Wails提供的更多的对webview的控制，这是一个很好的选择。
+*   **Go-GTK 和 Go-Qt:** 流行的GTK和Qt工具包的Go绑定。如果你有使用这些工具包的经验，或者需要与现有的C/C++代码库集成，这些都是不错的选择。
+
+这些框架各有优缺点，最佳选择取决于你项目的具体需求。
 
 ## 🚀 未来发展趋势
 
