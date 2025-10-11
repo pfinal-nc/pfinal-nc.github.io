@@ -99,13 +99,69 @@ export default defineConfig({
       crossorigin: 'anonymous'
     }],
     ['script', {}, `
-      // 添加性能标记以避免 vignette.min.js 错误
-      if (typeof performance !== 'undefined' && performance.mark) {
-        performance.mark('hints:start');
-      }
+      // 重写 performance.measure 方法以避免错误
+      (function() {
+        if (typeof performance !== 'undefined') {
+          // 保存原始的 measure 方法
+          const originalMeasure = performance.measure;
+          
+          // 重写 measure 方法
+          performance.measure = function(name, startMark, endMark) {
+            try {
+              // 如果开始标记不存在，创建一个
+              if (startMark && !performance.getEntriesByName(startMark, 'mark').length) {
+                performance.mark(startMark);
+              }
+              // 如果结束标记不存在，创建一个
+              if (endMark && !performance.getEntriesByName(endMark, 'mark').length) {
+                performance.mark(endMark);
+              }
+              // 调用原始方法
+              return originalMeasure.apply(this, arguments);
+            } catch (e) {
+              // 如果仍然出错，静默处理
+              console.warn('Performance measure error:', e);
+              return null;
+            }
+          };
+          
+          // 预创建常用的性能标记
+          const commonMarks = [
+            'hints:start', 'hints:end',
+            'hidden_iframe:start', 'hidden_iframe:end',
+            'vignette:start', 'vignette:end',
+            'ad:start', 'ad:end',
+            'script:start', 'script:end'
+          ];
+          
+          commonMarks.forEach(mark => {
+            if (!performance.getEntriesByName(mark, 'mark').length) {
+              performance.mark(mark);
+            }
+          });
+        }
+      })();
     `],
-    ['script', {}, `(function(d,z,s){s.src='https://'+d+'/401/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('groleegni.net',9154483,document.createElement('script'))`],
-    ['script', {}, `(function(s){s.dataset.zone='9154483',s.src='https://groleegni.net/vignette.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))` ]
+    ['script', {}, `
+      // 延迟执行广告脚本，确保性能标记已设置
+      setTimeout(function() {
+        try {
+          (function(d,z,s){s.src='https://'+d+'/401/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('groleegni.net',9154483,document.createElement('script'));
+        } catch(e) {
+          console.warn('Ad script error:', e);
+        }
+      }, 100);
+    `],
+    ['script', {}, `
+      // 延迟执行 vignette 脚本
+      setTimeout(function() {
+        try {
+          (function(s){s.dataset.zone='9154483',s.src='https://groleegni.net/vignette.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));
+        } catch(e) {
+          console.warn('Vignette script error:', e);
+        }
+      }, 200);
+    `]
   ],
   
   transformPageData(pageData, ctx) {
