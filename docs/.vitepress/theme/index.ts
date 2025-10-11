@@ -23,7 +23,7 @@ const theme: Theme = {
     // 在客户端添加广告框
     if (typeof window !== 'undefined') {
       window.addEventListener('DOMContentLoaded', () => {
-        addAdBanner();
+        // addAdBanner();
       });
     }
   }

@@ -138,113 +138,113 @@ export default defineConfig({
         }
       }
     `],
-    ['script', {}, `
-      // 添加广告框函数
-      function pfinalAddAdBanner() {
-        try {
-          // 检查cookie，如果用户已关闭广告，则不显示
-          if (document.cookie.indexOf('pfinalAdClosed=true') !== -1) {
-            return;
-          }
+    // ['script', {}, `
+    //   // 添加广告框函数
+    //   function pfinalAddAdBanner() {
+    //     try {
+    //       // 检查cookie，如果用户已关闭广告，则不显示
+    //       if (document.cookie.indexOf('pfinalAdClosed=true') !== -1) {
+    //         return;
+    //       }
           
-          // 检查是否已存在广告框
-          if (document.getElementById('pfinal-ad-container')) {
-            return;
-          }
+    //       // 检查是否已存在广告框
+    //       if (document.getElementById('pfinal-ad-container')) {
+    //         return;
+    //       }
           
-          // 创建广告容器
-          const adContainer = document.createElement('div');
-          adContainer.id = 'pfinal-ad-container';
-          adContainer.className = 'pfinal-ad-container';
+    //       // 创建广告容器
+    //       const adContainer = document.createElement('div');
+    //       adContainer.id = 'pfinal-ad-container';
+    //       adContainer.className = 'pfinal-ad-container';
           
-          // 创建iframe元素
-          const adFrame = document.createElement('iframe');
-          adFrame.src = 'https://otieu.com/4/9894528';
-          adFrame.className = 'pfinal-ad-iframe';
+    //       // 创建iframe元素
+    //       const adFrame = document.createElement('iframe');
+    //       adFrame.src = 'https://otieu.com/4/9894528';
+    //       adFrame.className = 'pfinal-ad-iframe';
           
-          // 创建关闭按钮
-          const closeButton = document.createElement('button');
-          closeButton.innerHTML = '×';
-          closeButton.className = 'pfinal-ad-close-btn';
-          closeButton.onclick = function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            adContainer.style.display = 'none';
-            // 设置cookie，24小时内不再显示
-            document.cookie = 'pfinalAdClosed=true; max-age=86400; path=/';
-          };
+    //       // 创建关闭按钮
+    //       const closeButton = document.createElement('button');
+    //       closeButton.innerHTML = '×';
+    //       closeButton.className = 'pfinal-ad-close-btn';
+    //       closeButton.onclick = function(e) {
+    //         e.preventDefault();
+    //         e.stopPropagation();
+    //         adContainer.style.display = 'none';
+    //         // 设置cookie，24小时内不再显示
+    //         document.cookie = 'pfinalAdClosed=true; max-age=86400; path=/';
+    //       };
           
-          // 添加元素到页面
-          adContainer.appendChild(adFrame);
-          adContainer.appendChild(closeButton);
-          document.body.appendChild(adContainer);
-        } catch (error) {
-          console.error('PFinal ad banner error:', error);
-        }
-      }
+    //       // 添加元素到页面
+    //       adContainer.appendChild(adFrame);
+    //       adContainer.appendChild(closeButton);
+    //       document.body.appendChild(adContainer);
+    //     } catch (error) {
+    //       console.error('PFinal ad banner error:', error);
+    //     }
+    //   }
 
-      // 确保在所有页面上都添加广告框
-      (function() {
-        // 主函数，处理广告框的添加
-        function initAdBanner() {
-          // 立即尝试添加一次
-          pfinalAddAdBanner();
+    //   // 确保在所有页面上都添加广告框
+    //   (function() {
+    //     // 主函数，处理广告框的添加
+    //     function initAdBanner() {
+    //       // 立即尝试添加一次
+    //       pfinalAddAdBanner();
           
-          // 监听路由变化
-          if (typeof window !== 'undefined') {
-            // 监听页面加载完成事件
-            window.addEventListener('load', function() {
-              setTimeout(pfinalAddAdBanner, 500);
-            });
+    //       // 监听路由变化
+    //       if (typeof window !== 'undefined') {
+    //         // 监听页面加载完成事件
+    //         window.addEventListener('load', function() {
+    //           setTimeout(pfinalAddAdBanner, 500);
+    //         });
             
-            // 监听DOM内容加载完成事件
-            document.addEventListener('DOMContentLoaded', function() {
-              setTimeout(pfinalAddAdBanner, 500);
-            });
+    //         // 监听DOM内容加载完成事件
+    //         document.addEventListener('DOMContentLoaded', function() {
+    //           setTimeout(pfinalAddAdBanner, 500);
+    //         });
             
-            // 处理SPA导航
-            if (window.history && window.history.pushState) {
-              // 保存原始的pushState方法
-              const originalPushState = window.history.pushState;
+    //         // 处理SPA导航
+    //         if (window.history && window.history.pushState) {
+    //           // 保存原始的pushState方法
+    //           const originalPushState = window.history.pushState;
               
-              // 重写pushState方法
-              window.history.pushState = function() {
-                // 调用原始方法
-                originalPushState.apply(this, arguments);
+    //           // 重写pushState方法
+    //           window.history.pushState = function() {
+    //             // 调用原始方法
+    //             originalPushState.apply(this, arguments);
                 
-                // 延迟添加广告框
-                setTimeout(pfinalAddAdBanner, 500);
-              };
+    //             // 延迟添加广告框
+    //             setTimeout(pfinalAddAdBanner, 500);
+    //           };
               
-              // 监听popstate事件（浏览器前进/后退）
-              window.addEventListener('popstate', function() {
-                setTimeout(pfinalAddAdBanner, 500);
-              });
-            }
+    //           // 监听popstate事件（浏览器前进/后退）
+    //           window.addEventListener('popstate', function() {
+    //             setTimeout(pfinalAddAdBanner, 500);
+    //           });
+    //         }
             
-            // 使用MutationObserver监听DOM变化
-            if (window.MutationObserver) {
-              const observer = new MutationObserver(function(mutations) {
-                setTimeout(pfinalAddAdBanner, 500);
-              });
+    //         // 使用MutationObserver监听DOM变化
+    //         if (window.MutationObserver) {
+    //           const observer = new MutationObserver(function(mutations) {
+    //             setTimeout(pfinalAddAdBanner, 500);
+    //           });
               
-              // 页面加载完成后开始监听
-              window.addEventListener('load', function() {
-                if (document.body) {
-                  observer.observe(document.body, { 
-                    childList: true, 
-                    subtree: true 
-                  });
-                }
-              });
-            }
-          }
-        }
+    //           // 页面加载完成后开始监听
+    //           window.addEventListener('load', function() {
+    //             if (document.body) {
+    //               observer.observe(document.body, { 
+    //                 childList: true, 
+    //                 subtree: true 
+    //               });
+    //             }
+    //           });
+    //         }
+    //       }
+    //     }
         
-        // 延迟执行初始化，避免与其他脚本冲突
-        setTimeout(initAdBanner, 1000);
-      })();
-    `]
+    //     // 延迟执行初始化，避免与其他脚本冲突
+    //     setTimeout(initAdBanner, 1000);
+    //   })();
+    // `]
   ],
   
   transformPageData(pageData, ctx) {
