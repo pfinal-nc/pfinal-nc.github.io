@@ -1,5 +1,5 @@
 ---
-title: From Go Goroutine Pool to PHP Implementation: A Code Refactoring Journey
+title: From Go Goroutine Pool to PHP Implementation A Code Refactoring Journey
 date: 2025-01-13 15:30:00
 author: PFinal
 tags:
