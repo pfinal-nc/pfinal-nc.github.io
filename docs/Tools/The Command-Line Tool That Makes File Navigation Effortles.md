@@ -1,5 +1,5 @@
 ---
-Title: Broot: The Command-Line Tool That Makes File Navigation Effortless
+Title: Broot-The Command-Line Tool That Makes File Navigation Effortless
 Date: 2025-10-15 09:33:00
 Tags:
   - Tools
