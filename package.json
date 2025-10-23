@@ -9,7 +9,9 @@
     "build": "vitepress build docs",
     "serve": "vitepress serve docs",
     "check:titles": "node scripts/check-titles.mjs docs",
-    "fix:titles": "node scripts/check-titles.mjs --fix=quote docs"
+    "fix:titles": "node scripts/check-titles.mjs --fix=quote docs",
+    "report:golang-gap": "node scripts/report-golang-translation-gap.mjs",
+    "report:golang-gap:zh2en": "node scripts/report-golang-translation-gap.mjs --direction=zh2en --output=en"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",
