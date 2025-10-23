@@ -1,5 +1,5 @@
 ---
-title: go:embed 在 Go 开发中的应用与最佳实践
+title: "go embed 在 Go 开发中的应用与最佳实践"
 date: 2024-08-24 09:32:24
 tags:
   - golang

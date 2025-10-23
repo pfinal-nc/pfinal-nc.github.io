@@ -1,5 +1,5 @@
 ---
-title: PHP 8.x 企业级开发实战指南：从语言特性到生产部署
+title: PHP 8.x 企业级开发实战指南 从语言特性到生产部署
 date: 2025-10-11 10:00:02
 author: PFinal南丞
 tag:
