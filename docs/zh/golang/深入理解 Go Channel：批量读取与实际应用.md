@@ -1,5 +1,5 @@
 ---
-title: 深入理解 Go Channel：批量读取与实际应用
+title: 深入理解 Go Channel 批量读取与实际应用
 date: 2024-09-02 11:25:00
 tags:
     - golang

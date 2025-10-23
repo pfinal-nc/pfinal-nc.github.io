@@ -1,5 +1,5 @@
 ---
-title: 别再盲接 OTel：Go 可观察性接入的 8 个大坑
+title: 别再盲接 OTel Go 可观察性接入的 8 个大坑
 date: 2024-10-23 09:08:02
 tags:
   - golang
