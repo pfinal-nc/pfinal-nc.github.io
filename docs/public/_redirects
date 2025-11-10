@@ -1,0 +1,13 @@
+# Netlify redirects - Force HTTPS
+# 强制所有 HTTP 请求重定向到 HTTPS
+
+# HTTP to HTTPS redirect
+http://friday-go.icu/* https://friday-go.icu/:splat 301!
+http://www.friday-go.icu/* https://friday-go.icu/:splat 301!
+
+# 子域名 HTTPS 重定向
+http://pnav.friday-go.icu/* https://pnav.friday-go.icu/:splat 301!
+http://nav.friday-go.icu/* https://nav.friday-go.icu/:splat 301!
+http://miao.friday-go.icu/* https://miao.friday-go.icu/:splat 301!
+http://game.friday-go.icu/* https://game.friday-go.icu/:splat 301!
+

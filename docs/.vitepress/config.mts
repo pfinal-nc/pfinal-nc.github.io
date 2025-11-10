@@ -66,8 +66,37 @@ export default defineConfig({
   },
   sitemap: {
     hostname: 'https://friday-go.icu',
+    exclude: [
+      // 排除系统文件
+      '**/sitemap.xml',
+      '**/*.xml',
+      '**/favicon.ico',
+      // 排除标签页面和查询参数页面
+      '**/?tag=*',
+      '**/?type=*',
+      '**/?category=*',
+      // 排除子域名相关（如果在主站点构建中）
+      '**/pnav.friday-go.icu/**',
+      '**/nav.friday-go.icu/**',
+      '**/miao.friday-go.icu/**',
+      '**/game.friday-go.icu/**'
+    ],
     transformItems: (items) => {
-      return items.map(item => ({
+      // 过滤掉包含查询参数的 URL
+      const filtered = items.filter(item => {
+        const url = item.url
+        // 排除带查询参数的URL
+        if (url.includes('?tag=') || url.includes('?type=') || url.includes('?category=')) {
+          return false
+        }
+        // 排除 sitemap.xml 本身
+        if (url.endsWith('/sitemap.xml') || url.endsWith('.xml')) {
+          return false
+        }
+        return true
+      })
+      
+      return filtered.map(item => ({
         ...item,
         changefreq: 'weekly',
         priority: 0.8,
