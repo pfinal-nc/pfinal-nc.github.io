@@ -1,8 +1,37 @@
+# robots.txt for friday-go.icu
+# Updated: 2025-10-29
+
 User-agent: *
 Allow: /
-Disallow: /404.html
-Disallow: /.git/
-Disallow: /private/
 
-# Sitemap
+# 不索引标签页面
+Disallow: /*?tag=
+Disallow: /*?type=
+Disallow: /*?category=
+
+# 不索引系统文件
+Disallow: /sitemap.xml
+Disallow: /*.xml$
+
+# 允许静态资源
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.ico$
+
+# Sitemap 位置
 Sitemap: https://friday-go.icu/sitemap.xml
+
+# 针对不同搜索引擎的特殊设置
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
