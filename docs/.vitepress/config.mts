@@ -1,13 +1,64 @@
 import { defineConfig } from 'vitepress'
 import type { Plugin } from 'vite'
+import fs from 'fs'
+import path from 'path'
 // 导入主题的配置
 import { blogTheme } from './blog-theme'
+
+// 自定义 Sitemap 插件 - 生成简洁的 sitemap
+function simpleSitemapPlugin(): Plugin {
+  return {
+    name: 'simple-sitemap',
+    closeBundle() {
+      const outDir = path.resolve(__dirname, '../.vitepress/dist')
+      const sitemapPath = path.join(outDir, 'sitemap.xml')
+      
+      if (fs.existsSync(sitemapPath)) {
+        const content = fs.readFileSync(sitemapPath, 'utf-8')
+        
+        // 将复杂的 sitemap 转换为简洁格式
+        const urlRegex = /<url>[\s\S]*?<loc>(.*?)<\/loc>[\s\S]*?<lastmod>(.*?)<\/lastmod>[\s\S]*?<\/url>/g
+        const urls: Array<{loc: string, lastmod: string}> = []
+        
+        let match
+        while ((match = urlRegex.exec(content)) !== null) {
+          const loc = match[1]
+          const lastmod = match[2]
+          
+          // 跳过 404 页面和其他不需要的页面
+          if (!loc.includes('/404.html')) {
+            urls.push({ loc, lastmod })
+          }
+        }
+        
+        // 生成简洁的 sitemap XML
+        const simpleSitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls.map(url => `<url>
+<loc>${url.loc}</loc>
+<lastmod>${url.lastmod}</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>`).join('\n')}
+</urlset>
+`
+        
+        // 写入新的 sitemap
+        fs.writeFileSync(sitemapPath, simpleSitemap, 'utf-8')
+        console.log(`✅ Generated simple sitemap with ${urls.length} URLs`)
+      }
+    }
+  }
+}
 
 // 全局基础关键词
 let BASE_KEYWORDS = 'pfinalclub, git, gitsite, javascript, node, jquery, python, php, laravel, sql, database, linux, operating system, os, cpu, verilog, risc-v, bitcoin, ethereum, ai, 教程, 软件, 编程, 开发, 运维, 云计算, 网络, 互联网, 比特币, 以太坊, 操作系统, 智能合约, 数字货币, 爬虫, 逆向, usd php, wails golang'
 
 
 export default defineConfig({
+  vite: {
+    plugins: [simpleSitemapPlugin()]
+  },
   ignoreDeadLinks: false,  // 忽略死链接检查
   locales: {
     root: {
