@@ -71,6 +71,8 @@ export default defineConfig({
       '**/sitemap.xml',
       '**/*.xml',
       '**/favicon.ico',
+      // 排除 404 页面
+      '**/404.html',
       // 排除标签页面和查询参数页面
       '**/?tag=*',
       '**/?type=*',
@@ -82,17 +84,25 @@ export default defineConfig({
       '**/game.friday-go.icu/**'
     ],
     transformItems: (items) => {
-      // 过滤掉包含查询参数的 URL
+      // 过滤掉包含查询参数的 URL 和不应该索引的页面
       const filtered = items.filter(item => {
         const url = item.url
+        
+        // 排除 404 页面
+        if (url.includes('/404.html')) {
+          return false
+        }
+        
         // 排除带查询参数的URL
         if (url.includes('?tag=') || url.includes('?type=') || url.includes('?category=')) {
           return false
         }
+        
         // 排除 sitemap.xml 本身
         if (url.endsWith('/sitemap.xml') || url.endsWith('.xml')) {
           return false
         }
+        
         return true
       })
       
