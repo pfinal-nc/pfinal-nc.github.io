@@ -8,7 +8,7 @@ let BASE_KEYWORDS = 'pfinalclub, git, gitsite, javascript, node, jquery, python,
 
 
 export default defineConfig({
-  ignoreDeadLinks: true,  // 忽略死链接检查
+  ignoreDeadLinks: false,  // 忽略死链接检查
   locales: {
     root: {
       label: 'English',

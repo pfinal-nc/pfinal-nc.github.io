@@ -3,7 +3,12 @@ title: Fyne 深度技术解析
 date: 2025-01-27
 author: PFinalClub
 description: 深入分析 Fyne 框架的架构设计、技术实现和设计模式，为资深 Go 开发者提供技术洞察。
-tags: [Go, GUI, Fyne, 架构设计, 跨平台]
+tags:
+  - Go
+  - GUI
+  - Fyne
+  - 架构设计
+  - 跨平台
 ---
 
 # Fyne 深度技术解析,从 Wails 到 Fyne

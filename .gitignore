@@ -4,3 +4,5 @@ cache
 .temp
 .DS_Store
 .qwen
+.vscode
+CONTENT_IMPROVEMENT_PLAN.md
