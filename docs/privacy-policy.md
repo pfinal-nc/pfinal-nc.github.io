@@ -164,7 +164,6 @@ By using our website, you consent to this Privacy Policy and agree to its terms.
 ---
 
 **Additional Resources:**
-- [Cookie Policy](/cookie-policy) (if applicable)
-- [Terms of Service](/terms-of-service) (if applicable)
 - [GDPR Information](https://gdpr.eu/)
 - [Google Privacy Policy](https://policies.google.com/privacy)
+- [Google AdSense Policies](https://support.google.com/adsense/answer/48182)

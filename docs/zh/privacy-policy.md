@@ -164,7 +164,6 @@ PFinalClub（以下简称"我们"）致力于保护您的隐私。本隐私政�
 ---
 
 **其他资源：**
-- [Cookie 政策](/zh/cookie-policy)（如适用）
-- [服务条款](/zh/terms-of-service)（如适用）
 - [GDPR 信息](https://gdpr.eu/)
 - [Google 隐私政策](https://policies.google.com/privacy)
+- [Google AdSense 政策](https://support.google.com/adsense/answer/48182)
