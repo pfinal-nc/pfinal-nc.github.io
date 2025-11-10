@@ -10,6 +10,9 @@ tags:
   - 高性能
   - 并发编程
   - 网络编程
+description: 深入分析Golang Socket通信架构设计与实现，从基础TCP编程到高性能游戏服务器架构，涵盖连接管理、消息编解码、并发模型等核心技术，帮助开发者构建稳定高效的游戏服务器。
+author: PFinal南丞
+keywords: Golang Socket, 游戏服务器, TCP编程, 并发模型, 消息编解码, 连接管理, 高性能服务器, Go网络编程
 ---
 
 # Golang Socket 通信架构分析与实现：构建高性能游戏服务器
