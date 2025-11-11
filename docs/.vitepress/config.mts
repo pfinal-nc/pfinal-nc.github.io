@@ -141,7 +141,111 @@ export default defineConfig({
       src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2154665617309406',
       async: 'true',
       crossorigin: 'anonymous'
-    }]
+    }],
+    // Schema.org 结构化数据 - WebSite
+    ['script', { type: 'application/ld+json' }, JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "PFinalClub",
+      "alternateName": "PFinal南丞技术博客",
+      "url": "https://friday-go.icu",
+      "description": "专注于Golang、PHP、Python、微服务、云原生技术的开发者社区，提供高质量技术文章、实战教程和架构设计经验",
+      "inLanguage": ["zh-CN", "en-US"],
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://friday-go.icu/?s={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "PFinalClub",
+        "url": "https://friday-go.icu",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://friday-go.icu/logo.png"
+        }
+      }
+    })],
+    // Schema.org 结构化数据 - Organization & Person
+    ['script', { type: 'application/ld+json' }, JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "PFinalClub",
+      "url": "https://friday-go.icu",
+      "logo": "https://friday-go.icu/logo.png",
+      "description": "A developer community focused on Golang, PHP, Python, microservices, and cloud-native technologies",
+      "founder": {
+        "@type": "Person",
+        "name": "PFinal南丞",
+        "url": "https://friday-go.icu/about",
+        "sameAs": [
+          "https://github.com/pfinal-nc",
+          "https://x.com/NPfinal"
+        ]
+      },
+      "sameAs": [
+        "https://github.com/pfinal-nc",
+        "https://x.com/NPfinal"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Technical Support",
+        "url": "https://friday-go.icu/contact"
+      }
+    })],
+    // Schema.org 结构化数据 - Blog
+    ['script', { type: 'application/ld+json' }, JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "PFinalClub Tech Blog",
+      "url": "https://friday-go.icu",
+      "description": "Professional technical blog covering Golang, PHP, Python, microservices, AI, RAG systems, cloud-native technologies, and software engineering best practices",
+      "inLanguage": ["zh-CN", "en-US"],
+      "author": {
+        "@type": "Person",
+        "name": "PFinal南丞",
+        "url": "https://friday-go.icu/about"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "PFinalClub",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://friday-go.icu/logo.png"
+        }
+      },
+      "blogPost": [
+        {
+          "@type": "BlogPosting",
+          "headline": "Golang 实现 RAG 系统：从 OpenAI API 到向量数据库完整实战",
+          "url": "https://friday-go.icu/zh/golang/Golang实现RAG系统-从OpenAI到向量数据库",
+          "datePublished": "2025-11-11",
+          "author": {
+            "@type": "Person",
+            "name": "PFinal南丞"
+          },
+          "keywords": "Golang RAG, RAG系统, 向量数据库, OpenAI API, LLM, AI",
+          "articleSection": "Golang",
+          "inLanguage": "zh-CN"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Advanced Go Concurrency Patterns for Scalable Applications",
+          "url": "https://friday-go.icu/golang/advanced-go-concurrency-patterns",
+          "datePublished": "2025-08-18",
+          "author": {
+            "@type": "Person",
+            "name": "PFinal南丞"
+          },
+          "keywords": "Go concurrency, worker pools, fan-in fan-out, scalability",
+          "articleSection": "Golang",
+          "inLanguage": "en-US"
+        }
+      ]
+    })]
     // ['script', {}, `
     //   // 重写 performance.measure 方法以避免错误
     //   (function() {
