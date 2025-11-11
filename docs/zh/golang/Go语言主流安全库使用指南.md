@@ -1,6 +1,6 @@
 ---
 title: Go语言主流安全库使用指南
-data: 2024-04-10 11:46:43
+date: 2024-04-10 11:46:43
 tags:
     - golang
 description: 详细介绍Go语言主流安全库的使用方法，包括crypto、encoding、hash、math、rand、strconv、time等库的使用，帮助开发者更好地保护应用程序的安全性。
