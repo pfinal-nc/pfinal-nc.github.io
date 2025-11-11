@@ -1,12 +1,25 @@
+# Dependencies
 node_modules
+
+# Build output
 dist
 cache
 .temp
+
+# System files
 .DS_Store
+
+# IDE and tools
 .qwen
 .vscode
+.playwright-mcp
+
+# Work reports and planning documents (temporary files)
+WORK_SUMMARY*.md
 CONTENT_IMPROVEMENT_PLAN.md
 TRANSLATION_PLAN.md
 GOOGLE_SEARCH_CONSOLE_ANALYSIS.md
-.playwright-mcp
-WORK_SUMMARY_2025-11-11.md
+*_ANALYSIS.md
+*_PLAN.md
+TODO.md
+NOTES.md
