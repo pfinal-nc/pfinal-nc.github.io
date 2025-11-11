@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "vitepress dev docs",
-    "build": "vitepress build docs && node scripts/process-sitemap.mjs",
+    "build": "vitepress build docs && node scripts/process-sitemap.mjs && node scripts/copy-redirects.mjs",
     "serve": "vitepress serve docs",
     "check:titles": "node scripts/check-titles.mjs docs",
     "fix:titles": "node scripts/check-titles.mjs --fix=quote docs",
