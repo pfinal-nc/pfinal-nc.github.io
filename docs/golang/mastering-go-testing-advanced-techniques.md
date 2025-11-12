@@ -482,9 +482,13 @@ func TestCreateUserHandler(t *testing.T) {
 }
 ```
 
-## 5. Benchmarking
+## 5. Benchmarking and Performance Testing
 
-Benchmarking helps identify performance bottlenecks in your code.
+Benchmarking is crucial for identifying performance bottlenecks and ensuring your code meets performance requirements. Go's built-in benchmarking tools are powerful and easy to use.
+
+### 5.1. Basic Benchmarking
+
+Benchmark functions start with `Benchmark` and receive a `*testing.B` parameter.
 
 ```go
 // math_test.go
@@ -520,9 +524,578 @@ func BenchmarkAddParallel(b *testing.B) {
 
 Run benchmarks:
 ```bash
+# Run all benchmarks
 go test -bench=.
-go test -bench=. -benchmem # Include memory allocation statistics
+
+# Run specific benchmark
+go test -bench=BenchmarkAdd
+
+# Include memory allocation statistics
+go test -bench=. -benchmem
+
+# Run benchmarks for 10 seconds each
+go test -bench=. -benchtime=10s
+
+# Run with CPU profiling
+go test -bench=. -cpuprofile=cpu.prof
 ```
+
+**Output interpretation**:
+```
+BenchmarkAdd-8          1000000000      0.3145 ns/op      0 B/op    0 allocs/op
+BenchmarkDivide-8       500000000       3.215 ns/op       0 B/op    0 allocs/op
+```
+
+- `BenchmarkAdd-8`: Function name with GOMAXPROCS value
+- `1000000000`: Number of iterations (b.N)
+- `0.3145 ns/op`: Time per operation
+- `0 B/op`: Bytes allocated per operation
+- `0 allocs/op`: Allocations per operation
+
+---
+
+### 5.2. Advanced Benchmark Patterns
+
+#### **Table-Driven Benchmarks**
+
+```go
+func BenchmarkStringOperations(b *testing.B) {
+    tests := []struct {
+        name  string
+        input string
+        fn    func(string) string
+    }{
+        {"ToUpper", "hello world", strings.ToUpper},
+        {"ToLower", "HELLO WORLD", strings.ToLower},
+        {"TrimSpace", "  hello  ", strings.TrimSpace},
+        {"Replace", "hello world", func(s string) string {
+            return strings.Replace(s, "world", "go", -1)
+        }},
+    }
+    
+    for _, tt := range tests {
+        b.Run(tt.name, func(b *testing.B) {
+            for i := 0; i < b.N; i++ {
+                _ = tt.fn(tt.input)
+            }
+        })
+    }
+}
+```
+
+#### **Benchmarking with Setup/Teardown**
+
+```go
+func BenchmarkDatabaseQuery(b *testing.B) {
+    // Setup (not measured)
+    db := setupTestDatabase()
+    defer db.Close()
+    
+    // Reset timer to exclude setup time
+    b.ResetTimer()
+    
+    for i := 0; i < b.N; i++ {
+        // Only this loop is measured
+        _ = db.Query("SELECT * FROM users WHERE id = ?", 1)
+    }
+    
+    // Stop timer if you need to do cleanup
+    b.StopTimer()
+    cleanupData(db)
+}
+```
+
+#### **Benchmarking Memory Allocations**
+
+```go
+func BenchmarkStringConcatenation(b *testing.B) {
+    tests := []struct {
+        name string
+        fn   func() string
+    }{
+        {
+            name: "Plus",
+            fn: func() string {
+                s := ""
+                for i := 0; i < 100; i++ {
+                    s += "hello"
+                }
+                return s
+            },
+        },
+        {
+            name: "StringBuilder",
+            fn: func() string {
+                var sb strings.Builder
+                for i := 0; i < 100; i++ {
+                    sb.WriteString("hello")
+                }
+                return sb.String()
+            },
+        },
+        {
+            name: "JoinSlice",
+            fn: func() string {
+                slice := make([]string, 100)
+                for i := 0; i < 100; i++ {
+                    slice[i] = "hello"
+                }
+                return strings.Join(slice, "")
+            },
+        },
+    }
+    
+    for _, tt := range tests {
+        b.Run(tt.name, func(b *testing.B) {
+            b.ReportAllocs() // Report allocation statistics
+            for i := 0; i < b.N; i++ {
+                _ = tt.fn()
+            }
+        })
+    }
+}
+```
+
+**Output**:
+```
+BenchmarkStringConcatenation/Plus-8                 20000      55234 ns/op    503992 B/op    99 allocs/op
+BenchmarkStringConcatenation/StringBuilder-8       200000       6789 ns/op       896 B/op     3 allocs/op
+BenchmarkStringConcatenation/JoinSlice-8           150000       7123 ns/op      1024 B/op     2 allocs/op
+```
+
+**Analysis**: `StringBuilder` is 8x faster and allocates 500x less memory than string concatenation with `+`.
+
+---
+
+### 5.3. Comparative Benchmarking
+
+```go
+// benchmark_test.go
+package optimization
+
+import (
+    "encoding/json"
+    "testing"
+)
+
+type User struct {
+    ID       int    `json:"id"`
+    Name     string `json:"name"`
+    Email    string `json:"email"`
+    Age      int    `json:"age"`
+    Active   bool   `json:"active"`
+}
+
+var testUser = User{
+    ID:     1,
+    Name:   "John Doe",
+    Email:  "john@example.com",
+    Age:    30,
+    Active: true,
+}
+
+func BenchmarkJSONMarshal(b *testing.B) {
+    b.ReportAllocs()
+    for i := 0; i < b.N; i++ {
+        _, err := json.Marshal(testUser)
+        if err != nil {
+            b.Fatal(err)
+        }
+    }
+}
+
+func BenchmarkJSONMarshalIndent(b *testing.B) {
+    b.ReportAllocs()
+    for i := 0; i < b.N; i++ {
+        _, err := json.MarshalIndent(testUser, "", "  ")
+        if err != nil {
+            b.Fatal(err)
+        }
+    }
+}
+
+// Custom encoder for comparison
+func BenchmarkCustomEncoder(b *testing.B) {
+    b.ReportAllocs()
+    for i := 0; i < b.N; i++ {
+        var buf strings.Builder
+        buf.WriteString("{")
+        buf.WriteString(`"id":`)
+        buf.WriteString(strconv.Itoa(testUser.ID))
+        buf.WriteString(`,"name":"`)
+        buf.WriteString(testUser.Name)
+        buf.WriteString(`"}`)
+        _ = buf.String()
+    }
+}
+```
+
+**Run comparison**:
+```bash
+go test -bench=BenchmarkJSON -benchmem
+```
+
+**Output**:
+```
+BenchmarkJSONMarshal-8              2000000      789 ns/op    144 B/op    2 allocs/op
+BenchmarkJSONMarshalIndent-8        1000000     1234 ns/op    256 B/op    3 allocs/op
+BenchmarkCustomEncoder-8            5000000      289 ns/op     96 B/op    1 allocs/op
+```
+
+---
+
+### 5.4. CPU Profiling with pprof
+
+Generate CPU profile during benchmarking:
+
+```bash
+# Generate CPU profile
+go test -bench=. -cpuprofile=cpu.prof
+
+# Analyze profile interactively
+go tool pprof cpu.prof
+
+# Common pprof commands:
+(pprof) top       # Show top 10 functions by CPU time
+(pprof) list FunctionName  # Show source code with annotations
+(pprof) web       # Generate visual graph (requires graphviz)
+(pprof) pdf       # Generate PDF report
+```
+
+**Example pprof output**:
+```
+(pprof) top10
+Showing nodes accounting for 1.50s, 78.95% of 1.90s total
+Showing top 10 nodes out of 45
+      flat  flat%   sum%        cum   cum%
+     0.35s 18.42% 18.42%      0.45s 23.68%  runtime.mallocgc
+     0.28s 14.74% 33.16%      0.28s 14.74%  strings.(*Builder).WriteString
+     0.22s 11.58% 44.74%      0.38s 20.00%  encoding/json.(*encodeState).marshal
+     0.18s  9.47% 54.21%      0.18s  9.47%  runtime.nextFreeFast
+     ...
+```
+
+#### **Visual Profiling**
+
+```bash
+# Generate flame graph
+go test -bench=. -cpuprofile=cpu.prof
+go tool pprof -http=:8080 cpu.prof
+
+# This opens a web browser with interactive visualizations:
+# - Flame graph
+# - Top functions
+# - Source code view
+# - Call graph
+```
+
+---
+
+### 5.5. Memory Profiling
+
+```bash
+# Generate memory profile
+go test -bench=. -memprofile=mem.prof -memprofilerate=1
+
+# Analyze memory profile
+go tool pprof mem.prof
+
+(pprof) top
+(pprof) list FunctionName
+```
+
+**Memory-focused benchmark**:
+
+```go
+func BenchmarkMemoryIntensive(b *testing.B) {
+    b.ReportAllocs()
+    b.ReportMetric(0, "ns/op") // Report custom metrics
+    
+    var m runtime.MemStats
+    runtime.ReadMemStats(&m)
+    before := m.Alloc
+    
+    b.ResetTimer()
+    for i := 0; i < b.N; i++ {
+        // Memory-intensive operation
+        data := make([]byte, 1024*1024) // 1MB allocation
+        _ = data
+    }
+    b.StopTimer()
+    
+    runtime.ReadMemStats(&m)
+    after := m.Alloc
+    b.ReportMetric(float64(after-before)/float64(b.N), "B/op")
+}
+```
+
+---
+
+### 5.6. Benchmark Best Practices
+
+#### **1. Avoid Compiler Optimizations**
+
+```go
+// ❌ BAD: Compiler may optimize away unused result
+func BenchmarkBad(b *testing.B) {
+    for i := 0; i < b.N; i++ {
+        Add(1, 2) // Result is discarded
+    }
+}
+
+// ✅ GOOD: Store result to prevent optimization
+var result int
+
+func BenchmarkGood(b *testing.B) {
+    var r int
+    for i := 0; i < b.N; i++ {
+        r = Add(1, 2)
+    }
+    result = r // Assign to package-level variable
+}
+```
+
+#### **2. Use Realistic Data**
+
+```go
+// ❌ BAD: Unrealistic small data
+func BenchmarkStringProcessingBad(b *testing.B) {
+    input := "a"
+    for i := 0; i < b.N; i++ {
+        strings.ToUpper(input)
+    }
+}
+
+// ✅ GOOD: Realistic data size
+func BenchmarkStringProcessingGood(b *testing.B) {
+    input := strings.Repeat("hello world ", 100) // 1200 chars
+    for i := 0; i < b.N; i++ {
+        strings.ToUpper(input)
+    }
+}
+```
+
+#### **3. Benchmark Multiple Scenarios**
+
+```go
+func BenchmarkCachePerformance(b *testing.B) {
+    sizes := []int{10, 100, 1000, 10000}
+    
+    for _, size := range sizes {
+        b.Run(fmt.Sprintf("Size_%d", size), func(b *testing.B) {
+            cache := NewCache(size)
+            b.ResetTimer()
+            
+            for i := 0; i < b.N; i++ {
+                key := fmt.Sprintf("key_%d", i%size)
+                cache.Get(key)
+            }
+        })
+    }
+}
+```
+
+#### **4. Parallel Benchmarks for Concurrency**
+
+```go
+func BenchmarkConcurrentMap(b *testing.B) {
+    m := sync.Map{}
+    
+    b.RunParallel(func(pb *testing.PB) {
+        i := 0
+        for pb.Next() {
+            m.Store(i, i)
+            i++
+        }
+    })
+}
+
+func BenchmarkMutexMap(b *testing.B) {
+    m := make(map[int]int)
+    var mu sync.Mutex
+    
+    b.RunParallel(func(pb *testing.PB) {
+        i := 0
+        for pb.Next() {
+            mu.Lock()
+            m[i] = i
+            mu.Unlock()
+            i++
+        }
+    })
+}
+```
+
+---
+
+### 5.7. Benchstat for Statistical Analysis
+
+Install benchstat:
+```bash
+go install golang.org/x/perf/cmd/benchstat@latest
+```
+
+**Usage**:
+```bash
+# Run benchmarks multiple times and save results
+go test -bench=. -count=10 > old.txt
+
+# Make optimization changes...
+
+go test -bench=. -count=10 > new.txt
+
+# Compare results statistically
+benchstat old.txt new.txt
+```
+
+**Output**:
+```
+name                 old time/op    new time/op    delta
+StringConcatenation  55.2µs ± 2%    6.8µs ± 1%  -87.70%  (p=0.000 n=10+10)
+
+name                 old alloc/op   new alloc/op   delta
+StringConcatenation   504kB ± 0%       1kB ± 0%  -99.80%  (p=0.000 n=10+10)
+
+name                 old allocs/op  new allocs/op  delta
+StringConcatenation    99.0 ± 0%       3.0 ± 0%  -96.97%  (p=0.000 n=10+10)
+```
+
+---
+
+### 5.8. Real-World Example: Optimizing a Web Handler
+
+```go
+// handler.go
+package api
+
+import (
+    "encoding/json"
+    "net/http"
+    "sync"
+)
+
+type Response struct {
+    Status string      `json:"status"`
+    Data   interface{} `json:"data"`
+}
+
+// Version 1: Naive implementation
+func HandleRequestV1(w http.ResponseWriter, r *http.Request) {
+    data := fetchData() // Simulated data fetch
+    
+    resp := Response{
+        Status: "success",
+        Data:   data,
+    }
+    
+    jsonBytes, _ := json.Marshal(resp)
+    w.Header().Set("Content-Type", "application/json")
+    w.Write(jsonBytes)
+}
+
+// Version 2: Optimized with pooling
+var responsePool = sync.Pool{
+    New: func() interface{} {
+        return &Response{}
+    },
+}
+
+func HandleRequestV2(w http.ResponseWriter, r *http.Request) {
+    resp := responsePool.Get().(*Response)
+    defer responsePool.Put(resp)
+    
+    resp.Status = "success"
+    resp.Data = fetchData()
+    
+    w.Header().Set("Content-Type", "application/json")
+    json.NewEncoder(w).Encode(resp)
+}
+```
+
+**Benchmark comparison**:
+```go
+// handler_test.go
+func BenchmarkHandlerV1(b *testing.B) {
+    for i := 0; i < b.N; i++ {
+        req := httptest.NewRequest("GET", "/api/data", nil)
+        w := httptest.NewRecorder()
+        HandleRequestV1(w, req)
+    }
+}
+
+func BenchmarkHandlerV2(b *testing.B) {
+    for i := 0; i < b.N; i++ {
+        req := httptest.NewRequest("GET", "/api/data", nil)
+        w := httptest.NewRecorder()
+        HandleRequestV2(w, req)
+    }
+}
+```
+
+**Results**:
+```
+BenchmarkHandlerV1-8    1000000    1234 ns/op    512 B/op    5 allocs/op
+BenchmarkHandlerV2-8    2000000     789 ns/op    256 B/op    2 allocs/op
+```
+
+**Improvement**: 36% faster, 50% less memory, 60% fewer allocations
+
+---
+
+### 5.9. Continuous Performance Monitoring
+
+**GitHub Actions Workflow** (`.github/workflows/benchmark.yml`):
+
+```yaml
+name: Benchmark
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-go@v4
+        with:
+          go-version: '1.22'
+      
+      - name: Run Benchmarks
+        run: |
+          go test -bench=. -benchmem -count=5 | tee benchmark.txt
+      
+      - name: Store Benchmark Result
+        uses: benchmark-action/github-action-benchmark@v1
+        with:
+          tool: 'go'
+          output-file-path: benchmark.txt
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          auto-push: true
+```
+
+---
+
+### 5.10. Benchmark Checklist
+
+Before committing optimizations:
+
+- ✅ Run benchmarks on consistent hardware
+- ✅ Use `-benchtime=10s` for stable results
+- ✅ Run with `-count=10` and use `benchstat` for statistical confidence
+- ✅ Profile with `pprof` to identify bottlenecks
+- ✅ Test both CPU and memory performance
+- ✅ Benchmark realistic workloads and data sizes
+- ✅ Consider concurrent scenarios with `b.RunParallel`
+- ✅ Prevent compiler optimizations (store results)
+- ✅ Document performance requirements and benchmarks
+
+**Further reading**:
+- [Go Performance Optimization](/golang/Go-Performance-Optimization-Best-Practices.html)
+- [Advanced Go Concurrency Patterns](/golang/advanced-go-concurrency-patterns)
+
+---
 
 ## 6. Fuzzing (Go 1.18+)
 
@@ -807,3 +1380,43 @@ Mastering Go testing involves understanding and applying a range of techniques f
 6.  **Automate testing**: Integrate testing into your CI/CD pipeline.
 
 By following these practices and continuously improving your testing approach, you can build more reliable, maintainable, and performant Go applications. Remember that testing is not just about finding bugs - it's about designing better code and having confidence in your software.
+
+---
+
+**Last Updated**: November 12, 2025  
+**Author**: PFinal南丞  
+**License**: MIT
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Mastering Go Testing - Advanced Techniques and Best Practices",
+  "url": "https://friday-go.icu/golang/mastering-go-testing-advanced-techniques.html",
+  "datePublished": "2025-08-18",
+  "dateModified": "2025-11-12",
+  "author": {
+    "@type": "Person",
+    "name": "PFinal南丞",
+    "url": "https://friday-go.icu/about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PFinalClub",
+    "url": "https://friday-go.icu",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://friday-go.icu/logo.png"
+    }
+  },
+  "description": "A comprehensive guide to advanced Go testing techniques, covering unit testing, integration testing, benchmarking, fuzzing, and best practices for writing maintainable and effective tests.",
+  "keywords": "golang, testing, tdd, unit testing, integration testing, benchmarking, fuzzing, table-driven tests, testify, gomock, testcontainers, coverage, profiling, best practices",
+  "articleSection": "Golang",
+  "inLanguage": "en-US",
+  "wordCount": 18000,
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://friday-go.icu/golang/mastering-go-testing-advanced-techniques.html"
+  }
+}
+</script>
