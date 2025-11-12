@@ -18,10 +18,7 @@ sticky: 1
 
 # PHP Process and Thread Analysis: Deep Dive into Concurrency Models
 
-> **Series Navigation**: This article is part of the PHP Performance Optimization series
-> - [Laravel Carbon Class Usage](/PHP/Laravel-Carbon-Class-Usage.html)
-> - [Laravel Admin Special Routing Operations](/PHP/Laravel-admin-Special-Routing-Operations.html)
-> - [Laravel Manual Build](/PHP/Laravel-Manual-Build.html)
+> **Series Navigation**: This article is part of the PHP Performance Optimization series focusing on process management, concurrency, and production best practices.
 
 ## Table of Contents
 
@@ -1237,9 +1234,8 @@ $server->start();
 
 ### Related Articles
 
-- [Go Concurrency Patterns](/golang/advanced-go-concurrency-patterns) - Compare with modern concurrency
-- [Laravel Carbon Class Usage](/PHP/Laravel-Carbon-Class-Usage.html) - Laravel framework essentials
-- [Laravel Manual Build](/PHP/Laravel-Manual-Build.html) - Framework deployment guide
+- [Go Concurrency Patterns](/golang/advanced-go-concurrency-patterns) - Compare with modern concurrency models
+- [Go Testing Advanced Techniques](/golang/mastering-go-testing-advanced-techniques) - Testing concurrent code
 
 ---
 
