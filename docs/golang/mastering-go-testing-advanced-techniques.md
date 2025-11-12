@@ -1092,8 +1092,8 @@ Before committing optimizations:
 - ✅ Document performance requirements and benchmarks
 
 **Further reading**:
-- [Go Performance Optimization](/golang/Go-Performance-Optimization-Best-Practices.html)
 - [Advanced Go Concurrency Patterns](/golang/advanced-go-concurrency-patterns)
+- [Go CLI Development Practice](/golang/Go-CLI-Utility-Development-Practice)
 
 ---
 
@@ -1387,36 +1387,9 @@ By following these practices and continuously improving your testing approach, y
 **Author**: PFinal南丞  
 **License**: MIT
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Mastering Go Testing - Advanced Techniques and Best Practices",
-  "url": "https://friday-go.icu/golang/mastering-go-testing-advanced-techniques.html",
-  "datePublished": "2025-08-18",
-  "dateModified": "2025-11-12",
-  "author": {
-    "@type": "Person",
-    "name": "PFinal南丞",
-    "url": "https://friday-go.icu/about"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "PFinalClub",
-    "url": "https://friday-go.icu",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://friday-go.icu/logo.png"
-    }
-  },
-  "description": "A comprehensive guide to advanced Go testing techniques, covering unit testing, integration testing, benchmarking, fuzzing, and best practices for writing maintainable and effective tests.",
-  "keywords": "golang, testing, tdd, unit testing, integration testing, benchmarking, fuzzing, table-driven tests, testify, gomock, testcontainers, coverage, profiling, best practices",
-  "articleSection": "Golang",
-  "inLanguage": "en-US",
-  "wordCount": 18000,
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://friday-go.icu/golang/mastering-go-testing-advanced-techniques.html"
-  }
-}
-</script>
+<!--
+BlogPosting Schema.org structured data:
+- Article: Mastering Go Testing - Advanced Techniques
+- Published: 2025-08-18, Modified: 2025-11-12
+- Keywords: Golang testing, benchmarking, fuzzing, TDD
+-->

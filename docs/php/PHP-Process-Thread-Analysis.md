@@ -19,9 +19,9 @@ sticky: 1
 # PHP Process and Thread Analysis: Deep Dive into Concurrency Models
 
 > **Series Navigation**: This article is part of the PHP Performance Optimization series
-> - [Redis Configuration Explained](/php/Redis-Configuration-File-Explanation.html)
-> - [Laravel Carbon Class Usage](/php/Laravel-Carbon-Class-Usage.html)
-> - [Laravel Admin Special Routing Operations](/php/Laravel-admin-Special-Routing-Operations.html)
+> - [Laravel Carbon Class Usage](/PHP/Laravel-Carbon-Class-Usage.html)
+> - [Laravel Admin Special Routing Operations](/PHP/Laravel-admin-Special-Routing-Operations.html)
+> - [Laravel Manual Build](/PHP/Laravel-Manual-Build.html)
 
 ## Table of Contents
 
@@ -31,7 +31,7 @@ sticky: 1
 
 ## 1. Introduction
 
-PHP's process and thread model is fundamentally different from languages like [Golang](/golang/advanced-go-concurrency-patterns) or [Node.js](/nodejs/understanding-event-loop). Understanding these differences is crucial for building high-performance PHP applications in 2025.
+PHP's process and thread model is fundamentally different from languages like [Golang](/golang/advanced-go-concurrency-patterns) or Node.js. Understanding these differences is crucial for building high-performance PHP applications in 2025.
 
 **Why This Matters**:
 - PHP-FPM powers millions of production websites
@@ -1238,8 +1238,8 @@ $server->start();
 ### Related Articles
 
 - [Go Concurrency Patterns](/golang/advanced-go-concurrency-patterns) - Compare with modern concurrency
-- [Redis Configuration](/php/Redis-Configuration-File-Explanation.html) - Optimize caching layer
-- [Laravel Performance](/php/Laravel-Performance-Optimization.html) - Framework-specific optimizations
+- [Laravel Carbon Class Usage](/PHP/Laravel-Carbon-Class-Usage.html) - Laravel framework essentials
+- [Laravel Manual Build](/PHP/Laravel-Manual-Build.html) - Framework deployment guide
 
 ---
 
@@ -1257,39 +1257,12 @@ $server->start();
 **Author**: PFinal南丞  
 **License**: CC BY-SA 4.0
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "PHP Process and Thread Analysis: Deep Dive into Concurrency Models",
-  "url": "https://friday-go.icu/php/PHP-Process-Thread-Analysis.html",
-  "datePublished": "2025-11-12",
-  "dateModified": "2025-11-12",
-  "author": {
-    "@type": "Person",
-    "name": "PFinal南丞",
-    "url": "https://friday-go.icu/about"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "PFinalClub",
-    "url": "https://friday-go.icu",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://friday-go.icu/logo.png"
-    }
-  },
-  "description": "Comprehensive analysis of PHP process and thread management, covering multi-process architecture, thread-safe mechanisms, PHP-FPM optimization, and concurrency strategies for building high-performance PHP applications.",
-  "keywords": "PHP Process, PHP Thread, Multi-Process, Thread-Safe, PHP Concurrency, PHP-FPM, Process Management, PHP Performance, pcntl, pthreads, ZTS, PHP Optimization 2025",
-  "articleSection": "PHP",
-  "inLanguage": "en-US",
-  "wordCount": 15000,
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://friday-go.icu/php/PHP-Process-Thread-Analysis.html"
-  }
-}
-</script>
+<!-- 
+BlogPosting Schema.org structured data:
+- Article: PHP Process and Thread Analysis
+- Published: 2025-11-12
+- Keywords: PHP Process, PHP-FPM, Thread-Safe, Performance
+-->
 
 <style>
 /* Custom styling for code blocks */
