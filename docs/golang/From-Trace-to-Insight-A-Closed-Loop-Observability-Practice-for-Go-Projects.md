@@ -1381,3 +1381,17 @@ When trace, metrics, and logs work together, you can move from "emergency respon
 
 Observability is not a "one-time project", but a continuously evolving engineering culture.
 When every engineer can confidently answer "Can my code be observed?", you have succeeded.
+
+---
+
+## Related Articles
+
+Explore more Go observability and development topics:
+
+- [Distributed Tracing with OpenTelemetry](/golang/distributed-tracing-opentelemetry-go.html) - Deep dive into OpenTelemetry implementation
+- [Building Scalable Web Services with Go and gRPC](/golang/scalable-web-services-go-grpc.html) - Add observability to gRPC services
+- [Advanced Go Concurrency Patterns](/golang/advanced-go-concurrency-patterns) - Monitor concurrent operations and goroutines
+- [Mastering Go Testing - Advanced Techniques](/golang/mastering-go-testing-advanced-techniques.html) - Test observability code and metrics
+- [Building Kubernetes Operators with Go](/golang/Building-Kubernetes-Operators-with-Go-Complete-Guide.html) - Observability for Kubernetes workloads
+- [Go Containerization Best Practices](/golang/Go-Containerization-Best-Practices-Docker-Optimization.html) - Monitor containerized Go applications
+- [Building GraphQL APIs with Go](/golang/Building-GraphQL-APIs-with-Go-Complete-Guide-2025.html) - Add tracing to GraphQL resolvers
