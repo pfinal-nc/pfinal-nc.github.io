@@ -286,9 +286,9 @@ print(f.renderText('Python'))
 
 ## 🔗 Related Articles
 
-- [Common Encryption and Decryption Algorithm Feature Collection](/python/Common-Encryption-Decryption-Algorithm-Feature-Collection) - Encryption techniques for crawlers
-- [Python Coroutines](/python/Python-Coroutines) - Async programming patterns
-- [Reverse Engineering JS Webpack Tips for Crawlers](/python/Reverse-Engineering-JS-Webpack-Tips-for-Crawlers) - Advanced web scraping
+- [Common Encryption and Decryption Algorithm Feature Collection](/python/Common-Encryption-Decryption-Algorithm-Feature-Collection.html) - Encryption techniques for crawlers
+- [Python Coroutines](/python/Python-Coroutines.html) - Async programming patterns
+- [Reverse Engineering JS Webpack Tips for Crawlers](/python/Reverse-Engineering-JS-Webpack-Tips-for-Crawlers.html) - Advanced web scraping
 
 ---
 

@@ -308,9 +308,9 @@ When analyzing encrypted data in crawlers:
 
 ## Related Articles
 
-- [Reverse Engineering JS Webpack Tips for Crawlers](/python/Reverse-Engineering-JS-Webpack-Tips-for-Crawlers) - Advanced JavaScript reverse engineering
-- [Python Coroutines for Async Crawling](/python/Python-Coroutines) - Efficient async crawling patterns
-- [Building RAG System with Golang](/golang/Building-RAG-System-with-Golang-OpenAI-Vector-Database) - Data processing techniques
+- [Reverse Engineering JS Webpack Tips for Crawlers](/python/Reverse-Engineering-JS-Webpack-Tips-for-Crawlers.html) - Advanced JavaScript reverse engineering
+- [Python Coroutines for Async Crawling](/python/Python-Coroutines.html) - Efficient async crawling patterns
+- [Building RAG System with Golang](/golang/Building-RAG-System-with-Golang-OpenAI-Vector-Database.html) - Data processing techniques
 
 ---
 
