@@ -1,5 +1,5 @@
 ---
-title: 构建可维护的正则表达式系统：pfinal-regex-center 设计与实现
+title: 构建可维护的正则表达式系统 pfinal-regex-center 设计与实现
 date: 2025-01-28 15:30:00
 author: PFinal南丞
 tags:

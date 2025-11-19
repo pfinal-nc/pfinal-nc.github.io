@@ -3,14 +3,18 @@ title: Building RAG System with Golang - From OpenAI API to Vector Database Comp
 date: 2025-11-11
 author: PFinal南丞
 tags:
-  - Golang
-  - AI
-  - RAG
-  - LLM
-  - Vector Database
-  - OpenAI
-description: A comprehensive guide on building a complete RAG (Retrieval-Augmented Generation) system using Golang, covering OpenAI API integration, vector database selection, embedding generation, semantic retrieval, and practical examples to help developers quickly build intelligent Q&A systems.
-keywords: Golang RAG, RAG system, Vector Database, OpenAI API, Embedding, Semantic Search, LLM, Golang AI, Intelligent QA, Retrieval-Augmented Generation
+  - golang
+  - ai
+  - rag
+  - llm
+  - vector-database
+  - openai
+  - tutorial
+  - guide
+  - machine-learning
+  - semantic-search
+description: A comprehensive, battle-tested guide on building a complete RAG (Retrieval-Augmented Generation) system using Golang. Learn OpenAI API integration, Qdrant vector database setup, embedding generation, semantic retrieval, and production-ready best practices. Includes complete code examples and real-world case studies.
+keywords: Golang RAG, RAG system implementation, Vector Database Golang, OpenAI API integration, Embedding generation, Semantic Search Go, LLM application development, Golang AI tutorial, Intelligent Q&A system, Retrieval-Augmented Generation guide, Qdrant integration, Production RAG system
 ---
 
 # Building RAG System with Golang: From OpenAI API to Vector Database Complete Guide
