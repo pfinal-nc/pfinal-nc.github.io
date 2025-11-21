@@ -32,7 +32,11 @@ export default defineConfig({
         socialLinks: [
           { icon: 'github', link: 'https://github.com/pfinal-nc' },
           { icon: 'twitter', link: 'https://x.com/NPfinal' }
-        ]
+        ],
+        footer: {
+          message: '<a href="/about">About</a> | <a href="/contact">Contact</a> | <a href="/privacy-policy">Privacy Policy</a>',
+          copyright: 'MIT License | PFinalClub'
+        }
       }
     },
     zh: {
@@ -59,7 +63,11 @@ export default defineConfig({
         socialLinks: [
           { icon: 'github', link: 'https://github.com/pfinal-nc' },
           { icon: 'twitter', link: 'https://x.com/NPfinal' }
-        ]
+        ],
+        footer: {
+          message: '<a href="/zh/about">关于作者</a> | <a href="/zh/contact">联系我们</a> | <a href="/zh/privacy-policy">隐私政策</a>',
+          copyright: 'MIT License | PFinalClub'
+        }
       }
     }
   },
