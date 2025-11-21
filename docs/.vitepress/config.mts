@@ -2,8 +2,9 @@ import { defineConfig } from 'vitepress'
 // 导入主题的配置
 import { blogTheme } from './blog-theme'
 
-// 全局基础关键词
-let BASE_KEYWORDS = 'pfinalclub, git, gitsite, javascript, node, jquery, python, php, laravel, sql, database, linux, operating system, os, cpu, verilog, risc-v, bitcoin, ethereum, ai, 教程, 软件, 编程, 开发, 运维, 云计算, 网络, 互联网, 比特币, 以太坊, 操作系统, 智能合约, 数字货币, 爬虫, 逆向, usd php, wails golang'
+// 核心品牌关键词（避免过度堆砌，保留最核心的品牌和技术栈）
+// 注意：现代搜索引擎主要依赖文章内容和 frontmatter 中的精准关键词
+let BASE_KEYWORDS = 'PFinalClub, Golang, PHP, Python, 技术博客, Tech Blog'
 
 
 export default defineConfig({
@@ -117,7 +118,9 @@ export default defineConfig({
         ...item,
         changefreq: 'weekly',
         priority: 0.8,
-        lastmod: new Date().toISOString()
+        // 保留 VitePress 原始的 lastmod（基于 Git 提交时间）
+        // 如果没有 lastmod，才使用当前时间
+        lastmod: item.lastmod || new Date().toISOString()
       }))
     }
   },
@@ -322,20 +325,45 @@ export default defineConfig({
   ],
   
   transformPageData(pageData, ctx) {
-    // 判断是否为文章详情页（这里假设详情页没有设置 layout）
-  if (!pageData.frontmatter.layout) {
-    const articleKeywords = pageData.frontmatter.keywords;
-    // 拼接动态关键词
-    const newKeywords = articleKeywords 
-      ? `${articleKeywords}` 
-      : BASE_KEYWORDS;
     // 确保 head 数组存在
     pageData.frontmatter.head = pageData.frontmatter.head || [];
-    // 添加或覆盖 meta keywords 标签
-    pageData.frontmatter.head.push([
-      'meta',
-      { name: 'keywords', content: newKeywords }
-    ]);
-  }
- }, 
+    
+    // 添加 hreflang 标签支持多语言
+    const currentPath = pageData.relativePath.replace(/\.md$/, '.html').replace(/index\.html$/, '');
+    const baseUrl = 'https://friday-go.icu';
+    
+    // 判断当前是中文还是英文页面
+    if (currentPath.startsWith('zh/')) {
+      // 当前是中文页面
+      const enPath = currentPath.replace(/^zh\//, '');
+      pageData.frontmatter.head.push(
+        ['link', { rel: 'alternate', hreflang: 'zh-CN', href: `${baseUrl}/${currentPath}` }],
+        ['link', { rel: 'alternate', hreflang: 'en', href: `${baseUrl}/${enPath}` }],
+        ['link', { rel: 'alternate', hreflang: 'x-default', href: `${baseUrl}/${enPath}` }]
+      );
+    } else {
+      // 当前是英文页面
+      const zhPath = `zh/${currentPath}`;
+      pageData.frontmatter.head.push(
+        ['link', { rel: 'alternate', hreflang: 'en', href: `${baseUrl}/${currentPath}` }],
+        ['link', { rel: 'alternate', hreflang: 'zh-CN', href: `${baseUrl}/${zhPath}` }],
+        ['link', { rel: 'alternate', hreflang: 'x-default', href: `${baseUrl}/${currentPath}` }]
+      );
+    }
+    
+    // 判断是否为文章详情页（这里假设详情页没有设置 layout）
+    if (!pageData.frontmatter.layout) {
+      const articleKeywords = pageData.frontmatter.keywords;
+      // 只使用文章自定义关键词或核心品牌词
+      const coreKeywords = 'PFinalClub, Golang, PHP, Python, 技术博客, Tech Blog';
+      const newKeywords = articleKeywords 
+        ? `${articleKeywords}, ${coreKeywords}` 
+        : coreKeywords;
+      // 添加或覆盖 meta keywords 标签
+      pageData.frontmatter.head.push([
+        'meta',
+        { name: 'keywords', content: newKeywords }
+      ]);
+    }
+  }, 
 })

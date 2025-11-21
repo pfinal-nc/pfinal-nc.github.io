@@ -9,7 +9,10 @@ Disallow: /*?tag=
 Disallow: /*?type=
 Disallow: /*?category=
 
-# 不索引系统文件
+# 允许 Sitemap
+Allow: /sitemap.xml
+
+# 不索引其他 XML 系统文件
 Disallow: /*.xml$
 
 # 允许静态资源
