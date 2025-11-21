@@ -10,7 +10,6 @@ Disallow: /*?type=
 Disallow: /*?category=
 
 # 不索引系统文件
-Disallow: /sitemap.xml
 Disallow: /*.xml$
 
 # 允许静态资源
