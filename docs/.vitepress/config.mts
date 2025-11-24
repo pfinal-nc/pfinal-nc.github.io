@@ -74,37 +74,13 @@ export default defineConfig({
   },
   sitemap: {
     hostname: 'https://friday-go.icu',
-    exclude: [
-      // 排除系统文件
-      '**/sitemap.xml',
-      '**/*.xml',
-      '**/favicon.ico',
-      // 排除 404 页面
-      '**/404.html',
-      // 排除 index.html（避免与根路径重复）
-      '**/index.html',
-      // 排除标签页面和查询参数页面
-      '**/?tag=*',
-      '**/?type=*',
-      '**/?category=*',
-      // 排除子域名相关（如果在主站点构建中）
-      '**/pnav.friday-go.icu/**',
-      '**/nav.friday-go.icu/**',
-      '**/miao.friday-go.icu/**',
-      '**/game.friday-go.icu/**'
-    ],
     transformItems: (items) => {
-      // 过滤掉包含查询参数的 URL 和不应该索引的页面
+      // 过滤掉不应该索引的页面
       const filtered = items.filter(item => {
         const url = item.url
         
         // 排除 404 页面
-        if (url.includes('/404.html')) {
-          return false
-        }
-        
-        // 排除 index.html（避免与根路径重复）
-        if (url.includes('/index.html')) {
+        if (url.includes('/404')) {
           return false
         }
         
@@ -113,12 +89,7 @@ export default defineConfig({
           return false
         }
         
-        // 排除 sitemap.xml 本身
-        if (url.endsWith('/sitemap.xml') || url.endsWith('.xml')) {
-          return false
-        }
-        
-        // 排除子域名 URL
+        // 排除子域名 URL（如果意外包含）
         if (url.includes('nav.friday-go.icu') || 
             url.includes('game.friday-go.icu') || 
             url.includes('miao.friday-go.icu') || 
@@ -126,13 +97,13 @@ export default defineConfig({
           return false
         }
         
-        // 只保留 HTTPS URL，排除 HTTP
-        if (!url.startsWith('https://')) {
-          return false
-        }
-        
         return true
       })
+      
+      // 确保至少有一些 URL
+      if (filtered.length === 0) {
+        console.warn('⚠️ Warning: Sitemap is empty after filtering!')
+      }
       
       return filtered.map(item => ({
         ...item,
