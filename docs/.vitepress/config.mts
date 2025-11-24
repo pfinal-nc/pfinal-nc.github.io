@@ -81,6 +81,8 @@ export default defineConfig({
       '**/favicon.ico',
       // 排除 404 页面
       '**/404.html',
+      // 排除 index.html（避免与根路径重复）
+      '**/index.html',
       // 排除标签页面和查询参数页面
       '**/?tag=*',
       '**/?type=*',
@@ -101,6 +103,11 @@ export default defineConfig({
           return false
         }
         
+        // 排除 index.html（避免与根路径重复）
+        if (url.includes('/index.html')) {
+          return false
+        }
+        
         // 排除带查询参数的URL
         if (url.includes('?tag=') || url.includes('?type=') || url.includes('?category=')) {
           return false
@@ -108,6 +115,19 @@ export default defineConfig({
         
         // 排除 sitemap.xml 本身
         if (url.endsWith('/sitemap.xml') || url.endsWith('.xml')) {
+          return false
+        }
+        
+        // 排除子域名 URL
+        if (url.includes('nav.friday-go.icu') || 
+            url.includes('game.friday-go.icu') || 
+            url.includes('miao.friday-go.icu') || 
+            url.includes('pnav.friday-go.icu')) {
+          return false
+        }
+        
+        // 只保留 HTTPS URL，排除 HTTP
+        if (!url.startsWith('https://')) {
           return false
         }
         
@@ -129,6 +149,7 @@ export default defineConfig({
   title: 'PFinalClub',
   description: 'PFinalClub is a developer community focused on PHP, Golang, Python, microservices, and cloud-native technologies.',
   lastUpdated: true,
+  cleanUrls: true, // 移除 .html 后缀，提升 SEO
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['link', { rel: 'canonical', href: 'https://friday-go.icu/' }],
@@ -328,11 +349,26 @@ export default defineConfig({
     // 确保 head 数组存在
     pageData.frontmatter.head = pageData.frontmatter.head || [];
     
-    // 添加 hreflang 标签支持多语言
-    const currentPath = pageData.relativePath.replace(/\.md$/, '.html').replace(/index\.html$/, '');
     const baseUrl = 'https://friday-go.icu';
     
-    // 判断当前是中文还是英文页面
+    // 计算当前页面的规范 URL（不带 .html 后缀和 index.html）
+    let currentPath = pageData.relativePath
+      .replace(/\.md$/, '')
+      .replace(/\/index$/, '')
+      .replace(/^index$/, '');
+    
+    // 如果路径为空，说明是根页面
+    const canonicalUrl = currentPath 
+      ? `${baseUrl}/${currentPath}` 
+      : baseUrl;
+    
+    // 添加 canonical 标签（最重要的 SEO 标签）
+    pageData.frontmatter.head.push([
+      'link',
+      { rel: 'canonical', href: canonicalUrl }
+    ]);
+    
+    // 添加 hreflang 标签支持多语言
     if (currentPath.startsWith('zh/')) {
       // 当前是中文页面
       const enPath = currentPath.replace(/^zh\//, '');
@@ -345,9 +381,9 @@ export default defineConfig({
       // 当前是英文页面
       const zhPath = `zh/${currentPath}`;
       pageData.frontmatter.head.push(
-        ['link', { rel: 'alternate', hreflang: 'en', href: `${baseUrl}/${currentPath}` }],
+        ['link', { rel: 'alternate', hreflang: 'en', href: `${baseUrl}/${currentPath || ''}` }],
         ['link', { rel: 'alternate', hreflang: 'zh-CN', href: `${baseUrl}/${zhPath}` }],
-        ['link', { rel: 'alternate', hreflang: 'x-default', href: `${baseUrl}/${currentPath}` }]
+        ['link', { rel: 'alternate', hreflang: 'x-default', href: `${baseUrl}/${currentPath || ''}` }]
       );
     }
     

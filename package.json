@@ -11,7 +11,8 @@
     "check:titles": "node scripts/check-titles.mjs docs",
     "fix:titles": "node scripts/check-titles.mjs --fix=quote docs",
     "report:golang-gap": "node scripts/report-golang-translation-gap.mjs",
-    "report:golang-gap:zh2en": "node scripts/report-golang-translation-gap.mjs --direction=zh2en --output=en"
+    "report:golang-gap:zh2en": "node scripts/report-golang-translation-gap.mjs --direction=zh2en --output=en",
+    "validate:seo": "node scripts/validate-seo-fixes.mjs"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",
