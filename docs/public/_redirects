@@ -27,7 +27,7 @@ http://miao.friday-go.icu/* https://miao.friday-go.icu/:splat 301!
 /archives/ /zh/ 301
 
 # 旧的友链页面 - 重定向到联系页面
-/links/ /contact.html 301
+/links/ /contact 301
 
 # ====================
 # 3. 中文URL重定向到英文URL

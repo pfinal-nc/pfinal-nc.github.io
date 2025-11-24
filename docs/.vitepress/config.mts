@@ -123,7 +123,7 @@ export default defineConfig({
   cleanUrls: true, // 移除 .html 后缀，提升 SEO
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
-    ['link', { rel: 'canonical', href: 'https://friday-go.icu/' }],
+    // canonical 标签在 transformPageData 中动态添加，不在这里设置全局的
     ['meta', { name: 'author', content: 'PFinal南丞' }],
     ['meta', { name: 'robots', content: 'index,follow' }],
     ['meta', { name: 'googlebot', content: 'index,follow' }],
