@@ -27,8 +27,8 @@ while ((match = urlRegex.exec(content)) !== null) {
   const loc = match[1]
   const lastmod = match[2]
   
-  // 跳过 404 页面
-  if (!loc.includes('/404.html')) {
+  // 跳过 404 页面和 XML 文件
+  if (!loc.includes('/404') && !loc.endsWith('/404') && !loc.endsWith('.xml')) {
     urls.push({ loc, lastmod })
   }
 }

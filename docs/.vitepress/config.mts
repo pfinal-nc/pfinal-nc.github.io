@@ -79,8 +79,13 @@ export default defineConfig({
       const filtered = items.filter(item => {
         const url = item.url
         
-        // 排除 404 页面
-        if (url.includes('/404')) {
+        // 排除 404 页面 (更严格的匹配)
+        if (url.includes('/404') || url.endsWith('/404') || url.includes('friday-go.icu/404')) {
+          return false
+        }
+        
+        // 排除 XML 文件（sitemap.xml 本身）
+        if (url.endsWith('.xml')) {
           return false
         }
         
