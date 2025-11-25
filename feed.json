@@ -1,0 +1,919 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "PFinalClub Tech Blog",
+    "home_page_url": "https://friday-go.icu",
+    "feed_url": "https://friday-go.icu/feed.json",
+    "description": "PFinalClub - 专注于 Golang, PHP, Python 的技术博客，分享微服务、云原生、架构设计等实战经验",
+    "icon": "https://friday-go.icu/logo.png",
+    "author": {
+        "name": "PFinal南丞",
+        "url": "https://friday-go.icu"
+    },
+    "items": [
+        {
+            "id": "https://friday-go.icu/php/Making-Local-LLMs-Support-Function-Calling-Like-OpenAI-PHP-Async-Implementation",
+            "content_html": "Hands-on tutorial on how to make locally-running models like Qwen3, Deepseek-Coder-V3, and GLM4-Chat support native Function Calling just like OpenAI GPT-4. Implement OpenAI-compatible tool calls using the pfinal-asyncio async framework, achieving 200%-500% performance improvement with concurrent execution, zero API costs, and complete data localization.",
+            "url": "https://friday-go.icu/php/Making-Local-LLMs-Support-Function-Calling-Like-OpenAI-PHP-Async-Implementation",
+            "title": "Making Local LLMs Support Function Calling Like OpenAI - PHP Async Implementation Guide",
+            "summary": "Hands-on tutorial on how to make locally-running models like Qwen3, Deepseek-Coder-V3, and GLM4-Chat support native Function Calling just like OpenAI GPT-4. Implement OpenAI-compatible tool calls using the pfinal-asyncio async framework, achieving 200%-500% performance improvement with concurrent execution, zero API costs, and complete data localization.",
+            "date_modified": "2025-11-19T15:30:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "PHP",
+                "AI",
+                "Function Calling",
+                "Asynchronous Programming",
+                "Large Language Models",
+                "Qwen3",
+                "Deepseek"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/zh/php/让 Qwen3 和 Deepseek 懂 Function Calling-PHP篇-opt",
+            "content_html": "实战教程：如何让本地运行的 Qwen3、Deepseek-Coder-V3、GLM4-Chat 等模型像 OpenAI GPT-4 一样支持原生 Function Calling。通过 pfinal-asyncio 异步框架实现完全兼容 OpenAI 接口规范的工具调用，并发执行性能提升 200%-500%，零 API 费用，数据完全本地化。",
+            "url": "https://friday-go.icu/zh/php/让 Qwen3 和 Deepseek 懂 Function Calling-PHP篇-opt",
+            "title": "让本地大模型像 OpenAI 一样支持 Function Calling PHP 异步实现实战",
+            "summary": "实战教程：如何让本地运行的 Qwen3、Deepseek-Coder-V3、GLM4-Chat 等模型像 OpenAI GPT-4 一样支持原生 Function Calling。通过 pfinal-asyncio 异步框架实现完全兼容 OpenAI 接口规范的工具调用，并发执行性能提升 200%-500%，零 API 费用，数据完全本地化。",
+            "date_modified": "2025-11-19T15:30:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "PHP",
+                "AI",
+                "Function Calling",
+                "异步编程",
+                "大语言模型",
+                "Qwen3",
+                "Deepseek",
+                "GLM4"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/golang/Building-GraphQL-APIs-with-Go-Complete-Guide-2025",
+            "content_html": "Master GraphQL API development with Go in 2025. Learn gqlgen, schema design, resolvers, subscriptions, authentication, performance optimization, and production deployment strategies.",
+            "url": "https://friday-go.icu/golang/Building-GraphQL-APIs-with-Go-Complete-Guide-2025",
+            "title": "Building Production-Ready GraphQL APIs with Go: Complete Guide 2025",
+            "summary": "Master GraphQL API development with Go in 2025. Learn gqlgen, schema design, resolvers, subscriptions, authentication, performance optimization, and production deployment strategies.",
+            "date_modified": "2025-11-13T00:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "Golang",
+                "GraphQL",
+                "API",
+                "Backend",
+                "Web Development",
+                "gqlgen"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/golang/Building-Kubernetes-Operators-with-Go-Complete-Guide",
+            "content_html": "Master Kubernetes operator development in 2025. Learn Kubebuilder, controller patterns, CRD design, and production deployment strategies with real-world examples.",
+            "url": "https://friday-go.icu/golang/Building-Kubernetes-Operators-with-Go-Complete-Guide",
+            "title": "Building Production-Ready Kubernetes Operators with Go: A Complete Guide",
+            "summary": "Master Kubernetes operator development in 2025. Learn Kubebuilder, controller patterns, CRD design, and production deployment strategies with real-world examples.",
+            "date_modified": "2025-11-13T00:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "Golang",
+                "Kubernetes",
+                "Operator",
+                "Cloud Native",
+                "DevOps",
+                "Kubebuilder"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/golang/Go-Containerization-Best-Practices-Docker-Optimization",
+            "content_html": "Master Docker optimization for Go applications in 2025. Learn multi-stage builds, distroless images, and security hardening techniques to reduce image size by 98% while improving performance.",
+            "url": "https://friday-go.icu/golang/Go-Containerization-Best-Practices-Docker-Optimization",
+            "title": "Go Containerization Best Practices: From 800MB to 10MB Docker Images",
+            "summary": "Master Docker optimization for Go applications in 2025. Learn multi-stage builds, distroless images, and security hardening techniques to reduce image size by 98% while improving performance.",
+            "date_modified": "2025-11-13T00:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "Golang",
+                "Docker",
+                "DevOps",
+                "Containerization",
+                "Best Practices",
+                "Performance",
+                "Security"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/golang/Go-CLI-Utility-Development-Practice",
+            "content_html": "Master Golang CLI utility development with practical examples using Cobra, Viper, and urfave/cli. Learn command parsing, config management, error handling, and distribution strategies for professional command-line tools in 2025.",
+            "url": "https://friday-go.icu/golang/Go-CLI-Utility-Development-Practice",
+            "title": "Go CLI Utility Development Practice Master Modern Command-Line Tools in 2025",
+            "summary": "Master Golang CLI utility development with practical examples using Cobra, Viper, and urfave/cli. Learn command parsing, config management, error handling, and distribution strategies for professional command-line tools in 2025.",
+            "date_modified": "2025-11-12T00:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "golang",
+                "tools",
+                "cli",
+                "cobra",
+                "viper"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/php/PHP-Process-Thread-Analysis",
+            "content_html": "Comprehensive analysis of PHP process and thread management, covering multi-process architecture, thread-safe mechanisms, PHP-FPM optimization, and concurrency strategies for building high-performance PHP applications.",
+            "url": "https://friday-go.icu/php/PHP-Process-Thread-Analysis",
+            "title": "PHP Process and Thread Analysis Deep Dive into Concurrency Models and Performance Optimization",
+            "summary": "Comprehensive analysis of PHP process and thread management, covering multi-process architecture, thread-safe mechanisms, PHP-FPM optimization, and concurrency strategies for building high-performance PHP applications.",
+            "date_modified": "2025-11-12T00:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "PHP",
+                "Process",
+                "Thread",
+                "Concurrency",
+                "Performance",
+                "PHP-FPM"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/golang/Building-RAG-System-with-Golang-OpenAI-Vector-Database",
+            "content_html": "A comprehensive, battle-tested guide on building a complete RAG (Retrieval-Augmented Generation) system using Golang. Learn OpenAI API integration, Qdrant vector database setup, embedding generation, semantic retrieval, and production-ready best practices. Includes complete code examples and real-world case studies.",
+            "url": "https://friday-go.icu/golang/Building-RAG-System-with-Golang-OpenAI-Vector-Database",
+            "title": "Building RAG System with Golang - From OpenAI API to Vector Database Complete Guide",
+            "summary": "A comprehensive, battle-tested guide on building a complete RAG (Retrieval-Augmented Generation) system using Golang. Learn OpenAI API integration, Qdrant vector database setup, embedding generation, semantic retrieval, and production-ready best practices. Includes complete code examples and real-world case studies.",
+            "date_modified": "2025-11-11T00:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "golang",
+                "ai",
+                "rag",
+                "llm",
+                "vector-database",
+                "openai",
+                "tutorial",
+                "guide",
+                "machine-learning",
+                "semantic-search"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/zh/golang/Golang实现RAG系统-从OpenAI到向量数据库",
+            "content_html": "深入讲解如何使用 Golang 构建完整的 RAG（检索增强生成）系统，涵盖 OpenAI API 集成、向量数据库选型、Embedding 生成、语义检索和实战案例，助力开发者快速构建智能问答系统。",
+            "url": "https://friday-go.icu/zh/golang/Golang实现RAG系统-从OpenAI到向量数据库",
+            "title": "Golang 实现 RAG 系统 从 OpenAI API 到向量数据库完整实战",
+            "summary": "深入讲解如何使用 Golang 构建完整的 RAG（检索增强生成）系统，涵盖 OpenAI API 集成、向量数据库选型、Embedding 生成、语义检索和实战案例，助力开发者快速构建智能问答系统。",
+            "date_modified": "2025-11-11T00:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "Golang",
+                "AI",
+                "RAG",
+                "LLM",
+                "Vector Database",
+                "OpenAI"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/zh/工具/单文件代码部署工具",
+            "content_html": "一个类似 Adminer.php 的单文件 PHP 代码部署工具，支持 Git + SSH 部署，简单易用，一个文件搞定所有部署需求。",
+            "url": "https://friday-go.icu/zh/工具/单文件代码部署工具",
+            "title": "造轮子 单文件管多项目部署，Git 服务器全搞定",
+            "summary": "一个类似 Adminer.php 的单文件 PHP 代码部署工具，支持 Git + SSH 部署，简单易用，一个文件搞定所有部署需求。",
+            "date_modified": "2025-11-05T10:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "工具",
+                "PHP",
+                "部署",
+                "Git",
+                "SSH"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/golang/From-Trace-to-Insight-A-Closed-Loop-Observability-Practice-for-Go-Projects",
+            "content_html": "Based on practical project experience, this article delves into transforming OpenTelemetry's three signals (trace, metrics, logs) from simple data collection into decision-driving closed-loop observability.",
+            "url": "https://friday-go.icu/golang/From-Trace-to-Insight-A-Closed-Loop-Observability-Practice-for-Go-Projects",
+            "title": "From Trace to Insight A Closed-Loop Observability Practice for Go Projects",
+            "summary": "Based on practical project experience, this article delves into transforming OpenTelemetry's three signals (trace, metrics, logs) from simple data collection into decision-driving closed-loop observability.",
+            "date_modified": "2025-10-29T10:00:00.000Z",
+            "author": {
+                "name": "PFinal Nan Cheng",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "golang",
+                "observability",
+                "OpenTelemetry",
+                "trace",
+                "metrics",
+                "logs"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/zh/golang/Stop-The-World-其实没停下-Go-GC-的微暂停真相",
+            "content_html": "深入剖析 Go 垃圾回收的 STW 机制，揭示\"并发 GC\"背后的微暂停真相。从源码实现到生产实践，带你理解 Go GC 的两次 STW、写屏障开销、以及 P99 延迟的真正元凶。",
+            "url": "https://friday-go.icu/zh/golang/Stop-The-World-其实没停下-Go-GC-的微暂停真相",
+            "title": "Stop-The-World 其实没停下：Go GC 的微暂停真相",
+            "summary": "深入剖析 Go 垃圾回收的 STW 机制，揭示\"并发 GC\"背后的微暂停真相。从源码实现到生产实践，带你理解 Go GC 的两次 STW、写屏障开销、以及 P99 延迟的真正元凶。",
+            "date_modified": "2025-10-29T10:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "golang",
+                "GC",
+                "性能优化"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/zh/golang/从 trace 到洞察：Go 项目的可观测性闭环实践",
+            "content_html": "基于实际项目经验，深入讲解如何将 OpenTelemetry 的 trace、metrics、logs 三大信号从简单的数据收集转变为驱动决策的可观测性闭环。",
+            "url": "https://friday-go.icu/zh/golang/从 trace 到洞察：Go 项目的可观测性闭环实践",
+            "title": "从 trace 到洞察 Go 项目的可观测性闭环实践",
+            "summary": "基于实际项目经验，深入讲解如何将 OpenTelemetry 的 trace、metrics、logs 三大信号从简单的数据收集转变为驱动决策的可观测性闭环。",
+            "date_modified": "2025-10-29T10:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "golang",
+                "OpenTelemetry",
+                "trace",
+                "metrics",
+                "logs"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/zh/工具/测试驱动开发 以测试为引擎的软件工程实践",
+            "content_html": "深入探讨测试驱动开发（TDD）的理论基础、实践指南和最佳实践，帮助开发者构建高质量、可维护的软件系统。",
+            "url": "https://friday-go.icu/zh/工具/测试驱动开发 以测试为引擎的软件工程实践",
+            "title": "测试驱动开发 以测试为引擎的软件工程实践",
+            "summary": "深入探讨测试驱动开发（TDD）的理论基础、实践指南和最佳实践，帮助开发者构建高质量、可维护的软件系统。",
+            "date_modified": "2025-10-28T10:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "工具",
+                "测试驱动开发",
+                "TDD",
+                "软件工程",
+                "代码质量"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/zh/php/Go协程与PHP-Fibers并发编程对比",
+            "content_html": "深入对比 Go 协程与 PHP Fibers 两种并发编程模型的技术特点、实现机制和实际应用场景，帮助开发者理解它们的差异和适用场景",
+            "url": "https://friday-go.icu/zh/php/Go协程与PHP-Fibers并发编程对比",
+            "title": "Go 协程与 PHP Fibers-并发编程的两种实现",
+            "summary": "深入对比 Go 协程与 PHP Fibers 两种并发编程模型的技术特点、实现机制和实际应用场景，帮助开发者理解它们的差异和适用场景",
+            "date_modified": "2025-10-19T10:00:02.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": []
+        },
+        {
+            "id": "https://friday-go.icu/zh/golang/Golang Socket 通信架构分析与实现-构建高性能游戏服务器",
+            "content_html": "深入分析Golang Socket通信架构设计与实现，从基础TCP编程到高性能游戏服务器架构，涵盖连接管理、消息编解码、并发模型等核心技术，帮助开发者构建稳定高效的游戏服务器。",
+            "url": "https://friday-go.icu/zh/golang/Golang Socket 通信架构分析与实现-构建高性能游戏服务器",
+            "title": "Golang Socket 通信架构分析与实现-构建高性能游戏服务器",
+            "summary": "深入分析Golang Socket通信架构设计与实现，从基础TCP编程到高性能游戏服务器架构，涵盖连接管理、消息编解码、并发模型等核心技术，帮助开发者构建稳定高效的游戏服务器。",
+            "date_modified": "2025-10-15T15:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "Socket",
+                "游戏服务器",
+                "高性能",
+                "并发编程",
+                "网络编程"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/zh/工具/Broot-高效的命令行文件管理器",
+            "content_html": "Broot 是一款由 Rust 编写的高效终端文件管理器，提供直观的树状视图、模糊搜索、快速导航和文件预览等强大功能",
+            "url": "https://friday-go.icu/zh/工具/Broot-高效的命令行文件管理器",
+            "title": "Broot-让文件导航更高效的命令行神器",
+            "summary": "Broot 是一款由 Rust 编写的高效终端文件管理器，提供直观的树状视图、模糊搜索、快速导航和文件预览等强大功能",
+            "date_modified": "2025-10-15T09:33:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "工具",
+                "命令行",
+                "Rust"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/golang/golang-socket-architecture-building-high-performance-game-servers",
+            "content_html": "Build enterprise-grade game servers with Golang Socket architecture in 2025! Deep dive into TCP/UDP programming, connection pooling, message protocols (Protobuf/MessagePack), goroutine-per-connection vs reactor patterns, and load balancing. Handle 100K+ CCU with sub-50ms latency using production battle-tested patterns.",
+            "url": "https://friday-go.icu/golang/golang-socket-architecture-building-high-performance-game-servers",
+            "title": "Golang Socket Communication Architecture Analysis Building High-Performance Game Servers",
+            "summary": "Build enterprise-grade game servers with Golang Socket architecture in 2025! Deep dive into TCP/UDP programming, connection pooling, message protocols (Protobuf/MessagePack), goroutine-per-connection vs reactor patterns, and load balancing. Handle 100K+ CCU with sub-50ms latency using production battle-tested patterns.",
+            "date_modified": "2025-10-15T00:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "Socket",
+                "Game Server",
+                "High Performance",
+                "Concurrent Programming",
+                "Network Programming",
+                "best-practices"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/zh/php/PHP 8.x 企业级开发实战指南 从语言特性到生产部署",
+            "content_html": "深入探讨PHP 8.x在企业级应用开发中的最佳实践，涵盖架构设计、性能优化、工程化部署等核心话题",
+            "url": "https://friday-go.icu/zh/php/PHP 8.x 企业级开发实战指南 从语言特性到生产部署",
+            "title": "PHP 8.x 企业级开发实战指南 从语言特性到生产部署",
+            "summary": "深入探讨PHP 8.x在企业级应用开发中的最佳实践，涵盖架构设计、性能优化、工程化部署等核心话题",
+            "date_modified": "2025-10-11T10:00:02.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": []
+        },
+        {
+            "id": "https://friday-go.icu/zh/golang/2025年最佳Go技术博客推荐：资深开发者的学习宝库",
+            "content_html": "还在为找不到高质量的Go技术博客而苦恼？别担心，这篇文章就是你的救星！从官方博客到社区大牛，从入门教程到高级技巧，我们来看看这些博客到底谁才是真正的\"宝藏\"。",
+            "url": "https://friday-go.icu/zh/golang/2025年最佳Go技术博客推荐：资深开发者的学习宝库",
+            "title": "2025年最佳Go技术博客推荐-资深开发者的学习宝库",
+            "summary": "还在为找不到高质量的Go技术博客而苦恼？别担心，这篇文章就是你的救星！从官方博客到社区大牛，从入门教程到高级技巧，我们来看看这些博客到底谁才是真正的\"宝藏\"。",
+            "date_modified": "2025-09-28T11:30:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "golang",
+                "技术博客"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/golang/Best-Go-Web-Frameworks-2025-Comprehensive-Developers-Guide",
+            "content_html": "From Gin to Hertz, from performance beasts to development powerhouses - discover which Go web framework truly deserves the crown in 2025. A comprehensive comparison backed by real-world experience and hard data.",
+            "url": "https://friday-go.icu/golang/Best-Go-Web-Frameworks-2025-Comprehensive-Developers-Guide",
+            "title": "Best Go Web Frameworks in 2025 - The Ultimate Developer's Survival Guide",
+            "summary": "From Gin to Hertz, from performance beasts to development powerhouses - discover which Go web framework truly deserves the crown in 2025. A comprehensive comparison backed by real-world experience and hard data.",
+            "date_modified": "2025-09-28T11:27:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "golang",
+                "web frameworks"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/zh/golang/2025年最佳Go-Web框架深度解析：资深开发者的选择指南",
+            "content_html": "刚学Go的时候，面对琳琅满目的Web框架，我就像站在自助餐厅里的小孩——什么都想要，但不知道哪个最好吃。从最初的`net/http`标准库开始，到现在的框架百花齐放，Go Web开发已经不再是\"能用就行\"的时代了。",
+            "url": "https://friday-go.icu/zh/golang/2025年最佳Go-Web框架深度解析：资深开发者的选择指南",
+            "title": "2025年Go Web框架大乱斗-程序员的生存指南",
+            "summary": "刚学Go的时候，面对琳琅满目的Web框架，我就像站在自助餐厅里的小孩——什么都想要，但不知道哪个最好吃。从最初的`net/http`标准库开始，到现在的框架百花齐放，Go Web开发已经不再是\"能用就行\"的时代了。",
+            "date_modified": "2025-09-28T11:27:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "golang"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/zh/golang/Go-testing-synctest-深度解析与实战指南",
+            "content_html": "Go 1.25 正式引入的 `testing/synctest` 包彻底改变了这一现状。它通过创建一个可控的\"泡泡\"（bubble）环境，让异步测试变得既快速又可靠。本文将深入解析其核心原理、使用技巧和最佳实践。",
+            "url": "https://friday-go.icu/zh/golang/Go-testing-synctest-深度解析与实战指南",
+            "title": "Go-testing-synctest-深度解析与实战指南",
+            "summary": "Go 1.25 正式引入的 `testing/synctest` 包彻底改变了这一现状。它通过创建一个可控的\"泡泡\"（bubble）环境，让异步测试变得既快速又可靠。本文将深入解析其核心原理、使用技巧和最佳实践。",
+            "date_modified": "2025-09-22T17:15:27.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "golang"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/zh/工具/Qwen Code 30个使用小技巧",
+            "content_html": "掌握Qwen Code的20个实战技巧，从基础使用到高级应用，全面提升你的AI编程体验。专为中国开发者优化的AI编程助手实战指南。",
+            "url": "https://friday-go.icu/zh/工具/Qwen Code 30个使用小技巧",
+            "title": "Qwen Code 20个实战技巧 让你的编程效率直接起飞！",
+            "summary": "掌握Qwen Code的20个实战技巧，从基础使用到高级应用，全面提升你的AI编程体验。专为中国开发者优化的AI编程助手实战指南。",
+            "date_modified": "2025-09-17T10:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "工具",
+                "Qwen Code",
+                "阿里云",
+                "AI编程"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/zh/工具/MCP服务器精选：提升AI编程效率的5大神器",
+            "content_html": "介绍5个核心MCP服务器，帮助开发者在不同AI编辑器间保持高效的工作流程",
+            "url": "https://friday-go.icu/zh/工具/MCP服务器精选：提升AI编程效率的5大神器",
+            "title": "5个MCP服务器：在AI编辑器迭代中保持效率的稳定选择",
+            "summary": "介绍5个核心MCP服务器，帮助开发者在不同AI编辑器间保持高效的工作流程",
+            "date_modified": "2025-09-11T10:14:02.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "工具",
+                "MCP",
+                "AI编程"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/zh/php/PHP MCP 扩展",
+            "content_html": "分享我开发pfinalclub/php-mcp扩展的经历，探讨MCP协议对PHP生态的重要意义，以及为什么选择Workerman作为技术栈。",
+            "url": "https://friday-go.icu/zh/php/PHP MCP 扩展",
+            "title": "PHP MCP扩展-我的开源实践与思考",
+            "summary": "分享我开发pfinalclub/php-mcp扩展的经历，探讨MCP协议对PHP生态的重要意义，以及为什么选择Workerman作为技术栈。",
+            "date_modified": "2025-09-09T10:30:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "PHP",
+                "MCP",
+                "开源",
+                "大语言模型",
+                "Workerman"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/zh/wails-tutorial-series/00-webkit-and-lifecycle",
+            "content_html": "深入理解 Wails 中的 WebKit 技术原理、wails.Run() 运行路线以及应用生命周期管理机制。",
+            "url": "https://friday-go.icu/zh/wails-tutorial-series/00-webkit-and-lifecycle",
+            "title": "Wails 教程系列 - WebKit 与生命周期深度解析",
+            "summary": "深入理解 Wails 中的 WebKit 技术原理、wails.Run() 运行路线以及应用生命周期管理机制。",
+            "date_modified": "2025-08-22T00:00:00.000Z",
+            "author": {
+                "name": "PFinalClub",
+                "url": "https://friday-go.icu"
+            },
+            "tags": []
+        },
+        {
+            "id": "https://friday-go.icu/zh/wails-tutorial-series/01-installation",
+            "content_html": "详细介绍如何为 Wails 开发准备环境，包括 Go、Node.js 的安装以及 Wails CLI 的获取。",
+            "url": "https://friday-go.icu/zh/wails-tutorial-series/01-installation",
+            "title": "Wails 教程系列 - 环境搭建与安装",
+            "summary": "详细介绍如何为 Wails 开发准备环境，包括 Go、Node.js 的安装以及 Wails CLI 的获取。",
+            "date_modified": "2025-08-22T00:00:00.000Z",
+            "author": {
+                "name": "PFinalClub",
+                "url": "https://friday-go.icu"
+            },
+            "tags": []
+        },
+        {
+            "id": "https://friday-go.icu/zh/wails-tutorial-series/02-first-app",
+            "content_html": "深入理解 Wails 项目创建流程、架构原理和最佳实践，为资深开发者提供全面的技术指导。",
+            "url": "https://friday-go.icu/zh/wails-tutorial-series/02-first-app",
+            "title": "Wails 教程系列 - 创建你的第一个应用",
+            "summary": "深入理解 Wails 项目创建流程、架构原理和最佳实践，为资深开发者提供全面的技术指导。",
+            "date_modified": "2025-08-22T00:00:00.000Z",
+            "author": {
+                "name": "PFinalClub",
+                "url": "https://friday-go.icu"
+            },
+            "tags": []
+        },
+        {
+            "id": "https://friday-go.icu/zh/wails-tutorial-series/03-core-concepts",
+            "content_html": "深入理解 Wails 应用的核心概念，包括前后端架构、数据绑定、方法调用和事件驱动通信。",
+            "url": "https://friday-go.icu/zh/wails-tutorial-series/03-core-concepts",
+            "title": "Wails 教程系列 - 核心概念详解",
+            "summary": "深入理解 Wails 应用的核心概念，包括前后端架构、数据绑定、方法调用和事件驱动通信。",
+            "date_modified": "2025-08-22T00:00:00.000Z",
+            "author": {
+                "name": "PFinalClub",
+                "url": "https://friday-go.icu"
+            },
+            "tags": []
+        },
+        {
+            "id": "https://friday-go.icu/zh/wails-tutorial-series/05-backend-development",
+            "content_html": "学习如何在 Wails 应用中使用 Go 语言进行后端开发，包括业务逻辑实现、系统 API 调用和数据处理。",
+            "url": "https://friday-go.icu/zh/wails-tutorial-series/05-backend-development",
+            "title": "Wails 教程系列 - 后端开发 (Go)",
+            "summary": "学习如何在 Wails 应用中使用 Go 语言进行后端开发，包括业务逻辑实现、系统 API 调用和数据处理。",
+            "date_modified": "2025-08-22T00:00:00.000Z",
+            "author": {
+                "name": "PFinalClub",
+                "url": "https://friday-go.icu"
+            },
+            "tags": []
+        },
+        {
+            "id": "https://friday-go.icu/zh/wails-tutorial-series",
+            "content_html": "专为资深 Golang 开发者设计的 Wails 桌面应用开发教程，涵盖架构设计、性能优化、系统集成等高级主题。",
+            "url": "https://friday-go.icu/zh/wails-tutorial-series",
+            "title": "Wails 教程系列 - 简介",
+            "summary": "专为资深 Golang 开发者设计的 Wails 桌面应用开发教程，涵盖架构设计、性能优化、系统集成等高级主题。",
+            "date_modified": "2025-08-22T00:00:00.000Z",
+            "author": {
+                "name": "PFinalClub",
+                "url": "https://friday-go.icu"
+            },
+            "tags": []
+        },
+        {
+            "id": "https://friday-go.icu/zh/工具/VSCode快捷键",
+            "content_html": "VSCode常用快捷键总结，提高开发效率",
+            "url": "https://friday-go.icu/zh/工具/VSCode快捷键",
+            "title": "VSCode快捷键",
+            "summary": "VSCode常用快捷键总结，提高开发效率",
+            "date_modified": "2025-08-21T10:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "工具",
+                "VSCode"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/golang/10-Golang-Security-Gotchas-And-the-Fixes-That-Actually-Work-en",
+            "content_html": "Learn 10 critical Golang security pitfalls and battle-tested solutions from production environments. Covers SQL injection, password storage, file uploads, input validation, session management, configuration security, rate limiting, CORS, and security headers. Includes real-world case studies and complete code examples.",
+            "url": "https://friday-go.icu/golang/10-Golang-Security-Gotchas-And-the-Fixes-That-Actually-Work-en",
+            "title": "10 Golang Security Gotchas — And the Fixes That Actually Work",
+            "summary": "Learn 10 critical Golang security pitfalls and battle-tested solutions from production environments. Covers SQL injection, password storage, file uploads, input validation, session management, configuration security, rate limiting, CORS, and security headers. Includes real-world case studies and complete code examples.",
+            "date_modified": "2025-08-20T14:30:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "golang",
+                "security",
+                "best-practices",
+                "tutorial",
+                "production",
+                "web-security",
+                "authentication",
+                "secure-coding"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/zh/golang/10个Golang安全陷阱及真正有效的修复方案",
+            "content_html": "发现Go开发中的10个关键安全陷阱，学习在生产环境中真正有效的、经过实战检验的解决方案。",
+            "url": "https://friday-go.icu/zh/golang/10个Golang安全陷阱及真正有效的修复方案",
+            "title": "10个Golang安全陷阱 — 以及真正有效的修复方案",
+            "summary": "发现Go开发中的10个关键安全陷阱，学习在生产环境中真正有效的、经过实战检验的解决方案。",
+            "date_modified": "2025-08-20T14:30:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "golang",
+                "security",
+                "best-practices"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/golang/advanced-go-concurrency-patterns",
+            "content_html": "Master advanced Go concurrency patterns in 2025! Learn worker pools, fan-in/fan-out, pipeline patterns, semaphores, and context management with production-ready code examples. Build applications scaling to millions of concurrent operations with optimal resource usage.",
+            "url": "https://friday-go.icu/golang/advanced-go-concurrency-patterns",
+            "title": "Advanced Go Concurrency Patterns for Scalable Applications",
+            "summary": "Master advanced Go concurrency patterns in 2025! Learn worker pools, fan-in/fan-out, pipeline patterns, semaphores, and context management with production-ready code examples. Build applications scaling to millions of concurrent operations with optimal resource usage.",
+            "date_modified": "2025-08-18T00:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "golang",
+                "concurrency",
+                "patterns",
+                "scalability",
+                "performance"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/golang/distributed-tracing-opentelemetry-go",
+            "content_html": "A comprehensive guide to implementing distributed tracing in Go microservices using OpenTelemetry, covering setup, instrumentation, context propagation, integration with Jaeger and Prometheus, and best practices for observability.",
+            "url": "https://friday-go.icu/golang/distributed-tracing-opentelemetry-go",
+            "title": "Distributed Tracing in Go Microservices with OpenTelemetry",
+            "summary": "A comprehensive guide to implementing distributed tracing in Go microservices using OpenTelemetry, covering setup, instrumentation, context propagation, integration with Jaeger and Prometheus, and best practices for observability.",
+            "date_modified": "2025-08-18T00:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "golang",
+                "distributed tracing",
+                "opentelemetry",
+                "microservices",
+                "observability",
+                "jaeger",
+                "metrics",
+                "logging"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/golang/go-data-processing-pipelines",
+            "content_html": "A comprehensive guide to building efficient and scalable data processing pipelines in Go, covering design patterns, concurrency models, performance optimization, and handling real-world challenges like backpressure and fault tolerance.",
+            "url": "https://friday-go.icu/golang/go-data-processing-pipelines",
+            "title": "Building High-Performance Data Processing Pipelines in Go",
+            "summary": "A comprehensive guide to building efficient and scalable data processing pipelines in Go, covering design patterns, concurrency models, performance optimization, and handling real-world challenges like backpressure and fault tolerance.",
+            "date_modified": "2025-08-18T00:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "golang",
+                "data processing",
+                "pipelines",
+                "concurrency",
+                "performance",
+                "streaming"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/golang/go-dependency-injection-wire-framework",
+            "content_html": "A comprehensive guide to using Google's Wire framework for dependency injection in Go applications. Covers setup, basic usage, advanced features, testing, and best practices for building maintainable and testable Go code.",
+            "url": "https://friday-go.icu/golang/go-dependency-injection-wire-framework",
+            "title": "Go Dependency Injection with Wire Framework - A Practical Guide",
+            "summary": "A comprehensive guide to using Google's Wire framework for dependency injection in Go applications. Covers setup, basic usage, advanced features, testing, and best practices for building maintainable and testable Go code.",
+            "date_modified": "2025-08-18T00:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "golang",
+                "dependency injection",
+                "wire",
+                "clean architecture",
+                "software design"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/golang/go-microservices-communication-patterns",
+            "content_html": "A comprehensive guide to communication patterns in Go microservices, covering synchronous (REST, gRPC) and asynchronous (message queues) methods, along with service discovery, circuit breaking, and observability.",
+            "url": "https://friday-go.icu/golang/go-microservices-communication-patterns",
+            "title": "Communication Patterns in Go Microservices Architecture",
+            "summary": "A comprehensive guide to communication patterns in Go microservices, covering synchronous (REST, gRPC) and asynchronous (message queues) methods, along with service discovery, circuit breaking, and observability.",
+            "date_modified": "2025-08-18T00:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "golang",
+                "microservices",
+                "communication",
+                "patterns",
+                "grpc",
+                "REST",
+                "messaging"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/golang/go-modules-dependency-management",
+            "content_html": "A deep dive into Go modules, covering basic usage, advanced features, dependency management best practices, versioning strategies, and solutions for complex project structures like monorepos.",
+            "url": "https://friday-go.icu/golang/go-modules-dependency-management",
+            "title": "Comprehensive Guide to Go Modules and Dependency Management",
+            "summary": "A deep dive into Go modules, covering basic usage, advanced features, dependency management best practices, versioning strategies, and solutions for complex project structures like monorepos.",
+            "date_modified": "2025-08-18T00:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "golang",
+                "modules",
+                "dependency management",
+                "go modules",
+                "semantic versioning",
+                "monorepo"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/golang/go-react-real-time-chat-app",
+            "content_html": "A step-by-step guide to building a full-stack real-time chat application using Go for the backend with WebSockets and React for the frontend. Covers user authentication, message handling, and deployment considerations.",
+            "url": "https://friday-go.icu/golang/go-react-real-time-chat-app",
+            "title": "Building a Real-Time Chat Application with Go and React",
+            "summary": "A step-by-step guide to building a full-stack real-time chat application using Go for the backend with WebSockets and React for the frontend. Covers user authentication, message handling, and deployment considerations.",
+            "date_modified": "2025-08-18T00:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "golang",
+                "react",
+                "websocket",
+                "real-time",
+                "chat application",
+                "full-stack"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/golang/go-resilience-patterns-circuit-breaker-retry",
+            "content_html": "A deep dive into implementing resilience patterns like circuit breakers and retry mechanisms in Go to build fault-tolerant distributed applications. Covers practical implementations, best practices, and integration with popular libraries.",
+            "url": "https://friday-go.icu/golang/go-resilience-patterns-circuit-breaker-retry",
+            "title": "Building Resilient Go Applications with Circuit Breakers and Retries",
+            "summary": "A deep dive into implementing resilience patterns like circuit breakers and retry mechanisms in Go to build fault-tolerant distributed applications. Covers practical implementations, best practices, and integration with popular libraries.",
+            "date_modified": "2025-08-18T00:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "golang",
+                "resilience",
+                "circuit breaker",
+                "retry",
+                "patterns",
+                "distributed systems"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/golang/high-performance-websockets-go",
+            "content_html": "Build blazing-fast WebSocket applications with Go in 2025. Handle 1M+ concurrent connections, implement connection pooling, message broadcasting, and binary protocols. Complete production guide with chat app example, load testing, and deployment strategies.",
+            "url": "https://friday-go.icu/golang/high-performance-websockets-go",
+            "title": "Building High-Performance Web Applications with Go and WebSockets",
+            "summary": "Build blazing-fast WebSocket applications with Go in 2025. Handle 1M+ concurrent connections, implement connection pooling, message broadcasting, and binary protocols. Complete production guide with chat app example, load testing, and deployment strategies.",
+            "date_modified": "2025-08-18T00:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "golang",
+                "websockets",
+                "real-time",
+                "performance",
+                "web applications"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/golang/mastering-go-error-handling",
+            "content_html": "Become a Go error handling expert in 2025! Master sentinel errors, error wrapping with %w, custom error types, errors.Is/As, panic recovery, and testing strategies. Build production-grade applications with comprehensive error tracking and debugging capabilities.",
+            "url": "https://friday-go.icu/golang/mastering-go-error-handling",
+            "title": "Mastering Error Handling in Go for Robust Applications",
+            "summary": "Become a Go error handling expert in 2025! Master sentinel errors, error wrapping with %w, custom error types, errors.Is/As, panic recovery, and testing strategies. Build production-grade applications with comprehensive error tracking and debugging capabilities.",
+            "date_modified": "2025-08-18T00:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "golang",
+                "error handling",
+                "best practices",
+                "robustness",
+                "software engineering"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/golang/mastering-go-testing-advanced-techniques",
+            "content_html": "A comprehensive guide to advanced Go testing techniques, covering unit testing, integration testing, benchmarking, fuzzing, and best practices for writing maintainable and effective tests.",
+            "url": "https://friday-go.icu/golang/mastering-go-testing-advanced-techniques",
+            "title": "Mastering Go Testing - Advanced Techniques and Best Practices",
+            "summary": "A comprehensive guide to advanced Go testing techniques, covering unit testing, integration testing, benchmarking, fuzzing, and best practices for writing maintainable and effective tests.",
+            "date_modified": "2025-08-18T00:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "golang",
+                "testing",
+                "test-driven development",
+                "integration testing",
+                "benchmarking",
+                "fuzzing",
+                "table-driven tests"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/golang/restful-api-versioning.en",
+            "content_html": "A deep dive into strategies and practices for RESTful API versioning, including URI, header, and content negotiation methods, with detailed examples in Go.",
+            "url": "https://friday-go.icu/golang/restful-api-versioning.en",
+            "title": "How to Implement RESTful API Versioning?",
+            "summary": "A deep dive into strategies and practices for RESTful API versioning, including URI, header, and content negotiation methods, with detailed examples in Go.",
+            "date_modified": "2025-08-18T00:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "golang",
+                "RESTful API",
+                "API Versioning",
+                "Microservices"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/golang/scalable-web-services-go-grpc",
+            "content_html": "A comprehensive guide to building scalable web services using Go and gRPC, covering Protocol Buffers, service implementation, streaming, authentication, load balancing, and best practices for production deployments.",
+            "url": "https://friday-go.icu/golang/scalable-web-services-go-grpc",
+            "title": "Building Scalable Web Services with Go and gRPC",
+            "summary": "A comprehensive guide to building scalable web services using Go and gRPC, covering Protocol Buffers, service implementation, streaming, authentication, load balancing, and best practices for production deployments.",
+            "date_modified": "2025-08-18T00:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "golang",
+                "grpc",
+                "microservices",
+                "protobuf",
+                "scalable web services",
+                "api design"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/zh/golang/如何实现 RESTful API 版本控制",
+            "content_html": "深入探讨 RESTful API 版本控制的策略和实践，包括 URI、头部和内容协商方法，并提供 Go 语言的详细示例。",
+            "url": "https://friday-go.icu/zh/golang/如何实现 RESTful API 版本控制",
+            "title": "别再瞎改 API 了 3 招版本控制，让你的 Go 服务稳如老狗",
+            "summary": "深入探讨 RESTful API 版本控制的策略和实践，包括 URI、头部和内容协商方法，并提供 Go 语言的详细示例。",
+            "date_modified": "2025-08-18T00:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "golang",
+                "RESTful API",
+                "API 版本控制",
+                "微服务"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/zh/工具/Arc 浏览器更符合开发者",
+            "content_html": "Arc浏览器深度体验：为什么它更适合开发者使用",
+            "url": "https://friday-go.icu/zh/工具/Arc 浏览器更符合开发者",
+            "title": "别再为找标签浪费 2 小时了，Arc 的左手边藏着开发者的时间机器",
+            "summary": "Arc浏览器深度体验：为什么它更适合开发者使用",
+            "date_modified": "2025-08-08T09:49:32.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "工具",
+                "浏览器",
+                "效率"
+            ]
+        }
+    ]
+}
