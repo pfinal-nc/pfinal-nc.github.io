@@ -169,6 +169,12 @@
 <priority>0.8</priority>
 </url>
 <url>
+<loc>https://friday-go.icu/golang/Go-Concurrency-Patterns-Practical-Guide-2024</loc>
+<lastmod>2025-11-25T04:05:37.000Z</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
 <loc>https://friday-go.icu/golang/Go-Containerization-Best-Practices-Docker-Optimization</loc>
 <lastmod>2025-11-13T01:30:51.000Z</lastmod>
 <changefreq>weekly</changefreq>
