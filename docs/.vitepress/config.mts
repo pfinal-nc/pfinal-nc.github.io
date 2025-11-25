@@ -128,6 +128,10 @@ export default defineConfig({
   cleanUrls: true, // 移除 .html 后缀，提升 SEO
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
+    // RSS/Atom/JSON Feeds
+    ['link', { rel: 'alternate', type: 'application/rss+xml', title: 'PFinalClub RSS Feed', href: '/feed.xml' }],
+    ['link', { rel: 'alternate', type: 'application/atom+xml', title: 'PFinalClub Atom Feed', href: '/feed.atom' }],
+    ['link', { rel: 'alternate', type: 'application/json', title: 'PFinalClub JSON Feed', href: '/feed.json' }],
     // canonical 标签在 transformPageData 中动态添加，不在这里设置全局的
     ['meta', { name: 'author', content: 'PFinal南丞' }],
     ['meta', { name: 'robots', content: 'index,follow' }],

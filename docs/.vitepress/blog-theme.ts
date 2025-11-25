@@ -24,8 +24,17 @@ function getFriendByLocale(locale) {
 }
 
 const blogTheme = getThemeConfig({
-  // 开启RSS支持
-  // RSS,
+  // 开启RSS支持（暂时注释，解决构建错误后再启用）
+  // RSS: {
+  //   title: 'PFinalClub Tech Blog',
+  //   baseUrl: 'https://friday-go.icu',
+  //   copyright: 'Copyright (c) 2024-present, PFinalClub',
+  //   description: 'PFinalClub - 专注于 Golang, PHP, Python 的技术博客',
+  //   language: 'zh-CN',
+  //   filename: 'feed.xml',
+  //   log: true,
+  //   limit: 50
+  // },
 
   // 搜索
   // 默认开启pagefind离线的全文搜索支持（如使用其它的可以设置为false）
