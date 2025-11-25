@@ -150,6 +150,18 @@ export default defineConfig({
     ['meta', {name:'google-site-verification', content:'K5jxzJ_KXsS0QhsQnBIuKyxt6BGlPD-w1URDWGTWHo8'}],
     ['meta', {name:'360-site-verification', content:'bafd565a2170482bd9ff0c063ba5a41a'}],
     ['meta', {name:'yandex-verification', content:'20badebe204f6b0b'}],
+    // Google Analytics 4
+    ['script', {
+      async: 'true',
+      src: 'https://www.googletagmanager.com/gtag/js?id=G-EVR51H8CSN'
+    }],
+    ['script', {}, `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-EVR51H8CSN');
+    `],
+    // Google AdSense
     ['script', {
       src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2154665617309406',
       async: 'true',
@@ -380,6 +392,69 @@ export default defineConfig({
         'meta',
         { name: 'keywords', content: newKeywords }
       ]);
+      
+      // 为文章页面添加 Schema.org Article 结构化数据
+      if (pageData.frontmatter.date && pageData.frontmatter.title) {
+        const article = {
+          "@context": "https://schema.org",
+          "@type": "TechArticle",
+          "headline": pageData.frontmatter.title,
+          "url": canonicalUrl,
+          "datePublished": pageData.frontmatter.date,
+          "dateModified": pageData.lastUpdated || pageData.frontmatter.date,
+          "author": {
+            "@type": "Person",
+            "name": pageData.frontmatter.author || "PFinal南丞",
+            "url": `${baseUrl}/about`
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "PFinalClub",
+            "logo": {
+              "@type": "ImageObject",
+              "url": `${baseUrl}/logo.png`
+            }
+          },
+          "description": pageData.frontmatter.description || pageData.description,
+          "inLanguage": currentPath.startsWith('zh/') ? "zh-CN" : "en-US",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": canonicalUrl
+          }
+        };
+        
+        // 添加关键词
+        if (articleKeywords) {
+          article.keywords = articleKeywords;
+        }
+        
+        // 添加文章部分/分类
+        if (pageData.frontmatter.category) {
+          article.articleSection = pageData.frontmatter.category;
+        } else if (currentPath.includes('/golang/')) {
+          article.articleSection = 'Golang';
+        } else if (currentPath.includes('/php/')) {
+          article.articleSection = 'PHP';
+        } else if (currentPath.includes('/python/')) {
+          article.articleSection = 'Python';
+        }
+        
+        // 添加图片（如果有）
+        if (pageData.frontmatter.image) {
+          article.image = {
+            "@type": "ImageObject",
+            "url": pageData.frontmatter.image.startsWith('http') 
+              ? pageData.frontmatter.image 
+              : `${baseUrl}${pageData.frontmatter.image}`
+          };
+        }
+        
+        pageData.frontmatter.head.push([
+          'script',
+          { type: 'application/ld+json' },
+          JSON.stringify(article)
+        ]);
+      }
     }
   }, 
 })
