@@ -4,7 +4,7 @@
         <title>PFinalClub Tech Blog</title>
         <link>https://friday-go.icu</link>
         <description>PFinalClub - 专注于 Golang, PHP, Python 的技术博客，分享微服务、云原生、架构设计等实战经验</description>
-        <lastBuildDate>Wed, 26 Nov 2025 02:09:05 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 26 Nov 2025 02:26:53 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-CN</language>
@@ -15,6 +15,20 @@
         </image>
         <copyright>Copyright (c) 2024-present, PFinalClub</copyright>
         <atom:link href="https://friday-go.icu/feed.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Go Error Handling Best Practices 2025: Complete Guide]]></title>
+            <link>https://friday-go.icu/golang/Go-Error-Handling-Best-Practices-2025-Complete-Guide</link>
+            <guid>https://friday-go.icu/golang/Go-Error-Handling-Best-Practices-2025-Complete-Guide</guid>
+            <pubDate>Wed, 26 Nov 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Master Go error handling best practices in 2025. Learn modern patterns, sentinel errors, error wrapping, and custom errors with production-ready code examples for real-world Go services.]]></description>
+            <content:encoded><![CDATA[Master Go error handling best practices in 2025. Learn modern patterns, sentinel errors, error wrapping, and custom errors with production-ready code examples for real-world Go services.]]></content:encoded>
+            <category>golang</category>
+            <category>error handling</category>
+            <category>best-practices</category>
+            <category>production</category>
+            <category>backend</category>
+            <category>api</category>
+        </item>
         <item>
             <title><![CDATA[Making Local LLMs Support Function Calling Like OpenAI - PHP Async Implementation Guide]]></title>
             <link>https://friday-go.icu/php/Making-Local-LLMs-Support-Function-Calling-Like-OpenAI-PHP-Async-Implementation</link>
@@ -616,17 +630,6 @@
             <category>RESTful API</category>
             <category>API 版本控制</category>
             <category>微服务</category>
-        </item>
-        <item>
-            <title><![CDATA[别再为找标签浪费 2 小时了，Arc 的左手边藏着开发者的时间机器]]></title>
-            <link>https://friday-go.icu/zh/工具/Arc 浏览器更符合开发者</link>
-            <guid>https://friday-go.icu/zh/工具/Arc 浏览器更符合开发者</guid>
-            <pubDate>Fri, 08 Aug 2025 09:49:32 GMT</pubDate>
-            <description><![CDATA[Arc浏览器深度体验：为什么它更适合开发者使用]]></description>
-            <content:encoded><![CDATA[Arc浏览器深度体验：为什么它更适合开发者使用]]></content:encoded>
-            <category>工具</category>
-            <category>浏览器</category>
-            <category>效率</category>
         </item>
     </channel>
 </rss>

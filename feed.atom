@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://friday-go.icu</id>
     <title>PFinalClub Tech Blog</title>
-    <updated>2025-11-26T02:09:05.188Z</updated>
+    <updated>2025-11-26T02:26:53.021Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>PFinal南丞</name>
@@ -15,6 +15,24 @@
     <logo>https://friday-go.icu/logo.png</logo>
     <icon>https://friday-go.icu/favicon.ico</icon>
     <rights>Copyright (c) 2024-present, PFinalClub</rights>
+    <entry>
+        <title type="html"><![CDATA[Go Error Handling Best Practices 2025: Complete Guide]]></title>
+        <id>https://friday-go.icu/golang/Go-Error-Handling-Best-Practices-2025-Complete-Guide</id>
+        <link href="https://friday-go.icu/golang/Go-Error-Handling-Best-Practices-2025-Complete-Guide"/>
+        <updated>2025-11-26T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Master Go error handling best practices in 2025. Learn modern patterns, sentinel errors, error wrapping, and custom errors with production-ready code examples for real-world Go services.]]></summary>
+        <content type="html"><![CDATA[Master Go error handling best practices in 2025. Learn modern patterns, sentinel errors, error wrapping, and custom errors with production-ready code examples for real-world Go services.]]></content>
+        <author>
+            <name>PFinal南丞</name>
+            <uri>https://friday-go.icu</uri>
+        </author>
+        <category label="golang"/>
+        <category label="error handling"/>
+        <category label="best-practices"/>
+        <category label="production"/>
+        <category label="backend"/>
+        <category label="api"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Making Local LLMs Support Function Calling Like OpenAI - PHP Async Implementation Guide]]></title>
         <id>https://friday-go.icu/php/Making-Local-LLMs-Support-Function-Calling-Like-OpenAI-PHP-Async-Implementation</id>
@@ -812,20 +830,5 @@
         <category label="RESTful API"/>
         <category label="API 版本控制"/>
         <category label="微服务"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[别再为找标签浪费 2 小时了，Arc 的左手边藏着开发者的时间机器]]></title>
-        <id>https://friday-go.icu/zh/工具/Arc 浏览器更符合开发者</id>
-        <link href="https://friday-go.icu/zh/工具/Arc 浏览器更符合开发者"/>
-        <updated>2025-08-08T09:49:32.000Z</updated>
-        <summary type="html"><![CDATA[Arc浏览器深度体验：为什么它更适合开发者使用]]></summary>
-        <content type="html"><![CDATA[Arc浏览器深度体验：为什么它更适合开发者使用]]></content>
-        <author>
-            <name>PFinal南丞</name>
-            <uri>https://friday-go.icu</uri>
-        </author>
-        <category label="工具"/>
-        <category label="浏览器"/>
-        <category label="效率"/>
     </entry>
 </feed>

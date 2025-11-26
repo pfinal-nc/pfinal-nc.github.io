@@ -11,6 +11,26 @@
     },
     "items": [
         {
+            "id": "https://friday-go.icu/golang/Go-Error-Handling-Best-Practices-2025-Complete-Guide",
+            "content_html": "Master Go error handling best practices in 2025. Learn modern patterns, sentinel errors, error wrapping, and custom errors with production-ready code examples for real-world Go services.",
+            "url": "https://friday-go.icu/golang/Go-Error-Handling-Best-Practices-2025-Complete-Guide",
+            "title": "Go Error Handling Best Practices 2025: Complete Guide",
+            "summary": "Master Go error handling best practices in 2025. Learn modern patterns, sentinel errors, error wrapping, and custom errors with production-ready code examples for real-world Go services.",
+            "date_modified": "2025-11-26T00:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "golang",
+                "error handling",
+                "best-practices",
+                "production",
+                "backend",
+                "api"
+            ]
+        },
+        {
             "id": "https://friday-go.icu/php/Making-Local-LLMs-Support-Function-Calling-Like-OpenAI-PHP-Async-Implementation",
             "content_html": "Hands-on tutorial on how to make locally-running models like Qwen3, Deepseek-Coder-V3, and GLM4-Chat support native Function Calling just like OpenAI GPT-4. Implement OpenAI-compatible tool calls using the pfinal-asyncio async framework, achieving 200%-500% performance improvement with concurrent execution, zero API costs, and complete data localization.",
             "url": "https://friday-go.icu/php/Making-Local-LLMs-Support-Function-Calling-Like-OpenAI-PHP-Async-Implementation",
@@ -896,23 +916,6 @@
                 "RESTful API",
                 "API 版本控制",
                 "微服务"
-            ]
-        },
-        {
-            "id": "https://friday-go.icu/zh/工具/Arc 浏览器更符合开发者",
-            "content_html": "Arc浏览器深度体验：为什么它更适合开发者使用",
-            "url": "https://friday-go.icu/zh/工具/Arc 浏览器更符合开发者",
-            "title": "别再为找标签浪费 2 小时了，Arc 的左手边藏着开发者的时间机器",
-            "summary": "Arc浏览器深度体验：为什么它更适合开发者使用",
-            "date_modified": "2025-08-08T09:49:32.000Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": [
-                "工具",
-                "浏览器",
-                "效率"
             ]
         }
     ]
