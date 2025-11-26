@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>页面未找到 - PFinalClub</title>
+  <meta name="robots" content="noindex, nofollow">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .container {
+      background: white;
+      border-radius: 20px;
+      padding: 60px 40px;
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      animation: fadeIn 0.5s ease-out;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .error-code {
+      font-size: 120px;
+      font-weight: bold;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 20px;
+      line-height: 1;
+    }
+    h1 {
+      font-size: 28px;
+      color: #333;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+    .redirect-message {
+      background: #f0f9ff;
+      border-left: 4px solid #3b82f6;
+      padding: 15px;
+      margin: 20px 0;
+      text-align: left;
+      border-radius: 4px;
+      animation: slideIn 0.5s ease-out;
+    }
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    .redirect-message strong {
+      color: #1e40af;
+      display: block;
+      margin-bottom: 8px;
+    }
+    .new-url {
+      color: #3b82f6;
+      word-break: break-all;
+      font-family: 'Courier New', monospace;
+      font-size: 14px;
+    }
+    .buttons {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+    .btn {
+      padding: 12px 30px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s;
+      display: inline-block;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+    }
+    .btn-secondary {
+      background: #f3f4f6;
+      color: #374151;
+    }
+    .btn-secondary:hover {
+      background: #e5e7eb;
+    }
+    #countdown {
+      font-size: 18px;
+      color: #3b82f6;
+      margin: 20px 0;
+      font-weight: bold;
+    }
+    .spinner {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 3px solid #f3f4f6;
+      border-top: 3px solid #3b82f6;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @media (max-width: 768px) {
+      .container {
+        padding: 40px 30px;
+      }
+      .error-code {
+        font-size: 80px;
+      }
+      h1 {
+        font-size: 24px;
+      }
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="error-code">404</div>
+    <h1>🔍 页面未找到</h1>
+    <p>抱歉，您访问的页面不存在或已被移动到新地址。</p>
+    
+    <div id="redirect-info" style="display: none;">
+      <div class="redirect-message">
+        <strong>🔄 检测到可能的重定向</strong>
+        正在为您跳转到: <br>
+        <span class="new-url" id="new-url"></span>
+      </div>
+      <div id="countdown">
+        <span class="spinner"></span>
+        <span id="countdown-text">5 秒后自动跳转...</span>
+      </div>
+    </div>
+    
+    <div class="buttons">
+      <a href="/" class="btn btn-primary">🏠 返回首页</a>
+      <a href="/about" class="btn btn-secondary">📧 联系我们</a>
+    </div>
+  </div>
+
+  <script>
+    // URL 重定向映射表 - 基于 Search Console 发现的 404 错误
+    const redirectMap = {
+      // 具体文章重定向
+      '/爬虫JS逆向Webpack技巧记录.html': '/zh/Python/爬虫JS逆向Webpack技巧记录.html',
+      
+      // 分类页重定向
+      '/categories/工具/': '/Tools/',
+      '/categories/tools/': '/Tools/',
+      '/categories/golang/index.html': '/golang/',
+      '/categories/golang/': '/golang/',
+      '/categories/php/': '/php/',
+      '/categories/经验/': '/',
+      '/categories/experience/': '/',
+      
+      // 归档和链接页
+      '/archives/': '/',
+      '/archive/': '/',
+      '/links/': '/about',
+      '/link/': '/about',
+      
+      // 常见的旧版路径
+      '/categories/': '/',
+      '/category/': '/',
+    };
+
+    // 智能重定向函数
+    function smartRedirect() {
+      const currentPath = window.location.pathname;
+      console.log('Current 404 path:', currentPath);
+      
+      // 1. 精确匹配
+      if (redirectMap[currentPath]) {
+        const newUrl = redirectMap[currentPath];
+        console.log('Exact match found:', newUrl);
+        showRedirectMessage(newUrl);
+        return;
+      }
+      
+      // 2. 处理 /categories/xxx/ 格式
+      if (currentPath.startsWith('/categories/') || currentPath.startsWith('/category/')) {
+        const parts = currentPath.split('/').filter(p => p);
+        if (parts.length >= 2) {
+          const category = parts[1];
+          // 尝试重定向到对应的分类首页
+          const possibleUrls = [
+            `/${category}/`,
+            `/${category.toLowerCase()}/`,
+            `/${category.charAt(0).toUpperCase() + category.slice(1).toLowerCase()}/`
+          ];
+          
+          // 选择第一个可能的 URL
+          console.log('Category redirect:', possibleUrls[0]);
+          showRedirectMessage(possibleUrls[0], true);
+          return;
+        }
+      }
+      
+      // 3. 处理 .html 文件
+      if (currentPath.endsWith('.html')) {
+        const fileName = currentPath.split('/').pop();
+        
+        // 尝试多个可能的位置
+        const possibleUrls = [
+          `/zh/${fileName}`,
+          `/zh/golang/${fileName}`,
+          `/zh/PHP/${fileName}`,
+          `/zh/Python/${fileName}`,
+          `/zh/工具/${fileName}`,
+          `/golang/${fileName.replace('.html', '')}`,
+          `/php/${fileName.replace('.html', '')}`,
+        ];
+        
+        console.log('HTML file redirect guess:', possibleUrls[0]);
+        showRedirectMessage(possibleUrls[0], true);
+        return;
+      }
+      
+      // 4. 如果路径包含中文，尝试在 /zh/ 下查找
+      if (/[\u4e00-\u9fa5]/.test(currentPath)) {
+        const newUrl = `/zh${currentPath}`;
+        console.log('Chinese path redirect:', newUrl);
+        showRedirectMessage(newUrl, true);
+        return;
+      }
+      
+      // 5. 没有匹配，显示默认选项
+      console.log('No redirect rule found for:', currentPath);
+    }
+
+    function showRedirectMessage(newUrl, isGuess = false) {
+      const redirectInfo = document.getElementById('redirect-info');
+      const newUrlSpan = document.getElementById('new-url');
+      const countdownText = document.getElementById('countdown-text');
+      
+      redirectInfo.style.display = 'block';
+      newUrlSpan.textContent = window.location.origin + newUrl;
+      
+      let countdown = 5;
+      
+      const timer = setInterval(() => {
+        countdown--;
+        if (countdown > 0) {
+          countdownText.textContent = `${countdown} 秒后自动跳转...`;
+        } else {
+          clearInterval(timer);
+          // 执行重定向
+          console.log('Redirecting to:', newUrl);
+          window.location.href = newUrl;
+        }
+      }, 1000);
+      
+      // 添加立即跳转按钮
+      const buttons = document.querySelector('.buttons');
+      const jumpBtn = document.createElement('a');
+      jumpBtn.href = newUrl;
+      jumpBtn.className = 'btn btn-primary';
+      jumpBtn.textContent = '🚀 立即跳转';
+      jumpBtn.style.order = '-1';
+      buttons.insertBefore(jumpBtn, buttons.firstChild);
+    }
+
+    // 页面加载时执行
+    try {
+      smartRedirect();
+    } catch (error) {
+      console.error('Redirect error:', error);
+    }
+    
+    // Google Analytics 记录 404 错误
+    if (window.gtag) {
+      gtag('event', '404_error', {
+        'event_category': 'Error',
+        'event_label': window.location.pathname,
+        'value': 1
+      });
+    }
+  </script>
+</body>
+</html>
+

@@ -3,6 +3,7 @@ title: Wails 教程系列 - 简介
 date: 2025-08-22
 author: PFinalClub
 description: 专为资深 Golang 开发者设计的 Wails 桌面应用开发教程，涵盖架构设计、性能优化、系统集成等高级主题。
+keywords: wails 教程, wails golang desktop app, go desktop gui, wails 实战, golang 桌面应用 开发, wails vs electron
 ---
 
 # Wails 教程系列 - 简介

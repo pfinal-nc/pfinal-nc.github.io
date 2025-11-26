@@ -6,7 +6,7 @@ tag:
     - PHP
     - ThinkPHP
 description: From its humble beginnings in 2006 to the present ThinkPHP 8.1.3, ThinkPHP has always been a bright spot in the story of Chinese web development.
-keywords: PHP, ThinkPHP, PFinalClub, Framework, PHP, ThinkPHP 8.1.3
+keywords: thinkphp 8 release, thinkphp 8 new features, thinkphp 2025, thinkphp upgrade guide, php framework thinkphp, thinkphp performance optimization
 top: 1
 ---
 

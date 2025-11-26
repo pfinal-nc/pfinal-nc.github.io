@@ -8,7 +8,7 @@ tags:
     - macos
 description: Mac desktop application development based on Wails framework
 author: PFinal南丞
-keywords: Wails, Golang, Go, GUI, Desktop, Mac, macOS, Cross-Platform, Wails Tutorial, Wails Guide, Wails Setup, Wails Init, Wails Dev, Wails Build, Go GUI, Golang GUI, Go Desktop, Golang Desktop, Wails for Mac, WebView2, WebKit, React, Vue, Svelte, Go-JavaScript Binding, IPC, wails v2, wails v3
+keywords: wails golang desktop app, go desktop gui, wails tutorial, wails for mac, golang desktop applications, wails vs electron
 ---
 
 # Mac Desktop Application Development with Wails

@@ -2,9 +2,9 @@ import { defineConfig } from 'vitepress'
 // 导入主题的配置
 import { blogTheme } from './blog-theme'
 
-// 核心品牌关键词（避免过度堆砌，保留最核心的品牌和技术栈）
-// 注意：现代搜索引擎主要依赖文章内容和 frontmatter 中的精准关键词
-let BASE_KEYWORDS = 'PFinalClub, Golang, PHP, Python, 技术博客, Tech Blog'
+// 核心品牌关键词（站点级关键词金字塔的顶层）
+// 说明：文章页请优先在 frontmatter.keywords 中设置更具体的长尾关键词
+let BASE_KEYWORDS = 'PFinalClub, Golang tutorial, Go backend development, Go microservices, PHP, Python, 技术博客, Tech Blog'
 
 
 export default defineConfig({
@@ -136,7 +136,7 @@ export default defineConfig({
     ['meta', { name: 'author', content: 'PFinal南丞' }],
     ['meta', { name: 'robots', content: 'index,follow' }],
     ['meta', { name: 'googlebot', content: 'index,follow' }],
-    ['meta', { name: 'keywords', content: 'Golang, Go, PHP, Python, Laravel, Microservices, Cloud Native, Web Development, Programming, Software Engineering' }],
+    ['meta', { name: 'keywords', content: 'PFinalClub, Golang tutorial, Go backend development, Go microservices, PHP, Python, 技术博客, Tech Blog' }],
     ['meta', { property: 'og:title', content: 'PFinalClub' }],
     ['meta', { property: 'og:description', content: 'PFinalClub is a developer community focused on PHP, Golang, Python, microservices, and cloud-native technologies.' }],
     ['meta', { property: 'og:type', content: 'website' }],
@@ -382,8 +382,8 @@ export default defineConfig({
     // 判断是否为文章详情页（这里假设详情页没有设置 layout）
     if (!pageData.frontmatter.layout) {
       const articleKeywords = pageData.frontmatter.keywords;
-      // 只使用文章自定义关键词或核心品牌词
-      const coreKeywords = 'PFinalClub, Golang, PHP, Python, 技术博客, Tech Blog';
+      // 只使用文章自定义关键词或核心品牌词（与 BASE_KEYWORDS 保持一致）
+      const coreKeywords = 'PFinalClub, Golang tutorial, Go backend development, Go microservices, PHP, Python, 技术博客, Tech Blog';
       const newKeywords = articleKeywords 
         ? `${articleKeywords}, ${coreKeywords}` 
         : coreKeywords;

@@ -8,7 +8,7 @@ tags:
   - AI编程
 description: 掌握Qwen Code的20个实战技巧，从基础使用到高级应用，全面提升你的AI编程体验。专为中国开发者优化的AI编程助手实战指南。
 author: PFinal南丞
-keywords: Qwen Code, 阿里云, AI编程, 实战技巧, 开发效率
+keywords: qwen code 使用技巧, 通义千问 代码助手, qwen code 提示词 实战, ai 编程 助手 对比, qwen code 高级用法, 阿里 qwen code 教程
 ---
 
 # Qwen Code 20个实战技巧：让你的编程效率直接起飞！
