@@ -67,7 +67,7 @@ User Question → Vectorization → Semantic Search → Retrieve Relevant Docume
 
 1. **High Performance**: Concurrent processing of large volumes of documents
 2. **Simple Deployment**: Single binary file
-3. **Excellent Concurrency Model**: Goroutines for parallel tasks
+3. **Excellent Concurrency Model**: Goroutines for parallel tasks (If you want to dive deeper into Go's concurrency capabilities, check out our [Advanced Go Concurrency Patterns](/golang/advanced-go-concurrency-patterns) guide)
 4. **Rich Ecosystem**: AI-related libraries maturing rapidly
 
 ## 📦 Environment Setup
@@ -104,6 +104,8 @@ docker run -p 6333:6333 -p 6334:6334 \
   -v $(pwd)/qdrant_storage:/qdrant/storage:z \
   qdrant/qdrant
 ```
+
+> 💡 **Pro Tip**: For production deployment, refer to our comprehensive guide on [Go Containerization Best Practices](/golang/Go-Containerization-Best-Practices-Docker-Optimization) to optimize your Docker images and reduce size from 800MB to just 10MB!
 
 ## 💻 Core Implementation
 
@@ -1007,6 +1009,7 @@ func (s *MultiModalService) ExtractImageContent(ctx context.Context, imageURL st
 3. **Monitor Costs**:
    - Track token usage
    - Use caching to reduce API calls
+   - For comprehensive monitoring strategies, see our guide on [Go Project Observability Practice](/golang/From-Trace-to-Insight-A-Closed-Loop-Observability-Practice-for-Go-Projects)
 
 4. **Test Retrieval Quality**:
    - Prepare test sets
@@ -1041,6 +1044,7 @@ I hope this article helps you quickly get started with Golang + RAG development 
 **Keywords**: #Golang #RAG #AI #LLM #VectorDatabase #OpenAI #Qdrant #SemanticSearch #Embedding #IntelligentQA
 
 **Related Articles**:
-- [Golang Socket Communication Architecture](/golang/golang-socket-architecture-building-high-performance-game-servers)
-- [High-Performance Game API Design with Golang](/golang/High-Performance-Game-API-Design-with-Golang)
-- [Go CLI Utility Development Practice](/golang/Go-CLI-Utility-Development-Practice)
+- [Advanced Go Concurrency Patterns](/golang/advanced-go-concurrency-patterns) - Master concurrent processing for RAG systems
+- [Go Containerization Best Practices](/golang/Go-Containerization-Best-Practices-Docker-Optimization) - Deploy your RAG system efficiently
+- [From Trace to Insight: Go Observability Practice](/golang/From-Trace-to-Insight-A-Closed-Loop-Observability-Practice-for-Go-Projects) - Monitor your RAG system in production
+- [Go CLI Utility Development Practice](/golang/Go-CLI-Utility-Development-Practice) - Build CLI tools for RAG management

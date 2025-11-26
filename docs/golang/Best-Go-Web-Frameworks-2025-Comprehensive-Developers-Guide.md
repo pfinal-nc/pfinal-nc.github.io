@@ -492,12 +492,12 @@ project/
 1. **Connection Pool Management**: Configure database connection pools properly, don't let DB become bottleneck
 2. **Caching Strategy**: Use Redis and other caching middleware, make data fly
 3. **Load Balancing**: Configure reverse proxy and load balancing, handle high traffic
-4. **Monitoring and Alerting**: Integrate performance monitoring and alerting, find problems early
+4. **Monitoring and Alerting**: Integrate performance monitoring and alerting, find problems early (Learn more about production monitoring in our [Go Observability Practice](/golang/From-Trace-to-Insight-A-Closed-Loop-Observability-Practice-for-Go-Projects) guide)
 
 ## 2025 Technology Trends "Predictions"
 
 ### 1. Cloud-Native "Dominance"
-- Containerized deployment becomes standard (Docker, Kubernetes)
+- Containerized deployment becomes standard (Docker, Kubernetes) - Check out our [Go Containerization Best Practices](/golang/Go-Containerization-Best-Practices-Docker-Optimization) for optimizing your Docker images
 - Microservices architecture popularization (service decomposition)
 - Service mesh technology application (Istio, etc.)
 
@@ -552,6 +552,7 @@ Remember: Frameworks are just tools, the key is using them right. Choose the rig
 
 ## Related Resources
 
+### Official Framework Documentation
 - **Gin**: https://gin-gonic.com/
 - **Fiber**: https://gofiber.io/
 - **Echo**: https://echo.labstack.com/
@@ -560,6 +561,12 @@ Remember: Frameworks are just tools, the key is using them right. Choose the rig
 - **FastHTTP**: https://github.com/valyala/fasthttp
 - **Go-Chi**: https://go-chi.io/
 - **Gorilla**: https://www.gorillatoolkit.org/
+
+### Related Articles on PFinalClub
+- [10 Golang Security Gotchas and Real Fixes](/golang/10-Golang-Security-Gotchas-And-the-Fixes-That-Actually-Work-en) - Essential security practices for your web applications
+- [Building GraphQL APIs with Go](/golang/Building-GraphQL-APIs-with-Go-Complete-Guide-2025) - Modern API development beyond REST
+- [Go Containerization Best Practices](/golang/Go-Containerization-Best-Practices-Docker-Optimization) - Deploy your web apps efficiently
+- [Advanced Go Concurrency Patterns](/golang/advanced-go-concurrency-patterns) - Master concurrent request handling
 
 ---
 
