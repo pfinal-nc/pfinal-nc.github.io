@@ -44,7 +44,7 @@ const breadcrumbs = computed(() => {
   let currentPath = ''
   parts.forEach((part, index) => {
     currentPath += '/' + part
-    
+
     // 最后一个是当前页面
     if (index === parts.length - 1) {
       crumbs.push({
@@ -55,13 +55,27 @@ const breadcrumbs = computed(() => {
       // 分类页面
       crumbs.push({
         text: formatCategoryName(part),
-        link: currentPath
+        link: resolveCategoryLink(part, currentPath)
       })
     }
   })
   
   return crumbs
 })
+
+// 处理分类链接跳转（支持按标签页跳转）
+function resolveCategoryLink(name: string, currentPath: string): string {
+  // 按路径段做定制化跳转
+  const linkMap: Record<string, string> = {
+    // PHP 分类点击时跳转到标签聚合页
+    php: '/?tag=PHP&type=info'
+    // 未来如果有需要，可以在这里继续添加：
+    // golang: '/?tag=golang&type=info',
+    // python: '/?tag=python&type=info',
+  }
+
+  return linkMap[name] || currentPath
+}
 
 // 格式化分类名称
 function formatCategoryName(name: string): string {
