@@ -1,6 +1,6 @@
 ---
-title: Go Error Handling Best Practices 2025: Complete Guide
-description: Master Go error handling best practices in 2025. Learn modern patterns, sentinel errors, error wrapping, and custom errors with production-ready code examples for real-world Go services.
+title: "Go Error Handling Best Practices 2025: Complete Guide"
+description: "Master Go error handling best practices in 2025. Learn modern patterns, sentinel errors, error wrapping, and custom errors with production-ready code examples for real-world Go services."
 date: 2025-11-26
 author: PFinal南丞
 category: golang
@@ -11,7 +11,15 @@ tags:
   - production
   - backend
   - api
-keywords: go error handling best practices 2025, golang error handling, go errors, error wrapping, custom errors, sentinel errors, go production error handling, go logging and errors
+keywords:
+  - go error handling best practices 2025
+  - golang error handling
+  - go errors
+  - error wrapping
+  - custom errors
+  - sentinel errors
+  - go production error handling
+  - go logging and errors
 ---
 
 # Go Error Handling Best Practices 2025: Complete Guide
