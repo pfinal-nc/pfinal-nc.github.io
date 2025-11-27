@@ -30,6 +30,7 @@ This article will detail how to build a complete RAG system using Golang, includ
 - 🔎 Semantic search optimization
 - 💬 Integration with OpenAI API for answer generation
 - 🚀 Production environment best practices
+- 🛡️ How RAG fits into a broader production stack with **error handling**, **observability**, and **containerized deployment**
 
 ## 🎯 What is RAG?
 
@@ -67,7 +68,7 @@ User Question → Vectorization → Semantic Search → Retrieve Relevant Docume
 
 1. **High Performance**: Concurrent processing of large volumes of documents
 2. **Simple Deployment**: Single binary file
-3. **Excellent Concurrency Model**: Goroutines for parallel tasks (If you want to dive deeper into Go's concurrency capabilities, check out our [Advanced Go Concurrency Patterns](/golang/advanced-go-concurrency-patterns) guide)
+3. **Excellent Concurrency Model**: Goroutines for parallel tasks (If you want to dive deeper into Go's concurrency capabilities, check out our **[Advanced Go Concurrency Patterns for Scalable Applications](/golang/advanced-go-concurrency-patterns)** guide)
 4. **Rich Ecosystem**: AI-related libraries maturing rapidly
 
 ## 📦 Environment Setup

@@ -1,5 +1,5 @@
 ---
-title: From Trace to Insight A Closed-Loop Observability Practice for Go Projects
+title: "From Trace to Insight: A Closed-Loop Observability Practice for Go Projects"
 date: 2025-10-29 10:00:00
 tags:
   - golang
@@ -8,9 +8,17 @@ tags:
   - trace
   - metrics
   - logs
-description: Based on practical project experience, this article delves into transforming OpenTelemetry's three signals (trace, metrics, logs) from simple data collection into decision-driving closed-loop observability.
+description: "Based on practical project experience, this article explains how to use OpenTelemetry to build closed-loop Go observability in 2025, turning traces, metrics, and logs from simple data collection into decision-driving insights."
 author: PFinal Nan Cheng
-keywords: Go observability, OpenTelemetry, trace, metrics, logs, distributed tracing, SLO, alerting, link tracing
+keywords:
+  - go observability best practices
+  - go opentelemetry guide
+  - go distributed tracing
+  - go metrics and logs
+  - go slo alerting
+  - opentelemetry go tutorial
+  - observability for go microservices
+  - production monitoring go services
 ---
 
 # From Trace to Insight: A Closed-Loop Observability Practice for Go Projects
