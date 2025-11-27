@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://friday-go.icu</id>
     <title>PFinalClub Tech Blog</title>
-    <updated>2025-11-26T02:26:53.021Z</updated>
+    <updated>2025-11-27T10:42:20.042Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>PFinal南丞</name>
@@ -15,6 +15,24 @@
     <logo>https://friday-go.icu/logo.png</logo>
     <icon>https://friday-go.icu/favicon.ico</icon>
     <rights>Copyright (c) 2024-present, PFinalClub</rights>
+    <entry>
+        <title type="html"><![CDATA[AI Tools Directory 2025 — The Ultimate Guide to the Best AI Apps and Use Cases]]></title>
+        <id>https://friday-go.icu/Tools/AI-Tools-Directory-2025-Best-AI-Apps-and-Use-Cases</id>
+        <link href="https://friday-go.icu/Tools/AI-Tools-Directory-2025-Best-AI-Apps-and-Use-Cases"/>
+        <updated>2025-11-27T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Discover the best AI tools in 2025 with this curated AI tools directory. Learn how to choose the right AI apps for coding, writing, design, data analysis, and more — with practical use cases and workflows.]]></summary>
+        <content type="html"><![CDATA[Discover the best AI tools in 2025 with this curated AI tools directory. Learn how to choose the right AI apps for coding, writing, design, data analysis, and more — with practical use cases and workflows.]]></content>
+        <author>
+            <name>PFinal南丞</name>
+            <uri>https://friday-go.icu</uri>
+        </author>
+        <category label="ai tools directory"/>
+        <category label="ai apps"/>
+        <category label="productivity"/>
+        <category label="automation"/>
+        <category label="developers"/>
+        <category label="creators"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Go Error Handling Best Practices 2025: Complete Guide]]></title>
         <id>https://friday-go.icu/golang/Go-Error-Handling-Best-Practices-2025-Complete-Guide</id>
@@ -220,12 +238,12 @@
         <category label="SSH"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[From Trace to Insight A Closed-Loop Observability Practice for Go Projects]]></title>
+        <title type="html"><![CDATA[From Trace to Insight: A Closed-Loop Observability Practice for Go Projects]]></title>
         <id>https://friday-go.icu/golang/From-Trace-to-Insight-A-Closed-Loop-Observability-Practice-for-Go-Projects</id>
         <link href="https://friday-go.icu/golang/From-Trace-to-Insight-A-Closed-Loop-Observability-Practice-for-Go-Projects"/>
         <updated>2025-10-29T10:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Based on practical project experience, this article delves into transforming OpenTelemetry's three signals (trace, metrics, logs) from simple data collection into decision-driving closed-loop observability.]]></summary>
-        <content type="html"><![CDATA[Based on practical project experience, this article delves into transforming OpenTelemetry's three signals (trace, metrics, logs) from simple data collection into decision-driving closed-loop observability.]]></content>
+        <summary type="html"><![CDATA[Based on practical project experience, this article explains how to use OpenTelemetry to build closed-loop Go observability in 2025, turning traces, metrics, and logs from simple data collection into decision-driving insights.]]></summary>
+        <content type="html"><![CDATA[Based on practical project experience, this article explains how to use OpenTelemetry to build closed-loop Go observability in 2025, turning traces, metrics, and logs from simple data collection into decision-driving insights.]]></content>
         <author>
             <name>PFinal Nan Cheng</name>
             <uri>https://friday-go.icu</uri>
@@ -814,21 +832,5 @@
         <category label="protobuf"/>
         <category label="scalable web services"/>
         <category label="api design"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[别再瞎改 API 了 3 招版本控制，让你的 Go 服务稳如老狗]]></title>
-        <id>https://friday-go.icu/zh/golang/如何实现 RESTful API 版本控制</id>
-        <link href="https://friday-go.icu/zh/golang/如何实现 RESTful API 版本控制"/>
-        <updated>2025-08-18T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[深入探讨 RESTful API 版本控制的策略和实践，包括 URI、头部和内容协商方法，并提供 Go 语言的详细示例。]]></summary>
-        <content type="html"><![CDATA[深入探讨 RESTful API 版本控制的策略和实践，包括 URI、头部和内容协商方法，并提供 Go 语言的详细示例。]]></content>
-        <author>
-            <name>PFinal南丞</name>
-            <uri>https://friday-go.icu</uri>
-        </author>
-        <category label="golang"/>
-        <category label="RESTful API"/>
-        <category label="API 版本控制"/>
-        <category label="微服务"/>
     </entry>
 </feed>

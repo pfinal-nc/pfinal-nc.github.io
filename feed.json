@@ -11,6 +11,26 @@
     },
     "items": [
         {
+            "id": "https://friday-go.icu/Tools/AI-Tools-Directory-2025-Best-AI-Apps-and-Use-Cases",
+            "content_html": "Discover the best AI tools in 2025 with this curated AI tools directory. Learn how to choose the right AI apps for coding, writing, design, data analysis, and more — with practical use cases and workflows.",
+            "url": "https://friday-go.icu/Tools/AI-Tools-Directory-2025-Best-AI-Apps-and-Use-Cases",
+            "title": "AI Tools Directory 2025 — The Ultimate Guide to the Best AI Apps and Use Cases",
+            "summary": "Discover the best AI tools in 2025 with this curated AI tools directory. Learn how to choose the right AI apps for coding, writing, design, data analysis, and more — with practical use cases and workflows.",
+            "date_modified": "2025-11-27T00:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "ai tools directory",
+                "ai apps",
+                "productivity",
+                "automation",
+                "developers",
+                "creators"
+            ]
+        },
+        {
             "id": "https://friday-go.icu/golang/Go-Error-Handling-Best-Practices-2025-Complete-Guide",
             "content_html": "Master Go error handling best practices in 2025. Learn modern patterns, sentinel errors, error wrapping, and custom errors with production-ready code examples for real-world Go services.",
             "url": "https://friday-go.icu/golang/Go-Error-Handling-Best-Practices-2025-Complete-Guide",
@@ -238,10 +258,10 @@
         },
         {
             "id": "https://friday-go.icu/golang/From-Trace-to-Insight-A-Closed-Loop-Observability-Practice-for-Go-Projects",
-            "content_html": "Based on practical project experience, this article delves into transforming OpenTelemetry's three signals (trace, metrics, logs) from simple data collection into decision-driving closed-loop observability.",
+            "content_html": "Based on practical project experience, this article explains how to use OpenTelemetry to build closed-loop Go observability in 2025, turning traces, metrics, and logs from simple data collection into decision-driving insights.",
             "url": "https://friday-go.icu/golang/From-Trace-to-Insight-A-Closed-Loop-Observability-Practice-for-Go-Projects",
-            "title": "From Trace to Insight A Closed-Loop Observability Practice for Go Projects",
-            "summary": "Based on practical project experience, this article delves into transforming OpenTelemetry's three signals (trace, metrics, logs) from simple data collection into decision-driving closed-loop observability.",
+            "title": "From Trace to Insight: A Closed-Loop Observability Practice for Go Projects",
+            "summary": "Based on practical project experience, this article explains how to use OpenTelemetry to build closed-loop Go observability in 2025, turning traces, metrics, and logs from simple data collection into decision-driving insights.",
             "date_modified": "2025-10-29T10:00:00.000Z",
             "author": {
                 "name": "PFinal Nan Cheng",
@@ -898,24 +918,6 @@
                 "protobuf",
                 "scalable web services",
                 "api design"
-            ]
-        },
-        {
-            "id": "https://friday-go.icu/zh/golang/如何实现 RESTful API 版本控制",
-            "content_html": "深入探讨 RESTful API 版本控制的策略和实践，包括 URI、头部和内容协商方法，并提供 Go 语言的详细示例。",
-            "url": "https://friday-go.icu/zh/golang/如何实现 RESTful API 版本控制",
-            "title": "别再瞎改 API 了 3 招版本控制，让你的 Go 服务稳如老狗",
-            "summary": "深入探讨 RESTful API 版本控制的策略和实践，包括 URI、头部和内容协商方法，并提供 Go 语言的详细示例。",
-            "date_modified": "2025-08-18T00:00:00.000Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": [
-                "golang",
-                "RESTful API",
-                "API 版本控制",
-                "微服务"
             ]
         }
     ]
