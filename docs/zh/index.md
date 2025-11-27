@@ -1,4 +1,14 @@
 ---
+title: "PFinalClub 技术博客 - Golang / PHP / AI 工具 / 后端开发"
+description: "PFinalClub 是一个专注 Golang、PHP、AI 工具与后端工程实践的技术博客，涵盖 Go 错误处理最佳实践、RAG 系统、可观测性、ThinkPHP 8 升级、AI Tools 导航等高质量实战文章。"
+keywords:
+  - golang 教程
+  - go 错误处理 最佳实践 2025
+  - go web 框架 2025
+  - golang rag openai qdrant
+  - thinkphp 8 发布
+  - ai tools directory 2025
+  - 开发者 技术博客
 layout: home
 # 首页部分元素定制
 blog:

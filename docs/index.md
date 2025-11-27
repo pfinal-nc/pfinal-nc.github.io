@@ -1,4 +1,14 @@
 ---
+title: "PFinalClub - Golang, PHP, AI Tools and Backend Development Blog"
+description: "PFinalClub is a developer community focused on Golang, PHP, AI tools, and backend engineering. Learn Go error handling best practices, Go web frameworks 2025, RAG with Golang, PHP ThinkPHP 8 release, AI tools directory and more."
+keywords:
+  - golang tutorial
+  - go error handling best practices 2025
+  - best go web frameworks 2025
+  - golang rag openai qdrant
+  - php thinkphp 8 release
+  - ai tools directory 2025
+  - backend development blog
 layout: home
 # Homepage Elements Customization
 blog:
@@ -17,4 +27,4 @@ blog:
  pageSize: 15
  minScreenAvatar: true,
  
---- 
+---
