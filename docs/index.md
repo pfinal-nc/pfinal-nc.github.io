@@ -9,6 +9,8 @@ keywords:
   - php thinkphp 8 release
   - ai tools directory 2025
   - backend development blog
+  - golang 教程
+  - ai 工具导航 2025
 layout: home
 # Homepage Elements Customization
 blog:

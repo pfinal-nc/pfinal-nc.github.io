@@ -9,6 +9,14 @@ keywords:
   - thinkphp 8 发布
   - ai tools directory 2025
   - 开发者 技术博客
+  - golang 教程 入门到实战
+  - golang 可观测性 opentelemetry 教程
+  - golang rag 系统 实战
+  - ai 工具导航 网站
+  - ai 工具 推荐 2025
+  - thinkphp 8 升级 教程
+  - php mcp 扩展 教程
+  - 个人开发者 技术博客
 layout: home
 # 首页部分元素定制
 blog:
@@ -26,4 +34,8 @@ blog:
  inspiringTimeout: 3000
  pageSize: 15
  minScreenAvatar: true
----
+
+## 技术专题导航
+
+- **Golang 中文技术专题**：聚合 Go 后端、RAG、可观测性、Wails 桌面开发等核心文章，按主题学习更轻松。  
+  👉 [前往 Golang 中文专题导航](/zh/golang/)

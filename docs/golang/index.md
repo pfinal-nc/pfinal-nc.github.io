@@ -1,88 +1,88 @@
 ---
-title: "Golang 技术专题 - 高质量 Go 后端 / Web 框架 / AI & RAG / 可观测性"
-description: "PFinalClub Golang 专题：系统整理 Go 错误处理、Web 框架选型、RAG 系统、可观测性、容器化部署等核心实践，为构建生产级 Go 服务提供一条清晰路径。"
+title: "Golang Technical Hub – Production-Ready Go Backend / Web Frameworks / AI & RAG / Observability"
+description: "PFinalClub Golang hub: curated guides on Go error handling, web framework selection, RAG systems, observability, containerization and more, giving you a clear path to building production-grade Go services."
 keywords:
-  - golang 教程
-  - go web 框架 2025
-  - go 错误处理 最佳实践
+  - golang tutorial
+  - best go web frameworks 2025
+  - go error handling best practices
   - golang rag openai qdrant
   - go observability opentelemetry
-  - go 容器化 部署
-  - go 后端 实战
+  - go containerization best practices
+  - go backend best practices
+  - golang production guide
 ---
 
-# Golang 技术专题导航
+# Golang Technical Hub
 
-这里是 PFinalClub 的 **Golang 技术 Hub**，把分散在各篇长文里的 Go 实战经验按主题整理到一起，方便你：
+This is the **PFinalClub Golang Technical Hub**.  
+Instead of scattered long-form articles, this page groups the most important Go content by topic so you can:
 
-- 按路径系统学习（从基础到生产）
-- 快速定位某一类问题的“主线文章”
-- 让搜索引擎清楚知道：**“friday-go.icu 是一个高质量的 Go 技术站点”**
+- Follow a learning path from **foundations to production**
+- Quickly locate a **“main article”** for a given problem
+- Help search engines understand: **“friday-go.icu is a high-quality Golang technical site”**
 
 ---
 
-## 1. 生产级 Go 后端基础：错误处理 / 安全 / 可观测性
+## 1. Production-Ready Go Backend: Error Handling / Security / Observability
 
-- **[Go Error Handling Best Practices 2025 - A Complete Guide](/golang/Go-Error-Handling-Best-Practices-2025-Complete-Guide)**  
-  系统梳理 2025 年推荐的 Go 错误处理方式：sentinel errors、wrapped errors、自定义错误类型、与日志/指标/Trace 的联动。
+- **[Go Error Handling Best Practices 2025 – A Complete Guide](/golang/Go-Error-Handling-Best-Practices-2025-Complete-Guide)**  
+  A deep dive into modern Go error handling in 2025: sentinel errors, wrapped errors, custom types, and how to connect errors with logs, metrics, and traces.
 
 - **[10 Golang Security Gotchas — And the Fixes That Actually Work](/golang/10-Golang-Security-Gotchas-And-the-Fixes-That-Actually-Work-en)**  
-  涵盖 SQL 注入、密码存储、CORS、Rate limiting、安全头等真实线上坑点与解决方案。
+  Real-world security pitfalls (SQL injection, password storage, CORS, rate limiting, security headers) and practical fixes.
 
 - **[From Trace to Insight: A Closed-Loop Observability Practice for Go Projects](/golang/From-Trace-to-Insight-A-Closed-Loop-Observability-Practice-for-Go-Projects)**  
-  基于 OpenTelemetry 的 Go 项目可观测性闭环实践，从指标/日志/Trace 到告警与决策。
+  Building an observability loop with OpenTelemetry, from traces/metrics/logs all the way to alerts and engineering decisions.
 
 - **[Go Containerization Best Practices: From 800MB to 10MB Docker Images](/golang/Go-Containerization-Best-Practices-Docker-Optimization)**  
-  教你如何把 Go 镜像从 800MB 压到 10MB，同时兼顾安全与性能。
+  How to shrink Go container images from 800MB to 10MB while keeping them secure and fast.
 
 ---
 
-## 2. Web & API：框架选型与实战
+## 2. Web & API: Framework Selection and Practice
 
-- **[Best Go Web Frameworks in 2025 - The Ultimate Developer's Survival Guide](/golang/Best-Go-Web-Frameworks-2025-Comprehensive-Developers-Guide)**  
-  从 Gin / Fiber / Echo / Hertz 等主流框架，对比性能、生态、上手成本与典型适用场景。
+- **[Best Go Web Frameworks in 2025 – The Ultimate Developer's Survival Guide](/golang/Best-Go-Web-Frameworks-2025-Comprehensive-Developers-Guide)**  
+  A comparison of Gin / Fiber / Echo / Hertz and more, covering performance, ecosystem, learning curve, and typical use cases.
 
 - **[Building Production-Ready GraphQL APIs with Go: Complete Guide 2025](/golang/Building-GraphQL-APIs-with-Go-Complete-Guide-2025)**  
-  使用 gqlgen 构建 GraphQL API，从 Schema 设计到鉴权、性能与生产部署。
+  Using gqlgen to build GraphQL APIs, from schema design and auth to performance tuning and deployment.
 
-- **[Golang Socket Communication Architecture Analysis - Building High-Performance Game Servers](/golang/golang-socket-architecture-building-high-performance-game-servers)**  
-  从 TCP/UDP 到协议设计与并发模型，适合需要高并发长连接场景的后端工程师。
+- **[Golang Socket Communication Architecture Analysis – Building High-Performance Game Servers](/golang/golang-socket-architecture-building-high-performance-game-servers)**  
+  From TCP/UDP basics to protocol design and concurrency models, for high-concurrency long‑lived connections and game backends.
 
 ---
 
-## 3. AI & RAG：用 Go 构建 AI 应用
+## 3. AI & RAG: Building AI Applications with Go
 
-- **[Building RAG System with Golang - From OpenAI API to Vector Database Complete Guide](/golang/Building-RAG-System-with-Golang-OpenAI-Vector-Database)**  
-  详细讲解如何用 Go + OpenAI + Qdrant 打造完整的 RAG 系统，从切片、Embedding、向量检索到生产优化。
+- **[Building RAG System with Golang – From OpenAI API to Vector Database Complete Guide](/golang/Building-RAG-System-with-Golang-OpenAI-Vector-Database)**  
+  A step‑by‑step guide to building a full RAG system with Go + OpenAI + Qdrant: chunking, embeddings, vector search, and production optimization.
 
 - **[Distributed Tracing in Go Microservices with OpenTelemetry](/golang/distributed-tracing-opentelemetry-go)**  
-  AI / RAG 系统一旦拆成多服务，必然需要分布式追踪，这篇是最佳搭档。
+  Once your RAG or Go system evolves into microservices, distributed tracing becomes essential. This article shows how to wire it up with OTel.
 
 - **[Advanced Go Concurrency Patterns for Scalable Applications](/golang/advanced-go-concurrency-patterns)**  
-  为 RAG、流式处理、异步任务等场景打地基的并发模式实践。
+  Advanced concurrency patterns for RAG, streaming, background workers, and high‑throughput services.
 
 ---
 
-## 4. 工具链 & 开发效率
+## 4. Tooling & Developer Productivity
 
-- **[Go CLI Utility Development Practice - Master Modern Command-Line Tools in 2025](/golang/Go-CLI-Utility-Development-Practice)**  
-  用 Cobra / Viper 等库构建专业 CLI 工具，适合作为内部工具或开源项目基础。
+- **[Go CLI Utility Development Practice – Master Modern Command-Line Tools in 2025](/golang/Go-CLI-Utility-Development-Practice)**  
+  Build professional CLI tools with Cobra / Viper, suitable for internal tooling or open source projects.
 
 - **[10 Essential Go Tools to Boost Development Efficiency](/golang/10-Essential-Go-Tools-to-Boost-Development-Efficiency)**  
-  覆盖代码质量、性能分析、依赖管理等领域的高价值 Go 工具。
+  A curated list of Go tools for code quality, performance profiling, dependency management, and more.
 
 ---
 
-## 5. 下一步怎么学？
+## 5. How to Use This Hub
 
-如果你刚来到这个专题，推荐学习路径是：
+If you are new to this Golang section, a recommended learning path is:
 
-1. **先打基础**：错误处理 + 安全 + 可观测性  
-2. **再选 Web 技术栈**：根据业务选择合适的 Web 框架 / GraphQL 方案  
-3. **再看 AI & RAG**：为现有系统增加“智能查询”和知识检索能力  
-4. **用工具链固化经验**：把常用流程做成 CLI / 内部工具
+1. **Start with foundations**: error handling, security, and observability  
+2. **Pick your web stack**: choose a web framework / GraphQL stack that fits your use case  
+3. **Explore AI & RAG**: add intelligent search and knowledge retrieval to your existing systems  
+4. **Invest in tooling**: turn your best practices into CLI tools and automation
 
-你可以把这个页面当成 **Golang 专题入口**：  
-无论是搜索引擎，还是新读者，都能从这里一眼看到 PFinalClub 在 Go 领域的“全景实力”。
-
-
+You can treat this page as the **entry point for all Golang content** on PFinalClub.  
+Both search engines and new readers can quickly see the full picture of what you do in the Go ecosystem.

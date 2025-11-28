@@ -25,6 +25,11 @@ keywords:
   - go error handling in microservices
   - go logging and errors
   - go error handling logging and tracing
+  - go 错误处理 最佳实践 2025
+  - golang 错误处理 教程
+  - go 错误处理 实战
+  - go 错误处理 日志 可观测性
+  - go 微服务 错误处理
 ---
 
 # Go (Golang) Error Handling Best Practices 2025: Complete Guide

@@ -25,6 +25,11 @@ keywords:
   - ai tools list 2025
   - best free ai tools 2025
   - ai tools website
+  - ai 工具导航 2025
+  - ai 工具导航 网站
+  - ai 工具 推荐 2025
+  - ai 工具 清单 2025
+  - ai 应用 导航
 ---
 
 # AI Tools Directory 2025 — The Ultimate Guide to the Best AI Apps and Use Cases
