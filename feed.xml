@@ -4,7 +4,7 @@
         <title>PFinalClub Tech Blog</title>
         <link>https://friday-go.icu</link>
         <description>PFinalClub - 专注于 Golang, PHP, Python 的技术博客，分享微服务、云原生、架构设计等实战经验</description>
-        <lastBuildDate>Thu, 27 Nov 2025 11:04:06 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 28 Nov 2025 01:07:05 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-CN</language>
@@ -15,6 +15,14 @@
         </image>
         <copyright>Copyright (c) 2024-present, PFinalClub</copyright>
         <atom:link href="https://friday-go.icu/feed.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Golang 技术专题 - 高质量 Go 后端 / Web 框架 / AI & RAG / 可观测性]]></title>
+            <link>https://friday-go.icu/golang</link>
+            <guid>https://friday-go.icu/golang</guid>
+            <pubDate>Fri, 28 Nov 2025 01:07:05 GMT</pubDate>
+            <description><![CDATA[PFinalClub Golang 专题：系统整理 Go 错误处理、Web 框架选型、RAG 系统、可观测性、容器化部署等核心实践，为构建生产级 Go 服务提供一条清晰路径。]]></description>
+            <content:encoded><![CDATA[PFinalClub Golang 专题：系统整理 Go 错误处理、Web 框架选型、RAG 系统、可观测性、容器化部署等核心实践，为构建生产级 Go 服务提供一条清晰路径。]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[AI Tools Directory 2025 — The Ultimate Guide to the Best AI Apps and Use Cases]]></title>
             <link>https://friday-go.icu/Tools/AI-Tools-Directory-2025-Best-AI-Apps-and-Use-Cases</link>
@@ -48,8 +56,8 @@
             <link>https://friday-go.icu/php/Making-Local-LLMs-Support-Function-Calling-Like-OpenAI-PHP-Async-Implementation</link>
             <guid>https://friday-go.icu/php/Making-Local-LLMs-Support-Function-Calling-Like-OpenAI-PHP-Async-Implementation</guid>
             <pubDate>Wed, 19 Nov 2025 15:30:00 GMT</pubDate>
-            <description><![CDATA[Hands-on tutorial on how to make locally-running models like Qwen3, Deepseek-Coder-V3, and GLM4-Chat support native Function Calling just like OpenAI GPT-4. Implement OpenAI-compatible tool calls using the pfinal-asyncio async framework, achieving 200%-500% performance improvement with concurrent execution, zero API costs, and complete data localization.]]></description>
-            <content:encoded><![CDATA[Hands-on tutorial on how to make locally-running models like Qwen3, Deepseek-Coder-V3, and GLM4-Chat support native Function Calling just like OpenAI GPT-4. Implement OpenAI-compatible tool calls using the pfinal-asyncio async framework, achieving 200%-500% performance improvement with concurrent execution, zero API costs, and complete data localization.]]></content:encoded>
+            <description><![CDATA[Hands-on tutorial on how to make locally-running models like Qwen3, Deepseek-Coder-V3, and GLM4-Chat support native Function Calling just like OpenAI GPT-4. Implement OpenAI-compatible tool calls using the pfinal-asyncio async framework, achieving 200%-500% performance improvement with concurrent execution, zero API costs, and complete data localization. Includes best practices for API design, error handling, and production deployment in PHP.]]></description>
+            <content:encoded><![CDATA[Hands-on tutorial on how to make locally-running models like Qwen3, Deepseek-Coder-V3, and GLM4-Chat support native Function Calling just like OpenAI GPT-4. Implement OpenAI-compatible tool calls using the pfinal-asyncio async framework, achieving 200%-500% performance improvement with concurrent execution, zero API costs, and complete data localization. Includes best practices for API design, error handling, and production deployment in PHP.]]></content:encoded>
             <category>PHP</category>
             <category>AI</category>
             <category>Function Calling</category>
@@ -309,8 +317,8 @@
             <link>https://friday-go.icu/golang/Best-Go-Web-Frameworks-2025-Comprehensive-Developers-Guide</link>
             <guid>https://friday-go.icu/golang/Best-Go-Web-Frameworks-2025-Comprehensive-Developers-Guide</guid>
             <pubDate>Sun, 28 Sep 2025 11:27:00 GMT</pubDate>
-            <description><![CDATA[From Gin to Hertz, from performance beasts to development powerhouses - discover which Go web framework truly deserves the crown in 2025. A comprehensive comparison backed by real-world experience and hard data.]]></description>
-            <content:encoded><![CDATA[From Gin to Hertz, from performance beasts to development powerhouses - discover which Go web framework truly deserves the crown in 2025. A comprehensive comparison backed by real-world experience and hard data.]]></content:encoded>
+            <description><![CDATA[From Gin to Hertz, from performance beasts to development powerhouses - discover which Go web framework truly deserves the crown in 2025. A comprehensive comparison backed by real-world experience, benchmarks, and production architecture tips, including error handling, observability, and deployment best practices.]]></description>
+            <content:encoded><![CDATA[From Gin to Hertz, from performance beasts to development powerhouses - discover which Go web framework truly deserves the crown in 2025. A comprehensive comparison backed by real-world experience, benchmarks, and production architecture tips, including error handling, observability, and deployment best practices.]]></content:encoded>
             <category>golang</category>
             <category>web frameworks</category>
         </item>
@@ -618,20 +626,6 @@
             <category>RESTful API</category>
             <category>API Versioning</category>
             <category>Microservices</category>
-        </item>
-        <item>
-            <title><![CDATA[Building Scalable Web Services with Go and gRPC]]></title>
-            <link>https://friday-go.icu/golang/scalable-web-services-go-grpc</link>
-            <guid>https://friday-go.icu/golang/scalable-web-services-go-grpc</guid>
-            <pubDate>Mon, 18 Aug 2025 00:00:00 GMT</pubDate>
-            <description><![CDATA[A comprehensive guide to building scalable web services using Go and gRPC, covering Protocol Buffers, service implementation, streaming, authentication, load balancing, and best practices for production deployments.]]></description>
-            <content:encoded><![CDATA[A comprehensive guide to building scalable web services using Go and gRPC, covering Protocol Buffers, service implementation, streaming, authentication, load balancing, and best practices for production deployments.]]></content:encoded>
-            <category>golang</category>
-            <category>grpc</category>
-            <category>microservices</category>
-            <category>protobuf</category>
-            <category>scalable web services</category>
-            <category>api design</category>
         </item>
     </channel>
 </rss>

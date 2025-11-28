@@ -98,7 +98,7 @@
 </url>
 <url>
 <loc>https://friday-go.icu/golang/Best-Go-Web-Frameworks-2025-Comprehensive-Developers-Guide</loc>
-<lastmod>2025-11-26T02:07:28.000Z</lastmod>
+<lastmod>2025-11-27T11:08:35.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -319,6 +319,12 @@
 <priority>0.8</priority>
 </url>
 <url>
+<loc>https://friday-go.icu/golang/</loc>
+<lastmod>2025-11-28T01:03:59.000Z</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
 <loc>https://friday-go.icu/golang/mastering-go-error-handling</loc>
 <lastmod>2025-11-11T05:39:25.000Z</lastmod>
 <changefreq>weekly</changefreq>
@@ -380,7 +386,7 @@
 </url>
 <url>
 <loc>https://friday-go.icu/php/Making-Local-LLMs-Support-Function-Calling-Like-OpenAI-PHP-Async-Implementation</loc>
-<lastmod>2025-11-24T02:32:45.000Z</lastmod>
+<lastmod>2025-11-27T11:08:35.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
