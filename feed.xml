@@ -4,7 +4,7 @@
         <title>PFinalClub Tech Blog</title>
         <link>https://friday-go.icu</link>
         <description>PFinalClub - 专注于 Golang, PHP, Python 的技术博客，分享微服务、云原生、架构设计等实战经验</description>
-        <lastBuildDate>Fri, 28 Nov 2025 01:23:47 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 28 Nov 2025 02:39:03 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-CN</language>
@@ -16,12 +16,46 @@
         <copyright>Copyright (c) 2024-present, PFinalClub</copyright>
         <atom:link href="https://friday-go.icu/feed.xml" rel="self" type="application/rss+xml"/>
         <item>
-            <title><![CDATA[Golang 技术专题 - 高质量 Go 后端 / Web 框架 / AI & RAG / 可观测性]]></title>
+            <title><![CDATA[Golang 中文技术专题导航 - Go 后端 / RAG / 可观测性 / 桌面开发]]></title>
+            <link>https://friday-go.icu/zh/golang</link>
+            <guid>https://friday-go.icu/zh/golang</guid>
+            <pubDate>Fri, 28 Nov 2025 02:39:03 GMT</pubDate>
+            <description><![CDATA[PFinalClub Golang 中文专题导航页：系统整理 Go 后端工程实践、RAG 系统、可观测性、Wails 桌面开发、游戏服务器与效率工具等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></description>
+            <content:encoded><![CDATA[PFinalClub Golang 中文专题导航页：系统整理 Go 后端工程实践、RAG 系统、可观测性、Wails 桌面开发、游戏服务器与效率工具等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Golang Technical Hub – Production-Ready Go Backend / Web Frameworks / AI & RAG / Observability]]></title>
             <link>https://friday-go.icu/golang</link>
             <guid>https://friday-go.icu/golang</guid>
-            <pubDate>Fri, 28 Nov 2025 01:23:47 GMT</pubDate>
-            <description><![CDATA[PFinalClub Golang 专题：系统整理 Go 错误处理、Web 框架选型、RAG 系统、可观测性、容器化部署等核心实践，为构建生产级 Go 服务提供一条清晰路径。]]></description>
-            <content:encoded><![CDATA[PFinalClub Golang 专题：系统整理 Go 错误处理、Web 框架选型、RAG 系统、可观测性、容器化部署等核心实践，为构建生产级 Go 服务提供一条清晰路径。]]></content:encoded>
+            <pubDate>Fri, 28 Nov 2025 02:39:03 GMT</pubDate>
+            <description><![CDATA[PFinalClub Golang hub: curated guides on Go error handling, web framework selection, RAG systems, observability, containerization and more, giving you a clear path to building production-grade Go services.]]></description>
+            <content:encoded><![CDATA[PFinalClub Golang hub: curated guides on Go error handling, web framework selection, RAG systems, observability, containerization and more, giving you a clear path to building production-grade Go services.]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Developers in the Vibe Coding Era: How to Code with ChatGPT 5.1 Instead of Being Replaced]]></title>
+            <link>https://friday-go.icu/Tools/Vibe-Coding-ChatGPT-5.1</link>
+            <guid>https://friday-go.icu/Tools/Vibe-Coding-ChatGPT-5.1</guid>
+            <pubDate>Fri, 28 Nov 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[In the Vibe Coding era, ChatGPT 5.1 is already sitting at your desk. This piece is not about whether AI will replace developers, but how to code with ChatGPT 5.1 so that it works overtime and you go home on time.]]></description>
+            <content:encoded><![CDATA[In the Vibe Coding era, ChatGPT 5.1 is already sitting at your desk. This piece is not about whether AI will replace developers, but how to code with ChatGPT 5.1 so that it works overtime and you go home on time.]]></content:encoded>
+            <category>ai coding</category>
+            <category>chatgpt 5.1</category>
+            <category>vibe coding</category>
+            <category>developer productivity</category>
+            <category>software engineering</category>
+        </item>
+        <item>
+            <title><![CDATA[Vibe Coding 时代的开发者：如何跟 ChatGPT 5.1 一起写代码，而不是被替代]]></title>
+            <link>https://friday-go.icu/zh/工具/Vibe-Coding-时代的开发者：如何跟-ChatGPT-5.1-一起写代码，而不是被替代</link>
+            <guid>https://friday-go.icu/zh/工具/Vibe-Coding-时代的开发者：如何跟-ChatGPT-5.1-一起写代码，而不是被替代</guid>
+            <pubDate>Fri, 28 Nov 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[在 Vibe Coding 时代，ChatGPT 5.1 已经坐在你的工位上了。这篇文章聊的不是“会不会被 AI 替代”，而是：如何和 ChatGPT 5.1 一起写代码，让它加班，你下班。]]></description>
+            <content:encoded><![CDATA[在 Vibe Coding 时代，ChatGPT 5.1 已经坐在你的工位上了。这篇文章聊的不是“会不会被 AI 替代”，而是：如何和 ChatGPT 5.1 一起写代码，让它加班，你下班。]]></content:encoded>
+            <category>ai coding</category>
+            <category>chatgpt 5.1</category>
+            <category>vibe coding</category>
+            <category>developer productivity</category>
+            <category>software engineering</category>
         </item>
         <item>
             <title><![CDATA[AI Tools Directory 2025 — The Ultimate Guide to the Best AI Apps and Use Cases]]></title>
@@ -586,46 +620,6 @@
             <category>real-time</category>
             <category>performance</category>
             <category>web applications</category>
-        </item>
-        <item>
-            <title><![CDATA[Mastering Error Handling in Go for Robust Applications]]></title>
-            <link>https://friday-go.icu/golang/mastering-go-error-handling</link>
-            <guid>https://friday-go.icu/golang/mastering-go-error-handling</guid>
-            <pubDate>Mon, 18 Aug 2025 00:00:00 GMT</pubDate>
-            <description><![CDATA[Become a Go error handling expert in 2025! Master sentinel errors, error wrapping with %w, custom error types, errors.Is/As, panic recovery, and testing strategies. Build production-grade applications with comprehensive error tracking and debugging capabilities.]]></description>
-            <content:encoded><![CDATA[Become a Go error handling expert in 2025! Master sentinel errors, error wrapping with %w, custom error types, errors.Is/As, panic recovery, and testing strategies. Build production-grade applications with comprehensive error tracking and debugging capabilities.]]></content:encoded>
-            <category>golang</category>
-            <category>error handling</category>
-            <category>best practices</category>
-            <category>robustness</category>
-            <category>software engineering</category>
-        </item>
-        <item>
-            <title><![CDATA[Mastering Go Testing - Advanced Techniques and Best Practices]]></title>
-            <link>https://friday-go.icu/golang/mastering-go-testing-advanced-techniques</link>
-            <guid>https://friday-go.icu/golang/mastering-go-testing-advanced-techniques</guid>
-            <pubDate>Mon, 18 Aug 2025 00:00:00 GMT</pubDate>
-            <description><![CDATA[A comprehensive guide to advanced Go testing techniques, covering unit testing, integration testing, benchmarking, fuzzing, and best practices for writing maintainable and effective tests.]]></description>
-            <content:encoded><![CDATA[A comprehensive guide to advanced Go testing techniques, covering unit testing, integration testing, benchmarking, fuzzing, and best practices for writing maintainable and effective tests.]]></content:encoded>
-            <category>golang</category>
-            <category>testing</category>
-            <category>test-driven development</category>
-            <category>integration testing</category>
-            <category>benchmarking</category>
-            <category>fuzzing</category>
-            <category>table-driven tests</category>
-        </item>
-        <item>
-            <title><![CDATA[How to Implement RESTful API Versioning?]]></title>
-            <link>https://friday-go.icu/golang/restful-api-versioning.en</link>
-            <guid>https://friday-go.icu/golang/restful-api-versioning.en</guid>
-            <pubDate>Mon, 18 Aug 2025 00:00:00 GMT</pubDate>
-            <description><![CDATA[A deep dive into strategies and practices for RESTful API versioning, including URI, header, and content negotiation methods, with detailed examples in Go.]]></description>
-            <content:encoded><![CDATA[A deep dive into strategies and practices for RESTful API versioning, including URI, header, and content negotiation methods, with detailed examples in Go.]]></content:encoded>
-            <category>golang</category>
-            <category>RESTful API</category>
-            <category>API Versioning</category>
-            <category>Microservices</category>
         </item>
     </channel>
 </rss>
