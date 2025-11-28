@@ -6,9 +6,9 @@ tags:
     - remote storage
     - MCP
     - programming
-description: A detailed guide on building an efficient remote storage MCP server using Go, covering architecture design, key implementations, technical challenges, and best practices with real-world examples.
+description: A detailed guide on building an efficient remote storage MCP server using Go, covering architecture design, key implementations, technical challenges, and best practices with real-world examples, including notes on integrating tools like golangci-lint for a better developer experience.
 author: PFinal南丞
-keywords: Go, remote storage, MCP, server, architecture design, concurrency, practical guide, programming, experience sharing
+keywords: Go, remote storage, MCP, server, architecture design, concurrency, practical guide, programming, experience sharing, golangci-lint mcp server, golang mcp server example, build golang mcp server step by step
 
 sticky: true
 
