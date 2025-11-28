@@ -16,7 +16,7 @@
             "url": "https://friday-go.icu/golang",
             "title": "Golang 技术专题 - 高质量 Go 后端 / Web 框架 / AI & RAG / 可观测性",
             "summary": "PFinalClub Golang 专题：系统整理 Go 错误处理、Web 框架选型、RAG 系统、可观测性、容器化部署等核心实践，为构建生产级 Go 服务提供一条清晰路径。",
-            "date_modified": "2025-11-28T01:07:05.927Z",
+            "date_modified": "2025-11-28T01:23:47.886Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -45,10 +45,10 @@
         },
         {
             "id": "https://friday-go.icu/golang/Go-Error-Handling-Best-Practices-2025-Complete-Guide",
-            "content_html": "Master Go error handling best practices in 2025. Learn modern patterns, sentinel errors, error wrapping, and custom errors with production-ready code examples for real-world Go services.",
+            "content_html": "Master Go (Golang) error handling best practices in 2025. Learn modern patterns, sentinel errors, error wrapping, and custom errors with production-ready examples for real-world Go services and microservices.",
             "url": "https://friday-go.icu/golang/Go-Error-Handling-Best-Practices-2025-Complete-Guide",
-            "title": "Go Error Handling Best Practices 2025: Complete Guide",
-            "summary": "Master Go error handling best practices in 2025. Learn modern patterns, sentinel errors, error wrapping, and custom errors with production-ready code examples for real-world Go services.",
+            "title": "Go (Golang) Error Handling Best Practices 2025: Complete Guide",
+            "summary": "Master Go (Golang) error handling best practices in 2025. Learn modern patterns, sentinel errors, error wrapping, and custom errors with production-ready examples for real-world Go services and microservices.",
             "date_modified": "2025-11-26T00:00:00.000Z",
             "author": {
                 "name": "PFinal南丞",

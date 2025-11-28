@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://friday-go.icu</id>
     <title>PFinalClub Tech Blog</title>
-    <updated>2025-11-28T01:07:05.972Z</updated>
+    <updated>2025-11-28T01:23:47.934Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>PFinal南丞</name>
@@ -19,7 +19,7 @@
         <title type="html"><![CDATA[Golang 技术专题 - 高质量 Go 后端 / Web 框架 / AI & RAG / 可观测性]]></title>
         <id>https://friday-go.icu/golang</id>
         <link href="https://friday-go.icu/golang"/>
-        <updated>2025-11-28T01:07:05.927Z</updated>
+        <updated>2025-11-28T01:23:47.886Z</updated>
         <summary type="html"><![CDATA[PFinalClub Golang 专题：系统整理 Go 错误处理、Web 框架选型、RAG 系统、可观测性、容器化部署等核心实践，为构建生产级 Go 服务提供一条清晰路径。]]></summary>
         <content type="html"><![CDATA[PFinalClub Golang 专题：系统整理 Go 错误处理、Web 框架选型、RAG 系统、可观测性、容器化部署等核心实践，为构建生产级 Go 服务提供一条清晰路径。]]></content>
         <author>
@@ -46,12 +46,12 @@
         <category label="creators"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Go Error Handling Best Practices 2025: Complete Guide]]></title>
+        <title type="html"><![CDATA[Go (Golang) Error Handling Best Practices 2025: Complete Guide]]></title>
         <id>https://friday-go.icu/golang/Go-Error-Handling-Best-Practices-2025-Complete-Guide</id>
         <link href="https://friday-go.icu/golang/Go-Error-Handling-Best-Practices-2025-Complete-Guide"/>
         <updated>2025-11-26T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Master Go error handling best practices in 2025. Learn modern patterns, sentinel errors, error wrapping, and custom errors with production-ready code examples for real-world Go services.]]></summary>
-        <content type="html"><![CDATA[Master Go error handling best practices in 2025. Learn modern patterns, sentinel errors, error wrapping, and custom errors with production-ready code examples for real-world Go services.]]></content>
+        <summary type="html"><![CDATA[Master Go (Golang) error handling best practices in 2025. Learn modern patterns, sentinel errors, error wrapping, and custom errors with production-ready examples for real-world Go services and microservices.]]></summary>
+        <content type="html"><![CDATA[Master Go (Golang) error handling best practices in 2025. Learn modern patterns, sentinel errors, error wrapping, and custom errors with production-ready examples for real-world Go services and microservices.]]></content>
         <author>
             <name>PFinal南丞</name>
             <uri>https://friday-go.icu</uri>
