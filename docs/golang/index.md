@@ -55,7 +55,7 @@ keywords:
 - **[Building RAG System with Golang - From OpenAI API to Vector Database Complete Guide](/golang/Building-RAG-System-with-Golang-OpenAI-Vector-Database)**  
   详细讲解如何用 Go + OpenAI + Qdrant 打造完整的 RAG 系统，从切片、Embedding、向量检索到生产优化。
 
-- **[Distributed Tracing in Go Microservices with OpenTelemetry](/golang/Distributed-Tracing-in-Go-Microservices-with-OpenTelemetry)**  
+- **[Distributed Tracing in Go Microservices with OpenTelemetry](/golang/distributed-tracing-opentelemetry-go)**  
   AI / RAG 系统一旦拆成多服务，必然需要分布式追踪，这篇是最佳搭档。
 
 - **[Advanced Go Concurrency Patterns for Scalable Applications](/golang/advanced-go-concurrency-patterns)**  
