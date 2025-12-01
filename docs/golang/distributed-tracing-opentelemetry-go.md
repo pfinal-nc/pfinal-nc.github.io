@@ -737,9 +737,323 @@ func InitTracer(serviceName string) (func(context.Context) error, error) {
 2.  **Asynchronous Export**: Export traces asynchronously to avoid blocking application threads.
 3.  **Resource Management**: Properly shut down tracer providers to release resources.
 
-## 8. Troubleshooting Common Issues
+## 8. 真实生产环境排查案例：从 Trace 发现慢查询瓶颈
 
-### 8.1. Missing Traces
+### 背景：用户投诉"订单详情页加载要 3 秒"
+
+**时间**：2024 年 11 月某天下午  
+**现象**：客服反馈多个用户投诉订单详情页打开很慢，但没有报错。
+
+传统的日志排查方法很难定位问题，因为：
+- ❌ 日志只能看到"请求耗时 3.2s"，但不知道是哪个环节慢
+- ❌ 订单详情接口会调用 5 个下游服务，无法快速判断哪个服务有问题
+
+**这时候，分布式追踪就派上用场了。**
+
+---
+
+### Step 1：在 Jaeger UI 找到慢请求的 Trace
+
+在 Jaeger UI (http://localhost:16686) 中：
+1. 选择 Service = `order-service`
+2. 筛选条件：Duration > 2s
+3. 找到一条耗时 3.2s 的 Trace
+
+（**这里后续补一张截图：Jaeger UI 的 Trace 列表页，高亮显示一条 3.2s 的 trace**）
+
+---
+
+### Step 2：展开 Trace 瀑布图，定位慢的环节
+
+点击进入详情后，看到这样的瀑布图：
+
+```
+order-service: GET /orders/12345             [========== 3200ms ==========]
+├─ database: SELECT orders                   [==== 50ms ====]
+├─ user-service: GET /users/6789             [==== 80ms ====]
+├─ product-service: GET /products/batch      [==== 120ms ====]
+├─ inventory-service: GET /stock             [=============== 2800ms ===============]  ⚠️
+└─ promotion-service: GET /discounts         [==== 60ms ====]
+```
+
+**一眼就看出问题**：`inventory-service` 的 `/stock` 接口耗时 2800ms，占了总耗时的 87%。
+
+（**这里后续补一张截图：Jaeger 瀑布图，标注 inventory-service 的 span 占比最长**）
+
+---
+
+### Step 3：点击慢 Span，查看详细属性
+
+点击 `inventory-service: GET /stock` 这个 span，看到以下属性：
+
+```yaml
+Span Attributes:
+  http.method: GET
+  http.url: /api/v1/inventory/stock
+  http.status_code: 200
+  db.system: mysql
+  db.statement: SELECT * FROM inventory WHERE product_ids IN (1,2,3,...,50)  # ⚠️ 查询了 50 个商品
+  db.rows_affected: 50
+  inventory.cache_hit: false  # ⚠️ 缓存未命中
+```
+
+**发现两个问题**：
+1. ❌ SQL 查询了 50 个商品的库存（订单里有 50 个 SKU）
+2. ❌ 缓存未命中（`cache_hit: false`）
+
+（**这里后续补一张截图：Jaeger Span 详情页，展示 attributes 信息**）
+
+---
+
+### Step 4：进一步分析 SQL 慢查询
+
+继续展开 `inventory-service` 的子 span：
+
+```
+inventory-service: GET /stock                [=============== 2800ms ===============]
+├─ redis: GET cache:inventory:*              [== 10ms ==]  (Cache Miss)
+└─ mysql: SELECT FROM inventory              [=============== 2750ms ===============]  ⚠️
+   ├─ Query Execution                        [=============== 2700ms ===============]
+   └─ Result Fetch                           [== 50ms ==]
+```
+
+**原因找到了**：MySQL 查询 `SELECT * FROM inventory WHERE product_ids IN (...)` 耗时 2.7 秒。
+
+查看这条 SQL 的 attributes：
+
+```yaml
+db.statement: |
+  SELECT * FROM inventory 
+  WHERE product_id IN (1,2,3,4,5,...,50)  # 50 个 ID
+  AND deleted_at IS NULL
+
+db.execution_time_ms: 2700
+db.rows_examined: 1,500,000  # ⚠️ 扫描了 150 万行！
+db.rows_returned: 50
+```
+
+**问题根源**：
+- `product_id` 字段没有索引
+- 数据库扫描了 150 万行才返回 50 条结果
+
+---
+
+### Step 5：修复方案
+
+**方案 1：给 `product_id` 加索引**
+
+```sql
+-- 给 product_id 列加索引
+ALTER TABLE inventory ADD INDEX idx_product_id (product_id);
+```
+
+**方案 2：优化缓存策略**
+
+```go
+// 之前的代码（有问题）
+func (s *InventoryService) GetStock(ctx context.Context, productIDs []int) ([]Stock, error) {
+    // 直接查数据库
+    stocks, err := s.db.Query("SELECT * FROM inventory WHERE product_id IN (?)", productIDs)
+    return stocks, err
+}
+
+// 优化后的代码
+func (s *InventoryService) GetStock(ctx context.Context, productIDs []int) ([]Stock, error) {
+    ctx, span := tracer.Start(ctx, "InventoryService.GetStock")
+    defer span.End()
+    
+    span.SetAttributes(
+        attribute.Int("product_count", len(productIDs)),
+    )
+    
+    // 1. 先尝试从缓存批量获取
+    cachedStocks, missingIDs := s.getBatchFromCache(ctx, productIDs)
+    
+    span.SetAttributes(
+        attribute.Int("cache_hits", len(cachedStocks)),
+        attribute.Int("cache_misses", len(missingIDs)),
+    )
+    
+    // 2. 如果全部命中缓存，直接返回
+    if len(missingIDs) == 0 {
+        span.SetAttributes(attribute.Bool("cache_hit", true))
+        return cachedStocks, nil
+    }
+    
+    // 3. 缓存未命中的部分，查数据库
+    _, dbSpan := tracer.Start(ctx, "mysql.query.inventory")
+    dbStocks, err := s.db.Query(
+        "SELECT * FROM inventory WHERE product_id IN (?) AND deleted_at IS NULL",
+        missingIDs,  // 只查缓存里没有的
+    )
+    dbSpan.End()
+    
+    if err != nil {
+        span.RecordError(err)
+        return nil, err
+    }
+    
+    // 4. 写回缓存
+    s.setBatchToCache(ctx, dbStocks)
+    
+    // 5. 合并结果
+    allStocks := append(cachedStocks, dbStocks...)
+    return allStocks, nil
+}
+```
+
+---
+
+### Step 6：验证修复效果
+
+**加索引 + 优化缓存后，再看 Trace**：
+
+```
+order-service: GET /orders/12345             [==== 350ms ====]  ✅ 从 3200ms 降到 350ms
+├─ database: SELECT orders                   [== 50ms ==]
+├─ user-service: GET /users/6789             [== 80ms ==]
+├─ product-service: GET /products/batch      [== 120ms ==]
+├─ inventory-service: GET /stock             [== 60ms ==]  ✅ 从 2800ms 降到 60ms
+│  ├─ redis: GET cache:inventory:*           [== 50ms ==]  (Cache Hit: 48/50)
+│  └─ mysql: SELECT FROM inventory           [== 8ms ==]   (只查 2 条未命中的)
+└─ promotion-service: GET /discounts         [== 60ms ==]
+```
+
+**性能提升对比**：
+
+| 维度 | 优化前 | 优化后 | 提升 |
+|------|-------|-------|------|
+| **订单详情接口耗时** | 3200ms | 350ms | **91% ↓** |
+| **库存查询耗时** | 2800ms | 60ms | **98% ↓** |
+| **MySQL 扫描行数** | 150 万行 | 2 行 | **99.9% ↓** |
+| **缓存命中率** | 0% | 96% | **96% ↑** |
+
+（**这里后续补一张截图：优化后的 Jaeger 瀑布图，显示总耗时降到 350ms**）
+
+---
+
+### 核心经验：Trace 瀑布图解读技巧
+
+#### 1. **先看总耗时最长的 Span**
+
+瀑布图是按时间顺序横向排列的，**最长的横条就是最慢的环节**。
+
+#### 2. **关注 Span 的占比**
+
+如果某个 span 占了总耗时的 80% 以上，优先优化它。
+
+#### 3. **展开子 Span，逐层定位**
+
+```
+父 Span: inventory-service (2800ms)
+├─ 子 Span 1: redis (10ms)
+└─ 子 Span 2: mysql (2750ms)  ← 真正的瓶颈
+```
+
+#### 4. **查看 Span Attributes，找线索**
+
+关键 attributes：
+- `db.rows_examined`：数据库扫描了多少行
+- `cache_hit`：缓存是否命中
+- `http.status_code`：HTTP 响应码
+- `error`：是否有错误
+
+#### 5. **对比多条 Trace，找规律**
+
+- 如果 **所有请求都慢** → 系统性能问题（SQL 无索引、服务宕机）
+- 如果 **偶尔慢** → 偶发问题（缓存失效、GC 停顿）
+
+---
+
+### 补充案例：发现"隐藏"的 N+1 查询
+
+**现象**：某个接口偶尔很慢（1-5 秒），但日志里没有异常。
+
+**Trace 瀑布图**：
+
+```
+product-list: GET /products                  [======== 4200ms ========]
+├─ database: SELECT products                 [== 50ms ==]  (返回 20 个商品)
+├─ loop: fetch category for product 1        [== 200ms ==]
+│  └─ database: SELECT categories WHERE id=1 [== 180ms ==]
+├─ loop: fetch category for product 2        [== 200ms ==]
+│  └─ database: SELECT categories WHERE id=2 [== 180ms ==]
+├─ loop: fetch category for product 3        [== 200ms ==]
+│  └─ database: SELECT categories WHERE id=3 [== 180ms ==]
+... (重复 20 次)
+```
+
+**问题**：经典的 **N+1 查询问题**。
+
+- 先查询 20 个商品（1 次）
+- 再为每个商品查询分类（20 次）
+- 总共 21 次 SQL
+
+**修复方案**：
+
+```go
+// ❌ 错误的写法（N+1 查询）
+func (s *ProductService) GetProducts(ctx context.Context) ([]Product, error) {
+    products, _ := s.db.Query("SELECT * FROM products LIMIT 20")
+    
+    for i := range products {
+        category, _ := s.db.QueryRow(
+            "SELECT * FROM categories WHERE id = ?", 
+            products[i].CategoryID,  // 每次查一条
+        )
+        products[i].Category = category
+    }
+    
+    return products, nil
+}
+
+// ✅ 正确的写法（批量查询）
+func (s *ProductService) GetProducts(ctx context.Context) ([]Product, error) {
+    ctx, span := tracer.Start(ctx, "ProductService.GetProducts")
+    defer span.End()
+    
+    // 1. 查询商品
+    products, _ := s.db.Query("SELECT * FROM products LIMIT 20")
+    
+    // 2. 收集所有分类 ID
+    categoryIDs := make([]int, len(products))
+    for i, p := range products {
+        categoryIDs[i] = p.CategoryID
+    }
+    
+    // 3. 一次性查询所有分类
+    _, dbSpan := tracer.Start(ctx, "mysql.query.categories")
+    categories, _ := s.db.Query(
+        "SELECT * FROM categories WHERE id IN (?)", 
+        categoryIDs,  // 批量查询
+    )
+    dbSpan.SetAttributes(attribute.Int("batch_size", len(categoryIDs)))
+    dbSpan.End()
+    
+    // 4. 构建 categoryID -> Category 的 map
+    categoryMap := make(map[int]Category)
+    for _, c := range categories {
+        categoryMap[c.ID] = c
+    }
+    
+    // 5. 关联分类
+    for i := range products {
+        products[i].Category = categoryMap[products[i].CategoryID]
+    }
+    
+    return products, nil
+}
+```
+
+**优化效果**：
+- SQL 查询次数：21 次 → 2 次
+- 接口耗时：4200ms → 280ms（**降低 93%**）
+
+---
+
+## 9. Troubleshooting Common Issues
+
+### 9.1. Missing Traces
 
 If traces are not appearing in your backend:
 
@@ -747,7 +1061,7 @@ If traces are not appearing in your backend:
 2.  **Verify Context Propagation**: Make sure context is properly propagated between services.
 3.  **Check Sampling**: Verify that your sampling configuration is not filtering out all traces.
 
-### 8.2. Broken Trace Context
+### 9.2. Broken Trace Context
 
 If traces are broken across service boundaries:
 

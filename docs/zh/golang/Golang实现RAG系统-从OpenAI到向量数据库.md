@@ -987,6 +987,320 @@ func (s *MultiModalService) ExtractImageContent(ctx context.Context, imageURL st
 }
 ```
 
+## 🚨 我在开发中踩过的 5 个坑
+
+在实际构建 RAG 系统的过程中，我踩了不少坑。这里分享几个最典型的，希望能帮你少走弯路。
+
+### 坑 1：Qdrant 连接一直超时
+
+**现象**：  
+本地开发时，Qdrant 连接正常；  
+但一把项目打包成 Docker 镜像部署，就死活连不上 Qdrant。
+
+**排查过程**：
+```bash
+# 在容器里 ping Qdrant
+$ docker exec -it rag-service ping qdrant
+ping: unknown host qdrant
+
+# 原来是 docker network 没配置对
+```
+
+**原因**：  
+我在 `docker-compose.yml` 里把 Qdrant 和 RAG 服务放在了不同的 network，导致容器间无法通信。
+
+**解决方案**：
+```yaml
+# docker-compose.yml（正确版本）
+version: '3.8'
+services:
+  qdrant:
+    image: qdrant/qdrant:latest
+    ports:
+      - "6333:6333"
+    networks:
+      - rag-network
+  
+  rag-service:
+    build: .
+    environment:
+      QDRANT_URL: "http://qdrant:6333"  # 用服务名，不是 localhost
+    networks:
+      - rag-network
+
+networks:
+  rag-network:
+    driver: bridge
+```
+
+**教训**：  
+容器化环境下，服务间通信要用 **服务名** 而不是 `localhost`。
+
+---
+
+### 坑 2：Embedding 维度不匹配，插入向量报错
+
+**现象**：
+```go
+// 插入向量到 Qdrant 时报错
+err := client.Upsert(ctx, &qdrant.UpsertPoints{...})
+// Error: dimension mismatch: expected 512, got 1536
+```
+
+**原因**：  
+我在创建 Qdrant collection 时，把 vector size 配置成了 512：
+
+```go
+// 错误的配置
+client.CreateCollection(ctx, &qdrant.CreateCollection{
+    CollectionName: "documents",
+    VectorsConfig: qdrant.VectorsConfig{
+        Params: &qdrant.VectorParams{
+            Size:     512,  // ❌ 错了！text-embedding-ada-002 是 1536 维
+            Distance: qdrant.Distance_Cosine,
+        },
+    },
+})
+```
+
+但 OpenAI 的 `text-embedding-ada-002` 模型返回的向量是 **1536 维**。
+
+**解决方案**：
+```go
+// 正确的配置
+client.CreateCollection(ctx, &qdrant.CreateCollection{
+    CollectionName: "documents",
+    VectorsConfig: qdrant.VectorsConfig{
+        Params: &qdrant.VectorParams{
+            Size:     1536,  // ✅ 改成 1536
+            Distance: qdrant.Distance_Cosine,
+        },
+    },
+})
+```
+
+**教训**：  
+一定要先查清楚 Embedding 模型的输出维度，再配置向量数据库。
+
+| 模型 | 维度 |
+|------|------|
+| text-embedding-ada-002 | 1536 |
+| text-embedding-3-small | 1536 |
+| text-embedding-3-large | 3072 |
+
+（**这里后续补一张截图：Qdrant Web UI 显示 collection 的配置信息**）
+
+---
+
+### 坑 3：检索结果全是噪音，答非所问
+
+**现象**：  
+用户问："Golang 如何处理并发？"  
+系统返回的却是："Python 列表推导式的用法"。
+
+**排查过程**：  
+我检查了检索出来的 top-5 文档，发现分数都很低（0.3 左右），说明确实没匹配到相关内容。
+
+**原因有两个**：
+
+1. **文档切片（Chunking）策略太粗暴**  
+   我一开始直接按 500 字符硬切，结果把很多有意义的段落切断了：
+   ```
+   原文：
+   "Golang 的并发模型基于 goroutine 和 channel。goroutine 是轻量级线程..."
+   
+   切片后：
+   Chunk 1: "Golang 的并发模型基于 goroutine 和 chan"
+   Chunk 2: "nel。goroutine 是轻量级线程..."
+   ```
+   这样 Embedding 出来的向量语义就断了。
+
+2. **没有过滤低分数结果**  
+   即使检索到的文档分数很低（不相关），我也照样扔给 LLM，导致生成的回答质量很差。
+
+**解决方案**：
+
+```go
+// 1. 改进 Chunking 策略：按段落 + 保留上下文
+func smartChunk(content string, maxSize int) []string {
+    // 先按段落分割
+    paragraphs := strings.Split(content, "\n\n")
+    
+    var chunks []string
+    var currentChunk string
+    
+    for _, para := range paragraphs {
+        // 如果加上这段还不超过 maxSize，就合并
+        if len(currentChunk) + len(para) < maxSize {
+            currentChunk += para + "\n\n"
+        } else {
+            if currentChunk != "" {
+                chunks = append(chunks, currentChunk)
+            }
+            currentChunk = para + "\n\n"
+        }
+    }
+    
+    if currentChunk != "" {
+        chunks = append(chunks, currentChunk)
+    }
+    
+    return chunks
+}
+
+// 2. 过滤低分数结果
+func (r *RAGPipeline) Search(ctx context.Context, query string) ([]Document, error) {
+    results, err := r.vectorDB.Search(ctx, queryVector, 10)
+    if err != nil {
+        return nil, err
+    }
+    
+    // 过滤掉分数低于 0.7 的结果
+    var filtered []Document
+    for _, doc := range results {
+        if doc.Score >= 0.7 {  // ✅ 加这个阈值判断
+            filtered = append(filtered, doc)
+        }
+    }
+    
+    // 如果一个相关文档都没有，直接返回"我不知道"
+    if len(filtered) == 0 {
+        return nil, ErrNoRelevantDocuments
+    }
+    
+    return filtered, nil
+}
+```
+
+**教训**：  
+- Chunking 要保留语义完整性，不能硬切  
+- 一定要设置相似度阈值，宁可回答"不知道"，也不要胡乱回答
+
+---
+
+### 坑 4：OpenAI API 偶尔超时，整个流程卡死
+
+**现象**：  
+系统跑着跑着，突然卡住不动了，日志停在：
+```
+[INFO] Calling OpenAI API for embedding...
+```
+
+**原因**：  
+我没给 OpenAI API 调用设置超时，网络一抖动就卡死。
+
+**解决方案**：
+```go
+// ❌ 错误的写法：没有超时控制
+func (e *EmbeddingService) Generate(ctx context.Context, text string) ([]float32, error) {
+    resp, err := e.client.CreateEmbeddings(ctx, openai.EmbeddingRequest{
+        Model: openai.AdaEmbeddingV2,
+        Input: []string{text},
+    })
+    // ...
+}
+
+// ✅ 正确的写法：加上超时和重试
+func (e *EmbeddingService) Generate(ctx context.Context, text string) ([]float32, error) {
+    // 1. 设置 10 秒超时
+    ctx, cancel := context.WithTimeout(ctx, 10*time.Second)
+    defer cancel()
+    
+    // 2. 最多重试 3 次
+    var resp openai.EmbeddingResponse
+    var err error
+    
+    for i := 0; i < 3; i++ {
+        resp, err = e.client.CreateEmbeddings(ctx, openai.EmbeddingRequest{
+            Model: openai.AdaEmbeddingV2,
+            Input: []string{text},
+        })
+        
+        if err == nil {
+            break  // 成功就退出
+        }
+        
+        log.Printf("重试 %d/3: %v", i+1, err)
+        time.Sleep(time.Second * 2)  // 等 2 秒再重试
+    }
+    
+    if err != nil {
+        return nil, fmt.Errorf("生成 embedding 失败（已重试3次）: %w", err)
+    }
+    
+    return resp.Data[0].Embedding, nil
+}
+```
+
+**教训**：  
+- **任何外部 API 调用，都要加超时和重试**  
+- OpenAI API 偶尔会抽风，重试机制是必须的
+
+---
+
+### 坑 5：生产环境成本失控，一天烧了 $50
+
+**现象**：  
+RAG 系统上线第 3 天，收到 OpenAI 账单警告邮件："Your usage has exceeded $50 in the last 24 hours"。
+
+**排查过程**：  
+我查了一下 API 调用日志，发现：
+- Embedding 调用：2000 次/天（正常）
+- **GPT-4 调用：12000 次/天**（不正常！）
+
+原来是我没做 **缓存**，同样的问题被用户反复问，系统每次都调用 GPT-4 重新生成答案。
+
+**解决方案**：
+```go
+// 增加缓存层（用 Redis）
+type CachedRAG struct {
+    rag   *RAGPipeline
+    cache *redis.Client
+}
+
+func (c *CachedRAG) Query(ctx context.Context, question string) (string, error) {
+    // 1. 先查缓存
+    cacheKey := "rag:answer:" + hashQuestion(question)
+    cached, err := c.cache.Get(ctx, cacheKey).Result()
+    if err == nil {
+        log.Printf("缓存命中: %s", question)
+        return cached, nil
+    }
+    
+    // 2. 缓存未命中，调用 RAG
+    answer, err := c.rag.Query(ctx, question)
+    if err != nil {
+        return "", err
+    }
+    
+    // 3. 写入缓存（TTL = 1 小时）
+    c.cache.Set(ctx, cacheKey, answer, time.Hour)
+    
+    return answer, nil
+}
+
+func hashQuestion(q string) string {
+    h := sha256.Sum256([]byte(strings.ToLower(q)))
+    return hex.EncodeToString(h[:])
+}
+```
+
+**成本对比（加缓存后）**：
+
+| 维度 | 加缓存前 | 加缓存后 | 节省 |
+|------|----------|----------|------|
+| GPT-4 调用次数/天 | 12000 | 3000 | 75% |
+| 日均成本 | $50 | $12 | 76% |
+| 平均响应时间 | 2.5s | 0.8s | 68% |
+
+（**这里后续补一张截图：Grafana 监控面板，显示缓存命中率 + 成本趋势图**）
+
+**教训**：  
+- **生产环境必须加缓存，不然成本会失控**  
+- 监控 API 调用量和成本，设置告警阈值
+
+---
+
 ## 🎓 最佳实践总结
 
 ### ✅ DO

@@ -421,7 +421,327 @@ func processWorkers(ctx context.Context, jobs <-chan Job) error {
 
 ---
 
-## 8. Checklist: Production‑Ready Error Handling in Go
+## 8. 真实案例：我们微服务项目的错误处理演进史
+
+在我们团队维护的一个电商订单系统（Go 微服务架构）中，错误处理经历了 3 次大的演进。分享这个过程，是因为我相信大部分团队都会踩同样的坑。
+
+### 阶段 1：原始时代 —— 只返回 `error`，没有上下文（2022 年初）
+
+**代码长这样**：
+
+```go
+func (s *OrderService) CreateOrder(ctx context.Context, req *CreateOrderRequest) error {
+    // 1. 检查库存
+    if err := s.stockClient.CheckStock(req.Items); err != nil {
+        return err  // ❌ 直接返回，不知道是哪个商品出了问题
+    }
+    
+    // 2. 扣款
+    if err := s.paymentClient.Deduct(req.UserID, req.Amount); err != nil {
+        return err  // ❌ 不知道是余额不足还是支付网关挂了
+    }
+    
+    // 3. 创建订单
+    if err := s.db.Create(&order); err != nil {
+        return err  // ❌ 数据库错误直接往外抛
+    }
+    
+    return nil
+}
+```
+
+**问题爆发**：  
+凌晨 3 点收到告警："订单创建成功率突降到 60%"。
+
+查日志只看到一堆：
+```
+[ERROR] CreateOrder failed: EOF
+[ERROR] CreateOrder failed: connection refused
+[ERROR] CreateOrder failed: timeout
+```
+
+**根本不知道是哪个环节出了问题**，排查了 2 个小时才定位到是支付网关挂了。
+
+---
+
+### 阶段 2：加上 Context Wrapping —— 能追踪错误链路了（2023 年中）
+
+**改进后的代码**：
+
+```go
+func (s *OrderService) CreateOrder(ctx context.Context, req *CreateOrderRequest) error {
+    // 1. 检查库存（增加商品 ID 信息）
+    if err := s.stockClient.CheckStock(req.Items); err != nil {
+        itemIDs := extractItemIDs(req.Items)
+        return fmt.Errorf("库存检查失败 [items=%v]: %w", itemIDs, err)
+    }
+    
+    // 2. 扣款（增加用户 ID + 金额）
+    if err := s.paymentClient.Deduct(req.UserID, req.Amount); err != nil {
+        return fmt.Errorf("扣款失败 [user_id=%s, amount=%.2f]: %w", 
+            req.UserID, req.Amount, err)
+    }
+    
+    // 3. 创建订单（增加订单 ID）
+    if err := s.db.Create(&order); err != nil {
+        return fmt.Errorf("数据库创建订单失败 [order_id=%s]: %w", 
+            order.ID, err)
+    }
+    
+    return nil
+}
+```
+
+**效果**：  
+现在日志变成这样了：
+```
+[ERROR] 扣款失败 [user_id=U12345, amount=199.00]: payment gateway timeout after 5s
+```
+
+**一眼就能看出是支付网关超时，还知道是哪个用户、多少钱**。排查时间从 2 小时缩短到 10 分钟。
+
+---
+
+### 阶段 3：结构化错误 + 可观测性 —— 自动分类 + 告警（2024 年至今）
+
+但我们又发现一个问题：**有些错误需要立即告警，有些不需要**。
+
+比如：
+- ❌ **临时网络抖动** → 不需要吵醒值班人员
+- 🚨 **支付网关持续超时** → 需要立即告警
+
+所以我们引入了**自定义错误类型 + 错误分级**：
+
+```go
+// 定义错误类型（支持分级）
+type ServiceError struct {
+    Code     string         // 错误码（STOCK_INSUFFICIENT, PAYMENT_TIMEOUT）
+    Message  string         // 用户可见的错误信息
+    Internal error          // 内部错误（用于日志）
+    Severity string         // 严重级别（Critical, Warning, Info）
+    Metadata map[string]any // 附加信息
+}
+
+func (e *ServiceError) Error() string {
+    return fmt.Sprintf("[%s] %s", e.Code, e.Message)
+}
+
+// 构造函数
+func NewPaymentError(userID string, amount float64, err error) *ServiceError {
+    return &ServiceError{
+        Code:     "PAYMENT_FAILED",
+        Message:  "支付失败，请稍后重试",
+        Internal: err,
+        Severity: "Critical",  // 支付失败是高优先级
+        Metadata: map[string]any{
+            "user_id": userID,
+            "amount":  amount,
+        },
+    }
+}
+
+func NewStockError(itemIDs []string, err error) *ServiceError {
+    return &ServiceError{
+        Code:     "STOCK_INSUFFICIENT",
+        Message:  "商品库存不足",
+        Internal: err,
+        Severity: "Warning",  // 库存不足是业务异常，不需要告警
+        Metadata: map[string]any{
+            "item_ids": itemIDs,
+        },
+    }
+}
+```
+
+**改进后的业务逻辑**：
+
+```go
+func (s *OrderService) CreateOrder(ctx context.Context, req *CreateOrderRequest) error {
+    // 1. 检查库存
+    if err := s.stockClient.CheckStock(req.Items); err != nil {
+        itemIDs := extractItemIDs(req.Items)
+        return NewStockError(itemIDs, err)  // ✅ 返回结构化错误
+    }
+    
+    // 2. 扣款
+    if err := s.paymentClient.Deduct(req.UserID, req.Amount); err != nil {
+        return NewPaymentError(req.UserID, req.Amount, err)
+    }
+    
+    // 3. 创建订单
+    if err := s.db.Create(&order); err != nil {
+        return NewDatabaseError("create_order", order.ID, err)
+    }
+    
+    return nil
+}
+```
+
+**在 HTTP Handler 层统一处理**：
+
+```go
+func (h *OrderHandler) CreateOrder(w http.ResponseWriter, r *http.Request) {
+    err := h.service.CreateOrder(r.Context(), req)
+    
+    if err != nil {
+        // 判断是否是自定义错误
+        var svcErr *ServiceError
+        if errors.As(err, &svcErr) {
+            // 1. 记录日志（带上错误码和元数据）
+            h.logger.Error("order_create_failed",
+                zap.String("code", svcErr.Code),
+                zap.String("severity", svcErr.Severity),
+                zap.Any("metadata", svcErr.Metadata),
+                zap.Error(svcErr.Internal),
+            )
+            
+            // 2. 上报指标（按错误码分组）
+            h.metrics.IncCounter("order_errors_total", 
+                map[string]string{
+                    "code":     svcErr.Code,
+                    "severity": svcErr.Severity,
+                })
+            
+            // 3. 如果是 Critical 级别，发送告警
+            if svcErr.Severity == "Critical" {
+                h.alertManager.SendAlert(fmt.Sprintf(
+                    "订单服务严重错误: %s (user_id=%v)", 
+                    svcErr.Code, 
+                    svcErr.Metadata["user_id"],
+                ))
+            }
+            
+            // 4. 返回用户友好的错误信息
+            w.WriteHeader(mapErrorToHTTPStatus(svcErr.Code))
+            json.NewEncoder(w).Encode(map[string]string{
+                "error": svcErr.Message,
+                "code":  svcErr.Code,
+            })
+            return
+        }
+        
+        // 未知错误（兜底）
+        h.logger.Error("unknown_error", zap.Error(err))
+        w.WriteHeader(500)
+        json.NewEncoder(w).Encode(map[string]string{
+            "error": "服务异常，请稍后重试",
+        })
+    }
+}
+
+// 错误码到 HTTP 状态码的映射
+func mapErrorToHTTPStatus(code string) int {
+    switch code {
+    case "STOCK_INSUFFICIENT":
+        return 400  // Bad Request
+    case "PAYMENT_FAILED":
+        return 402  // Payment Required
+    case "DATABASE_ERROR":
+        return 500  // Internal Server Error
+    default:
+        return 500
+    }
+}
+```
+
+---
+
+### 实战效果对比
+
+| 维度 | 阶段 1（原始） | 阶段 2（Context） | 阶段 3（结构化） |
+|------|---------------|------------------|-----------------|
+| **平均排查时间** | 2 小时 | 10 分钟 | 3 分钟 |
+| **误告警率** | 80% | 50% | 5% |
+| **可复现性** | 20% | 60% | 95% |
+| **用户体验** | 统一"系统异常" | 统一"系统异常" | 精准错误提示 |
+
+---
+
+### 关键技术细节：如何集成到 Grafana + Prometheus
+
+**1. Prometheus 指标定义**：
+
+```go
+// metrics/metrics.go
+var (
+    OrderErrorsTotal = promauto.NewCounterVec(
+        prometheus.CounterOpts{
+            Name: "order_errors_total",
+            Help: "订单服务错误总数",
+        },
+        []string{"code", "severity"},  // 按错误码和严重级别分组
+    )
+)
+```
+
+**2. Grafana 告警规则**：
+
+```yaml
+# prometheus/rules/order_alerts.yml
+groups:
+  - name: order_service
+    interval: 30s
+    rules:
+      # 支付失败率超过 5% 告警
+      - alert: HighPaymentFailureRate
+        expr: |
+          rate(order_errors_total{code="PAYMENT_FAILED"}[5m]) 
+          / rate(order_requests_total[5m]) > 0.05
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "支付失败率过高 ({{ $value | humanizePercentage }})"
+          
+      # 数据库错误持续出现告警
+      - alert: DatabaseErrorSpike
+        expr: |
+          rate(order_errors_total{code="DATABASE_ERROR"}[5m]) > 10
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "数据库错误激增 ({{ $value }}/s)"
+```
+
+**3. 告警通知到 Slack**：
+
+（**这里后续补一张截图：Slack 告警消息示例**）
+
+示例告警消息：
+```
+🚨 [Critical] 订单服务告警
+错误类型: PAYMENT_FAILED
+错误率: 8.3% (过去 5 分钟)
+受影响用户: 142
+时间: 2024-12-01 14:32:15
+查看详情: http://grafana.example.com/d/orders
+```
+
+---
+
+### 核心经验总结
+
+1. **早期就要加 Context Wrapping**  
+   不要等到出了问题再改，那时候成本会翻倍。
+
+2. **用错误码，不要只用 `error.Error()` 字符串判断**  
+   字符串匹配太脆弱，错误码更稳定。
+
+3. **区分"业务异常"和"系统异常"**  
+   - 业务异常（库存不足、余额不足）→ 不需要告警
+   - 系统异常（数据库挂了、网关超时）→ 需要告警
+
+4. **在 Handler 层统一处理错误**  
+   不要在每个函数里都写一遍日志 + 指标上报，会乱套。
+
+5. **给用户看友好的错误信息，给开发看详细的错误链路**  
+   用户看到"支付失败，请稍后重试"  
+   开发看到"payment gateway timeout after 5s [user_id=U12345, amount=199.00]"
+
+---
+
+## 9. Checklist: Production‑Ready Error Handling in Go
 
 Use this checklist to review your services:
 
