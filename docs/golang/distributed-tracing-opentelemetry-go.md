@@ -604,7 +604,11 @@ docker run -d --name jaeger \
   jaegertracing/all-in-one:1.41
 ```
 
-Access the Jaeger UI at `http://localhost:16686`.
+Access the Jaeger UI at the following URL (local development only):
+
+```
+http://localhost:16686
+```
 
 ### 6.2. Adding Metrics with Prometheus
 
@@ -754,7 +758,7 @@ func InitTracer(serviceName string) (func(context.Context) error, error) {
 
 ### Step 1：在 Jaeger UI 找到慢请求的 Trace
 
-在 Jaeger UI (http://localhost:16686) 中：
+在 Jaeger UI 中（本地开发环境：`http://localhost:16686`）：
 1. 选择 Service = `order-service`
 2. 筛选条件：Duration > 2s
 3. 找到一条耗时 3.2s 的 Trace

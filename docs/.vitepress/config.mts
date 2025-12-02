@@ -8,7 +8,12 @@ let BASE_KEYWORDS = 'PFinalClub, Golang tutorial, Go backend development, Go mic
 
 
 export default defineConfig({
-  ignoreDeadLinks: false,  // 忽略死链接检查
+  ignoreDeadLinks: [
+    // 忽略 localhost URL（开发环境 URL）
+    /^http:\/\/localhost/,
+    // 忽略 PHP 目录的链接（路径大小写问题）
+    /^\/PHP\//,
+  ],
   locales: {
     root: {
       label: 'English',
