@@ -532,6 +532,15 @@ Vibe Coding 和 ChatGPT 5.1，目前最厉害的是这几个环节：
 
 - “把 AI 当成增幅器的那一拨人”。
 
+### 延伸阅读：把想法落地到真实项目
+
+- **想系统挑选和对比 AI 工具**：可以看这篇  
+  👉 [AI Tools Directory 2025 — The Ultimate Guide to the Best AI Apps and Use Cases](/Tools/AI-Tools-Directory-2025-Best-AI-Apps-and-Use-Cases)
+- **想在 PHP 项目里落地本地 LLM 能力**：可以从 Function Calling 开始  
+  👉 [Making Local LLMs Support Function Calling Like OpenAI - PHP Async Implementation Guide](/PHP/Making-Local-LLMs-Support-Function-Calling-Like-OpenAI-PHP-Async-Implementation)
+- **如果你是 Go 后端，想把“工程规范”落到代码里**：可以先补一课错误处理  
+  👉 [Go Error Handling Best Practices 2025: Complete Guide](/golang/Go-Error-Handling-Best-Practices-2025-Complete-Guide)
+
 Vibe 可以继续，Coding 也要硬。  
 能一起弹琴的，才配一起 Vibe。
 

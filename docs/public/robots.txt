@@ -1,19 +1,24 @@
 # robots.txt for friday-go.icu
-# Updated: 2025-10-29
+# Updated: 2025-11-29
 
 User-agent: *
 Allow: /
 
-# 不索引标签页面
+# 不索引标签页面和查询参数页面
 Disallow: /*?tag=
 Disallow: /*?type=
 Disallow: /*?category=
 
-# 允许 Sitemap
+# 允许搜索引擎读取 sitemap，但不索引 sitemap 页面本身
+# Sitemap 文件应该被访问，但不应出现在搜索结果中
+# 这通过 sitemap 文件的 noindex meta 标签或服务器配置处理
+
+# 不索引其他 XML 系统文件（但允许 sitemap.xml 被读取）
+Disallow: /*.xml$
 Allow: /sitemap.xml
 
-# 不索引其他 XML 系统文件
-Disallow: /*.xml$
+# 排除子域名（这些应该在各自的 GSC 资源中管理）
+# 注意：robots.txt 无法直接排除子域名，需要在各自的子域名设置
 
 # 允许静态资源
 Allow: /*.css$
