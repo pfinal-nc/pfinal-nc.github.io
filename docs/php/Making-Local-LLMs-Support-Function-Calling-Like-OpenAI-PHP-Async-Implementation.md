@@ -1,5 +1,5 @@
 ---
-title: Making Local LLMs Support Function Calling Like OpenAI - PHP Async Implementation Guide
+title: "PHP Function Calling with Local LLMs: Run Qwen3/Deepseek Like OpenAI (200-500% Faster)"
 date: 2025-11-19 15:30:00
 author: PFinal南丞
 tags:
@@ -19,7 +19,9 @@ keywords:
   - deepseek function calling php
   - glm4 chat function calling
   - php ai tools integration
-description: Hands-on tutorial on how to make locally-running models like Qwen3, Deepseek-Coder-V3, and GLM4-Chat support native Function Calling just like OpenAI GPT-4. Implement OpenAI-compatible tool calls using the pfinal-asyncio async framework, achieving 200%-500% performance improvement with concurrent execution, zero API costs, and complete data localization. Includes best practices for API design, error handling, and production deployment in PHP.
+  - php local llm tutorial
+  - php ai agent
+description: "Zero API costs, 200-500% faster. Learn how to make Qwen3, Deepseek, and GLM4 support OpenAI-style Function Calling in PHP using async concurrency. Complete code included."
 ---
 
 # Making Local LLMs Support Function Calling Like OpenAI: PHP Async Implementation Guide

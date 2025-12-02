@@ -1,11 +1,11 @@
 ---
-title: "ThinkPHP 8 Release 2025 – 20 Years of Chinese Web Development"
+title: "ThinkPHP 8 in 2025: New Features, Performance Benchmarks & Upgrade Guide"
 date: 2025-07-16 10:00:02
 author: PFinal Nancheng
 tag:
     - PHP
     - ThinkPHP
-description: "From its humble beginnings in 2006 to the ThinkPHP 8.1.3 release in 2025, this article reviews 20 years of ThinkPHP and deep-dives into ThinkPHP 8 new features, performance improvements, and upgrade tips for modern PHP projects."
+description: "ThinkPHP 8.1.3 is here. Discover what's new, how it compares to Laravel, and get a step-by-step upgrade guide. Plus: 20 years of ThinkPHP history and its impact on Chinese web development."
 keywords:
   - thinkphp 8 release
   - thinkphp 8 new features
@@ -13,6 +13,8 @@ keywords:
   - thinkphp upgrade guide
   - php framework thinkphp
   - thinkphp performance optimization
+  - thinkphp vs laravel
+  - thinkphp 8.1.3
 top: 1
 ---
 

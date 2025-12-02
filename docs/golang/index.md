@@ -10,6 +10,8 @@ keywords:
   - go containerization best practices
   - go backend best practices
   - golang production guide
+  - go microservices architecture
+  - golang microservices tutorial
 ---
 
 # Golang Technical Hub
@@ -24,6 +26,9 @@ Instead of scattered long-form articles, this page groups the most important Go 
 ---
 
 ## 1. Production-Ready Go Backend: Error Handling / Security / Observability
+
+- **🔥 [Building Production-Ready Go Microservices: Complete Architecture Guide 2025](/golang/Building-Production-Ready-Go-Microservices-Complete-Architecture-Guide-2025)** *(NEW)*  
+  The definitive guide to Go microservices: service design, gRPC & REST APIs, database patterns, observability, Kubernetes deployment, and real-world architecture decisions used by Uber, Netflix, and Google.
 
 - **[Go Error Handling Best Practices 2025 – A Complete Guide](/golang/Go-Error-Handling-Best-Practices-2025-Complete-Guide)**  
   A deep dive into modern Go error handling in 2025: sentinel errors, wrapped errors, custom types, and how to connect errors with logs, metrics, and traces.

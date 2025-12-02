@@ -1,6 +1,6 @@
 ---
-title: "Building Production-Ready GraphQL APIs with Go: Complete Guide 2025"
-description: "Master GraphQL API development with Go in 2025. Learn gqlgen, schema design, resolvers, subscriptions, authentication, performance optimization, and production deployment strategies."
+title: "Go GraphQL API with gqlgen 2025: From Zero to Production in One Guide"
+description: "Build type-safe, high-performance GraphQL APIs with Go and gqlgen. Covers schema design, resolvers, subscriptions, auth, N+1 problem, and deployment — with complete code examples."
 date: 2025-11-13
 tags:
   - Golang
@@ -9,7 +9,17 @@ tags:
   - Backend
   - Web Development
   - gqlgen
-keywords: "Go GraphQL, gqlgen tutorial 2025, GraphQL API Go, GraphQL resolvers, GraphQL subscriptions, GraphQL authentication, GraphQL performance, Go backend development"
+keywords:
+  - Go GraphQL
+  - gqlgen tutorial 2025
+  - GraphQL API Go
+  - GraphQL resolvers
+  - GraphQL subscriptions
+  - GraphQL authentication
+  - GraphQL performance
+  - Go backend development
+  - go graphql example
+  - gqlgen production
 ---
 
 # Building Production-Ready GraphQL APIs with Go: Complete Guide 2025

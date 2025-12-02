@@ -1,6 +1,6 @@
 ---
-title: "Go Containerization Best Practices: From 800MB to 10MB Docker Images"
-description: "Master Docker optimization for Go applications in 2025. Learn multi-stage builds, distroless images, and security hardening techniques to reduce image size by 98% while improving performance."
+title: "Shrink Go Docker Images from 800MB to 10MB: The Complete 2025 Guide"
+description: "Reduce your Go container size by 98% with multi-stage builds, distroless images, and security hardening. Includes Dockerfile templates you can use today."
 date: 2025-11-13
 tags:
   - Golang
@@ -10,7 +10,15 @@ tags:
   - Best Practices
   - Performance
   - Security
-keywords: "Go Docker optimization, Golang container best practices, multi-stage build Go, distroless Go images, Docker security hardening, container size optimization 2025"
+keywords:
+  - Go Docker optimization
+  - Golang container best practices
+  - multi-stage build Go
+  - distroless Go images
+  - Docker security hardening
+  - container size optimization 2025
+  - go dockerfile best practices
+  - go docker image size
 ---
 
 # Go Containerization Best Practices: From 800MB to 10MB Docker Images
