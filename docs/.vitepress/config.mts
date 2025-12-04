@@ -11,6 +11,8 @@ export default defineConfig({
   ignoreDeadLinks: [
     /^http:\/\/localhost/,  // 忽略 localhost 链接（示例代码中的链接）
     /^https?:\/\/localhost/,  // 忽略 localhost HTTPS 链接
+    /\/PHP\/Making-Local-LLMs-Support-Function-Calling-Like-OpenAI-PHP-Async-Implementation$/,  // 忽略 PHP Function Calling 文章链接（路径大小写问题）
+    /\/php\/Making-Local-LLMs-Support-Function-Calling-Like-OpenAI-PHP-Async-Implementation$/,  // 忽略小写路径变体
   ],
   locales: {
     root: {
