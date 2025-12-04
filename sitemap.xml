@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>https://friday-go.icu/Tools/20-practical-qwen-code-tips-to-boost-efficiency</loc>
+<lastmod>2025-12-04T03:04:58.000Z</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
 <loc>https://friday-go.icu/Tools/AI-Tools-Directory-2025-Best-AI-Apps-and-Use-Cases</loc>
-<lastmod>2025-11-28T01:31:04.000Z</lastmod>
+<lastmod>2025-12-04T03:04:58.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -44,7 +50,7 @@
 </url>
 <url>
 <loc>https://friday-go.icu/Tools/Vibe-Coding-ChatGPT-5.1</loc>
-<lastmod>2025-11-28T02:19:23.000Z</lastmod>
+<lastmod>2025-12-04T03:04:58.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -86,7 +92,7 @@
 </url>
 <url>
 <loc>https://friday-go.icu/golang/10-Golang-Security-Gotchas-And-the-Fixes-That-Actually-Work-en</loc>
-<lastmod>2025-11-26T02:07:28.000Z</lastmod>
+<lastmod>2025-12-04T03:04:58.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -104,13 +110,13 @@
 </url>
 <url>
 <loc>https://friday-go.icu/golang/Best-Go-Web-Frameworks-2025-Comprehensive-Developers-Guide</loc>
-<lastmod>2025-11-27T11:08:35.000Z</lastmod>
+<lastmod>2025-12-04T03:04:58.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
 <url>
 <loc>https://friday-go.icu/golang/Building-GraphQL-APIs-with-Go-Complete-Guide-2025</loc>
-<lastmod>2025-11-14T01:15:40.000Z</lastmod>
+<lastmod>2025-12-04T03:04:58.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -122,7 +128,7 @@
 </url>
 <url>
 <loc>https://friday-go.icu/golang/Building-RAG-System-with-Golang-OpenAI-Vector-Database</loc>
-<lastmod>2025-11-27T10:40:44.000Z</lastmod>
+<lastmod>2025-12-04T03:04:58.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -152,7 +158,7 @@
 </url>
 <url>
 <loc>https://friday-go.icu/golang/From-Trace-to-Insight-A-Closed-Loop-Observability-Practice-for-Go-Projects</loc>
-<lastmod>2025-11-27T10:40:44.000Z</lastmod>
+<lastmod>2025-12-04T03:04:58.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -182,7 +188,7 @@
 </url>
 <url>
 <loc>https://friday-go.icu/golang/Go-Containerization-Best-Practices-Docker-Optimization</loc>
-<lastmod>2025-11-13T01:30:51.000Z</lastmod>
+<lastmod>2025-12-04T03:04:58.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -194,7 +200,7 @@
 </url>
 <url>
 <loc>https://friday-go.icu/golang/Go-Error-Handling-Best-Practices-2025-Complete-Guide</loc>
-<lastmod>2025-12-01T01:40:05.000Z</lastmod>
+<lastmod>2025-12-04T03:04:58.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -272,7 +278,7 @@
 </url>
 <url>
 <loc>https://friday-go.icu/golang/distributed-tracing-opentelemetry-go</loc>
-<lastmod>2025-12-02T01:34:24.000Z</lastmod>
+<lastmod>2025-12-04T03:18:27.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -326,7 +332,7 @@
 </url>
 <url>
 <loc>https://friday-go.icu/golang/</loc>
-<lastmod>2025-11-28T01:31:04.000Z</lastmod>
+<lastmod>2025-12-04T03:04:58.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -362,13 +368,13 @@
 </url>
 <url>
 <loc>https://friday-go.icu/</loc>
-<lastmod>2025-11-28T01:31:04.000Z</lastmod>
+<lastmod>2025-12-04T03:04:58.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
 <url>
 <loc>https://friday-go.icu/zh/</loc>
-<lastmod>2025-11-28T02:19:23.000Z</lastmod>
+<lastmod>2025-12-04T03:04:58.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -398,7 +404,7 @@
 </url>
 <url>
 <loc>https://friday-go.icu/php/Making-Local-LLMs-Support-Function-Calling-Like-OpenAI-PHP-Async-Implementation</loc>
-<lastmod>2025-11-27T11:08:35.000Z</lastmod>
+<lastmod>2025-12-04T03:04:58.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -440,7 +446,7 @@
 </url>
 <url>
 <loc>https://friday-go.icu/php/ThinkPHP-20-Years-of-Chinese-Web-Development</loc>
-<lastmod>2025-11-27T10:40:44.000Z</lastmod>
+<lastmod>2025-12-04T03:04:58.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -1136,7 +1142,7 @@
 </url>
 <url>
 <loc>https://friday-go.icu/zh/%E5%B7%A5%E5%85%B7/Vibe-Coding-%E6%97%B6%E4%BB%A3%E7%9A%84%E5%BC%80%E5%8F%91%E8%80%85%EF%BC%9A%E5%A6%82%E4%BD%95%E8%B7%9F-ChatGPT-5.1-%E4%B8%80%E8%B5%B7%E5%86%99%E4%BB%A3%E7%A0%81%EF%BC%8C%E8%80%8C%E4%B8%8D%E6%98%AF%E8%A2%AB%E6%9B%BF%E4%BB%A3</loc>
-<lastmod>2025-12-02T01:17:28.000Z</lastmod>
+<lastmod>2025-12-04T03:04:58.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
