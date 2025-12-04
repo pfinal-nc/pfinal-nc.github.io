@@ -1,5 +1,5 @@
 ---
-title: "Go Distributed Tracing with OpenTelemetry: Complete Setup Guide (Jaeger + Prometheus)"
+title: Distributed Tracing in Go Microservices with OpenTelemetry
 date: 2025-08-18
 tags:
   - golang
@@ -11,18 +11,8 @@ tags:
   - metrics
   - logging
 author: PFinal南丞
-keywords:
-  - golang distributed tracing
-  - opentelemetry go
-  - go microservices tracing
-  - go observability
-  - jaeger go
-  - prometheus go
-  - go span trace
-  - context propagation go
-  - otel go setup
-  - go tracing tutorial
-description: "Track requests across your Go microservices with OpenTelemetry. This guide covers setup, instrumentation, context propagation, Jaeger integration, and production best practices — with working code examples."
+keywords: golang, distributed tracing, opentelemetry, microservices, observability, jaeger, prometheus, logging, span, trace, context propagation
+description: A comprehensive guide to implementing distributed tracing in Go microservices using OpenTelemetry, covering setup, instrumentation, context propagation, integration with Jaeger and Prometheus, and best practices for observability.
 ---
 
 # Distributed Tracing in Go Microservices with OpenTelemetry

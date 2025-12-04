@@ -209,6 +209,10 @@
       // 常见的旧版路径
       '/categories/': '/',
       '/category/': '/',
+      
+      // 标签页重定向到首页（带标签过滤）
+      '/tag/': '/',
+      '/tags/': '/',
     };
 
     // 智能重定向函数
@@ -271,7 +275,26 @@
         return;
       }
       
-      // 5. 没有匹配，显示默认选项
+      // 5. 处理标签页（/tag/xxx 或 /tags/xxx）
+      if (currentPath.startsWith('/tag/') || currentPath.startsWith('/tags/')) {
+        const tag = currentPath.split('/').pop();
+        if (tag) {
+          const newUrl = `/?tag=${encodeURIComponent(tag)}`;
+          console.log('Tag redirect:', newUrl);
+          showRedirectMessage(newUrl, true);
+          return;
+        }
+      }
+      
+      // 6. 处理旧版文章路径（去掉 .html 或 .htm 后缀）
+      if (currentPath.match(/\.html?$/)) {
+        const cleanPath = currentPath.replace(/\.html?$/, '');
+        console.log('HTML extension redirect:', cleanPath);
+        showRedirectMessage(cleanPath, true);
+        return;
+      }
+      
+      // 7. 没有匹配，显示默认选项
       console.log('No redirect rule found for:', currentPath);
     }
 
