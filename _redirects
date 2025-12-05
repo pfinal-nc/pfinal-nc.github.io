@@ -2,64 +2,53 @@
 # 文档: https://docs.netlify.com/routing/redirects/
 
 # ====================
-# 1. 强制HTTPS重定向
+# 1. 强制HTTPS重定向（优化版）
 # ====================
-# 将所有HTTP流量重定向到HTTPS（强制，不可覆盖）
+# 统一HTTPS重定向，避免重复规则
 http://friday-go.icu/* https://friday-go.icu/:splat 301!
-http://game.friday-go.icu/* https://game.friday-go.icu/:splat 301!
-http://nav.friday-go.icu/* https://nav.friday-go.icu/:splat 301!
-http://pnav.friday-go.icu/* https://pnav.friday-go.icu/:splat 301!
-http://miao.friday-go.icu/* https://miao.friday-go.icu/:splat 301!
+http://*.friday-go.icu/* https://friday-go.icu/:splat 301!
 
 # ====================
-# 2. 404页面重定向
+# 2. 优化404页面重定向
 # ====================
 # 旧的爬虫JS逆向文章（中文URL编码问题）
-/爬虫JS逆向Webpack技巧记录.html /python/Reverse-Engineering-JS-Webpack-Tips-for-Crawlers.html 301
+/爬虫JS逆向Webpack技巧记录.html /python/Reverse-Engineering-JS-Webpack-Tips-for-Crawlers 301
 
-# 旧的分类页面（categories）- 重定向到主页或对应语言首页
-/categories/工具/ /zh/ 301
-/categories/经验/ /zh/ 301
-/categories/golang/ /golang/ 301
-/categories/golang/index.html /golang/ 301
-
-# 旧的归档页面 - 重定向到中文首页
+# 旧的分类页面 - 统一重定向到对应语言首页
+/categories/* /zh/ 301
 /archives/ /zh/ 301
-
-# 旧的友链页面 - 重定向到联系页面
 /links/ /contact 301
 
 # ====================
-# 3. 中文URL重定向到英文URL
+# 3. 优化中文URL重定向到英文URL
 # ====================
 # 数据库相关
-/数据库/MySQL配置文件解析 /database/MySQL-Configuration-File-Analysis.html 301
+/数据库/* /database/ 301
 
-# PHP相关
-/php/Redis配置文件详解 /php/Redis-Configuration-File-Explanation.html 301
-/php/Laravel-admin特殊路由操作 /php/Laravel-admin-Special-Routing-Operations.html 301
-/php/Laravel-Carbon-类使用 /php/Laravel-Carbon-Class-Usage.html 301
+# PHP相关 - 统一重定向到PHP目录
+/php/* /PHP/ 301
 
-# Golang相关
-/golang/提速利器：使用Go语言实现静态化API /golang/Speed-Boost-Static-API-with-Golang.html 301
-/golang/深入Go内存分配 /golang/Deep-Dive-Go-Memory-Allocation.html 301
+# Golang相关 - 统一重定向到Golang目录
+/golang/* /golang/ 301
 
 # ====================
-# 4. 工具页面重定向
+# 4. 工具页面重定向（已包含在主HTTPS重定向中，可删除）
 # ====================
-# HTTP版本的工具页面重定向到HTTPS
-http://friday-go.icu/Tools/* https://friday-go.icu/Tools/:splat 301!
 
 # ====================
-# 5. 带参数的URL处理
+# 5. 带参数的URL处理（优化版）
 # ====================
-# 标签页面重定向到主页（可选：根据具体需求调整）
-/?tag=* / 301
-/?type=* / 301
-/?category=* / 301
+# 统一处理带参数的URL，重定向到主页
+/*?* / 301
 
 # ====================
-# 6. 自定义404页面
+# 6. 自定义404页面（优化版）
 # ====================
-# 所有未匹配的请求显示404页面
+# 所有未匹配的请求显示404页面，但排除已存在的文件
 /* /404.html 404
+!/*.html
+!/*.css
+!/*.js
+!/*.png
+!/*.jpg
+!/*.ico
