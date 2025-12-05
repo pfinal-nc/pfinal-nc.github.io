@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://friday-go.icu</id>
     <title>PFinalClub Tech Blog</title>
-    <updated>2025-12-05T03:12:56.511Z</updated>
+    <updated>2025-12-05T03:49:20.989Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>PFinal南丞</name>
@@ -19,7 +19,7 @@
         <title type="html"><![CDATA[Golang 中文技术专题导航 - Go 后端 / RAG / 可观测性 / 桌面开发]]></title>
         <id>https://friday-go.icu/zh/golang</id>
         <link href="https://friday-go.icu/zh/golang"/>
-        <updated>2025-12-05T03:12:56.485Z</updated>
+        <updated>2025-12-05T03:49:20.959Z</updated>
         <summary type="html"><![CDATA[PFinalClub Golang 中文专题导航页：系统整理 Go 后端工程实践、RAG 系统、可观测性、Wails 桌面开发、游戏服务器与效率工具等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></summary>
         <content type="html"><![CDATA[PFinalClub Golang 中文专题导航页：系统整理 Go 后端工程实践、RAG 系统、可观测性、Wails 桌面开发、游戏服务器与效率工具等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></content>
         <author>
@@ -31,7 +31,7 @@
         <title type="html"><![CDATA[Golang Technical Hub – Production-Ready Go Backend / Web Frameworks / AI & RAG / Observability]]></title>
         <id>https://friday-go.icu/golang</id>
         <link href="https://friday-go.icu/golang"/>
-        <updated>2025-12-05T03:12:56.468Z</updated>
+        <updated>2025-12-05T03:49:20.942Z</updated>
         <summary type="html"><![CDATA[PFinalClub Golang hub: curated guides on Go error handling, web framework selection, RAG systems, observability, containerization and more, giving you a clear path to building production-grade Go services.]]></summary>
         <content type="html"><![CDATA[PFinalClub Golang hub: curated guides on Go error handling, web framework selection, RAG systems, observability, containerization and more, giving you a clear path to building production-grade Go services.]]></content>
         <author>
@@ -451,18 +451,27 @@
         <category label="技术博客"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Best Go Web Frameworks 2025  Complete Comparison Guide Gin Fiber Echo Hertz]]></title>
+        <title type="html"><![CDATA[Best Go Web Frameworks 2025: Comprehensive Developer's Guide with Performance Benchmarks]]></title>
         <id>https://friday-go.icu/golang/Best-Go-Web-Frameworks-2025-Comprehensive-Developers-Guide</id>
         <link href="https://friday-go.icu/golang/Best-Go-Web-Frameworks-2025-Comprehensive-Developers-Guide"/>
         <updated>2025-09-28T11:27:00.000Z</updated>
-        <summary type="html"><![CDATA[Best Go web frameworks 2025: Complete comparison of Gin, Fiber, Echo, Hertz, and more. Real benchmarks, production tips, error handling, observability, and deployment best practices. Choose the right Go framework for your project.]]></summary>
-        <content type="html"><![CDATA[Best Go web frameworks 2025: Complete comparison of Gin, Fiber, Echo, Hertz, and more. Real benchmarks, production tips, error handling, observability, and deployment best practices. Choose the right Go framework for your project.]]></content>
+        <summary type="html"><![CDATA[Comprehensive 2025 guide to the top 10 Go web frameworks: Gin, Fiber, Echo, Hertz, Beego, Go-Chi, FastHTTP, Gorilla. Detailed performance benchmarks, feature comparisons, and practical selection criteria for developers. Includes real-world use cases and optimization strategies.]]></summary>
+        <content type="html"><![CDATA[Comprehensive 2025 guide to the top 10 Go web frameworks: Gin, Fiber, Echo, Hertz, Beego, Go-Chi, FastHTTP, Gorilla. Detailed performance benchmarks, feature comparisons, and practical selection criteria for developers. Includes real-world use cases and optimization strategies.]]></content>
         <author>
             <name>PFinal南丞</name>
             <uri>https://friday-go.icu</uri>
         </author>
         <category label="golang"/>
-        <category label="web frameworks"/>
+        <category label="web-frameworks"/>
+        <category label="gin"/>
+        <category label="fiber"/>
+        <category label="echo"/>
+        <category label="hertz"/>
+        <category label="beego"/>
+        <category label="go-chi"/>
+        <category label="fasthttp"/>
+        <category label="gorilla"/>
+        <category label="performance-optimization"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[2025年Go Web框架深度评测 10大主流框架性能对比与选型指南]]></title>
