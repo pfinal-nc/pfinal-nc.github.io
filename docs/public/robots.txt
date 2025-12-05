@@ -1,13 +1,27 @@
 # robots.txt for friday-go.icu
-# Updated: 2025-10-29
+# Updated: 2025-12-05
 
 User-agent: *
 Allow: /
 
-# 不索引标签页面
+# 不索引标签页面和带参数的URL
 Disallow: /*?tag=
 Disallow: /*?type=
 Disallow: /*?category=
+Disallow: /*?*
+
+# 不索引子域名（如果意外被访问）
+Disallow: /pnav.friday-go.icu/
+Disallow: /nav.friday-go.icu/
+Disallow: /game.friday-go.icu/
+Disallow: /miao.friday-go.icu/
+
+# 不索引旧的URL格式（带.html后缀）
+Disallow: /*.html$
+
+# 不索引404页面
+Disallow: /404
+Disallow: /404.html
 
 # 允许 Sitemap
 Allow: /sitemap.xml
