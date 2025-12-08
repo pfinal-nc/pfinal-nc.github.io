@@ -4,7 +4,7 @@
         <title>PFinalClub Tech Blog</title>
         <link>https://friday-go.icu</link>
         <description>PFinalClub - 专注于 Golang, PHP, Python 的技术博客，分享微服务、云原生、架构设计等实战经验</description>
-        <lastBuildDate>Fri, 05 Dec 2025 05:35:40 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 08 Dec 2025 01:41:43 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-CN</language>
@@ -19,7 +19,7 @@
             <title><![CDATA[Golang 中文技术专题导航 - Go 后端 / RAG / 可观测性 / 桌面开发]]></title>
             <link>https://friday-go.icu/zh/golang</link>
             <guid>https://friday-go.icu/zh/golang</guid>
-            <pubDate>Fri, 05 Dec 2025 05:35:40 GMT</pubDate>
+            <pubDate>Mon, 08 Dec 2025 01:41:43 GMT</pubDate>
             <description><![CDATA[PFinalClub Golang 中文专题导航页：系统整理 Go 后端工程实践、RAG 系统、可观测性、Wails 桌面开发、游戏服务器与效率工具等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></description>
             <content:encoded><![CDATA[PFinalClub Golang 中文专题导航页：系统整理 Go 后端工程实践、RAG 系统、可观测性、Wails 桌面开发、游戏服务器与效率工具等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></content:encoded>
         </item>
@@ -27,7 +27,7 @@
             <title><![CDATA[Golang Technical Hub – Production-Ready Go Backend / Web Frameworks / AI & RAG / Observability]]></title>
             <link>https://friday-go.icu/golang</link>
             <guid>https://friday-go.icu/golang</guid>
-            <pubDate>Fri, 05 Dec 2025 05:35:40 GMT</pubDate>
+            <pubDate>Mon, 08 Dec 2025 01:41:43 GMT</pubDate>
             <description><![CDATA[PFinalClub Golang hub: curated guides on Go error handling, web framework selection, RAG systems, observability, containerization and more, giving you a clear path to building production-grade Go services.]]></description>
             <content:encoded><![CDATA[PFinalClub Golang hub: curated guides on Go error handling, web framework selection, RAG systems, observability, containerization and more, giving you a clear path to building production-grade Go services.]]></content:encoded>
         </item>
@@ -145,7 +145,7 @@
             <category>Kubebuilder</category>
         </item>
         <item>
-            <title><![CDATA[Go Containerization Best Practices: From 800MB to 10MB Docker Images]]></title>
+            <title><![CDATA[Go Containerization Best Practices 2025: From 800MB to 10MB Docker Images]]></title>
             <link>https://friday-go.icu/golang/Go-Containerization-Best-Practices-Docker-Optimization</link>
             <guid>https://friday-go.icu/golang/Go-Containerization-Best-Practices-Docker-Optimization</guid>
             <pubDate>Thu, 13 Nov 2025 00:00:00 GMT</pubDate>
@@ -558,12 +558,12 @@
             <category>best-practices</category>
         </item>
         <item>
-            <title><![CDATA[Advanced Go Concurrency Patterns for Scalable Applications]]></title>
+            <title><![CDATA[Advanced Go Concurrency Patterns 2025: Scalable Applications Guide]]></title>
             <link>https://friday-go.icu/golang/advanced-go-concurrency-patterns</link>
             <guid>https://friday-go.icu/golang/advanced-go-concurrency-patterns</guid>
             <pubDate>Mon, 18 Aug 2025 00:00:00 GMT</pubDate>
-            <description><![CDATA[Master advanced Go concurrency patterns in 2025! Learn worker pools, fan-in/fan-out, pipeline patterns, semaphores, and context management with production-ready code examples. Build applications scaling to millions of concurrent operations with optimal resource usage.]]></description>
-            <content:encoded><![CDATA[Master advanced Go concurrency patterns in 2025! Learn worker pools, fan-in/fan-out, pipeline patterns, semaphores, and context management with production-ready code examples. Build applications scaling to millions of concurrent operations with optimal resource usage.]]></content:encoded>
+            <description><![CDATA[Master advanced Go concurrency patterns in 2025! Learn worker pools, fan-in/fan-out, pipeline patterns, semaphores, and context management with production-ready code examples. Build applications scaling to millions of concurrent operations.]]></description>
+            <content:encoded><![CDATA[Master advanced Go concurrency patterns in 2025! Learn worker pools, fan-in/fan-out, pipeline patterns, semaphores, and context management with production-ready code examples. Build applications scaling to millions of concurrent operations.]]></content:encoded>
             <category>golang</category>
             <category>concurrency</category>
             <category>patterns</category>
@@ -571,12 +571,12 @@
             <category>performance</category>
         </item>
         <item>
-            <title><![CDATA[Distributed Tracing in Go Microservices with OpenTelemetry]]></title>
+            <title><![CDATA[Distributed Tracing in Go Microservices with OpenTelemetry 2025: Complete Guide]]></title>
             <link>https://friday-go.icu/golang/distributed-tracing-opentelemetry-go</link>
             <guid>https://friday-go.icu/golang/distributed-tracing-opentelemetry-go</guid>
             <pubDate>Mon, 18 Aug 2025 00:00:00 GMT</pubDate>
-            <description><![CDATA[A comprehensive guide to implementing distributed tracing in Go microservices using OpenTelemetry, covering setup, instrumentation, context propagation, integration with Jaeger and Prometheus, and best practices for observability.]]></description>
-            <content:encoded><![CDATA[A comprehensive guide to implementing distributed tracing in Go microservices using OpenTelemetry, covering setup, instrumentation, context propagation, integration with Jaeger and Prometheus, and best practices for observability.]]></content:encoded>
+            <description><![CDATA[Master distributed tracing in Go microservices with OpenTelemetry 2025. Complete guide covering setup, instrumentation, context propagation, Jaeger integration, and production-ready observability patterns.]]></description>
+            <content:encoded><![CDATA[Master distributed tracing in Go microservices with OpenTelemetry 2025. Complete guide covering setup, instrumentation, context propagation, Jaeger integration, and production-ready observability patterns.]]></content:encoded>
             <category>golang</category>
             <category>distributed tracing</category>
             <category>opentelemetry</category>
