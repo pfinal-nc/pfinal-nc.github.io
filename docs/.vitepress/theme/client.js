@@ -3,8 +3,65 @@ export default {
   enhanceApp({ app, router }) {
     // 在客户端环境中执行
     if (typeof window !== 'undefined') {
+      // 404 页面智能重定向（基于 Google Search Console 发现的 404 错误）
+      const handle404Redirect = () => {
+        // 检查是否是 404 页面
+        const is404Page = window.location.pathname === '/404' || 
+                          window.location.pathname === '/404.html' ||
+                          document.title.includes('404') ||
+                          document.body.innerText.includes('PAGE NOT FOUND');
+        
+        if (!is404Page) return;
+
+        // 智能重定向规则（基于 GSC 发现的 404 错误）
+        const redirectRules = [
+          // GSC 发现的 404 错误（7个）
+          { from: '/爬虫JS逆向Webpack技巧记录.html', to: '/python/Reverse-Engineering-JS-Webpack-Tips-for-Crawlers' },
+          { from: '/%E7%88%AC%E8%99%ABJS%E9%80%86%E5%90%91Webpack%E6%8A%80%E5%B7%A7%E8%AE%B0%E5%BD%95.html', to: '/python/Reverse-Engineering-JS-Webpack-Tips-for-Crawlers' },
+          { from: '/categories/工具/', to: '/zh/' },
+          { from: '/categories/%E5%B7%A5%E5%85%B7/', to: '/zh/' },
+          { from: '/categories/经验/', to: '/zh/' },
+          { from: '/categories/%E7%BB%8F%E9%AA%8C/', to: '/zh/' },
+          { from: '/categories/golang/index.html', to: '/golang/' },
+          { from: '/categories/golang/', to: '/golang/' },
+          { from: '/archives/', to: '/zh/' },
+          { from: '/links/', to: '/contact' },
+        ];
+
+        const currentPath = window.location.pathname;
+        const decodedPath = decodeURIComponent(currentPath);
+        
+        const normalizePath = (path) => {
+          if (path === '/') return '/';
+          return path.replace(/\/$/, '');
+        };
+
+        // 检查是否需要重定向
+        for (const rule of redirectRules) {
+          const normalizedCurrent = normalizePath(currentPath);
+          const normalizedDecoded = normalizePath(decodedPath);
+          const normalizedFrom = normalizePath(rule.from);
+          
+          if (currentPath === rule.from || 
+              decodedPath === rule.from ||
+              normalizedCurrent === normalizedFrom ||
+              normalizedDecoded === normalizedFrom ||
+              currentPath.startsWith(rule.from) ||
+              decodedPath.startsWith(rule.from)) {
+            console.log('Redirecting from', currentPath, 'to', rule.to);
+            setTimeout(() => {
+              window.location.replace(rule.to);
+            }, 500);
+            return;
+          }
+        }
+      };
+
       // 等待 DOM 加载完成
       router.onAfterRouteChanged = (to) => {
+        // 先检查 404 重定向
+        handle404Redirect();
+        
         // 延迟执行，确保 DOM 已更新
         setTimeout(() => {
           trackInternalLinks()
@@ -15,6 +72,7 @@ export default {
       
       // 页面加载时也执行一次
       if (document.readyState === 'complete') {
+        handle404Redirect();
         setTimeout(() => {
           trackInternalLinks()
           trackSearchEvents()
@@ -22,6 +80,7 @@ export default {
         }, 100)
       } else {
         window.addEventListener('load', () => {
+          handle404Redirect();
           setTimeout(() => {
             trackInternalLinks()
             trackSearchEvents()
