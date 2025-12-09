@@ -5,6 +5,8 @@
 # 1. 强制HTTPS重定向（优化版）
 # ====================
 # 统一HTTPS重定向，避免重复规则
+# 处理 www 和非 www 的 HTTP 到 HTTPS 重定向
+http://www.friday-go.icu/* https://friday-go.icu/:splat 301!
 http://friday-go.icu/* https://friday-go.icu/:splat 301!
 http://*.friday-go.icu/* https://friday-go.icu/:splat 301!
 
@@ -16,6 +18,8 @@ http://*.friday-go.icu/* https://friday-go.icu/:splat 301!
 
 # 旧的分类页面 - 统一重定向到对应语言首页
 /categories/* /zh/ 301
+/categories/golang/index.html /golang/ 301
+/categories/golang/ /golang/ 301
 /archives/ /zh/ 301
 /links/ /contact 301
 
