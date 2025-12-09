@@ -615,10 +615,10 @@ By understanding and applying these patterns, you can write Go code that is not 
 
 Explore more Go development topics:
 
-- [Mastering Go Testing - Advanced Techniques](/golang/mastering-go-testing-advanced-techniques.html) - Test concurrent code and race conditions effectively
-- [Building Scalable Web Services with Go and gRPC](/golang/scalable-web-services-go-grpc.html) - Build high-performance concurrent microservices
-- [Go CLI Utility Development Practice](/golang/Go-CLI-Utility-Development-Practice.html) - Apply concurrency patterns in CLI tools
-- [Distributed Tracing with OpenTelemetry](/golang/distributed-tracing-opentelemetry-go.html) - Trace concurrent operations across services
-- [From Trace to Insight - Observability Practice](/golang/From-Trace-to-Insight-A-Closed-Loop-Observability-Practice-for-Go-Projects.html) - Monitor concurrent system performance
-- [Building Kubernetes Operators with Go](/golang/Building-Kubernetes-Operators-with-Go-Complete-Guide.html) - Manage concurrent workloads in Kubernetes
-- [Go Containerization Best Practices](/golang/Go-Containerization-Best-Practices-Docker-Optimization.html) - Optimize concurrent Go applications in containers
+- [Mastering Go Testing - Advanced Techniques](/golang/mastering-go-testing-advanced-techniques) - Test concurrent code and race conditions effectively
+- [Building Scalable Web Services with Go and gRPC](/golang/scalable-web-services-go-grpc) - Build high-performance concurrent microservices
+- [Go CLI Utility Development Practice](/golang/Go-CLI-Utility-Development-Practice) - Apply concurrency patterns in CLI tools
+- [Distributed Tracing with OpenTelemetry](/golang/distributed-tracing-opentelemetry-go) - Trace concurrent operations across services
+- [From Trace to Insight - Observability Practice](/golang/From-Trace-to-Insight-A-Closed-Loop-Observability-Practice-for-Go-Projects) - Monitor concurrent system performance
+- [Building Kubernetes Operators with Go](/golang/Building-Kubernetes-Operators-with-Go-Complete-Guide) - Manage concurrent workloads in Kubernetes
+- [Go Containerization Best Practices](/golang/Go-Containerization-Best-Practices-Docker-Optimization) - Optimize concurrent Go applications in containers

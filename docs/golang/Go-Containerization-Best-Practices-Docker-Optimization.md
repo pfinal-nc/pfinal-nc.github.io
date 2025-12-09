@@ -1225,8 +1225,8 @@ By following these best practices, you can achieve:
 
 ## Related Articles
 
-- [Building Production-Ready Microservices with Go](/golang/scalable-web-services-go-grpc.html)
-- [Go CLI Tool Development Best Practices](/golang/Go-CLI-Utility-Development-Practice.html)
+- [Building Production-Ready Microservices with Go](/golang/scalable-web-services-go-grpc)
+- [Go CLI Tool Development Best Practices](/golang/Go-CLI-Utility-Development-Practice)
 - [Advanced Go Testing Techniques](/golang/mastering-go-testing-advanced-techniques.html)
 - [Go Security Best Practices Guide](/golang/Guide-to-Mainstream-Go-Security-Libraries.html)
 

@@ -1159,11 +1159,11 @@ Building GraphQL APIs with Go and gqlgen provides a powerful, type-safe, and eff
 
 ## Related Articles
 
-- [Building Scalable Microservices with gRPC](/golang/scalable-web-services-go-grpc.html) - Learn how to build high-performance microservices
-- [Go Containerization Best Practices](/golang/Go-Containerization-Best-Practices-Docker-Optimization.html) - Deploy your GraphQL API efficiently
-- [Building Kubernetes Operators with Go](/golang/Building-Kubernetes-Operators-with-Go-Complete-Guide.html) - Automate GraphQL API deployment
-- [Advanced Go Testing Techniques](/golang/mastering-go-testing-advanced-techniques.html) - Test your GraphQL API thoroughly
-- [Distributed Tracing with OpenTelemetry](/golang/distributed-tracing-opentelemetry-go.html) - Monitor your GraphQL API
+- [Building Scalable Microservices with gRPC](/golang/scalable-web-services-go-grpc) - Learn how to build high-performance microservices
+- [Go Containerization Best Practices](/golang/Go-Containerization-Best-Practices-Docker-Optimization) - Deploy your GraphQL API efficiently
+- [Building Kubernetes Operators with Go](/golang/Building-Kubernetes-Operators-with-Go-Complete-Guide) - Automate GraphQL API deployment
+- [Advanced Go Testing Techniques](/golang/mastering-go-testing-advanced-techniques) - Test your GraphQL API thoroughly
+- [Distributed Tracing with OpenTelemetry](/golang/distributed-tracing-opentelemetry-go) - Monitor your GraphQL API
 
 ---
 
@@ -1183,5 +1183,5 @@ Building GraphQL APIs with Go and gqlgen provides a powerful, type-safe, and eff
 
 ---
 
-*Questions? Open an issue on [GitHub](https://github.com/friday-go) or visit our [contact page](/contact.html).*
+*Questions? Open an issue on [GitHub](https://github.com/friday-go) or visit our [contact page](/contact).*
 

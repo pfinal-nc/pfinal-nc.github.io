@@ -31,6 +31,9 @@ const isArticlePage = computed(() => {
   )
 })
 
+// 记录已发送的进度里程碑，避免重复发送
+const sentMilestones = ref<Set<number>>(new Set())
+
 const calculateProgress = () => {
   // 获取文档高度和窗口高度
   const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
@@ -39,7 +42,40 @@ const calculateProgress = () => {
   // 计算阅读进度
   if (docHeight > 0) {
     const scrollProgress = (scrollTop / docHeight) * 100
-    progress.value = Math.min(100, Math.max(0, scrollProgress))
+    const newProgress = Math.min(100, Math.max(0, scrollProgress))
+    progress.value = newProgress
+    
+    // 发送 GA4 阅读进度事件（每 25% 发送一次）
+    if (typeof window !== 'undefined' && typeof window.gtag !== 'undefined') {
+      const milestones = [25, 50, 75, 100]
+      milestones.forEach(milestone => {
+        if (newProgress >= milestone && !sentMilestones.value.has(milestone)) {
+          sentMilestones.value.add(milestone)
+          
+          const articleTitle = document.title || route.path
+          const articleUrl = route.path
+          
+          window.gtag('event', 'reading_progress', {
+            event_category: 'Engagement',
+            event_label: articleTitle,
+            value: milestone,
+            progress_percent: milestone,
+            article_title: articleTitle,
+            article_url: articleUrl
+          })
+          
+          // 如果阅读进度超过 50%，标记为转化事件
+          if (milestone >= 50) {
+            window.gtag('event', 'reading_progress_50_plus', {
+              event_category: 'Conversion',
+              event_label: articleTitle,
+              value: milestone,
+              article_url: articleUrl
+            })
+          }
+        }
+      })
+    }
   }
 }
 
