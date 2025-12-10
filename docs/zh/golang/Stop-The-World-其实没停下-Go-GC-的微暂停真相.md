@@ -1,5 +1,5 @@
 ---
-title: Stop-The-World 其实没停下：Go GC 的微暂停真相
+title: "Stop-The-World 其实没停下 - Go GC 的微暂停真相"
 date: 2025-10-29 10:00:00
 tags:
   - golang

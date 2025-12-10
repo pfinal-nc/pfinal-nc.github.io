@@ -1,5 +1,5 @@
 ---
-title: "From Trace to Insight: A Closed-Loop Observability Practice for Go Projects"
+title: "From Trace to Insight - A Closed-Loop Observability Practice for Go Projects"
 date: 2025-10-29 10:00:00
 tags:
   - golang

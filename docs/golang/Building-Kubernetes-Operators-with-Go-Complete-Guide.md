@@ -1,5 +1,5 @@
 ---
-title: "Building Production-Ready Kubernetes Operators with Go: A Complete Guide"
+title: "Building Production-Ready Kubernetes Operators with Go - A Complete Guide"
 description: "Master Kubernetes operator development in 2025. Learn Kubebuilder, controller patterns, CRD design, and production deployment strategies with real-world examples."
 date: 2025-11-13
 tags:

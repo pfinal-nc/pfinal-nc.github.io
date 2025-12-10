@@ -1,5 +1,5 @@
 ---
-title: Tmux 常用快捷键
+title: "Tmux 常用快捷键 - 完整使用指南"
 date: 2022-03-13 15:46:00
 keywords: Tmux, 常用快捷键, 工具
 tag:

@@ -1,5 +1,5 @@
 ---
-title: "Advanced Go Concurrency Patterns 2025: Scalable Applications Guide"
+title: "Advanced Go Concurrency Patterns 2025 - Scalable Applications Guide"
 date: 2025-08-18
 tags:
   - golang

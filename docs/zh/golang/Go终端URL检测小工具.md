@@ -1,5 +1,5 @@
 ---
-title: Go终端URL检测小工具
+title: "如何开发和使用 Go终端URL检测小工具 - 完整实战指南"
 date: 2024-03-05 11:46:43
 tags:
   - golang

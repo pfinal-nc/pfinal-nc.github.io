@@ -1,5 +1,5 @@
 ---
-title: 使用Go实现服务端事件推送SSE
+title: "如何掌握使用Go实现服务端事件推送SSE - Go 开发完整指南"
 date: 2024-08-22 09:32:24
 tags:
   - golang

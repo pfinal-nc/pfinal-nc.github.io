@@ -1,5 +1,5 @@
 ---
-title: Python-Faker库常用函数
+title: "Python-Faker 完整使用指南 - 如何集成并掌握核心功能"
 date: 2023-04-05 22:10:20
 tags:
     - python

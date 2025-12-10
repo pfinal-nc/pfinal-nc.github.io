@@ -1,5 +1,5 @@
 ---
-title: Coze 扩展包 PHP 版本
+title: "Coze扩展包完整使用指南 - 如何集成并掌握核心功能"
 date: 2025-07-28 10:00:02
 author: PFinal南丞
 tag:

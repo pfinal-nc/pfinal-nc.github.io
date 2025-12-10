@@ -399,14 +399,15 @@ export default defineConfig({
       ]);
       
       // 为文章页面添加 Schema.org Article 结构化数据
-      if (pageData.frontmatter.date && pageData.frontmatter.title) {
+      // 即使没有 date，只要有 title 就添加结构化数据（使用 lastUpdated 或当前时间作为 datePublished）
+      if (pageData.frontmatter.title) {
         const article = {
           "@context": "https://schema.org",
           "@type": "TechArticle",
           "headline": pageData.frontmatter.title,
           "url": canonicalUrl,
-          "datePublished": pageData.frontmatter.date,
-          "dateModified": pageData.lastUpdated || pageData.frontmatter.date,
+          "datePublished": pageData.frontmatter.date || pageData.lastUpdated || new Date().toISOString(),
+          "dateModified": pageData.lastUpdated || pageData.frontmatter.date || new Date().toISOString(),
           "author": {
             "@type": "Person",
             "name": pageData.frontmatter.author || "PFinal南丞",
@@ -436,12 +437,16 @@ export default defineConfig({
         // 添加文章部分/分类
         if (pageData.frontmatter.category) {
           article.articleSection = pageData.frontmatter.category;
-        } else if (currentPath.includes('/golang/')) {
+        } else if (currentPath.toLowerCase().includes('/golang/')) {
           article.articleSection = 'Golang';
-        } else if (currentPath.includes('/php/')) {
+        } else if (currentPath.toLowerCase().includes('/php/')) {
           article.articleSection = 'PHP';
-        } else if (currentPath.includes('/python/')) {
+        } else if (currentPath.toLowerCase().includes('/python/')) {
           article.articleSection = 'Python';
+        } else if (currentPath.toLowerCase().includes('/tools/')) {
+          article.articleSection = 'Tools';
+        } else if (currentPath.toLowerCase().includes('/database/')) {
+          article.articleSection = 'Database';
         }
         
         // 添加图片（如果有）
@@ -459,6 +464,88 @@ export default defineConfig({
           { type: 'application/ld+json' },
           JSON.stringify(article)
         ]);
+      }
+    } else if (pageData.frontmatter.layout === 'page') {
+      // 为主题中心页（Topic Hub）添加 CollectionPage 类型的 Schema.org 结构化数据
+      // 检查是否是主题中心页（路径匹配主题目录的 index 页面）
+      const topicHubPatterns = [
+        /^golang\/?$/,
+        /^PHP\/?$/,
+        /^python\/?$/,
+        /^Tools\/?$/,
+        /^database\/?$/,
+        /^zh\/golang\/?$/,
+        /^zh\/php\/?$/,
+        /^zh\/python\/?$/,
+        /^zh\/工具\/?$/,
+        /^zh\/数据库\/?$/
+      ];
+      const isTopicHub = topicHubPatterns.some(pattern => pattern.test(currentPath));
+      
+      if (isTopicHub && pageData.frontmatter.title) {
+        // 确定主题名称（基于路径匹配）
+        let topicName = '';
+        let topicCategory = '';
+        const isZh = currentPath.startsWith('zh/');
+        
+        if (/^golang\/?$/.test(currentPath) || /^zh\/golang\/?$/.test(currentPath)) {
+          topicName = isZh ? 'Golang 中文技术专题' : 'Golang Technical Hub';
+          topicCategory = 'Golang';
+        } else if (/^PHP\/?$/.test(currentPath) || /^zh\/php\/?$/.test(currentPath)) {
+          topicName = isZh ? 'PHP 中文技术专题' : 'PHP Technical Hub';
+          topicCategory = 'PHP';
+        } else if (/^python\/?$/.test(currentPath) || /^zh\/python\/?$/.test(currentPath)) {
+          topicName = isZh ? 'Python 中文技术专题' : 'Python Technical Hub';
+          topicCategory = 'Python';
+        } else if (/^Tools\/?$/.test(currentPath) || /^zh\/工具\/?$/.test(currentPath)) {
+          topicName = isZh ? '工具与实用程序中文专题' : 'Tools & Utilities Hub';
+          topicCategory = 'Tools';
+        } else if (/^database\/?$/.test(currentPath) || /^zh\/数据库\/?$/.test(currentPath)) {
+          topicName = isZh ? '数据库中文技术专题' : 'Database Technical Hub';
+          topicCategory = 'Database';
+        }
+        
+        if (topicName) {
+          const collectionPage = {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": topicName,
+            "url": canonicalUrl,
+            "description": pageData.frontmatter.description || pageData.description,
+            "inLanguage": currentPath.startsWith('zh/') ? "zh-CN" : "en-US",
+            "about": {
+              "@type": "Thing",
+              "name": topicCategory
+            },
+            "mainEntity": {
+              "@type": "ItemList",
+              "name": `${topicName} - Article Collection`,
+              "description": `Collection of articles about ${topicCategory}`
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "PFinalClub",
+              "logo": {
+                "@type": "ImageObject",
+                "url": `${baseUrl}/logo.png`
+              }
+            }
+          };
+          
+          // 添加关键词
+          if (pageData.frontmatter.keywords) {
+            const keywords = Array.isArray(pageData.frontmatter.keywords) 
+              ? pageData.frontmatter.keywords.join(', ') 
+              : pageData.frontmatter.keywords;
+            collectionPage.keywords = keywords;
+          }
+          
+          pageData.frontmatter.head.push([
+            'script',
+            { type: 'application/ld+json' },
+            JSON.stringify(collectionPage)
+          ]);
+        }
       }
     }
   }, 

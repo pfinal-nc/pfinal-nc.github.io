@@ -1,5 +1,5 @@
 ---
-title: Golang系统库之gopsutil
+title: "gopsutil完整使用指南 - 如何在Go中获取CPU内存磁盘网络指标"
 date: 2024-09-09 15:13:09
 tags:
   - 工具

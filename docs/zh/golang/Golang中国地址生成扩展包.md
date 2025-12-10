@@ -1,5 +1,5 @@
 ---
-title: golang中国地址生成扩展包
+title: "golang中国地址生成扩展包完整使用指南 - 如何集成并掌握核心功能"
 date: 2024-08-16 14:42:04
 tags:
   - golang

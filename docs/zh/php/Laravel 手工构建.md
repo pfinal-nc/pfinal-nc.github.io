@@ -1,5 +1,5 @@
 ---
-title: Laravel 手工构建
+title: "如何掌握Laravel 手工构建 - PHP 开发完整指南"
 date: 2019-01-16 10:00:02
 author: PFinal南丞
 tag:

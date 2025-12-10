@@ -1,5 +1,5 @@
 ---
-title: 基于Wails的抖音直播工具
+title: "如何开发和使用 基于Wails的抖音直播 工具 - 完整实战指南"
 date: 2024-10-18 11:06:22
 tags:
     - golang

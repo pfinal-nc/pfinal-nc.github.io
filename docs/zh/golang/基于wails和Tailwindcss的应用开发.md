@@ -1,5 +1,5 @@
 ---
-title: 基于wails的应用尝试开发
+title: "如何掌握基于wails的应用尝试开发 - Go 开发完整指南"
 date: 2023-12-07 09:18:22
 tags:
     - golang

@@ -1,5 +1,5 @@
 ---
-title: "Best Go Web Frameworks 2025: Comprehensive Developer's Guide with Performance Benchmarks"
+title: "Best Go Web Frameworks 2025 - Comprehensive Developer's Guide with Performance Benchmarks"
 date: 2025-09-28 11:27:00
 tags:
     - golang

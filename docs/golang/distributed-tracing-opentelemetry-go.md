@@ -1,5 +1,5 @@
 ---
-title: "Distributed Tracing in Go Microservices with OpenTelemetry 2025: Complete Guide"
+title: "Distributed Tracing in Go Microservices with OpenTelemetry 2025 - Complete Guide"
 date: 2025-08-18
 tags:
   - golang

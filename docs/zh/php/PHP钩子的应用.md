@@ -1,5 +1,5 @@
 ---
-title: PHP钩子的应用
+title: "如何掌握PHP钩子的应用 - PHP 开发完整指南"
 date: 2022-08-22 21:31:32
 tags:
     - PHP

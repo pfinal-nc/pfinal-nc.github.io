@@ -1,5 +1,5 @@
 ---
-title: Fyne 深度技术解析
+title: "如何掌握Fyne 深度技术解析 - Go 开发完整指南"
 date: 2025-01-27
 author: PFinal南丞
 description: 深入分析 Fyne 框架的架构设计、技术实现和设计模式，为资深 Go 开发者提供技术洞察。

@@ -1,5 +1,5 @@
 ---
-title: "Go Containerization Best Practices 2025: From 800MB to 10MB Docker Images"
+title: "Go Containerization Best Practices 2025 - From 800MB to 10MB Docker Images"
 description: "Master Docker optimization for Go applications in 2025. Learn multi-stage builds, distroless images, and security hardening techniques to reduce image size by 98% while improving performance."
 date: 2025-11-13
 tags:

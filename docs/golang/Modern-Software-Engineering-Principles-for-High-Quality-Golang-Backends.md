@@ -1,5 +1,5 @@
 ---
-title: "Modern Software Engineering Principles for High-Quality Golang Backends: From Architecture to Performance Optimization"
+title: "Modern Software Engineering Principles for High-Quality Golang Backends - From Architecture to Performance Optimization"
 date: 2025-01-27 10:30:00
 tags:
     - golang

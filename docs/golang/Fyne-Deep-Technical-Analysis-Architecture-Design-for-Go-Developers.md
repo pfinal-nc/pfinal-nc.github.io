@@ -1,5 +1,5 @@
 ---
-title: "Fyne Deep Technical Analysis: Architecture Design and Implementation for Go Developers"
+title: "Fyne Deep Technical Analysis - Architecture Design and Implementation for Go Developers"
 date: 2025-01-27 11:27:00
 author: PFinal南丞
 description: "Comprehensive technical analysis of Fyne framework's architecture design, implementation details, and design patterns. Deep insights for experienced Go developers on cross-platform GUI development."

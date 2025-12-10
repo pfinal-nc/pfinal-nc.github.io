@@ -1,5 +1,5 @@
 ---
-title: 提速利器：使用Go语言实现静态化API
+title: "如何使用Go语言实现静态化API - 提速利器完整指南"
 date: 2024-09-06 17:15:27
 tags:
     - golang

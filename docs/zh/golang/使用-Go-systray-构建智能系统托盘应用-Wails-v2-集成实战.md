@@ -1,5 +1,5 @@
 ---
-title: 使用 Go systray 构建智能系统托盘应用 - Wails v2 集成实战
+title: "如何使用 Go systray 构建智能系统托盘应用 - Wails v2 集成实战完整指南"
 date: 2025-01-28 10:00:02
 author: PFinal南丞
 tag:

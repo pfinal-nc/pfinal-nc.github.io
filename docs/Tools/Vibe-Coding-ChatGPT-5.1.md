@@ -1,5 +1,5 @@
 ---
-title: "Developers in the Vibe Coding Era: How to Code with ChatGPT 5.1 Instead of Being Replaced"
+title: "Developers in the Vibe Coding Era - How to Code with ChatGPT 5.1 Instead of Being Replaced"
 date: 2025-11-28
 author: PFinal南丞
 category: Tools

@@ -1,5 +1,5 @@
 ---
-title: Gomail邮件发送包
+title: "Gomail邮件发送包完整使用指南 - 如何集成并掌握核心功能"
 date: 2024-05-02 22:10:20
 tags:
     - golang

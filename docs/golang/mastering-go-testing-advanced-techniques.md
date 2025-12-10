@@ -1,5 +1,5 @@
 ---
-title: "Mastering Go Testing 2025: Advanced Techniques and Best Practices"
+title: "Mastering Go Testing 2025 - Advanced Techniques and Best Practices"
 date: 2025-08-18
 tags:
   - golang

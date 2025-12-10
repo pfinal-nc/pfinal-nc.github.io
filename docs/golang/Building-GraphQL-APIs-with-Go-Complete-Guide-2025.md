@@ -1,5 +1,5 @@
 ---
-title: "Building Production-Ready GraphQL APIs with Go: Complete Guide 2025"
+title: "Building Production-Ready GraphQL APIs with Go - Complete Guide 2025"
 description: "Master GraphQL API development with Go in 2025. Learn gqlgen, schema design, resolvers, subscriptions, authentication, performance optimization, and production deployment strategies."
 date: 2025-11-13
 tags:

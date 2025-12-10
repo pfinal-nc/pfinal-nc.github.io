@@ -1,5 +1,5 @@
 ---
-title: PHP之异步处理
+title: "如何掌握PHP之异步处理 - PHP 开发完整指南"
 date: 2022-04-27 22:10:20
 tags:
     - PHP
