@@ -247,24 +247,40 @@
         }
       }
       
-      // 3. 处理 .html 文件
-      if (currentPath.endsWith('.html')) {
-        const fileName = currentPath.split('/').pop();
+      // 3. 优先处理 .html 文件 - 重定向到 clean URLs（不带 .html 后缀）
+      if (currentPath.endsWith('.html') || currentPath.endsWith('.htm')) {
+        // 首先尝试直接去掉 .html/.htm 后缀（最可能的情况）
+        const cleanPath = currentPath.replace(/\.html?$/, '');
+        console.log('HTML file redirect to clean URL:', cleanPath);
         
-        // 尝试多个可能的位置
-        const possibleUrls = [
-          `/zh/${fileName}`,
-          `/zh/golang/${fileName}`,
-          `/zh/PHP/${fileName}`,
-          `/zh/Python/${fileName}`,
-          `/zh/工具/${fileName}`,
-          `/golang/${fileName.replace('.html', '')}`,
-          `/php/${fileName.replace('.html', '')}`,
-        ];
-        
-        console.log('HTML file redirect guess:', possibleUrls[0]);
-        showRedirectMessage(possibleUrls[0], true);
-        return;
+        // 尝试检查 clean URL 是否存在（通过 fetch，但不阻塞）
+        fetch(cleanPath, { method: 'HEAD' })
+          .then(response => {
+            if (response.ok || response.status === 200) {
+              console.log('Clean URL exists, redirecting to:', cleanPath);
+              showRedirectMessage(cleanPath, false);
+            } else {
+              // Clean URL 不存在，尝试其他可能的位置
+              const fileName = currentPath.split('/').pop();
+              const possibleUrls = [
+                `/zh/${fileName.replace('.html', '').replace('.htm', '')}`,
+                `/zh/golang/${fileName.replace('.html', '').replace('.htm', '')}`,
+                `/zh/PHP/${fileName.replace('.html', '').replace('.htm', '')}`,
+                `/zh/Python/${fileName.replace('.html', '').replace('.htm', '')}`,
+                `/golang/${fileName.replace('.html', '').replace('.htm', '')}`,
+                `/php/${fileName.replace('.html', '').replace('.htm', '')}`,
+              ];
+              
+              console.log('HTML file redirect guess:', possibleUrls[0]);
+              showRedirectMessage(possibleUrls[0], true);
+            }
+          })
+          .catch(() => {
+            // 如果 fetch 失败（可能是 CORS 或网络问题），直接重定向到 clean URL
+            console.log('Fetch failed, redirecting to clean URL:', cleanPath);
+            showRedirectMessage(cleanPath, true);
+          });
+        return; // 立即返回，等待 fetch 结果
       }
       
       // 4. 如果路径包含中文，尝试在 /zh/ 下查找
@@ -286,11 +302,17 @@
         }
       }
       
-      // 6. 处理旧版文章路径（去掉 .html 或 .htm 后缀）
-      if (currentPath.match(/\.html?$/)) {
-        const cleanPath = currentPath.replace(/\.html?$/, '');
-        console.log('HTML extension redirect:', cleanPath);
-        showRedirectMessage(cleanPath, true);
+      // 6. 处理带查询参数的 URL - 重定向到主页（Search Console 发现的问题）
+      if (currentPath.includes('?') || window.location.search) {
+        // 去掉查询参数，重定向到 clean path
+        const cleanPath = currentPath.split('?')[0];
+        if (cleanPath && cleanPath !== '/') {
+          console.log('Query param redirect to clean path:', cleanPath);
+          showRedirectMessage(cleanPath, true);
+        } else {
+          console.log('Query param redirect to home');
+          showRedirectMessage('/', true);
+        }
         return;
       }
       

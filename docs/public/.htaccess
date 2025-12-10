@@ -1,5 +1,9 @@
 # Apache .htaccess - Force HTTPS
-# 强制所有 HTTP 请求重定向到 HTTPS
+# 注意：GitHub Pages 不支持 .htaccess 文件
+# 此文件保留是为了将来可能切换到支持 Apache 的服务器（如 Netlify/Vercel）
+# GitHub Pages 的 HTTPS 重定向是自动处理的，无需此配置
+#
+# 强制所有 HTTP 请求重定向到 HTTPS（仅适用于 Apache 服务器）
 
 <IfModule mod_rewrite.c>
     RewriteEngine On
