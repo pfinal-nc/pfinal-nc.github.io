@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://friday-go.icu</id>
     <title>PFinalClub Tech Blog</title>
-    <updated>2025-12-10T02:38:20.211Z</updated>
+    <updated>2025-12-10T03:53:44.671Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>PFinal南丞</name>
@@ -16,12 +16,84 @@
     <icon>https://friday-go.icu/favicon.ico</icon>
     <rights>Copyright (c) 2024-present, PFinalClub</rights>
     <entry>
+        <title type="html"><![CDATA[数据库中文技术专题导航 - MySQL / PostgreSQL / 配置优化 2025]]></title>
+        <id>https://friday-go.icu/zh/数据库</id>
+        <link href="https://friday-go.icu/zh/数据库"/>
+        <updated>2025-12-10T03:53:44.667Z</updated>
+        <summary type="html"><![CDATA[PFinalClub 数据库中文专题导航页：系统整理 MySQL 配置、PostgreSQL 功能、数据库优化等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></summary>
+        <content type="html"><![CDATA[PFinalClub 数据库中文专题导航页：系统整理 MySQL 配置、PostgreSQL 功能、数据库优化等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></content>
+        <author>
+            <name>PFinal南丞</name>
+            <uri>https://friday-go.icu</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[工具与实用程序中文专题导航 - AI 工具 / 开发工具 / 效率提升 2025]]></title>
+        <id>https://friday-go.icu/zh/工具</id>
+        <link href="https://friday-go.icu/zh/工具"/>
+        <updated>2025-12-10T03:53:44.664Z</updated>
+        <summary type="html"><![CDATA[PFinalClub 工具与实用程序中文专题导航页：系统整理 AI 工具目录、开发工具、CLI 工具、Docker 指南、效率技巧等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></summary>
+        <content type="html"><![CDATA[PFinalClub 工具与实用程序中文专题导航页：系统整理 AI 工具目录、开发工具、CLI 工具、Docker 指南、效率技巧等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></content>
+        <author>
+            <name>PFinal南丞</name>
+            <uri>https://friday-go.icu</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python 中文技术专题导航 - 爬虫 / 协程 / 工具与最佳实践]]></title>
+        <id>https://friday-go.icu/zh/python</id>
+        <link href="https://friday-go.icu/zh/python"/>
+        <updated>2025-12-10T03:53:44.656Z</updated>
+        <summary type="html"><![CDATA[PFinalClub Python 中文专题导航页：系统整理爬虫技术、JS 逆向工程、协程、加密算法、Python 开发工具等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></summary>
+        <content type="html"><![CDATA[PFinalClub Python 中文专题导航页：系统整理爬虫技术、JS 逆向工程、协程、加密算法、Python 开发工具等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></content>
+        <author>
+            <name>PFinal南丞</name>
+            <uri>https://friday-go.icu</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PHP 中文技术专题导航 - ThinkPHP / Laravel / PHP 8.x / 协程 / 最佳实践]]></title>
+        <id>https://friday-go.icu/zh/php</id>
+        <link href="https://friday-go.icu/zh/php"/>
+        <updated>2025-12-10T03:53:44.654Z</updated>
+        <summary type="html"><![CDATA[PFinalClub PHP 中文专题导航页：系统整理 ThinkPHP 8、Laravel、PHP 8.x 企业级开发、协程池、错误处理等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></summary>
+        <content type="html"><![CDATA[PFinalClub PHP 中文专题导航页：系统整理 ThinkPHP 8、Laravel、PHP 8.x 企业级开发、协程池、错误处理等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></content>
+        <author>
+            <name>PFinal南丞</name>
+            <uri>https://friday-go.icu</uri>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Golang 中文技术专题导航 - Go 后端 / RAG / 可观测性 / 桌面开发]]></title>
         <id>https://friday-go.icu/zh/golang</id>
         <link href="https://friday-go.icu/zh/golang"/>
-        <updated>2025-12-10T02:38:20.183Z</updated>
+        <updated>2025-12-10T03:53:44.641Z</updated>
         <summary type="html"><![CDATA[PFinalClub Golang 中文专题导航页：系统整理 Go 后端工程实践、RAG 系统、可观测性、Wails 桌面开发、游戏服务器与效率工具等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></summary>
         <content type="html"><![CDATA[PFinalClub Golang 中文专题导航页：系统整理 Go 后端工程实践、RAG 系统、可观测性、Wails 桌面开发、游戏服务器与效率工具等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></content>
+        <author>
+            <name>PFinal南丞</name>
+            <uri>https://friday-go.icu</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python Technical Hub – Web Scraping / Coroutines / Tools & Best Practices 2025]]></title>
+        <id>https://friday-go.icu/python</id>
+        <link href="https://friday-go.icu/python"/>
+        <updated>2025-12-10T03:53:44.631Z</updated>
+        <summary type="html"><![CDATA[PFinalClub Python hub: comprehensive guides on web scraping, JS reverse engineering, coroutines, encryption algorithms, and Python development tools for building efficient applications.]]></summary>
+        <content type="html"><![CDATA[PFinalClub Python hub: comprehensive guides on web scraping, JS reverse engineering, coroutines, encryption algorithms, and Python development tools for building efficient applications.]]></content>
+        <author>
+            <name>PFinal南丞</name>
+            <uri>https://friday-go.icu</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PHP Technical Hub – Framework Development / Performance / Best Practices 2025]]></title>
+        <id>https://friday-go.icu/php</id>
+        <link href="https://friday-go.icu/php"/>
+        <updated>2025-12-10T03:53:44.629Z</updated>
+        <summary type="html"><![CDATA[PFinalClub PHP hub: comprehensive guides on ThinkPHP 8, Laravel, PHP 8.5, coroutines, error handling, and modern PHP development practices for building production-ready applications.]]></summary>
+        <content type="html"><![CDATA[PFinalClub PHP hub: comprehensive guides on ThinkPHP 8, Laravel, PHP 8.5, coroutines, error handling, and modern PHP development practices for building production-ready applications.]]></content>
         <author>
             <name>PFinal南丞</name>
             <uri>https://friday-go.icu</uri>
@@ -31,7 +103,7 @@
         <title type="html"><![CDATA[Golang Technical Hub – Production-Ready Go Backend / Web Frameworks / AI & RAG / Observability]]></title>
         <id>https://friday-go.icu/golang</id>
         <link href="https://friday-go.icu/golang"/>
-        <updated>2025-12-10T02:38:20.165Z</updated>
+        <updated>2025-12-10T03:53:44.626Z</updated>
         <summary type="html"><![CDATA[PFinalClub Golang hub: curated guides on Go error handling, web framework selection, RAG systems, observability, containerization and more, giving you a clear path to building production-grade Go services.]]></summary>
         <content type="html"><![CDATA[PFinalClub Golang hub: curated guides on Go error handling, web framework selection, RAG systems, observability, containerization and more, giving you a clear path to building production-grade Go services.]]></content>
         <author>
@@ -40,7 +112,31 @@
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Developers in the Vibe Coding Era: How to Code with ChatGPT 5.1 Instead of Being Replaced]]></title>
+        <title type="html"><![CDATA[Tools & Utilities Hub – AI Tools / Development Tools / Productivity 2025]]></title>
+        <id>https://friday-go.icu/Tools</id>
+        <link href="https://friday-go.icu/Tools"/>
+        <updated>2025-12-10T03:53:44.612Z</updated>
+        <summary type="html"><![CDATA[PFinalClub Tools hub: comprehensive directory of AI tools, development utilities, CLI tools, Docker guides, and productivity tips for modern developers.]]></summary>
+        <content type="html"><![CDATA[PFinalClub Tools hub: comprehensive directory of AI tools, development utilities, CLI tools, Docker guides, and productivity tips for modern developers.]]></content>
+        <author>
+            <name>PFinal南丞</name>
+            <uri>https://friday-go.icu</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Database Technical Hub – MySQL / Configuration / Optimization 2025]]></title>
+        <id>https://friday-go.icu/database</id>
+        <link href="https://friday-go.icu/database"/>
+        <updated>2025-12-10T03:53:44.612Z</updated>
+        <summary type="html"><![CDATA[PFinalClub Database hub: comprehensive guides on MySQL configuration, database optimization, and best practices for production database management.]]></summary>
+        <content type="html"><![CDATA[PFinalClub Database hub: comprehensive guides on MySQL configuration, database optimization, and best practices for production database management.]]></content>
+        <author>
+            <name>PFinal南丞</name>
+            <uri>https://friday-go.icu</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Developers in the Vibe Coding Era - How to Code with ChatGPT 5.1 Instead of Being Replaced]]></title>
         <id>https://friday-go.icu/Tools/Vibe-Coding-ChatGPT-5.1</id>
         <link href="https://friday-go.icu/Tools/Vibe-Coding-ChatGPT-5.1"/>
         <updated>2025-11-28T00:00:00.000Z</updated>
@@ -149,7 +245,7 @@
         <category label="GLM4"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Building Production-Ready GraphQL APIs with Go: Complete Guide 2025]]></title>
+        <title type="html"><![CDATA[Building Production-Ready GraphQL APIs with Go - Complete Guide 2025]]></title>
         <id>https://friday-go.icu/golang/Building-GraphQL-APIs-with-Go-Complete-Guide-2025</id>
         <link href="https://friday-go.icu/golang/Building-GraphQL-APIs-with-Go-Complete-Guide-2025"/>
         <updated>2025-11-13T00:00:00.000Z</updated>
@@ -167,7 +263,7 @@
         <category label="gqlgen"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Building Production-Ready Kubernetes Operators with Go: A Complete Guide]]></title>
+        <title type="html"><![CDATA[Building Production-Ready Kubernetes Operators with Go - A Complete Guide]]></title>
         <id>https://friday-go.icu/golang/Building-Kubernetes-Operators-with-Go-Complete-Guide</id>
         <link href="https://friday-go.icu/golang/Building-Kubernetes-Operators-with-Go-Complete-Guide"/>
         <updated>2025-11-13T00:00:00.000Z</updated>
@@ -185,7 +281,7 @@
         <category label="Kubebuilder"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Go Containerization Best Practices 2025: From 800MB to 10MB Docker Images]]></title>
+        <title type="html"><![CDATA[Go Containerization Best Practices 2025 - From 800MB to 10MB Docker Images]]></title>
         <id>https://friday-go.icu/golang/Go-Containerization-Best-Practices-Docker-Optimization</id>
         <link href="https://friday-go.icu/golang/Go-Containerization-Best-Practices-Docker-Optimization"/>
         <updated>2025-11-13T00:00:00.000Z</updated>
@@ -299,7 +395,7 @@
         <category label="OpenAI"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[10 Essential Go Tools to Boost Development Efficiency: From Code Management to Performance Optimization]]></title>
+        <title type="html"><![CDATA[10 Essential Go Tools to Boost Development Efficiency - From Code Management to Performance Optimization]]></title>
         <id>https://friday-go.icu/golang/10-Essential-Go-Tools-to-Boost-Development-Efficiency-2025</id>
         <link href="https://friday-go.icu/golang/10-Essential-Go-Tools-to-Boost-Development-Efficiency-2025"/>
         <updated>2025-11-09T11:31:32.000Z</updated>
@@ -335,7 +431,7 @@
         <category label="SSH"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[From Trace to Insight: A Closed-Loop Observability Practice for Go Projects]]></title>
+        <title type="html"><![CDATA[From Trace to Insight - A Closed-Loop Observability Practice for Go Projects]]></title>
         <id>https://friday-go.icu/golang/From-Trace-to-Insight-A-Closed-Loop-Observability-Practice-for-Go-Projects</id>
         <link href="https://friday-go.icu/golang/From-Trace-to-Insight-A-Closed-Loop-Observability-Practice-for-Go-Projects"/>
         <updated>2025-10-29T10:00:00.000Z</updated>
@@ -353,7 +449,7 @@
         <category label="logs"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Stop-The-World 其实没停下：Go GC 的微暂停真相]]></title>
+        <title type="html"><![CDATA[Stop-The-World 其实没停下 - Go GC 的微暂停真相]]></title>
         <id>https://friday-go.icu/zh/golang/Stop-The-World-其实没停下-Go-GC-的微暂停真相</id>
         <link href="https://friday-go.icu/zh/golang/Stop-The-World-其实没停下-Go-GC-的微暂停真相"/>
         <updated>2025-10-29T10:00:00.000Z</updated>
@@ -490,7 +586,7 @@
         <category label="技术博客"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Best Go Web Frameworks 2025: Comprehensive Developer's Guide with Performance Benchmarks]]></title>
+        <title type="html"><![CDATA[Best Go Web Frameworks 2025 - Comprehensive Developer's Guide with Performance Benchmarks]]></title>
         <id>https://friday-go.icu/golang/Best-Go-Web-Frameworks-2025-Comprehensive-Developers-Guide</id>
         <link href="https://friday-go.icu/golang/Best-Go-Web-Frameworks-2025-Comprehensive-Developers-Guide"/>
         <updated>2025-09-28T11:27:00.000Z</updated>
@@ -581,7 +677,7 @@
         <category label="AI编程"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[5个MCP服务器：在AI编辑器迭代中保持效率的稳定选择]]></title>
+        <title type="html"><![CDATA[5个MCP服务器 - 在AI编辑器迭代中保持效率的稳定选择]]></title>
         <id>https://friday-go.icu/zh/工具/MCP服务器精选：提升AI编程效率的5大神器</id>
         <link href="https://friday-go.icu/zh/工具/MCP服务器精选：提升AI编程效率的5大神器"/>
         <updated>2025-09-11T10:14:02.000Z</updated>
@@ -596,7 +692,7 @@
         <category label="AI编程"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[PHP MCP扩展-我的开源实践与思考]]></title>
+        <title type="html"><![CDATA[如何掌握PHP MCP扩展-我的开源实践与思考 - PHP 开发完整指南]]></title>
         <id>https://friday-go.icu/zh/php/PHP MCP 扩展</id>
         <link href="https://friday-go.icu/zh/php/PHP MCP 扩展"/>
         <updated>2025-09-09T10:30:00.000Z</updated>
@@ -685,7 +781,7 @@
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[VSCode快捷键]]></title>
+        <title type="html"><![CDATA[VSCode快捷键 - 完整使用指南]]></title>
         <id>https://friday-go.icu/zh/工具/VSCode快捷键</id>
         <link href="https://friday-go.icu/zh/工具/VSCode快捷键"/>
         <updated>2025-08-21T10:00:00.000Z</updated>
@@ -697,149 +793,5 @@
         </author>
         <category label="工具"/>
         <category label="VSCode"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[10 Golang Security Gotchas — And the Fixes That Actually Work]]></title>
-        <id>https://friday-go.icu/golang/10-Golang-Security-Gotchas-And-the-Fixes-That-Actually-Work-en</id>
-        <link href="https://friday-go.icu/golang/10-Golang-Security-Gotchas-And-the-Fixes-That-Actually-Work-en"/>
-        <updated>2025-08-20T14:30:00.000Z</updated>
-        <summary type="html"><![CDATA[Learn 10 critical Golang security pitfalls and battle-tested solutions from production environments. Covers SQL injection, password storage, file uploads, input validation, session management, configuration security, rate limiting, CORS, and security headers. Includes real-world case studies and complete code examples.]]></summary>
-        <content type="html"><![CDATA[Learn 10 critical Golang security pitfalls and battle-tested solutions from production environments. Covers SQL injection, password storage, file uploads, input validation, session management, configuration security, rate limiting, CORS, and security headers. Includes real-world case studies and complete code examples.]]></content>
-        <author>
-            <name>PFinal南丞</name>
-            <uri>https://friday-go.icu</uri>
-        </author>
-        <category label="golang"/>
-        <category label="security"/>
-        <category label="best-practices"/>
-        <category label="tutorial"/>
-        <category label="production"/>
-        <category label="web-security"/>
-        <category label="authentication"/>
-        <category label="secure-coding"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[10个Golang安全陷阱 — 以及真正有效的修复方案]]></title>
-        <id>https://friday-go.icu/zh/golang/10个Golang安全陷阱及真正有效的修复方案</id>
-        <link href="https://friday-go.icu/zh/golang/10个Golang安全陷阱及真正有效的修复方案"/>
-        <updated>2025-08-20T14:30:00.000Z</updated>
-        <summary type="html"><![CDATA[发现Go开发中的10个关键安全陷阱，学习在生产环境中真正有效的、经过实战检验的解决方案。]]></summary>
-        <content type="html"><![CDATA[发现Go开发中的10个关键安全陷阱，学习在生产环境中真正有效的、经过实战检验的解决方案。]]></content>
-        <author>
-            <name>PFinal南丞</name>
-            <uri>https://friday-go.icu</uri>
-        </author>
-        <category label="golang"/>
-        <category label="security"/>
-        <category label="best-practices"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Advanced Go Concurrency Patterns 2025: Scalable Applications Guide]]></title>
-        <id>https://friday-go.icu/golang/advanced-go-concurrency-patterns</id>
-        <link href="https://friday-go.icu/golang/advanced-go-concurrency-patterns"/>
-        <updated>2025-08-18T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Master advanced Go concurrency patterns in 2025! Learn worker pools, fan-in/fan-out, pipeline patterns, semaphores, and context management with production-ready code examples. Build applications scaling to millions of concurrent operations.]]></summary>
-        <content type="html"><![CDATA[Master advanced Go concurrency patterns in 2025! Learn worker pools, fan-in/fan-out, pipeline patterns, semaphores, and context management with production-ready code examples. Build applications scaling to millions of concurrent operations.]]></content>
-        <author>
-            <name>PFinal南丞</name>
-            <uri>https://friday-go.icu</uri>
-        </author>
-        <category label="golang"/>
-        <category label="concurrency"/>
-        <category label="patterns"/>
-        <category label="scalability"/>
-        <category label="performance"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Distributed Tracing in Go Microservices with OpenTelemetry 2025: Complete Guide]]></title>
-        <id>https://friday-go.icu/golang/distributed-tracing-opentelemetry-go</id>
-        <link href="https://friday-go.icu/golang/distributed-tracing-opentelemetry-go"/>
-        <updated>2025-08-18T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Master distributed tracing in Go microservices with OpenTelemetry 2025. Complete guide covering setup, instrumentation, context propagation, Jaeger integration, and production-ready observability patterns.]]></summary>
-        <content type="html"><![CDATA[Master distributed tracing in Go microservices with OpenTelemetry 2025. Complete guide covering setup, instrumentation, context propagation, Jaeger integration, and production-ready observability patterns.]]></content>
-        <author>
-            <name>PFinal南丞</name>
-            <uri>https://friday-go.icu</uri>
-        </author>
-        <category label="golang"/>
-        <category label="distributed tracing"/>
-        <category label="opentelemetry"/>
-        <category label="microservices"/>
-        <category label="observability"/>
-        <category label="jaeger"/>
-        <category label="metrics"/>
-        <category label="logging"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Building High-Performance Data Processing Pipelines in Go]]></title>
-        <id>https://friday-go.icu/golang/go-data-processing-pipelines</id>
-        <link href="https://friday-go.icu/golang/go-data-processing-pipelines"/>
-        <updated>2025-08-18T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[A comprehensive guide to building efficient and scalable data processing pipelines in Go, covering design patterns, concurrency models, performance optimization, and handling real-world challenges like backpressure and fault tolerance.]]></summary>
-        <content type="html"><![CDATA[A comprehensive guide to building efficient and scalable data processing pipelines in Go, covering design patterns, concurrency models, performance optimization, and handling real-world challenges like backpressure and fault tolerance.]]></content>
-        <author>
-            <name>PFinal南丞</name>
-            <uri>https://friday-go.icu</uri>
-        </author>
-        <category label="golang"/>
-        <category label="data processing"/>
-        <category label="pipelines"/>
-        <category label="concurrency"/>
-        <category label="performance"/>
-        <category label="streaming"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Go Dependency Injection with Wire Framework - A Practical Guide]]></title>
-        <id>https://friday-go.icu/golang/go-dependency-injection-wire-framework</id>
-        <link href="https://friday-go.icu/golang/go-dependency-injection-wire-framework"/>
-        <updated>2025-08-18T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[A comprehensive guide to using Google's Wire framework for dependency injection in Go applications. Covers setup, basic usage, advanced features, testing, and best practices for building maintainable and testable Go code.]]></summary>
-        <content type="html"><![CDATA[A comprehensive guide to using Google's Wire framework for dependency injection in Go applications. Covers setup, basic usage, advanced features, testing, and best practices for building maintainable and testable Go code.]]></content>
-        <author>
-            <name>PFinal南丞</name>
-            <uri>https://friday-go.icu</uri>
-        </author>
-        <category label="golang"/>
-        <category label="dependency injection"/>
-        <category label="wire"/>
-        <category label="clean architecture"/>
-        <category label="software design"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Communication Patterns in Go Microservices Architecture]]></title>
-        <id>https://friday-go.icu/golang/go-microservices-communication-patterns</id>
-        <link href="https://friday-go.icu/golang/go-microservices-communication-patterns"/>
-        <updated>2025-08-18T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[A comprehensive guide to communication patterns in Go microservices, covering synchronous (REST, gRPC) and asynchronous (message queues) methods, along with service discovery, circuit breaking, and observability.]]></summary>
-        <content type="html"><![CDATA[A comprehensive guide to communication patterns in Go microservices, covering synchronous (REST, gRPC) and asynchronous (message queues) methods, along with service discovery, circuit breaking, and observability.]]></content>
-        <author>
-            <name>PFinal南丞</name>
-            <uri>https://friday-go.icu</uri>
-        </author>
-        <category label="golang"/>
-        <category label="microservices"/>
-        <category label="communication"/>
-        <category label="patterns"/>
-        <category label="grpc"/>
-        <category label="REST"/>
-        <category label="messaging"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Comprehensive Guide to Go Modules and Dependency Management]]></title>
-        <id>https://friday-go.icu/golang/go-modules-dependency-management</id>
-        <link href="https://friday-go.icu/golang/go-modules-dependency-management"/>
-        <updated>2025-08-18T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[A deep dive into Go modules, covering basic usage, advanced features, dependency management best practices, versioning strategies, and solutions for complex project structures like monorepos.]]></summary>
-        <content type="html"><![CDATA[A deep dive into Go modules, covering basic usage, advanced features, dependency management best practices, versioning strategies, and solutions for complex project structures like monorepos.]]></content>
-        <author>
-            <name>PFinal南丞</name>
-            <uri>https://friday-go.icu</uri>
-        </author>
-        <category label="golang"/>
-        <category label="modules"/>
-        <category label="dependency management"/>
-        <category label="go modules"/>
-        <category label="semantic versioning"/>
-        <category label="monorepo"/>
     </entry>
 </feed>
