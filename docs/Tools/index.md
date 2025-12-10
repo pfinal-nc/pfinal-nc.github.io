@@ -85,6 +85,6 @@ Both search engines and new readers can quickly see the full picture of developm
 ## 6. Related Topics
 
 - 📚 [Golang Technical Hub](/golang/) – Learn Go backend development
-- 🐘 [PHP Technical Hub](/PHP/) – PHP frameworks and best practices
+- 🐘 [PHP Technical Hub](/PHP/index) – PHP frameworks and best practices
 - 🐍 [Python Technical Hub](/python/) – Python tutorials and guides
 - 💾 [Database Hub](/database/) – Database configuration and optimization

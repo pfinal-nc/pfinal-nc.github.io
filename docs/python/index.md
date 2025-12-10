@@ -80,6 +80,6 @@ Both search engines and new readers can quickly see the full picture of Python d
 ## 5. Related Topics
 
 - 📚 [Golang Technical Hub](/golang/) – Learn Go backend development
-- 🐘 [PHP Technical Hub](/PHP/) – PHP frameworks and best practices
+- 🐘 [PHP Technical Hub](/PHP/index) – PHP frameworks and best practices
 - 🛠️ [Tools & Utilities Hub](/Tools/) – Development tools and productivity tips
 - 💾 [Database Hub](/database/) – Database configuration and optimization

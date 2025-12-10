@@ -48,6 +48,6 @@ Both search engines and new readers can quickly see the full picture of database
 ## 3. Related Topics
 
 - 📚 [Golang Technical Hub](/golang/) – Learn Go backend development
-- 🐘 [PHP Technical Hub](/PHP/) – PHP frameworks and best practices
+- 🐘 [PHP Technical Hub](/PHP/index) – PHP frameworks and best practices
 - 🐍 [Python Technical Hub](/python/) – Python tutorials and guides
 - 🛠️ [Tools & Utilities Hub](/Tools/) – Development tools and productivity tips
