@@ -16,7 +16,7 @@
             "url": "https://friday-go.icu/zh/数据库",
             "title": "数据库中文技术专题导航 - MySQL / PostgreSQL / 配置优化 2025",
             "summary": "PFinalClub 数据库中文专题导航页：系统整理 MySQL 配置、PostgreSQL 功能、数据库优化等核心文章，让中文读者可以按专题快速找到高质量实战内容。",
-            "date_modified": "2025-12-10T05:20:07.120Z",
+            "date_modified": "2025-12-10T05:26:34.829Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -29,7 +29,7 @@
             "url": "https://friday-go.icu/zh/工具",
             "title": "工具与实用程序中文专题导航 - AI 工具 / 开发工具 / 效率提升 2025",
             "summary": "PFinalClub 工具与实用程序中文专题导航页：系统整理 AI 工具目录、开发工具、CLI 工具、Docker 指南、效率技巧等核心文章，让中文读者可以按专题快速找到高质量实战内容。",
-            "date_modified": "2025-12-10T05:20:07.117Z",
+            "date_modified": "2025-12-10T05:26:34.826Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -42,7 +42,7 @@
             "url": "https://friday-go.icu/zh/python",
             "title": "Python 中文技术专题导航 - 爬虫 / 协程 / 工具与最佳实践",
             "summary": "PFinalClub Python 中文专题导航页：系统整理爬虫技术、JS 逆向工程、协程、加密算法、Python 开发工具等核心文章，让中文读者可以按专题快速找到高质量实战内容。",
-            "date_modified": "2025-12-10T05:20:07.111Z",
+            "date_modified": "2025-12-10T05:26:34.817Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -55,7 +55,7 @@
             "url": "https://friday-go.icu/zh/php",
             "title": "PHP 中文技术专题导航 - ThinkPHP / Laravel / PHP 8.x / 协程 / 最佳实践",
             "summary": "PFinalClub PHP 中文专题导航页：系统整理 ThinkPHP 8、Laravel、PHP 8.x 企业级开发、协程池、错误处理等核心文章，让中文读者可以按专题快速找到高质量实战内容。",
-            "date_modified": "2025-12-10T05:20:07.110Z",
+            "date_modified": "2025-12-10T05:26:34.815Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -68,7 +68,7 @@
             "url": "https://friday-go.icu/zh/golang",
             "title": "Golang 中文技术专题导航 - Go 后端 / RAG / 可观测性 / 桌面开发",
             "summary": "PFinalClub Golang 中文专题导航页：系统整理 Go 后端工程实践、RAG 系统、可观测性、Wails 桌面开发、游戏服务器与效率工具等核心文章，让中文读者可以按专题快速找到高质量实战内容。",
-            "date_modified": "2025-12-10T05:20:07.097Z",
+            "date_modified": "2025-12-10T05:26:34.798Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -81,7 +81,7 @@
             "url": "https://friday-go.icu/python",
             "title": "Python Technical Hub – Web Scraping / Coroutines / Tools & Best Practices 2025",
             "summary": "PFinalClub Python hub: comprehensive guides on web scraping, JS reverse engineering, coroutines, encryption algorithms, and Python development tools for building efficient applications.",
-            "date_modified": "2025-12-10T05:20:07.083Z",
+            "date_modified": "2025-12-10T05:26:34.784Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -94,7 +94,7 @@
             "url": "https://friday-go.icu/php",
             "title": "PHP Technical Hub – Framework Development / Performance / Best Practices 2025",
             "summary": "PFinalClub PHP hub: comprehensive guides on ThinkPHP 8, Laravel, PHP 8.5, coroutines, error handling, and modern PHP development practices for building production-ready applications.",
-            "date_modified": "2025-12-10T05:20:07.080Z",
+            "date_modified": "2025-12-10T05:26:34.781Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -107,20 +107,7 @@
             "url": "https://friday-go.icu/golang",
             "title": "Golang Technical Hub – Production-Ready Go Backend / Web Frameworks / AI & RAG / Observability",
             "summary": "PFinalClub Golang hub: curated guides on Go error handling, web framework selection, RAG systems, observability, containerization and more, giving you a clear path to building production-grade Go services.",
-            "date_modified": "2025-12-10T05:20:07.076Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": []
-        },
-        {
-            "id": "https://friday-go.icu/database",
-            "content_html": "PFinalClub Database hub: comprehensive guides on MySQL configuration, database optimization, and best practices for production database management.",
-            "url": "https://friday-go.icu/database",
-            "title": "Database Technical Hub – MySQL / Configuration / Optimization 2025",
-            "summary": "PFinalClub Database hub: comprehensive guides on MySQL configuration, database optimization, and best practices for production database management.",
-            "date_modified": "2025-12-10T05:20:07.060Z",
+            "date_modified": "2025-12-10T05:26:34.777Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -133,7 +120,20 @@
             "url": "https://friday-go.icu/Tools",
             "title": "Tools & Utilities Hub – AI Tools / Development Tools / Productivity 2025",
             "summary": "PFinalClub Tools hub: comprehensive directory of AI tools, development utilities, CLI tools, Docker guides, and productivity tips for modern developers.",
-            "date_modified": "2025-12-10T05:20:07.059Z",
+            "date_modified": "2025-12-10T05:26:34.757Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": []
+        },
+        {
+            "id": "https://friday-go.icu/database",
+            "content_html": "PFinalClub Database hub: comprehensive guides on MySQL configuration, database optimization, and best practices for production database management.",
+            "url": "https://friday-go.icu/database",
+            "title": "Database Technical Hub – MySQL / Configuration / Optimization 2025",
+            "summary": "PFinalClub Database hub: comprehensive guides on MySQL configuration, database optimization, and best practices for production database management.",
+            "date_modified": "2025-12-10T05:26:34.757Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
