@@ -23,11 +23,13 @@ Disallow: /*.html$
 Disallow: /404
 Disallow: /404.html
 
-# 允许 Sitemap
-Allow: /sitemap.xml
+# Sitemap 可以访问，但不应该被索引（通过 HTTP 响应头控制）
+# 注意：robots.txt 不能直接禁止索引 sitemap.xml，需要通过服务器配置或 meta 标签
+# 这里我们允许访问 sitemap.xml，但会在 sitemap.xml 的 HTTP 响应头中添加 noindex
 
-# 不索引其他 XML 系统文件
+# 不索引其他 XML 系统文件（但允许 sitemap.xml 被访问）
 Disallow: /*.xml$
+Allow: /sitemap.xml
 
 # 允许静态资源
 Allow: /*.css$
