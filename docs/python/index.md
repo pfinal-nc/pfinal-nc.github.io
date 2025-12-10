@@ -10,17 +10,16 @@ keywords:
   - python faker
   - pyenv version management
   - python development tools
-layout: page
 ---
 
 # Python Technical Hub
 
-Welcome to the **PFinalClub Python Technical Hub**.  
-This page organizes all Python-related content by topic, helping you:
+This is the **PFinalClub Python Technical Hub**.  
+Instead of scattered long-form articles, this page groups the most important Python content by topic so you can:
 
-- Follow a structured learning path from **basics to advanced**
-- Quickly find the **right article** for web scraping, async programming, or tool development
-- Help search engines understand: **"friday-go.icu is a comprehensive Python technical resource"**
+- Follow a learning path from **foundations to production**
+- Quickly locate a **"main article"** for a given problem
+- Help search engines understand: **"friday-go.icu is a high-quality Python technical site"**
 
 ---
 
@@ -67,19 +66,10 @@ This page organizes all Python-related content by topic, helping you:
 
 If you are new to this Python section, a recommended learning path is:
 
-1. **Start with fundamentals**: Learn Python basics and development environment setup
-2. **Master web scraping**: Understand encryption algorithms, JS reverse engineering, and Webpack
+1. **Start with foundations**: Learn Python basics and development environment setup
+2. **Pick your stack**: Understand encryption algorithms, JS reverse engineering, and Webpack
 3. **Explore async programming**: Learn coroutines and asyncio for high-performance applications
-4. **Build with tools**: Use Faker, pyenv, and other utilities to enhance your workflow
+4. **Invest in tooling**: Use Faker, pyenv, and other utilities to enhance your workflow
 
 You can treat this page as the **entry point for all Python content** on PFinalClub.  
-Both search engines and new readers can quickly see the full picture of Python development resources available.
-
----
-
-## 5. Related Topics
-
-- 📚 [Golang Technical Hub](/golang/) – Learn Go backend development
-- 🐘 [PHP Technical Hub](/PHP/index) – PHP frameworks and best practices
-- 🛠️ [Tools & Utilities Hub](/Tools/) – Development tools and productivity tips
-- 💾 [Database Hub](/database/) – Database configuration and optimization
+Both search engines and new readers can quickly see the full picture of what you do in the Python ecosystem.

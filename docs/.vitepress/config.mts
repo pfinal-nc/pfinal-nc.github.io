@@ -390,7 +390,89 @@ export default defineConfig({
     }
     
     // 判断是否为文章详情页（这里假设详情页没有设置 layout）
-    if (!pageData.frontmatter.layout) {
+    // 注意：主题中心页使用 layout: page，所以要先检查 layout === 'page'
+    if (pageData.frontmatter.layout === 'page') {
+      // 为主题中心页（Topic Hub）添加 CollectionPage 类型的 Schema.org 结构化数据
+      // 检查是否是主题中心页（路径匹配主题目录的 index 页面）
+      const topicHubPatterns = [
+        /^golang\/?$/,
+        /^PHP\/?$/,
+        /^python\/?$/,
+        /^Tools\/?$/,
+        /^database\/?$/,
+        /^zh\/golang\/?$/,
+        /^zh\/php\/?$/,
+        /^zh\/python\/?$/,
+        /^zh\/工具\/?$/,
+        /^zh\/数据库\/?$/
+      ];
+      const isTopicHub = topicHubPatterns.some(pattern => pattern.test(currentPath));
+      
+      if (isTopicHub && pageData.frontmatter.title) {
+        // 确定主题名称（基于路径匹配）
+        let topicName = '';
+        let topicCategory = '';
+        const isZh = currentPath.startsWith('zh/');
+        
+        if (/^golang\/?$/.test(currentPath) || /^zh\/golang\/?$/.test(currentPath)) {
+          topicName = isZh ? 'Golang 中文技术专题' : 'Golang Technical Hub';
+          topicCategory = 'Golang';
+        } else if (/^PHP\/?$/.test(currentPath) || /^zh\/php\/?$/.test(currentPath)) {
+          topicName = isZh ? 'PHP 中文技术专题' : 'PHP Technical Hub';
+          topicCategory = 'PHP';
+        } else if (/^python\/?$/.test(currentPath) || /^zh\/python\/?$/.test(currentPath)) {
+          topicName = isZh ? 'Python 中文技术专题' : 'Python Technical Hub';
+          topicCategory = 'Python';
+        } else if (/^Tools\/?$/.test(currentPath) || /^zh\/工具\/?$/.test(currentPath)) {
+          topicName = isZh ? '工具与实用程序中文专题' : 'Tools & Utilities Hub';
+          topicCategory = 'Tools';
+        } else if (/^database\/?$/.test(currentPath) || /^zh\/数据库\/?$/.test(currentPath)) {
+          topicName = isZh ? '数据库中文技术专题' : 'Database Technical Hub';
+          topicCategory = 'Database';
+        }
+        
+        if (topicName) {
+          const collectionPage = {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": topicName,
+            "url": canonicalUrl,
+            "description": pageData.frontmatter.description || pageData.description,
+            "inLanguage": currentPath.startsWith('zh/') ? "zh-CN" : "en-US",
+            "about": {
+              "@type": "Thing",
+              "name": topicCategory
+            },
+            "mainEntity": {
+              "@type": "ItemList",
+              "name": `${topicName} - Article Collection`,
+              "description": `Collection of articles about ${topicCategory}`
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "PFinalClub",
+              "logo": {
+                "@type": "ImageObject",
+                "url": `${baseUrl}/logo.png`
+              }
+            }
+          };
+          
+          if (pageData.frontmatter.keywords) {
+            const keywords = Array.isArray(pageData.frontmatter.keywords)
+              ? pageData.frontmatter.keywords.join(', ')
+              : pageData.frontmatter.keywords;
+            collectionPage.keywords = keywords;
+          }
+          
+          pageData.frontmatter.head.push([
+            'script',
+            { type: 'application/ld+json' },
+            JSON.stringify(collectionPage)
+          ]);
+        }
+      }
+    } else if (!pageData.frontmatter.layout) {
       const articleKeywords = pageData.frontmatter.keywords;
       // 只使用文章自定义关键词或核心品牌词（与 BASE_KEYWORDS 保持一致）
       const coreKeywords = 'PFinalClub, Golang tutorial, Go backend development, Go microservices, PHP, Python, 技术博客, Tech Blog';

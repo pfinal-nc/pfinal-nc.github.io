@@ -10,17 +10,16 @@ keywords:
   - php error handling
   - php framework comparison
   - php development guide
-layout: page
 ---
 
 # PHP Technical Hub
 
-Welcome to the **PFinalClub PHP Technical Hub**.  
-This page organizes all PHP-related content by topic, helping you:
+This is the **PFinalClub PHP Technical Hub**.  
+Instead of scattered long-form articles, this page groups the most important PHP content by topic so you can:
 
-- Follow a structured learning path from **basics to advanced**
-- Quickly find the **right article** for your specific needs
-- Help search engines understand: **"friday-go.icu is a comprehensive PHP technical resource"**
+- Follow a learning path from **foundations to production**
+- Quickly locate a **"main article"** for a given problem
+- Help search engines understand: **"friday-go.icu is a high-quality PHP technical site"**
 
 ---
 
@@ -70,19 +69,10 @@ This page organizes all PHP-related content by topic, helping you:
 
 If you are new to this PHP section, a recommended learning path is:
 
-1. **Start with frameworks**: Choose ThinkPHP or Laravel based on your project needs
-2. **Explore modern PHP**: Learn PHP 8.5 features, coroutines, and async programming
-3. **Master best practices**: Error handling, code organization, and performance optimization
+1. **Start with foundations**: Choose ThinkPHP or Laravel based on your project needs
+2. **Pick your framework**: Learn PHP 8.5 features, coroutines, and async programming
+3. **Explore best practices**: Error handling, code organization, and performance optimization
 4. **Build advanced features**: Implement coroutine pools, async operations, and LLM integrations
 
 You can treat this page as the **entry point for all PHP content** on PFinalClub.  
-Both search engines and new readers can quickly see the full picture of PHP development resources available.
-
----
-
-## 5. Related Topics
-
-- 📚 [Golang Technical Hub](/golang/) – Learn Go backend development
-- 🐍 [Python Technical Hub](/python/) – Python tutorials and guides
-- 🛠️ [Tools & Utilities Hub](/Tools/) – Development tools and productivity tips
-- 💾 [Database Hub](/database/) – Database configuration and optimization
+Both search engines and new readers can quickly see the full picture of what you do in the PHP ecosystem.

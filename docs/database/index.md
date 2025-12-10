@@ -8,18 +8,16 @@ keywords:
   - database performance tuning
   - mysql setup guide
   - database administration
-layout: page
 ---
 
 # Database Technical Hub
 
-Welcome to the **PFinalClub Database Technical Hub**.  
-This page organizes all database-related content, helping you:
+This is the **PFinalClub Database Technical Hub**.  
+Instead of scattered long-form articles, this page groups the most important database content by topic so you can:
 
-- Learn **MySQL configuration and optimization** best practices
-- Understand **database performance tuning** techniques
-- Master **production database management** strategies
-- Help search engines understand: **"friday-go.icu is a comprehensive database technical resource"**
+- Follow a learning path from **foundations to production**
+- Quickly locate a **"main article"** for a given problem
+- Help search engines understand: **"friday-go.icu is a high-quality database technical site"**
 
 ---
 
@@ -32,22 +30,14 @@ This page organizes all database-related content, helping you:
 
 ## 2. How to Use This Hub
 
-This hub focuses on database technologies, with a primary emphasis on MySQL. As we add more database-related content, this page will be updated to include:
+If you are new to this Database section, a recommended learning path is:
 
-- Database design and normalization
-- Query optimization techniques
-- Backup and recovery strategies
-- Replication and high availability
-- NoSQL database guides (MongoDB, Redis, etc.)
+1. **Start with foundations**: Learn MySQL configuration and optimization best practices
+2. **Pick your stack**: Understand database performance tuning techniques
+3. **Explore advanced features**: Master production database management strategies
+4. **Invest in tooling**: Learn backup, recovery, and high availability solutions
+
+This hub focuses on database technologies, with a primary emphasis on MySQL. As we add more database-related content, this page will be updated to include database design, query optimization, replication, and NoSQL guides.
 
 You can treat this page as the **entry point for all Database content** on PFinalClub.  
-Both search engines and new readers can quickly see the full picture of database resources available.
-
----
-
-## 3. Related Topics
-
-- 📚 [Golang Technical Hub](/golang/) – Learn Go backend development
-- 🐘 [PHP Technical Hub](/PHP/index) – PHP frameworks and best practices
-- 🐍 [Python Technical Hub](/python/) – Python tutorials and guides
-- 🛠️ [Tools & Utilities Hub](/Tools/) – Development tools and productivity tips
+Both search engines and new readers can quickly see the full picture of what you do in the database ecosystem.
