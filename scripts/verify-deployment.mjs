@@ -86,9 +86,18 @@ function main() {
   
   topicHubs.forEach(hub => {
     const exists = fileExists(hub.path);
-    const hasLayout = exists ? fs.readFileSync(path.join(docsDir, hub.path), 'utf-8').includes('layout: page') : false;
-    results.topicHubs.push({ ...hub, exists, hasLayout });
-    console.log(`   ${exists ? '✓' : '✗'} ${hub.name}: ${exists ? '存在' : '缺失'} ${hasLayout ? '(layout: page)' : ''}`);
+    if (exists) {
+      const content = fs.readFileSync(path.join(docsDir, hub.path), 'utf-8');
+      const hasLayout = content.includes('layout: page');
+      const hasTitle = /^title:/.test(content);
+      const hasDescription = /^description:/.test(content);
+      const hasKeywords = /^keywords:/.test(content);
+      results.topicHubs.push({ ...hub, exists, hasLayout, hasTitle, hasDescription, hasKeywords });
+      console.log(`   ${exists ? '✓' : '✗'} ${hub.name}: ${exists ? '存在' : '缺失'} ${hasLayout ? '(layout: page)' : ''} ${hasTitle ? '(title)' : ''} ${hasDescription ? '(description)' : ''} ${hasKeywords ? '(keywords)' : ''}`);
+    } else {
+      results.topicHubs.push({ ...hub, exists, hasLayout: false });
+      console.log(`   ${exists ? '✓' : '✗'} ${hub.name}: ${exists ? '存在' : '缺失'}`);
+    }
   });
   
   // 2. 检查标题优化
