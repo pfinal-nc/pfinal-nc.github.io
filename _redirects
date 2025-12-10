@@ -29,15 +29,19 @@ http://*.friday-go.icu/* https://friday-go.icu/:splat 301!
 # 数据库相关
 /数据库/* /database/ 301
 
-# PHP相关 - 统一重定向到PHP目录
-/php/* /PHP/ 301
+# PHP相关 - 统一重定向到PHP目录（大小写问题修复）
+/php/* /PHP/:splat 301
+/PHP/index /PHP/ 301
+/PHP/index.html /PHP/ 301
 
 # Golang相关 - 统一重定向到Golang目录
 /golang/* /golang/ 301
 
 # ====================
-# 4. 工具页面重定向（已包含在主HTTPS重定向中，可删除）
+# 4. 工具页面重定向
 # ====================
+# Tools 文章带空格文件名重定向
+/Tools/The-Command-Line-Tool-That-Makes-File-Navigation-Effortles /Tools/The-Command-Line-Tool-That-Makes-File-Navigation-Effortles 301
 
 # ====================
 # 5. 带参数的URL处理（优化版）
