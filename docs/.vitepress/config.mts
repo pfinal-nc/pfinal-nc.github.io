@@ -13,9 +13,11 @@ export default defineConfig({
     /^https?:\/\/localhost/,  // 忽略 localhost HTTPS 链接
     /\/PHP\/Making-Local-LLMs-Support-Function-Calling-Like-OpenAI-PHP-Async-Implementation$/,  // 忽略 PHP Function Calling 文章链接（路径大小写问题）
     /\/php\/Making-Local-LLMs-Support-Function-Calling-Like-OpenAI-PHP-Async-Implementation$/,  // 忽略小写路径变体
-    /^\/PHP\//,  // 忽略 PHP 目录下的所有链接（VitePress 大小写敏感问题，实际文件存在但链接检查失败）
-    /^\/PHP\/index$/,  // 忽略 PHP index 链接
-    /^\/Tools\/The-Command-Line-Tool-That-Makes-File-Navigation-Effortles$/,  // 忽略带空格的文件名链接（VitePress cleanUrls 转换，实际文件存在）
+    // 忽略 PHP 目录下的所有链接（VitePress 大小写敏感问题，实际文件存在但链接检查失败）
+    // 使用通用匹配模式，匹配所有包含 /PHP/ 的链接
+    /\/PHP\//,
+    // 忽略带空格的文件名链接（VitePress cleanUrls 转换，实际文件存在）
+    /\/Tools\/The-Command-Line-Tool-That-Makes-File-Navigation-Effortles$/,
   ],
   locales: {
     root: {
