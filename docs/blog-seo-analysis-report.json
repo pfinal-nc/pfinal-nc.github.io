@@ -1,0 +1,248 @@
+{
+  "timestamp": "2025-12-11T01:24:24.548Z",
+  "summary": {
+    "totalArticles": 209,
+    "topics": {
+      "golang": 108,
+      "php": 36,
+      "python": 17,
+      "tools": 31,
+      "database": 4,
+      "other": 13
+    },
+    "categories": 3,
+    "uniqueTags": 272,
+    "uniqueKeywords": 371
+  },
+  "seoMetrics": {
+    "articlesWithDescription": 209,
+    "articlesWithKeywords": 203,
+    "articlesWithTags": 182,
+    "articlesWithDate": 203,
+    "taskOrientedTitles": 82,
+    "titlesWithHowTo": 41,
+    "titlesWithGuide": 80,
+    "descriptionCoverage": "100.0%",
+    "keywordsCoverage": "97.1%",
+    "tagsCoverage": "87.1%",
+    "taskOrientedCoverage": "39.2%"
+  },
+  "topTags": [
+    {
+      "tag": "golang",
+      "count": 92
+    },
+    {
+      "tag": "工具",
+      "count": 30
+    },
+    {
+      "tag": "PHP",
+      "count": 28
+    },
+    {
+      "tag": "python",
+      "count": 16
+    },
+    {
+      "tag": "best-practices",
+      "count": 12
+    },
+    {
+      "tag": "tools",
+      "count": 11
+    },
+    {
+      "tag": "performance",
+      "count": 7
+    },
+    {
+      "tag": "Golang",
+      "count": 7
+    },
+    {
+      "tag": "MCP",
+      "count": 7
+    },
+    {
+      "tag": "Wails",
+      "count": 6
+    },
+    {
+      "tag": "AI",
+      "count": 5
+    },
+    {
+      "tag": "concurrency",
+      "count": 5
+    },
+    {
+      "tag": "crawler",
+      "count": 5
+    },
+    {
+      "tag": "编程技术",
+      "count": 5
+    },
+    {
+      "tag": "性能优化",
+      "count": 5
+    },
+    {
+      "tag": "Laravel",
+      "count": 4
+    },
+    {
+      "tag": "Go",
+      "count": 4
+    },
+    {
+      "tag": "programming technology",
+      "count": 4
+    },
+    {
+      "tag": "Workerman",
+      "count": 3
+    },
+    {
+      "tag": "Docker",
+      "count": 3
+    }
+  ],
+  "topKeywords": [
+    {
+      "keyword": "ai tools directory 2025",
+      "count": 2
+    },
+    {
+      "keyword": "vibe coding",
+      "count": 2
+    },
+    {
+      "keyword": "chatgpt 5.1 coding",
+      "count": 2
+    },
+    {
+      "keyword": "golang rag openai qdrant",
+      "count": 2
+    },
+    {
+      "keyword": "go error handling best practices",
+      "count": 2
+    },
+    {
+      "keyword": "Golang, Go开发, 程序员必备, 开发工具, 代码质量, 性能优化, 开发效率, Go生态",
+      "count": 2
+    },
+    {
+      "keyword": "爬虫, 加密, 解密, 算法, 特征, 收集",
+      "count": 2
+    },
+    {
+      "keyword": "Laravel, Carbon, class, usage, Laravel-Carbon-Class Usage, Laravel-Carbon-Class Usage Analysis",
+      "count": 1
+    },
+    {
+      "keyword": "Laravel, build, manual, framework, manual build, PHP",
+      "count": 1
+    },
+    {
+      "keyword": "PHP, process, thread, analysis, PHP process, PHP thread, PHP process thread, PHP process thread analysis, PHP process thread analysis",
+      "count": 1
+    },
+    {
+      "keyword": "php function calling",
+      "count": 1
+    },
+    {
+      "keyword": "php async function calling openai",
+      "count": 1
+    },
+    {
+      "keyword": "local llm function calling",
+      "count": 1
+    },
+    {
+      "keyword": "pfinal asyncio tutorial",
+      "count": 1
+    },
+    {
+      "keyword": "qwen3 function calling php",
+      "count": 1
+    },
+    {
+      "keyword": "deepseek function calling php",
+      "count": 1
+    },
+    {
+      "keyword": "glm4 chat function calling",
+      "count": 1
+    },
+    {
+      "keyword": "php ai tools integration",
+      "count": 1
+    },
+    {
+      "keyword": "PHP8.5, NoDiscard attribute, PHP attributes, return value checking, code quality, PHP programming",
+      "count": 1
+    },
+    {
+      "keyword": "PHP coroutine pool, Workerman coroutines, PHP high concurrency, coroutine pool implementation, Go goroutine pool, PHP concurrent programming, Channel communication, coroutine scheduling, database connection pool, dynamic coroutine pool, PHP performance optimization, Workerman practical guide, PHP coroutine transformation, high concurrency optimization, coroutine pool monitoring",
+      "count": 1
+    },
+    {
+      "keyword": "PHP, error and exception handling, exception, error, handling, exception handling, error handling, program, robustness, stability",
+      "count": 1
+    },
+    {
+      "keyword": "PHP, generator, analysis, PHP generator, PHP generator analysis, PHP generator analysis",
+      "count": 1
+    },
+    {
+      "keyword": "PHP Process, PHP Thread, Multi-Process, Thread-Safe, PHP Concurrency, PHP-FPM, Process Management, PHP Performance, pcntl, pthreads, ZTS, PHP Optimization 2025",
+      "count": 1
+    },
+    {
+      "keyword": "thinkphp 8 release",
+      "count": 1
+    },
+    {
+      "keyword": "thinkphp 8 new features",
+      "count": 1
+    },
+    {
+      "keyword": "thinkphp 2025",
+      "count": 1
+    },
+    {
+      "keyword": "thinkphp upgrade guide",
+      "count": 1
+    },
+    {
+      "keyword": "php framework thinkphp",
+      "count": 1
+    },
+    {
+      "keyword": "thinkphp performance optimization",
+      "count": 1
+    },
+    {
+      "keyword": "php tutorial",
+      "count": 1
+    }
+  ],
+  "topCategories": [
+    {
+      "category": "Tools",
+      "count": 2
+    },
+    {
+      "category": "golang",
+      "count": 1
+    },
+    {
+      "category": "工具",
+      "count": 1
+    }
+  ]
+}

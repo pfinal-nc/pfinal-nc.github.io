@@ -1,7 +1,16 @@
 ---
-Title: Broot-The Command-Line Tool That Makes File Navigation Effortless
-Date: 2025-10-15 09:33:00
-Tags:
+title: "Broot - The Command-Line Tool That Makes File Navigation Effortless - Complete Guide 2025"
+description: "Complete guide to Broot, a powerful command-line file manager that makes file navigation effortless. Learn how to use Broot for efficient directory browsing, file operations, and terminal productivity."
+keywords:
+  - broot command line tool
+  - file navigation tool
+  - command line file manager
+  - terminal file browser
+  - cli file navigation
+  - broot tutorial
+  - file manager tool
+date: 2025-10-15 09:33:00
+tags:
   - Tools
   - Command Line, Rust
 Description: Broot is a fast terminal file manager written in Rust. It offers an intuitive tree view, fuzzy search, quick navigation, and file preview—everything you need for efficient file management in the terminal.

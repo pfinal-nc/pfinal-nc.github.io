@@ -6,7 +6,17 @@ tags:
   - golang
 description: 详细介绍golang系统库之gopsutil，包括安装配置、进程监控、系统信息获取等核心功能，帮助开发者轻松获取系统信息。
 author: PFinal南丞
-keywords: golang, gopsutil, 系统库, 监控, 系统信息, 进程, 进程监控, 系统信息获取
+keywords:
+  - gopsutil 完整使用指南
+  - golang 系统监控库
+  - go 获取 CPU 内存指标
+  - golang 系统信息获取
+  - gopsutil 实战教程
+  - go 进程监控库
+  - golang 磁盘网络监控
+  - go 系统指标获取
+  - gopsutil 最佳实践
+  - golang 系统库使用
 sticky: true
 top: 1
 ---

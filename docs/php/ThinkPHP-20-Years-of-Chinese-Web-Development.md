@@ -7,12 +7,16 @@ tag:
     - ThinkPHP
 description: "ThinkPHP 8 latest version 2025: Complete guide to ThinkPHP 8.1.3 new features, performance improvements (30% faster routing), upgrade tips, and 20-year evolution history. Perfect for PHP developers upgrading from ThinkPHP 6/7."
 keywords:
-  - thinkphp 8 release
+  - thinkphp 8 release 2025
   - thinkphp 8 new features
-  - thinkphp 2025
+  - thinkphp 2025 complete guide
   - thinkphp upgrade guide
   - php framework thinkphp
   - thinkphp performance optimization
+  - thinkphp 8 升级教程
+  - thinkphp 8 完整指南
+  - thinkphp 8 新特性详解
+  - php thinkphp 最佳实践
 top: 1
 ---
 

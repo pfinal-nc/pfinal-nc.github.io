@@ -6,7 +6,17 @@ tag:
     - PHP
     - Laravel 
 description: Manually building the Laravel framework, detailing the complete process from project initialization to adding each component.
-keywords: Laravel, build, manual, framework, manual build, PHP
+keywords:
+  - laravel manual build guide
+  - laravel framework 手工构建
+  - php laravel 框架构建
+  - laravel 从零开始
+  - laravel 核心组件解析
+  - php framework development
+  - laravel architecture tutorial
+  - laravel component implementation
+  - php laravel 实战
+  - laravel 框架原理
 ---
 
 # Laravel Manual Build

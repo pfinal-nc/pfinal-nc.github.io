@@ -18,6 +18,10 @@ keywords:
   - docker security hardening go
   - container size optimization
   - go dockerfile best practices
+  - golang docker 完整指南
+  - go 容器化最佳实践
+  - docker golang 优化
+  - go production deployment
   - golang docker tutorial
   - go containerization guide
   - docker go production

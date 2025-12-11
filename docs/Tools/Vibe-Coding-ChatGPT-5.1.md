@@ -11,13 +11,17 @@ tags:
   - software engineering
 description: "In the Vibe Coding era, ChatGPT 5.1 is already sitting at your desk. This piece is not about whether AI will replace developers, but how to code with ChatGPT 5.1 so that it works overtime and you go home on time."
 keywords:
-  - vibe coding
+  - vibe coding era
   - chatgpt 5.1 coding
-  - ai coding workflow
+  - ai coding workflow 2025
   - will ai replace developers
   - ai pair programming
   - chatgpt assisted development
   - ai code quality
+  - ai 编程助手使用技巧
+  - chatgpt 5.1 编程指南
+  - ai coding best practices
+  - developer productivity ai
   - debugging ai generated code
   - developer career in ai era
 ---

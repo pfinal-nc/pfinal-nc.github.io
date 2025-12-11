@@ -5,7 +5,17 @@ tags:
     - PHP
     - PHP8.5
     - Attributes
-keywords: PHP8.5, NoDiscard attribute, PHP attributes, return value checking, code quality, PHP programming
+keywords:
+  - php 8.5 nodiscard attribute
+  - php 8.5 新特性
+  - php attributes 完整指南
+  - php return value checking
+  - php code quality 2025
+  - php programming best practices
+  - php 8.5 属性详解
+  - php silent errors prevention
+  - php modern features
+  - php 8.5 tutorial
 description: Comprehensive guide to PHP 8.5's new #[\NoDiscard] attribute, including its purpose, usage methods, practical examples, and best practices to help developers improve code quality and avoid silent errors.
 author: PFinal南丞
 ---

@@ -14,10 +14,17 @@ tags:
   - machine-learning
   - semantic-search
 description: "Golang RAG system tutorial 2025: Build complete RAG system with Go, OpenAI API, and Qdrant vector database. Step-by-step guide with code examples, embedding generation, semantic search, and production best practices. Perfect for Go developers building AI applications."
-keywords: 
-  - golang rag tutorial
+keywords:
+  - golang rag system tutorial 2025
   - golang rag openai qdrant
   - go openai api example
+  - golang rag 系统完整指南
+  - go 向量数据库实战
+  - golang rag 从零到一
+  - go openai embedding
+  - golang semantic search
+  - go rag best practices
+  - golang ai application development
   - go vector database qdrant
   - retrieval augmented generation go
   - golang semantic search

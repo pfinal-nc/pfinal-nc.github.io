@@ -11,13 +11,17 @@ tags:
 description: "Based on practical project experience, this article explains how to use OpenTelemetry to build closed-loop Go observability in 2025, turning traces, metrics, and logs from simple data collection into decision-driving insights."
 author: PFinal Nan Cheng
 keywords:
-  - go observability best practices
+  - go observability best practices 2025
   - go opentelemetry guide
   - go distributed tracing
   - go metrics and logs
   - go slo alerting
   - opentelemetry go tutorial
   - observability for go microservices
+  - golang 可观测性完整指南
+  - go 可观测性闭环实践
+  - golang observability production
+  - go trace to insight
   - production monitoring go services
 ---
 

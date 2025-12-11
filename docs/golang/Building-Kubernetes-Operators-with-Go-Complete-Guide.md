@@ -9,7 +9,17 @@ tags:
   - Cloud Native
   - DevOps
   - Kubebuilder
-keywords: "Kubernetes operator Go, Kubebuilder tutorial 2025, Go controller pattern, CRD custom resource definition, Kubernetes automation, operator SDK Go"
+keywords:
+  - kubernetes operator go tutorial 2025
+  - kubebuilder tutorial golang
+  - go controller pattern
+  - crd custom resource definition
+  - kubernetes automation go
+  - operator sdk golang
+  - go kubernetes operator best practices
+  - golang operator development
+  - kubernetes operator production
+  - go cloud native development
 ---
 
 # Building Production-Ready Kubernetes Operators with Go: A Complete Guide

@@ -11,7 +11,7 @@ tags:
   - gqlgen
 keywords:
   - go graphql api tutorial 2025
-  - gqlgen tutorial
+  - gqlgen tutorial complete guide
   - graphql go example
   - go graphql resolvers
   - graphql subscriptions go
@@ -19,6 +19,9 @@ keywords:
   - graphql performance optimization
   - go backend development
   - graphql api best practices
+  - golang graphql production
+  - go graphql from zero to one
+  - graphql go 完整指南
   - golang graphql server
 ---
 
