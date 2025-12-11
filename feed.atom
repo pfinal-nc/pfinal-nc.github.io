@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://friday-go.icu</id>
     <title>PFinalClub Tech Blog</title>
-    <updated>2025-12-10T05:43:38.365Z</updated>
+    <updated>2025-12-11T02:02:26.998Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>PFinal南丞</name>
@@ -19,7 +19,7 @@
         <title type="html"><![CDATA[数据库中文技术专题导航 - MySQL / PostgreSQL / 配置优化 2025]]></title>
         <id>https://friday-go.icu/zh/数据库</id>
         <link href="https://friday-go.icu/zh/数据库"/>
-        <updated>2025-12-10T05:43:38.361Z</updated>
+        <updated>2025-12-11T02:02:26.993Z</updated>
         <summary type="html"><![CDATA[PFinalClub 数据库中文专题导航页：系统整理 MySQL 配置、PostgreSQL 功能、数据库优化等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></summary>
         <content type="html"><![CDATA[PFinalClub 数据库中文专题导航页：系统整理 MySQL 配置、PostgreSQL 功能、数据库优化等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></content>
         <author>
@@ -31,7 +31,7 @@
         <title type="html"><![CDATA[工具与实用程序中文专题导航 - AI 工具 / 开发工具 / 效率提升 2025]]></title>
         <id>https://friday-go.icu/zh/工具</id>
         <link href="https://friday-go.icu/zh/工具"/>
-        <updated>2025-12-10T05:43:38.359Z</updated>
+        <updated>2025-12-11T02:02:26.991Z</updated>
         <summary type="html"><![CDATA[PFinalClub 工具与实用程序中文专题导航页：系统整理 AI 工具目录、开发工具、CLI 工具、Docker 指南、效率技巧等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></summary>
         <content type="html"><![CDATA[PFinalClub 工具与实用程序中文专题导航页：系统整理 AI 工具目录、开发工具、CLI 工具、Docker 指南、效率技巧等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></content>
         <author>
@@ -43,7 +43,7 @@
         <title type="html"><![CDATA[Python 中文技术专题导航 - 爬虫 / 协程 / 工具与最佳实践]]></title>
         <id>https://friday-go.icu/zh/python</id>
         <link href="https://friday-go.icu/zh/python"/>
-        <updated>2025-12-10T05:43:38.349Z</updated>
+        <updated>2025-12-11T02:02:26.983Z</updated>
         <summary type="html"><![CDATA[PFinalClub Python 中文专题导航页：系统整理爬虫技术、JS 逆向工程、协程、加密算法、Python 开发工具等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></summary>
         <content type="html"><![CDATA[PFinalClub Python 中文专题导航页：系统整理爬虫技术、JS 逆向工程、协程、加密算法、Python 开发工具等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></content>
         <author>
@@ -55,7 +55,7 @@
         <title type="html"><![CDATA[PHP 中文技术专题导航 - ThinkPHP / Laravel / PHP 8.x / 协程 / 最佳实践]]></title>
         <id>https://friday-go.icu/zh/php</id>
         <link href="https://friday-go.icu/zh/php"/>
-        <updated>2025-12-10T05:43:38.348Z</updated>
+        <updated>2025-12-11T02:02:26.981Z</updated>
         <summary type="html"><![CDATA[PFinalClub PHP 中文专题导航页：系统整理 ThinkPHP 8、Laravel、PHP 8.x 企业级开发、协程池、错误处理等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></summary>
         <content type="html"><![CDATA[PFinalClub PHP 中文专题导航页：系统整理 ThinkPHP 8、Laravel、PHP 8.x 企业级开发、协程池、错误处理等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></content>
         <author>
@@ -67,7 +67,7 @@
         <title type="html"><![CDATA[Golang 中文技术专题导航 - Go 后端 / RAG / 可观测性 / 桌面开发]]></title>
         <id>https://friday-go.icu/zh/golang</id>
         <link href="https://friday-go.icu/zh/golang"/>
-        <updated>2025-12-10T05:43:38.335Z</updated>
+        <updated>2025-12-11T02:02:26.968Z</updated>
         <summary type="html"><![CDATA[PFinalClub Golang 中文专题导航页：系统整理 Go 后端工程实践、RAG 系统、可观测性、Wails 桌面开发、游戏服务器与效率工具等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></summary>
         <content type="html"><![CDATA[PFinalClub Golang 中文专题导航页：系统整理 Go 后端工程实践、RAG 系统、可观测性、Wails 桌面开发、游戏服务器与效率工具等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></content>
         <author>
@@ -79,7 +79,7 @@
         <title type="html"><![CDATA[Python Technical Hub – Web Scraping / Coroutines / Tools & Best Practices 2025]]></title>
         <id>https://friday-go.icu/python</id>
         <link href="https://friday-go.icu/python"/>
-        <updated>2025-12-10T05:43:38.325Z</updated>
+        <updated>2025-12-11T02:02:26.957Z</updated>
         <summary type="html"><![CDATA[PFinalClub Python hub: comprehensive guides on web scraping, JS reverse engineering, coroutines, encryption algorithms, and Python development tools for building efficient applications.]]></summary>
         <content type="html"><![CDATA[PFinalClub Python hub: comprehensive guides on web scraping, JS reverse engineering, coroutines, encryption algorithms, and Python development tools for building efficient applications.]]></content>
         <author>
@@ -91,7 +91,7 @@
         <title type="html"><![CDATA[PHP Technical Hub – Framework Development / Performance / Best Practices 2025]]></title>
         <id>https://friday-go.icu/php</id>
         <link href="https://friday-go.icu/php"/>
-        <updated>2025-12-10T05:43:38.323Z</updated>
+        <updated>2025-12-11T02:02:26.956Z</updated>
         <summary type="html"><![CDATA[PFinalClub PHP hub: comprehensive guides on ThinkPHP 8, Laravel, PHP 8.5, coroutines, error handling, and modern PHP development practices for building production-ready applications.]]></summary>
         <content type="html"><![CDATA[PFinalClub PHP hub: comprehensive guides on ThinkPHP 8, Laravel, PHP 8.5, coroutines, error handling, and modern PHP development practices for building production-ready applications.]]></content>
         <author>
@@ -103,21 +103,9 @@
         <title type="html"><![CDATA[Golang Technical Hub – Production-Ready Go Backend / Web Frameworks / AI & RAG / Observability]]></title>
         <id>https://friday-go.icu/golang</id>
         <link href="https://friday-go.icu/golang"/>
-        <updated>2025-12-10T05:43:38.318Z</updated>
+        <updated>2025-12-11T02:02:26.952Z</updated>
         <summary type="html"><![CDATA[PFinalClub Golang hub: curated guides on Go error handling, web framework selection, RAG systems, observability, containerization and more, giving you a clear path to building production-grade Go services.]]></summary>
         <content type="html"><![CDATA[PFinalClub Golang hub: curated guides on Go error handling, web framework selection, RAG systems, observability, containerization and more, giving you a clear path to building production-grade Go services.]]></content>
-        <author>
-            <name>PFinal南丞</name>
-            <uri>https://friday-go.icu</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Database Technical Hub – MySQL / Configuration / Optimization 2025]]></title>
-        <id>https://friday-go.icu/database</id>
-        <link href="https://friday-go.icu/database"/>
-        <updated>2025-12-10T05:43:38.301Z</updated>
-        <summary type="html"><![CDATA[PFinalClub Database hub: comprehensive guides on MySQL configuration, database optimization, and best practices for production database management.]]></summary>
-        <content type="html"><![CDATA[PFinalClub Database hub: comprehensive guides on MySQL configuration, database optimization, and best practices for production database management.]]></content>
         <author>
             <name>PFinal南丞</name>
             <uri>https://friday-go.icu</uri>
@@ -127,9 +115,21 @@
         <title type="html"><![CDATA[Tools & Utilities Hub – AI Tools / Development Tools / Productivity 2025]]></title>
         <id>https://friday-go.icu/Tools</id>
         <link href="https://friday-go.icu/Tools"/>
-        <updated>2025-12-10T05:43:38.300Z</updated>
+        <updated>2025-12-11T02:02:26.938Z</updated>
         <summary type="html"><![CDATA[PFinalClub Tools hub: comprehensive directory of AI tools, development utilities, CLI tools, Docker guides, and productivity tips for modern developers.]]></summary>
         <content type="html"><![CDATA[PFinalClub Tools hub: comprehensive directory of AI tools, development utilities, CLI tools, Docker guides, and productivity tips for modern developers.]]></content>
+        <author>
+            <name>PFinal南丞</name>
+            <uri>https://friday-go.icu</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Database Technical Hub – MySQL / Configuration / Optimization 2025]]></title>
+        <id>https://friday-go.icu/database</id>
+        <link href="https://friday-go.icu/database"/>
+        <updated>2025-12-11T02:02:26.938Z</updated>
+        <summary type="html"><![CDATA[PFinalClub Database hub: comprehensive guides on MySQL configuration, database optimization, and best practices for production database management.]]></summary>
+        <content type="html"><![CDATA[PFinalClub Database hub: comprehensive guides on MySQL configuration, database optimization, and best practices for production database management.]]></content>
         <author>
             <name>PFinal南丞</name>
             <uri>https://friday-go.icu</uri>
@@ -527,6 +527,20 @@
         <category label="网络编程"/>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Broot - The Command-Line Tool That Makes File Navigation Effortless - Complete Guide 2025]]></title>
+        <id>https://friday-go.icu/Tools/The Command-Line Tool That Makes File Navigation Effortles</id>
+        <link href="https://friday-go.icu/Tools/The Command-Line Tool That Makes File Navigation Effortles"/>
+        <updated>2025-10-15T09:33:00.000Z</updated>
+        <summary type="html"><![CDATA[Complete guide to Broot, a powerful command-line file manager that makes file navigation effortless. Learn how to use Broot for efficient directory browsing, file operations, and terminal productivity.]]></summary>
+        <content type="html"><![CDATA[Complete guide to Broot, a powerful command-line file manager that makes file navigation effortless. Learn how to use Broot for efficient directory browsing, file operations, and terminal productivity.]]></content>
+        <author>
+            <name>PFinal南丞</name>
+            <uri>https://friday-go.icu</uri>
+        </author>
+        <category label="Tools"/>
+        <category label="Command Line, Rust"/>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Broot-让文件导航更高效的命令行神器]]></title>
         <id>https://friday-go.icu/zh/工具/Broot-高效的命令行文件管理器</id>
         <link href="https://friday-go.icu/zh/工具/Broot-高效的命令行文件管理器"/>
@@ -779,19 +793,5 @@
             <name>PFinalClub</name>
             <uri>https://friday-go.icu</uri>
         </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[VSCode快捷键 - 完整使用指南]]></title>
-        <id>https://friday-go.icu/zh/工具/VSCode快捷键</id>
-        <link href="https://friday-go.icu/zh/工具/VSCode快捷键"/>
-        <updated>2025-08-21T10:00:00.000Z</updated>
-        <summary type="html"><![CDATA[VSCode常用快捷键总结，提高开发效率]]></summary>
-        <content type="html"><![CDATA[VSCode常用快捷键总结，提高开发效率]]></content>
-        <author>
-            <name>PFinal南丞</name>
-            <uri>https://friday-go.icu</uri>
-        </author>
-        <category label="工具"/>
-        <category label="VSCode"/>
     </entry>
 </feed>
