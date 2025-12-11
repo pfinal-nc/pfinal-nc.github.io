@@ -19,67 +19,36 @@ export default defineConfig({
     // 忽略带空格的文件名链接（VitePress cleanUrls 转换，实际文件存在）
     /\/Tools\/The-Command-Line-Tool-That-Makes-File-Navigation-Effortles$/,
   ],
-  locales: {
-    root: {
-      label: 'English',
-      lang: 'en-US',
-      title: 'PFinalClub',
-      description: 'PFinalClub is a developer community focused on PHP, Golang, Python, microservices, and cloud-native technologies. We provide original tech articles, practical tutorials, architecture design, performance optimization, DevOps, and more to help developers improve their skills.',
-      themeConfig: {
-        outline: {
-          level: [2, 3],
-          label: 'Outline'
-        },
-        returnToTopLabel: 'Back to Top',
-        sidebarMenuLabel: 'Related Articles',
-        lastUpdatedText: 'Last updated',
-        logo: '/logo.png',
-        nav: [
-          { text: 'Home', link: '/' },
-          { text: 'About', link: '/about' },
-          { text: 'Contact', link: '/contact' },
-          { text: 'Privacy Policy', link: '/privacy-policy' }
-        ],
-        socialLinks: [
-          { icon: 'github', link: 'https://github.com/pfinal-nc' },
-          { icon: 'twitter', link: 'https://x.com/NPfinal' }
-        ],
-        footer: {
-          message: '<a href="/about">About</a> | <a href="/contact">Contact</a> | <a href="/privacy-policy">Privacy Policy</a>',
-          copyright: 'MIT License | PFinalClub'
-        }
-      }
+  title: 'PFinalClub',
+  description: 'PFinalClub是一个以后端 + DevOps + AI 工程实践为核心的小众高质量技术博客。提供原创技术文章、实战教程、架构设计、性能优化等专业内容，专注于Go、PHP、Python后端开发、容器化部署、CI/CD和AI工程化应用。',
+  themeConfig: {
+    outline: {
+      level: [2, 3],
+      label: '目录'
     },
-    zh: {
-      label: '简体中文',
-      lang: 'zh-CN',
-      title: 'PFinalClub',
-      description: 'PFinalClub是一个专注于PHP、Golang、Python、微服务、云原生等技术的开发者社区。提供原创技术文章、实战教程、架构设计、性能优化、DevOps等专业内容，助力开发者提升全方位技术能力。',
-      link: '/zh/',
-      themeConfig: {
-        outline: {
-          level: [2, 3],
-          label: '目录'
-        },
-        returnToTopLabel: '回到顶部',
-        sidebarMenuLabel: '相关文章',
-        lastUpdatedText: '上次更新于',
-        logo: '/logo.png',
-        nav: [
-          { text: '首页', link: '/zh/' },
-          { text: '关于作者', link: '/zh/about' },
-          { text: '联系我们', link: '/zh/contact' },
-          { text: '隐私政策', link: '/zh/privacy-policy' }
-        ],
-        socialLinks: [
-          { icon: 'github', link: 'https://github.com/pfinal-nc' },
-          { icon: 'twitter', link: 'https://x.com/NPfinal' }
-        ],
-        footer: {
-          message: '<a href="/zh/about">关于作者</a> | <a href="/zh/contact">联系我们</a> | <a href="/zh/privacy-policy">隐私政策</a>',
-          copyright: 'MIT License | PFinalClub'
-        }
-      }
+    returnToTopLabel: '回到顶部',
+    sidebarMenuLabel: '相关文章',
+    lastUpdatedText: '上次更新于',
+    logo: '/logo.png',
+    nav: [
+      { text: '首页', link: '/' },
+      { text: '攻防研究', link: '/security/offensive/' },
+      { text: '安全工程', link: '/security/engineering/' },
+      { text: '开发与系统', link: '/dev/' },
+      { text: '数据与自动化', link: '/data/automation/' },
+      { text: '独立开发', link: '/indie/' },
+      { text: '思考/方法论', link: '/thinking/method/' },
+      { text: '关于作者', link: '/about' },
+      { text: '联系我们', link: '/contact' },
+      { text: '隐私政策', link: '/privacy-policy' }
+    ],
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/pfinal-nc' },
+      { icon: 'twitter', link: 'https://x.com/NPfinal' }
+    ],
+    footer: {
+      message: '<a href="/about">关于作者</a> | <a href="/contact">联系我们</a> | <a href="/privacy-policy">隐私政策</a>',
+      copyright: 'MIT License | PFinalClub'
     }
   },
   sitemap: {
@@ -88,38 +57,55 @@ export default defineConfig({
       // 过滤掉不应该索引的页面
       const filtered = items.filter(item => {
         const url = item.url
-        
+
         // 排除 404 页面 (更严格的匹配)
         if (url.includes('/404') || url.endsWith('/404') || url.includes('friday-go.icu/404')) {
           return false
         }
-        
+
         // 排除 XML 文件（sitemap.xml 本身）
         if (url.endsWith('.xml')) {
           return false
         }
-        
+
         // 排除带查询参数的URL
         if (url.includes('?tag=') || url.includes('?type=') || url.includes('?category=')) {
           return false
         }
-        
+
         // 排除子域名 URL（如果意外包含）
-        if (url.includes('nav.friday-go.icu') || 
-            url.includes('game.friday-go.icu') || 
-            url.includes('miao.friday-go.icu') || 
+        if (url.includes('nav.friday-go.icu') ||
+            url.includes('game.friday-go.icu') ||
+            url.includes('miao.friday-go.icu') ||
             url.includes('pnav.friday-go.icu')) {
           return false
         }
-        
+
+        // 排除旧的英文分类URL路径，避免在sitemap中包含
+        if (url.includes('/golang/') ||
+            url.includes('/PHP/') ||
+            url.includes('/python/') ||
+            url.includes('/Tools/') ||
+            url.includes('/database/')) {
+          return false
+        }
+
+        // 排除中文分类的重复内容（因为现在是主要分类）
+        if (url.includes('/zh/security/') ||
+            url.includes('/zh/dev/') ||
+            url.includes('/zh/data/') ||
+            url.includes('/zh/thinking/')) {
+          return false
+        }
+
         return true
       })
-      
+
       // 确保至少有一些 URL
       if (filtered.length === 0) {
         console.warn('⚠️ Warning: Sitemap is empty after filtering!')
       }
-      
+
       return filtered.map(item => ({
         ...item,
         changefreq: 'weekly',
@@ -131,9 +117,7 @@ export default defineConfig({
     }
   },
   extends: blogTheme,
-  lang: 'en-US',
-  title: 'PFinalClub',
-  description: 'PFinalClub is a developer community focused on PHP, Golang, Python, microservices, and cloud-native technologies.',
+  lang: 'zh-CN',
   lastUpdated: true,
   cleanUrls: true, // 移除 .html 后缀，提升 SEO
   head: [
@@ -146,15 +130,15 @@ export default defineConfig({
     ['meta', { name: 'author', content: 'PFinal南丞' }],
     ['meta', { name: 'robots', content: 'index,follow' }],
     ['meta', { name: 'googlebot', content: 'index,follow' }],
-    ['meta', { name: 'keywords', content: 'PFinalClub, Golang tutorial, Go backend development, Go microservices, PHP, Python, 技术博客, Tech Blog' }],
+    ['meta', { name: 'keywords', content: 'PFinalClub, 后端开发, DevOps, AI工程实践, Golang教程, PHP开发, Python爬虫, 微服务架构, 容器化部署' }],
     ['meta', { property: 'og:title', content: 'PFinalClub' }],
-    ['meta', { property: 'og:description', content: 'PFinalClub is a developer community focused on PHP, Golang, Python, microservices, and cloud-native technologies.' }],
+    ['meta', { property: 'og:description', content: 'PFinalClub是一个以后端 + DevOps + AI 工程实践为核心的小众高质量技术博客。提供原创技术文章、实战教程、架构设计、性能优化等专业内容，专注于Go、PHP、Python后端开发、容器化部署、CI/CD和AI工程化应用。' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:url', content: 'https://friday-go.icu' }],
     ['meta', { property: 'og:site_name', content: 'PFinalClub' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:title', content: 'PFinalClub' }],
-    ['meta', { name: 'twitter:description', content: 'PFinalClub is a developer community focused on PHP, Golang, Python, microservices, and cloud-native technologies.' }],
+    ['meta', { name: 'twitter:description', content: 'PFinalClub是一个以后端 + DevOps + AI 工程实践为核心的小众高质量技术博客。提供原创技术文章、实战教程、架构设计、性能优化等专业内容，专注于Go、PHP、Python后端开发、容器化部署、CI/CD和AI工程化应用。' }],
     ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }],
     ['meta', { 'http-equiv': 'Content-Security-Policy', content: "upgrade-insecure-requests" }],
     ['meta', {name:'google-site-verification', content:'K5jxzJ_KXsS0QhsQnBIuKyxt6BGlPD-w1URDWGTWHo8'}],
@@ -184,8 +168,8 @@ export default defineConfig({
       "name": "PFinalClub",
       "alternateName": "PFinal南丞技术博客",
       "url": "https://friday-go.icu",
-      "description": "专注于Golang、PHP、Python、微服务、云原生技术的开发者社区，提供高质量技术文章、实战教程和架构设计经验",
-      "inLanguage": ["zh-CN", "en-US"],
+      "description": "以后端 + DevOps + AI 工程实践为核心的小众高质量技术博客，专注工程化落地与实战经验分享",
+      "inLanguage": "zh-CN",
       "potentialAction": {
         "@type": "SearchAction",
         "target": {
@@ -211,7 +195,7 @@ export default defineConfig({
       "name": "PFinalClub",
       "url": "https://friday-go.icu",
       "logo": "https://friday-go.icu/logo.png",
-      "description": "A developer community focused on Golang, PHP, Python, microservices, and cloud-native technologies",
+      "description": "以后端 + DevOps + AI 工程实践为核心的技术博客，提供工程化落地与实战经验",
       "founder": {
         "@type": "Person",
         "name": "PFinal南丞",
@@ -235,10 +219,10 @@ export default defineConfig({
     ['script', { type: 'application/ld+json' }, JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Blog",
-      "name": "PFinalClub Tech Blog",
+      "name": "PFinalClub 技术博客",
       "url": "https://friday-go.icu",
-      "description": "Professional technical blog covering Golang, PHP, Python, microservices, AI, RAG systems, cloud-native technologies, and software engineering best practices",
-      "inLanguage": ["zh-CN", "en-US"],
+      "description": "专业技术博客，涵盖Golang、PHP、Python、微服务、AI、RAG系统、云原生技术和软件工程最佳实践",
+      "inLanguage": "zh-CN",
       "author": {
         "@type": "Person",
         "name": "PFinal南丞",
@@ -251,35 +235,7 @@ export default defineConfig({
           "@type": "ImageObject",
           "url": "https://friday-go.icu/logo.png"
         }
-      },
-      "blogPost": [
-        {
-          "@type": "BlogPosting",
-          "headline": "Golang 实现 RAG 系统：从 OpenAI API 到向量数据库完整实战",
-          "url": "https://friday-go.icu/zh/golang/Golang实现RAG系统-从OpenAI到向量数据库",
-          "datePublished": "2025-11-11",
-          "author": {
-            "@type": "Person",
-            "name": "PFinal南丞"
-          },
-          "keywords": "Golang RAG, RAG系统, 向量数据库, OpenAI API, LLM, AI",
-          "articleSection": "Golang",
-          "inLanguage": "zh-CN"
-        },
-        {
-          "@type": "BlogPosting",
-          "headline": "Advanced Go Concurrency Patterns for Scalable Applications",
-          "url": "https://friday-go.icu/golang/advanced-go-concurrency-patterns",
-          "datePublished": "2025-08-18",
-          "author": {
-            "@type": "Person",
-            "name": "PFinal南丞"
-          },
-          "keywords": "Go concurrency, worker pools, fan-in fan-out, scalability",
-          "articleSection": "Golang",
-          "inLanguage": "en-US"
-        }
-      ]
+      }
     })]
     // ['script', {}, `
     //   // 重写 performance.measure 方法以避免错误
@@ -350,87 +306,67 @@ export default defineConfig({
   transformPageData(pageData, ctx) {
     // 确保 head 数组存在
     pageData.frontmatter.head = pageData.frontmatter.head || [];
-    
+
     const baseUrl = 'https://friday-go.icu';
-    
+
     // 计算当前页面的规范 URL（不带 .html 后缀和 index.html）
     let currentPath = pageData.relativePath
       .replace(/\.md$/, '')
       .replace(/\/index$/, '')
       .replace(/^index$/, '');
-    
+
     // 如果路径为空，说明是根页面
-    const canonicalUrl = currentPath 
-      ? `${baseUrl}/${currentPath}` 
+    const canonicalUrl = currentPath
+      ? `${baseUrl}/${currentPath}`
       : baseUrl;
-    
+
     // 添加 canonical 标签（最重要的 SEO 标签）
     pageData.frontmatter.head.push([
       'link',
       { rel: 'canonical', href: canonicalUrl }
     ]);
-    
-    // 添加 hreflang 标签支持多语言
-    if (currentPath.startsWith('zh/')) {
-      // 当前是中文页面
-      const enPath = currentPath.replace(/^zh\//, '');
-      pageData.frontmatter.head.push(
-        ['link', { rel: 'alternate', hreflang: 'zh-CN', href: `${baseUrl}/${currentPath}` }],
-        ['link', { rel: 'alternate', hreflang: 'en', href: `${baseUrl}/${enPath}` }],
-        ['link', { rel: 'alternate', hreflang: 'x-default', href: `${baseUrl}/${enPath}` }]
-      );
-    } else {
-      // 当前是英文页面
-      const zhPath = `zh/${currentPath}`;
-      pageData.frontmatter.head.push(
-        ['link', { rel: 'alternate', hreflang: 'en', href: `${baseUrl}/${currentPath || ''}` }],
-        ['link', { rel: 'alternate', hreflang: 'zh-CN', href: `${baseUrl}/${zhPath}` }],
-        ['link', { rel: 'alternate', hreflang: 'x-default', href: `${baseUrl}/${currentPath || ''}` }]
-      );
-    }
-    
+
     // 判断是否为文章详情页（这里假设详情页没有设置 layout）
     // 注意：主题中心页使用 layout: page，所以要先检查 layout === 'page'
     if (pageData.frontmatter.layout === 'page') {
       // 为主题中心页（Topic Hub）添加 CollectionPage 类型的 Schema.org 结构化数据
       // 检查是否是主题中心页（路径匹配主题目录的 index 页面）
       const topicHubPatterns = [
-        /^golang\/?$/,
-        /^PHP\/?$/,
-        /^python\/?$/,
-        /^Tools\/?$/,
-        /^database\/?$/,
-        /^zh\/golang\/?$/,
-        /^zh\/php\/?$/,
-        /^zh\/python\/?$/,
-        /^zh\/工具\/?$/,
-        /^zh\/数据库\/?$/
+        /^security\/engineering\/?$/,
+        /^security\/offensive\/?$/,
+        /^dev\/systems\/?$/,
+        /^data\/automation\/?$/,
+        /^thinking\/method\/?$/,
+        /^thinking\/notes\/?$/
       ];
       const isTopicHub = topicHubPatterns.some(pattern => pattern.test(currentPath));
-      
+
       if (isTopicHub && pageData.frontmatter.title) {
         // 确定主题名称（基于路径匹配）
         let topicName = '';
         let topicCategory = '';
         const isZh = currentPath.startsWith('zh/');
-        
-        if (/^golang\/?$/.test(currentPath) || /^zh\/golang\/?$/.test(currentPath)) {
-          topicName = isZh ? 'Golang 中文技术专题' : 'Golang Technical Hub';
-          topicCategory = 'Golang';
-        } else if (/^PHP\/?$/.test(currentPath) || /^zh\/php\/?$/.test(currentPath)) {
-          topicName = isZh ? 'PHP 中文技术专题' : 'PHP Technical Hub';
-          topicCategory = 'PHP';
-        } else if (/^python\/?$/.test(currentPath) || /^zh\/python\/?$/.test(currentPath)) {
-          topicName = isZh ? 'Python 中文技术专题' : 'Python Technical Hub';
-          topicCategory = 'Python';
-        } else if (/^Tools\/?$/.test(currentPath) || /^zh\/工具\/?$/.test(currentPath)) {
-          topicName = isZh ? '工具与实用程序中文专题' : 'Tools & Utilities Hub';
-          topicCategory = 'Tools';
-        } else if (/^database\/?$/.test(currentPath) || /^zh\/数据库\/?$/.test(currentPath)) {
-          topicName = isZh ? '数据库中文技术专题' : 'Database Technical Hub';
-          topicCategory = 'Database';
+
+        if (/^security\/engineering\/?$/.test(currentPath)) {
+          topicName = '安全工程专题';
+          topicCategory = '安全工程';
+        } else if (/^security\/offensive\/?$/.test(currentPath)) {
+          topicName = '攻防研究专题';
+          topicCategory = '攻防研究';
+        } else if (/^dev\/systems\/?$/.test(currentPath)) {
+          topicName = '开发系统专题';
+          topicCategory = '开发系统';
+        } else if (/^data\/automation\/?$/.test(currentPath)) {
+          topicName = '数据自动化专题';
+          topicCategory = '数据自动化';
+        } else if (/^thinking\/method\/?$/.test(currentPath)) {
+          topicName = '思考方法专题';
+          topicCategory = '思考方法';
+        } else if (/^thinking\/notes\/?$/.test(currentPath)) {
+          topicName = '随笔杂谈专题';
+          topicCategory = '随笔杂谈';
         }
-        
+
         if (topicName) {
           const collectionPage = {
             "@context": "https://schema.org",
@@ -438,15 +374,15 @@ export default defineConfig({
             "name": topicName,
             "url": canonicalUrl,
             "description": pageData.frontmatter.description || pageData.description,
-            "inLanguage": currentPath.startsWith('zh/') ? "zh-CN" : "en-US",
+            "inLanguage": "zh-CN",
             "about": {
               "@type": "Thing",
               "name": topicCategory
             },
             "mainEntity": {
               "@type": "ItemList",
-              "name": `${topicName} - Article Collection`,
-              "description": `Collection of articles about ${topicCategory}`
+              "name": `${topicName} - 文章集合`,
+              "description": `关于${topicCategory}的文章集合`
             },
             "publisher": {
               "@type": "Organization",
@@ -457,14 +393,14 @@ export default defineConfig({
               }
             }
           };
-          
+
           if (pageData.frontmatter.keywords) {
             const keywords = Array.isArray(pageData.frontmatter.keywords)
               ? pageData.frontmatter.keywords.join(', ')
               : pageData.frontmatter.keywords;
             collectionPage.keywords = keywords;
           }
-          
+
           pageData.frontmatter.head.push([
             'script',
             { type: 'application/ld+json' },
@@ -474,17 +410,17 @@ export default defineConfig({
       }
     } else if (!pageData.frontmatter.layout) {
       const articleKeywords = pageData.frontmatter.keywords;
-      // 只使用文章自定义关键词或核心品牌词（与 BASE_KEYWORDS 保持一致）
-      const coreKeywords = 'PFinalClub, Golang tutorial, Go backend development, Go microservices, PHP, Python, 技术博客, Tech Blog';
-      const newKeywords = articleKeywords 
-        ? `${articleKeywords}, ${coreKeywords}` 
+      // 只使用文章自定义关键词或核心品牌词
+      const coreKeywords = 'PFinalClub, Golang教程, Go后端开发, Go微服务, PHP, Python, 技术博客';
+      const newKeywords = articleKeywords
+        ? `${articleKeywords}, ${coreKeywords}`
         : coreKeywords;
       // 添加或覆盖 meta keywords 标签
       pageData.frontmatter.head.push([
         'meta',
         { name: 'keywords', content: newKeywords }
       ]);
-      
+
       // 为文章页面添加 Schema.org Article 结构化数据
       // 即使没有 date，只要有 title 就添加结构化数据（使用 lastUpdated 或当前时间作为 datePublished）
       if (pageData.frontmatter.title) {
@@ -509,131 +445,51 @@ export default defineConfig({
             }
           },
           "description": pageData.frontmatter.description || pageData.description,
-          "inLanguage": currentPath.startsWith('zh/') ? "zh-CN" : "en-US",
+          "inLanguage": "zh-CN",
           "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": canonicalUrl
           }
         };
-        
+
         // 添加关键词
         if (articleKeywords) {
           article.keywords = articleKeywords;
         }
-        
+
         // 添加文章部分/分类
         if (pageData.frontmatter.category) {
           article.articleSection = pageData.frontmatter.category;
-        } else if (currentPath.toLowerCase().includes('/golang/')) {
-          article.articleSection = 'Golang';
-        } else if (currentPath.toLowerCase().includes('/php/')) {
-          article.articleSection = 'PHP';
-        } else if (currentPath.toLowerCase().includes('/python/')) {
-          article.articleSection = 'Python';
-        } else if (currentPath.toLowerCase().includes('/tools/')) {
-          article.articleSection = 'Tools';
-        } else if (currentPath.toLowerCase().includes('/database/')) {
-          article.articleSection = 'Database';
+        } else if (currentPath.toLowerCase().includes('/security/engineering/')) {
+          article.articleSection = '安全工程';
+        } else if (currentPath.toLowerCase().includes('/security/offensive/')) {
+          article.articleSection = '攻防研究';
+        } else if (currentPath.toLowerCase().includes('/dev/systems/')) {
+          article.articleSection = '开发系统';
+        } else if (currentPath.toLowerCase().includes('/data/automation/')) {
+          article.articleSection = '数据自动化';
+        } else if (currentPath.toLowerCase().includes('/thinking/method/')) {
+          article.articleSection = '思考方法';
+        } else if (currentPath.toLowerCase().includes('/thinking/notes/')) {
+          article.articleSection = '随笔杂谈';
         }
-        
+
         // 添加图片（如果有）
         if (pageData.frontmatter.image) {
           article.image = {
             "@type": "ImageObject",
-            "url": pageData.frontmatter.image.startsWith('http') 
-              ? pageData.frontmatter.image 
+            "url": pageData.frontmatter.image.startsWith('http')
+              ? pageData.frontmatter.image
               : `${baseUrl}${pageData.frontmatter.image}`
           };
         }
-        
+
         pageData.frontmatter.head.push([
           'script',
           { type: 'application/ld+json' },
           JSON.stringify(article)
         ]);
       }
-    } else if (pageData.frontmatter.layout === 'page') {
-      // 为主题中心页（Topic Hub）添加 CollectionPage 类型的 Schema.org 结构化数据
-      // 检查是否是主题中心页（路径匹配主题目录的 index 页面）
-      const topicHubPatterns = [
-        /^golang\/?$/,
-        /^PHP\/?$/,
-        /^python\/?$/,
-        /^Tools\/?$/,
-        /^database\/?$/,
-        /^zh\/golang\/?$/,
-        /^zh\/php\/?$/,
-        /^zh\/python\/?$/,
-        /^zh\/工具\/?$/,
-        /^zh\/数据库\/?$/
-      ];
-      const isTopicHub = topicHubPatterns.some(pattern => pattern.test(currentPath));
-      
-      if (isTopicHub && pageData.frontmatter.title) {
-        // 确定主题名称（基于路径匹配）
-        let topicName = '';
-        let topicCategory = '';
-        const isZh = currentPath.startsWith('zh/');
-        
-        if (/^golang\/?$/.test(currentPath) || /^zh\/golang\/?$/.test(currentPath)) {
-          topicName = isZh ? 'Golang 中文技术专题' : 'Golang Technical Hub';
-          topicCategory = 'Golang';
-        } else if (/^PHP\/?$/.test(currentPath) || /^zh\/php\/?$/.test(currentPath)) {
-          topicName = isZh ? 'PHP 中文技术专题' : 'PHP Technical Hub';
-          topicCategory = 'PHP';
-        } else if (/^python\/?$/.test(currentPath) || /^zh\/python\/?$/.test(currentPath)) {
-          topicName = isZh ? 'Python 中文技术专题' : 'Python Technical Hub';
-          topicCategory = 'Python';
-        } else if (/^Tools\/?$/.test(currentPath) || /^zh\/工具\/?$/.test(currentPath)) {
-          topicName = isZh ? '工具与实用程序中文专题' : 'Tools & Utilities Hub';
-          topicCategory = 'Tools';
-        } else if (/^database\/?$/.test(currentPath) || /^zh\/数据库\/?$/.test(currentPath)) {
-          topicName = isZh ? '数据库中文技术专题' : 'Database Technical Hub';
-          topicCategory = 'Database';
-        }
-        
-        if (topicName) {
-          const collectionPage = {
-            "@context": "https://schema.org",
-            "@type": "CollectionPage",
-            "name": topicName,
-            "url": canonicalUrl,
-            "description": pageData.frontmatter.description || pageData.description,
-            "inLanguage": currentPath.startsWith('zh/') ? "zh-CN" : "en-US",
-            "about": {
-              "@type": "Thing",
-              "name": topicCategory
-            },
-            "mainEntity": {
-              "@type": "ItemList",
-              "name": `${topicName} - Article Collection`,
-              "description": `Collection of articles about ${topicCategory}`
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "PFinalClub",
-              "logo": {
-                "@type": "ImageObject",
-                "url": `${baseUrl}/logo.png`
-              }
-            }
-          };
-          
-          // 添加关键词
-          if (pageData.frontmatter.keywords) {
-            const keywords = Array.isArray(pageData.frontmatter.keywords) 
-              ? pageData.frontmatter.keywords.join(', ') 
-              : pageData.frontmatter.keywords;
-            collectionPage.keywords = keywords;
-          }
-          
-          pageData.frontmatter.head.push([
-            'script',
-            { type: 'application/ld+json' },
-            JSON.stringify(collectionPage)
-          ]);
-        }
-      }
     }
-  }, 
+  },
 })

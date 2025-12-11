@@ -1,79 +1,118 @@
 ---
-title: "Tools & Utilities Hub – AI Tools / Development Tools / Productivity 2025"
-description: "PFinalClub Tools hub: comprehensive directory of AI tools, development utilities, CLI tools, Docker guides, and productivity tips for modern developers."
+title: "工具与实用程序中文专题导航 - AI 工具 / 开发工具 / 效率提升 2025"
+description: "PFinalClub 工具与实用程序中文专题导航页：系统整理 AI 工具目录、开发工具、CLI 工具、Docker 指南、效率技巧等核心文章，让中文读者可以按专题快速找到高质量实战内容。"
 keywords:
-  - ai tools directory 2025
-  - development tools
-  - cli tools
-  - docker deployment
-  - productivity tools
-  - ai coding assistants
+  - ai 工具目录 2025
+  - 开发工具 中文
+  - cli 工具
+  - docker 部署
+  - 效率工具
+  - ai 编程助手
   - homebrew tap
-  - composer configuration
+  - composer 配置
 ---
 
-# Tools & Utilities Hub
+# 工具与实用程序中文专题导航
 
-This is the **PFinalClub Tools & Utilities Hub**.  
-Instead of scattered long-form articles, this page groups the most important tools and utilities content by topic so you can:
+这是 **PFinalClub 工具与实用程序中文技术专题 Hub**。  
+与零散的长文不同，本页面按主题整理最重要的工具和实用程序内容，方便你：
 
-- Follow a learning path from **foundations to production**
-- Quickly locate a **"main article"** for a given problem
-- Help search engines understand: **"friday-go.icu is a high-quality tools and utilities site"**
-
----
-
-## 1. AI Tools & Coding Assistants
-
-- **[AI Tools Directory 2025 – 500+ Best AI Apps for Developers, Writers & Creators](/Tools/AI-Tools-Directory-2025-Best-AI-Apps-and-Use-Cases)**  
-  Complete AI tools directory with 500+ best AI apps for coding, writing, design, and automation. Curated list with live navigation site and use cases.
-
-- **[20 Practical Qwen Code Tips to Boost Efficiency](/Tools/20-practical-qwen-code-tips-to-boost-efficiency)**  
-  Practical tips and tricks for using Qwen AI coding assistant to improve your development efficiency.
-
-- **[Vibe Coding – The Era of Developers: How to Code with ChatGPT 5.1, Not Be Replaced](/Tools/Vibe-Coding-ChatGPT-5.1)**  
-  Guide to working effectively with ChatGPT 5.1 and AI coding assistants in the modern development era.
-
-- **[AutoGen in Financial Data Analysis – Automating Workflows with AI Agents](/Tools/AutoGen-in-Financial-Data-Analysis-Automating-Workflows-with-AI-Agents)**  
-  Using AutoGen framework to automate financial data analysis workflows with AI agents.
+- 按照从**基础到生产**的学习路径
+- 快速定位针对特定问题的**"核心文章"**
+- 帮助搜索引擎理解：**"friday-go.icu 是高质量的工具与实用程序中文技术站点"**
 
 ---
 
-## 2. CLI Tools & Command Line
+## 1. AI 工具与编程助手
 
-- **[The Command-Line Tool That Makes File Navigation Effortless](/Tools/The-Command-Line-Tool-That-Makes-File-Navigation-Effortles)**  
-  Discover powerful command-line tools for efficient file navigation and directory management.
+- **[Vibe Coding – 时代的开发者：如何跟 ChatGPT 5.1 一起写代码，而不是被替代](/zh/工具/Vibe-Coding-时代的开发者：如何跟-ChatGPT-5.1-一起写代码，而不是被替代.md)**  
+  在现代开发时代如何有效使用 ChatGPT 5.1 和 AI 编程助手的指南。
 
-- **[Make CLI Tools Brand New with Golang and Color](/Tools/Make-CLI-Tools-Brand-New-with-Golang-and-Color)**  
-  Guide to building beautiful, colorful CLI tools using Go and color libraries.
+- **[Qwen Code 30 个使用小技巧](/zh/工具/Qwen%20Code%2030个使用小技巧.md)**  
+  使用 Qwen AI 编程助手提升开发效率的实用技巧和窍门。
 
-- **[Publish Personal Tools with Homebrew Tap](/Tools/Publish-Personal-Tools-with-Homebrew-Tap)**  
-  Step-by-step guide to publishing your CLI tools as Homebrew packages for easy installation.
+- **[AutoGen 在金融数据分析中的应用 – 使用 AI 代理自动化工作流](/zh/工具/autogen-financial-analysis.md)**  
+  使用 AutoGen 框架通过 AI 代理自动化金融数据分析工作流。
 
----
+- **[MCP 提示语管理工具](/zh/工具/MCP%20提示语管理工具.md)**  
+  MCP（Model Context Protocol）提示语管理工具的使用指南和最佳实践。
 
-## 3. Deployment & DevOps Tools
-
-- **[Docker Go Project Deployment Guide](/Tools/Docker-Go-Project-Deployment-Guide)**  
-  Complete guide to containerizing and deploying Go projects with Docker, including best practices and optimization.
-
----
-
-## 4. Package Management & Configuration
-
-- **[Composer Configuration File Explanation](/Tools/Composer-Configuration-File-Explanation)**  
-  Comprehensive guide to understanding and configuring Composer for PHP dependency management.
+- **[MCP 服务器精选：提升 AI 编程效率的 5 大神器](/zh/工具/MCP服务器精选：提升AI编程效率的5大神器.md)**  
+  精选的 MCP 服务器工具，帮助提升 AI 编程效率。
 
 ---
 
-## 5. How to Use This Hub
+## 2. CLI 工具与命令行
 
-If you are new to this Tools section, a recommended learning path is:
+- **[Broot – 高效的命令行文件管理器](/zh/工具/Broot-高效的命令行文件管理器.md)**  
+  发现强大的命令行工具，实现高效的文件导航和目录管理。
 
-1. **Start with foundations**: Explore AI coding assistants and productivity tools for 2025
-2. **Pick your tools**: Learn to create and publish your own command-line utilities
-3. **Explore deployment**: Use Docker and other tools for efficient project deployment
-4. **Invest in workflow**: Configure package managers and development tools for maximum productivity
+- **[让 CLI 工具焕然一新！用 golang 与 Color 库打造多彩命令行体验](/zh/工具/让CLI工具焕然一新！用golang与Color库打造多彩命令行体验.md)**  
+  使用 Go 和颜色库构建美观、多彩的 CLI 工具的指南。
 
-You can treat this page as the **entry point for all Tools & Utilities content** on PFinalClub.  
-Both search engines and new readers can quickly see the full picture of what you do in the tools and utilities ecosystem.
+---
+
+## 3. 部署与 DevOps 工具
+
+- **[Docker 部署 Go 项目实践指南](/zh/工具/Docker部署Go项目实践指南.md)**  
+  使用 Docker 容器化和部署 Go 项目的完整指南，包括最佳实践和优化。
+
+- **[Nginx 配置文件详解](/zh/工具/Nginx配置文件详解.md)**  
+  Nginx 配置文件的详细解析和最佳实践。
+
+---
+
+## 4. 包管理与配置
+
+- **[Composer 配置文件说明](/zh/工具/Composer配置文件说明.md)**  
+  理解和配置 Composer 进行 PHP 依赖管理的完整指南。
+
+---
+
+## 5. 开发环境与编辑器
+
+- **[Arc 浏览器更符合开发者](/zh/工具/Arc%20浏览器更符合开发者.md)**  
+  介绍 Arc 浏览器如何更好地满足开发者的需求。
+
+- **[PHPStorm 快捷键](/zh/工具/PHPStorm快捷键.md)**  
+  PHPStorm IDE 常用快捷键和效率技巧。
+
+- **[VSCode 快捷键](/zh/工具/VSCode快捷键.md)**  
+  Visual Studio Code 常用快捷键和效率技巧。
+
+- **[Tmux 常用快捷键](/zh/工具/Tmux%20常用快捷键.md)**  
+  Tmux 终端复用器的常用快捷键和配置技巧。
+
+- **[IDE 偷懒小工具](/zh/工具/IDE偷懒小工具.md)**  
+  提升 IDE 使用效率的小工具和技巧。
+
+---
+
+## 6. 日志与监控工具
+
+- **[使用 Devslog 做结构化日志处理](/zh/工具/使用Devslog结构化日志处理.md)**  
+  从"乱七八糟的字符串日志"升级到结构化日志，方便后续接入 ELK / Loki / ClickHouse 等。
+
+- **[从手动到自动：Go 语言助力快速识别代码中的安全隐患](/zh/工具/从手动到自动：Go语言助力快速识别代码中的安全隐患.md)**  
+  结合工具链做静态检查与安全扫描，为生产环境保驾护航。
+
+---
+
+## 7. 版本控制
+
+- **[Git 基本操作](/zh/工具/Git%20基本操作.md)**  
+  Git 版本控制系统的基本操作和常用命令。
+
+---
+
+## 8. 如何使用这个导航页？
+
+如果你是第一次来到这个工具与实用程序中文专题，推荐学习路径是：
+
+1. **从基础开始**：探索 2025 年 AI 编程助手和效率工具
+2. **选择你的工具**：学习创建和发布自己的命令行实用程序
+3. **探索部署**：使用 Docker 和其他工具进行高效项目部署
+4. **投资工作流程**：配置包管理器和开发工具以最大化生产力
+
+你可以把这个页面当作 **PFinalClub 上所有工具与实用程序中文内容的入口**。  
+搜索引擎和新读者都能快速了解你在工具和实用程序生态系统中的完整内容。

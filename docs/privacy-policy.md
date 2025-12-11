@@ -1,169 +1,168 @@
 ---
-title: Privacy Policy
-description: Privacy Policy for PFinalClub - Learn how we collect, use, and protect your personal information.
-keywords: privacy policy, data protection, cookies, GDPR, personal information
+title: 隐私政策
+description: PFinalClub隐私政策 - 了解我们如何收集、使用和保护您的个人信息。
+keywords: 隐私政策, 数据保护, cookies, GDPR, 个人信息
 date: 2025-03-14
-author: PFinalClub
-hidden: true
+author: PFinal南丞
 ---
 
-# Privacy Policy
+# 隐私政策
 
-**Last Updated: November 10, 2025**
+**最后更新：2025年3月14日**
 
-PFinalClub ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website [https://friday-go.icu](https://friday-go.icu).
+PFinalClub（"我们"、"我们的"或"我们"）致力于保护您的隐私。本隐私政策说明了当您访问我们的网站 [https://friday-go.icu](https://friday-go.icu) 时，我们如何收集、使用、披露和保护您的信息。
 
-## 1. Information We Collect
+## 1. 我们收集的信息
 
-### 1.1 Personal Information
-We may collect personal information that you voluntarily provide to us when you:
-- Subscribe to our newsletter
-- Leave comments on articles
-- Contact us through our contact form
-- Create an account (if applicable)
+### 1.1 个人信息
+我们可能会收集您自愿提供给我们的个人信息，当您：
+- 订阅我们的新闻通讯
+- 在文章上留言评论
+- 通过联系表单与我们联系
+- 创建账户（如适用）
 
-This information may include:
-- Name
-- Email address
-- IP address
-- Location data (city/country level)
+这些信息可能包括：
+- 姓名
+- 电子邮箱地址
+- IP地址
+- 位置数据（城市/国家级别）
 
-### 1.2 Automatically Collected Information
-When you visit our website, we automatically collect certain information about your device, including:
-- Browser type and version
-- Operating system
-- Device type (desktop, mobile, tablet)
-- Referring/exit pages
-- Date and time stamps
-- Pages viewed and time spent on pages
+### 1.2 自动收集的信息
+当您访问我们的网站时，我们会自动收集关于您设备的某些信息，包括：
+- 浏览器类型和版本
+- 操作系统
+- 设备类型（台式机、手机、平板）
+- 来源/退出页面
+- 日期和时间戳
+- 查看的页面和在页面上花费的时间
 
-### 1.3 Cookies and Tracking Technologies
-We use cookies and similar tracking technologies to:
-- Remember your preferences
-- Understand how you use our website
-- Improve our content and services
-- Deliver personalized advertisements
+### 1.3 Cookies和跟踪技术
+我们使用cookies和类似的跟踪技术来：
+- 记住您的偏好
+- 了解您如何使用我们的网站
+- 改善我们的内容和服务
+- 传递相关内容
 
-**Types of Cookies We Use:**
-- **Essential Cookies**: Required for the website to function properly
-- **Analytics Cookies**: Help us understand how visitors interact with our website
-- **Advertising Cookies**: Used to deliver relevant advertisements
+**我们使用的Cookie类型：**
+- **必要Cookie**：网站正常运行所需
+- **分析Cookie**：帮助我们了解访问者与网站的互动方式
+- **广告Cookie**：通过Google AdSense传递相关广告
 
-## 2. How We Use Your Information
+## 2. 我们如何使用您的信息
 
-We use the collected information for:
+我们使用收集的信息用于：
 
-- **Service Delivery**: Providing and maintaining our website and services
-- **Communication**: Responding to your inquiries and sending newsletters
-- **Analytics**: Understanding usage patterns and improving user experience
-- **Advertising**: Displaying relevant advertisements through Google AdSense
-- **Security**: Detecting and preventing fraud or malicious activities
-- **Legal Compliance**: Complying with applicable laws and regulations
+- **服务交付**：提供和维护我们的网站和服务
+- **沟通**：回复您的查询并发送新闻通讯
+- **分析**：了解使用模式并改善用户体验
+- **广告**：通过Google AdSense显示相关广告
+- **安全**：检测和防止欺诈或恶意活动
+- **合规**：遵守适用的法律法规
 
-## 3. Google AdSense and Third-Party Advertising
+## 3. Google AdSense和第三方广告
 
 ### 3.1 Google AdSense
-We use Google AdSense to display advertisements on our website. Google uses cookies to serve ads based on your prior visits to our website or other websites. You may opt out of personalized advertising by visiting [Google's Ads Settings](https://www.google.com/settings/ads).
+我们使用Google AdSense在我们的网站上显示广告。Google使用Cookie根据您访问我们的网站或其他网站的记录来投放广告。您可以访问[Google广告设置](https://www.google.com/settings/ads)选择退出个性化广告。
 
-### 3.2 Third-Party Cookies
-Third-party vendors, including Google, use cookies to serve ads based on your past visits to our website. These cookies enable them and their partners to serve ads based on your visit to our site and/or other sites on the Internet.
+### 3.2 第三方Cookie
+第三方供应商，包括Google，在Cookie的帮助下向我们的网站投放广告。这些Cookie使他们及其合作伙伴能够根据您对网站的访问向您投放广告。
 
-### 3.3 GDPR Compliance
-For users in the European Economic Area (EEA), we comply with GDPR requirements by:
-- Obtaining explicit consent before using non-essential cookies
-- Providing clear information about data collection practices
-- Allowing you to withdraw consent at any time
-- Enabling you to access, correct, or delete your personal data
+### 3.3 GDPR合规
+对于欧洲经济区（EEA）的用户，我们通过以下方式遵守GDPR要求：
+- 在使用非必要Cookie前获得明确同意
+- 提供有关数据收集实践的清晰信息
+- 允许您随时撤回同意
+- 允许您访问、更正或删除您的个人数据
 
-## 4. Information Sharing and Disclosure
+## 4. 信息共享和披露
 
-We do not sell, trade, or rent your personal information to third parties. We may share information with:
+我们不出售、交易或出租您的个人信息给第三方。我们可能会在以下情况下共享信息：
 
-- **Service Providers**: Third-party companies that help us operate our website (hosting, analytics, email services)
-- **Advertising Partners**: Google AdSense and other advertising networks
-- **Legal Authorities**: When required by law or to protect our rights
-- **Business Transfers**: In the event of a merger, acquisition, or sale of assets
+- **服务提供商**：帮助我们运营网站的第三方公司（托管、分析、电子邮件服务）
+- **广告合作伙伴**：Google AdSense和其他广告网络
+- **法律机构**：法律要求或保护我们的权利
+- **业务转让**：合并、收购或资产销售时
 
-## 5. Data Security
+## 5. 数据安全
 
-We implement appropriate technical and organizational measures to protect your personal information, including:
-- Encryption of data in transit (HTTPS)
-- Regular security audits
-- Access controls and authentication
-- Secure data storage
+我们实施适当的技术和组织措施来保护您的个人信息，包括：
+- 数据传输加密（HTTPS）
+- 定期安全审计
+- 访问控制和认证
+- 安全数据存储
 
-However, no method of transmission over the Internet is 100% secure. While we strive to protect your information, we cannot guarantee absolute security.
+但是，互联网传输方法并非100%安全。虽然我们努力保护您的信息，但我们不能保证绝对安全。
 
-## 6. Data Retention
+## 6. 数据保留
 
-We retain your personal information only for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required by law.
+我们只保留本隐私政策中概述的目的所需的您的个人信息，除非法律要求更长的保留期。
 
-- **Account Data**: Retained until you request deletion
-- **Analytics Data**: Aggregated and anonymized after 26 months
-- **Cookies**: Most expire after 2 years
+- **账户数据**：在您请求删除时保留
+- **分析数据**：在26个月后聚合和匿名化
+- **Cookie**：大多数在2年后过期
 
-## 7. Your Rights and Choices
+## 7. 您的权利和选择
 
-Depending on your location, you may have the following rights:
+根据您的位置，您可能有以下权利：
 
-### 7.1 Access and Correction
-You have the right to access and update your personal information.
+### 7.1 访问和更正
+您有权访问和更新您的个人信息。
 
-### 7.2 Data Portability
-You can request a copy of your personal data in a structured, machine-readable format.
+### 7.2 数据便携性
+您可以要求以结构化、机器可读的格式获取您的个人数据副本。
 
-### 7.3 Deletion
-You can request deletion of your personal information (right to be forgotten).
+### 7.3 删除
+您可以要求删除您的个人信息（被遗忘的权利）。
 
-### 7.4 Opt-Out
-You can opt-out of:
-- Marketing communications by clicking "unsubscribe" in our emails
-- Personalized advertising by visiting [NAI Opt-Out](http://www.networkadvertising.org/choices/) or [DAA Opt-Out](http://www.aboutads.info/choices/)
-- Google Analytics by installing the [Google Analytics Opt-out Browser Add-on](https://tools.google.com/dlpage/gaoptout)
+### 7.4 退出
+您可以退出：
+- 通过在我们邮件中点击"退订"取消营销通讯
+- 访问[NAI退出](http://www.networkadvertising.org/choices/)或[DAA退出](http://www.aboutads.info/choices/)进行个性化广告
+- 安装[Google Analytics退出浏览器插件](https://tools.google.com/dlpage/gaoptout)进行Google Analytics
 
-### 7.5 Cookie Management
-You can manage cookies through your browser settings. Note that disabling cookies may affect website functionality.
+### 7.5 Cookie管理
+您可以通过浏览器设置管理Cookie。请注意，禁用Cookie可能会影响网站功能。
 
-## 8. Children's Privacy
+## 8. 儿童隐私
 
-Our website is not intended for children under 13 years of age. We do not knowingly collect personal information from children. If you believe we have collected information from a child, please contact us immediately.
+我们的网站不面向13岁以下儿童。我们不会故意收集13岁以下儿童的个人信息。如果您认为我们收集了儿童的信息，请立即与我们联系。
 
-## 9. International Data Transfers
+## 9. 国际数据传输
 
-Your information may be transferred to and maintained on servers located outside of your country. We ensure appropriate safeguards are in place to protect your data in accordance with this Privacy Policy.
+您的信息可能会传输到并存储在您国家/地区以外的服务器上。我们确保采取适当措施根据本隐私政策保护您的数据。
 
-## 10. California Privacy Rights (CCPA)
+## 10. 加利福尼亚隐私权（CCPA）
 
-If you are a California resident, you have specific rights regarding your personal information:
-- Right to know what personal information is collected
-- Right to delete personal information
-- Right to opt-out of the sale of personal information (we do not sell personal information)
-- Right to non-discrimination for exercising your rights
+如果您是加利福尼亚居民，您拥有有关您的个人信息的特定权利：
+- 知道收集了哪些个人数据
+- 删除个人信息的权利
+- 出售个人信息的选择权（我们不出售个人数据）
+- 行使您的权利时不受歧视
 
-## 11. Changes to This Privacy Policy
+## 11. 本隐私政策的变更
 
-We may update this Privacy Policy from time to time. We will notify you of any material changes by:
-- Posting the new Privacy Policy on this page
-- Updating the "Last Updated" date
-- Sending an email notification (for significant changes)
+我们可能随时更新本隐私政策。我们通过以下方式通知您的重大变更：
+- 在本页面发布新隐私政策
+- 更新"最后更新"日期
+- 发送电子邮件通知（对于重大变更）
 
-We encourage you to review this Privacy Policy periodically.
+我们鼓励您定期查看本隐私政策。
 
-## 12. Contact Us
+## 12. 联系我们
 
-If you have any questions, concerns, or requests regarding this Privacy Policy, please contact us:
+如果您对本隐私政策有任何问题、疑虑或请求，请联系我们：
 
-- **Email**: lampxiezi@163.com
-- **Website**: [https://friday-go.icu](https://friday-go.icu)
-- **Response Time**: We aim to respond within 48 hours
+- **邮箱**：lampxiezi@163.com
+- **网站**：[https://friday-go.icu](https://friday-go.icu)
+- **响应时间**：我们力争在48小时内回应
 
-## 13. Consent
+## 13. 同意
 
-By using our website, you consent to this Privacy Policy and agree to its terms.
+使用我们的网站即表示您同意本隐私政策并同意其条款。
 
 ---
 
-**Additional Resources:**
-- [GDPR Information](https://gdpr.eu/)
-- [Google Privacy Policy](https://policies.google.com/privacy)
-- [Google AdSense Policies](https://support.google.com/adsense/answer/48182)
+**其他资源：**
+- [GDPR信息](https://gdpr.eu/)
+- [Google隐私政策](https://policies.google.com/privacy)
+- [Google AdSense政策](https://support.google.com/adsense/answer/48182)

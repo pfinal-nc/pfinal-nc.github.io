@@ -57,6 +57,22 @@ export default {
         }
       };
 
+      // 隐藏首页标签区域
+      const hideHomeTags = () => {
+        // 只在首页隐藏标签
+        if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+          const tagCard = document.querySelector('.card.tags');
+          if (tagCard) {
+            tagCard.style.display = 'none';
+            tagCard.style.visibility = 'hidden';
+            tagCard.style.height = '0';
+            tagCard.style.overflow = 'hidden';
+            tagCard.style.margin = '0';
+            tagCard.style.padding = '0';
+          }
+        }
+      };
+
       // 等待 DOM 加载完成
       router.onAfterRouteChanged = (to) => {
         // 先检查 404 重定向
@@ -64,16 +80,18 @@ export default {
         
         // 延迟执行，确保 DOM 已更新
         setTimeout(() => {
+          hideHomeTags();
           trackInternalLinks()
           trackSearchEvents()
           trackShareEvents()
         }, 100)
       }
-      
+
       // 页面加载时也执行一次
       if (document.readyState === 'complete') {
         handle404Redirect();
         setTimeout(() => {
+          hideHomeTags();
           trackInternalLinks()
           trackSearchEvents()
           trackShareEvents()
@@ -82,11 +100,42 @@ export default {
         window.addEventListener('load', () => {
           handle404Redirect();
           setTimeout(() => {
+            hideHomeTags();
             trackInternalLinks()
             trackSearchEvents()
             trackShareEvents()
           }, 100)
         })
+      }
+      
+      // 使用 MutationObserver 监听 DOM 变化，确保标签区域被隐藏
+      if (typeof window !== 'undefined' && window.MutationObserver) {
+        const observer = new MutationObserver(() => {
+          if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+            const tagCard = document.querySelector('.card.tags');
+            if (tagCard && tagCard.style.display !== 'none') {
+              tagCard.style.display = 'none';
+              tagCard.style.visibility = 'hidden';
+              tagCard.style.height = '0';
+              tagCard.style.overflow = 'hidden';
+            }
+          }
+        });
+        
+        // 开始观察
+        if (document.body) {
+          observer.observe(document.body, {
+            childList: true,
+            subtree: true
+          });
+        } else {
+          document.addEventListener('DOMContentLoaded', () => {
+            observer.observe(document.body, {
+              childList: true,
+              subtree: true
+            });
+          });
+        }
       }
     }
   }

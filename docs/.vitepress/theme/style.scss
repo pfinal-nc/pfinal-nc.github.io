@@ -54,3 +54,25 @@
     height: 60px;
   }
 }
+
+/* 隐藏首页标签区域 */
+.VPHome {
+  /* 隐藏标签卡片区域 */
+  .card.tags,
+  div.card.tags,
+  aside .card.tags,
+  .blog-info .card.tags,
+  .blog-info-wrapper .card.tags {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+/* 全局隐藏标签卡片（作为备用） */
+.card.tags {
+  display: none !important;
+}
