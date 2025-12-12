@@ -1,11 +1,31 @@
 ---
-title: Go语言并发模式实战指南
-date: 2024-11-08 14:32:53
+title: "Go语言并发模式深度解析（7种核心模式实战指南）"
+slug: "go-concurrency-patterns-guide"
+date: 2024-11-08
+updated: 2024-11-08
+authors:
+  - "PFinal南丞"
+categories:
+  - "开发与系统"
+  - "Go实战"
 tags:
-  - golang
-description: 本文详细介绍 Go 语言中的并发模式，包括： 7种核心并发模式的实现, 每种模式的优缺点分析,实际应用场景示例
-author: PFinal南丞  
-keywords: Go, 并发, 模式, 编程, 并发编程, Go语言, 并发模式, 并发实战, 并发指南
+  - "go"
+  - "并发编程"
+  - "高性能"
+  - "goroutine"
+  - "channel"
+  - "并发模式"
+keywords:
+  - "go并发模式"
+  - "高并发编程"
+  - "goroutine实战"
+  - "channel使用"
+  - "并发性能优化"
+summary: "深入解析Go语言7种核心并发模式，包含实际应用场景和性能对比，帮助开发者掌握高并发编程最佳实践和性能优化技巧。"
+readingTime: 18
+cover: "/images/go-concurrency-patterns.png"
+status: "published"
+toc: true
 ---
 
 # Go语言并发模式实战指南

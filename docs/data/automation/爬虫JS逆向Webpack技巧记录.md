@@ -1,13 +1,31 @@
 ---
-title: "如何掌握爬虫JS逆向Webpack技巧记录 - Python 开发完整指南"
-date: 2023-05-15 10:14:02
+title: "Python爬虫JS逆向实战指南（Webpack加密破解与数据采集）"
+slug: "python-js-reverse-webpack"
+date: 2023-05-15
+updated: 2023-05-15
+authors:
+  - "PFinal南丞"
+categories:
+  - "数据与自动化"
+  - "爬虫技术"
 tags:
-  - 爬虫
-  - python
-  - Webpack
-description: 爬虫JS逆向Webpack技巧记录
-author: PFinal南丞
-keywords: 爬虫JS逆向Webpack技巧记录, 爬虫, JS, Webpack
+  - "python"
+  - "爬虫"
+  - "js逆向"
+  - "webpack"
+  - "加密破解"
+  - "数据采集"
+keywords:
+  - "python爬虫教程"
+  - "js逆向技巧"
+  - "webpack破解方法"
+  - "数据采集实战"
+  - "加密网站爬取"
+summary: "详细讲解Python爬虫中的JS逆向技术，重点分析Webpack加密机制和破解方法，提供完整的数据采集解决方案和实战案例。"
+readingTime: 12
+cover: "/images/python-js-reverse.png"
+status: "published"
+toc: true
 ---
 # 爬虫JS逆向Webpack技巧记录
 
