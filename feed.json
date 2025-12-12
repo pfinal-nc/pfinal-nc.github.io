@@ -11,12 +11,12 @@
     },
     "items": [
         {
-            "id": "https://friday-go.icu/zh/数据库",
+            "id": "https://friday-go.icu/dev/system/database",
             "content_html": "PFinalClub 数据库中文专题导航页：系统整理 MySQL 配置、PostgreSQL 功能、数据库优化等核心文章，让中文读者可以按专题快速找到高质量实战内容。",
-            "url": "https://friday-go.icu/zh/数据库",
+            "url": "https://friday-go.icu/dev/system/database",
             "title": "数据库中文技术专题导航 - MySQL / PostgreSQL / 配置优化 2025",
             "summary": "PFinalClub 数据库中文专题导航页：系统整理 MySQL 配置、PostgreSQL 功能、数据库优化等核心文章，让中文读者可以按专题快速找到高质量实战内容。",
-            "date_modified": "2025-12-11T02:02:26.993Z",
+            "date_modified": "2025-12-12T01:06:51.360Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -24,38 +24,12 @@
             "tags": []
         },
         {
-            "id": "https://friday-go.icu/zh/工具",
-            "content_html": "PFinalClub 工具与实用程序中文专题导航页：系统整理 AI 工具目录、开发工具、CLI 工具、Docker 指南、效率技巧等核心文章，让中文读者可以按专题快速找到高质量实战内容。",
-            "url": "https://friday-go.icu/zh/工具",
-            "title": "工具与实用程序中文专题导航 - AI 工具 / 开发工具 / 效率提升 2025",
-            "summary": "PFinalClub 工具与实用程序中文专题导航页：系统整理 AI 工具目录、开发工具、CLI 工具、Docker 指南、效率技巧等核心文章，让中文读者可以按专题快速找到高质量实战内容。",
-            "date_modified": "2025-12-11T02:02:26.991Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": []
-        },
-        {
-            "id": "https://friday-go.icu/zh/python",
-            "content_html": "PFinalClub Python 中文专题导航页：系统整理爬虫技术、JS 逆向工程、协程、加密算法、Python 开发工具等核心文章，让中文读者可以按专题快速找到高质量实战内容。",
-            "url": "https://friday-go.icu/zh/python",
-            "title": "Python 中文技术专题导航 - 爬虫 / 协程 / 工具与最佳实践",
-            "summary": "PFinalClub Python 中文专题导航页：系统整理爬虫技术、JS 逆向工程、协程、加密算法、Python 开发工具等核心文章，让中文读者可以按专题快速找到高质量实战内容。",
-            "date_modified": "2025-12-11T02:02:26.983Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": []
-        },
-        {
-            "id": "https://friday-go.icu/zh/php",
+            "id": "https://friday-go.icu/dev/backend/php",
             "content_html": "PFinalClub PHP 中文专题导航页：系统整理 ThinkPHP 8、Laravel、PHP 8.x 企业级开发、协程池、错误处理等核心文章，让中文读者可以按专题快速找到高质量实战内容。",
-            "url": "https://friday-go.icu/zh/php",
+            "url": "https://friday-go.icu/dev/backend/php",
             "title": "PHP 中文技术专题导航 - ThinkPHP / Laravel / PHP 8.x / 协程 / 最佳实践",
             "summary": "PFinalClub PHP 中文专题导航页：系统整理 ThinkPHP 8、Laravel、PHP 8.x 企业级开发、协程池、错误处理等核心文章，让中文读者可以按专题快速找到高质量实战内容。",
-            "date_modified": "2025-12-11T02:02:26.981Z",
+            "date_modified": "2025-12-12T01:06:51.357Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -63,12 +37,25 @@
             "tags": []
         },
         {
-            "id": "https://friday-go.icu/zh/golang",
+            "id": "https://friday-go.icu/dev/backend/python",
+            "content_html": "PFinalClub Python 中文专题导航页：系统整理爬虫技术、JS 逆向工程、协程、加密算法、Python 开发工具等核心文章，让中文读者可以按专题快速找到高质量实战内容。",
+            "url": "https://friday-go.icu/dev/backend/python",
+            "title": "Python 中文技术专题导航 - 爬虫 / 协程 / 工具与最佳实践",
+            "summary": "PFinalClub Python 中文专题导航页：系统整理爬虫技术、JS 逆向工程、协程、加密算法、Python 开发工具等核心文章，让中文读者可以按专题快速找到高质量实战内容。",
+            "date_modified": "2025-12-12T01:06:51.351Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": []
+        },
+        {
+            "id": "https://friday-go.icu/dev/backend/golang",
             "content_html": "PFinalClub Golang 中文专题导航页：系统整理 Go 后端工程实践、RAG 系统、可观测性、Wails 桌面开发、游戏服务器与效率工具等核心文章，让中文读者可以按专题快速找到高质量实战内容。",
-            "url": "https://friday-go.icu/zh/golang",
+            "url": "https://friday-go.icu/dev/backend/golang",
             "title": "Golang 中文技术专题导航 - Go 后端 / RAG / 可观测性 / 桌面开发",
             "summary": "PFinalClub Golang 中文专题导航页：系统整理 Go 后端工程实践、RAG 系统、可观测性、Wails 桌面开发、游戏服务器与效率工具等核心文章，让中文读者可以按专题快速找到高质量实战内容。",
-            "date_modified": "2025-12-11T02:02:26.968Z",
+            "date_modified": "2025-12-12T01:06:51.346Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -76,12 +63,12 @@
             "tags": []
         },
         {
-            "id": "https://friday-go.icu/python",
-            "content_html": "PFinalClub Python hub: comprehensive guides on web scraping, JS reverse engineering, coroutines, encryption algorithms, and Python development tools for building efficient applications.",
-            "url": "https://friday-go.icu/python",
-            "title": "Python Technical Hub – Web Scraping / Coroutines / Tools & Best Practices 2025",
-            "summary": "PFinalClub Python hub: comprehensive guides on web scraping, JS reverse engineering, coroutines, encryption algorithms, and Python development tools for building efficient applications.",
-            "date_modified": "2025-12-11T02:02:26.957Z",
+            "id": "https://friday-go.icu/thinking/method",
+            "content_html": "汇总架构思考、方法论、学习路径、个人认知与技术哲学等内容，沉淀可复用的思维框架。",
+            "url": "https://friday-go.icu/thinking/method",
+            "title": "思考与方法论 - 架构设计 技术哲学 学习路径 | PFinalClub",
+            "summary": "汇总架构思考、方法论、学习路径、个人认知与技术哲学等内容，沉淀可复用的思维框架。",
+            "date_modified": "2025-12-12T01:06:51.336Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -89,12 +76,12 @@
             "tags": []
         },
         {
-            "id": "https://friday-go.icu/php",
-            "content_html": "PFinalClub PHP hub: comprehensive guides on ThinkPHP 8, Laravel, PHP 8.5, coroutines, error handling, and modern PHP development practices for building production-ready applications.",
-            "url": "https://friday-go.icu/php",
-            "title": "PHP Technical Hub – Framework Development / Performance / Best Practices 2025",
-            "summary": "PFinalClub PHP hub: comprehensive guides on ThinkPHP 8, Laravel, PHP 8.5, coroutines, error handling, and modern PHP development practices for building production-ready applications.",
-            "date_modified": "2025-12-11T02:02:26.956Z",
+            "id": "https://friday-go.icu/security/engineering",
+            "content_html": "聚合 WAF、中间件安全、安全平台工程、自动化脚本与安全基建等工程化落地内容，突出“建设型”安全能力。",
+            "url": "https://friday-go.icu/security/engineering",
+            "title": "安全工程 - WAF 中间件安全 安全平台 DevOps | PFinalClub",
+            "summary": "聚合 WAF、中间件安全、安全平台工程、自动化脚本与安全基建等工程化落地内容，突出“建设型”安全能力。",
+            "date_modified": "2025-12-12T01:06:51.333Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -102,12 +89,77 @@
             "tags": []
         },
         {
-            "id": "https://friday-go.icu/golang",
-            "content_html": "PFinalClub Golang hub: curated guides on Go error handling, web framework selection, RAG systems, observability, containerization and more, giving you a clear path to building production-grade Go services.",
-            "url": "https://friday-go.icu/golang",
-            "title": "Golang Technical Hub – Production-Ready Go Backend / Web Frameworks / AI & RAG / Observability",
-            "summary": "PFinalClub Golang hub: curated guides on Go error handling, web framework selection, RAG systems, observability, containerization and more, giving you a clear path to building production-grade Go services.",
-            "date_modified": "2025-12-11T02:02:26.952Z",
+            "id": "https://friday-go.icu/security/offensive",
+            "content_html": "聚合 Web 安全、内网渗透、红蓝对抗方法论、日志取证等攻防实战内容，突出“既能打也能守”的安全研究视角。",
+            "url": "https://friday-go.icu/security/offensive",
+            "title": "攻防研究 - Web安全 内网渗透 红蓝对抗方法论 | PFinalClub",
+            "summary": "聚合 Web 安全、内网渗透、红蓝对抗方法论、日志取证等攻防实战内容，突出“既能打也能守”的安全研究视角。",
+            "date_modified": "2025-12-12T01:06:51.333Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": []
+        },
+        {
+            "id": "https://friday-go.icu/dev/backend",
+            "content_html": "聚合 Go/PHP/Python 等后端工程实践与性能优化文章。",
+            "url": "https://friday-go.icu/dev/backend",
+            "title": "后端工程导航",
+            "summary": "聚合 Go/PHP/Python 等后端工程实践与性能优化文章。",
+            "date_modified": "2025-12-12T01:06:51.332Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": []
+        },
+        {
+            "id": "https://friday-go.icu/dev/system",
+            "content_html": "覆盖数据库、Linux、网络、容器等系统基础与实践文章。",
+            "url": "https://friday-go.icu/dev/system",
+            "title": "系统与基础导航",
+            "summary": "覆盖数据库、Linux、网络、容器等系统基础与实践文章。",
+            "date_modified": "2025-12-12T01:06:51.332Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": []
+        },
+        {
+            "id": "https://friday-go.icu/data/automation",
+            "content_html": "覆盖爬虫采集、自动化脚本、机器人与数据生产线的工程实践。",
+            "url": "https://friday-go.icu/data/automation",
+            "title": "数据与自动化 - 爬虫 AI 机器人 DevOps 工具 | PFinalClub",
+            "summary": "覆盖爬虫采集、自动化脚本、机器人与数据生产线的工程实践。",
+            "date_modified": "2025-12-12T01:06:51.331Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": []
+        },
+        {
+            "id": "https://friday-go.icu/dev",
+            "content_html": "汇总后端工程、性能与 Profiling、系统与网络基础等内容，突出“安全视角的工程实践”。",
+            "url": "https://friday-go.icu/dev",
+            "title": "开发与系统 - 后端工程 性能优化 系统架构 | PFinalClub",
+            "summary": "汇总后端工程、性能与 Profiling、系统与网络基础等内容，突出“安全视角的工程实践”。",
+            "date_modified": "2025-12-12T01:06:51.329Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": []
+        },
+        {
+            "id": "https://friday-go.icu/indie",
+            "content_html": "记录从安全经验到独立产品化的思考与实践，包括产品构思、技术实现、市场与增长。",
+            "url": "https://friday-go.icu/indie",
+            "title": "独立开发 - 产品设计 技术实现 SaaS 创业 | PFinalClub",
+            "summary": "记录从安全经验到独立产品化的思考与实践，包括产品构思、技术实现、市场与增长。",
+            "date_modified": "2025-12-12T01:06:51.329Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -116,11 +168,11 @@
         },
         {
             "id": "https://friday-go.icu/Tools",
-            "content_html": "PFinalClub Tools hub: comprehensive directory of AI tools, development utilities, CLI tools, Docker guides, and productivity tips for modern developers.",
+            "content_html": "PFinalClub 工具与实用程序中文专题导航页：系统整理 AI 工具目录、开发工具、CLI 工具、Docker 指南、效率技巧等核心文章，让中文读者可以按专题快速找到高质量实战内容。",
             "url": "https://friday-go.icu/Tools",
-            "title": "Tools & Utilities Hub – AI Tools / Development Tools / Productivity 2025",
-            "summary": "PFinalClub Tools hub: comprehensive directory of AI tools, development utilities, CLI tools, Docker guides, and productivity tips for modern developers.",
-            "date_modified": "2025-12-11T02:02:26.938Z",
+            "title": "工具与实用程序中文专题导航 - AI 工具 / 开发工具 / 效率提升 2025",
+            "summary": "PFinalClub 工具与实用程序中文专题导航页：系统整理 AI 工具目录、开发工具、CLI 工具、Docker 指南、效率技巧等核心文章，让中文读者可以按专题快速找到高质量实战内容。",
+            "date_modified": "2025-12-12T01:06:51.327Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -128,41 +180,9 @@
             "tags": []
         },
         {
-            "id": "https://friday-go.icu/database",
-            "content_html": "PFinalClub Database hub: comprehensive guides on MySQL configuration, database optimization, and best practices for production database management.",
-            "url": "https://friday-go.icu/database",
-            "title": "Database Technical Hub – MySQL / Configuration / Optimization 2025",
-            "summary": "PFinalClub Database hub: comprehensive guides on MySQL configuration, database optimization, and best practices for production database management.",
-            "date_modified": "2025-12-11T02:02:26.938Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": []
-        },
-        {
-            "id": "https://friday-go.icu/Tools/Vibe-Coding-ChatGPT-5.1",
-            "content_html": "In the Vibe Coding era, ChatGPT 5.1 is already sitting at your desk. This piece is not about whether AI will replace developers, but how to code with ChatGPT 5.1 so that it works overtime and you go home on time.",
-            "url": "https://friday-go.icu/Tools/Vibe-Coding-ChatGPT-5.1",
-            "title": "Developers in the Vibe Coding Era - How to Code with ChatGPT 5.1 Instead of Being Replaced",
-            "summary": "In the Vibe Coding era, ChatGPT 5.1 is already sitting at your desk. This piece is not about whether AI will replace developers, but how to code with ChatGPT 5.1 so that it works overtime and you go home on time.",
-            "date_modified": "2025-11-28T00:00:00.000Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": [
-                "ai coding",
-                "chatgpt 5.1",
-                "vibe coding",
-                "developer productivity",
-                "software engineering"
-            ]
-        },
-        {
-            "id": "https://friday-go.icu/zh/工具/Vibe-Coding-时代的开发者：如何跟-ChatGPT-5.1-一起写代码，而不是被替代",
+            "id": "https://friday-go.icu/thinking/notes/Vibe-Coding-时代的开发者：如何跟-ChatGPT-5.1-一起写代码，而不是被替代",
             "content_html": "在 Vibe Coding 时代，ChatGPT 5.1 已经坐在你的工位上了。这篇文章聊的不是“会不会被 AI 替代”，而是：如何和 ChatGPT 5.1 一起写代码，让它加班，你下班。",
-            "url": "https://friday-go.icu/zh/工具/Vibe-Coding-时代的开发者：如何跟-ChatGPT-5.1-一起写代码，而不是被替代",
+            "url": "https://friday-go.icu/thinking/notes/Vibe-Coding-时代的开发者：如何跟-ChatGPT-5.1-一起写代码，而不是被替代",
             "title": "Vibe Coding 时代的开发者 如何跟 ChatGPT 5.1 一起写代码，而不是被替代",
             "summary": "在 Vibe Coding 时代，ChatGPT 5.1 已经坐在你的工位上了。这篇文章聊的不是“会不会被 AI 替代”，而是：如何和 ChatGPT 5.1 一起写代码，让它加班，你下班。",
             "date_modified": "2025-11-28T00:00:00.000Z",
@@ -171,78 +191,15 @@
                 "url": "https://friday-go.icu"
             },
             "tags": [
-                "ai coding",
-                "chatgpt 5.1",
-                "vibe coding",
-                "developer productivity",
-                "software engineering"
+                "AI编程",
+                "ChatGPT",
+                "开发效率"
             ]
         },
         {
-            "id": "https://friday-go.icu/Tools/AI-Tools-Directory-2025-Best-AI-Apps-and-Use-Cases",
-            "content_html": "Complete AI tools directory 2025: Find 500+ best AI apps for coding, writing, design, and automation. Curated list with live navigation site, use cases, and workflow guides. Updated daily.",
-            "url": "https://friday-go.icu/Tools/AI-Tools-Directory-2025-Best-AI-Apps-and-Use-Cases",
-            "title": "AI Tools Directory 2025  500+ Best AI Apps for Developers, Writers & Creators",
-            "summary": "Complete AI tools directory 2025: Find 500+ best AI apps for coding, writing, design, and automation. Curated list with live navigation site, use cases, and workflow guides. Updated daily.",
-            "date_modified": "2025-11-27T00:00:00.000Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": [
-                "ai tools directory",
-                "ai apps",
-                "productivity",
-                "automation",
-                "developers",
-                "creators"
-            ]
-        },
-        {
-            "id": "https://friday-go.icu/golang/Go-Error-Handling-Best-Practices-2025-Complete-Guide",
-            "content_html": "Master Go error handling best practices 2025. Learn sentinel errors, error wrapping, custom types, and production patterns with real code examples. Perfect for Go 1.21+ services and microservices.",
-            "url": "https://friday-go.icu/golang/Go-Error-Handling-Best-Practices-2025-Complete-Guide",
-            "title": "Go Error Handling Best Practices 2025  Complete Guide with Examples",
-            "summary": "Master Go error handling best practices 2025. Learn sentinel errors, error wrapping, custom types, and production patterns with real code examples. Perfect for Go 1.21+ services and microservices.",
-            "date_modified": "2025-11-26T00:00:00.000Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": [
-                "golang",
-                "error handling",
-                "best-practices",
-                "production",
-                "backend",
-                "api"
-            ]
-        },
-        {
-            "id": "https://friday-go.icu/php/Making-Local-LLMs-Support-Function-Calling-Like-OpenAI-PHP-Async-Implementation",
-            "content_html": "Hands-on tutorial on how to make locally-running models like Qwen3, Deepseek-Coder-V3, and GLM4-Chat support native Function Calling just like OpenAI GPT-4. Implement OpenAI-compatible tool calls using the pfinal-asyncio async framework, achieving 200%-500% performance improvement with concurrent execution, zero API costs, and complete data localization. Includes best practices for API design, error handling, and production deployment in PHP.",
-            "url": "https://friday-go.icu/php/Making-Local-LLMs-Support-Function-Calling-Like-OpenAI-PHP-Async-Implementation",
-            "title": "Making Local LLMs Support Function Calling Like OpenAI - PHP Async Implementation Guide",
-            "summary": "Hands-on tutorial on how to make locally-running models like Qwen3, Deepseek-Coder-V3, and GLM4-Chat support native Function Calling just like OpenAI GPT-4. Implement OpenAI-compatible tool calls using the pfinal-asyncio async framework, achieving 200%-500% performance improvement with concurrent execution, zero API costs, and complete data localization. Includes best practices for API design, error handling, and production deployment in PHP.",
-            "date_modified": "2025-11-19T15:30:00.000Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": [
-                "PHP",
-                "AI",
-                "Function Calling",
-                "Asynchronous Programming",
-                "Large Language Models",
-                "Qwen3",
-                "Deepseek"
-            ]
-        },
-        {
-            "id": "https://friday-go.icu/zh/php/让 Qwen3 和 Deepseek 懂 Function Calling-PHP篇-opt",
+            "id": "https://friday-go.icu/dev/backend/php/让 Qwen3 和 Deepseek 懂 Function Calling-PHP篇-opt",
             "content_html": "实战教程：如何让本地运行的 Qwen3、Deepseek-Coder-V3、GLM4-Chat 等模型像 OpenAI GPT-4 一样支持原生 Function Calling。通过 pfinal-asyncio 异步框架实现完全兼容 OpenAI 接口规范的工具调用，并发执行性能提升 200%-500%，零 API 费用，数据完全本地化。",
-            "url": "https://friday-go.icu/zh/php/让 Qwen3 和 Deepseek 懂 Function Calling-PHP篇-opt",
+            "url": "https://friday-go.icu/dev/backend/php/让 Qwen3 和 Deepseek 懂 Function Calling-PHP篇-opt",
             "title": "让本地大模型像 OpenAI 一样支持 Function Calling PHP 异步实现实战",
             "summary": "实战教程：如何让本地运行的 Qwen3、Deepseek-Coder-V3、GLM4-Chat 等模型像 OpenAI GPT-4 一样支持原生 Function Calling。通过 pfinal-asyncio 异步框架实现完全兼容 OpenAI 接口规范的工具调用，并发执行性能提升 200%-500%，零 API 费用，数据完全本地化。",
             "date_modified": "2025-11-19T15:30:00.000Z",
@@ -262,155 +219,9 @@
             ]
         },
         {
-            "id": "https://friday-go.icu/golang/Building-GraphQL-APIs-with-Go-Complete-Guide-2025",
-            "content_html": "Master GraphQL API development with Go in 2025. Learn gqlgen, schema design, resolvers, subscriptions, authentication, performance optimization, and production deployment strategies.",
-            "url": "https://friday-go.icu/golang/Building-GraphQL-APIs-with-Go-Complete-Guide-2025",
-            "title": "Building Production-Ready GraphQL APIs with Go - Complete Guide 2025",
-            "summary": "Master GraphQL API development with Go in 2025. Learn gqlgen, schema design, resolvers, subscriptions, authentication, performance optimization, and production deployment strategies.",
-            "date_modified": "2025-11-13T00:00:00.000Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": [
-                "Golang",
-                "GraphQL",
-                "API",
-                "Backend",
-                "Web Development",
-                "gqlgen"
-            ]
-        },
-        {
-            "id": "https://friday-go.icu/golang/Building-Kubernetes-Operators-with-Go-Complete-Guide",
-            "content_html": "Master Kubernetes operator development in 2025. Learn Kubebuilder, controller patterns, CRD design, and production deployment strategies with real-world examples.",
-            "url": "https://friday-go.icu/golang/Building-Kubernetes-Operators-with-Go-Complete-Guide",
-            "title": "Building Production-Ready Kubernetes Operators with Go - A Complete Guide",
-            "summary": "Master Kubernetes operator development in 2025. Learn Kubebuilder, controller patterns, CRD design, and production deployment strategies with real-world examples.",
-            "date_modified": "2025-11-13T00:00:00.000Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": [
-                "Golang",
-                "Kubernetes",
-                "Operator",
-                "Cloud Native",
-                "DevOps",
-                "Kubebuilder"
-            ]
-        },
-        {
-            "id": "https://friday-go.icu/golang/Go-Containerization-Best-Practices-Docker-Optimization",
-            "content_html": "Master Docker optimization for Go applications in 2025. Learn multi-stage builds, distroless images, and security hardening techniques to reduce image size by 98% while improving performance.",
-            "url": "https://friday-go.icu/golang/Go-Containerization-Best-Practices-Docker-Optimization",
-            "title": "Go Containerization Best Practices 2025 - From 800MB to 10MB Docker Images",
-            "summary": "Master Docker optimization for Go applications in 2025. Learn multi-stage builds, distroless images, and security hardening techniques to reduce image size by 98% while improving performance.",
-            "date_modified": "2025-11-13T00:00:00.000Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": [
-                "Golang",
-                "Docker",
-                "DevOps",
-                "Containerization",
-                "Best Practices",
-                "Performance",
-                "Security"
-            ]
-        },
-        {
-            "id": "https://friday-go.icu/golang/Go-CLI-Utility-Development-Practice",
-            "content_html": "Master Golang CLI utility development with practical examples using Cobra, Viper, and urfave/cli. Learn command parsing, config management, error handling, and distribution strategies for professional command-line tools in 2025.",
-            "url": "https://friday-go.icu/golang/Go-CLI-Utility-Development-Practice",
-            "title": "Go CLI Utility Development Practice Master Modern Command-Line Tools in 2025",
-            "summary": "Master Golang CLI utility development with practical examples using Cobra, Viper, and urfave/cli. Learn command parsing, config management, error handling, and distribution strategies for professional command-line tools in 2025.",
-            "date_modified": "2025-11-12T00:00:00.000Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": [
-                "golang",
-                "tools",
-                "cli",
-                "cobra",
-                "viper"
-            ]
-        },
-        {
-            "id": "https://friday-go.icu/php/PHP-Process-Thread-Analysis",
-            "content_html": "Comprehensive analysis of PHP process and thread management, covering multi-process architecture, thread-safe mechanisms, PHP-FPM optimization, and concurrency strategies for building high-performance PHP applications.",
-            "url": "https://friday-go.icu/php/PHP-Process-Thread-Analysis",
-            "title": "PHP Process and Thread Analysis Deep Dive into Concurrency Models and Performance Optimization",
-            "summary": "Comprehensive analysis of PHP process and thread management, covering multi-process architecture, thread-safe mechanisms, PHP-FPM optimization, and concurrency strategies for building high-performance PHP applications.",
-            "date_modified": "2025-11-12T00:00:00.000Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": [
-                "PHP",
-                "Process",
-                "Thread",
-                "Concurrency",
-                "Performance",
-                "PHP-FPM"
-            ]
-        },
-        {
-            "id": "https://friday-go.icu/golang/Building-RAG-Systems-with-Golang-Complete-Implementation-from-OpenAI-to-Vector-Database",
-            "content_html": "Comprehensive guide to building complete RAG (Retrieval-Augmented Generation) systems using Golang. Covers OpenAI API integration, vector database selection, embedding generation, semantic search, and production-ready implementations with practical examples and performance optimizations.",
-            "url": "https://friday-go.icu/golang/Building-RAG-Systems-with-Golang-Complete-Implementation-from-OpenAI-to-Vector-Database",
-            "title": "Building RAG Systems with Golang Complete Implementation from OpenAI to Vector Database",
-            "summary": "Comprehensive guide to building complete RAG (Retrieval-Augmented Generation) systems using Golang. Covers OpenAI API integration, vector database selection, embedding generation, semantic search, and production-ready implementations with practical examples and performance optimizations.",
-            "date_modified": "2025-11-11T11:27:00.000Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": [
-                "golang",
-                "ai-development",
-                "rag-systems",
-                "openai-api",
-                "vector-databases",
-                "semantic-search",
-                "llm-integration",
-                "production-deployment"
-            ]
-        },
-        {
-            "id": "https://friday-go.icu/golang/Building-RAG-System-with-Golang-OpenAI-Vector-Database",
-            "content_html": "Golang RAG system tutorial 2025: Build complete RAG system with Go, OpenAI API, and Qdrant vector database. Step-by-step guide with code examples, embedding generation, semantic search, and production best practices. Perfect for Go developers building AI applications.",
-            "url": "https://friday-go.icu/golang/Building-RAG-System-with-Golang-OpenAI-Vector-Database",
-            "title": "Golang RAG System Tutorial 2025  Complete Guide OpenAI Qdrant Vector Database",
-            "summary": "Golang RAG system tutorial 2025: Build complete RAG system with Go, OpenAI API, and Qdrant vector database. Step-by-step guide with code examples, embedding generation, semantic search, and production best practices. Perfect for Go developers building AI applications.",
-            "date_modified": "2025-11-11T00:00:00.000Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": [
-                "golang",
-                "ai",
-                "rag",
-                "llm",
-                "vector-database",
-                "openai",
-                "tutorial",
-                "guide",
-                "machine-learning",
-                "semantic-search"
-            ]
-        },
-        {
-            "id": "https://friday-go.icu/zh/golang/Golang实现RAG系统-从OpenAI到向量数据库",
+            "id": "https://friday-go.icu/dev/backend/golang/Golang实现RAG系统-从OpenAI到向量数据库",
             "content_html": "深入讲解如何使用 Golang 构建完整的 RAG（检索增强生成）系统，涵盖 OpenAI API 集成、向量数据库选型、Embedding 生成、语义检索和实战案例，助力开发者快速构建智能问答系统。",
-            "url": "https://friday-go.icu/zh/golang/Golang实现RAG系统-从OpenAI到向量数据库",
+            "url": "https://friday-go.icu/dev/backend/golang/Golang实现RAG系统-从OpenAI到向量数据库",
             "title": "Golang 实现 RAG 系统 从 OpenAI API 到向量数据库完整实战",
             "summary": "深入讲解如何使用 Golang 构建完整的 RAG（检索增强生成）系统，涵盖 OpenAI API 集成、向量数据库选型、Embedding 生成、语义检索和实战案例，助力开发者快速构建智能问答系统。",
             "date_modified": "2025-11-11T00:00:00.000Z",
@@ -428,30 +239,9 @@
             ]
         },
         {
-            "id": "https://friday-go.icu/golang/10-Essential-Go-Tools-to-Boost-Development-Efficiency-2025",
-            "content_html": "Comprehensive guide to 10 essential Go development tools that can boost your productivity by 3x. Covers code formatting, dependency management, performance analysis, project automation, and advanced debugging techniques with practical examples and real-world use cases.",
-            "url": "https://friday-go.icu/golang/10-Essential-Go-Tools-to-Boost-Development-Efficiency-2025",
-            "title": "10 Essential Go Tools to Boost Development Efficiency - From Code Management to Performance Optimization",
-            "summary": "Comprehensive guide to 10 essential Go development tools that can boost your productivity by 3x. Covers code formatting, dependency management, performance analysis, project automation, and advanced debugging techniques with practical examples and real-world use cases.",
-            "date_modified": "2025-11-09T11:31:32.000Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": [
-                "golang",
-                "development-tools",
-                "productivity",
-                "best-practices",
-                "code-quality",
-                "performance",
-                "automation"
-            ]
-        },
-        {
-            "id": "https://friday-go.icu/zh/工具/单文件代码部署工具",
+            "id": "https://friday-go.icu/Tools/单文件代码部署工具",
             "content_html": "一个类似 Adminer.php 的单文件 PHP 代码部署工具，支持 Git + SSH 部署，简单易用，一个文件搞定所有部署需求。",
-            "url": "https://friday-go.icu/zh/工具/单文件代码部署工具",
+            "url": "https://friday-go.icu/Tools/单文件代码部署工具",
             "title": "造轮子 单文件管多项目部署，Git 服务器全搞定",
             "summary": "一个类似 Adminer.php 的单文件 PHP 代码部署工具，支持 Git + SSH 部署，简单易用，一个文件搞定所有部署需求。",
             "date_modified": "2025-11-05T10:00:00.000Z",
@@ -468,29 +258,26 @@
             ]
         },
         {
-            "id": "https://friday-go.icu/golang/From-Trace-to-Insight-A-Closed-Loop-Observability-Practice-for-Go-Projects",
-            "content_html": "Based on practical project experience, this article explains how to use OpenTelemetry to build closed-loop Go observability in 2025, turning traces, metrics, and logs from simple data collection into decision-driving insights.",
-            "url": "https://friday-go.icu/golang/From-Trace-to-Insight-A-Closed-Loop-Observability-Practice-for-Go-Projects",
-            "title": "From Trace to Insight - A Closed-Loop Observability Practice for Go Projects",
-            "summary": "Based on practical project experience, this article explains how to use OpenTelemetry to build closed-loop Go observability in 2025, turning traces, metrics, and logs from simple data collection into decision-driving insights.",
+            "id": "https://friday-go.icu/thinking/method/从 trace 到洞察：Go 项目的可观测性闭环实践",
+            "content_html": "基于实际项目经验，深入讲解如何将 OpenTelemetry 的 trace、metrics、logs 三大信号从简单的数据收集转变为驱动决策的可观测性闭环。",
+            "url": "https://friday-go.icu/thinking/method/从 trace 到洞察：Go 项目的可观测性闭环实践",
+            "title": "从 trace 到洞察 Go 项目的可观测性闭环实践",
+            "summary": "基于实际项目经验，深入讲解如何将 OpenTelemetry 的 trace、metrics、logs 三大信号从简单的数据收集转变为驱动决策的可观测性闭环。",
             "date_modified": "2025-10-29T10:00:00.000Z",
             "author": {
-                "name": "PFinal Nan Cheng",
+                "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
             },
             "tags": [
-                "golang",
-                "observability",
-                "OpenTelemetry",
-                "trace",
-                "metrics",
-                "logs"
+                "Golang",
+                "可观测性",
+                "OpenTelemetry"
             ]
         },
         {
-            "id": "https://friday-go.icu/zh/golang/Stop-The-World-其实没停下-Go-GC-的微暂停真相",
+            "id": "https://friday-go.icu/dev/backend/golang/Stop-The-World-其实没停下-Go-GC-的微暂停真相",
             "content_html": "深入剖析 Go 垃圾回收的 STW 机制，揭示\"并发 GC\"背后的微暂停真相。从源码实现到生产实践，带你理解 Go GC 的两次 STW、写屏障开销、以及 P99 延迟的真正元凶。",
-            "url": "https://friday-go.icu/zh/golang/Stop-The-World-其实没停下-Go-GC-的微暂停真相",
+            "url": "https://friday-go.icu/dev/backend/golang/Stop-The-World-其实没停下-Go-GC-的微暂停真相",
             "title": "Stop-The-World 其实没停下 - Go GC 的微暂停真相",
             "summary": "深入剖析 Go 垃圾回收的 STW 机制，揭示\"并发 GC\"背后的微暂停真相。从源码实现到生产实践，带你理解 Go GC 的两次 STW、写屏障开销、以及 P99 延迟的真正元凶。",
             "date_modified": "2025-10-29T10:00:00.000Z",
@@ -505,28 +292,9 @@
             ]
         },
         {
-            "id": "https://friday-go.icu/zh/golang/从 trace 到洞察：Go 项目的可观测性闭环实践",
-            "content_html": "基于实际项目经验，深入讲解如何将 OpenTelemetry 的 trace、metrics、logs 三大信号从简单的数据收集转变为驱动决策的可观测性闭环。",
-            "url": "https://friday-go.icu/zh/golang/从 trace 到洞察：Go 项目的可观测性闭环实践",
-            "title": "从 trace 到洞察 Go 项目的可观测性闭环实践",
-            "summary": "基于实际项目经验，深入讲解如何将 OpenTelemetry 的 trace、metrics、logs 三大信号从简单的数据收集转变为驱动决策的可观测性闭环。",
-            "date_modified": "2025-10-29T10:00:00.000Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": [
-                "golang",
-                "OpenTelemetry",
-                "trace",
-                "metrics",
-                "logs"
-            ]
-        },
-        {
-            "id": "https://friday-go.icu/zh/工具/测试驱动开发 以测试为引擎的软件工程实践",
+            "id": "https://friday-go.icu/Tools/测试驱动开发 以测试为引擎的软件工程实践",
             "content_html": "深入探讨测试驱动开发（TDD）的理论基础、实践指南和最佳实践，帮助开发者构建高质量、可维护的软件系统。",
-            "url": "https://friday-go.icu/zh/工具/测试驱动开发 以测试为引擎的软件工程实践",
+            "url": "https://friday-go.icu/Tools/测试驱动开发 以测试为引擎的软件工程实践",
             "title": "测试驱动开发 以测试为引擎的软件工程实践",
             "summary": "深入探讨测试驱动开发（TDD）的理论基础、实践指南和最佳实践，帮助开发者构建高质量、可维护的软件系统。",
             "date_modified": "2025-10-28T10:00:00.000Z",
@@ -543,9 +311,9 @@
             ]
         },
         {
-            "id": "https://friday-go.icu/zh/php/Go协程与PHP-Fibers并发编程对比",
+            "id": "https://friday-go.icu/dev/backend/php/Go协程与PHP-Fibers并发编程对比",
             "content_html": "深入对比 Go 协程与 PHP Fibers 两种并发编程模型的技术特点、实现机制和实际应用场景，帮助开发者理解它们的差异和适用场景",
-            "url": "https://friday-go.icu/zh/php/Go协程与PHP-Fibers并发编程对比",
+            "url": "https://friday-go.icu/dev/backend/php/Go协程与PHP-Fibers并发编程对比",
             "title": "Go 协程与 PHP Fibers-并发编程的两种实现",
             "summary": "深入对比 Go 协程与 PHP Fibers 两种并发编程模型的技术特点、实现机制和实际应用场景，帮助开发者理解它们的差异和适用场景",
             "date_modified": "2025-10-19T10:00:02.000Z",
@@ -556,9 +324,9 @@
             "tags": []
         },
         {
-            "id": "https://friday-go.icu/zh/golang/Golang Socket 通信架构分析与实现-构建高性能游戏服务器",
+            "id": "https://friday-go.icu/thinking/method/Golang Socket 通信架构分析与实现-构建高性能游戏服务器",
             "content_html": "深入分析Golang Socket通信架构设计与实现，从基础TCP编程到高性能游戏服务器架构，涵盖连接管理、消息编解码、并发模型等核心技术，帮助开发者构建稳定高效的游戏服务器。",
-            "url": "https://friday-go.icu/zh/golang/Golang Socket 通信架构分析与实现-构建高性能游戏服务器",
+            "url": "https://friday-go.icu/thinking/method/Golang Socket 通信架构分析与实现-构建高性能游戏服务器",
             "title": "Golang Socket 通信架构分析与实现-构建高性能游戏服务器",
             "summary": "深入分析Golang Socket通信架构设计与实现，从基础TCP编程到高性能游戏服务器架构，涵盖连接管理、消息编解码、并发模型等核心技术，帮助开发者构建稳定高效的游戏服务器。",
             "date_modified": "2025-10-15T15:00:00.000Z",
@@ -575,25 +343,9 @@
             ]
         },
         {
-            "id": "https://friday-go.icu/Tools/The Command-Line Tool That Makes File Navigation Effortles",
-            "content_html": "Complete guide to Broot, a powerful command-line file manager that makes file navigation effortless. Learn how to use Broot for efficient directory browsing, file operations, and terminal productivity.",
-            "url": "https://friday-go.icu/Tools/The Command-Line Tool That Makes File Navigation Effortles",
-            "title": "Broot - The Command-Line Tool That Makes File Navigation Effortless - Complete Guide 2025",
-            "summary": "Complete guide to Broot, a powerful command-line file manager that makes file navigation effortless. Learn how to use Broot for efficient directory browsing, file operations, and terminal productivity.",
-            "date_modified": "2025-10-15T09:33:00.000Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": [
-                "Tools",
-                "Command Line, Rust"
-            ]
-        },
-        {
-            "id": "https://friday-go.icu/zh/工具/Broot-高效的命令行文件管理器",
+            "id": "https://friday-go.icu/Tools/Broot-高效的命令行文件管理器",
             "content_html": "Broot 是一款由 Rust 编写的高效终端文件管理器，提供直观的树状视图、模糊搜索、快速导航和文件预览等强大功能",
-            "url": "https://friday-go.icu/zh/工具/Broot-高效的命令行文件管理器",
+            "url": "https://friday-go.icu/Tools/Broot-高效的命令行文件管理器",
             "title": "Broot-让文件导航更高效的命令行神器",
             "summary": "Broot 是一款由 Rust 编写的高效终端文件管理器，提供直观的树状视图、模糊搜索、快速导航和文件预览等强大功能",
             "date_modified": "2025-10-15T09:33:00.000Z",
@@ -608,29 +360,9 @@
             ]
         },
         {
-            "id": "https://friday-go.icu/golang/golang-socket-architecture-building-high-performance-game-servers",
-            "content_html": "Build enterprise-grade game servers with Golang Socket architecture in 2025! Deep dive into TCP/UDP programming, connection pooling, message protocols (Protobuf/MessagePack), goroutine-per-connection vs reactor patterns, and load balancing. Handle 100K+ CCU with sub-50ms latency using production battle-tested patterns.",
-            "url": "https://friday-go.icu/golang/golang-socket-architecture-building-high-performance-game-servers",
-            "title": "Golang Socket Communication Architecture Analysis Building High-Performance Game Servers",
-            "summary": "Build enterprise-grade game servers with Golang Socket architecture in 2025! Deep dive into TCP/UDP programming, connection pooling, message protocols (Protobuf/MessagePack), goroutine-per-connection vs reactor patterns, and load balancing. Handle 100K+ CCU with sub-50ms latency using production battle-tested patterns.",
-            "date_modified": "2025-10-15T00:00:00.000Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": [
-                "Socket",
-                "Game Server",
-                "High Performance",
-                "Concurrent Programming",
-                "Network Programming",
-                "best-practices"
-            ]
-        },
-        {
-            "id": "https://friday-go.icu/zh/php/PHP 8.x 企业级开发实战指南 从语言特性到生产部署",
+            "id": "https://friday-go.icu/thinking/method/PHP 8.x 企业级开发实战指南 从语言特性到生产部署",
             "content_html": "深入探讨PHP 8.x在企业级应用开发中的最佳实践，涵盖架构设计、性能优化、工程化部署等核心话题",
-            "url": "https://friday-go.icu/zh/php/PHP 8.x 企业级开发实战指南 从语言特性到生产部署",
+            "url": "https://friday-go.icu/thinking/method/PHP 8.x 企业级开发实战指南 从语言特性到生产部署",
             "title": "PHP 8.x 企业级开发实战指南 从语言特性到生产部署",
             "summary": "深入探讨PHP 8.x在企业级应用开发中的最佳实践，涵盖架构设计、性能优化、工程化部署等核心话题",
             "date_modified": "2025-10-11T10:00:02.000Z",
@@ -641,9 +373,9 @@
             "tags": []
         },
         {
-            "id": "https://friday-go.icu/zh/golang/2025年最佳Go技术博客推荐：资深开发者的学习宝库",
+            "id": "https://friday-go.icu/dev/backend/golang/2025年最佳Go技术博客推荐：资深开发者的学习宝库",
             "content_html": "还在为找不到高质量的Go技术博客而苦恼？别担心，这篇文章就是你的救星！从官方博客到社区大牛，从入门教程到高级技巧，我们来看看这些博客到底谁才是真正的\"宝藏\"。",
-            "url": "https://friday-go.icu/zh/golang/2025年最佳Go技术博客推荐：资深开发者的学习宝库",
+            "url": "https://friday-go.icu/dev/backend/golang/2025年最佳Go技术博客推荐：资深开发者的学习宝库",
             "title": "2025年最佳Go技术博客推荐-资深开发者的学习宝库",
             "summary": "还在为找不到高质量的Go技术博客而苦恼？别担心，这篇文章就是你的救星！从官方博客到社区大牛，从入门教程到高级技巧，我们来看看这些博客到底谁才是真正的\"宝藏\"。",
             "date_modified": "2025-09-28T11:30:00.000Z",
@@ -657,34 +389,9 @@
             ]
         },
         {
-            "id": "https://friday-go.icu/golang/Best-Go-Web-Frameworks-2025-Comprehensive-Developers-Guide",
-            "content_html": "Comprehensive 2025 guide to the top 10 Go web frameworks: Gin, Fiber, Echo, Hertz, Beego, Go-Chi, FastHTTP, Gorilla. Detailed performance benchmarks, feature comparisons, and practical selection criteria for developers. Includes real-world use cases and optimization strategies.",
-            "url": "https://friday-go.icu/golang/Best-Go-Web-Frameworks-2025-Comprehensive-Developers-Guide",
-            "title": "Best Go Web Frameworks 2025 - Comprehensive Developer's Guide with Performance Benchmarks",
-            "summary": "Comprehensive 2025 guide to the top 10 Go web frameworks: Gin, Fiber, Echo, Hertz, Beego, Go-Chi, FastHTTP, Gorilla. Detailed performance benchmarks, feature comparisons, and practical selection criteria for developers. Includes real-world use cases and optimization strategies.",
-            "date_modified": "2025-09-28T11:27:00.000Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": [
-                "golang",
-                "web-frameworks",
-                "gin",
-                "fiber",
-                "echo",
-                "hertz",
-                "beego",
-                "go-chi",
-                "fasthttp",
-                "gorilla",
-                "performance-optimization"
-            ]
-        },
-        {
-            "id": "https://friday-go.icu/zh/golang/2025年最佳Go-Web框架深度解析：资深开发者的选择指南",
+            "id": "https://friday-go.icu/thinking/method/2025年最佳Go-Web框架深度解析：资深开发者的选择指南",
             "content_html": "2025年最新Go Web框架深度评测：Gin、Fiber、Echo、Hertz、Beego、Go-Chi、FastHTTP、Gorilla等10大主流框架性能对比。从请求处理速度、内存占用、学习曲线、社区活跃度等维度，提供详细的项目选型指南和性能优化建议。",
-            "url": "https://friday-go.icu/zh/golang/2025年最佳Go-Web框架深度解析：资深开发者的选择指南",
+            "url": "https://friday-go.icu/thinking/method/2025年最佳Go-Web框架深度解析：资深开发者的选择指南",
             "title": "2025年Go Web框架深度评测 10大主流框架性能对比与选型指南",
             "summary": "2025年最新Go Web框架深度评测：Gin、Fiber、Echo、Hertz、Beego、Go-Chi、FastHTTP、Gorilla等10大主流框架性能对比。从请求处理速度、内存占用、学习曲线、社区活跃度等维度，提供详细的项目选型指南和性能优化建议。",
             "date_modified": "2025-09-28T11:27:00.000Z",
@@ -707,9 +414,9 @@
             ]
         },
         {
-            "id": "https://friday-go.icu/zh/golang/Go-testing-synctest-深度解析与实战指南",
+            "id": "https://friday-go.icu/dev/backend/golang/Go-testing-synctest-深度解析与实战指南",
             "content_html": "Go 1.25 正式引入的 `testing/synctest` 包彻底改变了这一现状。它通过创建一个可控的\"泡泡\"（bubble）环境，让异步测试变得既快速又可靠。本文将深入解析其核心原理、使用技巧和最佳实践。",
-            "url": "https://friday-go.icu/zh/golang/Go-testing-synctest-深度解析与实战指南",
+            "url": "https://friday-go.icu/dev/backend/golang/Go-testing-synctest-深度解析与实战指南",
             "title": "Go-testing-synctest-深度解析与实战指南",
             "summary": "Go 1.25 正式引入的 `testing/synctest` 包彻底改变了这一现状。它通过创建一个可控的\"泡泡\"（bubble）环境，让异步测试变得既快速又可靠。本文将深入解析其核心原理、使用技巧和最佳实践。",
             "date_modified": "2025-09-22T17:15:27.000Z",
@@ -722,27 +429,9 @@
             ]
         },
         {
-            "id": "https://friday-go.icu/Tools/20-practical-qwen-code-tips-to-boost-efficiency",
-            "content_html": "Qwen Code 使用完整指南 2025: 20个实用技巧从基础到高级，提升AI编程效率。包含安装、配置、提示词优化、阿里云服务集成等实战经验。适合中国开发者的AI编程助手教程。",
-            "url": "https://friday-go.icu/Tools/20-practical-qwen-code-tips-to-boost-efficiency",
-            "title": "Qwen Code 使用指南 2025  20个实用技巧提升编程效率",
-            "summary": "Qwen Code 使用完整指南 2025: 20个实用技巧从基础到高级，提升AI编程效率。包含安装、配置、提示词优化、阿里云服务集成等实战经验。适合中国开发者的AI编程助手教程。",
-            "date_modified": "2025-09-17T10:00:00.000Z",
-            "author": {
-                "name": "PFinal",
-                "url": "https://friday-go.icu"
-            },
-            "tags": [
-                "Tools",
-                "Qwen Code",
-                "Alibaba Cloud",
-                "AI Programming"
-            ]
-        },
-        {
-            "id": "https://friday-go.icu/zh/工具/Qwen Code 30个使用小技巧",
+            "id": "https://friday-go.icu/thinking/notes/Qwen Code 30个使用小技巧",
             "content_html": "掌握Qwen Code的20个实战技巧，从基础使用到高级应用，全面提升你的AI编程体验。专为中国开发者优化的AI编程助手实战指南。",
-            "url": "https://friday-go.icu/zh/工具/Qwen Code 30个使用小技巧",
+            "url": "https://friday-go.icu/thinking/notes/Qwen Code 30个使用小技巧",
             "title": "Qwen Code 20个实战技巧 让你的编程效率直接起飞！",
             "summary": "掌握Qwen Code的20个实战技巧，从基础使用到高级应用，全面提升你的AI编程体验。专为中国开发者优化的AI编程助手实战指南。",
             "date_modified": "2025-09-17T10:00:00.000Z",
@@ -758,9 +447,9 @@
             ]
         },
         {
-            "id": "https://friday-go.icu/zh/工具/MCP服务器精选：提升AI编程效率的5大神器",
+            "id": "https://friday-go.icu/data/automation/MCP服务器精选：提升AI编程效率的5大神器",
             "content_html": "介绍5个核心MCP服务器，帮助开发者在不同AI编辑器间保持高效的工作流程",
-            "url": "https://friday-go.icu/zh/工具/MCP服务器精选：提升AI编程效率的5大神器",
+            "url": "https://friday-go.icu/data/automation/MCP服务器精选：提升AI编程效率的5大神器",
             "title": "5个MCP服务器 - 在AI编辑器迭代中保持效率的稳定选择",
             "summary": "介绍5个核心MCP服务器，帮助开发者在不同AI编辑器间保持高效的工作流程",
             "date_modified": "2025-09-11T10:14:02.000Z",
@@ -775,9 +464,9 @@
             ]
         },
         {
-            "id": "https://friday-go.icu/zh/php/PHP MCP 扩展",
+            "id": "https://friday-go.icu/dev/backend/php/PHP MCP 扩展",
             "content_html": "分享我开发pfinalclub/php-mcp扩展的经历，探讨MCP协议对PHP生态的重要意义，以及为什么选择Workerman作为技术栈。",
-            "url": "https://friday-go.icu/zh/php/PHP MCP 扩展",
+            "url": "https://friday-go.icu/dev/backend/php/PHP MCP 扩展",
             "title": "如何掌握PHP MCP扩展-我的开源实践与思考 - PHP 开发完整指南",
             "summary": "分享我开发pfinalclub/php-mcp扩展的经历，探讨MCP协议对PHP生态的重要意义，以及为什么选择Workerman作为技术栈。",
             "date_modified": "2025-09-09T10:30:00.000Z",
@@ -794,9 +483,9 @@
             ]
         },
         {
-            "id": "https://friday-go.icu/zh/wails-tutorial-series/00-webkit-and-lifecycle",
+            "id": "https://friday-go.icu/dev/backend/wails-tutorial-series/00-webkit-and-lifecycle",
             "content_html": "深入理解 Wails 中的 WebKit 技术原理、wails.Run() 运行路线以及应用生命周期管理机制。",
-            "url": "https://friday-go.icu/zh/wails-tutorial-series/00-webkit-and-lifecycle",
+            "url": "https://friday-go.icu/dev/backend/wails-tutorial-series/00-webkit-and-lifecycle",
             "title": "Wails 教程系列 - WebKit 与生命周期深度解析",
             "summary": "深入理解 Wails 中的 WebKit 技术原理、wails.Run() 运行路线以及应用生命周期管理机制。",
             "date_modified": "2025-08-22T00:00:00.000Z",
@@ -807,9 +496,9 @@
             "tags": []
         },
         {
-            "id": "https://friday-go.icu/zh/wails-tutorial-series/01-installation",
+            "id": "https://friday-go.icu/dev/backend/wails-tutorial-series/01-installation",
             "content_html": "详细介绍如何为 Wails 开发准备环境，包括 Go、Node.js 的安装以及 Wails CLI 的获取。",
-            "url": "https://friday-go.icu/zh/wails-tutorial-series/01-installation",
+            "url": "https://friday-go.icu/dev/backend/wails-tutorial-series/01-installation",
             "title": "Wails 教程系列 - 环境搭建与安装",
             "summary": "详细介绍如何为 Wails 开发准备环境，包括 Go、Node.js 的安装以及 Wails CLI 的获取。",
             "date_modified": "2025-08-22T00:00:00.000Z",
@@ -820,9 +509,9 @@
             "tags": []
         },
         {
-            "id": "https://friday-go.icu/zh/wails-tutorial-series/02-first-app",
+            "id": "https://friday-go.icu/dev/backend/wails-tutorial-series/02-first-app",
             "content_html": "深入理解 Wails 项目创建流程、架构原理和最佳实践，为资深开发者提供全面的技术指导。",
-            "url": "https://friday-go.icu/zh/wails-tutorial-series/02-first-app",
+            "url": "https://friday-go.icu/dev/backend/wails-tutorial-series/02-first-app",
             "title": "Wails 教程系列 - 创建你的第一个应用",
             "summary": "深入理解 Wails 项目创建流程、架构原理和最佳实践，为资深开发者提供全面的技术指导。",
             "date_modified": "2025-08-22T00:00:00.000Z",
@@ -833,9 +522,9 @@
             "tags": []
         },
         {
-            "id": "https://friday-go.icu/zh/wails-tutorial-series/03-core-concepts",
+            "id": "https://friday-go.icu/dev/backend/wails-tutorial-series/03-core-concepts",
             "content_html": "深入理解 Wails 应用的核心概念，包括前后端架构、数据绑定、方法调用和事件驱动通信。",
-            "url": "https://friday-go.icu/zh/wails-tutorial-series/03-core-concepts",
+            "url": "https://friday-go.icu/dev/backend/wails-tutorial-series/03-core-concepts",
             "title": "Wails 教程系列 - 核心概念详解",
             "summary": "深入理解 Wails 应用的核心概念，包括前后端架构、数据绑定、方法调用和事件驱动通信。",
             "date_modified": "2025-08-22T00:00:00.000Z",
@@ -846,9 +535,9 @@
             "tags": []
         },
         {
-            "id": "https://friday-go.icu/zh/wails-tutorial-series/05-backend-development",
+            "id": "https://friday-go.icu/dev/backend/wails-tutorial-series/05-backend-development",
             "content_html": "学习如何在 Wails 应用中使用 Go 语言进行后端开发，包括业务逻辑实现、系统 API 调用和数据处理。",
-            "url": "https://friday-go.icu/zh/wails-tutorial-series/05-backend-development",
+            "url": "https://friday-go.icu/dev/backend/wails-tutorial-series/05-backend-development",
             "title": "Wails 教程系列 - 后端开发 (Go)",
             "summary": "学习如何在 Wails 应用中使用 Go 语言进行后端开发，包括业务逻辑实现、系统 API 调用和数据处理。",
             "date_modified": "2025-08-22T00:00:00.000Z",
@@ -859,9 +548,9 @@
             "tags": []
         },
         {
-            "id": "https://friday-go.icu/zh/wails-tutorial-series",
+            "id": "https://friday-go.icu/dev/backend/wails-tutorial-series",
             "content_html": "专为资深 Golang 开发者设计的 Wails 桌面应用开发教程，涵盖架构设计、性能优化、系统集成等高级主题。",
-            "url": "https://friday-go.icu/zh/wails-tutorial-series",
+            "url": "https://friday-go.icu/dev/backend/wails-tutorial-series",
             "title": "Wails 教程系列 - 简介",
             "summary": "专为资深 Golang 开发者设计的 Wails 桌面应用开发教程，涵盖架构设计、性能优化、系统集成等高级主题。",
             "date_modified": "2025-08-22T00:00:00.000Z",
@@ -870,6 +559,231 @@
                 "url": "https://friday-go.icu"
             },
             "tags": []
+        },
+        {
+            "id": "https://friday-go.icu/Tools/VSCode快捷键",
+            "content_html": "VSCode常用快捷键总结，提高开发效率",
+            "url": "https://friday-go.icu/Tools/VSCode快捷键",
+            "title": "VSCode快捷键 - 完整使用指南",
+            "summary": "VSCode常用快捷键总结，提高开发效率",
+            "date_modified": "2025-08-21T10:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "工具",
+                "VSCode"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/security/engineering/10个Golang安全陷阱及真正有效的修复方案",
+            "content_html": "发现Go开发中的10个关键安全陷阱，学习在生产环境中真正有效的、经过实战检验的解决方案。",
+            "url": "https://friday-go.icu/security/engineering/10个Golang安全陷阱及真正有效的修复方案",
+            "title": "10个Golang安全陷阱 — 以及真正有效的修复方案",
+            "summary": "发现Go开发中的10个关键安全陷阱，学习在生产环境中真正有效的、经过实战检验的解决方案。",
+            "date_modified": "2025-08-20T14:30:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "golang",
+                "security",
+                "best-practices"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/dev/backend/golang/如何实现 RESTful API 版本控制",
+            "content_html": "深入探讨 RESTful API 版本控制的策略和实践，包括 URI、头部和内容协商方法，并提供 Go 语言的详细示例。",
+            "url": "https://friday-go.icu/dev/backend/golang/如何实现 RESTful API 版本控制",
+            "title": "别再瞎改 API 了 3 招版本控制，让你的 Go 服务稳如老狗",
+            "summary": "深入探讨 RESTful API 版本控制的策略和实践，包括 URI、头部和内容协商方法，并提供 Go 语言的详细示例。",
+            "date_modified": "2025-08-18T00:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "golang",
+                "RESTful API",
+                "API 版本控制",
+                "微服务"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/Tools/Arc 浏览器更符合开发者",
+            "content_html": "Arc浏览器深度体验：为什么它更适合开发者使用",
+            "url": "https://friday-go.icu/Tools/Arc 浏览器更符合开发者",
+            "title": "别再为找标签浪费 2 小时了，Arc 的左手边藏着开发者的时间机器",
+            "summary": "Arc浏览器深度体验：为什么它更适合开发者使用",
+            "date_modified": "2025-08-08T09:49:32.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "工具",
+                "浏览器",
+                "效率"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/dev/backend/php/Coze 扩展包 PHP 版本",
+            "content_html": "Coze 官方提供了 Python,Node,Go 版本的 SDK 就是没有提供 PHP 版本的 于是自己动手搞了个 PHP 版本的",
+            "url": "https://friday-go.icu/dev/backend/php/Coze 扩展包 PHP 版本",
+            "title": "Coze扩展包完整使用指南 - 如何集成并掌握核心功能",
+            "summary": "Coze 官方提供了 Python,Node,Go 版本的 SDK 就是没有提供 PHP 版本的 于是自己动手搞了个 PHP 版本的",
+            "date_modified": "2025-07-28T10:00:02.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": []
+        },
+        {
+            "id": "https://friday-go.icu/dev/backend/golang/Go-WASM构建WebAssembly应用的全新尝试",
+            "content_html": "当 Go 语言遇上 WebAssembly，会碰撞出怎样的火花？让我们一起探索这个令人兴奋的技术组合，看看如何用 Go 构建高性能的 Web 应用。",
+            "url": "https://friday-go.icu/dev/backend/golang/Go-WASM构建WebAssembly应用的全新尝试",
+            "title": "Go 和 WASM 构建 WebAssembly 应用的全新尝试",
+            "summary": "当 Go 语言遇上 WebAssembly，会碰撞出怎样的火花？让我们一起探索这个令人兴奋的技术组合，看看如何用 Go 构建高性能的 Web 应用。",
+            "date_modified": "2025-07-22T17:15:27.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "golang",
+                "WebAssembly"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/data/automation/autogen-financial-analysis",
+            "content_html": "在金融数据分析的复杂世界中，AutoGen正在重新定义我们处理数据、生成报告和做出决策的方式。本文将深入探讨如何利用AutoGen构建智能化的金融分析工作流。",
+            "url": "https://friday-go.icu/data/automation/autogen-financial-analysis",
+            "title": "AutoGen 在金融数据分析中的自动化流程构建 让AI助手成为你的金融分析师",
+            "summary": "在金融数据分析的复杂世界中，AutoGen正在重新定义我们处理数据、生成报告和做出决策的方式。本文将深入探讨如何利用AutoGen构建智能化的金融分析工作流。",
+            "date_modified": "2025-07-21T09:49:32.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "工具"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/dev/backend/php/PHP-8.5-NoDiscard-属性详解",
+            "content_html": "详细介绍PHP 8.5新增的#[\\NoDiscard]属性，包括其作用、使用方法、实际应用案例和最佳实践，帮助开发者提高代码质量和避免静默错误。",
+            "url": "https://friday-go.icu/dev/backend/php/PHP-8.5-NoDiscard-属性详解",
+            "title": "PHP 8.5 NoDiscard 属性-告别静默错误，提升代码质量的神器",
+            "summary": "详细介绍PHP 8.5新增的#[\\NoDiscard]属性，包括其作用、使用方法、实际应用案例和最佳实践，帮助开发者提高代码质量和避免静默错误。",
+            "date_modified": "2025-07-19T10:30:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "PHP",
+                "PHP8.5",
+                "属性"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/dev/backend/golang/用 Go 构建一个类 kubectl 的命令行工具",
+            "content_html": "打造你的 CLI 神器：用 Go 构建一个类 `kubectl` 的命令行工具",
+            "url": "https://friday-go.icu/dev/backend/golang/用 Go 构建一个类 kubectl 的命令行工具",
+            "title": "用 Go 构建一个类 `kubectl` 的命令行工具",
+            "summary": "打造你的 CLI 神器：用 Go 构建一个类 `kubectl` 的命令行工具",
+            "date_modified": "2025-07-17T17:15:27.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "Golang"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/dev/backend/php/ThinkPHP近20年-中国Web开发的时代印记",
+            "content_html": "从2006年的初出茅庐，到如今的ThinkPHP 8.1.3，中国Web开发的故事里，ThinkPHP始终是一抹亮色。",
+            "url": "https://friday-go.icu/dev/backend/php/ThinkPHP近20年-中国Web开发的时代印记",
+            "title": "ThinkPHP近20年-中国Web开发的时代印记",
+            "summary": "从2006年的初出茅庐，到如今的ThinkPHP 8.1.3，中国Web开发的故事里，ThinkPHP始终是一抹亮色。",
+            "date_modified": "2025-07-16T10:00:02.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": []
+        },
+        {
+            "id": "https://friday-go.icu/dev/backend/golang/加快开发速度的十大必备Go库",
+            "content_html": "分享每个Golang程序员都应该掌握的核心工具和技能，从代码质量到性能优化，从开发效率到部署运维，全面提升Go开发能力。",
+            "url": "https://friday-go.icu/dev/backend/golang/加快开发速度的十大必备Go库",
+            "title": "加快开发速度的十大必备Go库完整使用指南 - 如何集成并掌握核心功能",
+            "summary": "分享每个Golang程序员都应该掌握的核心工具和技能，从代码质量到性能优化，从开发效率到部署运维，全面提升Go开发能力。",
+            "date_modified": "2025-07-12T10:30:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "golang",
+                "工具",
+                "开发效率"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/dev/backend/golang/每个-Golang-程序员都需要这个",
+            "content_html": "分享每个Golang程序员都应该掌握的核心工具和技能，从代码质量到性能优化，从开发效率到部署运维，全面提升Go开发能力。",
+            "url": "https://friday-go.icu/dev/backend/golang/每个-Golang-程序员都需要这个",
+            "title": "如何掌握每个 Golang 程序员都需要这个 - Go 开发完整指南",
+            "summary": "分享每个Golang程序员都应该掌握的核心工具和技能，从代码质量到性能优化，从开发效率到部署运维，全面提升Go开发能力。",
+            "date_modified": "2025-07-12T10:30:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "golang",
+                "工具",
+                "开发效率"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/dev/backend/golang/2025年更清洁的Go代码：紧凑的错误管理",
+            "content_html": "2025 年，Go 代码的错误管理正变得更紧凑、更优雅。本文结合实战案例与个人经验，分享如何用更清洁的方式处理 Go 错误，让你的代码更健壮、更易维护。",
+            "url": "https://friday-go.icu/dev/backend/golang/2025年更清洁的Go代码：紧凑的错误管理",
+            "title": "2025 年更清洁的 Go 代码 - 紧凑的错误管理",
+            "summary": "2025 年，Go 代码的错误管理正变得更紧凑、更优雅。本文结合实战案例与个人经验，分享如何用更清洁的方式处理 Go 错误，让你的代码更健壮、更易维护。",
+            "date_modified": "2025-07-08T10:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "golang",
+                "错误处理",
+                "编程技术"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/dev/backend/golang/9个没有竞争但需求巨大的微型SaaS理念",
+            "content_html": "你是否想过，SaaS 领域还有哪些“蓝海”？本文分享 9 个几乎没有竞争、但需求巨大的微型 SaaS 创业点子，附带实用建议与技术实现思路。",
+            "url": "https://friday-go.icu/dev/backend/golang/9个没有竞争但需求巨大的微型SaaS理念",
+            "title": "9 个没有竞争（但需求巨大）的微型 SaaS 理念",
+            "summary": "你是否想过，SaaS 领域还有哪些“蓝海”？本文分享 9 个几乎没有竞争、但需求巨大的微型 SaaS 创业点子，附带实用建议与技术实现思路。",
+            "date_modified": "2025-07-07T15:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "SaaS",
+                "创业",
+                "编程技术"
+            ]
         }
     ]
 }

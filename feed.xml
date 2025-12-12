@@ -4,7 +4,7 @@
         <title>PFinalClub Tech Blog</title>
         <link>https://friday-go.icu</link>
         <description>PFinalClub - 专注于 Golang, PHP, Python 的技术博客，分享微服务、云原生、架构设计等实战经验</description>
-        <lastBuildDate>Thu, 11 Dec 2025 02:02:26 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 12 Dec 2025 01:06:51 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-CN</language>
@@ -17,157 +17,123 @@
         <atom:link href="https://friday-go.icu/feed.xml" rel="self" type="application/rss+xml"/>
         <item>
             <title><![CDATA[数据库中文技术专题导航 - MySQL / PostgreSQL / 配置优化 2025]]></title>
-            <link>https://friday-go.icu/zh/数据库</link>
-            <guid>https://friday-go.icu/zh/数据库</guid>
-            <pubDate>Thu, 11 Dec 2025 02:02:26 GMT</pubDate>
+            <link>https://friday-go.icu/dev/system/database</link>
+            <guid>https://friday-go.icu/dev/system/database</guid>
+            <pubDate>Fri, 12 Dec 2025 01:06:51 GMT</pubDate>
             <description><![CDATA[PFinalClub 数据库中文专题导航页：系统整理 MySQL 配置、PostgreSQL 功能、数据库优化等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></description>
             <content:encoded><![CDATA[PFinalClub 数据库中文专题导航页：系统整理 MySQL 配置、PostgreSQL 功能、数据库优化等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[工具与实用程序中文专题导航 - AI 工具 / 开发工具 / 效率提升 2025]]></title>
-            <link>https://friday-go.icu/zh/工具</link>
-            <guid>https://friday-go.icu/zh/工具</guid>
-            <pubDate>Thu, 11 Dec 2025 02:02:26 GMT</pubDate>
-            <description><![CDATA[PFinalClub 工具与实用程序中文专题导航页：系统整理 AI 工具目录、开发工具、CLI 工具、Docker 指南、效率技巧等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></description>
-            <content:encoded><![CDATA[PFinalClub 工具与实用程序中文专题导航页：系统整理 AI 工具目录、开发工具、CLI 工具、Docker 指南、效率技巧等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Python 中文技术专题导航 - 爬虫 / 协程 / 工具与最佳实践]]></title>
-            <link>https://friday-go.icu/zh/python</link>
-            <guid>https://friday-go.icu/zh/python</guid>
-            <pubDate>Thu, 11 Dec 2025 02:02:26 GMT</pubDate>
-            <description><![CDATA[PFinalClub Python 中文专题导航页：系统整理爬虫技术、JS 逆向工程、协程、加密算法、Python 开发工具等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></description>
-            <content:encoded><![CDATA[PFinalClub Python 中文专题导航页：系统整理爬虫技术、JS 逆向工程、协程、加密算法、Python 开发工具等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></content:encoded>
-        </item>
-        <item>
             <title><![CDATA[PHP 中文技术专题导航 - ThinkPHP / Laravel / PHP 8.x / 协程 / 最佳实践]]></title>
-            <link>https://friday-go.icu/zh/php</link>
-            <guid>https://friday-go.icu/zh/php</guid>
-            <pubDate>Thu, 11 Dec 2025 02:02:26 GMT</pubDate>
+            <link>https://friday-go.icu/dev/backend/php</link>
+            <guid>https://friday-go.icu/dev/backend/php</guid>
+            <pubDate>Fri, 12 Dec 2025 01:06:51 GMT</pubDate>
             <description><![CDATA[PFinalClub PHP 中文专题导航页：系统整理 ThinkPHP 8、Laravel、PHP 8.x 企业级开发、协程池、错误处理等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></description>
             <content:encoded><![CDATA[PFinalClub PHP 中文专题导航页：系统整理 ThinkPHP 8、Laravel、PHP 8.x 企业级开发、协程池、错误处理等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></content:encoded>
         </item>
         <item>
+            <title><![CDATA[Python 中文技术专题导航 - 爬虫 / 协程 / 工具与最佳实践]]></title>
+            <link>https://friday-go.icu/dev/backend/python</link>
+            <guid>https://friday-go.icu/dev/backend/python</guid>
+            <pubDate>Fri, 12 Dec 2025 01:06:51 GMT</pubDate>
+            <description><![CDATA[PFinalClub Python 中文专题导航页：系统整理爬虫技术、JS 逆向工程、协程、加密算法、Python 开发工具等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></description>
+            <content:encoded><![CDATA[PFinalClub Python 中文专题导航页：系统整理爬虫技术、JS 逆向工程、协程、加密算法、Python 开发工具等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></content:encoded>
+        </item>
+        <item>
             <title><![CDATA[Golang 中文技术专题导航 - Go 后端 / RAG / 可观测性 / 桌面开发]]></title>
-            <link>https://friday-go.icu/zh/golang</link>
-            <guid>https://friday-go.icu/zh/golang</guid>
-            <pubDate>Thu, 11 Dec 2025 02:02:26 GMT</pubDate>
+            <link>https://friday-go.icu/dev/backend/golang</link>
+            <guid>https://friday-go.icu/dev/backend/golang</guid>
+            <pubDate>Fri, 12 Dec 2025 01:06:51 GMT</pubDate>
             <description><![CDATA[PFinalClub Golang 中文专题导航页：系统整理 Go 后端工程实践、RAG 系统、可观测性、Wails 桌面开发、游戏服务器与效率工具等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></description>
             <content:encoded><![CDATA[PFinalClub Golang 中文专题导航页：系统整理 Go 后端工程实践、RAG 系统、可观测性、Wails 桌面开发、游戏服务器与效率工具等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Python Technical Hub – Web Scraping / Coroutines / Tools & Best Practices 2025]]></title>
-            <link>https://friday-go.icu/python</link>
-            <guid>https://friday-go.icu/python</guid>
-            <pubDate>Thu, 11 Dec 2025 02:02:26 GMT</pubDate>
-            <description><![CDATA[PFinalClub Python hub: comprehensive guides on web scraping, JS reverse engineering, coroutines, encryption algorithms, and Python development tools for building efficient applications.]]></description>
-            <content:encoded><![CDATA[PFinalClub Python hub: comprehensive guides on web scraping, JS reverse engineering, coroutines, encryption algorithms, and Python development tools for building efficient applications.]]></content:encoded>
+            <title><![CDATA[思考与方法论 - 架构设计 技术哲学 学习路径 | PFinalClub]]></title>
+            <link>https://friday-go.icu/thinking/method</link>
+            <guid>https://friday-go.icu/thinking/method</guid>
+            <pubDate>Fri, 12 Dec 2025 01:06:51 GMT</pubDate>
+            <description><![CDATA[汇总架构思考、方法论、学习路径、个人认知与技术哲学等内容，沉淀可复用的思维框架。]]></description>
+            <content:encoded><![CDATA[汇总架构思考、方法论、学习路径、个人认知与技术哲学等内容，沉淀可复用的思维框架。]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[PHP Technical Hub – Framework Development / Performance / Best Practices 2025]]></title>
-            <link>https://friday-go.icu/php</link>
-            <guid>https://friday-go.icu/php</guid>
-            <pubDate>Thu, 11 Dec 2025 02:02:26 GMT</pubDate>
-            <description><![CDATA[PFinalClub PHP hub: comprehensive guides on ThinkPHP 8, Laravel, PHP 8.5, coroutines, error handling, and modern PHP development practices for building production-ready applications.]]></description>
-            <content:encoded><![CDATA[PFinalClub PHP hub: comprehensive guides on ThinkPHP 8, Laravel, PHP 8.5, coroutines, error handling, and modern PHP development practices for building production-ready applications.]]></content:encoded>
+            <title><![CDATA[安全工程 - WAF 中间件安全 安全平台 DevOps | PFinalClub]]></title>
+            <link>https://friday-go.icu/security/engineering</link>
+            <guid>https://friday-go.icu/security/engineering</guid>
+            <pubDate>Fri, 12 Dec 2025 01:06:51 GMT</pubDate>
+            <description><![CDATA[聚合 WAF、中间件安全、安全平台工程、自动化脚本与安全基建等工程化落地内容，突出“建设型”安全能力。]]></description>
+            <content:encoded><![CDATA[聚合 WAF、中间件安全、安全平台工程、自动化脚本与安全基建等工程化落地内容，突出“建设型”安全能力。]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Golang Technical Hub – Production-Ready Go Backend / Web Frameworks / AI & RAG / Observability]]></title>
-            <link>https://friday-go.icu/golang</link>
-            <guid>https://friday-go.icu/golang</guid>
-            <pubDate>Thu, 11 Dec 2025 02:02:26 GMT</pubDate>
-            <description><![CDATA[PFinalClub Golang hub: curated guides on Go error handling, web framework selection, RAG systems, observability, containerization and more, giving you a clear path to building production-grade Go services.]]></description>
-            <content:encoded><![CDATA[PFinalClub Golang hub: curated guides on Go error handling, web framework selection, RAG systems, observability, containerization and more, giving you a clear path to building production-grade Go services.]]></content:encoded>
+            <title><![CDATA[攻防研究 - Web安全 内网渗透 红蓝对抗方法论 | PFinalClub]]></title>
+            <link>https://friday-go.icu/security/offensive</link>
+            <guid>https://friday-go.icu/security/offensive</guid>
+            <pubDate>Fri, 12 Dec 2025 01:06:51 GMT</pubDate>
+            <description><![CDATA[聚合 Web 安全、内网渗透、红蓝对抗方法论、日志取证等攻防实战内容，突出“既能打也能守”的安全研究视角。]]></description>
+            <content:encoded><![CDATA[聚合 Web 安全、内网渗透、红蓝对抗方法论、日志取证等攻防实战内容，突出“既能打也能守”的安全研究视角。]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Tools & Utilities Hub – AI Tools / Development Tools / Productivity 2025]]></title>
+            <title><![CDATA[后端工程导航]]></title>
+            <link>https://friday-go.icu/dev/backend</link>
+            <guid>https://friday-go.icu/dev/backend</guid>
+            <pubDate>Fri, 12 Dec 2025 01:06:51 GMT</pubDate>
+            <description><![CDATA[聚合 Go/PHP/Python 等后端工程实践与性能优化文章。]]></description>
+            <content:encoded><![CDATA[聚合 Go/PHP/Python 等后端工程实践与性能优化文章。]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[系统与基础导航]]></title>
+            <link>https://friday-go.icu/dev/system</link>
+            <guid>https://friday-go.icu/dev/system</guid>
+            <pubDate>Fri, 12 Dec 2025 01:06:51 GMT</pubDate>
+            <description><![CDATA[覆盖数据库、Linux、网络、容器等系统基础与实践文章。]]></description>
+            <content:encoded><![CDATA[覆盖数据库、Linux、网络、容器等系统基础与实践文章。]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[数据与自动化 - 爬虫 AI 机器人 DevOps 工具 | PFinalClub]]></title>
+            <link>https://friday-go.icu/data/automation</link>
+            <guid>https://friday-go.icu/data/automation</guid>
+            <pubDate>Fri, 12 Dec 2025 01:06:51 GMT</pubDate>
+            <description><![CDATA[覆盖爬虫采集、自动化脚本、机器人与数据生产线的工程实践。]]></description>
+            <content:encoded><![CDATA[覆盖爬虫采集、自动化脚本、机器人与数据生产线的工程实践。]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[开发与系统 - 后端工程 性能优化 系统架构 | PFinalClub]]></title>
+            <link>https://friday-go.icu/dev</link>
+            <guid>https://friday-go.icu/dev</guid>
+            <pubDate>Fri, 12 Dec 2025 01:06:51 GMT</pubDate>
+            <description><![CDATA[汇总后端工程、性能与 Profiling、系统与网络基础等内容，突出“安全视角的工程实践”。]]></description>
+            <content:encoded><![CDATA[汇总后端工程、性能与 Profiling、系统与网络基础等内容，突出“安全视角的工程实践”。]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[独立开发 - 产品设计 技术实现 SaaS 创业 | PFinalClub]]></title>
+            <link>https://friday-go.icu/indie</link>
+            <guid>https://friday-go.icu/indie</guid>
+            <pubDate>Fri, 12 Dec 2025 01:06:51 GMT</pubDate>
+            <description><![CDATA[记录从安全经验到独立产品化的思考与实践，包括产品构思、技术实现、市场与增长。]]></description>
+            <content:encoded><![CDATA[记录从安全经验到独立产品化的思考与实践，包括产品构思、技术实现、市场与增长。]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[工具与实用程序中文专题导航 - AI 工具 / 开发工具 / 效率提升 2025]]></title>
             <link>https://friday-go.icu/Tools</link>
             <guid>https://friday-go.icu/Tools</guid>
-            <pubDate>Thu, 11 Dec 2025 02:02:26 GMT</pubDate>
-            <description><![CDATA[PFinalClub Tools hub: comprehensive directory of AI tools, development utilities, CLI tools, Docker guides, and productivity tips for modern developers.]]></description>
-            <content:encoded><![CDATA[PFinalClub Tools hub: comprehensive directory of AI tools, development utilities, CLI tools, Docker guides, and productivity tips for modern developers.]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Database Technical Hub – MySQL / Configuration / Optimization 2025]]></title>
-            <link>https://friday-go.icu/database</link>
-            <guid>https://friday-go.icu/database</guid>
-            <pubDate>Thu, 11 Dec 2025 02:02:26 GMT</pubDate>
-            <description><![CDATA[PFinalClub Database hub: comprehensive guides on MySQL configuration, database optimization, and best practices for production database management.]]></description>
-            <content:encoded><![CDATA[PFinalClub Database hub: comprehensive guides on MySQL configuration, database optimization, and best practices for production database management.]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Developers in the Vibe Coding Era - How to Code with ChatGPT 5.1 Instead of Being Replaced]]></title>
-            <link>https://friday-go.icu/Tools/Vibe-Coding-ChatGPT-5.1</link>
-            <guid>https://friday-go.icu/Tools/Vibe-Coding-ChatGPT-5.1</guid>
-            <pubDate>Fri, 28 Nov 2025 00:00:00 GMT</pubDate>
-            <description><![CDATA[In the Vibe Coding era, ChatGPT 5.1 is already sitting at your desk. This piece is not about whether AI will replace developers, but how to code with ChatGPT 5.1 so that it works overtime and you go home on time.]]></description>
-            <content:encoded><![CDATA[In the Vibe Coding era, ChatGPT 5.1 is already sitting at your desk. This piece is not about whether AI will replace developers, but how to code with ChatGPT 5.1 so that it works overtime and you go home on time.]]></content:encoded>
-            <category>ai coding</category>
-            <category>chatgpt 5.1</category>
-            <category>vibe coding</category>
-            <category>developer productivity</category>
-            <category>software engineering</category>
+            <pubDate>Fri, 12 Dec 2025 01:06:51 GMT</pubDate>
+            <description><![CDATA[PFinalClub 工具与实用程序中文专题导航页：系统整理 AI 工具目录、开发工具、CLI 工具、Docker 指南、效率技巧等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></description>
+            <content:encoded><![CDATA[PFinalClub 工具与实用程序中文专题导航页：系统整理 AI 工具目录、开发工具、CLI 工具、Docker 指南、效率技巧等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Vibe Coding 时代的开发者 如何跟 ChatGPT 5.1 一起写代码，而不是被替代]]></title>
-            <link>https://friday-go.icu/zh/工具/Vibe-Coding-时代的开发者：如何跟-ChatGPT-5.1-一起写代码，而不是被替代</link>
-            <guid>https://friday-go.icu/zh/工具/Vibe-Coding-时代的开发者：如何跟-ChatGPT-5.1-一起写代码，而不是被替代</guid>
+            <link>https://friday-go.icu/thinking/notes/Vibe-Coding-时代的开发者：如何跟-ChatGPT-5.1-一起写代码，而不是被替代</link>
+            <guid>https://friday-go.icu/thinking/notes/Vibe-Coding-时代的开发者：如何跟-ChatGPT-5.1-一起写代码，而不是被替代</guid>
             <pubDate>Fri, 28 Nov 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[在 Vibe Coding 时代，ChatGPT 5.1 已经坐在你的工位上了。这篇文章聊的不是“会不会被 AI 替代”，而是：如何和 ChatGPT 5.1 一起写代码，让它加班，你下班。]]></description>
             <content:encoded><![CDATA[在 Vibe Coding 时代，ChatGPT 5.1 已经坐在你的工位上了。这篇文章聊的不是“会不会被 AI 替代”，而是：如何和 ChatGPT 5.1 一起写代码，让它加班，你下班。]]></content:encoded>
-            <category>ai coding</category>
-            <category>chatgpt 5.1</category>
-            <category>vibe coding</category>
-            <category>developer productivity</category>
-            <category>software engineering</category>
-        </item>
-        <item>
-            <title><![CDATA[AI Tools Directory 2025  500+ Best AI Apps for Developers, Writers & Creators]]></title>
-            <link>https://friday-go.icu/Tools/AI-Tools-Directory-2025-Best-AI-Apps-and-Use-Cases</link>
-            <guid>https://friday-go.icu/Tools/AI-Tools-Directory-2025-Best-AI-Apps-and-Use-Cases</guid>
-            <pubDate>Thu, 27 Nov 2025 00:00:00 GMT</pubDate>
-            <description><![CDATA[Complete AI tools directory 2025: Find 500+ best AI apps for coding, writing, design, and automation. Curated list with live navigation site, use cases, and workflow guides. Updated daily.]]></description>
-            <content:encoded><![CDATA[Complete AI tools directory 2025: Find 500+ best AI apps for coding, writing, design, and automation. Curated list with live navigation site, use cases, and workflow guides. Updated daily.]]></content:encoded>
-            <category>ai tools directory</category>
-            <category>ai apps</category>
-            <category>productivity</category>
-            <category>automation</category>
-            <category>developers</category>
-            <category>creators</category>
-        </item>
-        <item>
-            <title><![CDATA[Go Error Handling Best Practices 2025  Complete Guide with Examples]]></title>
-            <link>https://friday-go.icu/golang/Go-Error-Handling-Best-Practices-2025-Complete-Guide</link>
-            <guid>https://friday-go.icu/golang/Go-Error-Handling-Best-Practices-2025-Complete-Guide</guid>
-            <pubDate>Wed, 26 Nov 2025 00:00:00 GMT</pubDate>
-            <description><![CDATA[Master Go error handling best practices 2025. Learn sentinel errors, error wrapping, custom types, and production patterns with real code examples. Perfect for Go 1.21+ services and microservices.]]></description>
-            <content:encoded><![CDATA[Master Go error handling best practices 2025. Learn sentinel errors, error wrapping, custom types, and production patterns with real code examples. Perfect for Go 1.21+ services and microservices.]]></content:encoded>
-            <category>golang</category>
-            <category>error handling</category>
-            <category>best-practices</category>
-            <category>production</category>
-            <category>backend</category>
-            <category>api</category>
-        </item>
-        <item>
-            <title><![CDATA[Making Local LLMs Support Function Calling Like OpenAI - PHP Async Implementation Guide]]></title>
-            <link>https://friday-go.icu/php/Making-Local-LLMs-Support-Function-Calling-Like-OpenAI-PHP-Async-Implementation</link>
-            <guid>https://friday-go.icu/php/Making-Local-LLMs-Support-Function-Calling-Like-OpenAI-PHP-Async-Implementation</guid>
-            <pubDate>Wed, 19 Nov 2025 15:30:00 GMT</pubDate>
-            <description><![CDATA[Hands-on tutorial on how to make locally-running models like Qwen3, Deepseek-Coder-V3, and GLM4-Chat support native Function Calling just like OpenAI GPT-4. Implement OpenAI-compatible tool calls using the pfinal-asyncio async framework, achieving 200%-500% performance improvement with concurrent execution, zero API costs, and complete data localization. Includes best practices for API design, error handling, and production deployment in PHP.]]></description>
-            <content:encoded><![CDATA[Hands-on tutorial on how to make locally-running models like Qwen3, Deepseek-Coder-V3, and GLM4-Chat support native Function Calling just like OpenAI GPT-4. Implement OpenAI-compatible tool calls using the pfinal-asyncio async framework, achieving 200%-500% performance improvement with concurrent execution, zero API costs, and complete data localization. Includes best practices for API design, error handling, and production deployment in PHP.]]></content:encoded>
-            <category>PHP</category>
-            <category>AI</category>
-            <category>Function Calling</category>
-            <category>Asynchronous Programming</category>
-            <category>Large Language Models</category>
-            <category>Qwen3</category>
-            <category>Deepseek</category>
+            <category>AI编程</category>
+            <category>ChatGPT</category>
+            <category>开发效率</category>
         </item>
         <item>
             <title><![CDATA[让本地大模型像 OpenAI 一样支持 Function Calling PHP 异步实现实战]]></title>
-            <link>https://friday-go.icu/zh/php/让 Qwen3 和 Deepseek 懂 Function Calling-PHP篇-opt</link>
-            <guid>https://friday-go.icu/zh/php/让 Qwen3 和 Deepseek 懂 Function Calling-PHP篇-opt</guid>
+            <link>https://friday-go.icu/dev/backend/php/让 Qwen3 和 Deepseek 懂 Function Calling-PHP篇-opt</link>
+            <guid>https://friday-go.icu/dev/backend/php/让 Qwen3 和 Deepseek 懂 Function Calling-PHP篇-opt</guid>
             <pubDate>Wed, 19 Nov 2025 15:30:00 GMT</pubDate>
             <description><![CDATA[实战教程：如何让本地运行的 Qwen3、Deepseek-Coder-V3、GLM4-Chat 等模型像 OpenAI GPT-4 一样支持原生 Function Calling。通过 pfinal-asyncio 异步框架实现完全兼容 OpenAI 接口规范的工具调用，并发执行性能提升 200%-500%，零 API 费用，数据完全本地化。]]></description>
             <content:encoded><![CDATA[实战教程：如何让本地运行的 Qwen3、Deepseek-Coder-V3、GLM4-Chat 等模型像 OpenAI GPT-4 一样支持原生 Function Calling。通过 pfinal-asyncio 异步框架实现完全兼容 OpenAI 接口规范的工具调用，并发执行性能提升 200%-500%，零 API 费用，数据完全本地化。]]></content:encoded>
@@ -181,113 +147,9 @@
             <category>GLM4</category>
         </item>
         <item>
-            <title><![CDATA[Building Production-Ready GraphQL APIs with Go - Complete Guide 2025]]></title>
-            <link>https://friday-go.icu/golang/Building-GraphQL-APIs-with-Go-Complete-Guide-2025</link>
-            <guid>https://friday-go.icu/golang/Building-GraphQL-APIs-with-Go-Complete-Guide-2025</guid>
-            <pubDate>Thu, 13 Nov 2025 00:00:00 GMT</pubDate>
-            <description><![CDATA[Master GraphQL API development with Go in 2025. Learn gqlgen, schema design, resolvers, subscriptions, authentication, performance optimization, and production deployment strategies.]]></description>
-            <content:encoded><![CDATA[Master GraphQL API development with Go in 2025. Learn gqlgen, schema design, resolvers, subscriptions, authentication, performance optimization, and production deployment strategies.]]></content:encoded>
-            <category>Golang</category>
-            <category>GraphQL</category>
-            <category>API</category>
-            <category>Backend</category>
-            <category>Web Development</category>
-            <category>gqlgen</category>
-        </item>
-        <item>
-            <title><![CDATA[Building Production-Ready Kubernetes Operators with Go - A Complete Guide]]></title>
-            <link>https://friday-go.icu/golang/Building-Kubernetes-Operators-with-Go-Complete-Guide</link>
-            <guid>https://friday-go.icu/golang/Building-Kubernetes-Operators-with-Go-Complete-Guide</guid>
-            <pubDate>Thu, 13 Nov 2025 00:00:00 GMT</pubDate>
-            <description><![CDATA[Master Kubernetes operator development in 2025. Learn Kubebuilder, controller patterns, CRD design, and production deployment strategies with real-world examples.]]></description>
-            <content:encoded><![CDATA[Master Kubernetes operator development in 2025. Learn Kubebuilder, controller patterns, CRD design, and production deployment strategies with real-world examples.]]></content:encoded>
-            <category>Golang</category>
-            <category>Kubernetes</category>
-            <category>Operator</category>
-            <category>Cloud Native</category>
-            <category>DevOps</category>
-            <category>Kubebuilder</category>
-        </item>
-        <item>
-            <title><![CDATA[Go Containerization Best Practices 2025 - From 800MB to 10MB Docker Images]]></title>
-            <link>https://friday-go.icu/golang/Go-Containerization-Best-Practices-Docker-Optimization</link>
-            <guid>https://friday-go.icu/golang/Go-Containerization-Best-Practices-Docker-Optimization</guid>
-            <pubDate>Thu, 13 Nov 2025 00:00:00 GMT</pubDate>
-            <description><![CDATA[Master Docker optimization for Go applications in 2025. Learn multi-stage builds, distroless images, and security hardening techniques to reduce image size by 98% while improving performance.]]></description>
-            <content:encoded><![CDATA[Master Docker optimization for Go applications in 2025. Learn multi-stage builds, distroless images, and security hardening techniques to reduce image size by 98% while improving performance.]]></content:encoded>
-            <category>Golang</category>
-            <category>Docker</category>
-            <category>DevOps</category>
-            <category>Containerization</category>
-            <category>Best Practices</category>
-            <category>Performance</category>
-            <category>Security</category>
-        </item>
-        <item>
-            <title><![CDATA[Go CLI Utility Development Practice Master Modern Command-Line Tools in 2025]]></title>
-            <link>https://friday-go.icu/golang/Go-CLI-Utility-Development-Practice</link>
-            <guid>https://friday-go.icu/golang/Go-CLI-Utility-Development-Practice</guid>
-            <pubDate>Wed, 12 Nov 2025 00:00:00 GMT</pubDate>
-            <description><![CDATA[Master Golang CLI utility development with practical examples using Cobra, Viper, and urfave/cli. Learn command parsing, config management, error handling, and distribution strategies for professional command-line tools in 2025.]]></description>
-            <content:encoded><![CDATA[Master Golang CLI utility development with practical examples using Cobra, Viper, and urfave/cli. Learn command parsing, config management, error handling, and distribution strategies for professional command-line tools in 2025.]]></content:encoded>
-            <category>golang</category>
-            <category>tools</category>
-            <category>cli</category>
-            <category>cobra</category>
-            <category>viper</category>
-        </item>
-        <item>
-            <title><![CDATA[PHP Process and Thread Analysis Deep Dive into Concurrency Models and Performance Optimization]]></title>
-            <link>https://friday-go.icu/php/PHP-Process-Thread-Analysis</link>
-            <guid>https://friday-go.icu/php/PHP-Process-Thread-Analysis</guid>
-            <pubDate>Wed, 12 Nov 2025 00:00:00 GMT</pubDate>
-            <description><![CDATA[Comprehensive analysis of PHP process and thread management, covering multi-process architecture, thread-safe mechanisms, PHP-FPM optimization, and concurrency strategies for building high-performance PHP applications.]]></description>
-            <content:encoded><![CDATA[Comprehensive analysis of PHP process and thread management, covering multi-process architecture, thread-safe mechanisms, PHP-FPM optimization, and concurrency strategies for building high-performance PHP applications.]]></content:encoded>
-            <category>PHP</category>
-            <category>Process</category>
-            <category>Thread</category>
-            <category>Concurrency</category>
-            <category>Performance</category>
-            <category>PHP-FPM</category>
-        </item>
-        <item>
-            <title><![CDATA[Building RAG Systems with Golang Complete Implementation from OpenAI to Vector Database]]></title>
-            <link>https://friday-go.icu/golang/Building-RAG-Systems-with-Golang-Complete-Implementation-from-OpenAI-to-Vector-Database</link>
-            <guid>https://friday-go.icu/golang/Building-RAG-Systems-with-Golang-Complete-Implementation-from-OpenAI-to-Vector-Database</guid>
-            <pubDate>Tue, 11 Nov 2025 11:27:00 GMT</pubDate>
-            <description><![CDATA[Comprehensive guide to building complete RAG (Retrieval-Augmented Generation) systems using Golang. Covers OpenAI API integration, vector database selection, embedding generation, semantic search, and production-ready implementations with practical examples and performance optimizations.]]></description>
-            <content:encoded><![CDATA[Comprehensive guide to building complete RAG (Retrieval-Augmented Generation) systems using Golang. Covers OpenAI API integration, vector database selection, embedding generation, semantic search, and production-ready implementations with practical examples and performance optimizations.]]></content:encoded>
-            <category>golang</category>
-            <category>ai-development</category>
-            <category>rag-systems</category>
-            <category>openai-api</category>
-            <category>vector-databases</category>
-            <category>semantic-search</category>
-            <category>llm-integration</category>
-            <category>production-deployment</category>
-        </item>
-        <item>
-            <title><![CDATA[Golang RAG System Tutorial 2025  Complete Guide OpenAI Qdrant Vector Database]]></title>
-            <link>https://friday-go.icu/golang/Building-RAG-System-with-Golang-OpenAI-Vector-Database</link>
-            <guid>https://friday-go.icu/golang/Building-RAG-System-with-Golang-OpenAI-Vector-Database</guid>
-            <pubDate>Tue, 11 Nov 2025 00:00:00 GMT</pubDate>
-            <description><![CDATA[Golang RAG system tutorial 2025: Build complete RAG system with Go, OpenAI API, and Qdrant vector database. Step-by-step guide with code examples, embedding generation, semantic search, and production best practices. Perfect for Go developers building AI applications.]]></description>
-            <content:encoded><![CDATA[Golang RAG system tutorial 2025: Build complete RAG system with Go, OpenAI API, and Qdrant vector database. Step-by-step guide with code examples, embedding generation, semantic search, and production best practices. Perfect for Go developers building AI applications.]]></content:encoded>
-            <category>golang</category>
-            <category>ai</category>
-            <category>rag</category>
-            <category>llm</category>
-            <category>vector-database</category>
-            <category>openai</category>
-            <category>tutorial</category>
-            <category>guide</category>
-            <category>machine-learning</category>
-            <category>semantic-search</category>
-        </item>
-        <item>
             <title><![CDATA[Golang 实现 RAG 系统 从 OpenAI API 到向量数据库完整实战]]></title>
-            <link>https://friday-go.icu/zh/golang/Golang实现RAG系统-从OpenAI到向量数据库</link>
-            <guid>https://friday-go.icu/zh/golang/Golang实现RAG系统-从OpenAI到向量数据库</guid>
+            <link>https://friday-go.icu/dev/backend/golang/Golang实现RAG系统-从OpenAI到向量数据库</link>
+            <guid>https://friday-go.icu/dev/backend/golang/Golang实现RAG系统-从OpenAI到向量数据库</guid>
             <pubDate>Tue, 11 Nov 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[深入讲解如何使用 Golang 构建完整的 RAG（检索增强生成）系统，涵盖 OpenAI API 集成、向量数据库选型、Embedding 生成、语义检索和实战案例，助力开发者快速构建智能问答系统。]]></description>
             <content:encoded><![CDATA[深入讲解如何使用 Golang 构建完整的 RAG（检索增强生成）系统，涵盖 OpenAI API 集成、向量数据库选型、Embedding 生成、语义检索和实战案例，助力开发者快速构建智能问答系统。]]></content:encoded>
@@ -299,24 +161,9 @@
             <category>OpenAI</category>
         </item>
         <item>
-            <title><![CDATA[10 Essential Go Tools to Boost Development Efficiency - From Code Management to Performance Optimization]]></title>
-            <link>https://friday-go.icu/golang/10-Essential-Go-Tools-to-Boost-Development-Efficiency-2025</link>
-            <guid>https://friday-go.icu/golang/10-Essential-Go-Tools-to-Boost-Development-Efficiency-2025</guid>
-            <pubDate>Sun, 09 Nov 2025 11:31:32 GMT</pubDate>
-            <description><![CDATA[Comprehensive guide to 10 essential Go development tools that can boost your productivity by 3x. Covers code formatting, dependency management, performance analysis, project automation, and advanced debugging techniques with practical examples and real-world use cases.]]></description>
-            <content:encoded><![CDATA[Comprehensive guide to 10 essential Go development tools that can boost your productivity by 3x. Covers code formatting, dependency management, performance analysis, project automation, and advanced debugging techniques with practical examples and real-world use cases.]]></content:encoded>
-            <category>golang</category>
-            <category>development-tools</category>
-            <category>productivity</category>
-            <category>best-practices</category>
-            <category>code-quality</category>
-            <category>performance</category>
-            <category>automation</category>
-        </item>
-        <item>
             <title><![CDATA[造轮子 单文件管多项目部署，Git 服务器全搞定]]></title>
-            <link>https://friday-go.icu/zh/工具/单文件代码部署工具</link>
-            <guid>https://friday-go.icu/zh/工具/单文件代码部署工具</guid>
+            <link>https://friday-go.icu/Tools/单文件代码部署工具</link>
+            <guid>https://friday-go.icu/Tools/单文件代码部署工具</guid>
             <pubDate>Wed, 05 Nov 2025 10:00:00 GMT</pubDate>
             <description><![CDATA[一个类似 Adminer.php 的单文件 PHP 代码部署工具，支持 Git + SSH 部署，简单易用，一个文件搞定所有部署需求。]]></description>
             <content:encoded><![CDATA[一个类似 Adminer.php 的单文件 PHP 代码部署工具，支持 Git + SSH 部署，简单易用，一个文件搞定所有部署需求。]]></content:encoded>
@@ -327,23 +174,20 @@
             <category>SSH</category>
         </item>
         <item>
-            <title><![CDATA[From Trace to Insight - A Closed-Loop Observability Practice for Go Projects]]></title>
-            <link>https://friday-go.icu/golang/From-Trace-to-Insight-A-Closed-Loop-Observability-Practice-for-Go-Projects</link>
-            <guid>https://friday-go.icu/golang/From-Trace-to-Insight-A-Closed-Loop-Observability-Practice-for-Go-Projects</guid>
+            <title><![CDATA[从 trace 到洞察 Go 项目的可观测性闭环实践]]></title>
+            <link>https://friday-go.icu/thinking/method/从 trace 到洞察：Go 项目的可观测性闭环实践</link>
+            <guid>https://friday-go.icu/thinking/method/从 trace 到洞察：Go 项目的可观测性闭环实践</guid>
             <pubDate>Wed, 29 Oct 2025 10:00:00 GMT</pubDate>
-            <description><![CDATA[Based on practical project experience, this article explains how to use OpenTelemetry to build closed-loop Go observability in 2025, turning traces, metrics, and logs from simple data collection into decision-driving insights.]]></description>
-            <content:encoded><![CDATA[Based on practical project experience, this article explains how to use OpenTelemetry to build closed-loop Go observability in 2025, turning traces, metrics, and logs from simple data collection into decision-driving insights.]]></content:encoded>
-            <category>golang</category>
-            <category>observability</category>
+            <description><![CDATA[基于实际项目经验，深入讲解如何将 OpenTelemetry 的 trace、metrics、logs 三大信号从简单的数据收集转变为驱动决策的可观测性闭环。]]></description>
+            <content:encoded><![CDATA[基于实际项目经验，深入讲解如何将 OpenTelemetry 的 trace、metrics、logs 三大信号从简单的数据收集转变为驱动决策的可观测性闭环。]]></content:encoded>
+            <category>Golang</category>
+            <category>可观测性</category>
             <category>OpenTelemetry</category>
-            <category>trace</category>
-            <category>metrics</category>
-            <category>logs</category>
         </item>
         <item>
             <title><![CDATA[Stop-The-World 其实没停下 - Go GC 的微暂停真相]]></title>
-            <link>https://friday-go.icu/zh/golang/Stop-The-World-其实没停下-Go-GC-的微暂停真相</link>
-            <guid>https://friday-go.icu/zh/golang/Stop-The-World-其实没停下-Go-GC-的微暂停真相</guid>
+            <link>https://friday-go.icu/dev/backend/golang/Stop-The-World-其实没停下-Go-GC-的微暂停真相</link>
+            <guid>https://friday-go.icu/dev/backend/golang/Stop-The-World-其实没停下-Go-GC-的微暂停真相</guid>
             <pubDate>Wed, 29 Oct 2025 10:00:00 GMT</pubDate>
             <description><![CDATA[深入剖析 Go 垃圾回收的 STW 机制，揭示"并发 GC"背后的微暂停真相。从源码实现到生产实践，带你理解 Go GC 的两次 STW、写屏障开销、以及 P99 延迟的真正元凶。]]></description>
             <content:encoded><![CDATA[深入剖析 Go 垃圾回收的 STW 机制，揭示"并发 GC"背后的微暂停真相。从源码实现到生产实践，带你理解 Go GC 的两次 STW、写屏障开销、以及 P99 延迟的真正元凶。]]></content:encoded>
@@ -352,22 +196,9 @@
             <category>性能优化</category>
         </item>
         <item>
-            <title><![CDATA[从 trace 到洞察 Go 项目的可观测性闭环实践]]></title>
-            <link>https://friday-go.icu/zh/golang/从 trace 到洞察：Go 项目的可观测性闭环实践</link>
-            <guid>https://friday-go.icu/zh/golang/从 trace 到洞察：Go 项目的可观测性闭环实践</guid>
-            <pubDate>Wed, 29 Oct 2025 10:00:00 GMT</pubDate>
-            <description><![CDATA[基于实际项目经验，深入讲解如何将 OpenTelemetry 的 trace、metrics、logs 三大信号从简单的数据收集转变为驱动决策的可观测性闭环。]]></description>
-            <content:encoded><![CDATA[基于实际项目经验，深入讲解如何将 OpenTelemetry 的 trace、metrics、logs 三大信号从简单的数据收集转变为驱动决策的可观测性闭环。]]></content:encoded>
-            <category>golang</category>
-            <category>OpenTelemetry</category>
-            <category>trace</category>
-            <category>metrics</category>
-            <category>logs</category>
-        </item>
-        <item>
             <title><![CDATA[测试驱动开发 以测试为引擎的软件工程实践]]></title>
-            <link>https://friday-go.icu/zh/工具/测试驱动开发 以测试为引擎的软件工程实践</link>
-            <guid>https://friday-go.icu/zh/工具/测试驱动开发 以测试为引擎的软件工程实践</guid>
+            <link>https://friday-go.icu/Tools/测试驱动开发 以测试为引擎的软件工程实践</link>
+            <guid>https://friday-go.icu/Tools/测试驱动开发 以测试为引擎的软件工程实践</guid>
             <pubDate>Tue, 28 Oct 2025 10:00:00 GMT</pubDate>
             <description><![CDATA[深入探讨测试驱动开发（TDD）的理论基础、实践指南和最佳实践，帮助开发者构建高质量、可维护的软件系统。]]></description>
             <content:encoded><![CDATA[深入探讨测试驱动开发（TDD）的理论基础、实践指南和最佳实践，帮助开发者构建高质量、可维护的软件系统。]]></content:encoded>
@@ -379,16 +210,16 @@
         </item>
         <item>
             <title><![CDATA[Go 协程与 PHP Fibers-并发编程的两种实现]]></title>
-            <link>https://friday-go.icu/zh/php/Go协程与PHP-Fibers并发编程对比</link>
-            <guid>https://friday-go.icu/zh/php/Go协程与PHP-Fibers并发编程对比</guid>
+            <link>https://friday-go.icu/dev/backend/php/Go协程与PHP-Fibers并发编程对比</link>
+            <guid>https://friday-go.icu/dev/backend/php/Go协程与PHP-Fibers并发编程对比</guid>
             <pubDate>Sun, 19 Oct 2025 10:00:02 GMT</pubDate>
             <description><![CDATA[深入对比 Go 协程与 PHP Fibers 两种并发编程模型的技术特点、实现机制和实际应用场景，帮助开发者理解它们的差异和适用场景]]></description>
             <content:encoded><![CDATA[深入对比 Go 协程与 PHP Fibers 两种并发编程模型的技术特点、实现机制和实际应用场景，帮助开发者理解它们的差异和适用场景]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Golang Socket 通信架构分析与实现-构建高性能游戏服务器]]></title>
-            <link>https://friday-go.icu/zh/golang/Golang Socket 通信架构分析与实现-构建高性能游戏服务器</link>
-            <guid>https://friday-go.icu/zh/golang/Golang Socket 通信架构分析与实现-构建高性能游戏服务器</guid>
+            <link>https://friday-go.icu/thinking/method/Golang Socket 通信架构分析与实现-构建高性能游戏服务器</link>
+            <guid>https://friday-go.icu/thinking/method/Golang Socket 通信架构分析与实现-构建高性能游戏服务器</guid>
             <pubDate>Wed, 15 Oct 2025 15:00:00 GMT</pubDate>
             <description><![CDATA[深入分析Golang Socket通信架构设计与实现，从基础TCP编程到高性能游戏服务器架构，涵盖连接管理、消息编解码、并发模型等核心技术，帮助开发者构建稳定高效的游戏服务器。]]></description>
             <content:encoded><![CDATA[深入分析Golang Socket通信架构设计与实现，从基础TCP编程到高性能游戏服务器架构，涵盖连接管理、消息编解码、并发模型等核心技术，帮助开发者构建稳定高效的游戏服务器。]]></content:encoded>
@@ -399,19 +230,9 @@
             <category>网络编程</category>
         </item>
         <item>
-            <title><![CDATA[Broot - The Command-Line Tool That Makes File Navigation Effortless - Complete Guide 2025]]></title>
-            <link>https://friday-go.icu/Tools/The Command-Line Tool That Makes File Navigation Effortles</link>
-            <guid>https://friday-go.icu/Tools/The Command-Line Tool That Makes File Navigation Effortles</guid>
-            <pubDate>Wed, 15 Oct 2025 09:33:00 GMT</pubDate>
-            <description><![CDATA[Complete guide to Broot, a powerful command-line file manager that makes file navigation effortless. Learn how to use Broot for efficient directory browsing, file operations, and terminal productivity.]]></description>
-            <content:encoded><![CDATA[Complete guide to Broot, a powerful command-line file manager that makes file navigation effortless. Learn how to use Broot for efficient directory browsing, file operations, and terminal productivity.]]></content:encoded>
-            <category>Tools</category>
-            <category>Command Line, Rust</category>
-        </item>
-        <item>
             <title><![CDATA[Broot-让文件导航更高效的命令行神器]]></title>
-            <link>https://friday-go.icu/zh/工具/Broot-高效的命令行文件管理器</link>
-            <guid>https://friday-go.icu/zh/工具/Broot-高效的命令行文件管理器</guid>
+            <link>https://friday-go.icu/Tools/Broot-高效的命令行文件管理器</link>
+            <guid>https://friday-go.icu/Tools/Broot-高效的命令行文件管理器</guid>
             <pubDate>Wed, 15 Oct 2025 09:33:00 GMT</pubDate>
             <description><![CDATA[Broot 是一款由 Rust 编写的高效终端文件管理器，提供直观的树状视图、模糊搜索、快速导航和文件预览等强大功能]]></description>
             <content:encoded><![CDATA[Broot 是一款由 Rust 编写的高效终端文件管理器，提供直观的树状视图、模糊搜索、快速导航和文件预览等强大功能]]></content:encoded>
@@ -420,31 +241,17 @@
             <category>Rust</category>
         </item>
         <item>
-            <title><![CDATA[Golang Socket Communication Architecture Analysis Building High-Performance Game Servers]]></title>
-            <link>https://friday-go.icu/golang/golang-socket-architecture-building-high-performance-game-servers</link>
-            <guid>https://friday-go.icu/golang/golang-socket-architecture-building-high-performance-game-servers</guid>
-            <pubDate>Wed, 15 Oct 2025 00:00:00 GMT</pubDate>
-            <description><![CDATA[Build enterprise-grade game servers with Golang Socket architecture in 2025! Deep dive into TCP/UDP programming, connection pooling, message protocols (Protobuf/MessagePack), goroutine-per-connection vs reactor patterns, and load balancing. Handle 100K+ CCU with sub-50ms latency using production battle-tested patterns.]]></description>
-            <content:encoded><![CDATA[Build enterprise-grade game servers with Golang Socket architecture in 2025! Deep dive into TCP/UDP programming, connection pooling, message protocols (Protobuf/MessagePack), goroutine-per-connection vs reactor patterns, and load balancing. Handle 100K+ CCU with sub-50ms latency using production battle-tested patterns.]]></content:encoded>
-            <category>Socket</category>
-            <category>Game Server</category>
-            <category>High Performance</category>
-            <category>Concurrent Programming</category>
-            <category>Network Programming</category>
-            <category>best-practices</category>
-        </item>
-        <item>
             <title><![CDATA[PHP 8.x 企业级开发实战指南 从语言特性到生产部署]]></title>
-            <link>https://friday-go.icu/zh/php/PHP 8.x 企业级开发实战指南 从语言特性到生产部署</link>
-            <guid>https://friday-go.icu/zh/php/PHP 8.x 企业级开发实战指南 从语言特性到生产部署</guid>
+            <link>https://friday-go.icu/thinking/method/PHP 8.x 企业级开发实战指南 从语言特性到生产部署</link>
+            <guid>https://friday-go.icu/thinking/method/PHP 8.x 企业级开发实战指南 从语言特性到生产部署</guid>
             <pubDate>Sat, 11 Oct 2025 10:00:02 GMT</pubDate>
             <description><![CDATA[深入探讨PHP 8.x在企业级应用开发中的最佳实践，涵盖架构设计、性能优化、工程化部署等核心话题]]></description>
             <content:encoded><![CDATA[深入探讨PHP 8.x在企业级应用开发中的最佳实践，涵盖架构设计、性能优化、工程化部署等核心话题]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[2025年最佳Go技术博客推荐-资深开发者的学习宝库]]></title>
-            <link>https://friday-go.icu/zh/golang/2025年最佳Go技术博客推荐：资深开发者的学习宝库</link>
-            <guid>https://friday-go.icu/zh/golang/2025年最佳Go技术博客推荐：资深开发者的学习宝库</guid>
+            <link>https://friday-go.icu/dev/backend/golang/2025年最佳Go技术博客推荐：资深开发者的学习宝库</link>
+            <guid>https://friday-go.icu/dev/backend/golang/2025年最佳Go技术博客推荐：资深开发者的学习宝库</guid>
             <pubDate>Sun, 28 Sep 2025 11:30:00 GMT</pubDate>
             <description><![CDATA[还在为找不到高质量的Go技术博客而苦恼？别担心，这篇文章就是你的救星！从官方博客到社区大牛，从入门教程到高级技巧，我们来看看这些博客到底谁才是真正的"宝藏"。]]></description>
             <content:encoded><![CDATA[还在为找不到高质量的Go技术博客而苦恼？别担心，这篇文章就是你的救星！从官方博客到社区大牛，从入门教程到高级技巧，我们来看看这些博客到底谁才是真正的"宝藏"。]]></content:encoded>
@@ -452,28 +259,9 @@
             <category>技术博客</category>
         </item>
         <item>
-            <title><![CDATA[Best Go Web Frameworks 2025 - Comprehensive Developer's Guide with Performance Benchmarks]]></title>
-            <link>https://friday-go.icu/golang/Best-Go-Web-Frameworks-2025-Comprehensive-Developers-Guide</link>
-            <guid>https://friday-go.icu/golang/Best-Go-Web-Frameworks-2025-Comprehensive-Developers-Guide</guid>
-            <pubDate>Sun, 28 Sep 2025 11:27:00 GMT</pubDate>
-            <description><![CDATA[Comprehensive 2025 guide to the top 10 Go web frameworks: Gin, Fiber, Echo, Hertz, Beego, Go-Chi, FastHTTP, Gorilla. Detailed performance benchmarks, feature comparisons, and practical selection criteria for developers. Includes real-world use cases and optimization strategies.]]></description>
-            <content:encoded><![CDATA[Comprehensive 2025 guide to the top 10 Go web frameworks: Gin, Fiber, Echo, Hertz, Beego, Go-Chi, FastHTTP, Gorilla. Detailed performance benchmarks, feature comparisons, and practical selection criteria for developers. Includes real-world use cases and optimization strategies.]]></content:encoded>
-            <category>golang</category>
-            <category>web-frameworks</category>
-            <category>gin</category>
-            <category>fiber</category>
-            <category>echo</category>
-            <category>hertz</category>
-            <category>beego</category>
-            <category>go-chi</category>
-            <category>fasthttp</category>
-            <category>gorilla</category>
-            <category>performance-optimization</category>
-        </item>
-        <item>
             <title><![CDATA[2025年Go Web框架深度评测 10大主流框架性能对比与选型指南]]></title>
-            <link>https://friday-go.icu/zh/golang/2025年最佳Go-Web框架深度解析：资深开发者的选择指南</link>
-            <guid>https://friday-go.icu/zh/golang/2025年最佳Go-Web框架深度解析：资深开发者的选择指南</guid>
+            <link>https://friday-go.icu/thinking/method/2025年最佳Go-Web框架深度解析：资深开发者的选择指南</link>
+            <guid>https://friday-go.icu/thinking/method/2025年最佳Go-Web框架深度解析：资深开发者的选择指南</guid>
             <pubDate>Sun, 28 Sep 2025 11:27:00 GMT</pubDate>
             <description><![CDATA[2025年最新Go Web框架深度评测：Gin、Fiber、Echo、Hertz、Beego、Go-Chi、FastHTTP、Gorilla等10大主流框架性能对比。从请求处理速度、内存占用、学习曲线、社区活跃度等维度，提供详细的项目选型指南和性能优化建议。]]></description>
             <content:encoded><![CDATA[2025年最新Go Web框架深度评测：Gin、Fiber、Echo、Hertz、Beego、Go-Chi、FastHTTP、Gorilla等10大主流框架性能对比。从请求处理速度、内存占用、学习曲线、社区活跃度等维度，提供详细的项目选型指南和性能优化建议。]]></content:encoded>
@@ -491,29 +279,17 @@
         </item>
         <item>
             <title><![CDATA[Go-testing-synctest-深度解析与实战指南]]></title>
-            <link>https://friday-go.icu/zh/golang/Go-testing-synctest-深度解析与实战指南</link>
-            <guid>https://friday-go.icu/zh/golang/Go-testing-synctest-深度解析与实战指南</guid>
+            <link>https://friday-go.icu/dev/backend/golang/Go-testing-synctest-深度解析与实战指南</link>
+            <guid>https://friday-go.icu/dev/backend/golang/Go-testing-synctest-深度解析与实战指南</guid>
             <pubDate>Mon, 22 Sep 2025 17:15:27 GMT</pubDate>
             <description><![CDATA[Go 1.25 正式引入的 `testing/synctest` 包彻底改变了这一现状。它通过创建一个可控的"泡泡"（bubble）环境，让异步测试变得既快速又可靠。本文将深入解析其核心原理、使用技巧和最佳实践。]]></description>
             <content:encoded><![CDATA[Go 1.25 正式引入的 `testing/synctest` 包彻底改变了这一现状。它通过创建一个可控的"泡泡"（bubble）环境，让异步测试变得既快速又可靠。本文将深入解析其核心原理、使用技巧和最佳实践。]]></content:encoded>
             <category>golang</category>
         </item>
         <item>
-            <title><![CDATA[Qwen Code 使用指南 2025  20个实用技巧提升编程效率]]></title>
-            <link>https://friday-go.icu/Tools/20-practical-qwen-code-tips-to-boost-efficiency</link>
-            <guid>https://friday-go.icu/Tools/20-practical-qwen-code-tips-to-boost-efficiency</guid>
-            <pubDate>Wed, 17 Sep 2025 10:00:00 GMT</pubDate>
-            <description><![CDATA[Qwen Code 使用完整指南 2025: 20个实用技巧从基础到高级，提升AI编程效率。包含安装、配置、提示词优化、阿里云服务集成等实战经验。适合中国开发者的AI编程助手教程。]]></description>
-            <content:encoded><![CDATA[Qwen Code 使用完整指南 2025: 20个实用技巧从基础到高级，提升AI编程效率。包含安装、配置、提示词优化、阿里云服务集成等实战经验。适合中国开发者的AI编程助手教程。]]></content:encoded>
-            <category>Tools</category>
-            <category>Qwen Code</category>
-            <category>Alibaba Cloud</category>
-            <category>AI Programming</category>
-        </item>
-        <item>
             <title><![CDATA[Qwen Code 20个实战技巧 让你的编程效率直接起飞！]]></title>
-            <link>https://friday-go.icu/zh/工具/Qwen Code 30个使用小技巧</link>
-            <guid>https://friday-go.icu/zh/工具/Qwen Code 30个使用小技巧</guid>
+            <link>https://friday-go.icu/thinking/notes/Qwen Code 30个使用小技巧</link>
+            <guid>https://friday-go.icu/thinking/notes/Qwen Code 30个使用小技巧</guid>
             <pubDate>Wed, 17 Sep 2025 10:00:00 GMT</pubDate>
             <description><![CDATA[掌握Qwen Code的20个实战技巧，从基础使用到高级应用，全面提升你的AI编程体验。专为中国开发者优化的AI编程助手实战指南。]]></description>
             <content:encoded><![CDATA[掌握Qwen Code的20个实战技巧，从基础使用到高级应用，全面提升你的AI编程体验。专为中国开发者优化的AI编程助手实战指南。]]></content:encoded>
@@ -524,8 +300,8 @@
         </item>
         <item>
             <title><![CDATA[5个MCP服务器 - 在AI编辑器迭代中保持效率的稳定选择]]></title>
-            <link>https://friday-go.icu/zh/工具/MCP服务器精选：提升AI编程效率的5大神器</link>
-            <guid>https://friday-go.icu/zh/工具/MCP服务器精选：提升AI编程效率的5大神器</guid>
+            <link>https://friday-go.icu/data/automation/MCP服务器精选：提升AI编程效率的5大神器</link>
+            <guid>https://friday-go.icu/data/automation/MCP服务器精选：提升AI编程效率的5大神器</guid>
             <pubDate>Thu, 11 Sep 2025 10:14:02 GMT</pubDate>
             <description><![CDATA[介绍5个核心MCP服务器，帮助开发者在不同AI编辑器间保持高效的工作流程]]></description>
             <content:encoded><![CDATA[介绍5个核心MCP服务器，帮助开发者在不同AI编辑器间保持高效的工作流程]]></content:encoded>
@@ -535,8 +311,8 @@
         </item>
         <item>
             <title><![CDATA[如何掌握PHP MCP扩展-我的开源实践与思考 - PHP 开发完整指南]]></title>
-            <link>https://friday-go.icu/zh/php/PHP MCP 扩展</link>
-            <guid>https://friday-go.icu/zh/php/PHP MCP 扩展</guid>
+            <link>https://friday-go.icu/dev/backend/php/PHP MCP 扩展</link>
+            <guid>https://friday-go.icu/dev/backend/php/PHP MCP 扩展</guid>
             <pubDate>Tue, 09 Sep 2025 10:30:00 GMT</pubDate>
             <description><![CDATA[分享我开发pfinalclub/php-mcp扩展的经历，探讨MCP协议对PHP生态的重要意义，以及为什么选择Workerman作为技术栈。]]></description>
             <content:encoded><![CDATA[分享我开发pfinalclub/php-mcp扩展的经历，探讨MCP协议对PHP生态的重要意义，以及为什么选择Workerman作为技术栈。]]></content:encoded>
@@ -548,51 +324,194 @@
         </item>
         <item>
             <title><![CDATA[Wails 教程系列 - WebKit 与生命周期深度解析]]></title>
-            <link>https://friday-go.icu/zh/wails-tutorial-series/00-webkit-and-lifecycle</link>
-            <guid>https://friday-go.icu/zh/wails-tutorial-series/00-webkit-and-lifecycle</guid>
+            <link>https://friday-go.icu/dev/backend/wails-tutorial-series/00-webkit-and-lifecycle</link>
+            <guid>https://friday-go.icu/dev/backend/wails-tutorial-series/00-webkit-and-lifecycle</guid>
             <pubDate>Fri, 22 Aug 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[深入理解 Wails 中的 WebKit 技术原理、wails.Run() 运行路线以及应用生命周期管理机制。]]></description>
             <content:encoded><![CDATA[深入理解 Wails 中的 WebKit 技术原理、wails.Run() 运行路线以及应用生命周期管理机制。]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Wails 教程系列 - 环境搭建与安装]]></title>
-            <link>https://friday-go.icu/zh/wails-tutorial-series/01-installation</link>
-            <guid>https://friday-go.icu/zh/wails-tutorial-series/01-installation</guid>
+            <link>https://friday-go.icu/dev/backend/wails-tutorial-series/01-installation</link>
+            <guid>https://friday-go.icu/dev/backend/wails-tutorial-series/01-installation</guid>
             <pubDate>Fri, 22 Aug 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[详细介绍如何为 Wails 开发准备环境，包括 Go、Node.js 的安装以及 Wails CLI 的获取。]]></description>
             <content:encoded><![CDATA[详细介绍如何为 Wails 开发准备环境，包括 Go、Node.js 的安装以及 Wails CLI 的获取。]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Wails 教程系列 - 创建你的第一个应用]]></title>
-            <link>https://friday-go.icu/zh/wails-tutorial-series/02-first-app</link>
-            <guid>https://friday-go.icu/zh/wails-tutorial-series/02-first-app</guid>
+            <link>https://friday-go.icu/dev/backend/wails-tutorial-series/02-first-app</link>
+            <guid>https://friday-go.icu/dev/backend/wails-tutorial-series/02-first-app</guid>
             <pubDate>Fri, 22 Aug 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[深入理解 Wails 项目创建流程、架构原理和最佳实践，为资深开发者提供全面的技术指导。]]></description>
             <content:encoded><![CDATA[深入理解 Wails 项目创建流程、架构原理和最佳实践，为资深开发者提供全面的技术指导。]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Wails 教程系列 - 核心概念详解]]></title>
-            <link>https://friday-go.icu/zh/wails-tutorial-series/03-core-concepts</link>
-            <guid>https://friday-go.icu/zh/wails-tutorial-series/03-core-concepts</guid>
+            <link>https://friday-go.icu/dev/backend/wails-tutorial-series/03-core-concepts</link>
+            <guid>https://friday-go.icu/dev/backend/wails-tutorial-series/03-core-concepts</guid>
             <pubDate>Fri, 22 Aug 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[深入理解 Wails 应用的核心概念，包括前后端架构、数据绑定、方法调用和事件驱动通信。]]></description>
             <content:encoded><![CDATA[深入理解 Wails 应用的核心概念，包括前后端架构、数据绑定、方法调用和事件驱动通信。]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Wails 教程系列 - 后端开发 (Go)]]></title>
-            <link>https://friday-go.icu/zh/wails-tutorial-series/05-backend-development</link>
-            <guid>https://friday-go.icu/zh/wails-tutorial-series/05-backend-development</guid>
+            <link>https://friday-go.icu/dev/backend/wails-tutorial-series/05-backend-development</link>
+            <guid>https://friday-go.icu/dev/backend/wails-tutorial-series/05-backend-development</guid>
             <pubDate>Fri, 22 Aug 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[学习如何在 Wails 应用中使用 Go 语言进行后端开发，包括业务逻辑实现、系统 API 调用和数据处理。]]></description>
             <content:encoded><![CDATA[学习如何在 Wails 应用中使用 Go 语言进行后端开发，包括业务逻辑实现、系统 API 调用和数据处理。]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Wails 教程系列 - 简介]]></title>
-            <link>https://friday-go.icu/zh/wails-tutorial-series</link>
-            <guid>https://friday-go.icu/zh/wails-tutorial-series</guid>
+            <link>https://friday-go.icu/dev/backend/wails-tutorial-series</link>
+            <guid>https://friday-go.icu/dev/backend/wails-tutorial-series</guid>
             <pubDate>Fri, 22 Aug 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[专为资深 Golang 开发者设计的 Wails 桌面应用开发教程，涵盖架构设计、性能优化、系统集成等高级主题。]]></description>
             <content:encoded><![CDATA[专为资深 Golang 开发者设计的 Wails 桌面应用开发教程，涵盖架构设计、性能优化、系统集成等高级主题。]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[VSCode快捷键 - 完整使用指南]]></title>
+            <link>https://friday-go.icu/Tools/VSCode快捷键</link>
+            <guid>https://friday-go.icu/Tools/VSCode快捷键</guid>
+            <pubDate>Thu, 21 Aug 2025 10:00:00 GMT</pubDate>
+            <description><![CDATA[VSCode常用快捷键总结，提高开发效率]]></description>
+            <content:encoded><![CDATA[VSCode常用快捷键总结，提高开发效率]]></content:encoded>
+            <category>工具</category>
+            <category>VSCode</category>
+        </item>
+        <item>
+            <title><![CDATA[10个Golang安全陷阱 — 以及真正有效的修复方案]]></title>
+            <link>https://friday-go.icu/security/engineering/10个Golang安全陷阱及真正有效的修复方案</link>
+            <guid>https://friday-go.icu/security/engineering/10个Golang安全陷阱及真正有效的修复方案</guid>
+            <pubDate>Wed, 20 Aug 2025 14:30:00 GMT</pubDate>
+            <description><![CDATA[发现Go开发中的10个关键安全陷阱，学习在生产环境中真正有效的、经过实战检验的解决方案。]]></description>
+            <content:encoded><![CDATA[发现Go开发中的10个关键安全陷阱，学习在生产环境中真正有效的、经过实战检验的解决方案。]]></content:encoded>
+            <category>golang</category>
+            <category>security</category>
+            <category>best-practices</category>
+        </item>
+        <item>
+            <title><![CDATA[别再瞎改 API 了 3 招版本控制，让你的 Go 服务稳如老狗]]></title>
+            <link>https://friday-go.icu/dev/backend/golang/如何实现 RESTful API 版本控制</link>
+            <guid>https://friday-go.icu/dev/backend/golang/如何实现 RESTful API 版本控制</guid>
+            <pubDate>Mon, 18 Aug 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[深入探讨 RESTful API 版本控制的策略和实践，包括 URI、头部和内容协商方法，并提供 Go 语言的详细示例。]]></description>
+            <content:encoded><![CDATA[深入探讨 RESTful API 版本控制的策略和实践，包括 URI、头部和内容协商方法，并提供 Go 语言的详细示例。]]></content:encoded>
+            <category>golang</category>
+            <category>RESTful API</category>
+            <category>API 版本控制</category>
+            <category>微服务</category>
+        </item>
+        <item>
+            <title><![CDATA[别再为找标签浪费 2 小时了，Arc 的左手边藏着开发者的时间机器]]></title>
+            <link>https://friday-go.icu/Tools/Arc 浏览器更符合开发者</link>
+            <guid>https://friday-go.icu/Tools/Arc 浏览器更符合开发者</guid>
+            <pubDate>Fri, 08 Aug 2025 09:49:32 GMT</pubDate>
+            <description><![CDATA[Arc浏览器深度体验：为什么它更适合开发者使用]]></description>
+            <content:encoded><![CDATA[Arc浏览器深度体验：为什么它更适合开发者使用]]></content:encoded>
+            <category>工具</category>
+            <category>浏览器</category>
+            <category>效率</category>
+        </item>
+        <item>
+            <title><![CDATA[Coze扩展包完整使用指南 - 如何集成并掌握核心功能]]></title>
+            <link>https://friday-go.icu/dev/backend/php/Coze 扩展包 PHP 版本</link>
+            <guid>https://friday-go.icu/dev/backend/php/Coze 扩展包 PHP 版本</guid>
+            <pubDate>Mon, 28 Jul 2025 10:00:02 GMT</pubDate>
+            <description><![CDATA[Coze 官方提供了 Python,Node,Go 版本的 SDK 就是没有提供 PHP 版本的 于是自己动手搞了个 PHP 版本的]]></description>
+            <content:encoded><![CDATA[Coze 官方提供了 Python,Node,Go 版本的 SDK 就是没有提供 PHP 版本的 于是自己动手搞了个 PHP 版本的]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Go 和 WASM 构建 WebAssembly 应用的全新尝试]]></title>
+            <link>https://friday-go.icu/dev/backend/golang/Go-WASM构建WebAssembly应用的全新尝试</link>
+            <guid>https://friday-go.icu/dev/backend/golang/Go-WASM构建WebAssembly应用的全新尝试</guid>
+            <pubDate>Tue, 22 Jul 2025 17:15:27 GMT</pubDate>
+            <description><![CDATA[当 Go 语言遇上 WebAssembly，会碰撞出怎样的火花？让我们一起探索这个令人兴奋的技术组合，看看如何用 Go 构建高性能的 Web 应用。]]></description>
+            <content:encoded><![CDATA[当 Go 语言遇上 WebAssembly，会碰撞出怎样的火花？让我们一起探索这个令人兴奋的技术组合，看看如何用 Go 构建高性能的 Web 应用。]]></content:encoded>
+            <category>golang</category>
+            <category>WebAssembly</category>
+        </item>
+        <item>
+            <title><![CDATA[AutoGen 在金融数据分析中的自动化流程构建 让AI助手成为你的金融分析师]]></title>
+            <link>https://friday-go.icu/data/automation/autogen-financial-analysis</link>
+            <guid>https://friday-go.icu/data/automation/autogen-financial-analysis</guid>
+            <pubDate>Mon, 21 Jul 2025 09:49:32 GMT</pubDate>
+            <description><![CDATA[在金融数据分析的复杂世界中，AutoGen正在重新定义我们处理数据、生成报告和做出决策的方式。本文将深入探讨如何利用AutoGen构建智能化的金融分析工作流。]]></description>
+            <content:encoded><![CDATA[在金融数据分析的复杂世界中，AutoGen正在重新定义我们处理数据、生成报告和做出决策的方式。本文将深入探讨如何利用AutoGen构建智能化的金融分析工作流。]]></content:encoded>
+            <category>工具</category>
+        </item>
+        <item>
+            <title><![CDATA[PHP 8.5 NoDiscard 属性-告别静默错误，提升代码质量的神器]]></title>
+            <link>https://friday-go.icu/dev/backend/php/PHP-8.5-NoDiscard-属性详解</link>
+            <guid>https://friday-go.icu/dev/backend/php/PHP-8.5-NoDiscard-属性详解</guid>
+            <pubDate>Sat, 19 Jul 2025 10:30:00 GMT</pubDate>
+            <description><![CDATA[详细介绍PHP 8.5新增的#[\NoDiscard]属性，包括其作用、使用方法、实际应用案例和最佳实践，帮助开发者提高代码质量和避免静默错误。]]></description>
+            <content:encoded><![CDATA[详细介绍PHP 8.5新增的#[\NoDiscard]属性，包括其作用、使用方法、实际应用案例和最佳实践，帮助开发者提高代码质量和避免静默错误。]]></content:encoded>
+            <category>PHP</category>
+            <category>PHP8.5</category>
+            <category>属性</category>
+        </item>
+        <item>
+            <title><![CDATA[用 Go 构建一个类 `kubectl` 的命令行工具]]></title>
+            <link>https://friday-go.icu/dev/backend/golang/用 Go 构建一个类 kubectl 的命令行工具</link>
+            <guid>https://friday-go.icu/dev/backend/golang/用 Go 构建一个类 kubectl 的命令行工具</guid>
+            <pubDate>Thu, 17 Jul 2025 17:15:27 GMT</pubDate>
+            <description><![CDATA[打造你的 CLI 神器：用 Go 构建一个类 `kubectl` 的命令行工具]]></description>
+            <content:encoded><![CDATA[打造你的 CLI 神器：用 Go 构建一个类 `kubectl` 的命令行工具]]></content:encoded>
+            <category>Golang</category>
+        </item>
+        <item>
+            <title><![CDATA[ThinkPHP近20年-中国Web开发的时代印记]]></title>
+            <link>https://friday-go.icu/dev/backend/php/ThinkPHP近20年-中国Web开发的时代印记</link>
+            <guid>https://friday-go.icu/dev/backend/php/ThinkPHP近20年-中国Web开发的时代印记</guid>
+            <pubDate>Wed, 16 Jul 2025 10:00:02 GMT</pubDate>
+            <description><![CDATA[从2006年的初出茅庐，到如今的ThinkPHP 8.1.3，中国Web开发的故事里，ThinkPHP始终是一抹亮色。]]></description>
+            <content:encoded><![CDATA[从2006年的初出茅庐，到如今的ThinkPHP 8.1.3，中国Web开发的故事里，ThinkPHP始终是一抹亮色。]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[加快开发速度的十大必备Go库完整使用指南 - 如何集成并掌握核心功能]]></title>
+            <link>https://friday-go.icu/dev/backend/golang/加快开发速度的十大必备Go库</link>
+            <guid>https://friday-go.icu/dev/backend/golang/加快开发速度的十大必备Go库</guid>
+            <pubDate>Sat, 12 Jul 2025 10:30:00 GMT</pubDate>
+            <description><![CDATA[分享每个Golang程序员都应该掌握的核心工具和技能，从代码质量到性能优化，从开发效率到部署运维，全面提升Go开发能力。]]></description>
+            <content:encoded><![CDATA[分享每个Golang程序员都应该掌握的核心工具和技能，从代码质量到性能优化，从开发效率到部署运维，全面提升Go开发能力。]]></content:encoded>
+            <category>golang</category>
+            <category>工具</category>
+            <category>开发效率</category>
+        </item>
+        <item>
+            <title><![CDATA[如何掌握每个 Golang 程序员都需要这个 - Go 开发完整指南]]></title>
+            <link>https://friday-go.icu/dev/backend/golang/每个-Golang-程序员都需要这个</link>
+            <guid>https://friday-go.icu/dev/backend/golang/每个-Golang-程序员都需要这个</guid>
+            <pubDate>Sat, 12 Jul 2025 10:30:00 GMT</pubDate>
+            <description><![CDATA[分享每个Golang程序员都应该掌握的核心工具和技能，从代码质量到性能优化，从开发效率到部署运维，全面提升Go开发能力。]]></description>
+            <content:encoded><![CDATA[分享每个Golang程序员都应该掌握的核心工具和技能，从代码质量到性能优化，从开发效率到部署运维，全面提升Go开发能力。]]></content:encoded>
+            <category>golang</category>
+            <category>工具</category>
+            <category>开发效率</category>
+        </item>
+        <item>
+            <title><![CDATA[2025 年更清洁的 Go 代码 - 紧凑的错误管理]]></title>
+            <link>https://friday-go.icu/dev/backend/golang/2025年更清洁的Go代码：紧凑的错误管理</link>
+            <guid>https://friday-go.icu/dev/backend/golang/2025年更清洁的Go代码：紧凑的错误管理</guid>
+            <pubDate>Tue, 08 Jul 2025 10:00:00 GMT</pubDate>
+            <description><![CDATA[2025 年，Go 代码的错误管理正变得更紧凑、更优雅。本文结合实战案例与个人经验，分享如何用更清洁的方式处理 Go 错误，让你的代码更健壮、更易维护。]]></description>
+            <content:encoded><![CDATA[2025 年，Go 代码的错误管理正变得更紧凑、更优雅。本文结合实战案例与个人经验，分享如何用更清洁的方式处理 Go 错误，让你的代码更健壮、更易维护。]]></content:encoded>
+            <category>golang</category>
+            <category>错误处理</category>
+            <category>编程技术</category>
+        </item>
+        <item>
+            <title><![CDATA[9 个没有竞争（但需求巨大）的微型 SaaS 理念]]></title>
+            <link>https://friday-go.icu/dev/backend/golang/9个没有竞争但需求巨大的微型SaaS理念</link>
+            <guid>https://friday-go.icu/dev/backend/golang/9个没有竞争但需求巨大的微型SaaS理念</guid>
+            <pubDate>Mon, 07 Jul 2025 15:00:00 GMT</pubDate>
+            <description><![CDATA[你是否想过，SaaS 领域还有哪些“蓝海”？本文分享 9 个几乎没有竞争、但需求巨大的微型 SaaS 创业点子，附带实用建议与技术实现思路。]]></description>
+            <content:encoded><![CDATA[你是否想过，SaaS 领域还有哪些“蓝海”？本文分享 9 个几乎没有竞争、但需求巨大的微型 SaaS 创业点子，附带实用建议与技术实现思路。]]></content:encoded>
+            <category>SaaS</category>
+            <category>创业</category>
+            <category>编程技术</category>
         </item>
     </channel>
 </rss>
