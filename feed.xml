@@ -4,7 +4,7 @@
         <title>PFinalClub Tech Blog</title>
         <link>https://friday-go.icu</link>
         <description>PFinalClub - 专注于 Golang, PHP, Python 的技术博客，分享微服务、云原生、架构设计等实战经验</description>
-        <lastBuildDate>Fri, 12 Dec 2025 10:06:48 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 12 Dec 2025 10:36:32 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-CN</language>
@@ -19,7 +19,7 @@
             <title><![CDATA[数据库中文技术专题导航 - MySQL / PostgreSQL / 配置优化 2025]]></title>
             <link>https://friday-go.icu/dev/system/database</link>
             <guid>https://friday-go.icu/dev/system/database</guid>
-            <pubDate>Fri, 12 Dec 2025 10:06:48 GMT</pubDate>
+            <pubDate>Fri, 12 Dec 2025 10:36:32 GMT</pubDate>
             <description><![CDATA[PFinalClub 数据库中文专题导航页：系统整理 MySQL 配置、PostgreSQL 功能、数据库优化等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></description>
             <content:encoded><![CDATA[PFinalClub 数据库中文专题导航页：系统整理 MySQL 配置、PostgreSQL 功能、数据库优化等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></content:encoded>
         </item>
@@ -27,7 +27,7 @@
             <title><![CDATA[Python 中文技术专题导航 - 爬虫 / 协程 / 工具与最佳实践]]></title>
             <link>https://friday-go.icu/dev/backend/python</link>
             <guid>https://friday-go.icu/dev/backend/python</guid>
-            <pubDate>Fri, 12 Dec 2025 10:06:48 GMT</pubDate>
+            <pubDate>Fri, 12 Dec 2025 10:36:32 GMT</pubDate>
             <description><![CDATA[PFinalClub Python 中文专题导航页：系统整理爬虫技术、JS 逆向工程、协程、加密算法、Python 开发工具等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></description>
             <content:encoded><![CDATA[PFinalClub Python 中文专题导航页：系统整理爬虫技术、JS 逆向工程、协程、加密算法、Python 开发工具等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></content:encoded>
         </item>
@@ -35,7 +35,7 @@
             <title><![CDATA[PHP 中文技术专题导航 - ThinkPHP / Laravel / PHP 8.x / 协程 / 最佳实践]]></title>
             <link>https://friday-go.icu/dev/backend/php</link>
             <guid>https://friday-go.icu/dev/backend/php</guid>
-            <pubDate>Fri, 12 Dec 2025 10:06:48 GMT</pubDate>
+            <pubDate>Fri, 12 Dec 2025 10:36:31 GMT</pubDate>
             <description><![CDATA[PFinalClub PHP 中文专题导航页：系统整理 ThinkPHP 8、Laravel、PHP 8.x 企业级开发、协程池、错误处理等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></description>
             <content:encoded><![CDATA[PFinalClub PHP 中文专题导航页：系统整理 ThinkPHP 8、Laravel、PHP 8.x 企业级开发、协程池、错误处理等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></content:encoded>
         </item>
@@ -43,7 +43,7 @@
             <title><![CDATA[Golang 中文技术专题导航 - Go 后端 / RAG / 可观测性 / 桌面开发]]></title>
             <link>https://friday-go.icu/dev/backend/golang</link>
             <guid>https://friday-go.icu/dev/backend/golang</guid>
-            <pubDate>Fri, 12 Dec 2025 10:06:48 GMT</pubDate>
+            <pubDate>Fri, 12 Dec 2025 10:36:31 GMT</pubDate>
             <description><![CDATA[PFinalClub Golang 中文专题导航页：系统整理 Go 后端工程实践、RAG 系统、可观测性、Wails 桌面开发、游戏服务器与效率工具等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></description>
             <content:encoded><![CDATA[PFinalClub Golang 中文专题导航页：系统整理 Go 后端工程实践、RAG 系统、可观测性、Wails 桌面开发、游戏服务器与效率工具等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></content:encoded>
         </item>
@@ -51,31 +51,31 @@
             <title><![CDATA[技术架构与方法论 | 架构设计 学习路径 工程实践 | PFinalClub]]></title>
             <link>https://friday-go.icu/thinking/method</link>
             <guid>https://friday-go.icu/thinking/method</guid>
-            <pubDate>Fri, 12 Dec 2025 10:06:48 GMT</pubDate>
+            <pubDate>Fri, 12 Dec 2025 10:36:31 GMT</pubDate>
             <description><![CDATA[深入的技术架构与方法论指南，涵盖架构设计原则、系统化学习路径、工程实践方法论、技术哲学思考等内容。提供从技术深度到思维高度的完整成长体系。]]></description>
             <content:encoded><![CDATA[深入的技术架构与方法论指南，涵盖架构设计原则、系统化学习路径、工程实践方法论、技术哲学思考等内容。提供从技术深度到思维高度的完整成长体系。]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[安全攻防研究 | Web安全 内网渗透 红蓝对抗实战 | PFinalClub]]></title>
-            <link>https://friday-go.icu/security/offensive</link>
-            <guid>https://friday-go.icu/security/offensive</guid>
-            <pubDate>Fri, 12 Dec 2025 10:06:48 GMT</pubDate>
-            <description><![CDATA[深入的安全攻防研究指南，涵盖Web安全漏洞分析、内网渗透技术、红蓝对抗实战演练、渗透测试方法论等攻防一体实践内容。提供从攻击到防御的完整安全研究体系。]]></description>
-            <content:encoded><![CDATA[深入的安全攻防研究指南，涵盖Web安全漏洞分析、内网渗透技术、红蓝对抗实战演练、渗透测试方法论等攻防一体实践内容。提供从攻击到防御的完整安全研究体系。]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[安全工程实践 | WAF配置 安全平台 DevOps安全 | PFinalClub]]></title>
             <link>https://friday-go.icu/security/engineering</link>
             <guid>https://friday-go.icu/security/engineering</guid>
-            <pubDate>Fri, 12 Dec 2025 10:06:48 GMT</pubDate>
+            <pubDate>Fri, 12 Dec 2025 10:36:31 GMT</pubDate>
             <description><![CDATA[全面的安全工程实践指南，涵盖WAF配置、安全平台建设、自动化安全脚本、DevOps安全集成等工程化落地方案。提供从基础安全到企业级防护的完整解决方案。]]></description>
             <content:encoded><![CDATA[全面的安全工程实践指南，涵盖WAF配置、安全平台建设、自动化安全脚本、DevOps安全集成等工程化落地方案。提供从基础安全到企业级防护的完整解决方案。]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[安全攻防研究 | Web安全 内网渗透 红蓝对抗实战 | PFinalClub]]></title>
+            <link>https://friday-go.icu/security/offensive</link>
+            <guid>https://friday-go.icu/security/offensive</guid>
+            <pubDate>Fri, 12 Dec 2025 10:36:31 GMT</pubDate>
+            <description><![CDATA[深入的安全攻防研究指南，涵盖Web安全漏洞分析、内网渗透技术、红蓝对抗实战演练、渗透测试方法论等攻防一体实践内容。提供从攻击到防御的完整安全研究体系。]]></description>
+            <content:encoded><![CDATA[深入的安全攻防研究指南，涵盖Web安全漏洞分析、内网渗透技术、红蓝对抗实战演练、渗透测试方法论等攻防一体实践内容。提供从攻击到防御的完整安全研究体系。]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[后端工程导航]]></title>
             <link>https://friday-go.icu/dev/backend</link>
             <guid>https://friday-go.icu/dev/backend</guid>
-            <pubDate>Fri, 12 Dec 2025 10:06:48 GMT</pubDate>
+            <pubDate>Fri, 12 Dec 2025 10:36:31 GMT</pubDate>
             <description><![CDATA[聚合 Go/PHP/Python 等后端工程实践与性能优化文章。]]></description>
             <content:encoded><![CDATA[聚合 Go/PHP/Python 等后端工程实践与性能优化文章。]]></content:encoded>
         </item>
@@ -83,7 +83,7 @@
             <title><![CDATA[系统与基础导航]]></title>
             <link>https://friday-go.icu/dev/system</link>
             <guid>https://friday-go.icu/dev/system</guid>
-            <pubDate>Fri, 12 Dec 2025 10:06:48 GMT</pubDate>
+            <pubDate>Fri, 12 Dec 2025 10:36:31 GMT</pubDate>
             <description><![CDATA[覆盖数据库、Linux、网络、容器等系统基础与实践文章。]]></description>
             <content:encoded><![CDATA[覆盖数据库、Linux、网络、容器等系统基础与实践文章。]]></content:encoded>
         </item>
@@ -91,33 +91,128 @@
             <title><![CDATA[数据采集与自动化 | 爬虫技术 AI工程 机器人开发 | PFinalClub]]></title>
             <link>https://friday-go.icu/data/automation</link>
             <guid>https://friday-go.icu/data/automation</guid>
-            <pubDate>Fri, 12 Dec 2025 10:06:48 GMT</pubDate>
+            <pubDate>Fri, 12 Dec 2025 10:36:31 GMT</pubDate>
             <description><![CDATA[专业的数据采集与自动化技术指南，涵盖爬虫开发、AI工程实践、机器人开发、数据生产线构建等实战内容。提供从数据采集到自动化处理的完整技术栈解决方案。]]></description>
             <content:encoded><![CDATA[专业的数据采集与自动化技术指南，涵盖爬虫开发、AI工程实践、机器人开发、数据生产线构建等实战内容。提供从数据采集到自动化处理的完整技术栈解决方案。]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[后端开发与系统架构 | Go/PHP/Python实战教程 | PFinalClub]]></title>
-            <link>https://friday-go.icu/dev</link>
-            <guid>https://friday-go.icu/dev</guid>
-            <pubDate>Fri, 12 Dec 2025 10:06:48 GMT</pubDate>
-            <description><![CDATA[专业的后端开发与系统架构指南，涵盖Go、PHP、Python实战教程，性能优化，微服务架构设计，容器化部署等工程实践。提供从入门到精通的完整技术栈学习路径。]]></description>
-            <content:encoded><![CDATA[专业的后端开发与系统架构指南，涵盖Go、PHP、Python实战教程，性能优化，微服务架构设计，容器化部署等工程实践。提供从入门到精通的完整技术栈学习路径。]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[独立开发与产品实践 | SaaS开发 技术创业 产品增长 | PFinalClub]]></title>
             <link>https://friday-go.icu/indie</link>
             <guid>https://friday-go.icu/indie</guid>
-            <pubDate>Fri, 12 Dec 2025 10:06:48 GMT</pubDate>
+            <pubDate>Fri, 12 Dec 2025 10:36:31 GMT</pubDate>
             <description><![CDATA[专业的独立开发与产品实践指南，涵盖SaaS产品开发、技术创业路径、产品设计与增长策略等内容。提供从创意到商业化的完整产品开发体系。]]></description>
             <content:encoded><![CDATA[专业的独立开发与产品实践指南，涵盖SaaS产品开发、技术创业路径、产品设计与增长策略等内容。提供从创意到商业化的完整产品开发体系。]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[后端开发与系统架构 | Go/PHP/Python实战教程 | PFinalClub]]></title>
+            <link>https://friday-go.icu/dev</link>
+            <guid>https://friday-go.icu/dev</guid>
+            <pubDate>Fri, 12 Dec 2025 10:36:31 GMT</pubDate>
+            <description><![CDATA[专业的后端开发与系统架构指南，涵盖Go、PHP、Python实战教程，性能优化，微服务架构设计，容器化部署等工程实践。提供从入门到精通的完整技术栈学习路径。]]></description>
+            <content:encoded><![CDATA[专业的后端开发与系统架构指南，涵盖Go、PHP、Python实战教程，性能优化，微服务架构设计，容器化部署等工程实践。提供从入门到精通的完整技术栈学习路径。]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[工具与实用程序中文专题导航 - AI 工具 / 开发工具 / 效率提升 2025]]></title>
             <link>https://friday-go.icu/Tools</link>
             <guid>https://friday-go.icu/Tools</guid>
-            <pubDate>Fri, 12 Dec 2025 10:06:48 GMT</pubDate>
+            <pubDate>Fri, 12 Dec 2025 10:36:31 GMT</pubDate>
             <description><![CDATA[PFinalClub 工具与实用程序中文专题导航页：系统整理 AI 工具目录、开发工具、CLI 工具、Docker 指南、效率技巧等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></description>
             <content:encoded><![CDATA[PFinalClub 工具与实用程序中文专题导航页：系统整理 AI 工具目录、开发工具、CLI 工具、Docker 指南、效率技巧等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[搭建Nginx安全网关：3步堵住90%的Web漏洞！企业级防护实战指南]]></title>
+            <link>https://friday-go.icu/thinking/method/nginx-security-gateway-guide</link>
+            <guid>https://friday-go.icu/thinking/method/nginx-security-gateway-guide</guid>
+            <pubDate>Fri, 12 Dec 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+# 从0搭建Nginx安全网关：3步堵住90%的Web漏洞！
+
+> **警告**：你的网站可能正在被攻击！
+> 
+> 根据2024年Web安全报告，超过**87%的企业网站**存在Nginx配置安全隐患，其中**Host头攻击**和**敏感文件泄露**占比高达**63%**。
+> 
+> 本文将手把手教你构建企业级Nginx安全网关，**零成本**实现**等保2.0合规**防护。
+
+## 🚨 现状：你的网站面临这些威胁吗？
+
+### 真实案例回顾
+
+**案例一：Host头攻击导致用户密码泄露**
+```
+2024年3月，某电商平台遭受Host头攻击
+攻击者构造恶意请求：
+GET /password-reset HTTP/1.1
+Host: attacker-controlled-domain.com
+
+结果：平台发送的重置链接指向攻击者域名
+影响：超过1200名用户密码被重置，直接经济损失50万+
+```
+
+**案例二：敏感文件泄露引发数据灾难**
+```
+2024年1月，某SaaS公司.git目录被公开访问
+攻击者下载完整代码仓库，发现：
+- 数据库连接字符串（包含密码）
+- API密钥和Token
+- 内部网络架构文档
+- 员工个人信息表
+
+结果：被勒索比特币30枚，客户数据在暗网出售
+```
+
+### 常见Web安全漏洞清单
+
+| 漏洞类型 | 危害等级 | 检测方法 | 影响范围 |
+|]]></description>
+            <content:encoded><![CDATA[
+# 从0搭建Nginx安全网关：3步堵住90%的Web漏洞！
+
+> **警告**：你的网站可能正在被攻击！
+> 
+> 根据2024年Web安全报告，超过**87%的企业网站**存在Nginx配置安全隐患，其中**Host头攻击**和**敏感文件泄露**占比高达**63%**。
+> 
+> 本文将手把手教你构建企业级Nginx安全网关，**零成本**实现**等保2.0合规**防护。
+
+## 🚨 现状：你的网站面临这些威胁吗？
+
+### 真实案例回顾
+
+**案例一：Host头攻击导致用户密码泄露**
+```
+2024年3月，某电商平台遭受Host头攻击
+攻击者构造恶意请求：
+GET /password-reset HTTP/1.1
+Host: attacker-controlled-domain.com
+
+结果：平台发送的重置链接指向攻击者域名
+影响：超过1200名用户密码被重置，直接经济损失50万+
+```
+
+**案例二：敏感文件泄露引发数据灾难**
+```
+2024年1月，某SaaS公司.git目录被公开访问
+攻击者下载完整代码仓库，发现：
+- 数据库连接字符串（包含密码）
+- API密钥和Token
+- 内部网络架构文档
+- 员工个人信息表
+
+结果：被勒索比特币30枚，客户数据在暗网出售
+```
+
+### 常见Web安全漏洞清单
+
+| 漏洞类型 | 危害等级 | 检测方法 | 影响范围 |
+|]]></content:encoded>
+            <category>nginx</category>
+            <category>安全网关</category>
+            <category>web安全</category>
+            <category>安全加固</category>
+            <category>企业级防护</category>
+            <category>安全最佳实践</category>
+            <category>等保合规</category>
+            <category>渗透测试</category>
+            <category>安全防护</category>
         </item>
         <item>
             <title><![CDATA[Vibe Coding 时代的开发者 如何跟 ChatGPT 5.1 一起写代码，而不是被替代]]></title>
@@ -552,17 +647,6 @@ RAG（Retrieval-Augmented Generation，检索增强生成）是 2024-2025 年最
             <content:encoded><![CDATA[2025 年，Go 代码的错误管理正变得更紧凑、更优雅。本文结合实战案例与个人经验，分享如何用更清洁的方式处理 Go 错误，让你的代码更健壮、更易维护。]]></content:encoded>
             <category>golang</category>
             <category>错误处理</category>
-            <category>编程技术</category>
-        </item>
-        <item>
-            <title><![CDATA[9 个没有竞争（但需求巨大）的微型 SaaS 理念]]></title>
-            <link>https://friday-go.icu/dev/backend/golang/9个没有竞争但需求巨大的微型SaaS理念</link>
-            <guid>https://friday-go.icu/dev/backend/golang/9个没有竞争但需求巨大的微型SaaS理念</guid>
-            <pubDate>Mon, 07 Jul 2025 15:00:00 GMT</pubDate>
-            <description><![CDATA[你是否想过，SaaS 领域还有哪些“蓝海”？本文分享 9 个几乎没有竞争、但需求巨大的微型 SaaS 创业点子，附带实用建议与技术实现思路。]]></description>
-            <content:encoded><![CDATA[你是否想过，SaaS 领域还有哪些“蓝海”？本文分享 9 个几乎没有竞争、但需求巨大的微型 SaaS 创业点子，附带实用建议与技术实现思路。]]></content:encoded>
-            <category>SaaS</category>
-            <category>创业</category>
             <category>编程技术</category>
         </item>
     </channel>
