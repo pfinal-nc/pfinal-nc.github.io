@@ -1,17 +1,12 @@
 ---
-title: "安全工程实践 | WAF配置 安全平台 DevOps安全 | PFinalClub"
-description: "全面的安全工程实践指南，涵盖WAF配置、安全平台建设、自动化安全脚本、DevOps安全集成等工程化落地方案。提供从基础安全到企业级防护的完整解决方案。"
+title: "安全工程 - WAF 中间件安全 安全平台 DevOps | PFinalClub"
+description: 聚合 WAF、中间件安全、安全平台工程、自动化脚本与安全基建等工程化落地内容，突出“建设型”安全能力。
 keywords:
   - 安全工程
-  - WAF配置
+  - WAF
   - 安全平台
-  - DevOps安全
-  - 自动化安全
-  - 微服务安全
-  - 安全监控
-  - 漏洞管理
-  - 渗透测试
-  - 安全架构
+  - 自动化脚本
+  - 安全基建
 ---
 
 # 安全工程（Security Engineering）
