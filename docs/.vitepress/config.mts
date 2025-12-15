@@ -323,7 +323,7 @@ export default defineConfig({
       // 为主题中心页（Topic Hub）添加 CollectionPage 类型的 Schema.org 结构化数据
       // 检查是否是主题中心页（路径匹配主题目录的 index 页面）
       // 检查是否是工具页面
-      if (/^tools\/online-tools\/?$/.test(currentPath)) {
+      if (/^Tools\/online-tools\/?$/i.test(currentPath)) {
         // 为工具集合页面添加 ItemList 类型的 Schema.org 结构化数据
         const itemList = {
           "@context": "https://schema.org",
