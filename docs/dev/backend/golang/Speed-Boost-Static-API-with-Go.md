@@ -5,7 +5,17 @@ tags:
     - golang
 description: 介绍一款快速创建golang项目的工具
 author: PFinal南丞
-keywords: 提速利器：使用Go语言实现静态化API, golang, 项目创建, 快速创建, 工具, 项目, 快速, 工具
+keywords: 
+  - Go静态化API
+  - Go性能优化
+  - 静态API实现
+  - Go缓存策略
+  - API性能提升
+  - Go Web开发
+  - 静态化技术
+  - 高并发API
+  - Go后端优化
+  - API响应优化
 ---
 
 # 提速利器：使用Go语言实现静态化API

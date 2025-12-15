@@ -1,7 +1,5 @@
 # robots.txt for friday-go.icu
-# Updated: 2025-12-12
-
-Sitemap: https://friday-go.icu/sitemap.xml
+# Updated: 2025-12-15
 
 User-agent: *
 Allow: /
@@ -55,3 +53,6 @@ Allow: /
 
 User-agent: Baiduspider
 Allow: /
+
+# Sitemap 位置
+Sitemap: https://friday-go.icu/sitemap.xml

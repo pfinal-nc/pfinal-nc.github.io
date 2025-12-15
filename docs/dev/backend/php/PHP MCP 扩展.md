@@ -9,7 +9,17 @@ tags:
     - Workerman
 description: 分享我开发pfinalclub/php-mcp扩展的经历，探讨MCP协议对PHP生态的重要意义，以及为什么选择Workerman作为技术栈。
 author: PFinal南丞
-keywords: PHP, MCP, 模型上下文协议, PHP MCP扩展, pfinalclub, Workerman, 大语言模型, PHP AI集成, 开源项目, PHP开发, MCP协议, PHP生态, 智能应用开发
+keywords: 
+  - PHP MCP扩展开发
+  - Workerman框架
+  - 模型上下文协议
+  - PHP AI集成
+  - Anthropic MCP
+  - PHP开源项目
+  - 大语言模型接口
+  - PHP生态发展
+  - 智能应用开发
+  - PHP异步编程
 ---
 
 

@@ -7,7 +7,17 @@ tags:
   - AI编程
 description: 介绍5个核心MCP服务器，帮助开发者在不同AI编辑器间保持高效的工作流程
 author: PFinal南丞
-keywords: MCP, AI编程, 开发效率, Context7, Sequential Thinking, Filesystem, GitHub
+keywords: 
+  - MCP服务器
+  - AI编程工具
+  - 开发效率提升
+  - Model Context Protocol
+  - AI编辑器插件
+  - 编程助手工具
+  - 代码生成效率
+  - AI开发环境
+  - 智能编程工具
+  - 开发者效率工具
 ---
 
 # 5个MCP服务器：让你在AI编辑器切换中保持高效

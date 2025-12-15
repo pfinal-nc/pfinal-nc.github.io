@@ -5,7 +5,17 @@ tags:
   - 工具
 description: 提示语管理工具
 author: PFinal南丞
-keywords: 提示语管理工具, MCP, Prompt, Prompt Management, Prompt Management Tool,AI,ai
+keywords: 
+  - MCP提示语管理
+  - AI提示词管理工具
+  - Prompt模板管理
+  - MCP协议应用
+  - AI编程助手
+  - 提示词工程
+  - Prompt Engineering
+  - Cursor编辑器
+  - Windsurf工具
+  - AI开发效率工具
 ---
 
 # 【重磅工具】一键管理AI提示词，让效率翻倍！

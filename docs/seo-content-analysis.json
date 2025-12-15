@@ -1,0 +1,472 @@
+{
+  "generatedAt": "2025-12-15T01:10:10.013Z",
+  "summary": {
+    "totalFiles": 138,
+    "withTitle": 138,
+    "withDescription": 134,
+    "withKeywords": 132,
+    "totalKeywords": 132,
+    "averageKeywordsPerArticle": 1
+  },
+  "byCategory": {
+    "golang": 41,
+    "php": 24,
+    "python": 4,
+    "tools": 0,
+    "database": 3,
+    "other": 53
+  },
+  "needsOptimization": 138,
+  "optimizationList": [
+    {
+      "path": "about.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "contact.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "data/automation/Go 构建远程存储MCP服务器实战.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "data/automation/MCP 提示语管理工具.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "data/automation/MCP服务器精选：提升AI编程效率的5大神器.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "data/automation/Python协程.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "data/automation/autogen-financial-analysis.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "data/automation/index.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "data/automation/爬虫JS逆向Webpack技巧记录.md",
+      "missing": {
+        "title": false,
+        "description": true,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "data/automation/爬虫常见的加密解密算法.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "data/automation/爬虫常见的加密解密算法特征收集.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "dev/backend/golang/2025年将改变我们软件构建方式的6个Go库.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "dev/backend/golang/2025年更清洁的Go代码：紧凑的错误管理.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "dev/backend/golang/2025年最佳Go技术博客推荐：资深开发者的学习宝库.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "dev/backend/golang/9个没有竞争但需求巨大的微型SaaS理念.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "dev/backend/golang/AutoCorrent专有名词大小写扩展包.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "dev/backend/golang/Create Go App CLI 一款快速创建golang项目的工具.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "dev/backend/golang/Deep-Dive-Go-Memory-Allocation.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "dev/backend/golang/GO语言开发终端小工具后续.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "dev/backend/golang/Go 开发IP过滤小脚本.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "dev/backend/golang/Go 开发终端小工具.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "dev/backend/golang/Go 语言的高性能 User-Agent 解析库.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "dev/backend/golang/Go 零拷贝读取器实战与原理解析.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "dev/backend/golang/Go-WASM构建WebAssembly应用的全新尝试.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "dev/backend/golang/Go-testing-synctest-深度解析与实战指南.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "dev/backend/golang/Golang中国地址生成扩展包.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "dev/backend/golang/Golang实现RAG系统-从OpenAI到向量数据库.md",
+      "missing": {
+        "title": false,
+        "description": true,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "dev/backend/golang/Gomail邮件发送包.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "dev/backend/golang/Go终端URL检测小工具.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "dev/backend/golang/Speed-Boost-Static-API-with-Go.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "dev/backend/golang/Stop-The-World-其实没停下-Go-GC-的微暂停真相.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "dev/backend/golang/VS Code 中 MCP 服务器的开发者快速入门.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "dev/backend/golang/go:embed 在 Go 开发中的应用与最佳实践.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "dev/backend/golang/golang 实现协程池.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "dev/backend/golang/golang 脱敏扩展包：简化敏感信息处理的利器.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "dev/backend/golang/golang提升效率的小工具.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "dev/backend/golang/golang系统库之gopsutil.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "dev/backend/golang/index.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "dev/backend/golang/使用-Go-systray-构建智能系统托盘应用-Wails-v2-集成实战.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "dev/backend/golang/使用Go实现服务端事件推送SSE.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "dev/backend/golang/加快开发速度的十大必备Go库.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "dev/backend/golang/基于Wails和Vue.js打造跨平台桌面应用.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "dev/backend/golang/基于Wails的Mac桌面应用开发.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "dev/backend/golang/基于Wails的抖音直播工具.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "dev/backend/golang/基于wails和Tailwindcss的应用开发.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "dev/backend/golang/如何实现 RESTful API 版本控制.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "dev/backend/golang/提升Wails应用性能：探索Go-Cache的高效内存缓存方案.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "dev/backend/golang/提升生产力的 Golang 实用工具推荐让开发更轻松.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "dev/backend/golang/每个-Golang-程序员都需要这个.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "dev/backend/golang/沃尔玛AI购物、自动化购买决策  的技术原理.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    }
+  ]
+}
