@@ -61,4 +61,4 @@ PFinalClub 团队精心打造的免费实用工具，涵盖开发、设计、营
 - **[🎨 WordPress MBTI插件](https://plugin.friday-go.icu/)** - 专业性格测试插件
 - **[👥 团队成员](https://member.friday-go.icu/)** - PFinalClub团队介绍
 
-**👉 [查看全部工具](/tools/online-tools)**
+**👉 [查看全部工具](/Tools/online-tools)**

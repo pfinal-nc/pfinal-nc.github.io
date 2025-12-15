@@ -28,7 +28,7 @@ export default defineConfig({
       { text: '数据与自动化', link: '/data/automation/' },
       { text: '独立开发', link: '/indie/' },
       { text: '思考/方法论', link: '/thinking/method/' },
-      { text: '在线工具', link: '/tools/online-tools' },
+      { text: '在线工具', link: '/Tools/online-tools' },
       { text: '关于作者', link: '/about' },
       { text: '联系我们', link: '/contact' },
       { text: '隐私政策', link: '/privacy-policy' }

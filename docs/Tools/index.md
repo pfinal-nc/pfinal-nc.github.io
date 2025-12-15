@@ -25,7 +25,7 @@ keywords:
 
 ## 🌟 在线工具集合
 
-**👉 [PFinalClub 在线工具集合](/tools/online-tools)** - 免费实用的开发与生活工具
+**👉 [PFinalClub 在线工具集合](/Tools/online-tools)** - 免费实用的开发与生活工具
 
 PFinalClub 团队精心打造的免费在线工具，包括：
 - 🔑 **密码生成器** - 本地生成，完全离线，保护隐私安全

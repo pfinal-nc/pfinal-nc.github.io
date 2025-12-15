@@ -9,7 +9,7 @@ const distPath = join(__dirname, '../docs/.vitepress/dist')
 
 // 需要创建重定向的页面列表
 const redirectPages = [
-  'tools/online-tools'
+  'Tools/online-tools'
 ]
 
 function createRedirect(fromPath, toPath) {
