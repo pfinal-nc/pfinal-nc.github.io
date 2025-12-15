@@ -12,22 +12,30 @@ http://pnav.friday-go.icu/* https://pnav.friday-go.icu/:splat 301!
 http://miao.friday-go.icu/* https://miao.friday-go.icu/:splat 301!
 
 # ====================
-# 2. 404页面重定向
+# 2. 404页面重定向 (2025-12-14 更新)
 # ====================
-# 旧的爬虫JS逆向文章（中文URL编码问题）
-/爬虫JS逆向Webpack技巧记录.html /python/Reverse-Engineering-JS-Webpack-Tips-for-Crawlers.html 301
+# 旧的爬虫JS逆向文章 - 已移动到 /data/automation/
+/爬虫JS逆向Webpack技巧记录.html /data/automation/爬虫JS逆向Webpack技巧记录 301
+/爬虫JS逆向Webpack技巧记录 /data/automation/爬虫JS逆向Webpack技巧记录 301
 
-# 旧的分类页面（categories）- 重定向到主页或对应语言首页
-/categories/工具/ /zh/ 301
-/categories/经验/ /zh/ 301
-/categories/golang/ /golang/ 301
-/categories/golang/index.html /golang/ 301
+# 旧的分类页面（categories）- 重定向到对应目录
+/categories/工具/ /Tools/ 301
+/categories/工具 /Tools/ 301
+/categories/golang/ /dev/backend/golang/ 301
+/categories/golang/index.html /dev/backend/golang/ 301
+/categories/golang /dev/backend/golang/ 301
+/categories/php/ /dev/backend/php/ 301
+/categories/php /dev/backend/php/ 301
+/categories/经验/ / 301
+/categories/经验 / 301
 
-# 旧的归档页面 - 重定向到中文首页
-/archives/ /zh/ 301
+# 旧的归档页面 - 重定向到首页
+/archives/ / 301
+/archives / 301
 
 # 旧的友链页面 - 重定向到联系页面
 /links/ /contact 301
+/links /contact 301
 
 # ====================
 # 3. 中文URL重定向到英文URL
