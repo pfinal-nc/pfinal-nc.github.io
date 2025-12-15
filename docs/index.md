@@ -14,7 +14,6 @@ keywords:
   - 技术博客
   - 工程实践
 layout: home
-# 首页部分元素定制
 blog:
  title: 'PFianlClub'
  logo: /logo.png
@@ -26,39 +25,233 @@ blog:
   - 人生就像一场修行，你不可能一开始就修成正果
   - 无论多么沉重的负担，也不要忘记微笑；无论多么漫长的路程，也不要忘记坚持
   - 生活的真谛不在繁华，而在于淡泊
- # 设置 inspiringTimeout 可以实现自动切换
  inspiringTimeout: 3000
  pageSize: 15
  minScreenAvatar: true
 ---
 
-## 技术专题导航
+<div class="home-nav-section">
 
-- **[攻防研究](/security/offensive/)**：Web安全、内网渗透、红蓝对抗方法论、日志取证等攻防实战内容。
-- **[安全工程](/security/engineering/)**：WAF/中间件安全、安全平台工程、自动化脚本、安全基建等工程化落地实践。
-- **[开发与系统](/dev/)**：后端工程（Go/PHP/Python）、性能与Profiling、系统/网络基础。
-- **[数据与自动化](/data/automation/)**：爬虫与数据采集、自动化/机器人、数据生产线与治理。
-- **[独立开发](/indie/)**：产品构思、技术实现、市场与增长，从安全经验到产品化的实践。
-- **[思考/方法论](/thinking/method/)**：架构与思考框架、学习路径、个人认知与技术哲学。
+## 🚀 快速导航
 
-## 🛠️ 在线工具集合
+<div class="nav-grid">
+  <a href="/security/offensive/" class="nav-card">
+    <span class="nav-icon">🔐</span>
+    <span class="nav-title">攻防研究</span>
+    <span class="nav-desc">Web安全 · 渗透测试</span>
+  </a>
+  <a href="/security/engineering/" class="nav-card">
+    <span class="nav-icon">🛡️</span>
+    <span class="nav-title">安全工程</span>
+    <span class="nav-desc">WAF · 安全基建</span>
+  </a>
+  <a href="/dev/" class="nav-card">
+    <span class="nav-icon">💻</span>
+    <span class="nav-title">开发与系统</span>
+    <span class="nav-desc">Go · PHP · Python</span>
+  </a>
+  <a href="/data/automation/" class="nav-card">
+    <span class="nav-icon">🤖</span>
+    <span class="nav-title">数据与自动化</span>
+    <span class="nav-desc">爬虫 · AI工程</span>
+  </a>
+  <a href="/indie/" class="nav-card">
+    <span class="nav-icon">🚀</span>
+    <span class="nav-title">独立开发</span>
+    <span class="nav-desc">产品 · 技术创业</span>
+  </a>
+  <a href="/thinking/method/" class="nav-card">
+    <span class="nav-icon">💡</span>
+    <span class="nav-title">思考/方法论</span>
+    <span class="nav-desc">架构 · 技术哲学</span>
+  </a>
+</div>
 
-PFinalClub 团队精心打造的免费实用工具，涵盖开发、设计、营销、生活等多个领域：
+</div>
 
-### 🔐 安全与实用工具
-- **[🔑 密码生成器](https://pwd.friday-go.icu/)** - 本地生成，完全离线，保护隐私安全
-- **[📊 BMI计算器](https://bmicalculator.friday-go.icu/)** - 即时计算，支持公制/英制单位
+<div class="home-tools-section">
 
-### 🤖 AI 工具导航
-- **[🌟 AI工具导航](https://nav.friday-go.icu/)** - 精选91+全球优质AI工具，12个分类
-- **[📝 AI Prompts导航](https://pnav.friday-go.icu/)** - 1000+精选Prompt模板，5+主要领域
+## 🛠️ 在线工具
 
-### 📅 营销与娱乐
-- **[📆 节日营销日历](https://miao.friday-go.icu/)** - 42+节日节点，行业定制营销方案
-- **[🎮 在线游戏中心](https://game.friday-go.icu/)** - 精选经典小游戏合集
+<div class="tools-grid">
+  <a href="https://pwd.friday-go.icu/" class="tool-card" target="_blank">
+    <span class="tool-icon">🔑</span>
+    <span class="tool-name">密码生成器</span>
+  </a>
+  <a href="https://nav.friday-go.icu/" class="tool-card" target="_blank">
+    <span class="tool-icon">🌟</span>
+    <span class="tool-name">AI工具导航</span>
+  </a>
+  <a href="https://pnav.friday-go.icu/" class="tool-card" target="_blank">
+    <span class="tool-icon">📝</span>
+    <span class="tool-name">Prompts导航</span>
+  </a>
+  <a href="https://miao.friday-go.icu/" class="tool-card" target="_blank">
+    <span class="tool-icon">📆</span>
+    <span class="tool-name">营销日历</span>
+  </a>
+  <a href="https://game.friday-go.icu/" class="tool-card" target="_blank">
+    <span class="tool-icon">🎮</span>
+    <span class="tool-name">在线游戏</span>
+  </a>
+  <a href="https://bmicalculator.friday-go.icu/" class="tool-card" target="_blank">
+    <span class="tool-icon">📊</span>
+    <span class="tool-name">BMI计算器</span>
+  </a>
+</div>
 
-### 💻 开发工具
-- **[🎨 WordPress MBTI插件](https://plugin.friday-go.icu/)** - 专业性格测试插件
-- **[👥 团队成员](https://member.friday-go.icu/)** - PFinalClub团队介绍
+<div class="tools-more">
+  <a href="/Tools/online-tools">查看全部工具 →</a>
+</div>
 
-**👉 [查看全部工具](/Tools/online-tools)**
+</div>
+
+<style>
+.home-nav-section,
+.home-tools-section {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: var(--vp-c-bg-soft);
+  border-radius: 12px;
+}
+
+.home-nav-section h2,
+.home-tools-section h2 {
+  margin-top: 0 !important;
+  margin-bottom: 1rem !important;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--vp-c-brand);
+  font-size: 1.25rem !important;
+}
+
+.nav-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.nav-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background: var(--vp-c-bg);
+  border-radius: 8px;
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+  border: 1px solid var(--vp-c-divider);
+}
+
+.nav-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: var(--vp-c-brand);
+}
+
+.nav-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.nav-title {
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+  font-size: 0.95rem;
+}
+
+.nav-desc {
+  font-size: 0.75rem;
+  color: var(--vp-c-text-2);
+  margin-top: 0.25rem;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.75rem;
+}
+
+.tool-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.75rem 0.5rem;
+  background: var(--vp-c-bg);
+  border-radius: 8px;
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+  border: 1px solid var(--vp-c-divider);
+}
+
+.tool-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-color: var(--vp-c-brand);
+}
+
+.tool-icon {
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.tool-name {
+  font-size: 0.75rem;
+  color: var(--vp-c-text-1);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.tools-more {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.tools-more a {
+  color: var(--vp-c-brand);
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+
+.tools-more a:hover {
+  text-decoration: underline;
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+  .nav-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .tools-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+  
+  .tools-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .nav-card,
+  .tool-card {
+    padding: 0.75rem 0.5rem;
+  }
+  
+  .nav-icon {
+    font-size: 1.25rem;
+  }
+  
+  .nav-title {
+    font-size: 0.85rem;
+  }
+  
+  .nav-desc {
+    font-size: 0.7rem;
+  }
+}
+</style>
