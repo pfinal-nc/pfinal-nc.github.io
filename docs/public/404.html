@@ -186,33 +186,61 @@
   </div>
 
   <script>
-    // URL 重定向映射表 - 基于 Search Console 发现的 404 错误
+    // URL 重定向映射表 - 基于 Search Console 发现的 404 错误 (2025-12-14 更新)
     const redirectMap = {
-      // 具体文章重定向
-      '/爬虫JS逆向Webpack技巧记录.html': '/zh/Python/爬虫JS逆向Webpack技巧记录.html',
+      // ========== 具体文章重定向 ==========
+      // 爬虫相关文章 - 已移动到 /data/automation/
+      '/爬虫JS逆向Webpack技巧记录.html': '/data/automation/爬虫JS逆向Webpack技巧记录',
+      '/爬虫JS逆向Webpack技巧记录': '/data/automation/爬虫JS逆向Webpack技巧记录',
       
-      // 分类页重定向
+      // ========== 分类页重定向 ==========
+      // 工具分类 → Tools 目录
       '/categories/工具/': '/Tools/',
+      '/categories/工具': '/Tools/',
       '/categories/tools/': '/Tools/',
-      '/categories/golang/index.html': '/golang/',
-      '/categories/golang/': '/golang/',
-      '/categories/php/': '/php/',
-      '/categories/经验/': '/',
-      '/categories/experience/': '/',
+      '/categories/tools': '/Tools/',
       
-      // 归档和链接页
+      // Golang 分类 → dev/backend/golang 目录
+      '/categories/golang/index.html': '/dev/backend/golang/',
+      '/categories/golang/': '/dev/backend/golang/',
+      '/categories/golang': '/dev/backend/golang/',
+      '/golang/': '/dev/backend/golang/',
+      '/golang': '/dev/backend/golang/',
+      
+      // PHP 分类 → dev/backend/php 目录
+      '/categories/php/': '/dev/backend/php/',
+      '/categories/php': '/dev/backend/php/',
+      '/php/': '/dev/backend/php/',
+      
+      // 经验分类 → 首页
+      '/categories/经验/': '/',
+      '/categories/经验': '/',
+      '/categories/experience/': '/',
+      '/categories/experience': '/',
+      
+      // ========== 归档和特殊页面 ==========
       '/archives/': '/',
       '/archive/': '/',
-      '/links/': '/about',
-      '/link/': '/about',
+      '/archives': '/',
+      '/archive': '/',
       
-      // 常见的旧版路径
+      // 友链页面 → 联系页面
+      '/links/': '/contact',
+      '/links': '/contact',
+      '/link/': '/contact',
+      '/link': '/contact',
+      
+      // ========== 通用分类页 ==========
       '/categories/': '/',
       '/category/': '/',
+      '/categories': '/',
+      '/category': '/',
       
-      // 标签页重定向到首页（带标签过滤）
+      // ========== 标签页重定向 ==========
       '/tag/': '/',
       '/tags/': '/',
+      '/tag': '/',
+      '/tags': '/',
     };
 
     // 智能重定向函数
