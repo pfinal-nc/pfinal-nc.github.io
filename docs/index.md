@@ -40,3 +40,25 @@ blog:
 - **[数据与自动化](/data/automation/)**：爬虫与数据采集、自动化/机器人、数据生产线与治理。
 - **[独立开发](/indie/)**：产品构思、技术实现、市场与增长，从安全经验到产品化的实践。
 - **[思考/方法论](/thinking/method/)**：架构与思考框架、学习路径、个人认知与技术哲学。
+
+## 🛠️ 在线工具集合
+
+PFinalClub 团队精心打造的免费实用工具，涵盖开发、设计、营销、生活等多个领域：
+
+### 🔐 安全与实用工具
+- **[🔑 密码生成器](https://pwd.friday-go.icu/)** - 本地生成，完全离线，保护隐私安全
+- **[📊 BMI计算器](https://bmicalculator.friday-go.icu/)** - 即时计算，支持公制/英制单位
+
+### 🤖 AI 工具导航
+- **[🌟 AI工具导航](https://nav.friday-go.icu/)** - 精选91+全球优质AI工具，12个分类
+- **[📝 AI Prompts导航](https://pnav.friday-go.icu/)** - 1000+精选Prompt模板，5+主要领域
+
+### 📅 营销与娱乐
+- **[📆 节日营销日历](https://miao.friday-go.icu/)** - 42+节日节点，行业定制营销方案
+- **[🎮 在线游戏中心](https://game.friday-go.icu/)** - 精选经典小游戏合集
+
+### 💻 开发工具
+- **[🎨 WordPress MBTI插件](https://plugin.friday-go.icu/)** - 专业性格测试插件
+- **[👥 团队成员](https://member.friday-go.icu/)** - PFinalClub团队介绍
+
+**👉 [查看全部工具](/tools/online-tools)**

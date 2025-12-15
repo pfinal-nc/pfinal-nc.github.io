@@ -28,6 +28,7 @@ export default defineConfig({
       { text: '数据与自动化', link: '/data/automation/' },
       { text: '独立开发', link: '/indie/' },
       { text: '思考/方法论', link: '/thinking/method/' },
+      { text: '在线工具', link: '/tools/online-tools' },
       { text: '关于作者', link: '/about' },
       { text: '联系我们', link: '/contact' },
       { text: '隐私政策', link: '/privacy-policy' }
@@ -321,6 +322,96 @@ export default defineConfig({
     if (pageData.frontmatter.layout === 'page') {
       // 为主题中心页（Topic Hub）添加 CollectionPage 类型的 Schema.org 结构化数据
       // 检查是否是主题中心页（路径匹配主题目录的 index 页面）
+      // 检查是否是工具页面
+      if (/^tools\/online-tools\/?$/.test(currentPath)) {
+        // 为工具集合页面添加 ItemList 类型的 Schema.org 结构化数据
+        const itemList = {
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          "name": "PFinalClub 在线工具集合",
+          "url": canonicalUrl,
+          "description": pageData.frontmatter.description || pageData.description,
+          "inLanguage": "zh-CN",
+          "numberOfItems": 8,
+          "itemListElement": [
+            {
+              "@type": "SoftwareApplication",
+              "name": "密码生成器",
+              "url": "https://pwd.friday-go.icu/",
+              "applicationCategory": "UtilityApplication",
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "CNY"
+              }
+            },
+            {
+              "@type": "WebApplication",
+              "name": "AI工具导航",
+              "url": "https://nav.friday-go.icu/",
+              "applicationCategory": "ReferenceApplication"
+            },
+            {
+              "@type": "WebApplication",
+              "name": "在线游戏中心",
+              "url": "https://game.friday-go.icu/",
+              "applicationCategory": "GameApplication"
+            },
+            {
+              "@type": "WebApplication",
+              "name": "节日营销日历",
+              "url": "https://miao.friday-go.icu/",
+              "applicationCategory": "BusinessApplication"
+            },
+            {
+              "@type": "SoftwareApplication",
+              "name": "AI Prompts导航",
+              "url": "https://pnav.friday-go.icu/",
+              "applicationCategory": "ReferenceApplication"
+            },
+            {
+              "@type": "SoftwareApplication",
+              "name": "BMI计算器",
+              "url": "https://bmicalculator.friday-go.icu/",
+              "applicationCategory": "HealthApplication"
+            },
+            {
+              "@type": "SoftwareApplication",
+              "name": "WordPress MBTI插件",
+              "url": "https://plugin.friday-go.icu/",
+              "applicationCategory": "PluginApplication"
+            },
+            {
+              "@type": "WebPage",
+              "name": "团队成员",
+              "url": "https://member.friday-go.icu/",
+              "about": "PFinalClub团队成员介绍"
+            }
+          ],
+          "publisher": {
+            "@type": "Organization",
+            "name": "PFinalClub",
+            "logo": {
+              "@type": "ImageObject",
+              "url": `${baseUrl}/logo.png`
+            }
+          }
+        };
+
+        if (pageData.frontmatter.keywords) {
+          const keywords = Array.isArray(pageData.frontmatter.keywords)
+            ? pageData.frontmatter.keywords.join(', ')
+            : pageData.frontmatter.keywords;
+          (itemList as any).keywords = keywords;
+        }
+
+        pageData.frontmatter.head.push([
+          'script',
+          { type: 'application/ld+json' },
+          JSON.stringify(itemList)
+        ]);
+      }
+
       const topicHubPatterns = [
         /^security\/engineering\/?$/,
         /^security\/offensive\/?$/,
@@ -388,7 +479,7 @@ export default defineConfig({
             const keywords = Array.isArray(pageData.frontmatter.keywords)
               ? pageData.frontmatter.keywords.join(', ')
               : pageData.frontmatter.keywords;
-            collectionPage.keywords = keywords;
+            (collectionPage as any).keywords = keywords;
           }
 
           pageData.frontmatter.head.push([
@@ -444,29 +535,29 @@ export default defineConfig({
 
         // 添加关键词
         if (articleKeywords) {
-          article.keywords = articleKeywords;
+          (article as any).keywords = articleKeywords;
         }
 
         // 添加文章部分/分类
         if (pageData.frontmatter.category) {
-          article.articleSection = pageData.frontmatter.category;
+          (article as any).articleSection = pageData.frontmatter.category;
         } else if (currentPath.toLowerCase().includes('/security/engineering/')) {
-          article.articleSection = '安全工程';
+          (article as any).articleSection = '安全工程';
         } else if (currentPath.toLowerCase().includes('/security/offensive/')) {
-          article.articleSection = '攻防研究';
+          (article as any).articleSection = '攻防研究';
         } else if (currentPath.toLowerCase().includes('/dev/systems/')) {
-          article.articleSection = '开发系统';
+          (article as any).articleSection = '开发系统';
         } else if (currentPath.toLowerCase().includes('/data/automation/')) {
-          article.articleSection = '数据自动化';
+          (article as any).articleSection = '数据自动化';
         } else if (currentPath.toLowerCase().includes('/thinking/method/')) {
-          article.articleSection = '思考方法';
+          (article as any).articleSection = '思考方法';
         } else if (currentPath.toLowerCase().includes('/thinking/notes/')) {
-          article.articleSection = '随笔杂谈';
+          (article as any).articleSection = '随笔杂谈';
         }
 
         // 添加图片（如果有）
         if (pageData.frontmatter.image) {
-          article.image = {
+          (article as any).image = {
             "@type": "ImageObject",
             "url": pageData.frontmatter.image.startsWith('http')
               ? pageData.frontmatter.image
