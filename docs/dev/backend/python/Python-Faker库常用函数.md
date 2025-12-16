@@ -5,7 +5,17 @@ tags:
     - python
 description: Faker库常用函数
 author: PFinal南丞
-keywords: Python, 库, 函数, 常用, Faker, 生成, 数据, 测试, 模拟
+keywords:
+  - Python Faker库
+  - Faker生成测试数据
+  - Python测试数据生成
+  - Faker库使用指南
+  - Python模拟数据
+  - Faker常用函数
+  - Python数据生成工具
+  - 测试数据生成库
+  - Python Faker教程
+  - 伪数据生成
 ---
 
 # Python-Faker库常用函数

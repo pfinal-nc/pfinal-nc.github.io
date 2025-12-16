@@ -9,7 +9,22 @@ tags:
     - 性能优化
 description: 深入探讨 PostgreSQL 10 个鲜为人知但极其强大的功能，从全文搜索到逻辑复制，让你重新认识这个数据库的威力
 author: PFinal南丞
-keywords: PostgreSQL, 全文搜索, JSONB, 数组类型, 区间类型, 窗口函数, 表分区, 递归查询, 逻辑复制
+keywords:
+  - PostgreSQL高级功能
+  - PostgreSQL全文搜索
+  - PostgreSQL JSONB
+  - PostgreSQL数组类型
+  - PostgreSQL区间类型
+  - PostgreSQL窗口函数
+  - PostgreSQL表分区
+  - PostgreSQL递归查询
+  - PostgreSQL逻辑复制
+  - PostgreSQL性能优化
+  - PostgreSQL NoSQL
+  - PostgreSQL 2025
+  - PostgreSQL替代Elasticsearch
+  - PostgreSQL替代MongoDB
+  - PostgreSQL最佳实践
 ---
 
 # PostgreSQL 10个鲜为人知的强大功能 - 让你告别Elasticsearch和MongoDB

@@ -5,7 +5,17 @@ tags:
     - python
 description: Python协程学习
 author: PFinal南丞
-keywords: Python, 协程, 并发, 编程, asyncio, 异步IO, Future, Task
+keywords:
+  - Python协程
+  - Python异步编程
+  - asyncio教程
+  - Python并发编程
+  - 异步IO
+  - Python Future
+  - Python Task
+  - 协程实现原理
+  - Python异步框架
+  - 高并发Python
 ---
 
 # Python协程
