@@ -30,10 +30,16 @@ layout: page
 
 ---
 
-## 2. PostgreSQL 高级功能
+## 2. PostgreSQL 高级功能与安全
 
-- **[PostgreSQL 10 个鲜为人知的强大功能](/zh/数据库/PostgreSQL-10个鲜为人知的强大功能.md)**  
-  深入探索 PostgreSQL 中 10 个鲜为人知但非常强大的功能，提升数据库开发效率。
+- **[PostgreSQL Security Best Practices 2025 - 生产环境安全加固完整指南](./PostgreSQL-Security-Best-Practices-2025.md)**  
+  从认证配置到数据加密的生产环境安全加固完整指南，包含 pg_hba.conf、Row Level Security、SSL/TLS、审计日志等实战案例。
+
+- **[PostgreSQL 性能优化实战 - 从配置到SQL调优](./PostgreSQL-Performance-Optimization-Guide.md)**  
+  深入探讨 PostgreSQL 性能优化的各个方面，包括配置优化、SQL调优、索引策略、查询计划分析等实战内容。
+
+- **[PostgreSQL 10 个鲜为人知的强大功能](./PostgreSQL-10个鲜为人知的强大功能.md)**  
+  深入探索 PostgreSQL 中 10 个鲜为人知但非常强大的功能，从全文搜索到逻辑复制，提升数据库开发效率。
 
 ---
 
