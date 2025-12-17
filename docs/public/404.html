@@ -246,21 +246,53 @@
     // 智能重定向函数
     function smartRedirect() {
       const currentPath = window.location.pathname;
+      const currentPathLower = currentPath.toLowerCase();
       console.log('Current 404 path:', currentPath);
       
-      // 1. 精确匹配
+      // 1. 精确匹配（优先级最高）
       if (redirectMap[currentPath]) {
         const newUrl = redirectMap[currentPath];
         console.log('Exact match found:', newUrl);
-        showRedirectMessage(newUrl);
+        showRedirectMessage(newUrl, false); // false = 立即跳转
         return;
       }
       
-      // 2. 处理 /categories/xxx/ 格式
-      if (currentPath.startsWith('/categories/') || currentPath.startsWith('/category/')) {
+      // 2. 处理 /categories/xxx/ 格式（包括大小写变体）
+      if (currentPathLower.startsWith('/categories/') || currentPathLower.startsWith('/category/')) {
         const parts = currentPath.split('/').filter(p => p);
         if (parts.length >= 2) {
           const category = parts[1];
+          // 特殊分类映射
+          const categoryMap = {
+            '工具': '/Tools/',
+            'tools': '/Tools/',
+            'golang': '/dev/backend/golang/',
+            'go': '/dev/backend/golang/',
+            'php': '/dev/backend/php/',
+            'python': '/dev/backend/python/',
+            '经验': '/',
+            'experience': '/',
+            '安全': '/security/offensive/',
+            'security': '/security/offensive/',
+            '攻防': '/security/offensive/',
+            '工程': '/security/engineering/',
+            'engineering': '/security/engineering/',
+            '开发': '/dev/',
+            'dev': '/dev/',
+            '数据': '/data/automation/',
+            'data': '/data/automation/',
+            '自动化': '/data/automation/',
+            'automation': '/data/automation/',
+          };
+          
+          // 检查是否有映射
+          const mappedUrl = categoryMap[category] || categoryMap[category.toLowerCase()];
+          if (mappedUrl) {
+            console.log('Category mapped redirect:', mappedUrl);
+            showRedirectMessage(mappedUrl, false); // 立即跳转
+            return;
+          }
+          
           // 尝试重定向到对应的分类首页
           const possibleUrls = [
             `/${category}/`,
@@ -268,9 +300,8 @@
             `/${category.charAt(0).toUpperCase() + category.slice(1).toLowerCase()}/`
           ];
           
-          // 选择第一个可能的 URL
           console.log('Category redirect:', possibleUrls[0]);
-          showRedirectMessage(possibleUrls[0], true);
+          showRedirectMessage(possibleUrls[0], true); // 猜测，延迟跳转
           return;
         }
       }
@@ -281,70 +312,97 @@
         const cleanPath = currentPath.replace(/\.html?$/, '');
         console.log('HTML file redirect to clean URL:', cleanPath);
         
-        // 尝试检查 clean URL 是否存在（通过 fetch，但不阻塞）
-        fetch(cleanPath, { method: 'HEAD' })
-          .then(response => {
-            if (response.ok || response.status === 200) {
-              console.log('Clean URL exists, redirecting to:', cleanPath);
-              showRedirectMessage(cleanPath, false);
-            } else {
-              // Clean URL 不存在，尝试其他可能的位置
-              const fileName = currentPath.split('/').pop();
-              const possibleUrls = [
-                `/zh/${fileName.replace('.html', '').replace('.htm', '')}`,
-                `/zh/golang/${fileName.replace('.html', '').replace('.htm', '')}`,
-                `/zh/PHP/${fileName.replace('.html', '').replace('.htm', '')}`,
-                `/zh/Python/${fileName.replace('.html', '').replace('.htm', '')}`,
-                `/golang/${fileName.replace('.html', '').replace('.htm', '')}`,
-                `/php/${fileName.replace('.html', '').replace('.htm', '')}`,
-              ];
-              
-              console.log('HTML file redirect guess:', possibleUrls[0]);
-              showRedirectMessage(possibleUrls[0], true);
-            }
-          })
-          .catch(() => {
-            // 如果 fetch 失败（可能是 CORS 或网络问题），直接重定向到 clean URL
-            console.log('Fetch failed, redirecting to clean URL:', cleanPath);
-            showRedirectMessage(cleanPath, true);
-          });
-        return; // 立即返回，等待 fetch 结果
-      }
-      
-      // 4. 如果路径包含中文，尝试在 /zh/ 下查找
-      if (/[\u4e00-\u9fa5]/.test(currentPath)) {
-        const newUrl = `/zh${currentPath}`;
-        console.log('Chinese path redirect:', newUrl);
-        showRedirectMessage(newUrl, true);
+        // 对于已知的404页面，直接重定向（不等待fetch）
+        if (redirectMap[cleanPath]) {
+          console.log('Clean path has redirect map:', redirectMap[cleanPath]);
+          showRedirectMessage(redirectMap[cleanPath], false); // 立即跳转
+          return;
+        }
+        
+        // 对于其他情况，尝试直接跳转到clean URL（VitePress的cleanUrls特性）
+        // 不等待fetch检查，直接跳转（更快，更SEO友好）
+        console.log('HTML to clean URL redirect:', cleanPath);
+        showRedirectMessage(cleanPath, false); // 立即跳转
         return;
       }
       
-      // 5. 处理标签页（/tag/xxx 或 /tags/xxx）
-      if (currentPath.startsWith('/tag/') || currentPath.startsWith('/tags/')) {
-        const tag = currentPath.split('/').pop();
-        if (tag) {
-          const newUrl = `/?tag=${encodeURIComponent(tag)}`;
-          console.log('Tag redirect:', newUrl);
-          showRedirectMessage(newUrl, true);
+      // 4. 处理旧的 /zh/ 路径格式（如果有的话）
+      if (currentPath.startsWith('/zh/')) {
+        const pathWithoutZh = currentPath.replace(/^\/zh/, '');
+        console.log('Removing /zh/ prefix, redirecting to:', pathWithoutZh);
+        showRedirectMessage(pathWithoutZh, false);
+        return;
+      }
+      
+      // 5. 处理常见的旧博客路径格式
+      // /post/xxx, /posts/xxx, /article/xxx, /articles/xxx
+      if (currentPathLower.match(/^\/(post|posts|article|articles)\//)) {
+        const slug = currentPath.split('/').pop();
+        if (slug) {
+          // 尝试在常见目录下查找
+          const possibleUrls = [
+            `/${slug}`,
+            `/dev/backend/golang/${slug}`,
+            `/dev/backend/php/${slug}`,
+            `/data/automation/${slug}`,
+            `/Tools/${slug}`
+          ];
+          console.log('Post/article redirect:', possibleUrls[0]);
+          showRedirectMessage(possibleUrls[0], true);
           return;
         }
       }
       
-      // 6. 处理带查询参数的 URL - 重定向到主页（Search Console 发现的问题）
+      // 6. 处理标签页（/tag/xxx 或 /tags/xxx）
+      if (currentPathLower.startsWith('/tag/') || currentPathLower.startsWith('/tags/')) {
+        const tag = currentPath.split('/').pop();
+        if (tag) {
+          const newUrl = `/?tag=${encodeURIComponent(tag)}`;
+          console.log('Tag redirect to home:', newUrl);
+          showRedirectMessage(newUrl, false);
+          return;
+        }
+      }
+      
+      // 7. 处理带查询参数的 URL - 重定向到 clean path
       if (currentPath.includes('?') || window.location.search) {
         // 去掉查询参数，重定向到 clean path
         const cleanPath = currentPath.split('?')[0];
         if (cleanPath && cleanPath !== '/') {
           console.log('Query param redirect to clean path:', cleanPath);
-          showRedirectMessage(cleanPath, true);
+          showRedirectMessage(cleanPath, false);
         } else {
           console.log('Query param redirect to home');
-          showRedirectMessage('/', true);
+          showRedirectMessage('/', false);
         }
         return;
       }
       
-      // 7. 没有匹配，显示默认选项
+      // 8. 如果路径以 / 结尾但不是根路径，尝试去掉尾部斜杠
+      if (currentPath.length > 1 && currentPath.endsWith('/')) {
+        const pathWithoutSlash = currentPath.slice(0, -1);
+        console.log('Removing trailing slash, redirecting to:', pathWithoutSlash);
+        showRedirectMessage(pathWithoutSlash, false);
+        return;
+      }
+      
+      // 9. 如果路径包含中文，尝试在常见目录下查找
+      if (/[\u4e00-\u9fa5]/.test(currentPath)) {
+        // 尝试在 data/automation 目录下查找（中文文件名通常在这里）
+        const fileName = currentPath.split('/').pop();
+        if (fileName) {
+          const possibleUrls = [
+            `/data/automation/${fileName}`,
+            `/Tools/${fileName}`,
+            currentPath // 原路径
+          ];
+          console.log('Chinese path redirect:', possibleUrls[0]);
+          showRedirectMessage(possibleUrls[0], true);
+          return;
+        }
+      }
+      
+      // 10. 没有匹配，显示默认选项
       console.log('No redirect rule found for:', currentPath);
     }
 
@@ -356,17 +414,32 @@
       redirectInfo.style.display = 'block';
       newUrlSpan.textContent = window.location.origin + newUrl;
       
-      let countdown = 5;
+      // 对于精确匹配的重定向，立即跳转（更快、更SEO友好）
+      // 对于猜测的重定向，等待1秒给用户看提示
+      const redirectDelay = isGuess ? 1 : 0;
+      let countdown = redirectDelay;
       
+      // 如果是立即跳转
+      if (redirectDelay === 0) {
+        countdownText.textContent = '正在跳转...';
+        // 使用 replace 而不是 href，避免在历史记录中留下404页面
+        setTimeout(() => {
+          console.log('Immediate redirect to:', newUrl);
+          window.location.replace(newUrl);
+        }, 100); // 给DOM更新一点时间
+        return;
+      }
+      
+      // 延迟跳转的情况
       const timer = setInterval(() => {
         countdown--;
         if (countdown > 0) {
           countdownText.textContent = `${countdown} 秒后自动跳转...`;
         } else {
           clearInterval(timer);
-          // 执行重定向
+          // 执行重定向（使用 replace 避免历史记录污染）
           console.log('Redirecting to:', newUrl);
-          window.location.href = newUrl;
+          window.location.replace(newUrl);
         }
       }, 1000);
       
@@ -380,11 +453,29 @@
       buttons.insertBefore(jumpBtn, buttons.firstChild);
     }
 
-    // 页面加载时执行
-    try {
-      smartRedirect();
-    } catch (error) {
-      console.error('Redirect error:', error);
+    // 页面加载时立即执行重定向（不等待DOM完全加载）
+    // 这样可以更快地处理重定向，减少用户等待时间
+    (function() {
+      try {
+        smartRedirect();
+      } catch (error) {
+        console.error('Redirect error:', error);
+      }
+    })();
+    
+    // 也确保在DOM加载完成后再次检查（以防第一次执行失败）
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', function() {
+        try {
+          const currentPath = window.location.pathname;
+          // 如果还在404页面，再次尝试重定向
+          if (window.location.pathname === currentPath) {
+            smartRedirect();
+          }
+        } catch (error) {
+          console.error('Secondary redirect error:', error);
+        }
+      });
     }
     
     // Google Analytics 记录 404 错误
