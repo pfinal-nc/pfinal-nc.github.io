@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://friday-go.icu</id>
     <title>PFinalClub Tech Blog</title>
-    <updated>2025-12-17T01:33:24.879Z</updated>
+    <updated>2025-12-17T01:45:39.003Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>PFinal南丞</name>
@@ -19,7 +19,7 @@
         <title type="html"><![CDATA[数据库中文技术专题导航 - MySQL / PostgreSQL / 配置优化 2025]]></title>
         <id>https://friday-go.icu/dev/system/database</id>
         <link href="https://friday-go.icu/dev/system/database"/>
-        <updated>2025-12-17T01:33:24.875Z</updated>
+        <updated>2025-12-17T01:45:38.998Z</updated>
         <summary type="html"><![CDATA[PFinalClub 数据库中文专题导航页：系统整理 MySQL 配置、PostgreSQL 功能、数据库优化等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></summary>
         <content type="html"><![CDATA[PFinalClub 数据库中文专题导航页：系统整理 MySQL 配置、PostgreSQL 功能、数据库优化等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></content>
         <author>
@@ -31,7 +31,7 @@
         <title type="html"><![CDATA[Python 中文技术专题导航 - 爬虫 / 协程 / 工具与最佳实践]]></title>
         <id>https://friday-go.icu/dev/backend/python</id>
         <link href="https://friday-go.icu/dev/backend/python"/>
-        <updated>2025-12-17T01:33:24.872Z</updated>
+        <updated>2025-12-17T01:45:38.992Z</updated>
         <summary type="html"><![CDATA[PFinalClub Python 中文专题导航页：系统整理爬虫技术、JS 逆向工程、协程、加密算法、Python 开发工具等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></summary>
         <content type="html"><![CDATA[PFinalClub Python 中文专题导航页：系统整理爬虫技术、JS 逆向工程、协程、加密算法、Python 开发工具等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></content>
         <author>
@@ -43,7 +43,7 @@
         <title type="html"><![CDATA[PHP 中文技术专题导航 - ThinkPHP / Laravel / PHP 8.x / 协程 / 最佳实践]]></title>
         <id>https://friday-go.icu/dev/backend/php</id>
         <link href="https://friday-go.icu/dev/backend/php"/>
-        <updated>2025-12-17T01:33:24.871Z</updated>
+        <updated>2025-12-17T01:45:38.990Z</updated>
         <summary type="html"><![CDATA[PFinalClub PHP 中文专题导航页：系统整理 ThinkPHP 8、Laravel、PHP 8.x 企业级开发、协程池、错误处理等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></summary>
         <content type="html"><![CDATA[PFinalClub PHP 中文专题导航页：系统整理 ThinkPHP 8、Laravel、PHP 8.x 企业级开发、协程池、错误处理等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></content>
         <author>
@@ -55,7 +55,7 @@
         <title type="html"><![CDATA[Golang 中文技术专题导航 - Go 后端 / RAG / 可观测性 / 桌面开发]]></title>
         <id>https://friday-go.icu/dev/backend/golang</id>
         <link href="https://friday-go.icu/dev/backend/golang"/>
-        <updated>2025-12-17T01:33:24.862Z</updated>
+        <updated>2025-12-17T01:45:38.981Z</updated>
         <summary type="html"><![CDATA[PFinalClub Golang 中文专题导航页：系统整理 Go 后端工程实践、RAG 系统、可观测性、Wails 桌面开发、游戏服务器与效率工具等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></summary>
         <content type="html"><![CDATA[PFinalClub Golang 中文专题导航页：系统整理 Go 后端工程实践、RAG 系统、可观测性、Wails 桌面开发、游戏服务器与效率工具等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></content>
         <author>
@@ -67,21 +67,9 @@
         <title type="html"><![CDATA[技术架构与方法论 | 架构设计 学习路径 工程实践 | PFinalClub]]></title>
         <id>https://friday-go.icu/thinking/method</id>
         <link href="https://friday-go.icu/thinking/method"/>
-        <updated>2025-12-17T01:33:24.853Z</updated>
+        <updated>2025-12-17T01:45:38.967Z</updated>
         <summary type="html"><![CDATA[深入的技术架构与方法论指南，涵盖架构设计原则、系统化学习路径、工程实践方法论、技术哲学思考等内容。提供从技术深度到思维高度的完整成长体系。]]></summary>
         <content type="html"><![CDATA[深入的技术架构与方法论指南，涵盖架构设计原则、系统化学习路径、工程实践方法论、技术哲学思考等内容。提供从技术深度到思维高度的完整成长体系。]]></content>
-        <author>
-            <name>PFinal南丞</name>
-            <uri>https://friday-go.icu</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[安全工程实践 | WAF配置 安全平台 DevOps安全 | PFinalClub]]></title>
-        <id>https://friday-go.icu/security/engineering</id>
-        <link href="https://friday-go.icu/security/engineering"/>
-        <updated>2025-12-17T01:33:24.850Z</updated>
-        <summary type="html"><![CDATA[全面的安全工程实践指南，涵盖WAF配置、安全平台建设、自动化安全脚本、DevOps安全集成等工程化落地方案。提供从基础安全到企业级防护的完整解决方案。]]></summary>
-        <content type="html"><![CDATA[全面的安全工程实践指南，涵盖WAF配置、安全平台建设、自动化安全脚本、DevOps安全集成等工程化落地方案。提供从基础安全到企业级防护的完整解决方案。]]></content>
         <author>
             <name>PFinal南丞</name>
             <uri>https://friday-go.icu</uri>
@@ -91,9 +79,21 @@
         <title type="html"><![CDATA[安全攻防研究 | Web安全 内网渗透 红蓝对抗实战 | PFinalClub]]></title>
         <id>https://friday-go.icu/security/offensive</id>
         <link href="https://friday-go.icu/security/offensive"/>
-        <updated>2025-12-17T01:33:24.850Z</updated>
+        <updated>2025-12-17T01:45:38.963Z</updated>
         <summary type="html"><![CDATA[深入的安全攻防研究指南，涵盖Web安全漏洞分析、内网渗透技术、红蓝对抗实战演练、渗透测试方法论等攻防一体实践内容。提供从攻击到防御的完整安全研究体系。]]></summary>
         <content type="html"><![CDATA[深入的安全攻防研究指南，涵盖Web安全漏洞分析、内网渗透技术、红蓝对抗实战演练、渗透测试方法论等攻防一体实践内容。提供从攻击到防御的完整安全研究体系。]]></content>
+        <author>
+            <name>PFinal南丞</name>
+            <uri>https://friday-go.icu</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[安全工程实践 | WAF配置 安全平台 DevOps安全 | PFinalClub]]></title>
+        <id>https://friday-go.icu/security/engineering</id>
+        <link href="https://friday-go.icu/security/engineering"/>
+        <updated>2025-12-17T01:45:38.962Z</updated>
+        <summary type="html"><![CDATA[全面的安全工程实践指南，涵盖WAF配置、安全平台建设、自动化安全脚本、DevOps安全集成等工程化落地方案。提供从基础安全到企业级防护的完整解决方案。]]></summary>
+        <content type="html"><![CDATA[全面的安全工程实践指南，涵盖WAF配置、安全平台建设、自动化安全脚本、DevOps安全集成等工程化落地方案。提供从基础安全到企业级防护的完整解决方案。]]></content>
         <author>
             <name>PFinal南丞</name>
             <uri>https://friday-go.icu</uri>
@@ -103,7 +103,7 @@
         <title type="html"><![CDATA[后端工程导航]]></title>
         <id>https://friday-go.icu/dev/backend</id>
         <link href="https://friday-go.icu/dev/backend"/>
-        <updated>2025-12-17T01:33:24.849Z</updated>
+        <updated>2025-12-17T01:45:38.961Z</updated>
         <summary type="html"><![CDATA[聚合 Go/PHP/Python 等后端工程实践与性能优化文章。]]></summary>
         <content type="html"><![CDATA[聚合 Go/PHP/Python 等后端工程实践与性能优化文章。]]></content>
         <author>
@@ -115,7 +115,7 @@
         <title type="html"><![CDATA[系统与基础导航]]></title>
         <id>https://friday-go.icu/dev/system</id>
         <link href="https://friday-go.icu/dev/system"/>
-        <updated>2025-12-17T01:33:24.849Z</updated>
+        <updated>2025-12-17T01:45:38.961Z</updated>
         <summary type="html"><![CDATA[覆盖数据库、Linux、网络、容器等系统基础与实践文章。]]></summary>
         <content type="html"><![CDATA[覆盖数据库、Linux、网络、容器等系统基础与实践文章。]]></content>
         <author>
@@ -127,21 +127,9 @@
         <title type="html"><![CDATA[数据采集与自动化 | 爬虫技术 AI工程 机器人开发 | PFinalClub]]></title>
         <id>https://friday-go.icu/data/automation</id>
         <link href="https://friday-go.icu/data/automation"/>
-        <updated>2025-12-17T01:33:24.848Z</updated>
+        <updated>2025-12-17T01:45:38.960Z</updated>
         <summary type="html"><![CDATA[专业的数据采集与自动化技术指南，涵盖爬虫开发、AI工程实践、机器人开发、数据生产线构建等实战内容。提供从数据采集到自动化处理的完整技术栈解决方案。]]></summary>
         <content type="html"><![CDATA[专业的数据采集与自动化技术指南，涵盖爬虫开发、AI工程实践、机器人开发、数据生产线构建等实战内容。提供从数据采集到自动化处理的完整技术栈解决方案。]]></content>
-        <author>
-            <name>PFinal南丞</name>
-            <uri>https://friday-go.icu</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[独立开发与产品实践 | SaaS开发 技术创业 产品增长 | PFinalClub]]></title>
-        <id>https://friday-go.icu/indie</id>
-        <link href="https://friday-go.icu/indie"/>
-        <updated>2025-12-17T01:33:24.846Z</updated>
-        <summary type="html"><![CDATA[专业的独立开发与产品实践指南，涵盖SaaS产品开发、技术创业路径、产品设计与增长策略等内容。提供从创意到商业化的完整产品开发体系。]]></summary>
-        <content type="html"><![CDATA[专业的独立开发与产品实践指南，涵盖SaaS产品开发、技术创业路径、产品设计与增长策略等内容。提供从创意到商业化的完整产品开发体系。]]></content>
         <author>
             <name>PFinal南丞</name>
             <uri>https://friday-go.icu</uri>
@@ -151,9 +139,33 @@
         <title type="html"><![CDATA[后端开发与系统架构 | Go/PHP/Python实战教程 | PFinalClub]]></title>
         <id>https://friday-go.icu/dev</id>
         <link href="https://friday-go.icu/dev"/>
-        <updated>2025-12-17T01:33:24.845Z</updated>
+        <updated>2025-12-17T01:45:38.958Z</updated>
         <summary type="html"><![CDATA[专业的后端开发与系统架构指南，涵盖Go、PHP、Python实战教程，性能优化，微服务架构设计，容器化部署等工程实践。提供从入门到精通的完整技术栈学习路径。]]></summary>
         <content type="html"><![CDATA[专业的后端开发与系统架构指南，涵盖Go、PHP、Python实战教程，性能优化，微服务架构设计，容器化部署等工程实践。提供从入门到精通的完整技术栈学习路径。]]></content>
+        <author>
+            <name>PFinal南丞</name>
+            <uri>https://friday-go.icu</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[独立开发与产品实践 | SaaS开发 技术创业 产品增长 | PFinalClub]]></title>
+        <id>https://friday-go.icu/indie</id>
+        <link href="https://friday-go.icu/indie"/>
+        <updated>2025-12-17T01:45:38.958Z</updated>
+        <summary type="html"><![CDATA[专业的独立开发与产品实践指南，涵盖SaaS产品开发、技术创业路径、产品设计与增长策略等内容。提供从创意到商业化的完整产品开发体系。]]></summary>
+        <content type="html"><![CDATA[专业的独立开发与产品实践指南，涵盖SaaS产品开发、技术创业路径、产品设计与增长策略等内容。提供从创意到商业化的完整产品开发体系。]]></content>
+        <author>
+            <name>PFinal南丞</name>
+            <uri>https://friday-go.icu</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AI Tools Directory 2025 - Free Online Tools Collection]]></title>
+        <id>https://friday-go.icu/Tools/online-tools</id>
+        <link href="https://friday-go.icu/Tools/online-tools"/>
+        <updated>2025-12-17T01:45:38.956Z</updated>
+        <summary type="html"><![CDATA[AI Tools Directory & Free Online Tools Collection: Password Generator, AI Apps Directory, Online Games, Marketing Calendar, BMI Calculator. All tools are free to use, no registration required.]]></summary>
+        <content type="html"><![CDATA[AI Tools Directory & Free Online Tools Collection: Password Generator, AI Apps Directory, Online Games, Marketing Calendar, BMI Calculator. All tools are free to use, no registration required.]]></content>
         <author>
             <name>PFinal南丞</name>
             <uri>https://friday-go.icu</uri>
@@ -163,21 +175,9 @@
         <title type="html"><![CDATA[工具与实用程序中文专题导航 - AI 工具 / 开发工具 / 效率提升 2025]]></title>
         <id>https://friday-go.icu/Tools</id>
         <link href="https://friday-go.icu/Tools"/>
-        <updated>2025-12-17T01:33:24.843Z</updated>
+        <updated>2025-12-17T01:45:38.955Z</updated>
         <summary type="html"><![CDATA[PFinalClub 工具与实用程序中文专题导航页：系统整理 AI 工具目录、开发工具、CLI 工具、Docker 指南、效率技巧等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></summary>
         <content type="html"><![CDATA[PFinalClub 工具与实用程序中文专题导航页：系统整理 AI 工具目录、开发工具、CLI 工具、Docker 指南、效率技巧等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></content>
-        <author>
-            <name>PFinal南丞</name>
-            <uri>https://friday-go.icu</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[在线工具集合 - 免费实用的开发与生活工具]]></title>
-        <id>https://friday-go.icu/Tools/online-tools</id>
-        <link href="https://friday-go.icu/Tools/online-tools"/>
-        <updated>2025-12-17T01:33:24.843Z</updated>
-        <summary type="html"><![CDATA[PFinalClub 精心打造的在线工具集合，包括密码生成器、AI工具导航、在线游戏、节日营销日历、BMI计算器等实用工具，全部免费使用。]]></summary>
-        <content type="html"><![CDATA[PFinalClub 精心打造的在线工具集合，包括密码生成器、AI工具导航、在线游戏、节日营销日历、BMI计算器等实用工具，全部免费使用。]]></content>
         <author>
             <name>PFinal南丞</name>
             <uri>https://friday-go.icu</uri>
@@ -369,64 +369,12 @@ Host: attacker-controlled-domain.com
         <category label="GLM4"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[用Go实现轻量级RAG系统（从OpenAI到向量数据库完整实战）]]></title>
+        <title type="html"><![CDATA[Golang RAG System Tutorial 2025 - OpenAI + 向量数据库完整实战]]></title>
         <id>https://friday-go.icu/dev/backend/golang/Golang实现RAG系统-从OpenAI到向量数据库</id>
         <link href="https://friday-go.icu/dev/backend/golang/Golang实现RAG系统-从OpenAI到向量数据库"/>
         <updated>2025-11-11T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[
-# Golang 实现 RAG 系统：从 OpenAI API 到向量数据库完整实战
-
-## 📖 引言
-
-RAG（Retrieval-Augmented Generation，检索增强生成）是 2024-2025 年最热门的 AI 应用架构之一。它通过结合外部知识库检索和大语言模型生成能力，有效解决了 LLM 的幻觉问题和知识时效性限制。
-
-本文将详细介绍如何使用 Golang 构建一个完整的 RAG 系统，包括：
-- 🔍 文档处理与 Chunking 策略
-- 🧠 向量化（Embedding）实现
-- 📊 向量数据库集成（Qdrant）
-- 🔎 语义检索优化
-- 💬 与 OpenAI API 集成生成回答
-- 🚀 生产环境最佳实践
-
-## 🎯 什么是 RAG？
-
-### RAG 工作原理
-
-```
-用户问题 → 向量化 → 语义检索 → 召回相关文档 → 构建 Prompt → LLM 生成答案
-```
-
-### RAG vs 传统 LLM
-
-| 特性 | 传统 LLM | RAG 系统 |
-|]]></summary>
-        <content type="html"><![CDATA[
-# Golang 实现 RAG 系统：从 OpenAI API 到向量数据库完整实战
-
-## 📖 引言
-
-RAG（Retrieval-Augmented Generation，检索增强生成）是 2024-2025 年最热门的 AI 应用架构之一。它通过结合外部知识库检索和大语言模型生成能力，有效解决了 LLM 的幻觉问题和知识时效性限制。
-
-本文将详细介绍如何使用 Golang 构建一个完整的 RAG 系统，包括：
-- 🔍 文档处理与 Chunking 策略
-- 🧠 向量化（Embedding）实现
-- 📊 向量数据库集成（Qdrant）
-- 🔎 语义检索优化
-- 💬 与 OpenAI API 集成生成回答
-- 🚀 生产环境最佳实践
-
-## 🎯 什么是 RAG？
-
-### RAG 工作原理
-
-```
-用户问题 → 向量化 → 语义检索 → 召回相关文档 → 构建 Prompt → LLM 生成答案
-```
-
-### RAG vs 传统 LLM
-
-| 特性 | 传统 LLM | RAG 系统 |
-|]]></content>
+        <summary type="html"><![CDATA[Golang RAG System Tutorial 2025: Build production-ready RAG applications with Go, OpenAI API, and vector databases. Complete guide for AI engineering.]]></summary>
+        <content type="html"><![CDATA[Golang RAG System Tutorial 2025: Build production-ready RAG applications with Go, OpenAI API, and vector databases. Complete guide for AI engineering.]]></content>
         <author>
             <name>PFinal南丞</name>
             <uri>https://friday-go.icu</uri>
@@ -596,17 +544,19 @@ RAG（Retrieval-Augmented Generation，检索增强生成）是 2024-2025 年最
         <category label="性能优化"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Go-testing-synctest-深度解析与实战指南]]></title>
+        <title type="html"><![CDATA[Go 1.25 testing/synctest Tutorial - 异步测试深度解析与实战]]></title>
         <id>https://friday-go.icu/dev/backend/golang/Go-testing-synctest-深度解析与实战指南</id>
         <link href="https://friday-go.icu/dev/backend/golang/Go-testing-synctest-深度解析与实战指南"/>
         <updated>2025-09-22T17:15:27.000Z</updated>
-        <summary type="html"><![CDATA[Go 1.25 正式引入的 `testing/synctest` 包彻底改变了这一现状。它通过创建一个可控的"泡泡"（bubble）环境，让异步测试变得既快速又可靠。本文将深入解析其核心原理、使用技巧和最佳实践。]]></summary>
-        <content type="html"><![CDATA[Go 1.25 正式引入的 `testing/synctest` 包彻底改变了这一现状。它通过创建一个可控的"泡泡"（bubble）环境，让异步测试变得既快速又可靠。本文将深入解析其核心原理、使用技巧和最佳实践。]]></content>
+        <summary type="html"><![CDATA[Go 1.25 testing/synctest Tutorial: 深入解析 Go 最新的并发测试包，通过创建可控的 bubble 环境让异步测试既快速又可靠。包含核心原理、使用技巧和最佳实践。]]></summary>
+        <content type="html"><![CDATA[Go 1.25 testing/synctest Tutorial: 深入解析 Go 最新的并发测试包，通过创建可控的 bubble 环境让异步测试既快速又可靠。包含核心原理、使用技巧和最佳实践。]]></content>
         <author>
             <name>PFinal南丞</name>
             <uri>https://friday-go.icu</uri>
         </author>
         <category label="golang"/>
+        <category label="testing"/>
+        <category label="go 1.25"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[Qwen Code 20个实战技巧 让你的编程效率直接起飞！]]></title>
@@ -625,12 +575,12 @@ RAG（Retrieval-Augmented Generation，检索增强生成）是 2024-2025 年最
         <category label="AI编程"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[5个MCP服务器 - 在AI编辑器迭代中保持效率的稳定选择]]></title>
+        <title type="html"><![CDATA[MCP Server Guide 2025 - 5个提升AI编程效率的核心服务器]]></title>
         <id>https://friday-go.icu/data/automation/MCP服务器精选：提升AI编程效率的5大神器</id>
         <link href="https://friday-go.icu/data/automation/MCP服务器精选：提升AI编程效率的5大神器"/>
         <updated>2025-09-11T10:14:02.000Z</updated>
-        <summary type="html"><![CDATA[介绍5个核心MCP服务器，帮助开发者在不同AI编辑器间保持高效的工作流程]]></summary>
-        <content type="html"><![CDATA[介绍5个核心MCP服务器，帮助开发者在不同AI编辑器间保持高效的工作流程]]></content>
+        <summary type="html"><![CDATA[MCP Server Guide 2025: 介绍 5 个核心 Model Context Protocol 服务器，帮助开发者在 Cursor、VSCode 等 AI 编辑器中保持高效工作流程。]]></summary>
+        <content type="html"><![CDATA[MCP Server Guide 2025: 介绍 5 个核心 Model Context Protocol 服务器，帮助开发者在 Cursor、VSCode 等 AI 编辑器中保持高效工作流程。]]></content>
         <author>
             <name>PFinal南丞</name>
             <uri>https://friday-go.icu</uri>
@@ -638,6 +588,7 @@ RAG（Retrieval-Augmented Generation，检索增强生成）是 2024-2025 年最
         <category label="工具"/>
         <category label="MCP"/>
         <category label="AI编程"/>
+        <category label="AI Tools"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[如何掌握PHP MCP扩展-我的开源实践与思考 - PHP 开发完整指南]]></title>
@@ -717,12 +668,12 @@ RAG（Retrieval-Augmented Generation，检索增强生成）是 2024-2025 年最
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Wails 教程系列 - 简介]]></title>
+        <title type="html"><![CDATA[Wails Tutorial 2025 - Go Desktop App Development Guide]]></title>
         <id>https://friday-go.icu/dev/backend/wails-tutorial-series</id>
         <link href="https://friday-go.icu/dev/backend/wails-tutorial-series"/>
         <updated>2025-08-22T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[专为资深 Golang 开发者设计的 Wails 桌面应用开发教程，涵盖架构设计、性能优化、系统集成等高级主题。]]></summary>
-        <content type="html"><![CDATA[专为资深 Golang 开发者设计的 Wails 桌面应用开发教程，涵盖架构设计、性能优化、系统集成等高级主题。]]></content>
+        <summary type="html"><![CDATA[Wails Tutorial 2025: Complete guide for building desktop apps with Go. Covers architecture design, performance optimization, and system integration for advanced Golang developers.]]></summary>
+        <content type="html"><![CDATA[Wails Tutorial 2025: Complete guide for building desktop apps with Go. Covers architecture design, performance optimization, and system integration for advanced Golang developers.]]></content>
         <author>
             <name>PFinalClub</name>
             <uri>https://friday-go.icu</uri>
@@ -743,12 +694,12 @@ RAG（Retrieval-Augmented Generation，检索增强生成）是 2024-2025 年最
         <category label="VSCode"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[10个Golang安全陷阱 — 以及真正有效的修复方案]]></title>
+        <title type="html"><![CDATA[Go Security Best Practices 2025 - 10个安全陷阱及修复方案]]></title>
         <id>https://friday-go.icu/security/engineering/10个Golang安全陷阱及真正有效的修复方案</id>
         <link href="https://friday-go.icu/security/engineering/10个Golang安全陷阱及真正有效的修复方案"/>
         <updated>2025-08-20T14:30:00.000Z</updated>
-        <summary type="html"><![CDATA[发现Go开发中的10个关键安全陷阱，学习在生产环境中真正有效的、经过实战检验的解决方案。]]></summary>
-        <content type="html"><![CDATA[发现Go开发中的10个关键安全陷阱，学习在生产环境中真正有效的、经过实战检验的解决方案。]]></content>
+        <summary type="html"><![CDATA[Go Security Best Practices 2025: 发现 Go 开发中的 10 个关键安全陷阱，包括 SQL 注入、XSS、CSRF 防护，学习真正有效的修复方案。]]></summary>
+        <content type="html"><![CDATA[Go Security Best Practices 2025: 发现 Go 开发中的 10 个关键安全陷阱，包括 SQL 注入、XSS、CSRF 防护，学习真正有效的修复方案。]]></content>
         <author>
             <name>PFinal南丞</name>
             <uri>https://friday-go.icu</uri>
@@ -756,6 +707,7 @@ RAG（Retrieval-Augmented Generation，检索增强生成）是 2024-2025 年最
         <category label="golang"/>
         <category label="security"/>
         <category label="best-practices"/>
+        <category label="go security"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[别再瞎改 API 了 3 招版本控制，让你的 Go 服务稳如老狗]]></title>
