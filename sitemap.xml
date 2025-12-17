@@ -427,6 +427,12 @@
 <priority>0.8</priority>
 </url>
 <url>
+<loc>https://friday-go.icu/security/engineering/SSH-Security-Hardening-Guide-2025</loc>
+<lastmod>2025-12-17T09:21:30.000Z</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
 <loc>https://friday-go.icu/security/engineering/golang%20Web%E5%BA%94%E7%94%A8%E5%AE%8C%E6%95%B4%E5%AE%89%E5%85%A8%E6%8C%87%E5%8D%97</loc>
 <lastmod>2025-12-11T10:25:51.000Z</lastmod>
 <changefreq>weekly</changefreq>
@@ -440,7 +446,7 @@
 </url>
 <url>
 <loc>https://friday-go.icu/security/engineering/</loc>
-<lastmod>2025-12-12T02:28:43.000Z</lastmod>
+<lastmod>2025-12-17T09:21:30.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
