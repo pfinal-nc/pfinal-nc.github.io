@@ -1,21 +1,25 @@
 ---
-title: 【重磅工具】一键管理AI提示词，让效率翻倍！
+title: "MCP Prompt Server - AI Prompt Management Tool for Cursor & Windsurf"
 date: 2025-06-05 10:14:02
 tags:
   - 工具
-description: 提示语管理工具
-author: PFinal南丞
-keywords: 
-  - MCP提示语管理
-  - AI提示词管理工具
-  - Prompt模板管理
-  - MCP协议应用
-  - AI编程助手
-  - 提示词工程
+  - MCP
+  - AI Tools
   - Prompt Engineering
-  - Cursor编辑器
-  - Windsurf工具
-  - AI开发效率工具
+description: "MCP Prompt Server: One-click AI prompt management tool for Cursor, Windsurf, and other AI editors. Boost your prompt engineering efficiency with template management."
+author: PFinal南丞
+keywords:
+  - mcp prompt server
+  - ai prompt management
+  - prompt engineering tools
+  - cursor prompts
+  - windsurf mcp
+  - ai prompt templates
+  - model context protocol
+  - mcp tools
+  - AI提示词管理
+  - Prompt模板
+  - PFinalClub
 ---
 
 # 【重磅工具】一键管理AI提示词，让效率翻倍！

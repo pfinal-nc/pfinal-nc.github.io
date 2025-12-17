@@ -1,5 +1,5 @@
 ---
-title: "用Go实现轻量级RAG系统（从OpenAI到向量数据库完整实战）"
+title: "Golang RAG System Tutorial 2025 - OpenAI + 向量数据库完整实战"
 slug: "go-rag-system-tutorial"
 date: 2025-11-11
 updated: 2025-11-11
@@ -16,12 +16,20 @@ tags:
   - "openai"
   - "语义检索"
 keywords:
-  - "go rag教程"
-  - "向量检索实战"
-  - "ai工程化指南"
-  - "智能问答系统"
-  - "openai api集成"
-summary: "深入讲解如何使用Golang构建完整的RAG系统，涵盖OpenAI API集成、向量数据库选型、Embedding生成和语义检索，帮助开发者快速构建生产级智能问答应用。"
+  - golang rag tutorial
+  - go rag system
+  - rag implementation golang
+  - openai go integration
+  - vector database golang
+  - embedding go tutorial
+  - semantic search golang
+  - langchain go alternative
+  - ai engineering golang
+  - go rag教程
+  - 向量检索实战
+  - PFinalClub
+summary: "Golang RAG System Tutorial: 深入讲解如何使用 Go 构建完整的 RAG 系统，涵盖 OpenAI API 集成、向量数据库选型（Qdrant/Pinecone）、Embedding 生成和语义检索。"
+description: "Golang RAG System Tutorial 2025: Build production-ready RAG applications with Go, OpenAI API, and vector databases. Complete guide for AI engineering."
 readingTime: 15
 cover: "/images/go-rag-system.png"
 status: "published"

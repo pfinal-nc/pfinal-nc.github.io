@@ -1,17 +1,21 @@
 ---
-title: 在线工具集合 - 免费实用的开发与生活工具
-description: PFinalClub 精心打造的在线工具集合，包括密码生成器、AI工具导航、在线游戏、节日营销日历、BMI计算器等实用工具，全部免费使用。
+title: AI Tools Directory 2025 - Free Online Tools Collection
+description: "AI Tools Directory & Free Online Tools Collection: Password Generator, AI Apps Directory, Online Games, Marketing Calendar, BMI Calculator. All tools are free to use, no registration required."
 keywords:
-  - 在线工具
+  - ai tools directory
+  - ai apps directory
+  - ai tool directory
+  - free online tools
+  - online tools collection
+  - password generator online
+  - AI工具导航
+  - 在线工具集合
   - 免费工具
   - 密码生成器
-  - AI工具导航
-  - 在线游戏
-  - 节日营销日历
   - BMI计算器
-  - WordPress插件
-  - 实用工具
-  - 开发工具
+  - developer tools
+  - productivity tools
+  - PFinalClub
 ---
 
 # 🛠️ PFinalClub 在线工具集合

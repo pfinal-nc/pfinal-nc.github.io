@@ -1,23 +1,25 @@
 ---
-title: "5个MCP服务器 - 在AI编辑器迭代中保持效率的稳定选择"
+title: "MCP Server Guide 2025 - 5个提升AI编程效率的核心服务器"
 date: 2025-09-11 10:14:02
 tags:
   - 工具
   - MCP
   - AI编程
-description: 介绍5个核心MCP服务器，帮助开发者在不同AI编辑器间保持高效的工作流程
+  - AI Tools
+description: "MCP Server Guide 2025: 介绍 5 个核心 Model Context Protocol 服务器，帮助开发者在 Cursor、VSCode 等 AI 编辑器中保持高效工作流程。"
 author: PFinal南丞
-keywords: 
+keywords:
+  - mcp server
+  - model context protocol
+  - mcp servers for cursor
+  - ai coding tools
+  - ai programming assistant
+  - cursor mcp
+  - ai editor plugins
   - MCP服务器
   - AI编程工具
-  - 开发效率提升
-  - Model Context Protocol
-  - AI编辑器插件
-  - 编程助手工具
-  - 代码生成效率
-  - AI开发环境
-  - 智能编程工具
-  - 开发者效率工具
+  - 开发效率
+  - PFinalClub
 ---
 
 # 5个MCP服务器：让你在AI编辑器切换中保持高效

@@ -1,14 +1,28 @@
 ---
-title: Fyne与Wails深度对比-选择最适合你的Go桌面应用框架
+title: "Fyne vs Wails 2025 - Go Desktop App Framework Comparison"
 date: 2024-12-19 10:30:00
 tags:
-    - golang
-    - 桌面应用
-    - GUI框架
-    - 跨平台开发
-description: 深入对比Fyne和Wails两个Go桌面应用开发框架，从架构设计、性能表现、开发体验等多个维度进行分析，帮助开发者选择最适合的技术方案
+  - golang
+  - 桌面应用
+  - GUI框架
+  - 跨平台开发
+  - desktop development
+description: "Fyne vs Wails 2025: 深入对比两大 Go 桌面应用框架的架构设计、性能表现、开发体验，帮助开发者选择最适合的技术方案。"
 author: PFinal南丞
-keywords: Fyne, Wails, Golang, Go, GUI, 桌面应用, 跨平台, Tauri, Electron, Gio, Lorca, WebView, Go GUI, Golang GUI, Go桌面开发, Golang桌面开发, Fyne vs Wails, Wails vs Tauri, Wails vs Electron, 最佳Golang GUI框架, 性能, 打包大小, 内存占用, 安全性, 学习曲线, 生态系统, IPC, wails v2, wails v3
+keywords:
+  - fyne vs wails
+  - go desktop app framework
+  - golang gui framework
+  - wails tutorial
+  - fyne tutorial
+  - go desktop development
+  - wails vs tauri
+  - wails vs electron
+  - best go gui framework 2025
+  - golang desktop application
+  - Go GUI
+  - 跨平台开发
+  - PFinalClub
 ---
 
 # Fyne与Wails深度对比：选择最适合你的Go桌面应用框架

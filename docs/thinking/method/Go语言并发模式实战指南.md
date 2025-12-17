@@ -1,5 +1,5 @@
 ---
-title: "Go语言并发模式深度解析（7种核心模式实战指南）"
+title: "Go Concurrency Patterns 2025 - 7种核心并发模式实战指南"
 slug: "go-concurrency-patterns-guide"
 date: 2024-11-08
 updated: 2024-11-08
@@ -16,12 +16,19 @@ tags:
   - "channel"
   - "并发模式"
 keywords:
-  - "go并发模式"
-  - "高并发编程"
-  - "goroutine实战"
-  - "channel使用"
-  - "并发性能优化"
-summary: "深入解析Go语言7种核心并发模式，包含实际应用场景和性能对比，帮助开发者掌握高并发编程最佳实践和性能优化技巧。"
+  - go concurrency patterns
+  - golang concurrency tutorial
+  - goroutine patterns
+  - go channel patterns
+  - golang worker pool
+  - go fan-out fan-in
+  - go pipeline pattern
+  - golang concurrent programming
+  - go并发模式
+  - goroutine最佳实践
+  - PFinalClub
+summary: "Go Concurrency Patterns Guide: 深入解析 7 种核心并发模式（Worker Pool、Fan-Out/Fan-In、Pipeline 等），包含实际应用场景和性能对比。"
+description: "Go Concurrency Patterns 2025: Master 7 essential Go concurrency patterns with practical examples. Includes worker pools, fan-out/fan-in, pipelines, and performance optimization."
 readingTime: 18
 cover: "/images/go-concurrency-patterns.png"
 status: "published"
