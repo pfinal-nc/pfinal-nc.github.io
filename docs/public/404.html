@@ -186,19 +186,62 @@
   </div>
 
   <script>
-    // URL 重定向映射表 - 基于 Search Console 发现的 404 错误 (2025-12-14 更新)
+    // URL 重定向映射表 - 基于 Search Console 发现的 404 错误 (2025-12-17 更新)
     const redirectMap = {
+      // ========== 2025-12-17 新增 - Search Console 404 修复 ==========
+      // Wails 教程系列
+      '/wails-tutorial-series': '/dev/backend/wails-tutorial-series/',
+      '/wails-tutorial-series/': '/dev/backend/wails-tutorial-series/',
+      
+      // Golang RAG 系统文章
+      '/golang/Golang实现RAG系统-从OpenAI到向量数据库': '/dev/backend/golang/Golang实现RAG系统-从OpenAI到向量数据库',
+      '/golang/Golang实现RAG系统-从OpenAI到向量数据库.html': '/dev/backend/golang/Golang实现RAG系统-从OpenAI到向量数据库',
+      
+      // Arc 浏览器文章（工具目录）
+      '/工具/Arc 浏览器更符合开发者': '/tools/Arc 浏览器更符合开发者',
+      '/工具/Arc浏览器更符合开发者': '/tools/Arc 浏览器更符合开发者',
+      
+      // ThinkPHP 文章（多语言路径重定向）
+      '/zh/php/ThinkPHP-20-Years-of-Chinese-Web-Development': '/dev/backend/php/ThinkPHP近20年-中国Web开发的时代印记',
+      '/php/ThinkPHP-20-Years-of-Chinese-Web-Development': '/dev/backend/php/ThinkPHP近20年-中国Web开发的时代印记',
+      
       // ========== 具体文章重定向 ==========
       // 爬虫相关文章 - 已移动到 /data/automation/
       '/爬虫JS逆向Webpack技巧记录.html': '/data/automation/爬虫JS逆向Webpack技巧记录',
       '/爬虫JS逆向Webpack技巧记录': '/data/automation/爬虫JS逆向Webpack技巧记录',
       
+      // ========== Golang 文章重定向（/golang/ 前缀） ==========
+      // 这些旧路径需要重定向到新的 /dev/backend/golang/ 路径
+      '/golang/Go-CLI-Utility-Development-Practice.html': '/dev/backend/golang/Create Go App CLI 一款快速创建golang项目的工具',
+      '/golang/Go-CLI-Utility-Development-Practice': '/dev/backend/golang/Create Go App CLI 一款快速创建golang项目的工具',
+      '/golang/mastering-go-testing-advanced-techniques': '/dev/backend/golang/Go-testing-synctest-深度解析与实战指南',
+      '/golang/high-performance-websockets-go': '/dev/backend/golang/',
+      '/golang/Quick-Start-to-MCP-Server-Development-in-VSCode.html': '/dev/backend/golang/VS Code 中 MCP 服务器的开发者快速入门',
+      '/golang/Quick-Start-to-MCP-Server-Development-in-VSCode': '/dev/backend/golang/VS Code 中 MCP 服务器的开发者快速入门',
+      '/golang/Go-Develop-Terminal-Tools.html': '/dev/backend/golang/Go 开发终端小工具',
+      '/golang/Go-Develop-Terminal-Tools': '/dev/backend/golang/Go 开发终端小工具',
+      
+      // ========== Tools 文章重定向 ==========
+      '/Tools/Make-CLI-Tools-Brand-New-with-Golang-and-Color': '/tools/让CLI工具焕然一新！用golang与Color库打造多彩命令行体验',
+      '/Tools/Composer-Configuration-File-Explanation': '/tools/Composer配置文件说明',
+      '/Tools/AutoGen in Financial Data Analysis: Automating Workflows with AI Agents.html': '/data/automation/',
+      
+      // ========== 多语言路径重定向（/zh/ 前缀） ==========
+      '/zh/数据库/PostgreSQL-10个鲜为人知的强大功能': '/dev/system/database/PostgreSQL-10个鲜为人知的强大功能',
+      '/zh/wails-tutorial-series/02-first-app.html': '/dev/backend/wails-tutorial-series/02-first-app',
+      '/zh/wails-tutorial-series/00-webkit-and-lifecycle.html': '/dev/backend/wails-tutorial-series/00-webkit-and-lifecycle',
+      
+      // ========== PHP 文章重定向 ==========
+      '/php/Laravel-Manual-Build': '/dev/backend/php/',
+      
       // ========== 分类页重定向 ==========
-      // 工具分类 → Tools 目录
-      '/categories/工具/': '/Tools/',
-      '/categories/工具': '/Tools/',
-      '/categories/tools/': '/Tools/',
-      '/categories/tools': '/Tools/',
+      // 工具分类 → tools 目录
+      '/categories/工具/': '/tools/',
+      '/categories/工具': '/tools/',
+      '/categories/tools/': '/tools/',
+      '/categories/tools': '/tools/',
+      '/工具/': '/tools/',
+      '/工具': '/tools/',
       
       // Golang 分类 → dev/backend/golang 目录
       '/categories/golang/index.html': '/dev/backend/golang/',
@@ -306,7 +349,23 @@
         }
       }
       
-      // 3. 优先处理 .html 文件 - 重定向到 clean URLs（不带 .html 后缀）
+      // 3. 处理 /golang/xxx 格式的旧路径（文章级别）
+      if (currentPath.startsWith('/golang/') && currentPath.split('/').length > 2) {
+        const articleSlug = currentPath.replace('/golang/', '').replace(/\.html?$/, '');
+        // 检查是否有精确映射
+        const exactMatch = redirectMap[currentPath] || redirectMap[currentPath.replace(/\.html?$/, '')];
+        if (exactMatch) {
+          console.log('Golang article exact match:', exactMatch);
+          showRedirectMessage(exactMatch, false);
+          return;
+        }
+        // 默认重定向到 golang 目录首页
+        console.log('Golang article redirect to golang index');
+        showRedirectMessage('/dev/backend/golang/', false);
+        return;
+      }
+      
+      // 4. 优先处理 .html 文件 - 重定向到 clean URLs（不带 .html 后缀）
       if (currentPath.endsWith('.html') || currentPath.endsWith('.htm')) {
         // 首先尝试直接去掉 .html/.htm 后缀（最可能的情况）
         const cleanPath = currentPath.replace(/\.html?$/, '');
@@ -326,15 +385,21 @@
         return;
       }
       
-      // 4. 处理旧的 /zh/ 路径格式（如果有的话）
+      // 5. 处理旧的 /zh/ 路径格式（如果有的话）
       if (currentPath.startsWith('/zh/')) {
+        // 先检查是否有精确映射
+        if (redirectMap[currentPath]) {
+          console.log('/zh/ path exact match:', redirectMap[currentPath]);
+          showRedirectMessage(redirectMap[currentPath], false);
+          return;
+        }
         const pathWithoutZh = currentPath.replace(/^\/zh/, '');
         console.log('Removing /zh/ prefix, redirecting to:', pathWithoutZh);
         showRedirectMessage(pathWithoutZh, false);
         return;
       }
       
-      // 5. 处理常见的旧博客路径格式
+      // 6. 处理常见的旧博客路径格式
       // /post/xxx, /posts/xxx, /article/xxx, /articles/xxx
       if (currentPathLower.match(/^\/(post|posts|article|articles)\//)) {
         const slug = currentPath.split('/').pop();
@@ -353,7 +418,7 @@
         }
       }
       
-      // 6. 处理标签页（/tag/xxx 或 /tags/xxx）
+      // 7. 处理标签页（/tag/xxx 或 /tags/xxx）
       if (currentPathLower.startsWith('/tag/') || currentPathLower.startsWith('/tags/')) {
         const tag = currentPath.split('/').pop();
         if (tag) {
@@ -364,7 +429,7 @@
         }
       }
       
-      // 7. 处理带查询参数的 URL - 重定向到 clean path
+      // 8. 处理带查询参数的 URL - 重定向到 clean path
       if (currentPath.includes('?') || window.location.search) {
         // 去掉查询参数，重定向到 clean path
         const cleanPath = currentPath.split('?')[0];
@@ -378,7 +443,7 @@
         return;
       }
       
-      // 8. 如果路径以 / 结尾但不是根路径，尝试去掉尾部斜杠
+      // 9. 如果路径以 / 结尾但不是根路径，尝试去掉尾部斜杠
       if (currentPath.length > 1 && currentPath.endsWith('/')) {
         const pathWithoutSlash = currentPath.slice(0, -1);
         console.log('Removing trailing slash, redirecting to:', pathWithoutSlash);
@@ -386,14 +451,20 @@
         return;
       }
       
-      // 9. 如果路径包含中文，尝试在常见目录下查找
+      // 10. 如果路径包含中文，尝试在常见目录下查找
       if (/[\u4e00-\u9fa5]/.test(currentPath)) {
-        // 尝试在 data/automation 目录下查找（中文文件名通常在这里）
+        // 先检查是否有精确映射
+        if (redirectMap[currentPath]) {
+          console.log('Chinese path exact match:', redirectMap[currentPath]);
+          showRedirectMessage(redirectMap[currentPath], false);
+          return;
+        }
+        // 尝试在 tools 目录下查找（中文工具文件名通常在这里）
         const fileName = currentPath.split('/').pop();
         if (fileName) {
           const possibleUrls = [
+            `/tools/${fileName}`,
             `/data/automation/${fileName}`,
-            `/Tools/${fileName}`,
             currentPath // 原路径
           ];
           console.log('Chinese path redirect:', possibleUrls[0]);
@@ -402,7 +473,7 @@
         }
       }
       
-      // 10. 没有匹配，显示默认选项
+      // 11. 没有匹配，显示默认选项
       console.log('No redirect rule found for:', currentPath);
     }
 
