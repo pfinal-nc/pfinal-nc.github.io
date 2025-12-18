@@ -17,6 +17,9 @@ import ReadingProgress from './components/ReadingProgress.vue'
 // 导入面包屑导航组件
 import Breadcrumb from './components/Breadcrumb.vue'
 
+// 导入自定义 404 页面组件
+import NotFound from './components/NotFound.vue'
+
 // 自定义样式重载
 import './style.scss'
 
@@ -43,7 +46,9 @@ const theme: Theme = {
       // 在文档底部插入评论组件
       'doc-after': () => h(GiscusComment),
       // 在页面底部插入Cookie同意横幅
-      'layout-bottom': () => h(CookieConsent)
+      'layout-bottom': () => h(CookieConsent),
+      // 使用自定义 404 页面（带智能重定向）
+      'not-found': () => h(NotFound)
     })
   }
 }
