@@ -35,10 +35,10 @@ const redirectRules = [
   { from: '/爬虫JS逆向Webpack技巧记录', to: '/data/automation/爬虫JS逆向Webpack技巧记录' },
   
   // 分类页重定向
-  { from: '/categories/工具', to: '/tools/' },
+  { from: '/categories/工具', to: '/Tools/' },
   { from: '/categories/经验', to: '/' },
   { from: '/categories/golang', to: '/dev/backend/golang/' },
-  { from: '/工具/', to: '/tools/' },
+  { from: '/工具/', to: '/Tools/' },
   { from: '/archives/', to: '/' },
   { from: '/links/', to: '/contact' },
 ]
@@ -99,8 +99,8 @@ onMounted(() => {
   
   // 处理 /工具/xxx 格式
   if (currentPath.startsWith('/工具/') || decodedPath.startsWith('/工具/')) {
-    console.log('[404 Handler] 工具 path, redirect to tools')
-    window.location.replace('/tools/')
+    console.log('[404 Handler] 工具 path, redirect to Tools')
+    window.location.replace('/Tools/')
     return
   }
   

@@ -58,14 +58,14 @@ export default {
           { from: '/%E7%88%AC%E8%99%ABJS%E9%80%86%E5%90%91Webpack%E6%8A%80%E5%B7%A7%E8%AE%B0%E5%BD%95.html', to: '/data/automation/爬虫JS逆向Webpack技巧记录' },
           
           // 分类页重定向
-          { from: '/categories/工具/', to: '/tools/' },
-          { from: '/categories/%E5%B7%A5%E5%85%B7/', to: '/tools/' },
+          { from: '/categories/工具/', to: '/Tools/' },
+          { from: '/categories/%E5%B7%A5%E5%85%B7/', to: '/Tools/' },
           { from: '/categories/经验/', to: '/' },
           { from: '/categories/%E7%BB%8F%E9%AA%8C/', to: '/' },
           { from: '/categories/golang/index.html', to: '/dev/backend/golang/' },
           { from: '/categories/golang/', to: '/dev/backend/golang/' },
-          { from: '/工具/', to: '/tools/' },
-          { from: '/%E5%B7%A5%E5%85%B7/', to: '/tools/' },
+          { from: '/工具/', to: '/Tools/' },
+          { from: '/%E5%B7%A5%E5%85%B7/', to: '/Tools/' },
           
           // 归档和其他
           { from: '/archives/', to: '/' },
@@ -132,9 +132,9 @@ export default {
         // 处理 /工具/xxx 格式
         if (currentPath.startsWith('/工具/') || decodedPath.startsWith('/工具/') ||
             currentPath.startsWith('/%E5%B7%A5%E5%85%B7/')) {
-          console.log('工具 path redirect to tools');
+          console.log('工具 path redirect to Tools');
           setTimeout(() => {
-            window.location.replace('/tools/');
+            window.location.replace('/Tools/');
           }, 500);
           return;
         }
