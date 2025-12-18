@@ -98,6 +98,10 @@ blog:
     <span class="tool-icon">📊</span>
     <span class="tool-name">BMI计算器</span>
   </a>
+  <a href="https://card.friday-go.icu/" class="tool-card" target="_blank">
+    <span class="tool-icon">✒️</span>
+    <span class="tool-name">淬墨台</span>
+  </a>
 </div>
 
 <div class="tools-more">

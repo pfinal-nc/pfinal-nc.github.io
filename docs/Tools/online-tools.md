@@ -1,6 +1,6 @@
 ---
 title: AI Tools Directory 2025 - Free Online Tools Collection
-description: "AI Tools Directory & Free Online Tools Collection: Password Generator, AI Apps Directory, Online Games, Marketing Calendar, BMI Calculator. All tools are free to use, no registration required."
+description: "AI Tools Directory & Free Online Tools Collection: Password Generator, AI Apps Directory, Text Card Generator, Online Games, Marketing Calendar, BMI Calculator. All tools are free to use, no registration required."
 keywords:
   - ai tools directory
   - ai apps directory
@@ -8,6 +8,8 @@ keywords:
   - free online tools
   - online tools collection
   - password generator online
+  - text card generator
+  - 文字卡片生成器
   - AI工具导航
   - 在线工具集合
   - 免费工具
@@ -66,6 +68,23 @@ PFinalClub 团队精心打造的免费在线工具集合，涵盖开发、设计
 **适用场景：** 提升 AI 使用效率、学习 Prompt 技巧、快速产出高质量内容
 
 <https://pnav.friday-go.icu/>
+
+---
+
+## 🎨 设计工具
+
+### ✒️ [淬墨台 - 文字卡片生成器](https://card.friday-go.icu/) - Text Card Generator
+
+**功能特点：**
+- 🖼️ 一键生成精美文字卡片，支持多种风格模板
+- ✨ 自定义文字样式、背景、配色
+- 📱 响应式设计，完美适配各种设备
+- 💾 支持导出 PNG/JPG 格式图片
+- 🆓 完全免费，无需注册
+
+**适用场景：** 社交媒体配图、金句卡片、读书笔记、知识分享、公众号封面
+
+<https://card.friday-go.icu/>
 
 ---
 
