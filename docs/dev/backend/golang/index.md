@@ -14,7 +14,9 @@ keywords:
   - golang 技术博客 导航
   - golang 中文 专题导航
 tags:
-    - golang
+  - golang
+sticky: true
+date: 2025-12-19 12:30:00
 ---
 
 # Golang 中文技术专题导航
