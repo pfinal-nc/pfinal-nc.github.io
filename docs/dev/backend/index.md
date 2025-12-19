@@ -10,6 +10,10 @@ keywords:
   - Wails
   - 桌面应用
   - 全栈开发
+layout: page
+date: 2025-12-01
+author: PFinal南丞
+hidden: false
 ---
 
 # 后端工程
@@ -20,11 +24,14 @@ keywords:
 
 ### 🚀 Go 语言开发
 - **核心语言特性**
-  - [深入理解 Go Channel：批量读取与实际应用](golang/深入理解-Go-Channel：批量读取与实际应用.md)
-  - [Go 零拷贝读取器实战与原理解析](golang/Go-零拷贝读取器实战与原理解析.md)
-  - [golang 实现协程池](golang/golang-实现协程池.md)
+  - [深入理解 Go Channel 批量读取与实际应用](./golang/深入理解Go%20Channel%20批量读取与实际应用.md)
+  - [Go 零拷贝读取器实战与原理解析](golang/Go%20零拷贝读取器实战与原理解析.md)
+  - [golang 实现协程池](golang/golang%20实现协程池.md)
   - [Stop-The-World-其实没停下-Go-GC-的微暂停真相](golang/Stop-The-World-其实没停下-Go-GC-的微暂停真相.md)
   - [Deep-Dive-Go-Memory-Allocation](golang/Deep-Dive-Go-Memory-Allocation.md)
+
+- **架构与设计**
+  - [接口参数设计：多场景复用的优雅之道](golang/接口参数设计-多场景复用的优雅之道.md)
 
 - **工具与库**
   - [加快开发速度的十大必备Go库](golang/加快开发速度的十大必备Go库.md)
@@ -35,14 +42,14 @@ keywords:
 - **实用扩展包**
   - [AutoCorrent专有名词大小写扩展包](golang/AutoCorrent专有名词大小写扩展包.md)
   - [Golang中国地址生成扩展包](golang/Golang中国地址生成扩展包.md)
-  - [golang 脱敏扩展包：简化敏感信息处理的利器](golang/golang-脱敏扩展包：简化敏感信息处理的利器.md)
+  - [golang 脱敏扩展包：简化敏感信息处理的利器](golang/golang%20脱敏扩展包：简化敏感信息处理的利器.md)
   - [Gomail邮件发送包](golang/Gomail邮件发送包.md)
 
 - **项目实战**
-  - [用 Go 构建一个类 kubectl 的命令行工具](golang/用-Go-构建一个类-kubectl-的命令行工具.md)
+  - [用 Go 构建一个类 kubectl 的命令行工具](golang/用%20Go%20构建一个类%20kubectl%20的命令行工具.md)
   - [Golang实现RAG系统-从OpenAI到向量数据库](golang/Golang实现RAG系统-从OpenAI到向量数据库.md)
-  - [Go 开发IP过滤小脚本](golang/Go-开发IP过滤小脚本.md)
-  - [Go 开发终端小工具](golang/Go-开发终端小工具.md)
+  - [Go 开发IP过滤小脚本](golang/Go%20开发IP过滤小脚本.md)
+  - [Go 开发终端小工具](golang/Go%20开发终端小工具.md)
 
 ### 🐘 PHP 开发
 - **Laravel 框架**
@@ -98,16 +105,16 @@ keywords:
 
 ## 🔧 开发工具与技巧
 
-- [Create Go App CLI 一款快速创建golang项目的工具](golang/Create-Go-App-CLI-一款快速创建golang项目的工具.md)
+- [Create Go App CLI 一款快速创建golang项目的工具](golang/Create%20Go%20App%20CLI%20一款快速创建golang项目的工具.md)
 - [Go-WASM构建WebAssembly应用的全新尝试](golang/Go-WASM构建WebAssembly应用的全新尝试.md)
-- [如何实现 RESTful API 版本控制](golang/如何实现-RESTful-API-版本控制.md)
+- [如何实现 RESTful API 版本控制](golang/如何实现%20RESTful%20API%20版本控制.md)
 - [使用Go实现服务端事件推送SSE](golang/使用Go实现服务端事件推送SSE.md)
 
 ## 📈 性能优化
 
 - [Speed-Boost-Static-API-with-Go](golang/Speed-Boost-Static-API-with-Go.md)
-- [Go 语言的高性能 User-Agent 解析库](golang/Go-语言的高性能-User-Agent-解析库.md)
-- [go:embed 在 Go 开发中的应用与最佳实践](golang/go:embed-在-Go-开发中的应用与最佳实践.md)
+- [Go 语言的高性能 User-Agent 解析库](golang/Go%20语言的高性能%20User-Agent%20解析库.md)
+- [go:embed 在 Go 开发中的应用与最佳实践](golang/go:embed%20在%20Go%20开发中的应用与最佳实践.md)
 
 ## 🎯 测试与质量
 
