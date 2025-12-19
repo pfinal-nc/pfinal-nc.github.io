@@ -12,6 +12,9 @@ keywords:
   - Nginx
   - Docker
   - 运维
+tags:
+  - PostgreSQL
+  - Docker
 ---
 
 # 系统与基础
