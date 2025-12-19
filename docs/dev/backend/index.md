@@ -8,15 +8,7 @@ tags:
   - 后端开发
   - 架构设计
   - 性能优化
-keywords:
-  - 后端工程
-  - Go
-  - PHP
-  - Python
-  - 性能优化
-  - Wails
-  - 桌面应用
-  - 全栈开发
+keywords: 后端工程,Go,PHP,Python,性能优化,Wails,桌面应用,全栈开发
 date: 2025-12-10 11:31:32
 author: PFinal南丞
 ---

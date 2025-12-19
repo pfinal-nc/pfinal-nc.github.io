@@ -1,23 +1,15 @@
 ---
 title: "后端开发与系统架构 | Go/PHP/Python实战教程 | PFinalClub"
 description: "专业的后端开发与系统架构指南，涵盖Go、PHP、Python实战教程，性能优化，微服务架构设计，容器化部署等工程实践。提供从入门到精通的完整技术栈学习路径。"
-keywords:
-  - 后端开发
-  - Go教程
-  - PHP开发
-  - Python后端
-  - 系统架构
-  - 性能优化
-  - 微服务
-  - 容器化部署
-  - DevOps实践
-  - 安全工程
+keywords: 后端开发, Go教程, PHP开发, Python后端, 系统架构, 性能优化, 微服务, 容器化部署, DevOps实践, 安全工程
 tags:
   - dev
   - golang
   - php
+  - python
   - 数据库
-
+sticky: true
+date: 2025-12-19 12:30:00
 ---
 
 # 开发与系统（Dev & Systems）
@@ -39,9 +31,9 @@ tags:
 
 深入后端开发核心，掌握多语言开发实践和工程化思想。
 
-- **Go 生态** - Web 框架、并发编程、性能优化
-- **PHP/Laravel** - 现代 PHP 开发、框架最佳实践
-- **Python** - 异步编程、脚本自动化、数据处理
+- **Go 生态** - Web 框架、并发编程、性能优化 [更多>>](./backend/golang/index.md)
+- **PHP/Laravel** - 现代 PHP 开发、框架最佳实践 [更多>>](./backend/php/index.md)
+- **Python** - 异步编程、脚本自动化、数据处理 [更多>>](./backend/python/index.md)
 - **桌面与全栈** - Wails 跨平台应用开发
 
 ### [系统与基础](/dev/system/)
