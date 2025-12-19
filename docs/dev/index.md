@@ -12,6 +12,12 @@ keywords:
   - 容器化部署
   - DevOps实践
   - 安全工程
+tags:
+  - dev
+  - golang
+  - php
+  - 数据库
+
 ---
 
 # 开发与系统（Dev & Systems）
