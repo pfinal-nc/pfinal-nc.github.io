@@ -3,7 +3,7 @@ title: 让本地大模型像 OpenAI 一样支持 Function Calling PHP 异步实�
 date: 2025-11-19 15:30:00
 author: PFinal南丞
 tags:
-    - PHP
+    - php
     - AI
     - Function Calling
     - 异步编程

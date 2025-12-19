@@ -3,7 +3,7 @@ title: Go 协程与 PHP Fibers-并发编程的两种实现
 date: 2025-10-19 10:00:02
 author: PFinal南丞
 tag:
-    - PHP
+    - php
     - Go
     - 并发编程
     - 协程

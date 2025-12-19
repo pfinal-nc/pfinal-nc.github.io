@@ -2,7 +2,7 @@
 title: "如何掌握Laravel-admin特殊路由操作 - PHP 开发完整指南"
 date: 2022-07-04 15:29:24
 tags:
-    - PHP
+    - php
     - Laravel
 description: Laravel-admin特殊路由操作
 author: PFinal南丞

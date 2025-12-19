@@ -3,20 +3,10 @@ title: "如何掌握Laravel 手工构建 - PHP 开发完整指南"
 date: 2019-01-16 10:00:02
 author: PFinal南丞
 tag:
-    - PHP
+    - php
     - Laravel 
 description: 手工构建laravel 框架,详细介绍了从项目初始化到添加各个组件的完整过程。
-keywords: 
-  - Laravel手工构建
-  - PHP框架开发
-  - Laravel架构设计
-  - Composer包管理
-  - Laravel核心组件
-  - PHP MVC框架
-  - 框架构建教程
-  - Laravel路由系统
-  - 依赖注入容器
-  - PHP框架设计模式
+keywords: Laravel手工构建,PHP框架开发,Laravel架构设计,Composer包管理,Laravel核心组件,PHP MVC框架,框架构建教程,Laravel路由系统,依赖注入容器,PHP框架设计模式,
 ---
 
 #  Laravel 手工构建

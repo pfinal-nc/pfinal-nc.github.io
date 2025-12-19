@@ -3,7 +3,7 @@ title: 从Go协程池到PHP实现 一次代码重构实战
 date: 2025-01-13 15:30:00
 author: PFinal南丞
 tags:
-    - PHP
+    - php
     - Workerman
     - 协程
     - Go

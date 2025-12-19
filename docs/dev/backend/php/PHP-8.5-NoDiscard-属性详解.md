@@ -2,7 +2,7 @@
 title: PHP 8.5 NoDiscard 属性-告别静默错误，提升代码质量的神器
 date: 2025-07-19 10:30:00
 tags:
-    - PHP
+    - php
     - PHP8.5
     - 属性
 keywords: PHP8.5, NoDiscard属性, PHP属性, 返回值检查, 代码质量, PHP编程, PHP 8.5 NoDiscard 属性详解, PHP8.5新特性, PHP属性编程, PHP返回值验证, PHP静默错误处理, PHP代码质量提升, PHP开发最佳实践, PHP属性使用教程, PHP8.5属性指南, PHP返回值检查, PHP代码健壮性, PHP编程技巧, PHP属性最佳实践, PHP8.5技术指南

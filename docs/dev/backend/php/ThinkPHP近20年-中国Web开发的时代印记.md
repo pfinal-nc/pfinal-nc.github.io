@@ -3,7 +3,7 @@ title: ThinkPHP8 完整指南 - 近20年中国Web开发的时代印记
 date: 2025-07-16 10:00:02
 author: PFinal南丞
 tags:
-  - PHP
+  - php
   - ThinkPHP
   - thinkphp8
   - PHP框架

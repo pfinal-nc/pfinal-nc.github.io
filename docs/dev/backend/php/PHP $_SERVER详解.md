@@ -2,7 +2,7 @@
 title: PHP $_SERVER 超全局变量完全指南
 date: 2022-04-09 11:31:32
 tags:
-    - PHP
+    - php
     - 服务器变量
     - 安全
 description: PHP $_SERVER 超全局变量完全指南，包含所有变量详解、实际应用场景、安全注意事项和最佳实践

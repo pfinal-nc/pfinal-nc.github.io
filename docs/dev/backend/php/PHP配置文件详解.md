@@ -2,7 +2,7 @@
 title: PHP配置文件详解
 date: 2022-07-04 13:36:42
 tags:
-    - PHP
+    - php
 description: PHP配置文件详解
 author: PFinal南丞
 keywords: PHP, 配置文件, 详解, 编程, web开发, 服务器配置, PHP配置文件详解, PHP配置优化, PHP服务器配置, PHP性能配置, PHP安全配置, PHP文件上传配置, PHP会话配置, PHP调试配置, PHP配置最佳实践, PHP配置教程, PHP环境配置, PHP开发环境配置 

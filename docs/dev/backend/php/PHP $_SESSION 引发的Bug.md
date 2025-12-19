@@ -2,7 +2,7 @@
 title: PHP $_SESSION 引发的Bug深度分析与解决方案
 date: 2023-11-09 11:31:32
 tags:
-    - PHP
+    - php
     - 会话管理
     - 调试
     - 最佳实践
