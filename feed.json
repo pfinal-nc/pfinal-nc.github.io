@@ -16,7 +16,7 @@
             "url": "https://friday-go.icu/dev/system/database",
             "title": "数据库中文技术专题导航 - MySQL / PostgreSQL / 配置优化 2025",
             "summary": "PFinalClub 数据库中文专题导航页：系统整理 MySQL 配置、PostgreSQL 功能、数据库优化等核心文章，让中文读者可以按专题快速找到高质量实战内容。",
-            "date_modified": "2025-12-19T08:23:18.898Z",
+            "date_modified": "2025-12-19T08:24:01.918Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -29,7 +29,7 @@
             "url": "https://friday-go.icu/dev/backend/python",
             "title": "Python 中文技术专题导航 - 爬虫 / 协程 / 工具与最佳实践",
             "summary": "PFinalClub Python 中文专题导航页：系统整理爬虫技术、JS 逆向工程、协程、加密算法、Python 开发工具等核心文章，让中文读者可以按专题快速找到高质量实战内容。",
-            "date_modified": "2025-12-19T08:23:18.891Z",
+            "date_modified": "2025-12-19T08:24:01.912Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -42,7 +42,7 @@
             "url": "https://friday-go.icu/dev/backend/php",
             "title": "PHP 中文技术专题导航 - ThinkPHP / Laravel / PHP 8.x / 协程 / 最佳实践",
             "summary": "PFinalClub PHP 中文专题导航页：系统整理 ThinkPHP 8、Laravel、PHP 8.x 企业级开发、协程池、错误处理等核心文章，让中文读者可以按专题快速找到高质量实战内容。",
-            "date_modified": "2025-12-19T08:23:18.889Z",
+            "date_modified": "2025-12-19T08:24:01.909Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -55,7 +55,7 @@
             "url": "https://friday-go.icu/dev/backend/golang",
             "title": "Golang 中文技术专题导航 - Go 后端 / RAG / 可观测性 / 桌面开发",
             "summary": "PFinalClub Golang 中文专题导航页：系统整理 Go 后端工程实践、RAG 系统、可观测性、Wails 桌面开发、游戏服务器与效率工具等核心文章，让中文读者可以按专题快速找到高质量实战内容。",
-            "date_modified": "2025-12-19T08:23:18.880Z",
+            "date_modified": "2025-12-19T08:24:01.899Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -68,7 +68,7 @@
             "url": "https://friday-go.icu/thinking/method",
             "title": "技术架构与方法论 | 架构设计 学习路径 工程实践 | PFinalClub",
             "summary": "深入的技术架构与方法论指南，涵盖架构设计原则、系统化学习路径、工程实践方法论、技术哲学思考等内容。提供从技术深度到思维高度的完整成长体系。",
-            "date_modified": "2025-12-19T08:23:18.871Z",
+            "date_modified": "2025-12-19T08:24:01.887Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -81,7 +81,7 @@
             "url": "https://friday-go.icu/security/engineering",
             "title": "安全工程实践 | SSH安全 Golang安全 服务器加固 | PFinalClub",
             "summary": "全面的安全工程实践指南，涵盖SSH安全加固、Golang安全开发、服务器防护、WAF配置、DevOps安全集成等工程化落地方案。提供从基础安全到企业级防护的完整解决方案。",
-            "date_modified": "2025-12-19T08:23:18.867Z",
+            "date_modified": "2025-12-19T08:24:01.882Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -94,7 +94,7 @@
             "url": "https://friday-go.icu/security/offensive",
             "title": "安全攻防研究 | Web安全 内网渗透 红蓝对抗实战 | PFinalClub",
             "summary": "深入的安全攻防研究指南，涵盖Web安全漏洞分析、内网渗透技术、红蓝对抗实战演练、渗透测试方法论等攻防一体实践内容。提供从攻击到防御的完整安全研究体系。",
-            "date_modified": "2025-12-19T08:23:18.867Z",
+            "date_modified": "2025-12-19T08:24:01.882Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -107,7 +107,7 @@
             "url": "https://friday-go.icu/dev/system",
             "title": "系统与基础导航",
             "summary": "覆盖数据库、Linux、网络、容器等系统基础与实践文章。",
-            "date_modified": "2025-12-19T08:23:18.864Z",
+            "date_modified": "2025-12-19T08:24:01.879Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -120,20 +120,7 @@
             "url": "https://friday-go.icu/data/automation",
             "title": "数据采集与自动化 | 爬虫技术 AI工程 机器人开发 | PFinalClub",
             "summary": "专业的数据采集与自动化技术指南，涵盖爬虫开发、AI工程实践、机器人开发、数据生产线构建等实战内容。提供从数据采集到自动化处理的完整技术栈解决方案。",
-            "date_modified": "2025-12-19T08:23:18.863Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": []
-        },
-        {
-            "id": "https://friday-go.icu/dev",
-            "content_html": "专业的后端开发与系统架构指南，涵盖Go、PHP、Python实战教程，性能优化，微服务架构设计，容器化部署等工程实践。提供从入门到精通的完整技术栈学习路径。",
-            "url": "https://friday-go.icu/dev",
-            "title": "后端开发与系统架构 | Go/PHP/Python实战教程 | PFinalClub",
-            "summary": "专业的后端开发与系统架构指南，涵盖Go、PHP、Python实战教程，性能优化，微服务架构设计，容器化部署等工程实践。提供从入门到精通的完整技术栈学习路径。",
-            "date_modified": "2025-12-19T08:23:18.861Z",
+            "date_modified": "2025-12-19T08:24:01.878Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -146,7 +133,7 @@
             "url": "https://friday-go.icu/indie",
             "title": "独立开发与产品实践 | SaaS开发 技术创业 产品增长 | PFinalClub",
             "summary": "专业的独立开发与产品实践指南，涵盖SaaS产品开发、技术创业路径、产品设计与增长策略等内容。提供从创意到商业化的完整产品开发体系。",
-            "date_modified": "2025-12-19T08:23:18.861Z",
+            "date_modified": "2025-12-19T08:24:01.876Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -159,7 +146,7 @@
             "url": "https://friday-go.icu/security",
             "title": "Web安全 · 工程安全 | 攻防研究 安全工程 | PFinalClub",
             "summary": "全面的网络安全体系指南，涵盖Web安全、应用安全、安全工程、攻防研究、服务器加固、密码学等实战内容。提供从防御加固到攻防研究的完整安全知识体系。",
-            "date_modified": "2025-12-19T08:23:18.861Z",
+            "date_modified": "2025-12-19T08:24:01.876Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -172,7 +159,7 @@
             "url": "https://friday-go.icu/data",
             "title": "数据科学与工程 | 数据采集 数据分析 数据可视化 AI工程 | PFinalClub",
             "summary": "全面的数据科学与工程知识体系，涵盖数据采集、数据分析、数据可视化、AI工程、机器学习等核心领域，提供从数据获取到智能应用的完整技术栈解决方案。",
-            "date_modified": "2025-12-19T08:23:18.860Z",
+            "date_modified": "2025-12-19T08:24:01.875Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -180,12 +167,12 @@
             "tags": []
         },
         {
-            "id": "https://friday-go.icu/Tools",
-            "content_html": "PFinalClub 工具与实用程序中文专题导航页：系统整理 AI 工具目录、开发工具、CLI 工具、Docker 指南、效率技巧等核心文章，让中文读者可以按专题快速找到高质量实战内容。",
-            "url": "https://friday-go.icu/Tools",
-            "title": "工具与实用程序中文专题导航 - AI 工具 / 开发工具 / 效率提升 2025",
-            "summary": "PFinalClub 工具与实用程序中文专题导航页：系统整理 AI 工具目录、开发工具、CLI 工具、Docker 指南、效率技巧等核心文章，让中文读者可以按专题快速找到高质量实战内容。",
-            "date_modified": "2025-12-19T08:23:18.858Z",
+            "id": "https://friday-go.icu/dev",
+            "content_html": "专业的后端开发与系统架构指南，涵盖Go、PHP、Python实战教程，性能优化，微服务架构设计，容器化部署等工程实践。提供从入门到精通的完整技术栈学习路径。",
+            "url": "https://friday-go.icu/dev",
+            "title": "后端开发与系统架构 | Go/PHP/Python实战教程 | PFinalClub",
+            "summary": "专业的后端开发与系统架构指南，涵盖Go、PHP、Python实战教程，性能优化，微服务架构设计，容器化部署等工程实践。提供从入门到精通的完整技术栈学习路径。",
+            "date_modified": "2025-12-19T08:24:01.875Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -198,7 +185,20 @@
             "url": "https://friday-go.icu/Tools/online-tools",
             "title": "AI Tools Directory 2025 - Free Online Tools Collection",
             "summary": "AI Tools Directory & Free Online Tools Collection: Password Generator, AI Apps Directory, Text Card Generator, Online Games, Marketing Calendar, BMI Calculator. All tools are free to use, no registration required.",
-            "date_modified": "2025-12-19T08:23:18.858Z",
+            "date_modified": "2025-12-19T08:24:01.873Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": []
+        },
+        {
+            "id": "https://friday-go.icu/Tools",
+            "content_html": "PFinalClub 工具与实用程序中文专题导航页：系统整理 AI 工具目录、开发工具、CLI 工具、Docker 指南、效率技巧等核心文章，让中文读者可以按专题快速找到高质量实战内容。",
+            "url": "https://friday-go.icu/Tools",
+            "title": "工具与实用程序中文专题导航 - AI 工具 / 开发工具 / 效率提升 2025",
+            "summary": "PFinalClub 工具与实用程序中文专题导航页：系统整理 AI 工具目录、开发工具、CLI 工具、Docker 指南、效率技巧等核心文章，让中文读者可以按专题快速找到高质量实战内容。",
+            "date_modified": "2025-12-19T08:24:01.872Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -211,7 +211,7 @@
             "url": "https://friday-go.icu/Tools/Git高级命令教程",
             "title": "Git Advanced Commands 2025 - 12个提升效率的高级命令完整指南",
             "summary": "Git 高级命令完整教程：worktree 多工作目录、reflog 找回丢失提交、bisect 二分查找 Bug、stash 进阶、cherry-pick 选择性合并等 12 个实用命令详解，附实战示例。",
-            "date_modified": "2025-12-19T08:23:18.856Z",
+            "date_modified": "2025-12-19T08:24:01.871Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
