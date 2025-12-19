@@ -1,11 +1,15 @@
 ---
-title: "如何掌握PHP进程线程解析 - PHP 开发完整指南"
-date: 2022-07-04 15:29:24
+title: 如何掌握PHP进程线程解析 - PHP 开发完整指南
+date: 2022-07-04T15:29:24.000Z
 tags:
-    - php
+  - php
 description: PHP进程线程解析
 author: PFinal南丞
-keywords: PHP, 进程, 线程, 解析, PHP进程, PHP线程, PHP进程线程, PHP进程线程解析, PHP进程线程解析, PHP进程线程解析, PHP多进程编程, PHP进程管理, PHP线程处理, PHP并发编程, PHP进程通信, PHP信号处理, PHP进程控制, PHP多进程最佳实践, PHP进程线程教程, PHP并发技术
+keywords: >-
+  PHP, 进程, 线程, 解析, PHP进程, PHP线程, PHP进程线程, PHP进程线程解析, PHP进程线程解析, PHP进程线程解析,
+  PHP多进程编程, PHP进程管理, PHP线程处理, PHP并发编程, PHP进程通信, PHP信号处理, PHP进程控制, PHP多进程最佳实践,
+  PHP进程线程教程, PHP并发技术
+recommend: 后端工程
 ---
 
 # PHP进程线程解析

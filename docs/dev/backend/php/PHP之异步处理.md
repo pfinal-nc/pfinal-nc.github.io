@@ -1,11 +1,15 @@
 ---
-title: "如何掌握PHP之异步处理 - PHP 开发完整指南"
-date: 2022-04-27 22:10:20
+title: 如何掌握PHP之异步处理 - PHP 开发完整指南
+date: 2022-04-27T22:10:20.000Z
 tags:
-    - php
-keywords: PHP异步处理, php, 工具, php异步处理, php协程, php异步协程, PHP之异步处理, PHP异步编程, PHP消息队列, PHP Redis队列, PHP异步请求, PHP fsockopen, PHP curl异步, PHP popen异步, PHP守护进程, PHP异步处理最佳实践, PHP异步编程教程, PHP高并发处理, PHP异步技术
+  - php
+keywords: >-
+  PHP异步处理, php, 工具, php异步处理, php协程, php异步协程, PHP之异步处理, PHP异步编程, PHP消息队列, PHP
+  Redis队列, PHP异步请求, PHP fsockopen, PHP curl异步, PHP popen异步, PHP守护进程,
+  PHP异步处理最佳实践, PHP异步编程教程, PHP高并发处理, PHP异步技术
 description: 详细介绍PHP异步处理的相关知识，包括异步处理的概念、应用场景、实现方式等，帮助开发者更好地利用PHP的异步处理能力，提高程序的性能和响应速度。
 author: PFinal南丞
+recommend: 后端工程
 ---
 
 # PHP之异步处理

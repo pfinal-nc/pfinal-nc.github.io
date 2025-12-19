@@ -1,16 +1,17 @@
 ---
-title: "如何使用 Go systray 构建智能系统托盘应用 - Wails v2 集成实战完整指南"
-date: 2025-01-28 10:00:02
+title: 如何使用 Go systray 构建智能系统托盘应用 - Wails v2 集成实战完整指南
+date: 2025-01-28T10:00:02.000Z
 author: PFinal南丞
 tag:
-    - Go
-    - systray
-    - Wails
-    - 桌面应用
-    - 系统托盘
-    - 跨平台开发
+  - Go
+  - systray
+  - Wails
+  - 桌面应用
+  - 系统托盘
+  - 跨平台开发
 description: 深入讲解如何使用 Go systray 库构建智能系统托盘应用，结合 Wails v2 框架实现跨平台桌面应用开发，包含完整的实战案例和最佳实践
-keywords: Go systray, Wails v2, 系统托盘, 桌面应用, 跨平台开发, Go GUI, 系统集成, 后台服务
+keywords: 'Go systray, Wails v2, 系统托盘, 桌面应用, 跨平台开发, Go GUI, 系统集成, 后台服务'
+recommend: 后端工程
 ---
 
 # 使用 Go systray 构建智能系统托盘应用 - Wails v2 集成实战

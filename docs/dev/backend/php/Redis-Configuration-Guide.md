@@ -1,11 +1,12 @@
 ---
 title: Redis配置文件详解
-date: 2020-06-09 11:31:32
+date: 2020-06-09T11:31:32.000Z
 tags:
-    - Redis
+  - Redis
 description: 学习Redis配置文件
-keywords: Redis配置文件详解, 数据库, redis
+keywords: 'Redis配置文件详解, 数据库, redis'
 author: PFinal南丞
+recommend: 后端工程
 ---
 
 # Redis配置文件详解

@@ -1,6 +1,6 @@
 ---
 title: Wails 教程系列 - 前端开发实战指南
-date: 2025-01-15
+date: 2025-01-15T00:00:00.000Z
 author: PFinalClub
 description: 手把手教你用最新的前端技术栈开发 Wails 应用，从入门到精通。
 tags:
@@ -9,6 +9,7 @@ tags:
   - TypeScript
   - 前端开发
   - 桌面应用
+recommend: 后端工程
 ---
 
 # Wails 教程系列 - 前端开发实战指南

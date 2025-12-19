@@ -1,12 +1,13 @@
 ---
-title: "Golang 脱敏扩展包 - 简化敏感信息处理的利器"
-date: 2024-08-16 22:10:20
-tags: 
-    - golang
-    - 工具
+title: Golang 脱敏扩展包 - 简化敏感信息处理的利器
+date: 2024-08-16T22:10:20.000Z
+tags:
+  - golang
+  - 工具
 description: 详细介绍golang脱敏扩展包，包括安装配置、使用方法、常见问题等核心功能，帮助开发者轻松管理多个Python版本。
 author: PFinal南丞
-keywords: golang, 脱敏扩展包：简化敏感信息处理的利器, 工具, golang扩展包, golang脱敏, golang脱敏工具
+keywords: 'golang, 脱敏扩展包：简化敏感信息处理的利器, 工具, golang扩展包, golang脱敏, golang脱敏工具'
+recommend: 后端工程
 ---
 
 # Golang 脱敏扩展包：简化敏感信息处理的利器

@@ -1,11 +1,12 @@
 ---
 title: Go 语言的高性能 User-Agent 解析库
-date: 2024-09-03 21:31:32
+date: 2024-09-03T21:31:32.000Z
 tags:
-    - golang
+  - golang
 description: 详细介绍Go语言的高性能User-Agent解析库，包括安装配置、使用方法、性能测试等核心功能，帮助开发者轻松解析User-Agent信息。
 author: PFinal南丞
-keywords: Go语言的高性能User-Agent解析库, golang, 工具, User-Agent解析, 性能测试, 解析库
+keywords: 'Go语言的高性能User-Agent解析库, golang, 工具, User-Agent解析, 性能测试, 解析库'
+recommend: 后端工程
 ---
 
 # Go 语言的高性能 User-Agent 解析库

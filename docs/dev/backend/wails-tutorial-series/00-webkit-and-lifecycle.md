@@ -1,8 +1,9 @@
 ---
 title: Wails 教程系列 - WebKit 与生命周期深度解析
-date: 2025-08-22
+date: 2025-08-22T00:00:00.000Z
 author: PFinalClub
 description: 深入理解 Wails 中的 WebKit 技术原理、wails.Run() 运行路线以及应用生命周期管理机制。
+recommend: 后端工程
 ---
 
 # Wails 教程系列 - WebKit 与生命周期深度解析

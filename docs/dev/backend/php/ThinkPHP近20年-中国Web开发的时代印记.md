@@ -1,6 +1,6 @@
 ---
 title: ThinkPHP8 完整指南 - 近20年中国Web开发的时代印记
-date: 2025-07-16 10:00:02
+date: 2025-07-16T10:00:02.000Z
 author: PFinal南丞
 tags:
   - php
@@ -8,7 +8,9 @@ tags:
   - thinkphp8
   - PHP框架
   - Web开发
-description: "ThinkPHP8 最新版本完整指南：从 2006 年到 ThinkPHP 8.1.3，深入解析路由系统优化、日志增强、性能提升。包含升级避坑指南和最佳实践，助你快速掌握 ThinkPHP8 开发。"
+description: >-
+  ThinkPHP8 最新版本完整指南：从 2006 年到 ThinkPHP
+  8.1.3，深入解析路由系统优化、日志增强、性能提升。包含升级避坑指南和最佳实践，助你快速掌握 ThinkPHP8 开发。
 keywords:
   - thinkphp8
   - thinkphp latest version 2025
@@ -22,6 +24,7 @@ keywords:
   - ThinkPHP性能优化
   - 中国PHP框架
   - PFinalClub
+recommend: 后端工程
 ---
 
 # ThinkPHP近20年——中国Web开发的时代印记

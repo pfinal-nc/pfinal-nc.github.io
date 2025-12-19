@@ -1,8 +1,9 @@
 ---
 title: Wails 教程系列 - 后端开发 (Go)
-date: 2025-08-22
+date: 2025-08-22T00:00:00.000Z
 author: PFinalClub
 description: 学习如何在 Wails 应用中使用 Go 语言进行后端开发，包括业务逻辑实现、系统 API 调用和数据处理。
+recommend: 后端工程
 ---
 
 # Wails 教程系列 - 后端开发 (Go)

@@ -1,14 +1,15 @@
 ---
-title: "如何开发和使用 Go终端URL检测小工具 - 完整实战指南"
-date: 2024-03-05 11:46:43
+title: 如何开发和使用 Go终端URL检测小工具 - 完整实战指南
+date: 2024-03-05T11:46:43.000Z
 tags:
   - golang
   - 工具
 description: 详细介绍Go终端URL检测小工具的开发过程，包括功能实现、代码实现、运行命令等方面，帮助开发者快速开发终端命令小工具。
 author: PFinal南丞
-keywords: Go, URL检测, 工具, 编程, 终端命令, 开发, 检测, 小工具, 终端命令小工具, Go终端命令小工具
+keywords: 'Go, URL检测, 工具, 编程, 终端命令, 开发, 检测, 小工具, 终端命令小工具, Go终端命令小工具'
 top: 1
 sticky: true
+recommend: 后端工程
 ---
 # Go终端URL检测小工具
 

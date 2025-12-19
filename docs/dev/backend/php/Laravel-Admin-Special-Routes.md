@@ -1,12 +1,17 @@
 ---
-title: "如何掌握Laravel-admin特殊路由操作 - PHP 开发完整指南"
-date: 2022-07-04 15:29:24
+title: 如何掌握Laravel-admin特殊路由操作 - PHP 开发完整指南
+date: 2022-07-04T15:29:24.000Z
 tags:
-    - php
-    - Laravel
+  - php
+  - Laravel
 description: Laravel-admin特殊路由操作
 author: PFinal南丞
-keywords: PHP, 进程, 线程, 解析, PHP进程, PHP线程, PHP进程线程, PHP进程线程解析, PHP进程线程解析, Laravel-admin特殊路由操作, Laravel-admin路由配置, Laravel-admin分表设计, Laravel-admin动态路由, Laravel-admin自定义操作, Laravel-admin Grid操作, Laravel-admin删除操作, Laravel-admin路由优化, Laravel-admin最佳实践, Laravel-admin教程
+keywords: >-
+  PHP, 进程, 线程, 解析, PHP进程, PHP线程, PHP进程线程, PHP进程线程解析, PHP进程线程解析,
+  Laravel-admin特殊路由操作, Laravel-admin路由配置, Laravel-admin分表设计, Laravel-admin动态路由,
+  Laravel-admin自定义操作, Laravel-admin Grid操作, Laravel-admin删除操作,
+  Laravel-admin路由优化, Laravel-admin最佳实践, Laravel-admin教程
+recommend: 后端工程
 ---
 
 # Laravel-admin特殊路由操作

@@ -1,12 +1,13 @@
 ---
-title: "如何掌握基于wails的应用尝试开发 - Go 开发完整指南"
-date: 2023-12-07 09:18:22
+title: 如何掌握基于wails的应用尝试开发 - Go 开发完整指南
+date: 2023-12-07T09:18:22.000Z
 tags:
-    - golang
-    - Wails
+  - golang
+  - Wails
 description: 基于wails的应用尝试开发
 author: PFinal南丞
-keywords: Wails, 应用, 开发, 尝试, 桌面应用, Go, Web开发, Tailwindcss, sqlite
+keywords: 'Wails, 应用, 开发, 尝试, 桌面应用, Go, Web开发, Tailwindcss, sqlite'
+recommend: 后端工程
 ---
 
 # 基于wails的应用尝试开发

@@ -1,12 +1,13 @@
 ---
 title: Go 和 WASM 构建 WebAssembly 应用的全新尝试
-date: 2025-07-22 17:15:27
+date: 2025-07-22T17:15:27.000Z
 tags:
-    - golang
-    - WebAssembly
+  - golang
+  - WebAssembly
 description: 当 Go 语言遇上 WebAssembly，会碰撞出怎样的火花？让我们一起探索这个令人兴奋的技术组合，看看如何用 Go 构建高性能的 Web 应用。
 author: PFinal南丞
-keywords: WebAssembly, golang, WASM
+keywords: 'WebAssembly, golang, WASM'
+recommend: 后端工程
 ---
 
 

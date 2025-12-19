@@ -1,11 +1,12 @@
 ---
 title: AutoCorrent专有名词大小写扩展包
-date: 2024-08-23 17:15:27
+date: 2024-08-23T17:15:27.000Z
 tags:
-    - golang
+  - golang
 description: 介绍一款快速创建golang项目的工具
 author: PFinal南丞
-keywords: AutoCorrent专有名词大小写扩展包, golang, 项目创建, 快速创建, 工具, 项目, 快速, 工具
+keywords: 'AutoCorrent专有名词大小写扩展包, golang, 项目创建, 快速创建, 工具, 项目, 快速, 工具'
+recommend: 后端工程
 ---
 
 # AutoCorrent专有名词大小写扩展包

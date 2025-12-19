@@ -1,12 +1,17 @@
 ---
-title: "如何掌握基于Wails的Mac桌面应用开发 - Go 开发完整指南"
-date: 2023-10-18 11:06:22
+title: 如何掌握基于Wails的Mac桌面应用开发 - Go 开发完整指南
+date: 2023-10-18T11:06:22.000Z
 tags:
-    - golang
-    - Wails
+  - golang
+  - Wails
 description: 基于Wails的Mac桌面应用开发
 author: PFinal南丞
-keywords: Wails, Golang, Go, GUI, 桌面应用, Mac, macOS, 跨平台, Wails教程, Wails指南, Wails安装, Wails初始化, Wails开发, Wails构建, Go GUI, Golang GUI, Go桌面开发, Golang桌面开发, Wails for Mac, WebView2, WebKit, React, Vue, Svelte, Go-JavaScript绑定, IPC, wails v2, wails v3
+keywords: >-
+  Wails, Golang, Go, GUI, 桌面应用, Mac, macOS, 跨平台, Wails教程, Wails指南, Wails安装,
+  Wails初始化, Wails开发, Wails构建, Go GUI, Golang GUI, Go桌面开发, Golang桌面开发, Wails for
+  Mac, WebView2, WebKit, React, Vue, Svelte, Go-JavaScript绑定, IPC, wails v2,
+  wails v3
+recommend: 后端工程
 ---
 # 基于Wails的Mac桌面应用开发
 

@@ -1,11 +1,12 @@
 ---
-title: "Gomail邮件发送包完整使用指南 - 如何集成并掌握核心功能"
-date: 2024-05-02 22:10:20
+title: Gomail邮件发送包完整使用指南 - 如何集成并掌握核心功能
+date: 2024-05-02T22:10:20.000Z
 tags:
-    - golang
+  - golang
 description: 详细介绍Gomail邮件发送包，包括安装配置、邮件发送、邮件接收等核心功能，帮助开发者轻松管理多个Python版本。
 author: PFinal南丞
-keywords: Gomail邮件发送包, golang, 工具, 邮件发送, 邮件接收, 邮件发送包, 邮件发送工具
+keywords: 'Gomail邮件发送包, golang, 工具, 邮件发送, 邮件接收, 邮件发送包, 邮件发送工具'
+recommend: 后端工程
 ---
 
 # Gomail邮件发送包

@@ -1,8 +1,8 @@
 ---
-title: "Python-Faker 完整使用指南 - 如何集成并掌握核心功能"
-date: 2023-04-05 22:10:20
+title: Python-Faker 完整使用指南 - 如何集成并掌握核心功能
+date: 2023-04-05T22:10:20.000Z
 tags:
-    - python
+  - python
 description: Faker库常用函数
 author: PFinal南丞
 keywords:
@@ -16,6 +16,7 @@ keywords:
   - 测试数据生成库
   - Python Faker教程
   - 伪数据生成
+recommend: 后端工程
 ---
 
 # Python-Faker库常用函数

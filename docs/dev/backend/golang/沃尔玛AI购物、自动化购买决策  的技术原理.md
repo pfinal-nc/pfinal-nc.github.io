@@ -1,11 +1,12 @@
 ---
 title: 沃尔玛AI购物、自动化购买决策的技术原理分析
-date: 2025-05-19 17:15:27
+date: 2025-05-19T17:15:27.000Z
 tags:
-    - AI
+  - AI
 description: 沃尔玛AI购物、自动化购买决策  的技术原理分析
 author: PFinal南丞
-keywords: AI, 技术原理分析, 购物, 自动化购买决策
+keywords: 'AI, 技术原理分析, 购物, 自动化购买决策'
+recommend: 后端工程
 ---
 
 ## 背景

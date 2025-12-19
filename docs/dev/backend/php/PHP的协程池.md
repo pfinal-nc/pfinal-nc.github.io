@@ -1,15 +1,20 @@
 ---
 title: 从Go协程池到PHP实现 一次代码重构实战
-date: 2025-01-13 15:30:00
+date: 2025-01-13T15:30:00.000Z
 author: PFinal南丞
 tags:
-    - php
-    - Workerman
-    - 协程
-    - Go
-    - 高并发
-keywords: PHP协程池, Workerman协程, PHP高并发, 协程池实现, Go协程池, PHP并发编程, Channel通道, 协程调度, 数据库连接池, 动态协程池, PHP性能优化, Workerman实战, PHP协程化, 高并发优化, 协程池监控
-description: 从Go协程池代码重构到PHP Workerman实现的完整实战。详细讲解协程池原理、Channel通道机制、动态协程池、数据库连接池等高级特性，包含实际生产环境经验和性能优化技巧。
+  - php
+  - Workerman
+  - 协程
+  - Go
+  - 高并发
+keywords: >-
+  PHP协程池, Workerman协程, PHP高并发, 协程池实现, Go协程池, PHP并发编程, Channel通道, 协程调度, 数据库连接池,
+  动态协程池, PHP性能优化, Workerman实战, PHP协程化, 高并发优化, 协程池监控
+description: >-
+  从Go协程池代码重构到PHP
+  Workerman实现的完整实战。详细讲解协程池原理、Channel通道机制、动态协程池、数据库连接池等高级特性，包含实际生产环境经验和性能优化技巧。
+recommend: 后端工程
 ---
 
 

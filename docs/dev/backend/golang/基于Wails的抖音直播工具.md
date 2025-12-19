@@ -1,12 +1,13 @@
 ---
-title: "如何开发和使用 基于Wails的抖音直播 工具 - 完整实战指南"
-date: 2024-10-18 11:06:22
+title: 如何开发和使用 基于Wails的抖音直播 工具 - 完整实战指南
+date: 2024-10-18T11:06:22.000Z
 tags:
-    - golang
-    - Wails
+  - golang
+  - Wails
 description: 基于Wails的抖音直播工具
 author: PFinal南丞
-keywords: 基于Wails的抖音直播工具, golang, Wails, 抖音, 直播, 工具, 桌面应用
+keywords: '基于Wails的抖音直播工具, golang, Wails, 抖音, 直播, 工具, 桌面应用'
+recommend: 后端工程
 ---
 
 # 基于Wails的抖音直播工具

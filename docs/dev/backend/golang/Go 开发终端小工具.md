@@ -1,17 +1,19 @@
 ---
-title: "Go 开发终端小工具完整指南 - 从零构建实用 CLI 工具"
-date: 2023-11-09 17:22:37
-tags: 
-    - golang
-    - 工具
-    - CLI
-    - cobra
-    - termui
-description: 从零开始学习使用 Go 语言开发终端小工具，包括天气查询、手机归属地查询等实用功能。涵盖 Cobra 框架、Termui 界面库、测试、打包发布等完整开发流程。
+title: Go 开发终端小工具完整指南 - 从零构建实用 CLI 工具
+date: 2023-11-09T17:22:37.000Z
+tags:
+  - golang
+  - 工具
+  - CLI
+  - cobra
+  - termui
+description: >-
+  从零开始学习使用 Go 语言开发终端小工具，包括天气查询、手机归属地查询等实用功能。涵盖 Cobra 框架、Termui
+  界面库、测试、打包发布等完整开发流程。
 author: PFinal南丞
-keywords: Go CLI工具, golang终端工具, cobra框架, termui, 命令行工具开发, Go项目实战, 工具打包发布
+keywords: 'Go CLI工具, golang终端工具, cobra框架, termui, 命令行工具开发, Go项目实战, 工具打包发布'
 sticky: true
-
+recommend: 后端工程
 ---
 
 # Go 开发终端小工具完整指南：从零构建实用 CLI 工具

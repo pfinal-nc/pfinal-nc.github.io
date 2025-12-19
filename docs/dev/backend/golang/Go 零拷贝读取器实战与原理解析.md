@@ -1,15 +1,16 @@
 ---
 title: Go 零拷贝读取器实战与原理解析
-date: 2025-07-03 12:30:00
-tags: 
-    - golang
-    - 零拷贝
-    - IO优化
-    - 编程技术
+date: 2025-07-03T12:30:00.000Z
+tags:
+  - golang
+  - 零拷贝
+  - IO优化
+  - 编程技术
 description: 结合实战案例，深入浅出地介绍 Go 语言中的零拷贝读取器原理、实现方式、技术挑战与最佳实践。
 author: PFinal南丞
-keywords: Go, 零拷贝, IO, 性能优化, 读取器, 实战, 编程, 技术, 经验分享
+keywords: 'Go, 零拷贝, IO, 性能优化, 读取器, 实战, 编程, 技术, 经验分享'
 sticky: true
+recommend: 后端工程
 ---
 
 # Go 零拷贝读取器：让 IO 性能飞起来的秘密武器

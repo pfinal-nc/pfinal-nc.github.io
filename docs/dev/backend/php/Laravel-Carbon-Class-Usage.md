@@ -1,12 +1,17 @@
 ---
-title: "如何掌握Laravel-Carbon-类使用 - PHP 开发完整指南"
-date: 2022-07-04 15:29:24
+title: 如何掌握Laravel-Carbon-类使用 - PHP 开发完整指南
+date: 2022-07-04T15:29:24.000Z
 tags:
-    - Laravel
-    - php
+  - Laravel
+  - php
 description: Laravel-Carbon-类使用
 author: PFinal南丞
-keywords: Laravel, Carbon, 类, 使用, Laravel-Carbon-类使用, Laravel-Carbon-类使用解析, Laravel-Carbon-类使用, Laravel Carbon时间处理, Laravel Carbon日期操作, Laravel Carbon时间格式化, Laravel Carbon时区处理, Laravel Carbon日期比较, Laravel Carbon时间计算, Laravel Carbon最佳实践, Laravel Carbon教程, Laravel Carbon应用, Laravel Carbon时间库
+keywords: >-
+  Laravel, Carbon, 类, 使用, Laravel-Carbon-类使用, Laravel-Carbon-类使用解析,
+  Laravel-Carbon-类使用, Laravel Carbon时间处理, Laravel Carbon日期操作, Laravel
+  Carbon时间格式化, Laravel Carbon时区处理, Laravel Carbon日期比较, Laravel Carbon时间计算,
+  Laravel Carbon最佳实践, Laravel Carbon教程, Laravel Carbon应用, Laravel Carbon时间库
+recommend: 后端工程
 ---
 
 # Laravel Carbon 类使用

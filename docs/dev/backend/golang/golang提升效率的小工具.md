@@ -1,13 +1,15 @@
 ---
-title: "10 Essential Go Tools for Development Efficiency - 从代码管理到性能优化"
-date: 2024-11-09 11:31:32
+title: 10 Essential Go Tools for Development Efficiency - 从代码管理到性能优化
+date: 2024-11-09T11:31:32.000Z
 tags:
   - golang
   - 工具
   - 开发效率
   - 最佳实践
   - go tools
-description: "10 Essential Go Tools for Development Efficiency 2025: gofumpt, golangci-lint, wire, air, pprof, cobra 完整指南。从代码格式化到性能分析，构建高效 Go 开发工作流。"
+description: >-
+  10 Essential Go Tools for Development Efficiency 2025: gofumpt, golangci-lint,
+  wire, air, pprof, cobra 完整指南。从代码格式化到性能分析，构建高效 Go 开发工作流。
 author: PFinal南丞
 keywords:
   - essential go tools
@@ -23,6 +25,7 @@ keywords:
   - go工具链
   - PFinalClub
 sticky: true
+recommend: 后端工程
 ---
 
 # 10个提升Golang开发效率的实用工具：从代码管理到性能优化

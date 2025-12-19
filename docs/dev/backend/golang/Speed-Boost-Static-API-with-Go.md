@@ -1,11 +1,11 @@
 ---
-title: "如何使用Go语言实现静态化API - 提速利器完整指南"
-date: 2024-09-06 17:15:27
+title: 如何使用Go语言实现静态化API - 提速利器完整指南
+date: 2024-09-06T17:15:27.000Z
 tags:
-    - golang
+  - golang
 description: 介绍一款快速创建golang项目的工具
 author: PFinal南丞
-keywords: 
+keywords:
   - Go静态化API
   - Go性能优化
   - 静态API实现
@@ -16,6 +16,7 @@ keywords:
   - 高并发API
   - Go后端优化
   - API响应优化
+recommend: 后端工程
 ---
 
 # 提速利器：使用Go语言实现静态化API

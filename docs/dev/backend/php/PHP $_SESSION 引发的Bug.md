@@ -1,14 +1,15 @@
 ---
 title: PHP $_SESSION 引发的Bug深度分析与解决方案
-date: 2023-11-09 11:31:32
+date: 2023-11-09T11:31:32.000Z
 tags:
-    - php
-    - 会话管理
-    - 调试
-    - 最佳实践
+  - php
+  - 会话管理
+  - 调试
+  - 最佳实践
 description: 深度分析 PHP $_SESSION 引发的Bug，包括常见问题、解决方案、最佳实践和会话管理优化技巧
 author: PFinal南丞
-keywords: PHP, $_SESSION, 会话管理, PHP会话, 会话存储, PHP调试, PHP最佳实践, session_start, 会话配置
+keywords: 'PHP, $_SESSION, 会话管理, PHP会话, 会话存储, PHP调试, PHP最佳实践, session_start, 会话配置'
+recommend: 后端工程
 ---
 
 # PHP $_SESSION 引发的Bug深度分析与解决方案

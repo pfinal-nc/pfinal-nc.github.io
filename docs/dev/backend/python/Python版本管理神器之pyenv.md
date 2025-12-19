@@ -1,9 +1,9 @@
 ---
-title: "如何掌握Python版本管理神器之pyenv - Python 开发完整指南"
-date: 2023-04-27 22:10:20
+title: 如何掌握Python版本管理神器之pyenv - Python 开发完整指南
+date: 2023-04-27T22:10:20.000Z
 author: PFinal南丞
-tags: 
-    - python
+tags:
+  - python
 keywords:
   - Python版本管理
   - pyenv教程
@@ -16,6 +16,7 @@ keywords:
   - Python工具推荐
   - pyenv最佳实践
 description: 详细介绍pyenv这款强大的Python版本管理工具，包括安装配置、版本切换、虚拟环境管理等核心功能，帮助开发者轻松管理多个Python版本。
+recommend: 后端工程
 ---
 
 # Python版本管理神器之pyenv - 最佳Python版本管理工具

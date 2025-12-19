@@ -1,11 +1,13 @@
 ---
-title: "Go 1.25 testing/synctest Tutorial - 异步测试深度解析与实战"
-date: 2025-09-22 17:15:27
+title: Go 1.25 testing/synctest Tutorial - 异步测试深度解析与实战
+date: 2025-09-22T17:15:27.000Z
 tags:
   - golang
   - testing
   - go 1.25
-description: "Go 1.25 testing/synctest Tutorial: 深入解析 Go 最新的并发测试包，通过创建可控的 bubble 环境让异步测试既快速又可靠。包含核心原理、使用技巧和最佳实践。"
+description: >-
+  Go 1.25 testing/synctest Tutorial: 深入解析 Go 最新的并发测试包，通过创建可控的 bubble
+  环境让异步测试既快速又可靠。包含核心原理、使用技巧和最佳实践。
 author: PFinal南丞
 keywords:
   - go testing synctest
@@ -19,6 +21,7 @@ keywords:
   - golang 测试
   - 异步测试
   - PFinalClub
+recommend: 后端工程
 ---
 
 # Go 1.25 testing/synctest 深度解析与实战指南

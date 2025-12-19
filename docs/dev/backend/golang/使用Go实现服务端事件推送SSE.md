@@ -1,11 +1,12 @@
 ---
-title: "如何掌握使用Go实现服务端事件推送SSE - Go 开发完整指南"
-date: 2024-08-22 09:32:24
+title: 如何掌握使用Go实现服务端事件推送SSE - Go 开发完整指南
+date: 2024-08-22T09:32:24.000Z
 tags:
   - golang
 description: 介绍一款快速创建golang项目的工具
 author: PFinal南丞
-keywords: 使用Go实现服务端事件推送SSE, golang, 项目创建, 快速创建, 工具, 项目, 快速, 工具
+keywords: '使用Go实现服务端事件推送SSE, golang, 项目创建, 快速创建, 工具, 项目, 快速, 工具'
+recommend: 后端工程
 ---
 
 # 使用Go实现服务端事件推送SSE

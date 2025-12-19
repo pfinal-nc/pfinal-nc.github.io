@@ -1,8 +1,9 @@
 ---
 title: Wails 教程系列 - 核心概念详解
-date: 2025-08-22
+date: 2025-08-22T00:00:00.000Z
 author: PFinalClub
 description: 深入理解 Wails 应用的核心概念，包括前后端架构、数据绑定、方法调用和事件驱动通信。
+recommend: 后端工程
 ---
 
 # Wails 教程系列 - 核心概念详解

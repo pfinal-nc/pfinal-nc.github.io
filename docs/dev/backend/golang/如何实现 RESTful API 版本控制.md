@@ -1,14 +1,15 @@
 ---
 title: 别再瞎改 API 了 3 招版本控制，让你的 Go 服务稳如老狗
-date: 2025-08-18
+date: 2025-08-18T00:00:00.000Z
 tags:
   - golang
   - RESTful API
   - API 版本控制
   - 微服务
 author: PFinal南丞
-keywords: golang, RESTful API, API 版本控制, 微服务, 软件架构, URI 版本控制, 头部版本控制, 内容协商
+keywords: 'golang, RESTful API, API 版本控制, 微服务, 软件架构, URI 版本控制, 头部版本控制, 内容协商'
 description: 深入探讨 RESTful API 版本控制的策略和实践，包括 URI、头部和内容协商方法，并提供 Go 语言的详细示例。
+recommend: 后端工程
 ---
 
 # 别再瞎改 API 了 3 招版本控制，让你的 Go 服务稳如老狗

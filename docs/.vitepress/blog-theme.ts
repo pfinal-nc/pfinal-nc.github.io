@@ -74,9 +74,18 @@ const blogTheme = getThemeConfig({
         return false
       }
       
-      // 对于导航页（index.md），允许匹配所有相关文章
-      // 推荐算法会基于 tags 自动匹配，这里不做路径限制
-      // 这样 /dev/backend/index.md 就能匹配到子目录下的文章了
+      // 获取当前页面的路径（从 route 中提取）
+      // 注意：这里无法直接获取当前页面路径，但可以通过检查 page.route 来判断
+      // 如果文章路径以 /dev/backend/ 开头（但不等于 /dev/backend/），则允许推荐
+      const pageRoute = page.route || ''
+      
+      // 对于 /dev/backend/ 目录下的所有文章（包括子目录），都允许推荐
+      // 这样当访问 /dev/backend/index.md 时，可以匹配到子目录下的文章
+      if (pageRoute.startsWith('/dev/backend/')) {
+        return true
+      }
+      
+      // 其他文章按原逻辑处理
       return true
     },
   },

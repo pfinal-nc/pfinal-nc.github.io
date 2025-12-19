@@ -1,19 +1,19 @@
 ---
-title: "Python Asyncio高级模式 - 从入门到精通的异步编程指南"
-date: 2025-12-16
-updated: 2025-12-16
+title: Python Asyncio高级模式 - 从入门到精通的异步编程指南
+date: 2025-12-16T00:00:00.000Z
+updated: 2025-12-16T00:00:00.000Z
 authors:
-  - "PFinal南丞"
+  - PFinal南丞
 categories:
-  - "开发与系统"
-  - "Python 实战"
+  - 开发与系统
+  - Python 实战
 tags:
-  - "python"
-  - "asyncio"
-  - "异步编程"
-  - "并发"
-  - "高性能"
-description: "深入探讨Python Asyncio的高级模式，包括异步上下文管理器、异步迭代器、任务组、异步队列等核心概念，通过实战案例展示如何构建高性能异步应用。"
+  - python
+  - asyncio
+  - 异步编程
+  - 并发
+  - 高性能
+description: 深入探讨Python Asyncio的高级模式，包括异步上下文管理器、异步迭代器、任务组、异步队列等核心概念，通过实战案例展示如何构建高性能异步应用。
 keywords:
   - Python asyncio高级
   - 异步上下文管理器
@@ -25,6 +25,7 @@ keywords:
   - 异步设计模式
   - asyncio最佳实践
   - Python并发模型
+recommend: 后端工程
 ---
 
 # Python Asyncio高级模式 - 从入门到精通的异步编程指南

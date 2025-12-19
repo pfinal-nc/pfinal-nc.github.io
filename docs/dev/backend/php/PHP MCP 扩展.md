@@ -1,15 +1,15 @@
 ---
-title: "如何掌握PHP MCP扩展-我的开源实践与思考 - PHP 开发完整指南"
-date: 2025-09-09 10:30:00
+title: 如何掌握PHP MCP扩展-我的开源实践与思考 - PHP 开发完整指南
+date: 2025-09-09T10:30:00.000Z
 tags:
-    - php
-    - MCP
-    - 开源
-    - 大语言模型
-    - Workerman
+  - php
+  - MCP
+  - 开源
+  - 大语言模型
+  - Workerman
 description: 分享我开发pfinalclub/php-mcp扩展的经历，探讨MCP协议对PHP生态的重要意义，以及为什么选择Workerman作为技术栈。
 author: PFinal南丞
-keywords: 
+keywords:
   - PHP MCP扩展开发
   - Workerman框架
   - 模型上下文协议
@@ -20,6 +20,7 @@ keywords:
   - PHP生态发展
   - 智能应用开发
   - PHP异步编程
+recommend: 后端工程
 ---
 
 

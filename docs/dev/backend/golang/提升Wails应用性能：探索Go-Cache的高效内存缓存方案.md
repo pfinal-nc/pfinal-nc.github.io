@@ -1,11 +1,12 @@
 ---
 title: 提升Wails应用性能-探索Go-Cache的高效内存缓存方案
-date: 2023-09-30 17:22:37
+date: 2023-09-30T17:22:37.000Z
 tags:
-    - golang
+  - golang
 description: 介绍如何使用Go-Cache库来提升Wails应用程序的性能，包括缓存策略、内存管理和性能优化技巧。
 author: PFinal南丞
-keywords: Go-Cache, Wails, 内存缓存, 性能优化, 缓存策略, 内存管理, 应用程序性能
+keywords: 'Go-Cache, Wails, 内存缓存, 性能优化, 缓存策略, 内存管理, 应用程序性能'
+recommend: 后端工程
 ---
 
 # 提升Wails应用性能：探索Go-Cache的高效内存缓存方案

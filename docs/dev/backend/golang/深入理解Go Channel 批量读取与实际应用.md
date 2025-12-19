@@ -1,11 +1,12 @@
 ---
 title: 深入理解 Go Channel 批量读取与实际应用
-date: 2024-09-02 11:25:00
+date: 2024-09-02T11:25:00.000Z
 tags:
-    - golang
+  - golang
 description: 深入理解 Go Channel：批量读取与实际应用
-keywords: Go Channel, 批量读取, 实际应用
+keywords: 'Go Channel, 批量读取, 实际应用'
 author: PFinal南丞
+recommend: 后端工程
 ---
 
 # Go Channel 中如何批量读取数据

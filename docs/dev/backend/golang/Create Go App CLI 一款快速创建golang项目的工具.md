@@ -1,11 +1,12 @@
 ---
 title: Create Go App CLI 一款快速创建golang项目的工具
-date: 2024-08-20 17:15:27
+date: 2024-08-20T17:15:27.000Z
 tags:
-    - golang
+  - golang
 description: 介绍一款快速创建golang项目的工具
 author: PFinal南丞
-keywords: Create Go App CLI, golang, 项目创建, 快速创建, 工具, 项目, 快速, 工具
+keywords: 'Create Go App CLI, golang, 项目创建, 快速创建, 工具, 项目, 快速, 工具'
+recommend: 后端工程
 ---
 
 # Create Go App CLI 一款快速创建golang项目的工具

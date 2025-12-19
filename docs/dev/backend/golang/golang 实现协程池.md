@@ -1,11 +1,11 @@
 ---
-title: "如何掌握Golang 实现协程池 - Go 开发完整指南"
-date: 2024-11-09 11:31:32
+title: 如何掌握Golang 实现协程池 - Go 开发完整指南
+date: 2024-11-09T11:31:32.000Z
 tags:
-    - golang
+  - golang
 description: 详细介绍Golang实现协程池的方法，包括协程池的概念、应用场景、实现方式等，帮助开发者更好地利用Golang的协程池功能，提高程序的性能和响应速度。
 author: PFinal南丞
-keywords: 
+keywords:
   - Go协程池实现
   - Golang并发编程
   - Go高性能编程
@@ -16,6 +16,7 @@ keywords:
   - 并发编程最佳实践
   - Go线程池
   - 高并发处理
+recommend: 后端工程
 ---
 
 # Go语言高性能协程池实现与原理解析

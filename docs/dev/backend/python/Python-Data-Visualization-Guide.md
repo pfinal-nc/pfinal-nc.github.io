@@ -1,19 +1,19 @@
 ---
-title: "Python数据可视化实战 - Matplotlib与Seaborn从入门到精通"
-date: 2025-12-16
-updated: 2025-12-16
+title: Python数据可视化实战 - Matplotlib与Seaborn从入门到精通
+date: 2025-12-16T00:00:00.000Z
+updated: 2025-12-16T00:00:00.000Z
 authors:
-  - "PFinal南丞"
+  - PFinal南丞
 categories:
-  - "开发与系统"
-  - "Python 实战"
+  - 开发与系统
+  - Python 实战
 tags:
-  - "python"
-  - "数据可视化"
-  - "matplotlib"
-  - "seaborn"
-  - "数据分析"
-description: "深入探讨Python数据可视化的核心库Matplotlib和Seaborn，从基础图表到高级可视化，通过实战案例展示如何创建精美、专业的数据可视化图表。"
+  - python
+  - 数据可视化
+  - matplotlib
+  - seaborn
+  - 数据分析
+description: 深入探讨Python数据可视化的核心库Matplotlib和Seaborn，从基础图表到高级可视化，通过实战案例展示如何创建精美、专业的数据可视化图表。
 keywords:
   - Python数据可视化
   - Matplotlib教程
@@ -25,6 +25,7 @@ keywords:
   - Seaborn高级
   - 数据可视化案例
   - Python数据分析
+recommend: 后端工程
 ---
 
 # Python数据可视化实战 - Matplotlib与Seaborn从入门到精通

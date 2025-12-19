@@ -1,13 +1,14 @@
 ---
-title: "如何掌握TCP/IP HTTP学习 - PHP 开发完整指南"
-date: 2020-06-09 11:31:32
+title: 如何掌握TCP/IP HTTP学习 - PHP 开发完整指南
+date: 2020-06-09T11:31:32.000Z
 tags:
-    - TCP/IP
-    - HTTP
-    - php
+  - TCP/IP
+  - HTTP
+  - php
 description: 学习TCP/IP HTTP协议
-keywords: TCP/IP,HTTP
+keywords: 'TCP/IP,HTTP'
 author: PFinal南丞
+recommend: 后端工程
 ---
 
 # TCP/IP HTTP学习

@@ -1,14 +1,15 @@
 ---
-title: "如何掌握每个 Golang 程序员都需要这个 - Go 开发完整指南"
-date: 2025-07-12 10:30:00
+title: 如何掌握每个 Golang 程序员都需要这个 - Go 开发完整指南
+date: 2025-07-12T10:30:00.000Z
 tags:
   - golang
   - 工具
   - 开发效率
 description: 分享每个Golang程序员都应该掌握的核心工具和技能，从代码质量到性能优化，从开发效率到部署运维，全面提升Go开发能力。
 author: PFinal南丞
-keywords: Golang, Go开发, 程序员必备, 开发工具, 代码质量, 性能优化, 开发效率, Go生态
+keywords: 'Golang, Go开发, 程序员必备, 开发工具, 代码质量, 性能优化, 开发效率, Go生态'
 sticky: true
+recommend: 后端工程
 ---
 
 # 每个 Golang 程序员都需要这个
