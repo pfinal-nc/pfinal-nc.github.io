@@ -13,6 +13,9 @@ keywords:
   - golang 工具链 提效
   - golang 技术博客 导航
   - golang 中文 专题导航
+tags:
+    - golang
+    
 layout: page
 ---
 

@@ -1,6 +1,13 @@
 ---
 title: 后端工程导航
 description: 聚合 Go/PHP/Python 等后端工程实践与性能优化文章。
+tags:
+  - golang
+  - php
+  - python
+  - 后端开发
+  - 架构设计
+  - 性能优化
 keywords:
   - 后端工程
   - Go
