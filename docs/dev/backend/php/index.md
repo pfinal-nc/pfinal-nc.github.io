@@ -20,26 +20,26 @@ tags:
 
 ## 1. 框架开发：ThinkPHP & Laravel
 
-- **[ThinkPHP 8 最新版本 2025 – 完整升级指南与新特性](/PHP/ThinkPHP-20-Years-of-Chinese-Web-Development)**  
+- **[ThinkPHP 8 最新版本 2025 – 完整升级指南与新特性](./ThinkPHP近20年-中国Web开发的时代印记.md)**  
   ThinkPHP 8.1.3 完整指南：新特性、路由性能提升 30%、从 ThinkPHP 6/7 升级技巧，以及 20 年演进历史。
 
-- **[Laravel 手工构建指南](/zh/php/Laravel%20手工构建.md)**  
+- **[Laravel 手工构建指南](./Laravel%20手工构建.md)**  
   Laravel 框架手工构建的详细步骤，深入理解框架核心架构和组件。
 
-- **[Laravel Carbon 类使用指南](/zh/php/Laravel-Carbon-Class-Usage.md)**  
+- **[Laravel Carbon 类使用指南](./Laravel-Carbon-Class-Usage.md)**  
   Laravel Carbon 类在应用中进行日期和时间操作的完整指南。
 
-- **[Laravel Admin 特殊路由操作](/zh/php/Laravel-Admin-Special-Routes.md)**  
+- **[Laravel Admin 特殊路由操作](./Laravel-Admin-Special-Routes.md)**  
   Laravel 管理面板的高级路由技术，包括自定义路由模式和中间件配置。
 
 ---
 
 ## 2. PHP 8.x 现代特性与企业级开发
 
-- **[PHP 8.x 企业级开发实战指南：从语言特性到生产部署](/zh/php/PHP%208.x%20企业级开发实战指南%20从语言特性到生产部署.md)**  
+- **[PHP 8.x 企业级开发实战指南：从语言特性到生产部署](../../../thinking/method/PHP%208.x%20企业级开发实战指南%20从语言特性到生产部署.md)**  
   从 PHP 8.x 语言特性到生产环境部署的完整企业级开发实战指南。
 
-- **[PHP 8.5 NoDiscard 属性详解](/zh/php/PHP-8.5-NoDiscard-属性详解.md)**  
+- **[PHP 8.5 NoDiscard 属性详解](./PHP-8.5-NoDiscard-属性详解.md)**  
   深入理解 PHP 8.5 的 NoDiscard 属性及其在代码库中的有效使用方法。
 
 - **[PHP 协程池实现](/zh/php/PHP的协程池.md)**  
