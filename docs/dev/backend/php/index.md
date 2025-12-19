@@ -1,15 +1,8 @@
 ---
 title: "PHP 中文技术专题导航 - ThinkPHP / Laravel / PHP 8.x / 协程 / 最佳实践"
 description: "PFinalClub PHP 中文专题导航页：系统整理 ThinkPHP 8、Laravel、PHP 8.x 企业级开发、协程池、错误处理等核心文章，让中文读者可以按专题快速找到高质量实战内容。"
-keywords:
-  - php 教程 中文
-  - thinkphp 8 教程
-  - laravel 最佳实践
-  - php 8.5 特性
-  - php 协程
-  - php 错误处理
-  - php 框架 对比
-  - php 开发指南 中文
+keywords: php 教程 中文, thinkphp 8 教程, laravel 最佳实践, php 8.5 特性, php 协程, php 错误处理, php 框架 对比, php 开发指南 中文,
+date: 2025-12-18 15:30:00
 tags:
   - php
 ---
