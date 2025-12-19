@@ -1,9 +1,12 @@
 ---
 title: "Golang 中文技术专题导航 - Go 后端 / RAG / 可观测性 / 桌面开发"
 description: "PFinalClub Golang 中文专题导航页：系统整理 Go 后端工程实践、RAG 系统、可观测性、Wails 桌面开发、游戏服务器与效率工具等核心文章，让中文读者可以按专题快速找到高质量实战内容。"
-keywords: golang 教程 中文, golang 后端 实战, golang rag 教程, golang rag 系统 实战, go 可观测性 otel 教程, go 可观测性 闭环 实战, wails 桌面应用 开发 教程, golang 游戏 服务器 架构, golang 工具链 提效, golang 技术博客 导航, golang 中文 专题导航,
+
+keywords: golang 教程 中文, golang 后端 实战, golang rag 教程, golang rag 系统 实战, go 可观测性 otel 教程, go 可观测性 闭环 实战, wails 桌面应用 开发 教程, golang 游戏 服务器 架构, golang 工具链 提效, golang 技术博客 导航, golang 中文 专题导航
+
 tags:
-  - golang
+    - golang
+    
 sticky: true
 date: 2025-12-19 12:30:00
 ---
