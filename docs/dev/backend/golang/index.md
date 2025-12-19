@@ -15,8 +15,6 @@ keywords:
   - golang 中文 专题导航
 tags:
     - golang
-    
-layout: page
 ---
 
 # Golang 中文技术专题导航
