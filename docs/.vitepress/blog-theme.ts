@@ -67,9 +67,17 @@ const blogTheme = getThemeConfig({
 
   // 文章过滤
   recommend: {
-    // 文章过滤
+    // 文章过滤 - 支持子目录匹配
     filter: (page) => {
-      return page.meta.hidden !== true
+      // 排除隐藏的文章
+      if (page.meta.hidden === true) {
+        return false
+      }
+      
+      // 对于导航页（index.md），允许匹配所有相关文章
+      // 推荐算法会基于 tags 自动匹配，这里不做路径限制
+      // 这样 /dev/backend/index.md 就能匹配到子目录下的文章了
+      return true
     },
   },
   friend: getFriendByLocale('en'),
