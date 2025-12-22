@@ -1,83 +1,55 @@
 {
-  "timestamp": "2025-12-11T01:24:24.548Z",
+  "timestamp": "2025-12-22T01:07:07.045Z",
   "summary": {
-    "totalArticles": 209,
+    "totalArticles": 147,
     "topics": {
-      "golang": 108,
-      "php": 36,
-      "python": 17,
-      "tools": 31,
+      "golang": 49,
+      "php": 27,
+      "python": 7,
+      "tools": 5,
       "database": 4,
-      "other": 13
+      "other": 55
     },
-    "categories": 3,
-    "uniqueTags": 272,
-    "uniqueKeywords": 371
+    "categories": 2,
+    "uniqueTags": 175,
+    "uniqueKeywords": 514
   },
   "seoMetrics": {
-    "articlesWithDescription": 209,
-    "articlesWithKeywords": 203,
-    "articlesWithTags": 182,
-    "articlesWithDate": 203,
-    "taskOrientedTitles": 82,
-    "titlesWithHowTo": 41,
-    "titlesWithGuide": 80,
-    "descriptionCoverage": "100.0%",
-    "keywordsCoverage": "97.1%",
-    "tagsCoverage": "87.1%",
-    "taskOrientedCoverage": "39.2%"
+    "articlesWithDescription": 145,
+    "articlesWithKeywords": 141,
+    "articlesWithTags": 122,
+    "articlesWithDate": 135,
+    "taskOrientedTitles": 67,
+    "titlesWithHowTo": 37,
+    "titlesWithGuide": 67,
+    "descriptionCoverage": "98.6%",
+    "keywordsCoverage": "95.9%",
+    "tagsCoverage": "83.0%",
+    "taskOrientedCoverage": "45.6%"
   },
   "topTags": [
     {
       "tag": "golang",
-      "count": 92
+      "count": 52
     },
     {
       "tag": "工具",
       "count": 30
     },
     {
-      "tag": "PHP",
-      "count": 28
+      "tag": "php",
+      "count": 22
     },
     {
       "tag": "python",
-      "count": 16
-    },
-    {
-      "tag": "best-practices",
-      "count": 12
-    },
-    {
-      "tag": "tools",
       "count": 11
     },
     {
-      "tag": "performance",
-      "count": 7
-    },
-    {
-      "tag": "Golang",
+      "tag": "性能优化",
       "count": 7
     },
     {
       "tag": "MCP",
-      "count": 7
-    },
-    {
-      "tag": "Wails",
-      "count": 6
-    },
-    {
-      "tag": "AI",
-      "count": 5
-    },
-    {
-      "tag": "concurrency",
-      "count": 5
-    },
-    {
-      "tag": "crawler",
       "count": 5
     },
     {
@@ -85,53 +57,81 @@
       "count": 5
     },
     {
-      "tag": "性能优化",
+      "tag": "Wails",
       "count": 5
     },
     {
+      "tag": "架构设计",
+      "count": 5
+    },
+    {
+      "tag": "开发效率",
+      "count": 4
+    },
+    {
+      "tag": "最佳实践",
+      "count": 4
+    },
+    {
+      "tag": "AI编程",
+      "count": 3
+    },
+    {
+      "tag": "爬虫",
+      "count": 3
+    },
+    {
+      "tag": "Golang",
+      "count": 3
+    },
+    {
       "tag": "Laravel",
-      "count": 4
-    },
-    {
-      "tag": "Go",
-      "count": 4
-    },
-    {
-      "tag": "programming technology",
-      "count": 4
-    },
-    {
-      "tag": "Workerman",
       "count": 3
     },
     {
-      "tag": "Docker",
+      "tag": "高性能",
       "count": 3
+    },
+    {
+      "tag": "PHP",
+      "count": 3
+    },
+    {
+      "tag": "Git",
+      "count": 3
+    },
+    {
+      "tag": "AI Tools",
+      "count": 2
+    },
+    {
+      "tag": "go",
+      "count": 2
     }
   ],
   "topKeywords": [
     {
-      "keyword": "ai tools directory 2025",
+      "keyword": "PFinalClub",
+      "count": 15
+    },
+    {
+      "keyword": "model context protocol",
       "count": 2
     },
     {
-      "keyword": "vibe coding",
+      "keyword": "MCP服务器",
       "count": 2
     },
     {
-      "keyword": "chatgpt 5.1 coding",
+      "keyword": "数据采集",
       "count": 2
     },
     {
-      "keyword": "golang rag openai qdrant",
+      "keyword": "AI工程",
       "count": 2
     },
     {
-      "keyword": "go error handling best practices",
-      "count": 2
-    },
-    {
-      "keyword": "Golang, Go开发, 程序员必备, 开发工具, 代码质量, 性能优化, 开发效率, Go生态",
+      "keyword": "数据治理",
       "count": 2
     },
     {
@@ -139,105 +139,101 @@
       "count": 2
     },
     {
-      "keyword": "Laravel, Carbon, class, usage, Laravel-Carbon-Class Usage, Laravel-Carbon-Class Usage Analysis",
+      "keyword": "Go性能优化",
+      "count": 2
+    },
+    {
+      "keyword": "架构设计",
+      "count": 2
+    },
+    {
+      "keyword": "wails tutorial",
+      "count": 2
+    },
+    {
+      "keyword": "wails vs electron",
+      "count": 2
+    },
+    {
+      "keyword": "PostgreSQL性能优化",
+      "count": 2
+    },
+    {
+      "keyword": "PostgreSQL 2025",
+      "count": 2
+    },
+    {
+      "keyword": "PostgreSQL最佳实践",
+      "count": 2
+    },
+    {
+      "keyword": "SSH安全加固",
+      "count": 2
+    },
+    {
+      "keyword": "安全工程",
+      "count": 2
+    },
+    {
+      "keyword": "Golang安全",
+      "count": 2
+    },
+    {
+      "keyword": "服务器安全",
+      "count": 2
+    },
+    {
+      "keyword": "Web安全",
+      "count": 2
+    },
+    {
+      "keyword": "渗透测试",
+      "count": 2
+    },
+    {
+      "keyword": "网络安全",
+      "count": 2
+    },
+    {
+      "keyword": "关于, PFinalClub, 开发者社区, PHP, Golang, Python, 微服务, 云原生, 技术博客, 开源, 后端开发, DevOps, AI工程",
       "count": 1
     },
     {
-      "keyword": "Laravel, build, manual, framework, manual build, PHP",
+      "keyword": "联系, 合作, 咨询, 技术支持, 开源, 培训, 研讨会, PFinalClub",
       "count": 1
     },
     {
-      "keyword": "PHP, process, thread, analysis, PHP process, PHP thread, PHP process thread, PHP process thread analysis, PHP process thread analysis",
+      "keyword": "Go MCP服务器",
       "count": 1
     },
     {
-      "keyword": "php function calling",
+      "keyword": "远程存储服务",
       "count": 1
     },
     {
-      "keyword": "php async function calling openai",
+      "keyword": "Go语言实战",
       "count": 1
     },
     {
-      "keyword": "local llm function calling",
+      "keyword": "MCP协议开发",
       "count": 1
     },
     {
-      "keyword": "pfinal asyncio tutorial",
+      "keyword": "Go并发编程",
       "count": 1
     },
     {
-      "keyword": "qwen3 function calling php",
+      "keyword": "分布式存储",
       "count": 1
     },
     {
-      "keyword": "deepseek function calling php",
-      "count": 1
-    },
-    {
-      "keyword": "glm4 chat function calling",
-      "count": 1
-    },
-    {
-      "keyword": "php ai tools integration",
-      "count": 1
-    },
-    {
-      "keyword": "PHP8.5, NoDiscard attribute, PHP attributes, return value checking, code quality, PHP programming",
-      "count": 1
-    },
-    {
-      "keyword": "PHP coroutine pool, Workerman coroutines, PHP high concurrency, coroutine pool implementation, Go goroutine pool, PHP concurrent programming, Channel communication, coroutine scheduling, database connection pool, dynamic coroutine pool, PHP performance optimization, Workerman practical guide, PHP coroutine transformation, high concurrency optimization, coroutine pool monitoring",
-      "count": 1
-    },
-    {
-      "keyword": "PHP, error and exception handling, exception, error, handling, exception handling, error handling, program, robustness, stability",
-      "count": 1
-    },
-    {
-      "keyword": "PHP, generator, analysis, PHP generator, PHP generator analysis, PHP generator analysis",
-      "count": 1
-    },
-    {
-      "keyword": "PHP Process, PHP Thread, Multi-Process, Thread-Safe, PHP Concurrency, PHP-FPM, Process Management, PHP Performance, pcntl, pthreads, ZTS, PHP Optimization 2025",
-      "count": 1
-    },
-    {
-      "keyword": "thinkphp 8 release",
-      "count": 1
-    },
-    {
-      "keyword": "thinkphp 8 new features",
-      "count": 1
-    },
-    {
-      "keyword": "thinkphp 2025",
-      "count": 1
-    },
-    {
-      "keyword": "thinkphp upgrade guide",
-      "count": 1
-    },
-    {
-      "keyword": "php framework thinkphp",
-      "count": 1
-    },
-    {
-      "keyword": "thinkphp performance optimization",
-      "count": 1
-    },
-    {
-      "keyword": "php tutorial",
+      "keyword": "云原生开发",
       "count": 1
     }
   ],
   "topCategories": [
     {
-      "category": "Tools",
-      "count": 2
-    },
-    {
-      "category": "golang",
+      "category": "后端开发",
       "count": 1
     },
     {

@@ -10,6 +10,14 @@ tags:
   - 前端开发
   - 桌面应用
 recommend: 后端工程
+keywords:
+  - "Wails前端开发"
+  - "Vue3桌面应用"
+  - "TypeScript开发"
+  - "Wails前端技术栈"
+  - "桌面应用前端"
+  - "Vite构建"
+  - "Pinia状态管理"
 ---
 
 # Wails 教程系列 - 前端开发实战指南

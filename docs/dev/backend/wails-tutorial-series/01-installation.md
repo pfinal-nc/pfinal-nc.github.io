@@ -4,6 +4,14 @@ date: 2025-08-22T00:00:00.000Z
 author: PFinalClub
 description: 详细介绍如何为 Wails 开发准备环境，包括 Go、Node.js 的安装以及 Wails CLI 的获取。
 recommend: 后端工程
+keywords:
+  - "Wails安装"
+  - "Wails环境配置"
+  - "Go语言安装"
+  - "Node.js安装"
+  - "Wails CLI"
+  - "桌面应用开发环境"
+  - "Wails教程"
 ---
 
 # Wails 教程系列 - 环境搭建与安装

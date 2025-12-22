@@ -1,22 +1,22 @@
 {
-  "generatedAt": "2025-12-16T01:56:26.262Z",
+  "generatedAt": "2025-12-22T01:06:10.675Z",
   "summary": {
-    "totalFiles": 139,
-    "withTitle": 139,
-    "withDescription": 135,
-    "withKeywords": 133,
-    "totalKeywords": 133,
+    "totalFiles": 150,
+    "withTitle": 149,
+    "withDescription": 147,
+    "withKeywords": 143,
+    "totalKeywords": 143,
     "averageKeywordsPerArticle": 1
   },
   "byCategory": {
-    "golang": 41,
-    "php": 24,
-    "python": 4,
+    "golang": 42,
+    "php": 25,
+    "python": 6,
     "tools": 0,
-    "database": 3,
-    "other": 54
+    "database": 5,
+    "other": 56
   },
-  "needsOptimization": 139,
+  "needsOptimization": 149,
   "optimizationList": [
     {
       "path": "about.md",
@@ -110,6 +110,15 @@
     },
     {
       "path": "data/automation/爬虫常见的加密解密算法特征收集.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
+      "path": "data/index.md",
       "missing": {
         "title": false,
         "description": false,
@@ -256,7 +265,7 @@
       "path": "dev/backend/golang/Golang实现RAG系统-从OpenAI到向量数据库.md",
       "missing": {
         "title": false,
-        "description": true,
+        "description": false,
         "keywords": true
       },
       "keywordCount": 1
@@ -433,6 +442,15 @@
       "keywordCount": 1
     },
     {
+      "path": "dev/backend/golang/接口参数设计-多场景复用的优雅之道.md",
+      "missing": {
+        "title": false,
+        "description": false,
+        "keywords": true
+      },
+      "keywordCount": 1
+    },
+    {
       "path": "dev/backend/golang/提升Wails应用性能：探索Go-Cache的高效内存缓存方案.md",
       "missing": {
         "title": false,
@@ -443,24 +461,6 @@
     },
     {
       "path": "dev/backend/golang/提升生产力的 Golang 实用工具推荐让开发更轻松.md",
-      "missing": {
-        "title": false,
-        "description": false,
-        "keywords": true
-      },
-      "keywordCount": 1
-    },
-    {
-      "path": "dev/backend/golang/每个-Golang-程序员都需要这个.md",
-      "missing": {
-        "title": false,
-        "description": false,
-        "keywords": true
-      },
-      "keywordCount": 1
-    },
-    {
-      "path": "dev/backend/golang/沃尔玛AI购物、自动化购买决策  的技术原理.md",
       "missing": {
         "title": false,
         "description": false,
