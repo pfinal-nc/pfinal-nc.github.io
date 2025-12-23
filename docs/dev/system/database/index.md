@@ -25,6 +25,9 @@ layout: page
 
 ## 1. MySQL 配置与优化
 
+- **[MySQL 生产环境安全配置与加固完整指南 2025](./MySQL-Production-Security-Hardening-Guide-2025.md)**  
+  企业级 MySQL 安全加固完整指南，涵盖认证安全、SSL/TLS 加密、审计日志、SQL注入防护、备份安全等8大核心主题，包含30+实战配置示例和安全检查脚本。
+
 - **[MySQL 配置文件分析](/zh/数据库/MySQL-Configuration-Analysis.md)**  
   理解和配置 MySQL 配置文件的完整指南，包括性能调优和优化设置。
 
