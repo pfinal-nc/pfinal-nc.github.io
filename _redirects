@@ -37,6 +37,16 @@ http://miao.friday-go.icu/* https://miao.friday-go.icu/:splat 301!
 /links/ /contact 301
 /links /contact 301
 
+/wails-tutorial-series/* /dev/backend/wails-tutorial-series/:splat 301
+/golang/Go-CLI-Utility-Development-Practice* /dev/backend/golang/Create Go App CLI 一款快速创建golang项目的工具 301
+/golang/mastering-go-testing-advanced-techniques* /dev/backend/golang/Go-testing-synctest-深度解析与实战指南 301
+/golang/Quick-Start-to-MCP-Server-Development-in-VSCode* /dev/backend/golang/VS Code 中 MCP 服务器的开发者快速入门 301
+/golang/Go-Develop-Terminal-Tools* /dev/backend/golang/Go 开发终端小工具 301
+/golang/Golang实现RAG系统-从OpenAI到向量数据库* /dev/backend/golang/Golang实现RAG系统-从OpenAI到向量数据库 301
+/工具/* /Tools/:splat 301
+/zh/php/ThinkPHP-20-Years-of-Chinese-Web-Development* /dev/backend/php/ThinkPHP近20年-中国Web开发的时代印记 301
+/zh/数据库/PostgreSQL-10个鲜为人知的强大功能* /dev/system/database/PostgreSQL-10个鲜为人知的强大功能 301
+/*.html /:splat 301
 # ====================
 # 3. 中文URL重定向到英文URL
 # ====================
