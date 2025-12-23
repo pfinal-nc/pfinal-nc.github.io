@@ -18,3 +18,7 @@ cache
 SEO*.md
 博客SEO数据分析报告.md
 今日运营工作计划.md
+reports/*
+.gitignore
+scripts/check-seo-issues.mjs
+scripts/fix-seo-issues.mjs
