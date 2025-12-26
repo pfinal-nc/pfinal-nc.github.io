@@ -1,6 +1,6 @@
 ---
-title: AI Tools Directory 2025 - Free Online Tools Collection
-description: "AI Tools Directory & Free Online Tools Collection: Password Generator, AI Apps Directory, Text Card Generator, Online Games, Marketing Calendar, BMI Calculator. All tools are free to use, no registration required."
+title: AI Tools Directory 2025 - 免费在线工具集合 | 91+ AI工具导航 | 无需注册
+description: "AI Tools Directory 2025: 免费在线工具集合，包含91+精选AI工具导航（ChatGPT、Claude、Midjourney等）、密码生成器、文字卡片生成器、在线游戏、营销日历、BMI计算器。所有工具完全免费，无需注册，立即使用。"
 keywords:
   - ai tools directory
   - ai apps directory
