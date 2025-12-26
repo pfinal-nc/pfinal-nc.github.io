@@ -1,7 +1,7 @@
 ---
 title: "Tmux 常用快捷键 - 完整使用指南"
 date: 2022-03-13 15:46:00
-keywords: Tmux, 常用快捷键, 工具
+keywords: Tmux, 终端复用, 快捷键, 会话管理, Linux工具, 终端工具, 命令行效率, 窗口管理
 tag:
   - 工具
 sticky: true

@@ -5,7 +5,7 @@ author: PFinal南丞
 tags:
     - Nginx
 description: Nginx配置文件详解
-keywords: Nginx, 配置文件, 详解, 配置, Nginx配置文件详解, Nginx配置文件详解
+keywords: Nginx, 配置文件, Web服务器, 反向代理, 负载均衡, nginx.conf, 服务器配置, 性能优化
 ---
 # Nginx配置文件详解
 

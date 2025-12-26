@@ -5,7 +5,7 @@ tags:
   - 工具
 description: 介绍一款快速创建golang项目的工具
 author: PFinal南丞
-keywords: 使用Devslog结构化日志处理, golang, 项目创建, 快速创建, 工具, 项目, 快速, Devslog,AI,ai
+keywords: Devslog, 结构化日志, Golang日志, 日志处理, slog, 日志美化, Go开发工具, 日志最佳实践
 ---
 
 # 使用Devslog结构化日志处理

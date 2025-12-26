@@ -6,7 +6,7 @@ tags:
     - 工具
 description: 介绍一款快速创建golang项目的工具
 author: PFinal南丞
-keywords: 让CLI工具焕然一新！用golang与Color库打造多彩命令行体验, golang, 工具, 项目, 快速, 工具,AI,ai
+keywords: Golang, Color库, CLI工具, 命令行美化, 终端彩色输出, fatih/color, 开发工具, 终端体验优化
 sticky: true
 ---
 # 让CLI工具焕然一新！用golang与Color库打造多彩命令行体验

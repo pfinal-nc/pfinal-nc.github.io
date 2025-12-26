@@ -5,7 +5,7 @@ tags:
   - 工具
 description: 介绍一款快速创建golang项目的工具
 author: PFinal南丞
-keywords: 使用Homebrew Tap发布个人工具, golang, 项目创建, 快速创建, 工具, 项目, 快速, 工具, AI,ai
+keywords: Homebrew Tap, 工具发布, Golang, GoReleaser, GitHub Actions, MacOS包管理, 自动化发布, 命令行工具
 ---  
 
 # 使用Homebrew Tap发布个人工具

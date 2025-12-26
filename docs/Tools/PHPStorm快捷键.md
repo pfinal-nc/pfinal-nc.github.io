@@ -6,7 +6,7 @@ tags:
     - PHP
 description: PHPStorm快捷键
 author: PFinal南丞
-keywords: PHP, 快捷键, 工具, PHPStorm, 快捷键大全, PHPStorm快捷键大全, PHPStorm快捷键大全
+keywords: PHPStorm, 快捷键, IDE, PHP开发, 效率提升, JetBrains, 开发工具, 编辑器技巧
 ---    
 
 # PHPStorm快捷键

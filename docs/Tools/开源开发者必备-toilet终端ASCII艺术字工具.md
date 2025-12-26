@@ -5,7 +5,7 @@ tags:
   - 工具
 description: toilet 是一个用于在终端中生成大型 ASCII 艺术字的命令行工具
 author: PFinal南丞
-keywords: ASCII 艺术字的命令行工具, 工具,toilet,开源
+keywords: toilet, ASCII艺术字, 命令行工具, 终端工具, Linux工具, 开源工具, 文字艺术生成器
 ---
 # 开源开发者必备 toilet - 让终端"上厕所"的艺术
 
