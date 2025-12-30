@@ -76,3 +76,39 @@
 .card.tags {
   display: none !important;
 }
+
+/* Monetag 广告样式增强 */
+.monetag-ad-container {
+  /* 确保广告容器正确显示 */
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* 文章中间广告的特殊样式 */
+.monetag-ad-article-middle {
+  /* 在文章内容中插入时的样式 */
+  clear: both;
+  margin: 3rem auto;
+  max-width: 100%;
+}
+
+/* 响应式广告容器 */
+@media (max-width: 768px) {
+  .monetag-ad-container {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .monetag-ad-article-middle,
+  .monetag-ad-article-bottom {
+    margin: 2rem 0;
+  }
+}
+
+/* 暗色模式适配 */
+html.dark {
+  .monetag-ad-sidebar {
+    background: var(--vp-c-bg-soft);
+  }
+}

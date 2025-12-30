@@ -20,6 +20,9 @@ import Breadcrumb from './components/Breadcrumb.vue'
 // 导入自定义 404 页面组件
 import NotFound from './components/NotFound.vue'
 
+// 导入文章广告组件
+import ArticleAds from './components/ArticleAds.vue'
+
 // 自定义样式重载
 import './style.scss'
 
@@ -36,6 +39,9 @@ const theme: Theme = {
     
     // 注册Giscus评论组件
     ctx.app.component('GiscusComment', GiscusComment)
+    
+    // 注册文章广告组件
+    ctx.app.component('ArticleAds', ArticleAds)
   },
   Layout: () => {
     return h(BlogTheme.Layout, null, {
@@ -43,8 +49,11 @@ const theme: Theme = {
       'layout-top': () => h(ReadingProgress),
       // 在文档顶部插入面包屑导航
       'doc-top': () => h(Breadcrumb),
-      // 在文档底部插入评论组件
-      'doc-after': () => h(GiscusComment),
+      // 在文档底部插入广告和评论组件（广告在评论之前）
+      'doc-after': () => [
+        h(ArticleAds),
+        h(GiscusComment)
+      ],
       // 在页面底部插入Cookie同意横幅
       'layout-bottom': () => h(CookieConsent),
       // 使用自定义 404 页面（带智能重定向）

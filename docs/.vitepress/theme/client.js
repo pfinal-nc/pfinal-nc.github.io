@@ -3,6 +3,104 @@ export default {
   enhanceApp({ app, router }) {
     // 在客户端环境中执行
     if (typeof window !== 'undefined') {
+      // 全局错误处理 - 捕获 Monetag 脚本的 Performance API 错误
+      const originalErrorHandler = window.onerror
+      
+      // 捕获同步错误
+      window.onerror = (message, source, lineno, colno, error) => {
+        const msg = String(message || '')
+        const src = String(source || '')
+        
+        // 如果是 Monetag 相关的错误（包括 Performance API、CORS、404），静默处理
+        if (msg.includes('Performance') || 
+            msg.includes('blth:start') || 
+            msg.includes('hidden_iframe:start') ||
+            msg.includes('tag.min.js') ||
+            msg.includes('Failed to execute') ||
+            msg.includes('CORS') ||
+            msg.includes('jhnwr.com') ||
+            msg.includes('ERR_FAILED') ||
+            src.includes('tag.min.js') ||
+            src.includes('nap5k.com') ||
+            src.includes('jhnwr.com')) {
+          // 静默处理，不显示错误
+          return true // 阻止错误冒泡
+        }
+        // 其他错误正常处理
+        if (originalErrorHandler) {
+          return originalErrorHandler(message, source, lineno, colno, error)
+        }
+        return false
+      }
+      
+      // 捕获 Promise 未处理的错误（包括 async/await 错误）
+      // 必须在捕获阶段设置，确保能捕获所有错误
+      window.addEventListener('unhandledrejection', (event) => {
+        const reason = event.reason
+        const message = reason?.message || reason?.toString() || String(reason) || ''
+        const stack = reason?.stack || String(reason?.stack) || ''
+        const name = reason?.name || ''
+        
+        // 检查是否是 Monetag 相关的错误（包括 Performance API、CORS、404）
+        const isMonetagError = 
+          message.includes('Performance') || 
+          message.includes('blth:start') || 
+          message.includes('hidden_iframe:start') ||
+          message.includes('tag.min.js') ||
+          message.includes('Failed to execute') ||
+          message.includes('measure') ||
+          message.includes('CORS') ||
+          message.includes('jhnwr.com') ||
+          message.includes('ERR_FAILED') ||
+          stack.includes('tag.min.js') ||
+          stack.includes('nap5k.com') ||
+          stack.includes('jhnwr.com') ||
+          stack.includes('blth:start') ||
+          stack.includes('hidden_iframe:start') ||
+          name === 'SyntaxError' && (message.includes('Performance') || stack.includes('tag.min.js'))
+        
+        if (isMonetagError) {
+          event.preventDefault() // 阻止错误显示
+          event.stopPropagation() // 阻止事件传播
+          return false
+        }
+        
+        // 其他错误正常处理
+        return true
+      }, true) // 使用捕获阶段，确保能捕获所有错误
+      
+      // 额外：捕获 console.error 和 console.warn 中的 Monetag 错误
+      const originalConsoleError = console.error
+      const originalConsoleWarn = console.warn
+      
+      console.error = function(...args) {
+        const errorMsg = args.map(arg => String(arg)).join(' ')
+        // Monetag 相关错误（包括 CORS、404、Performance 等）
+        if (errorMsg.includes('Performance') || 
+            errorMsg.includes('blth:start') || 
+            errorMsg.includes('hidden_iframe:start') || 
+            errorMsg.includes('tag.min.js') ||
+            errorMsg.includes('CORS') ||
+            errorMsg.includes('jhnwr.com') ||
+            errorMsg.includes('ERR_FAILED') ||
+            errorMsg.includes('404')) {
+          // 静默处理 Monetag 错误
+          return
+        }
+        // 其他错误正常输出
+        originalConsoleError.apply(console, args)
+      }
+      
+      console.warn = function(...args) {
+        const errorMsg = args.map(arg => String(arg)).join(' ')
+        // Monetag 相关警告
+        if (errorMsg.includes('Monetag') || 
+            errorMsg.includes('tag.min.js') ||
+            errorMsg.includes('jhnwr.com')) {
+          return
+        }
+        originalConsoleWarn.apply(console, args)
+      }
       // 404 页面智能重定向（基于 Google Search Console 发现的 404 错误）
       const handle404Redirect = () => {
         // 检查是否是 404 页面

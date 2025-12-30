@@ -112,6 +112,132 @@ export default defineConfig({
   lastUpdated: true,
   cleanUrls: true, // 移除 .html 后缀，提升 SEO
   head: [
+    // 最早设置 Monetag 错误处理（必须在所有脚本加载之前）
+    // 使用立即执行函数，确保在页面加载的最早阶段执行
+    ['script', {}, `
+      !(function() {
+        'use strict';
+        
+        // 方法1: 包装 Performance API 的 measure 方法，静默处理 Monetag 错误
+        if (window.performance && window.performance.measure) {
+          var originalMeasure = window.performance.measure;
+          window.performance.measure = function(name, startMark, endMark) {
+            try {
+              return originalMeasure.apply(this, arguments);
+            } catch (e) {
+              var errorMsg = String(e.message || e);
+              // 如果是 Monetag 相关的 Performance 错误，静默处理
+              if (errorMsg.indexOf('blth:start') !== -1 || 
+                  errorMsg.indexOf('hidden_iframe:start') !== -1 ||
+                  errorMsg.indexOf('does not exist') !== -1) {
+                // 静默返回，不抛出错误
+                return null;
+              }
+              // 其他错误正常抛出
+              throw e;
+            }
+          };
+        }
+        
+        // 方法2: 捕获同步错误
+        var originalErrorHandler = window.onerror;
+        window.onerror = function(message, source, lineno, colno, error) {
+          try {
+            var msg = String(message || '');
+            var src = String(source || '');
+            if (msg.indexOf('Performance') !== -1 || 
+                msg.indexOf('blth:start') !== -1 || 
+                msg.indexOf('hidden_iframe:start') !== -1 ||
+                msg.indexOf('tag.min.js') !== -1 ||
+                msg.indexOf('Failed to execute') !== -1 ||
+                msg.indexOf('CORS') !== -1 ||
+                msg.indexOf('jhnwr.com') !== -1 ||
+                msg.indexOf('ERR_FAILED') !== -1 ||
+                src.indexOf('tag.min.js') !== -1 ||
+                src.indexOf('nap5k.com') !== -1 ||
+                src.indexOf('jhnwr.com') !== -1) {
+              return true;
+            }
+            if (originalErrorHandler) {
+              return originalErrorHandler(message, source, lineno, colno, error);
+            }
+          } catch(e) {}
+          return false;
+        };
+        
+        // 方法3: 捕获 Promise 错误 - 使用捕获阶段
+        window.addEventListener('unhandledrejection', function(event) {
+          try {
+            var reason = event.reason;
+            var message = (reason && reason.message) ? String(reason.message) : String(reason || '');
+            var stack = (reason && reason.stack) ? String(reason.stack) : '';
+            if (message.indexOf('Performance') !== -1 || 
+                message.indexOf('blth:start') !== -1 || 
+                message.indexOf('hidden_iframe:start') !== -1 ||
+                message.indexOf('tag.min.js') !== -1 ||
+                message.indexOf('Failed to execute') !== -1 ||
+                message.indexOf('measure') !== -1 ||
+                message.indexOf('does not exist') !== -1 ||
+                message.indexOf('CORS') !== -1 ||
+                message.indexOf('jhnwr.com') !== -1 ||
+                message.indexOf('ERR_FAILED') !== -1 ||
+                stack.indexOf('tag.min.js') !== -1 ||
+                stack.indexOf('nap5k.com') !== -1 ||
+                stack.indexOf('jhnwr.com') !== -1 ||
+                stack.indexOf('blth:start') !== -1 ||
+                stack.indexOf('hidden_iframe:start') !== -1) {
+              event.preventDefault();
+              event.stopPropagation();
+              event.stopImmediatePropagation();
+              return false;
+            }
+          } catch(e) {}
+          return true;
+        }, true);
+        
+        // 方法4: 拦截 console.error 和 console.warn
+        var originalConsoleError = console.error;
+        var originalConsoleWarn = console.warn;
+        
+        console.error = function() {
+          try {
+            var args = Array.prototype.slice.call(arguments);
+            var errorMsg = args.map(function(arg) { return String(arg); }).join(' ');
+            // Monetag 相关错误（包括 CORS、404、Performance 等）
+            if (errorMsg.indexOf('Performance') !== -1 || 
+                errorMsg.indexOf('blth:start') !== -1 || 
+                errorMsg.indexOf('hidden_iframe:start') !== -1 || 
+                errorMsg.indexOf('tag.min.js') !== -1 ||
+                errorMsg.indexOf('does not exist') !== -1 ||
+                errorMsg.indexOf('CORS') !== -1 ||
+                errorMsg.indexOf('jhnwr.com') !== -1 ||
+                errorMsg.indexOf('ERR_FAILED') !== -1 ||
+                errorMsg.indexOf('404') !== -1) {
+              return;
+            }
+            originalConsoleError.apply(console, args);
+          } catch(e) {
+            originalConsoleError.apply(console, arguments);
+          }
+        };
+        
+        console.warn = function() {
+          try {
+            var args = Array.prototype.slice.call(arguments);
+            var errorMsg = args.map(function(arg) { return String(arg); }).join(' ');
+            // Monetag 相关警告
+            if (errorMsg.indexOf('Monetag') !== -1 || 
+                errorMsg.indexOf('tag.min.js') !== -1 ||
+                errorMsg.indexOf('jhnwr.com') !== -1) {
+              return;
+            }
+            originalConsoleWarn.apply(console, args);
+          } catch(e) {
+            originalConsoleWarn.apply(console, arguments);
+          }
+        };
+      })();
+    `],
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     // RSS/Atom/JSON Feeds
     ['link', { rel: 'alternate', type: 'application/rss+xml', title: 'PFinalClub RSS Feed', href: '/feed.xml' }],
