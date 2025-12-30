@@ -27,19 +27,19 @@ export const AD_ENABLED = true
 
 // 广告配置 - 使用你的 Monetag Zone ID
 export const adConfig: AdPositions = {
-  // 文章中间广告 - 使用 Direct Link 类型，可以在容器中显示
-  // 注意：In-Page Push 是弹窗类型，不会在容器中显示
+  // 文章中间广告 - 使用 In-Page Push（弹窗类型，但可以正常工作）
+  // Direct Link 类型不是用于容器中显示广告的，会导致 CORS 和 404 错误
   articleMiddle: {
-    zoneId: '9899685', // Pleasant tag - Direct link (容器中显示)
-    adType: 'direct-link',
+    zoneId: '9114535', // Bright tag - In-Page Push
+    adType: 'inpage-push',
     enabled: AD_ENABLED && true // 受全局开关控制
   },
   
-  // 文章底部广告 - 使用 Direct Link 类型，可以在容器中显示
-  // 注意：Native Banner 是全屏类型，不会在容器中显示
+  // 文章底部广告 - 使用 Native Banner（全屏类型，但可以正常工作）
+  // Direct Link 类型不是用于容器中显示广告的，会导致 CORS 和 404 错误
   articleBottom: {
-    zoneId: '9894528', // Immortal tag - Direct link (容器中显示)
-    adType: 'direct-link',
+    zoneId: '9154483', // The best tag - Native Banner (Interstitial)
+    adType: 'native-banner',
     enabled: AD_ENABLED && true // 受全局开关控制
   },
   

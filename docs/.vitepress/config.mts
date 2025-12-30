@@ -181,6 +181,8 @@ export default defineConfig({
                 message.indexOf('CORS') !== -1 ||
                 message.indexOf('jhnwr.com') !== -1 ||
                 message.indexOf('ERR_FAILED') !== -1 ||
+                message.indexOf('adex timeout') !== -1 ||
+                message.indexOf('timeout') !== -1 ||
                 stack.indexOf('tag.min.js') !== -1 ||
                 stack.indexOf('nap5k.com') !== -1 ||
                 stack.indexOf('jhnwr.com') !== -1 ||

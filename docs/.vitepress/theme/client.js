@@ -41,7 +41,7 @@ export default {
         const stack = reason?.stack || String(reason?.stack) || ''
         const name = reason?.name || ''
         
-        // 检查是否是 Monetag 相关的错误（包括 Performance API、CORS、404）
+        // 检查是否是 Monetag 相关的错误（包括 Performance API、CORS、404、timeout）
         const isMonetagError = 
           message.includes('Performance') || 
           message.includes('blth:start') || 
@@ -52,6 +52,8 @@ export default {
           message.includes('CORS') ||
           message.includes('jhnwr.com') ||
           message.includes('ERR_FAILED') ||
+          message.includes('adex timeout') ||
+          message.includes('timeout') ||
           stack.includes('tag.min.js') ||
           stack.includes('nap5k.com') ||
           stack.includes('jhnwr.com') ||

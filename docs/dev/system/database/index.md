@@ -9,7 +9,6 @@ keywords:
   - mysql 设置指南
   - 数据库管理
   - postgresql 功能
-layout: page
 ---
 
 # 数据库中文技术专题导航
