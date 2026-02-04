@@ -33,6 +33,25 @@ readingTime: 18
 cover: "/images/go-concurrency-patterns.png"
 status: "published"
 toc: true
+faq:
+  - question: Go 并发有哪些常用模式？
+    answer: 常见有 Worker Pool、Fan-Out/Fan-In、Pipeline、超时与取消、errgroup 等；根据任务类型选择，注意 goroutine 泄漏与 channel 关闭。
+  - question: Go 如何实现 Worker Pool？
+    answer: 启动固定数量的 goroutine 从 channel 取任务执行，主流程向 channel 投递任务；用 sync.WaitGroup 等待全部完成，注意退出时关闭 channel。
+  - question: Go channel 和 goroutine 使用要注意什么？
+    answer: 由发送方关闭 channel、避免向已关闭 channel 发送；控制 goroutine 数量与生命周期，用 context 做取消与超时，避免泄漏。
+howTo:
+  name: Go 语言并发模式学习路径
+  description: 从基础概念到 7 种核心模式、并发安全、性能对比与实战案例
+  steps:
+    - 基础概念（Goroutine、Channel）
+    - 核心并发模式（Worker Pool、Fan-Out/Fan-In、Pipeline 等）
+    - 并发安全模式
+    - 性能对比
+    - 最佳实践与常见陷阱
+    - 实战案例分析
+    - 监控和调试
+    - 部署与故障排查
 ---
 
 # Go语言并发模式实战指南

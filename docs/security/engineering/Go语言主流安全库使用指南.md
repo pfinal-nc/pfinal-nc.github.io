@@ -6,6 +6,7 @@ tags:
 description: 详细介绍Go语言主流安全库的使用方法，包括crypto、encoding、hash、math、rand、strconv、time等库的使用，帮助开发者更好地保护应用程序的安全性。
 author: PFinal南丞
 keywords: Go语言安全库使用指南, Go语言, 安全库, 使用指南, crypto, encoding, hash, math, rand, strconv, time
+recommend: 安全
 ---
 
 # Go语言主流安全库使用指南

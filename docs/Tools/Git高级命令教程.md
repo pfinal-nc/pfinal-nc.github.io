@@ -19,6 +19,31 @@ tags:
   - 版本控制
   - 开发工具
   - DevOps
+faq:
+  - question: Git 如何找回误删或丢失的提交？
+    answer: 使用 git reflog 查看所有 HEAD 变动记录，找到目标 commit hash 后用 git reset --hard 或 git cherry-pick 恢复。
+  - question: Git 如何快速定位引入 Bug 的提交？
+    answer: 使用 git bisect 二分查找：先标记一个已知坏版本和一个已知好版本，Git 会自动切到中间版本，你标记好/坏后继续二分直到定位单次提交。
+  - question: Git 如何同时开发多个分支不切换？
+    answer: 使用 git worktree add 为同一仓库创建多个工作目录，每个目录可检出不同分支，互不干扰，共享同一 .git。
+  - question: Git 如何暂存当前修改去修别的分支？
+    answer: 使用 git stash 暂存工作区与暂存区，切分支修完后再切回用 git stash pop；可用 stash list、stash show 管理多条暂存。
+howTo:
+  name: Git 高级命令 12 个实用技巧
+  description: 从 worktree、reflog、bisect 到 stash、cherry-pick、submodule 等完整指南
+  steps:
+    - git worktree 多工作目录
+    - git reflog 找回丢失提交
+    - git bisect 二分找 Bug
+    - git stash 进阶
+    - git cherry-pick 选择性合并
+    - git submodule 子模块
+    - git filter-repo 重写历史
+    - git blame 责任追踪
+    - git log 高级用法
+    - git clean 清理未跟踪文件
+    - git rerere 复用冲突解决
+    - git notes 提交注释
 ---
 
 # Git 高级命令教程：12 个提升开发效率的实用命令

@@ -7,6 +7,13 @@ description: 学习Redis配置文件
 keywords: 'Redis配置文件详解, 数据库, redis'
 author: PFinal南丞
 recommend: 后端工程
+faq:
+  - question: Redis 配置文件主要配置项有哪些？
+    answer: 常用包括 daemonize、port、bind、timeout、loglevel、databases、maxmemory、持久化（RDB/AOF）相关项、安全 requirepass 等，按部署方式与内存限制调整。
+  - question: Redis 如何设置内存上限？
+    answer: 在配置文件中设置 maxmemory，建议为物理内存的约 70%～80%；可配合 maxmemory-policy 设置淘汰策略（如 allkeys-lru、volatile-lru）。
+  - question: Redis 持久化 RDB 和 AOF 怎么选？
+    answer: RDB 定时快照、恢复快但可能丢最近数据；AOF 记录每条写命令、可配 fsync 策略，更安全但文件更大。生产常同时开启，或主 RDB 从 AOF。
 ---
 
 # Redis配置文件详解

@@ -25,6 +25,29 @@ keywords:
   - PostgreSQL最佳实践
   - 数据库优化技巧
   - PostgreSQL 2025
+faq:
+  - question: PostgreSQL 性能优化从哪里入手？
+    answer: 建议按硬件与系统参数 → postgresql.conf 配置 → Schema 与索引 → SQL 与执行计划 → VACUUM/监控 的顺序，先保证配置与索引合理再做 SQL 调优。
+  - question: PostgreSQL 如何查看慢查询和执行计划？
+    answer: 开启 log_min_duration_statement 记录慢 SQL，使用 EXPLAIN (ANALYZE, BUFFERS) 查看执行计划；结合 pg_stat_statements 做语句级统计。
+  - question: PostgreSQL 索引如何优化？
+    answer: 根据查询条件与排序建 B-tree 索引，避免过多重复索引；大表考虑分区与并行；用 EXPLAIN 确认索引是否被使用。
+  - question: PostgreSQL 配置参数有哪些必调项？
+    answer: 重点调整 shared_buffers、work_mem、maintenance_work_mem、effective_cache_size、random_page_cost 等，需结合机器内存与负载压测验证。
+howTo:
+  name: PostgreSQL 性能优化从配置到 SQL 的完整步骤
+  description: 硬件与系统、配置、Schema、索引、SQL、VACUUM、监控与实战案例
+  steps:
+    - 性能优化概述与目标
+    - 硬件与操作系统优化
+    - PostgreSQL 配置优化
+    - Schema 设计优化
+    - 索引策略优化
+    - SQL 查询优化
+    - VACUUM 与 ANALYZE
+    - 性能监控与诊断
+    - 高级优化与实战案例
+    - 最佳实践总结
 ---
 
 # PostgreSQL性能优化实战 - 从配置到SQL调优的完整指南

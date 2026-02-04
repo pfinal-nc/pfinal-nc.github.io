@@ -19,6 +19,7 @@ keywords:
   - go input validation
   - 安全编码
   - PFinalClub
+recommend: 安全
 description: "Go Security Best Practices 2025: 发现 Go 开发中的 10 个关键安全陷阱，包括 SQL 注入、XSS、CSRF 防护，学习真正有效的修复方案。"
 ---
 

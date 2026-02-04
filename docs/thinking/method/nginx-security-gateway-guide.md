@@ -35,6 +35,23 @@ readingTime: 25
 cover: "/images/nginx-security-gateway.png"
 status: "published"
 toc: true
+faq:
+  - question: Nginx 如何防护 Host 头攻击？
+    answer: 在 server 中校验 Host 是否在白名单，非法则 return 444 或重定向到默认站点；不要用 $host 直接做重定向或拼接链接，避免被篡改。
+  - question: 如何防止 .git、.env 等敏感文件被访问？
+    answer: 用 location ~ /\. 禁止隐藏目录，或 location ~* \.(git|env|svn) 等拒绝敏感扩展；关闭目录列表 autoindex，并限制敏感路径的 location。
+  - question: Nginx 安全响应头一般配哪些？
+    answer: 常见有 X-Frame-Options、X-Content-Type-Options、X-XSS-Protection、Referrer-Policy、Content-Security-Policy、Strict-Transport-Security 等，按等保与业务需求配置。
+howTo:
+  name: Nginx 安全网关 3 步防护与进阶配置
+  description: 版本隐藏与敏感文件保护、Host 头防护、安全响应头、验证与生产配置模板
+  steps:
+    - 现状与威胁分析
+    - 3 步核心防护（版本隐藏、敏感文件、Host 头）
+    - 安全响应头配置
+    - 验证测试方案
+    - 生产环境配置模板
+    - 部署与维护
 ---
 
 # 从0搭建Nginx安全网关：3步堵住90%的Web漏洞！

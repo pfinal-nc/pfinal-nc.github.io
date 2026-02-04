@@ -30,7 +30,30 @@ keywords:
   - iptables速率限制
   - fail2ban配置
   - PFinalClub
+recommend: 安全
 description: "SSH Security Hardening Guide 2025: 从iptables速率限制到fail2ban蜜罐的生产环境暴力破解防护完整方案。包含5层防护策略、自动化部署脚本、监控告警系统，助你构建安全的SSH访问体系。"
+faq:
+  - question: SSH 如何防止暴力破解？
+    answer: 推荐组合：禁用密码登录仅用密钥、iptables 限制单 IP 连接速率、fail2ban 自动封禁、改端口或蜜罐分流、开启双因素认证并做监控告警。
+  - question: fail2ban 如何配置防护 SSH？
+    answer: 在 jail 中启用 sshd，设置 bantime、findtime、maxretry；可配合蜜罐端口将扫描流量引到假服务，真实 SSH 用非标端口。
+  - question: SSH 安全加固必做项有哪些？
+    answer: 禁用 root 密码登录、使用密钥认证、限制允许用户、关闭不必要的转发与 X11、配置 AllowUsers/AllowGroups、定期更新与审计日志。
+  - question: 服务器被 SSH 暴力破解怎么办？
+    answer: 立即检查是否被入侵（last、auth.log、异常进程）；临时用 iptables 封禁来源 IP；加固后启用 fail2ban、改端口、密钥登录并监控。
+howTo:
+  name: SSH 安全加固与暴力破解防护步骤
+  description: 从攻击剖析到 iptables、fail2ban、配置加固、2FA、监控与 5 层防护体系
+  steps:
+    - SSH 暴力破解攻击剖析
+    - iptables 速率限制
+    - fail2ban 蜜罐部署
+    - SSH 配置加固
+    - 双因素认证
+    - 监控与告警
+    - 5 层防护组合方案
+    - 故障排查与应急
+    - 安全检查清单
 ---
 
 # SSH Security Hardening Guide 2025 - 暴力破解防护完整方案
