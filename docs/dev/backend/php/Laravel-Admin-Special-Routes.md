@@ -1,5 +1,5 @@
 ---
-title: 如何掌握Laravel-admin特殊路由操作 - PHP 开发完整指南
+title: "Laravel-admin 特殊路由 - 使用指南"
 date: 2022-07-04T15:29:24.000Z
 tags:
   - php

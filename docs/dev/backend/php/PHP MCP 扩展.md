@@ -1,5 +1,5 @@
 ---
-title: 如何掌握PHP MCP扩展-我的开源实践与思考 - PHP 开发完整指南
+title: "PHP MCP 扩展 - 开源实践与使用指南"
 date: 2025-09-09T10:30:00.000Z
 tags:
   - php

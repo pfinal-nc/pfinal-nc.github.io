@@ -1,5 +1,5 @@
 ---
-title: 如何掌握Laravel-Carbon-类使用 - PHP 开发完整指南
+title: "Laravel Carbon 类 - 使用指南"
 date: 2022-07-04T15:29:24.000Z
 tags:
   - Laravel

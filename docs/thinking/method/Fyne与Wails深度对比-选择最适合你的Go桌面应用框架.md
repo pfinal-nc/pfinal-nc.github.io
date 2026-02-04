@@ -1,5 +1,5 @@
 ---
-title: "Fyne vs Wails 2025 - Go Desktop App Framework Comparison"
+title: "Fyne vs Wails 2025 - Go 桌面框架对比"
 date: 2024-12-19 10:30:00
 tags:
   - golang

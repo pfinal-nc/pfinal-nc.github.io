@@ -1,5 +1,5 @@
 ---
-title: 如何掌握Python版本管理神器之pyenv - Python 开发完整指南
+title: "pyenv - Python 版本管理指南"
 date: 2023-04-27T22:10:20.000Z
 author: PFinal南丞
 tags:

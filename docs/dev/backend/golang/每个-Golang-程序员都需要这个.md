@@ -1,5 +1,5 @@
 ---
-title: 如何掌握每个 Golang 程序员都需要这个 - Go 开发完整指南
+title: "每个 Golang 程序员都需要这个 - 实战指南"
 date: 2025-07-12T10:30:00.000Z
 tags:
   - golang

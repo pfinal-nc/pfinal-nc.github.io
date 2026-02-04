@@ -1,5 +1,5 @@
 ---
-title: 如何掌握Go 开发IP过滤小脚本 - Go 开发完整指南
+title: "Go IP 过滤小脚本 - 实战指南"
 date: 2023-12-22T15:35:02.000Z
 tags:
   - golang

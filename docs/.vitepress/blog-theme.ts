@@ -36,9 +36,8 @@ const blogTheme = getThemeConfig({
   //   limit: 50
   // },
 
-  // 搜索
-  // 默认开启pagefind离线的全文搜索支持（如使用其它的可以设置为false）
-  // search: false,
+  // 搜索：开启 pagefind 离线全文搜索，便于站内检索与内容 SEO
+  search: true,
 
   // markdown 图表支持（会增加一定的构建耗时）
   // mermaid: trues

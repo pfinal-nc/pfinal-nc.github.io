@@ -1,5 +1,5 @@
 ---
-title: 如何掌握基于Wails的Mac桌面应用开发 - Go 开发完整指南
+title: "Wails Mac 桌面应用开发 - 实战指南"
 date: 2023-10-18T11:06:22.000Z
 tags:
   - golang

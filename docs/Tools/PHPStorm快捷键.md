@@ -1,5 +1,5 @@
 ---
-title: "如何掌握PHPStorm快捷键 - PHP 开发完整指南"
+title: "PHPStorm 快捷键 - 使用指南"
 date: 2022-07-04 10:31:10
 tags:
     - 工具

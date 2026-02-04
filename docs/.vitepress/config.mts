@@ -123,6 +123,8 @@ export default defineConfig({
     `],
     // 广告脚本错误静默已统一在 theme/client.js 中处理
     ['link', { rel: 'icon', href: '/favicon.ico' }],
+    // 技术 SEO：sitemap 引用，便于爬虫发现
+    ['link', { rel: 'sitemap', type: 'application/xml', title: 'Sitemap', href: 'https://friday-go.icu/sitemap.xml' }],
     // RSS/Atom/JSON Feeds
     ['link', { rel: 'alternate', type: 'application/rss+xml', title: 'PFinalClub RSS Feed', href: '/feed.xml' }],
     ['link', { rel: 'alternate', type: 'application/atom+xml', title: 'PFinalClub Atom Feed', href: '/feed.atom' }],

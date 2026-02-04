@@ -1,5 +1,5 @@
 ---
-title: 如何掌握Golang 实现协程池 - Go 开发完整指南
+title: "Golang 协程池实现 - 实战指南"
 date: 2024-11-09T11:31:32.000Z
 tags:
   - golang

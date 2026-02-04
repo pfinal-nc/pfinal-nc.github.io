@@ -1,5 +1,5 @@
 ---
-title: 如何掌握PHP-FPM配置文件解析 - PHP 开发完整指南
+title: "PHP-FPM 配置详解 - 使用指南"
 date: 2023-04-27T22:10:20.000Z
 author: PFinal南丞
 tags:

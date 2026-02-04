@@ -1,5 +1,5 @@
 ---
-title: 如何掌握Python常用网站搜集 - Python 开发完整指南
+title: "Python 常用网站搜集 - 使用指南"
 date: 2023-04-03T21:58:33.000Z
 tags:
   - python

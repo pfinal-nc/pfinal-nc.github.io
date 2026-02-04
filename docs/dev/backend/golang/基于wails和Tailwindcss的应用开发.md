@@ -1,5 +1,5 @@
 ---
-title: 如何掌握基于wails的应用尝试开发 - Go 开发完整指南
+title: "Wails + Tailwindcss 应用开发 - 实战指南"
 date: 2023-12-07T09:18:22.000Z
 tags:
   - golang

@@ -1,5 +1,5 @@
 ---
-title: 如何掌握Redis基本知识总结 - PHP 开发完整指南
+title: "Redis 基础知识 - 使用指南"
 date: 2022-11-24T22:47:02.000Z
 tags:
   - Redis

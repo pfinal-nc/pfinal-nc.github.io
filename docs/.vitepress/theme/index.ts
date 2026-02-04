@@ -22,6 +22,8 @@ import NotFound from './components/NotFound.vue'
 
 // 导入文章广告组件
 import ArticleAds from './components/ArticleAds.vue'
+// 延伸阅读内链组件（提升内链密度）
+import ArticleRelatedLinks from './components/ArticleRelatedLinks.vue'
 
 // 自定义样式重载
 import './style.scss'
@@ -42,6 +44,7 @@ const theme: Theme = {
     
     // 注册文章广告组件
     ctx.app.component('ArticleAds', ArticleAds)
+    ctx.app.component('ArticleRelatedLinks', ArticleRelatedLinks)
   },
   Layout: () => {
     return h(BlogTheme.Layout, null, {
@@ -49,9 +52,10 @@ const theme: Theme = {
       'layout-top': () => h(ReadingProgress),
       // 在文档顶部插入面包屑导航
       'doc-top': () => h(Breadcrumb),
-      // 在文档底部插入广告和评论组件（广告在评论之前）
+      // 在文档底部插入广告、延伸阅读、评论（延伸阅读提升内链密度）
       'doc-after': () => [
         h(ArticleAds),
+        h(ArticleRelatedLinks),
         h(GiscusComment)
       ],
       // 在页面底部插入Cookie同意横幅

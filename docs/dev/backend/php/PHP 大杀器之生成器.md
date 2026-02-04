@@ -1,5 +1,5 @@
 ---
-title: 如何掌握PHP 大杀器之生成器 - PHP 开发完整指南
+title: "PHP 生成器 - 使用指南"
 date: 2022-05-04T15:29:24.000Z
 tags:
   - php
