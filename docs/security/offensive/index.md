@@ -31,7 +31,7 @@ recommend: 安全
 - [10个Golang安全陷阱及真正有效的修复方案](../engineering/10个Golang安全陷阱及真正有效的修复方案.md)
 - [Go语言主流安全库使用指南](../engineering/Go语言主流安全库使用指南.md)
 - [golang 中的网络安全 TLS/SSL 实现](../engineering/golang 中的网络安全TLS SSL的实现.md)
-- [代码安全扫描自动化](../../tools/从手动到自动：Go语言助力快速识别代码中的安全隐患.md) - 自动化安全检测
+- [代码安全扫描自动化](../../tools/从手动到自动-Go语言助力快速识别代码中的安全隐患.md) - 自动化安全检测
 
 ---
 

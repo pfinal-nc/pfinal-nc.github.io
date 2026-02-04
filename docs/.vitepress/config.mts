@@ -20,18 +20,15 @@ export default defineConfig({
     sidebarMenuLabel: '相关文章',
     lastUpdatedText: '上次更新于',
     logo: '/logo.png',
+    // 精简导航至 7 个核心分类，关于/联系/隐私保留在 footer，分散链接权重
     nav: [
       { text: '首页', link: '/' },
       { text: '攻防研究', link: '/security/offensive/' },
       { text: '安全工程', link: '/security/engineering/' },
       { text: '开发与系统', link: '/dev/' },
       { text: '数据与自动化', link: '/data/automation/' },
-      { text: '独立开发', link: '/indie/' },
       { text: '思考/方法论', link: '/thinking/method/' },
-      { text: '在线工具', link: '/Tools/online-tools' },
-      { text: '关于作者', link: '/about' },
-      { text: '联系我们', link: '/contact' },
-      { text: '隐私政策', link: '/privacy-policy' }
+      { text: '在线工具', link: '/Tools/online-tools' }
     ],
     socialLinks: [
       { icon: 'github', link: 'https://github.com/pfinal-nc' },
@@ -148,23 +145,7 @@ export default defineConfig({
     ['meta', {name:'google-site-verification', content:'K5jxzJ_KXsS0QhsQnBIuKyxt6BGlPD-w1URDWGTWHo8'}],
     ['meta', {name:'360-site-verification', content:'bafd565a2170482bd9ff0c063ba5a41a'}],
     ['meta', {name:'yandex-verification', content:'20badebe204f6b0b'}],
-    // Google Analytics 4
-    ['script', {
-      async: 'true',
-      src: 'https://www.googletagmanager.com/gtag/js?id=G-EVR51H8CSN'
-    }],
-    ['script', {}, `
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-EVR51H8CSN');
-    `],
-    // Google AdSense
-    ['script', {
-      src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2154665617309406',
-      async: 'true',
-      crossorigin: 'anonymous'
-    }],
+    // GA4 与 AdSense 已移至 client.js 延迟加载，减轻首屏阻塞、提升 LCP
     // Schema.org 结构化数据 - WebSite
     ['script', { type: 'application/ld+json' }, JSON.stringify({
       "@context": "https://schema.org",

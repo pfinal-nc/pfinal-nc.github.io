@@ -171,6 +171,9 @@ export default {
           { from: '/golang/Golang实现RAG系统-从OpenAI到向量数据库', to: '/dev/backend/golang/Golang实现RAG系统-从OpenAI到向量数据库' },
           { from: '/golang/Golang%E5%AE%9E%E7%8E%B0RAG%E7%B3%BB%E7%BB%9F-%E4%BB%8EOpenAI%E5%88%B0%E5%90%91%E9%87%8F%E6%95%B0%E6%8D%AE%E5%BA%93', to: '/dev/backend/golang/Golang实现RAG系统-从OpenAI到向量数据库' },
           
+          // 代码安全扫描文章（旧路径含冒号，重定向到新路径）
+          { from: '/tools/从手动到自动：Go语言助力快速识别代码中的安全隐患', to: '/tools/从手动到自动-Go语言助力快速识别代码中的安全隐患' },
+          { from: '/Tools/从手动到自动：Go语言助力快速识别代码中的安全隐患', to: '/tools/从手动到自动-Go语言助力快速识别代码中的安全隐患' },
           // Arc 浏览器文章
           { from: '/工具/Arc 浏览器更符合开发者', to: '/tools/Arc 浏览器更符合开发者' },
           { from: '/%E5%B7%A5%E5%85%B7/Arc%20%E6%B5%8F%E8%A7%88%E5%99%A8%E6%9B%B4%E7%AC%A6%E5%90%88%E5%BC%80%E5%8F%91%E8%80%85', to: '/tools/Arc 浏览器更符合开发者' },
@@ -347,6 +350,29 @@ export default {
             trackShareEvents()
           }, 100)
         })
+      }
+
+      // 延迟加载 GA4 与 AdSense，不阻塞首屏，提升 LCP/FCP
+      function loadDeferredAnalyticsAndAds() {
+        if (window.__deferredAnalyticsLoaded) return
+        window.__deferredAnalyticsLoaded = true
+        const ga = document.createElement('script')
+        ga.async = true
+        ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-EVR51H8CSN'
+        document.head.appendChild(ga)
+        const gaInline = document.createElement('script')
+        gaInline.textContent = `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-EVR51H8CSN');`
+        document.head.appendChild(gaInline)
+        const ads = document.createElement('script')
+        ads.async = true
+        ads.crossOrigin = 'anonymous'
+        ads.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2154665617309406'
+        document.head.appendChild(ads)
+      }
+      if (typeof requestIdleCallback !== 'undefined') {
+        requestIdleCallback(() => loadDeferredAnalyticsAndAds(), { timeout: 3000 })
+      } else {
+        window.addEventListener('load', () => setTimeout(loadDeferredAnalyticsAndAds, 100))
       }
       
       // 使用 MutationObserver 监听 DOM 变化，确保标签区域被隐藏

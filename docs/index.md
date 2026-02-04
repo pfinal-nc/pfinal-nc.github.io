@@ -1,6 +1,6 @@
 ---
-title: "PFinalClub - 后端开发 + DevOps + AI 工程实践技术博客"
-description: "PFinalClub：以后端 + DevOps + AI 工程实践为核心的小众高质量技术博客。涵盖 Golang、PHP、Python 后端开发、容器化部署、CI/CD、RAG 系统、可观测性、AI 工程化等实战教程。"
+title: "PFinalClub | 后端·DevOps·AI 技术博客"
+description: "PFinalClub：以后端、DevOps、AI 工程实践为核心的技术博客，涵盖 Golang、PHP、Python、容器化、CI/CD、可观测性等实战内容。"
 keywords:
   - 后端开发
   - DevOps
@@ -15,10 +15,10 @@ keywords:
   - 工程实践
 layout: home
 blog:
- title: 'PFianlClub'
+ title: 'PFinalClub'
  logo: /logo.png
  author: PFinal南丞
- name: 'PFianlClub'
+ name: 'PFinalClub'
  motto: 后端+DevOps+AI工程实践的小众高质量博客
  inspiring:
   - 千万不要因为走得太久，而忘记了我们为什么出发

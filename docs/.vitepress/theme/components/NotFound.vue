@@ -9,6 +9,9 @@ const redirectRules = [
   // Golang RAG 系统文章
   { from: '/golang/Golang实现RAG系统-从OpenAI到向量数据库', to: '/dev/backend/golang/Golang实现RAG系统-从OpenAI到向量数据库' },
   
+  // 代码安全扫描文章（旧路径含冒号）
+  { from: '/tools/从手动到自动：Go语言助力快速识别代码中的安全隐患', to: '/tools/从手动到自动-Go语言助力快速识别代码中的安全隐患' },
+  { from: '/Tools/从手动到自动：Go语言助力快速识别代码中的安全隐患', to: '/tools/从手动到自动-Go语言助力快速识别代码中的安全隐患' },
   // Arc 浏览器文章
   { from: '/工具/Arc 浏览器更符合开发者', to: '/tools/Arc 浏览器更符合开发者' },
   { from: '/工具/Arc浏览器更符合开发者', to: '/tools/Arc 浏览器更符合开发者' },

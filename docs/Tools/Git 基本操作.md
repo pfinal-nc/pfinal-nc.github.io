@@ -5,7 +5,7 @@ tags:
     - 工具
     - Git
 description: Git 基本操作
-author: PFianl 南丞
+author: PFinal南丞
 keywords: Git, 版本控制, Git命令, 代码管理, 分支管理, 仓库操作, 协作开发, Git教程
 
 ---
