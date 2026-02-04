@@ -1,67 +1,123 @@
 /**
- * Monetag 广告配置
- * 根据不同的广告位置配置对应的 Zone ID
+ * 广告配置
+ * 支持 Monetag 和 Ezoic 两个广告平台
  */
 
-export interface AdConfig {
+export interface MonetagAdConfig {
   zoneId: string
   adType: 'inpage-push' | 'native-banner' | 'direct-link' | 'onclick-popunder'
   enabled: boolean
 }
 
-export interface AdPositions {
-  // 文章中间广告（在文章内容中间插入）
-  articleMiddle: AdConfig
-  // 文章底部广告（在评论之前）
-  articleBottom: AdConfig
-  // 侧边栏广告（如果有侧边栏）
-  sidebar: AdConfig
-  // 页面头部广告
-  header: AdConfig
-  // OnClick Popunder（页面加载时触发，不需要容器）
-  onclickPopunder: AdConfig
+export interface EzoicAdConfig {
+  placementId: string | number
+  enabled: boolean
 }
 
-// 全局广告开关 - 如果 Monetag SDK 无法加载，可以临时设置为 false
-export const AD_ENABLED = true
+export type AdConfig = MonetagAdConfig | EzoicAdConfig
 
-// 广告配置 - 使用你的 Monetag Zone ID
-export const adConfig: AdPositions = {
-  // 文章中间广告 - 使用 In-Page Push（弹窗类型，但可以正常工作）
-  // Direct Link 类型不是用于容器中显示广告的，会导致 CORS 和 404 错误
+export interface AdPositions {
+  // 文章中间广告（在文章内容中间插入）
   articleMiddle: {
-    zoneId: '9114535', // Bright tag - In-Page Push
-    adType: 'inpage-push',
-    enabled: AD_ENABLED && true // 受全局开关控制
-  },
-  
-  // 文章底部广告 - 使用 Native Banner（全屏类型，但可以正常工作）
-  // Direct Link 类型不是用于容器中显示广告的，会导致 CORS 和 404 错误
+    monetag?: MonetagAdConfig
+    ezoic?: EzoicAdConfig
+  }
+  // 文章底部广告（在评论之前）
   articleBottom: {
-    zoneId: '9154483', // The best tag - Native Banner (Interstitial)
-    adType: 'native-banner',
-    enabled: AD_ENABLED && true // 受全局开关控制
+    monetag?: MonetagAdConfig
+    ezoic?: EzoicAdConfig
+  }
+  // 侧边栏广告（如果有侧边栏）
+  sidebar: {
+    monetag?: MonetagAdConfig
+    ezoic?: EzoicAdConfig
+  }
+  // 页面头部广告
+  header: {
+    monetag?: MonetagAdConfig
+    ezoic?: EzoicAdConfig
+  }
+  // OnClick Popunder（页面加载时触发，不需要容器）
+  onclickPopunder: {
+    monetag?: MonetagAdConfig
+    ezoic?: EzoicAdConfig
+  }
+}
+
+// 全局广告开关
+export const AD_ENABLED = true
+// Ezoic 广告开关（可以在 Ezoic 审核通过后启用）
+export const EZOIC_ENABLED = true
+
+// 广告配置
+export const adConfig: AdPositions = {
+  // 文章中间广告
+  articleMiddle: {
+    // Monetag - In-Page Push（弹窗类型）
+    monetag: {
+      zoneId: '9114535', // Bright tag - In-Page Push
+      adType: 'inpage-push',
+      enabled: AD_ENABLED && false // 暂时禁用，优先使用 Ezoic
+    },
+    // Ezoic - 文章中间广告位置
+    ezoic: {
+      placementId: '118', // Article Middle - In-Content 1 (mid_content)
+      enabled: EZOIC_ENABLED && true
+    }
   },
   
-  // 侧边栏广告 - 使用 Direct Link
+  // 文章底部广告
+  articleBottom: {
+    // Monetag - Native Banner（全屏类型）
+    monetag: {
+      zoneId: '9154483', // The best tag - Native Banner (Interstitial)
+      adType: 'native-banner',
+      enabled: AD_ENABLED && false // 暂时禁用，优先使用 Ezoic
+    },
+    // Ezoic - 文章底部广告位置
+    ezoic: {
+      placementId: '119', // Article Bottom - Bottom of Page
+      enabled: EZOIC_ENABLED && true
+    }
+  },
+  
+  // 侧边栏广告
   sidebar: {
-    zoneId: '9899685', // Pleasant tag - Direct link
-    adType: 'direct-link',
-    enabled: false // 如果博客没有侧边栏，可以禁用
+    monetag: {
+      zoneId: '9899685', // Pleasant tag - Direct link
+      adType: 'direct-link',
+      enabled: false
+    },
+    ezoic: {
+      placementId: '103', // TODO: 替换为实际的 Ezoic Placement ID
+      enabled: false
+    }
   },
   
   // 页面头部广告
   header: {
-    zoneId: '9894528', // Immortal tag - Direct link
-    adType: 'direct-link',
-    enabled: false // 根据需求启用
+    monetag: {
+      zoneId: '9894528', // Immortal tag - Direct link
+      adType: 'direct-link',
+      enabled: false
+    },
+    ezoic: {
+      placementId: '104', // TODO: 替换为实际的 Ezoic Placement ID
+      enabled: false
+    }
   },
   
-  // OnClick Popunder - 页面加载时触发
+  // OnClick Popunder
   onclickPopunder: {
-    zoneId: '9114325', // Hot tag - OnClick (Popunder)
-    adType: 'onclick-popunder',
-    enabled: false // 谨慎使用，可能影响用户体验
+    monetag: {
+      zoneId: '9114325', // Hot tag - OnClick (Popunder)
+      adType: 'onclick-popunder',
+      enabled: false
+    },
+    ezoic: {
+      placementId: '', // Ezoic 不支持 Popunder
+      enabled: false
+    }
   }
 }
 

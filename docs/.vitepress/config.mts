@@ -112,134 +112,19 @@ export default defineConfig({
   lastUpdated: true,
   cleanUrls: true, // 移除 .html 后缀，提升 SEO
   head: [
-    // 最早设置 Monetag 错误处理（必须在所有脚本加载之前）
-    // 使用立即执行函数，确保在页面加载的最早阶段执行
+    // Ezoic Header Scripts - 必须在所有其他脚本之前加载
+    // Privacy Scripts（隐私脚本，必须先加载）
+    ['script', { 'data-cfasync': 'false', src: 'https://cmp.gatekeeperconsent.com/min.js' }],
+    ['script', { 'data-cfasync': 'false', src: 'https://the.gatekeeperconsent.com/cmp.min.js' }],
+    // Ezoic Header Script（主脚本）
+    ['script', { async: '', src: '//www.ezojs.com/ezoic/sa.min.js' }],
     ['script', {}, `
-      !(function() {
-        'use strict';
-        
-        // 方法1: 包装 Performance API 的 measure 方法，静默处理 Monetag 错误
-        if (window.performance && window.performance.measure) {
-          var originalMeasure = window.performance.measure;
-          window.performance.measure = function(name, startMark, endMark) {
-            try {
-              return originalMeasure.apply(this, arguments);
-            } catch (e) {
-              var errorMsg = String(e.message || e);
-              // 如果是 Monetag 相关的 Performance 错误，静默处理
-              if (errorMsg.indexOf('blth:start') !== -1 || 
-                  errorMsg.indexOf('hidden_iframe:start') !== -1 ||
-                  errorMsg.indexOf('does not exist') !== -1) {
-                // 静默返回，不抛出错误
-                return null;
-              }
-              // 其他错误正常抛出
-              throw e;
-            }
-          };
-        }
-        
-        // 方法2: 捕获同步错误
-        var originalErrorHandler = window.onerror;
-        window.onerror = function(message, source, lineno, colno, error) {
-          try {
-            var msg = String(message || '');
-            var src = String(source || '');
-            if (msg.indexOf('Performance') !== -1 || 
-                msg.indexOf('blth:start') !== -1 || 
-                msg.indexOf('hidden_iframe:start') !== -1 ||
-                msg.indexOf('tag.min.js') !== -1 ||
-                msg.indexOf('Failed to execute') !== -1 ||
-                msg.indexOf('CORS') !== -1 ||
-                msg.indexOf('jhnwr.com') !== -1 ||
-                msg.indexOf('ERR_FAILED') !== -1 ||
-                src.indexOf('tag.min.js') !== -1 ||
-                src.indexOf('nap5k.com') !== -1 ||
-                src.indexOf('jhnwr.com') !== -1) {
-              return true;
-            }
-            if (originalErrorHandler) {
-              return originalErrorHandler(message, source, lineno, colno, error);
-            }
-          } catch(e) {}
-          return false;
-        };
-        
-        // 方法3: 捕获 Promise 错误 - 使用捕获阶段
-        window.addEventListener('unhandledrejection', function(event) {
-          try {
-            var reason = event.reason;
-            var message = (reason && reason.message) ? String(reason.message) : String(reason || '');
-            var stack = (reason && reason.stack) ? String(reason.stack) : '';
-            if (message.indexOf('Performance') !== -1 || 
-                message.indexOf('blth:start') !== -1 || 
-                message.indexOf('hidden_iframe:start') !== -1 ||
-                message.indexOf('tag.min.js') !== -1 ||
-                message.indexOf('Failed to execute') !== -1 ||
-                message.indexOf('measure') !== -1 ||
-                message.indexOf('does not exist') !== -1 ||
-                message.indexOf('CORS') !== -1 ||
-                message.indexOf('jhnwr.com') !== -1 ||
-                message.indexOf('ERR_FAILED') !== -1 ||
-                message.indexOf('adex timeout') !== -1 ||
-                message.indexOf('timeout') !== -1 ||
-                stack.indexOf('tag.min.js') !== -1 ||
-                stack.indexOf('nap5k.com') !== -1 ||
-                stack.indexOf('jhnwr.com') !== -1 ||
-                stack.indexOf('blth:start') !== -1 ||
-                stack.indexOf('hidden_iframe:start') !== -1) {
-              event.preventDefault();
-              event.stopPropagation();
-              event.stopImmediatePropagation();
-              return false;
-            }
-          } catch(e) {}
-          return true;
-        }, true);
-        
-        // 方法4: 拦截 console.error 和 console.warn
-        var originalConsoleError = console.error;
-        var originalConsoleWarn = console.warn;
-        
-        console.error = function() {
-          try {
-            var args = Array.prototype.slice.call(arguments);
-            var errorMsg = args.map(function(arg) { return String(arg); }).join(' ');
-            // Monetag 相关错误（包括 CORS、404、Performance 等）
-            if (errorMsg.indexOf('Performance') !== -1 || 
-                errorMsg.indexOf('blth:start') !== -1 || 
-                errorMsg.indexOf('hidden_iframe:start') !== -1 || 
-                errorMsg.indexOf('tag.min.js') !== -1 ||
-                errorMsg.indexOf('does not exist') !== -1 ||
-                errorMsg.indexOf('CORS') !== -1 ||
-                errorMsg.indexOf('jhnwr.com') !== -1 ||
-                errorMsg.indexOf('ERR_FAILED') !== -1 ||
-                errorMsg.indexOf('404') !== -1) {
-              return;
-            }
-            originalConsoleError.apply(console, args);
-          } catch(e) {
-            originalConsoleError.apply(console, arguments);
-          }
-        };
-        
-        console.warn = function() {
-          try {
-            var args = Array.prototype.slice.call(arguments);
-            var errorMsg = args.map(function(arg) { return String(arg); }).join(' ');
-            // Monetag 相关警告
-            if (errorMsg.indexOf('Monetag') !== -1 || 
-                errorMsg.indexOf('tag.min.js') !== -1 ||
-                errorMsg.indexOf('jhnwr.com') !== -1) {
-              return;
-            }
-            originalConsoleWarn.apply(console, args);
-          } catch(e) {
-            originalConsoleWarn.apply(console, arguments);
-          }
-        };
-      })();
+      window.ezstandalone = window.ezstandalone || {};
+      ezstandalone.cmd = ezstandalone.cmd || [];
+      // 初始化 _ezaq 以避免 "is not defined" 错误
+      window._ezaq = window._ezaq || [];
     `],
+    // 广告脚本错误静默已统一在 theme/client.js 中处理
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     // RSS/Atom/JSON Feeds
     ['link', { rel: 'alternate', type: 'application/rss+xml', title: 'PFinalClub RSS Feed', href: '/feed.xml' }],
@@ -356,70 +241,6 @@ export default defineConfig({
         }
       }
     })]
-    // ['script', {}, `
-    //   // 重写 performance.measure 方法以避免错误
-    //   (function() {
-    //     if (typeof performance !== 'undefined') {
-    //       // 保存原始的 measure 方法
-    //       const originalMeasure = performance.measure;
-          
-    //       // 重写 measure 方法
-    //       performance.measure = function(name, startMark, endMark) {
-    //         try {
-    //           // 如果开始标记不存在，创建一个
-    //           if (startMark && !performance.getEntriesByName(startMark, 'mark').length) {
-    //             performance.mark(startMark);
-    //           }
-    //           // 如果结束标记不存在，创建一个
-    //           if (endMark && !performance.getEntriesByName(endMark, 'mark').length) {
-    //             performance.mark(endMark);
-    //           }
-    //           // 调用原始方法
-    //           return originalMeasure.apply(this, arguments);
-    //         } catch (e) {
-    //           // 如果仍然出错，静默处理
-    //           console.warn('Performance measure error:', e);
-    //           return null;
-    //         }
-    //       };
-          
-    //       // 预创建常用的性能标记
-    //       const commonMarks = [
-    //         'hints:start', 'hints:end',
-    //         'hidden_iframe:start', 'hidden_iframe:end',
-    //         'vignette:start', 'vignette:end',
-    //         'ad:start', 'ad:end',
-    //         'script:start', 'script:end'
-    //       ];
-          
-    //       commonMarks.forEach(mark => {
-    //         if (!performance.getEntriesByName(mark, 'mark').length) {
-    //           performance.mark(mark);
-    //         }
-    //       });
-    //     }
-    //   })();
-    // `],
-    // ['script', {}, `
-    //   // 延迟执行广告脚本，确保性能标记已设置
-    //   setTimeout(function() {
-    //     try {
-    //       (function(d,z,s){s.src='https://'+d+'/401/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('groleegni.net',9154483,document.createElement('script'));
-    //     } catch(e) {
-    //       console.warn('Ad script error:', e);
-    //     }
-    //   }, 100);
-    // `],
-    // ['script', {}, `
-    //   // 延迟执行 vignette 脚本
-    //   setTimeout(function() {
-    //     try {
-    //       (function(s){s.dataset.zone='9154483',s.src='https://groleegni.net/vignette.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));
-    //     } catch(e) {
-    //       console.warn('Vignette script error:', e);
-    //     }
-    //   }, 200);
-    // `]
   ],
   
   transformPageData(pageData, ctx) {
@@ -683,21 +504,135 @@ export default defineConfig({
           (article as any).articleSection = '随笔杂谈';
         }
 
-        // 添加图片（如果有）
-        if (pageData.frontmatter.image) {
-          (article as any).image = {
+        // 添加图片（单图或多图，便于 AI/富媒体摘要）
+        if (pageData.frontmatter.images && Array.isArray(pageData.frontmatter.images)) {
+          (article as any).image = pageData.frontmatter.images.map((img: string) => ({
             "@type": "ImageObject",
-            "url": pageData.frontmatter.image.startsWith('http')
-              ? pageData.frontmatter.image
-              : `${baseUrl}${pageData.frontmatter.image}`
-          };
+            "url": img.startsWith('http') ? img : `${baseUrl}${img}`
+          }));
+        } else if (pageData.frontmatter.image) {
+          const imgUrl = pageData.frontmatter.image.startsWith('http')
+            ? pageData.frontmatter.image
+            : `${baseUrl}${pageData.frontmatter.image}`;
+          (article as any).image = { "@type": "ImageObject", "url": imgUrl };
         }
+
+        const desc = pageData.frontmatter.description || pageData.description;
 
         pageData.frontmatter.head.push([
           'script',
           { type: 'application/ld+json' },
           JSON.stringify(article)
         ]);
+
+        // AI 搜索优化：文章页 BreadcrumbList JSON-LD，便于 AI 理解页面层级
+        const pathSegments = currentPath.split('/').filter(Boolean);
+        if (pathSegments.length >= 0) {
+          const breadcrumbList: Record<string, unknown> = {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "首页",
+                "item": { "@id": baseUrl, "@type": "WebPage" }
+              }
+            ]
+          };
+          const segmentNames: Record<string, string> = {
+            dev: '开发与系统',
+            security: '安全',
+            data: '数据与自动化',
+            thinking: '思考/方法论',
+            tools: '工具',
+            backend: '后端',
+            golang: 'Golang',
+            php: 'PHP',
+            python: 'Python',
+            system: '系统',
+            database: '数据库',
+            automation: '自动化',
+            method: '方法论',
+            notes: '随笔',
+            engineering: '安全工程',
+            offensive: '攻防研究',
+            systems: '开发系统'
+          };
+          let accPath = '';
+          pathSegments.forEach((seg, idx) => {
+            accPath += (accPath ? '/' : '') + seg;
+            const isLast = idx === pathSegments.length - 1;
+            const name = isLast ? (pageData.frontmatter.title as string) : (segmentNames[seg] || seg);
+            (breadcrumbList.itemListElement as any[]).push({
+              "@type": "ListItem",
+              "position": (breadcrumbList.itemListElement as any[]).length + 1,
+              "name": name,
+              "item": { "@id": `${baseUrl}/${accPath}`, "@type": isLast ? "Article" : "WebPage" }
+            });
+          });
+          pageData.frontmatter.head.push([
+            'script',
+            { type: 'application/ld+json' },
+            JSON.stringify(breadcrumbList)
+          ]);
+        }
+
+        // AI 搜索优化：frontmatter.faq 生成 FAQPage Schema（大家还在问 / PAA）
+        const faq = pageData.frontmatter.faq;
+        if (Array.isArray(faq) && faq.length > 0) {
+          const faqPage = {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faq
+              .filter((item: any) => item && (item.question || item.q) && (item.answer || item.a))
+              .map((item: any) => ({
+                "@type": "Question",
+                "name": item.question || item.q,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": item.answer || item.a
+                }
+              }))
+          };
+          if ((faqPage.mainEntity as any[]).length > 0) {
+            pageData.frontmatter.head.push([
+              'script',
+              { type: 'application/ld+json' },
+              JSON.stringify(faqPage)
+            ]);
+          }
+        }
+
+        // AI 搜索优化：frontmatter.howTo 生成 HowTo Schema（步骤型教程）
+        const howTo = pageData.frontmatter.howTo;
+        if (howTo && typeof howTo === 'object' && Array.isArray(howTo.steps) && howTo.steps.length > 0) {
+          const name = howTo.name || pageData.frontmatter.title;
+          const steps = howTo.steps.map((s: string | { name: string; text?: string }, i: number) => {
+            if (typeof s === 'string') {
+              return { "@type": "HowToStep", "position": i + 1, "name": s, "text": s };
+            }
+            return {
+              "@type": "HowToStep",
+              "position": i + 1,
+              "name": (s as any).name || (s as any).text || `步骤 ${i + 1}`,
+              "text": (s as any).text || (s as any).name
+            };
+          });
+          const howToSchema = {
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            "name": name,
+            "description": howTo.description || desc || undefined,
+            "step": steps,
+            "totalTime": howTo.totalTime || undefined
+          };
+          pageData.frontmatter.head.push([
+            'script',
+            { type: 'application/ld+json' },
+            JSON.stringify(howToSchema)
+          ]);
+        }
       }
     }
   },

@@ -3,30 +3,52 @@ export default {
   enhanceApp({ app, router }) {
     // 在客户端环境中执行
     if (typeof window !== 'undefined') {
-      // 全局错误处理 - 捕获 Monetag 脚本的 Performance API 错误
+      // 统一静默 Monetag / Ezoic 广告脚本产生的错误，避免控制台刷屏
+
+      // 1. 包装 Performance API 的 measure，静默广告脚本的 mark/measure 报错
+      if (window.performance && window.performance.measure) {
+        const originalMeasure = window.performance.measure.bind(window.performance)
+        window.performance.measure = function (name, startMark, endMark) {
+          try {
+            return originalMeasure(name, startMark, endMark)
+          } catch (e) {
+            const errorMsg = String(e?.message || e)
+            if (errorMsg.includes('blth:start') || errorMsg.includes('hidden_iframe:start') || errorMsg.includes('does not exist')) {
+              return null
+            }
+            throw e
+          }
+        }
+      }
+
+      // 2. 捕获同步错误
       const originalErrorHandler = window.onerror
-      
-      // 捕获同步错误
       window.onerror = (message, source, lineno, colno, error) => {
         const msg = String(message || '')
         const src = String(source || '')
-        
-        // 如果是 Monetag 相关的错误（包括 Performance API、CORS、404），静默处理
-        if (msg.includes('Performance') || 
-            msg.includes('blth:start') || 
+        if (msg.includes('Performance') ||
+            msg.includes('blth:start') ||
             msg.includes('hidden_iframe:start') ||
             msg.includes('tag.min.js') ||
             msg.includes('Failed to execute') ||
+            msg.includes('does not exist') ||
+            msg.includes('_ezaq') ||
+            msg.includes('Monetization not allowed') ||
+            msg.includes('visit_uuid') ||
+            msg.includes('sa.go') ||
+            msg.includes('403') ||
             msg.includes('CORS') ||
             msg.includes('jhnwr.com') ||
             msg.includes('ERR_FAILED') ||
+            msg.includes('404') ||
             src.includes('tag.min.js') ||
             src.includes('nap5k.com') ||
-            src.includes('jhnwr.com')) {
-          // 静默处理，不显示错误
-          return true // 阻止错误冒泡
+            src.includes('jhnwr.com') ||
+            src.includes('sa.min.js') ||
+            src.includes('ezoic') ||
+            src.includes('identity.js')) {
+          return true
         }
-        // 其他错误正常处理
         if (originalErrorHandler) {
           return originalErrorHandler(message, source, lineno, colno, error)
         }
@@ -41,25 +63,36 @@ export default {
         const stack = reason?.stack || String(reason?.stack) || ''
         const name = reason?.name || ''
         
-        // 检查是否是 Monetag 相关的错误（包括 Performance API、CORS、404、timeout）
-        const isMonetagError = 
-          message.includes('Performance') || 
-          message.includes('blth:start') || 
+        // 检查是否是 Monetag 或 Ezoic 相关的错误（包括 Performance API、CORS、404、403、timeout）
+        const isMonetagError =
+          message.includes('Performance') ||
+          message.includes('blth:start') ||
           message.includes('hidden_iframe:start') ||
           message.includes('tag.min.js') ||
           message.includes('Failed to execute') ||
           message.includes('measure') ||
+          message.includes('does not exist') ||
+          message.includes('_ezaq') ||
+          message.includes('Monetization not allowed') ||
+          message.includes('visit_uuid') ||
+          message.includes('sa.go') ||
+          message.includes('403') ||
           message.includes('CORS') ||
           message.includes('jhnwr.com') ||
           message.includes('ERR_FAILED') ||
           message.includes('adex timeout') ||
           message.includes('timeout') ||
+          message.includes('EzoicAds') ||
+          message.includes('bad response') ||
           stack.includes('tag.min.js') ||
           stack.includes('nap5k.com') ||
           stack.includes('jhnwr.com') ||
           stack.includes('blth:start') ||
           stack.includes('hidden_iframe:start') ||
-          name === 'SyntaxError' && (message.includes('Performance') || stack.includes('tag.min.js'))
+          stack.includes('sa.min.js') ||
+          stack.includes('ezoic') ||
+          stack.includes('identity.js') ||
+          (name === 'SyntaxError' && (message.includes('Performance') || stack.includes('tag.min.js')))
         
         if (isMonetagError) {
           event.preventDefault() // 阻止错误显示
@@ -77,11 +110,20 @@ export default {
       
       console.error = function(...args) {
         const errorMsg = args.map(arg => String(arg)).join(' ')
-        // Monetag 相关错误（包括 CORS、404、Performance 等）
-        if (errorMsg.includes('Performance') || 
-            errorMsg.includes('blth:start') || 
-            errorMsg.includes('hidden_iframe:start') || 
+        // Monetag 或 Ezoic 相关错误（包括 CORS、404、403、Performance 等）
+        if (errorMsg.includes('Performance') ||
+            errorMsg.includes('blth:start') ||
+            errorMsg.includes('hidden_iframe:start') ||
             errorMsg.includes('tag.min.js') ||
+            errorMsg.includes('does not exist') ||
+            errorMsg.includes('_ezaq') ||
+            errorMsg.includes('Monetization not allowed') ||
+            errorMsg.includes('visit_uuid') ||
+            errorMsg.includes('sa.go') ||
+            errorMsg.includes('403') ||
+            errorMsg.includes('EzoicAds') ||
+            errorMsg.includes('EzoicAd:') ||
+            errorMsg.includes('bad response') ||
             errorMsg.includes('CORS') ||
             errorMsg.includes('jhnwr.com') ||
             errorMsg.includes('ERR_FAILED') ||
@@ -93,11 +135,17 @@ export default {
         originalConsoleError.apply(console, args)
       }
       
-      console.warn = function(...args) {
+      console.warn = function (...args) {
         const errorMsg = args.map(arg => String(arg)).join(' ')
-        // Monetag 相关警告
-        if (errorMsg.includes('Monetag') || 
+        if (errorMsg.includes('Monetag') ||
             errorMsg.includes('tag.min.js') ||
+            errorMsg.includes('EzoicAd:') ||
+            errorMsg.includes('EzoicAds') ||
+            errorMsg.includes('Monetization not allowed') ||
+            errorMsg.includes('visit_uuid') ||
+            errorMsg.includes('_ezaq') ||
+            errorMsg.includes('sa.go') ||
+            errorMsg.includes('403') ||
             errorMsg.includes('jhnwr.com')) {
           return
         }

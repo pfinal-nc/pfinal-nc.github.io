@@ -1,24 +1,40 @@
 <template>
-  <div v-if="AD_ENABLED" class="article-ads">
-    <!-- 文章中间广告 - In-Page Push 是弹窗式，不会在容器中显示 -->
-    <!-- 注意：In-Page Push 会在页面加载后自动弹出，不需要容器 -->
-    <MonetagAd
-      v-if="isArticlePage && adConfig.articleMiddle.enabled"
-      position="article-middle"
-      :zone-id="adConfig.articleMiddle.zoneId"
-      :ad-type="adConfig.articleMiddle.adType"
-      :enabled="adConfig.articleMiddle.enabled"
-    />
+  <div v-if="AD_ENABLED || EZOIC_ENABLED" class="article-ads">
+    <!-- 文章中间广告 -->
+    <template v-if="isArticlePage">
+      <!-- Ezoic 广告（优先） -->
+      <EzoicAd
+        v-if="adConfig.articleMiddle.ezoic?.enabled"
+        :placement-id="adConfig.articleMiddle.ezoic.placementId"
+        :enabled="adConfig.articleMiddle.ezoic.enabled"
+      />
+      <!-- Monetag 广告（备用） -->
+      <MonetagAd
+        v-else-if="adConfig.articleMiddle.monetag?.enabled"
+        position="article-middle"
+        :zone-id="adConfig.articleMiddle.monetag.zoneId"
+        :ad-type="adConfig.articleMiddle.monetag.adType"
+        :enabled="adConfig.articleMiddle.monetag.enabled"
+      />
+    </template>
     
-    <!-- 文章底部广告 - Native Banner 是全屏式，也不会在容器中显示 -->
-    <!-- 注意：Native Banner (Interstitial) 会在页面加载后全屏显示，不需要容器 -->
-    <MonetagAd
-      v-if="isArticlePage && adConfig.articleBottom.enabled"
-      position="article-bottom"
-      :zone-id="adConfig.articleBottom.zoneId"
-      :ad-type="adConfig.articleBottom.adType"
-      :enabled="adConfig.articleBottom.enabled"
-    />
+    <!-- 文章底部广告 -->
+    <template v-if="isArticlePage">
+      <!-- Ezoic 广告（优先） -->
+      <EzoicAd
+        v-if="adConfig.articleBottom.ezoic?.enabled"
+        :placement-id="adConfig.articleBottom.ezoic.placementId"
+        :enabled="adConfig.articleBottom.ezoic.enabled"
+      />
+      <!-- Monetag 广告（备用） -->
+      <MonetagAd
+        v-else-if="adConfig.articleBottom.monetag?.enabled"
+        position="article-bottom"
+        :zone-id="adConfig.articleBottom.monetag.zoneId"
+        :ad-type="adConfig.articleBottom.monetag.adType"
+        :enabled="adConfig.articleBottom.monetag.enabled"
+      />
+    </template>
   </div>
 </template>
 
@@ -26,7 +42,8 @@
 import { computed } from 'vue'
 import { useRoute } from 'vitepress'
 import MonetagAd from './MonetagAd.vue'
-import adConfig, { AD_ENABLED } from '../config/ad-config'
+import EzoicAd from './EzoicAd.vue'
+import adConfig, { AD_ENABLED, EZOIC_ENABLED } from '../config/ad-config'
 
 const route = useRoute()
 
