@@ -130,6 +130,7 @@ export default defineConfig({
       ezstandalone.cmd = ezstandalone.cmd || [];
       // 初始化 _ezaq 以避免 "is not defined" 错误
       window._ezaq = window._ezaq || [];
+      
     `],
     // 广告脚本错误静默已统一在 theme/client.js 中处理
     ['link', { rel: 'icon', href: '/favicon.ico' }],
