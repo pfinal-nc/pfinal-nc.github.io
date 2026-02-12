@@ -38,7 +38,7 @@ export default defineConfig({
       },
       { text: '数据与自动化', link: '/data/automation/' },
       { text: '思考/方法论', link: '/thinking/method/' },
-      { text: '在线工具', link: '/Tools/online-tools' }
+      { text: '在线工具', link: '/Tools/' }
     ],
     socialLinks: [
       { icon: 'github', link: 'https://github.com/pfinal-nc' },
