@@ -1,37 +1,13 @@
 # robots.txt for friday-go.icu
-# Updated: 2025-12-15
+# Updated: 2026-02-11
 
 User-agent: *
 Allow: /
 
-# 不索引标签页面和带参数的URL
-Disallow: /*?tag=
-Disallow: /*?type=
-Disallow: /*?category=
-Disallow: /*?*
+# Sitemap location
+Sitemap: https://friday-go.icu/sitemap.xml
 
-# 不索引子域名（如果意外被访问）
-Disallow: /pnav.friday-go.icu/
-Disallow: /nav.friday-go.icu/
-Disallow: /game.friday-go.icu/
-Disallow: /miao.friday-go.icu/
-
-# 不索引旧的URL格式（带.html后缀）
-Disallow: /*.html$
-
-# 不索引404页面
-Disallow: /404
-Disallow: /404.html
-
-# Sitemap 可以访问，但不应该被索引（通过 HTTP 响应头控制）
-# 注意：robots.txt 不能直接禁止索引 sitemap.xml，需要通过服务器配置或 meta 标签
-# 这里我们允许访问 sitemap.xml，但会在 sitemap.xml 的 HTTP 响应头中添加 noindex
-
-# 不索引其他 XML 系统文件（但允许 sitemap.xml 被访问）
-Disallow: /*.xml$
-Allow: /sitemap.xml
-
-# 允许静态资源
+# Allow static assets
 Allow: /*.css$
 Allow: /*.js$
 Allow: /*.png$
@@ -41,18 +17,33 @@ Allow: /*.gif$
 Allow: /*.svg$
 Allow: /*.ico$
 
-# Sitemap 位置
-Sitemap: https://friday-go.icu/sitemap.xml
+# Disallow specific patterns
+Disallow: /*?tag=
+Disallow: /*?type=
+Disallow: /*?category=
+Disallow: /*?*
+Disallow: /404$
+Disallow: /404.html$
+Disallow: /*.html$  # Clean URLs preferred
 
-# 针对不同搜索引擎的特殊设置
+# Allow major search engines to crawl everything else
 User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
 Allow: /
 
 User-agent: Bingbot
 Allow: /
 
-User-agent: Baiduspider
+User-agent: Slurp
 Allow: /
 
-# Sitemap 位置
-Sitemap: https://friday-go.icu/sitemap.xml
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
+# Host declaration
+Host: friday-go.icu
