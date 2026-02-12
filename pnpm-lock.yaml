@@ -13,7 +13,7 @@ dependencies:
     version: 3.0.0(vue@3.5.12)
   '@sugarat/theme':
     specifier: ^0.5.4
-    version: 0.5.4(@element-plus/icons-vue@2.3.1)(element-plus@2.9.6)(pagefind@1.3.0)(typescript@5.8.2)(vitepress@1.6.3)(vue@3.5.12)
+    version: 0.5.4(@element-plus/icons-vue@2.3.1)(element-plus@2.9.6)(pagefind@1.3.0)(typescript@5.8.2)(vitepress@1.6.4)(vue@3.5.12)
   element-plus:
     specifier: ^2.7.2
     version: 2.9.6(vue@3.5.12)
@@ -41,8 +41,8 @@ devDependencies:
     specifier: ^5.4.5
     version: 5.8.2
   vitepress:
-    specifier: 1.6.3
-    version: 1.6.3(sass@1.85.1)(typescript@5.8.2)
+    specifier: 1.6.4
+    version: 1.6.4(sass@1.85.1)(typescript@5.8.2)
 
 packages:
 
@@ -964,7 +964,7 @@ packages:
       gray-matter: 4.0.3
     dev: false
 
-  /@sugarat/theme@0.5.4(@element-plus/icons-vue@2.3.1)(element-plus@2.9.6)(pagefind@1.3.0)(typescript@5.8.2)(vitepress@1.6.3)(vue@3.5.12):
+  /@sugarat/theme@0.5.4(@element-plus/icons-vue@2.3.1)(element-plus@2.9.6)(pagefind@1.3.0)(typescript@5.8.2)(vitepress@1.6.4)(vue@3.5.12):
     resolution: {integrity: sha512-x0eq6TcjWb+5Zh8odn7bVYsnZWsh/Z2fHoqLn287jvGo7fws4Z8AU/mK0/Zii5JKrCbFN+tY7bnI1F9vW4p61g==}
     peerDependencies:
       '@element-plus/icons-vue': ^2.3.1
@@ -983,12 +983,12 @@ packages:
       oh-my-live2d: 0.19.3
       swiper: 11.2.5
       vitepress-markdown-timeline: 1.2.2
-      vitepress-plugin-announcement: 0.1.4(vitepress@1.6.3)
+      vitepress-plugin-announcement: 0.1.4(vitepress@1.6.4)
       vitepress-plugin-group-icons: 1.3.7
-      vitepress-plugin-mermaid: 2.0.13(mermaid@10.9.3)(vitepress@1.6.3)
+      vitepress-plugin-mermaid: 2.0.13(mermaid@10.9.3)(vitepress@1.6.4)
       vitepress-plugin-pagefind: 0.4.13(pagefind@1.3.0)(typescript@5.8.2)
-      vitepress-plugin-rss: 0.3.1(vitepress@1.6.3)
-      vitepress-plugin-tabs: 0.2.0(vitepress@1.6.3)(vue@3.5.12)
+      vitepress-plugin-rss: 0.3.1(vitepress@1.6.4)
+      vitepress-plugin-tabs: 0.2.0(vitepress@1.6.4)(vue@3.5.12)
     transitivePeerDependencies:
       - '@vue/composition-api'
       - pagefind
@@ -2920,13 +2920,13 @@ packages:
       dayjs: 1.11.13
     dev: false
 
-  /vitepress-plugin-announcement@0.1.4(vitepress@1.6.3):
+  /vitepress-plugin-announcement@0.1.4(vitepress@1.6.4):
     resolution: {integrity: sha512-3z39IJmN1GOyLwIZtGLV9uMUdH5xonMV+ELUgFZ0TOrF+1+HEFQo0gXYF+5tbFZcqEJgU5ESPLM29nkfzSRToQ==}
     peerDependencies:
       vitepress: ^1
     dependencies:
       javascript-stringify: 2.1.0
-      vitepress: 1.6.3(sass@1.85.1)(typescript@5.8.2)
+      vitepress: 1.6.4(sass@1.85.1)(typescript@5.8.2)
     dev: false
 
   /vitepress-plugin-group-icons@1.3.7:
@@ -2939,14 +2939,14 @@ packages:
       - supports-color
     dev: false
 
-  /vitepress-plugin-mermaid@2.0.13(mermaid@10.9.3)(vitepress@1.6.3):
+  /vitepress-plugin-mermaid@2.0.13(mermaid@10.9.3)(vitepress@1.6.4):
     resolution: {integrity: sha512-2c0ywXHE7kOK88Ygla9aGgkyF2JbfqfjE36JnoljW/3hQTR9rYBmfTFM5tvs4TUjCUfedUYT4CeyNolCY9t3uw==}
     peerDependencies:
       mermaid: '10'
       vitepress: ^0.21.6 || ^1.0.0 || ^1.0.0-alpha
     dependencies:
       mermaid: 10.9.3
-      vitepress: 1.6.3(sass@1.85.1)(typescript@5.8.2)
+      vitepress: 1.6.4(sass@1.85.1)(typescript@5.8.2)
     optionalDependencies:
       '@mermaid-js/mermaid-mindmap': 9.3.0
     dev: false
@@ -2967,28 +2967,28 @@ packages:
       - typescript
     dev: false
 
-  /vitepress-plugin-rss@0.3.1(vitepress@1.6.3):
+  /vitepress-plugin-rss@0.3.1(vitepress@1.6.4):
     resolution: {integrity: sha512-Q0tJ/j6D0c0WXG/VEF1FNyR8Kv72GPwytUipwKEx+3zL4/AllCgYkY/Hom38zY7t7bcDk5qXeudbhoIWT+1Q+A==}
     peerDependencies:
       vitepress: ^1
     dependencies:
       '@sugarat/theme-shared': 0.0.4
       feed: 4.2.2
-      vitepress: 1.6.3(sass@1.85.1)(typescript@5.8.2)
+      vitepress: 1.6.4(sass@1.85.1)(typescript@5.8.2)
     dev: false
 
-  /vitepress-plugin-tabs@0.2.0(vitepress@1.6.3)(vue@3.5.12):
+  /vitepress-plugin-tabs@0.2.0(vitepress@1.6.4)(vue@3.5.12):
     resolution: {integrity: sha512-jTdtz4Z5fHllzcDAJaJK/bxE/2PhJSqetFUFgiB7xzw23O4yI+ntJrN+D3oP8XH/0559QUbrYd0K3YLoRaHbAA==}
     peerDependencies:
       vitepress: ^1.0.0-alpha.29
       vue: ^3.2.45
     dependencies:
-      vitepress: 1.6.3(sass@1.85.1)(typescript@5.8.2)
+      vitepress: 1.6.4(sass@1.85.1)(typescript@5.8.2)
       vue: 3.5.12(typescript@5.8.2)
     dev: false
 
-  /vitepress@1.6.3(sass@1.85.1)(typescript@5.8.2):
-    resolution: {integrity: sha512-fCkfdOk8yRZT8GD9BFqusW3+GggWYZ/rYncOfmgcDtP3ualNHCAg+Robxp2/6xfH1WwPHtGpPwv7mbA3qomtBw==}
+  /vitepress@1.6.4(sass@1.85.1)(typescript@5.8.2):
+    resolution: {integrity: sha512-+2ym1/+0VVrbhNyRoFFesVvBvHAVMZMK0rw60E3X/5349M1GuVdKeazuksqopEdvkKwKGs21Q729jX81/bkBJg==}
     hasBin: true
     peerDependencies:
       markdown-it-mathjax3: ^4

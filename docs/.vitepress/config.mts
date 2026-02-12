@@ -25,7 +25,17 @@ export default defineConfig({
       { text: '首页', link: '/' },
       { text: '攻防研究', link: '/security/offensive/' },
       { text: '安全工程', link: '/security/engineering/' },
-      { text: '开发与系统', link: '/dev/' },
+      {
+        text: '开发与系统',
+        items: [
+          { text: '总览', link: '/dev/' },
+          { text: '🚀 Golang', link: '/dev/backend/golang/' },
+          { text: '🐘 PHP', link: '/dev/backend/php/' },
+          { text: '🐍 Python', link: '/dev/backend/python/' },
+          { text: '💾 数据库', link: '/dev/system/database/' },
+          { text: '💻 系统与基础', link: '/dev/system/' }
+        ]
+      },
       { text: '数据与自动化', link: '/data/automation/' },
       { text: '思考/方法论', link: '/thinking/method/' },
       { text: '在线工具', link: '/Tools/online-tools' }
@@ -109,12 +119,12 @@ export default defineConfig({
   lastUpdated: true,
   cleanUrls: true, // 移除 .html 后缀，提升 SEO
   head: [
-    // Ezoic Header Scripts - 必须在所有其他脚本之前加载
-    // Privacy Scripts（隐私脚本，必须先加载）
-    ['script', { 'data-cfasync': 'false', src: 'https://cmp.gatekeeperconsent.com/min.js' }],
-    ['script', { 'data-cfasync': 'false', src: 'https://the.gatekeeperconsent.com/cmp.min.js' }],
+    // Ezoic 脚本使用 defer，避免阻塞首屏渲染导致布局错乱
+    // Privacy Scripts（隐私脚本）
+    ['script', { 'data-cfasync': 'false', defer: '', src: 'https://cmp.gatekeeperconsent.com/min.js' }],
+    ['script', { 'data-cfasync': 'false', defer: '', src: 'https://the.gatekeeperconsent.com/cmp.min.js' }],
     // Ezoic Header Script（主脚本）
-    ['script', { async: '', src: '//www.ezojs.com/ezoic/sa.min.js' }],
+    ['script', { defer: '', src: '//www.ezojs.com/ezoic/sa.min.js' }],
     ['script', {}, `
       window.ezstandalone = window.ezstandalone || {};
       ezstandalone.cmd = ezstandalone.cmd || [];

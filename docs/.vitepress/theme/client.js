@@ -41,6 +41,8 @@ export default {
             msg.includes('jhnwr.com') ||
             msg.includes('ERR_FAILED') ||
             msg.includes('404') ||
+            msg.includes('identity bridging') ||
+            msg.includes('identity bridging scripts') ||
             src.includes('tag.min.js') ||
             src.includes('nap5k.com') ||
             src.includes('jhnwr.com') ||
@@ -127,8 +129,10 @@ export default {
             errorMsg.includes('CORS') ||
             errorMsg.includes('jhnwr.com') ||
             errorMsg.includes('ERR_FAILED') ||
-            errorMsg.includes('404')) {
-          // 静默处理 Monetag 错误
+            errorMsg.includes('404') ||
+            errorMsg.includes('identity bridging') ||
+            (errorMsg.includes('identity') && errorMsg.includes('Timeout'))) {
+          // 静默处理 Monetag/Ezoic 广告脚本错误
           return
         }
         // 其他错误正常输出
@@ -146,7 +150,9 @@ export default {
             errorMsg.includes('_ezaq') ||
             errorMsg.includes('sa.go') ||
             errorMsg.includes('403') ||
-            errorMsg.includes('jhnwr.com')) {
+            errorMsg.includes('jhnwr.com') ||
+            errorMsg.includes('identity bridging') ||
+            (errorMsg.includes('identity') && errorMsg.includes('Timeout'))) {
           return
         }
         originalConsoleWarn.apply(console, args)

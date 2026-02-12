@@ -16,6 +16,20 @@ date: 2025-12-19 12:30:00
 
 定位：从工程实践出发，覆盖后端工程、系统架构、性能优化、容器化部署，涵盖 Go / PHP / Python / Node.js 全栈技术。
 
+---
+
+## ⚡ 快速入口
+
+| 分类 | 链接 | 说明 |
+|------|------|------|
+| 🚀 **Golang** | [进入 Golang 专题 →](/dev/backend/golang/) | Web 框架、并发编程、性能优化、工具链 |
+| 🐘 **PHP** | [进入 PHP 专题 →](/dev/backend/php/) | Laravel、现代 PHP、配置与部署 |
+| 🐍 **Python** | [进入 Python 专题 →](/dev/backend/python/) | 异步编程、数据可视化、开发工具 |
+| 💾 **数据库** | [进入数据库专题 →](/dev/system/database/) | MySQL、PostgreSQL、Redis 实战 |
+| 💻 **系统与基础** | [进入系统专题 →](/dev/system/) | Linux、容器、可观测性 |
+
+---
+
 ## 核心内容版块
 
 - **后端工程** - Go / PHP / Python / Node 实战开发

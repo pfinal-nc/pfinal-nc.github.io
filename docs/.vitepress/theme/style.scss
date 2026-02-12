@@ -1,3 +1,16 @@
+/* 修复首页内容区与侧边栏布局重叠 */
+.home .content-wrapper {
+  display: flex;
+  align-items: flex-start;
+  .blog-list-wrapper {
+    flex: 1;
+    min-width: 0;
+  }
+  .blog-info-wrapper {
+    flex-shrink: 0;
+  }
+}
+
 .VPHome {
   // 定义遮罩样式
   background: radial-gradient(ellipse,

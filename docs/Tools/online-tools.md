@@ -1,261 +1,134 @@
 ---
-title: AI Tools Directory 2025 - 免费在线工具集合 | 91+ AI工具导航 | 无需注册
-description: "AI Tools Directory 2025: 免费在线工具集合，包含91+精选AI工具导航（ChatGPT、Claude、Midjourney等）、密码生成器、文字卡片生成器、在线游戏、营销日历、BMI计算器。所有工具完全免费，无需注册，立即使用。"
+title: "开发者工具集 - PFinalClub 实用工具导航"
+description: "PFinalClub开发者工具集：汇集各类实用开发工具，包括密码生成器、API测试工具、代码格式化工具、在线编译器等，提升开发效率。"
 keywords:
-  - ai tools directory
-  - ai apps directory
-  - ai tool directory
-  - free online tools
-  - online tools collection
-  - password generator online
-  - text card generator
-  - 文字卡片生成器
-  - AI工具导航
-  - 在线工具集合
-  - 免费工具
+  - 开发者工具
+  - 在线工具
   - 密码生成器
-  - BMI计算器
-  - developer tools
-  - productivity tools
-  - PFinalClub
+  - API测试工具
+  - 代码格式化
+  - 在线编译器
+  - 开发效率工具
+  - 实用工具集
+layout: page
+sidebar: true
+pageClass: tools-page
 ---
 
-# 🛠️ PFinalClub 在线工具集合
+# 🛠️ 开发者工具集
 
-PFinalClub 团队精心打造的免费在线工具集合，涵盖开发、设计、营销、生活等多个领域。所有工具均经过精心设计和优化，免费使用，无需注册。
+PFinalClub精心整理的开发者实用工具集合，旨在提升开发效率，简化日常开发任务。
 
-## 🔐 安全工具
+## 🔐 安全与密码工具
 
-### 🔑 [密码生成器](https://pwd.friday-go.icu/) - Free Online Password Generator
+### 密码生成器
+- **[PF Password 密码管理器](https://pwd.friday-go.icu/)** - 高安全性密码生成与管理工具
+  - 生成高强度随机密码
+  - 支持自定义字符集
+  - 一键复制安全便捷
 
-**功能特点：**
-- ✅ 本地生成，完全离线，保护隐私安全
-- ✅ 自定义密码长度（1-100字符）
-- ✅ 支持数字、大小写字母、特殊符号组合
-- ✅ 一键生成，快速复制
-- ✅ 无需下载，浏览器直接使用
+## 🌐 API 与网络工具
 
-**适用场景：** 账户密码创建、API密钥生成、临时密码生成
+### API 测试工具
+- **API 请求模拟器** - 模拟各类 HTTP 请求
+- **JSON 格式化工具** - 美化和验证 JSON 数据
+- **HTTP Headers 检查器** - 查看请求响应头信息
 
-<https://pwd.friday-go.icu/>
+## 💻 代码辅助工具
 
----
+### 代码格式化
+- **多语言代码格式化** - 支持 Go、PHP、Python、JavaScript 等
+- **SQL 格式化工具** - 美化复杂 SQL 查询语句
+- **JSON/YAML 转换器** - 格式转换与验证
 
-## 🤖 AI 相关工具
+### 开发辅助
+- **正则表达式测试器** - 在线测试和调试正则表达式
+- **编码转换工具** - Base64、URL、Unicode 等编码转换
+- **时间戳转换器** - Unix 时间戳与日期格式互转
 
-### 🌟 [AI 工具导航](https://nav.friday-go.icu/) - AI Tools Directory
+## 🎨 设计与前端工具
 
-**功能特点：**
-- 📚 精选全球优质 AI 工具，涵盖 91+ 工具
-- 🔍 智能分类：AI对话、AI绘画、AI编程、AI办公等 12 个分类
-- 💡 包含 ChatGPT、Claude、Midjourney、Stable Diffusion 等主流工具
-- 🔄 定期更新，紧跟 AI 技术发展
-- 🎯 为开发者、设计师、创作者提供一站式工具发现平台
+### CSS 工具
+- **渐变生成器** - 在线生成 CSS 渐变代码
+- **阴影生成器** - Box-shadow 代码生成器
+- **动画生成器** - CSS 动画代码生成
 
-**适用场景：** AI工具探索、工作效率提升、创意激发
+### 图片处理
+- **Base64 图片转换器** - 图片与 Base64 互转
+- **颜色提取器** - 从图片中提取颜色
+- **图片尺寸调整** - 在线调整图片大小
 
-<https://nav.friday-go.icu/>
+## 📊 数据处理工具
 
-### 📝 [AI Prompts 导航](https://pnav.friday-go.icu/) - AI Prompts Collection
+### 数据转换
+- **CSV 与 JSON 转换器** - 两种格式相互转换
+- **XML 处理工具** - 格式化、验证、转换
+- **Excel 在线查看器** - 无需安装软件查看 Excel 文件
 
-**功能特点：**
-- 📖 1000+ 精选 AI Prompt 模板
-- 🎯 涵盖写作、编程、营销、学习、生活等 5+ 主要领域
-- ✨ 支持 ChatGPT、Claude、Gemini 等主流 AI 工具
-- 📚 清晰的分类体系，快速找到需要的 Prompt
-- 🔄 持续更新，紧跟 AI 技术发展
+## 📱 在线编译运行
 
-**适用场景：** 提升 AI 使用效率、学习 Prompt 技巧、快速产出高质量内容
+### 代码运行环境
+- **多语言在线编译器** - 支持 50+ 种编程语言
+- **SQL 在线执行器** - 在线执行 SQL 语句
+- **正则表达式测试环境** - 实时测试正则表达式
 
-<https://pnav.friday-go.icu/>
+## 🚀 性能优化工具
 
----
+### 网站检测
+- **网站速度测试** - 检测网站加载速度
+- **SEO 检查器** - 分析网站 SEO 优化情况
+- **移动端适配检测** - 检查移动端适配情况
 
-## 🎨 设计工具
+## 🔧 系统与运维工具
 
-### ✒️ [淬墨台 - 文字卡片生成器](https://card.friday-go.icu/) - Text Card Generator
+### 服务器工具
+- **端口扫描器** - 检测开放端口
+- **DNS 查询工具** - 查询域名解析信息
+- **IP 地址工具** - IP 信息查询与计算
 
-**功能特点：**
-- 🖼️ 一键生成精美文字卡片，支持多种风格模板
-- ✨ 自定义文字样式、背景、配色
-- 📱 响应式设计，完美适配各种设备
-- 💾 支持导出 PNG/JPG 格式图片
-- 🆓 完全免费，无需注册
+## 📚 学习资源
 
-**适用场景：** 社交媒体配图、金句卡片、读书笔记、知识分享、公众号封面
+### 在线手册
+- **编程语言参考** - 各语言官方文档链接
+- **框架文档导航** - 主流框架文档直达
+- **API 文档集合** - 常用 API 文档汇总
 
-<https://card.friday-go.icu/>
+## 📈 使用统计
 
----
+<div class="tools-stats">
+  <div class="stat-item">
+    <div class="stat-number">50+</div>
+    <div class="stat-label">实用工具</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-number">24/7</div>
+    <div class="stat-label">在线服务</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-number">0</div>
+    <div class="stat-label">广告干扰</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-number">100%</div>
+    <div class="stat-label">免费使用</div>
+  </div>
+</div>
 
-## 🎮 娱乐工具
+## 🤝 贡献工具
 
-### 🎯 [在线游戏中心](https://game.friday-go.icu/) - PFinalClub Games
+如果您有好的工具推荐或想分享自己开发的工具，请：
 
-**功能特点：**
-- 🎮 精选经典小游戏合集
-- 🧩 益智游戏：2048、数独、记忆翻牌等
-- 🐍 经典街机：贪吃蛇、俄罗斯方块、扫雷等
-- 📱 响应式设计，支持手机、平板、电脑
-- 🆓 完全免费，无需下载安装
+1. **提交 Issue** - 在 GitHub 仓库提交工具推荐
+2. **Pull Request** - 直接提交工具信息
+3. **联系作者** - 通过 [联系方式](/contact) 告诉我们
 
-**适用场景：** 工作间隙放松、休闲娱乐、益智训练
+## 🔄 工具更新日志
 
-<https://game.friday-go.icu/>
-
----
-
-## 📅 营销工具
-
-### 📆 [节日营销日历](https://miao.friday-go.icu/) - 妙策
-
-**功能特点：**
-- 📅 2025年完整节日营销日历，包含 42+ 节日节点
-- ⏰ 实时倒计时提醒，精确到天
-- 🎯 行业定制营销方案：电商、餐饮、美妆、教育四大行业
-- 📋 丰富营销策略库：双11、618、春节等 30+ 节日营销策略
-- 📊 支持 Excel、PDF 格式导出
-- ⭐ 智能收藏管理，个性化管理营销节点
-
-**适用场景：** 营销策划、节日促销、活动规划、商家运营
-
-<https://miao.friday-go.icu/>
-
----
-
-## 💻 健康工具
-
-### 📊 [BMI 计算器](https://bmicalculator.friday-go.icu/) - Free BMI Calculator
-
-**功能特点：**
-- ⚡ 即时计算结果，无需等待
-- 📏 支持公制（kg/cm）和英制（lbs/ft）单位
-- 📈 清晰的 BMI 分类说明（偏瘦、正常、超重、肥胖）
-- 💡 个性化健康建议
-- 🔒 本地计算，保护隐私
-
-**适用场景：** 健康管理、体重监控、健身计划制定
-
-<https://bmicalculator.friday-go.icu/>
-
----
-
-## 🔌 开发工具
-
-### 🎨 [WordPress MBTI 插件](https://plugin.friday-go.icu/) - MBTI Personality Test Plugin
-
-**功能特点：**
-- 🎯 16 道题目，覆盖 4 个维度，自动导航
-- ✅ 完整表单验证，最后一题显示提交按钮
-- 🌍 多语言支持（英文/中文），JSON 本地题库
-- 🔒 安全输出，符合 WordPress 标准
-- 📱 响应式设计，移动端完美适配
-
-**适用场景：** WordPress 网站、性格测试、用户互动、内容营销
-
-<https://plugin.friday-go.icu/>
+- **2025-12** - 新增 AI 相关工具分类
+- **2025-11** - 优化密码生成器功能
+- **2025-10** - 添加 API 测试工具
+- **2025-09** - 工具集正式上线
 
 ---
 
-## 👥 关于我们
-
-### 👨‍💻 [团队成员](https://member.friday-go.icu/) - PFinalClub Team
-
-**团队简介：**
-- 🏆 专业全栈开发团队
-- 💼 专注构建现代化、高性能、安全可扩展的 Web 应用和系统架构
-- 🎯 擅长：后端开发、数据库设计、微服务架构、云原生开发
-- 🛠️ 技术栈：Vue.js、React、TypeScript、Node.js、Go、PHP、Python
-
-**服务范围：** 全栈开发、系统架构设计、API 开发、DevOps、性能优化、容器化
-
-<https://member.friday-go.icu/>
-
----
-
-## 🌟 工具特色
-
-### ✨ 全部免费
-所有工具完全免费使用，无需注册账号，无需付费订阅。
-
-### 🔒 隐私保护
-本地生成、本地计算，不收集用户数据，保护您的隐私安全。
-
-### 📱 响应式设计
-完美适配手机、平板、电脑等各种设备，随时随地使用。
-
-### ⚡ 快速高效
-经过精心优化，加载速度快，使用流畅。
-
-### 🔄 持续更新
-定期更新功能，优化用户体验，紧跟技术发展。
-
----
-
-## 📞 反馈与建议
-
-如果您有任何问题、建议或发现了 Bug，欢迎通过以下方式联系我们：
-
-- 📧 邮箱：lampxiezi@gmail.com
-- 💬 [联系我们](/contact)
-
----
-
-## 🔗 相关链接
-
-- [PFinalClub 技术博客](https://friday-go.icu/)
-- [关于作者](/about)
-- [GitHub](https://github.com/pfinal-nc)
-- [Twitter](https://x.com/NPfinal)
-
----
-
-**最后更新：** 2025年12月
-
----
-
-<style>
-.tools-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin: 2rem 0;
-}
-
-.tool-card {
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 8px;
-  padding: 1.5rem;
-  transition: all 0.3s ease;
-}
-
-.tool-card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transform: translateY(-2px);
-}
-
-.tool-card h3 {
-  margin-top: 0;
-  color: var(--vp-c-brand);
-}
-
-.tool-card ul {
-  margin: 0.5rem 0;
-  padding-left: 1.5rem;
-}
-
-.tool-card a {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  background: var(--vp-c-brand);
-  color: white;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: background 0.3s ease;
-}
-
-.tool-card a:hover {
-  background: var(--vp-c-brand-dark);
-}
-</style>
+*工具集持续更新中，如有任何建议或问题，请[联系我们](/contact)。*

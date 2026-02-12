@@ -1,70 +1,13 @@
-import BlogTheme from '@sugarat/theme'
-import type { Theme } from 'vitepress'
-import { h } from 'vue'
+import DefaultTheme from "@sugarat/theme"
+import clientEnhance from "./client.js"
 
-// 导入客户端增强文件
-import clientEnhance from './client'
+import "./user-theme.css"
+import "./style.scss"
 
-// 导入Giscus评论组件
-import GiscusComment from './components/GiscusComment.vue'
-
-// 导入Cookie同意横幅组件
-import CookieConsent from './components/CookieConsent.vue'
-
-// 导入阅读进度条组件
-import ReadingProgress from './components/ReadingProgress.vue'
-
-// 导入面包屑导航组件
-import Breadcrumb from './components/Breadcrumb.vue'
-
-// 导入自定义 404 页面组件
-import NotFound from './components/NotFound.vue'
-
-// 导入文章广告组件
-import ArticleAds from './components/ArticleAds.vue'
-// 延伸阅读内链组件（提升内链密度）
-import ArticleRelatedLinks from './components/ArticleRelatedLinks.vue'
-
-// 自定义样式重载
-import './style.scss'
-
-
-// 自定义主题色
-// import './user-theme.css'
-
-// 扩展默认主题
-const theme: Theme = {
-  ...BlogTheme,
+export default {
+  extends: DefaultTheme,
   enhanceApp(ctx) {
-    // 应用客户端增强
-    clientEnhance.enhanceApp(ctx)
-    
-    // 注册Giscus评论组件
-    ctx.app.component('GiscusComment', GiscusComment)
-    
-    // 注册文章广告组件
-    ctx.app.component('ArticleAds', ArticleAds)
-    ctx.app.component('ArticleRelatedLinks', ArticleRelatedLinks)
-  },
-  Layout: () => {
-    return h(BlogTheme.Layout, null, {
-      // 在页面顶部插入阅读进度条
-      'layout-top': () => h(ReadingProgress),
-      // 在文档顶部插入面包屑导航
-      'doc-top': () => h(Breadcrumb),
-      // 在文档底部插入广告、延伸阅读、评论（延伸阅读提升内链密度）
-      'doc-after': () => [
-        h(ArticleAds),
-        h(ArticleRelatedLinks),
-        h(GiscusComment)
-      ],
-      // 在页面底部插入Cookie同意横幅
-      'layout-bottom': () => h(CookieConsent),
-      // 使用自定义 404 页面（带智能重定向）
-      'not-found': () => h(NotFound)
-    })
+    // 调用 client.js 的 enhanceApp（404 重定向、标签隐藏、统计等）
+    clientEnhance.enhanceApp?.(ctx)
   }
 }
-
-
-export default theme
