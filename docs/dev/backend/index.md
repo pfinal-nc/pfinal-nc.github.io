@@ -1,5 +1,5 @@
 ---
-title: 后端工程导航
+title: 后端工程 2025 - Go/PHP/Python 技术导航
 description: 聚合 Go/PHP/Python 等后端工程实践与性能优化文章。
 tags:
   - golang

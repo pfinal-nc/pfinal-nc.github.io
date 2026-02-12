@@ -3,7 +3,7 @@ title: "Go 服务端事件推送 SSE - 实战指南"
 date: 2024-08-22T09:32:24.000Z
 tags:
   - golang
-description: 介绍一款快速创建golang项目的工具
+description: 使用 Go 实现服务端事件推送 SSE 的完整实战指南，对比 WebSocket 选型与实现
 author: PFinal南丞
 keywords: '使用Go实现服务端事件推送SSE, golang, 项目创建, 快速创建, 工具, 项目, 快速, 工具'
 recommend: 后端工程

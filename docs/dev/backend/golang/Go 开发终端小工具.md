@@ -1,5 +1,5 @@
 ---
-title: Go 开发终端小工具完整指南 - 从零构建实用 CLI 工具
+title: Go 终端小工具开发 - 从零构建实用 CLI 完整指南
 date: 2023-11-09T17:22:37.000Z
 tags:
   - golang

@@ -3,7 +3,7 @@ title: AutoCorrent专有名词大小写扩展包
 date: 2024-08-23T17:15:27.000Z
 tags:
   - golang
-description: 介绍一款快速创建golang项目的工具
+description: 介绍 Go 专有名词大小写自动校正扩展包 AutoCorrect 的使用方法与最佳实践
 author: PFinal南丞
 keywords: 'AutoCorrent专有名词大小写扩展包, golang, 项目创建, 快速创建, 工具, 项目, 快速, 工具'
 recommend: 后端工程

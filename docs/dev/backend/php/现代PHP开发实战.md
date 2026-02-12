@@ -1,5 +1,5 @@
 ---
-title: PHP 8.x 高阶实战：架构、性能与工程化 | 现代PHP开发指南
+title: PHP 8.x 高阶实战 2025 - 架构、性能与工程化完整指南
 description: >-
   深入探索PHP
   8.x新特性、架构设计、性能优化和工程化实践。涵盖Attributes、Enums、Fibers、Laravel框架、API设计、并发编程、DevOps等高级主题。

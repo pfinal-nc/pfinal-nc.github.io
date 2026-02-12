@@ -1,5 +1,5 @@
 ---
-title: Python-Faker 完整使用指南 - 如何集成并掌握核心功能
+title: Python Faker 库 - 完整使用指南与常用函数实战
 date: 2023-04-05T22:10:20.000Z
 tags:
   - python

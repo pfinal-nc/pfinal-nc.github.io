@@ -1,5 +1,5 @@
 ---
-title: ThinkPHP 8.1.3 完整指南 2025 - 近20年中国Web开发的时代印记与实战技巧
+title: ThinkPHP 近 20 年 - 中国 Web 开发的时代印记与实战经验
 date: 2025-07-16T10:00:02.000Z
 author: PFinal南丞
 tags:

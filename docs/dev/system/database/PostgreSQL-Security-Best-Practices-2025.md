@@ -1,5 +1,5 @@
 ---
-title: "PostgreSQL Security Best Practices 2025 - 生产环境安全加固完整指南"
+title: "PostgreSQL 安全最佳实践 2025 - 生产环境加固完整指南"
 date: 2025-12-18
 updated: 2025-12-18
 authors:

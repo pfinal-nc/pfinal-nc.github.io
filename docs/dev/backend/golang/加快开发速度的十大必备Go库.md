@@ -1,5 +1,5 @@
 ---
-title: 10 Essential Go Libraries 2025 - 加速开发的必备工具指南
+title: Golang 10 大必备库 2025 - 加速开发的实战指南
 date: 2025-07-12T10:30:00.000Z
 tags:
   - golang

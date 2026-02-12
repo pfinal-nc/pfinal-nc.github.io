@@ -1,5 +1,5 @@
 ---
-title: Create Go App CLI 一款快速创建golang项目的工具
+title: Create Go App CLI - 快速创建 Golang 项目的实用工具
 date: 2024-08-20T17:15:27.000Z
 tags:
   - golang

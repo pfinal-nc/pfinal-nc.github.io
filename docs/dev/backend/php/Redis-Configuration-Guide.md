@@ -1,5 +1,5 @@
 ---
-title: Redis配置文件详解
+title: PHP Redis 配置详解 - 缓存与会话管理实战
 date: 2020-06-09T11:31:32.000Z
 tags:
   - Redis

@@ -1,5 +1,5 @@
 ---
-title: Coze扩展包完整使用指南 - 如何集成并掌握核心功能
+title: PHP Coze 扩展包 - 完整使用指南与集成实战
 date: 2025-07-28T10:00:02.000Z
 author: PFinal南丞
 tag:

@@ -1,9 +1,9 @@
 ---
-title: 提升生产力的-Golang-实用工具推荐让开发更轻松
+title: Golang 实用工具推荐 - 提升开发效率的精选清单
 date: 2024-09-04T10:36:30.000Z
 tags:
   - golang
-description: 介绍一款快速创建golang项目的工具
+description: 推荐提升生产力的 Golang 实用工具与扩展包，涵盖地址生成、数据脱敏、时间处理等
 author: PFinal南丞
 keywords: 'golang, 工具, 提升生产力, 开发, golang, Go开发, Go工具, Go扩展包'
 recommend: 后端工程

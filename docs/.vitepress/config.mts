@@ -259,6 +259,13 @@ export default defineConfig({
       { rel: 'canonical', href: canonicalUrl }
     ]);
 
+    // 为有封面的页面添加 og:image（提升社交分享与 SEO）
+    const coverOrImage = pageData.frontmatter.cover || pageData.frontmatter.image;
+    if (coverOrImage && typeof coverOrImage === 'string') {
+      const ogImageUrl = coverOrImage.startsWith('http') ? coverOrImage : `${baseUrl}${coverOrImage.startsWith('/') ? '' : '/'}${coverOrImage}`;
+      pageData.frontmatter.head.push(['meta', { property: 'og:image', content: ogImageUrl }]);
+    }
+
     // 判断是否为文章详情页（这里假设详情页没有设置 layout）
     // 注意：主题中心页使用 layout: page，所以要先检查 layout === 'page'
     if (pageData.frontmatter.layout === 'page') {
@@ -357,7 +364,13 @@ export default defineConfig({
       const topicHubPatterns = [
         /^security\/engineering\/?$/,
         /^security\/offensive\/?$/,
-        /^dev\/systems\/?$/,
+        /^dev\/?$/,
+        /^dev\/backend\/?$/,
+        /^dev\/backend\/golang\/?$/,
+        /^dev\/backend\/php\/?$/,
+        /^dev\/backend\/python\/?$/,
+        /^dev\/system\/?$/,
+        /^dev\/system\/database\/?$/,
         /^data\/automation\/?$/,
         /^thinking\/method\/?$/,
         /^thinking\/notes\/?$/
@@ -376,9 +389,27 @@ export default defineConfig({
         } else if (/^security\/offensive\/?$/.test(currentPath)) {
           topicName = '攻防研究专题';
           topicCategory = '攻防研究';
-        } else if (/^dev\/systems\/?$/.test(currentPath)) {
-          topicName = '开发系统专题';
-          topicCategory = '开发系统';
+        } else if (/^dev\/?$/.test(currentPath)) {
+          topicName = '开发与系统专题';
+          topicCategory = '开发与系统';
+        } else if (/^dev\/backend\/?$/.test(currentPath)) {
+          topicName = '后端工程专题';
+          topicCategory = '后端工程';
+        } else if (/^dev\/backend\/golang\/?$/.test(currentPath)) {
+          topicName = 'Golang 专题';
+          topicCategory = 'Golang';
+        } else if (/^dev\/backend\/php\/?$/.test(currentPath)) {
+          topicName = 'PHP 专题';
+          topicCategory = 'PHP';
+        } else if (/^dev\/backend\/python\/?$/.test(currentPath)) {
+          topicName = 'Python 专题';
+          topicCategory = 'Python';
+        } else if (/^dev\/system\/?$/.test(currentPath)) {
+          topicName = '系统与基础专题';
+          topicCategory = '系统与基础';
+        } else if (/^dev\/system\/database\/?$/.test(currentPath)) {
+          topicName = '数据库专题';
+          topicCategory = '数据库';
         } else if (/^data\/automation\/?$/.test(currentPath)) {
           topicName = '数据自动化专题';
           topicCategory = '数据自动化';

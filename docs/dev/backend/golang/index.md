@@ -1,5 +1,5 @@
 ---
-title: "Golang开发技术专题 - 2025年最新指南 | PFinalClub"
+title: "Golang 开发技术专题 2025 - 从入门到精通的实战指南 | PFinalClub"
 description: "Golang开发技术专题：从基础语法到高级架构设计，涵盖微服务、并发编程、性能优化等核心主题。2025年最新Golang开发实践指南。"
 keywords:
   - Golang教程

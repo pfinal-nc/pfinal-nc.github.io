@@ -1,5 +1,5 @@
 ---
-title: PHP $_SERVER 超全局变量完全指南
+title: PHP $_SERVER 完全指南 - 超全局变量详解与实战
 date: 2022-04-09T11:31:32.000Z
 tags:
   - php

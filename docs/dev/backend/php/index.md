@@ -1,5 +1,5 @@
 ---
-title: "PHP开发技术专题 - 2025年最新指南 | PFinalClub"
+title: "PHP 开发技术专题 2025 - 从入门到精通的实战指南 | PFinalClub"
 description: "PHP开发技术专题：从基础语法到框架应用，涵盖Laravel、ThinkPHP、Yii等主流框架，数据库操作、API开发、性能优化等内容。2025年最新PHP开发实践指南。"
 keywords:
   - PHP教程

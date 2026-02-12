@@ -1,5 +1,5 @@
 ---
-title: "数据库中文技术专题导航 - MySQL / PostgreSQL / 配置优化 2025"
+title: "数据库技术专题 2025 - MySQL / PostgreSQL 配置优化与实战"
 description: "PFinalClub 数据库中文专题导航页：系统整理 MySQL 配置、PostgreSQL 功能、数据库优化等核心文章，让中文读者可以按专题快速找到高质量实战内容。"
 keywords:
   - mysql 配置 中文

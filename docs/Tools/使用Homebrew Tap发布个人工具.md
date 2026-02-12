@@ -3,7 +3,7 @@ title: 使用Homebrew Tap发布个人工具
 date: 2024-08-21 09:49:32
 tags:
   - 工具
-description: 介绍一款快速创建golang项目的工具
+description: 使用 Homebrew Tap 发布个人 CLI 工具到 Homebrew 的完整指南
 author: PFinal南丞
 keywords: Homebrew Tap, 工具发布, Golang, GoReleaser, GitHub Actions, MacOS包管理, 自动化发布, 命令行工具
 ---  

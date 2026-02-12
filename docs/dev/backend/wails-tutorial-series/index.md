@@ -1,5 +1,5 @@
 ---
-title: "Wails Tutorial 2025 - Go Desktop App Development Guide"
+title: "Wails 教程 2025 - Go 跨平台桌面应用开发完整指南"
 date: 2025-08-22
 author: PFinalClub
 description: "Wails Tutorial 2025: Complete guide for building desktop apps with Go. Covers architecture design, performance optimization, and system integration for advanced Golang developers."

@@ -3,7 +3,7 @@ title: "使用Devslog结构化日志处理 - 完整使用指南"
 date: 2024-12-03 09:32:24
 tags:
   - 工具
-description: 介绍一款快速创建golang项目的工具
+description: 使用 Devslog 实现 Go 结构化日志处理的实战指南
 author: PFinal南丞
 keywords: Devslog, 结构化日志, Golang日志, 日志处理, slog, 日志美化, Go开发工具, 日志最佳实践
 ---

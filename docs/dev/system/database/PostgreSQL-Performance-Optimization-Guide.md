@@ -1,5 +1,5 @@
 ---
-title: "PostgreSQL性能优化实战 - 从配置到SQL调优的完整指南"
+title: "PostgreSQL 性能优化实战 2025 - 配置与 SQL 调优完整指南"
 date: 2025-12-16
 updated: 2025-12-16
 authors:

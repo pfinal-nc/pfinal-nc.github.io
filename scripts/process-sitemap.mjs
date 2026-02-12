@@ -68,7 +68,29 @@ while ((match = urlRegex.exec(content)) !== null) {
   // 7. 确保 URL 使用 HTTPS
   const cleanLoc = loc.replace(/^http:\/\//, 'https://')
   
-  urls.push({ loc: cleanLoc, lastmod })
+  // 8. 计算 priority 和 changefreq（SEO 优化：首页 > 专题索引 > 文章）
+  const pathOnly = (cleanLoc.replace('https://friday-go.icu', '') || '/').replace(/\/$/, '') || '/'
+  const pathNorm = pathOnly === '/' ? '' : pathOnly.replace(/^\//, '')
+  const indexPaths = [
+    'dev', 'dev/backend', 'dev/backend/golang', 'dev/backend/php', 'dev/backend/python',
+    'dev/system', 'dev/system/database',
+    'security/engineering', 'security/offensive',
+    'data/automation',
+    'thinking/method', 'thinking/notes',
+    'Tools/online-tools', 'tools/online-tools'
+  ]
+  let priority = 0.8
+  let changefreq = 'weekly'
+
+  if (pathNorm === '') {
+    priority = 1.0
+    changefreq = 'daily'
+  } else if (indexPaths.includes(pathNorm)) {
+    priority = 0.9
+    changefreq = 'weekly'
+  }
+  
+  urls.push({ loc: cleanLoc, lastmod, priority, changefreq })
 }
 
 // 生成简洁的 sitemap XML
@@ -77,8 +99,8 @@ const simpleSitemap = `<?xml version="1.0" encoding="UTF-8"?>
 ${urls.map(url => `<url>
 <loc>${url.loc}</loc>
 <lastmod>${url.lastmod}</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
+<changefreq>${url.changefreq}</changefreq>
+<priority>${url.priority}</priority>
 </url>`).join('\n')}
 </urlset>
 `

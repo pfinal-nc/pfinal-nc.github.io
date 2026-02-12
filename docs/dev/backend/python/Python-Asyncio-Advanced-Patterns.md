@@ -1,5 +1,5 @@
 ---
-title: Python Asyncio高级模式 - 从入门到精通的异步编程指南
+title: Python Asyncio 高级模式 2025 - 异步编程从入门到精通
 date: 2025-12-16T00:00:00.000Z
 updated: 2025-12-16T00:00:00.000Z
 authors:

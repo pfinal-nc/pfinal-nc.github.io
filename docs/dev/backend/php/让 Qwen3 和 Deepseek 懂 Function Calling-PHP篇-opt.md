@@ -1,5 +1,5 @@
 ---
-title: 让本地大模型像 OpenAI 一样支持 Function Calling PHP 异步实现实战
+title: PHP Function Calling 实战 - 让本地大模型兼容 OpenAI 接口
 date: 2025-11-19T15:30:00.000Z
 author: PFinal南丞
 tags:
