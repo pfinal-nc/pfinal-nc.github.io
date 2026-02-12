@@ -22,3 +22,5 @@ reports/*
 .gitignore
 scripts/check-seo-issues.mjs
 scripts/fix-seo-issues.mjs
+
+sync2github.sh
