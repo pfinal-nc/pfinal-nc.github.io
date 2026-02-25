@@ -361,6 +361,12 @@
 <priority>0.8</priority>
 </url>
 <url>
+<loc>https://friday-go.icu/dev/backend/test/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0%EF%BC%9A%E9%AA%8C%E8%AF%81%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8D%9A%E5%AE%A2%E6%8E%A8%E9%80%81%E6%B5%81%E7%A8%8B</loc>
+<lastmod>2026-02-13T04:04:20.000Z</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
 <loc>https://friday-go.icu/dev/backend/wails-tutorial-series/00-webkit-and-lifecycle</loc>
 <lastmod>2025-12-22T01:15:24.000Z</lastmod>
 <changefreq>weekly</changefreq>
