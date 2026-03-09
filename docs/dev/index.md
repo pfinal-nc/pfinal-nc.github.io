@@ -27,6 +27,7 @@ date: 2025-12-19 12:30:00
 | 🐍 **Python** | [进入 Python 专题 →](/dev/backend/python/) | 异步编程、数据可视化、开发工具 |
 | 💾 **数据库** | [进入数据库专题 →](/dev/system/database/) | MySQL、PostgreSQL、Redis 实战 |
 | 💻 **系统与基础** | [进入系统专题 →](/dev/system/) | Linux、容器、可观测性 |
+| ⚡ **RxJS** | [进入 RxJS 专题 →](/dev/backend/rxjs/) | 响应式编程、Observable、操作符 |
 
 ---
 
@@ -48,6 +49,7 @@ date: 2025-12-19 12:30:00
 - **Go 生态** - Web 框架、并发编程、性能优化 [更多>>](./backend/golang/index.md)
 - **PHP/Laravel** - 现代 PHP 开发、框架最佳实践 [更多>>](./backend/php/index.md)
 - **Python** - 异步编程、脚本自动化、数据处理 [更多>>](./backend/python/index.md)
+- **RxJS** - 响应式编程、Observable、操作符实战
 - **桌面与全栈** - Wails 跨平台应用开发
 
 ### [系统与基础](/dev/system/)
