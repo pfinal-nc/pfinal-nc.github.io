@@ -119,21 +119,6 @@ export default defineConfig({
   lastUpdated: true,
   cleanUrls: true, // 移除 .html 后缀，提升 SEO
   head: [
-    // Ezoic 脚本使用 defer，避免阻塞首屏渲染导致布局错乱
-    // Privacy Scripts（隐私脚本）
-    ['script', { 'data-cfasync': 'false', defer: '', src: 'https://cmp.gatekeeperconsent.com/min.js' }],
-    ['script', { 'data-cfasync': 'false', defer: '', src: 'https://the.gatekeeperconsent.com/cmp.min.js' }],
-    // Ezoic Header Script（主脚本）
-    ['script', { defer: '', src: '//www.ezojs.com/ezoic/sa.min.js' }],
-    ['script', {}, `
-      window.ezstandalone = window.ezstandalone || {};
-      ezstandalone.cmd = ezstandalone.cmd || [];
-      // 初始化 _ezaq 以避免 "is not defined" 错误
-      window._ezaq = window._ezaq || [];
-      
-    `],
-    // 广告脚本错误静默已统一在 theme/client.js 中处理
-    ['link', { rel: 'icon', href: '/favicon.ico' }],
     // 技术 SEO：sitemap 引用，便于爬虫发现
     ['link', { rel: 'sitemap', type: 'application/xml', title: 'Sitemap', href: 'https://friday-go.icu/sitemap.xml' }],
     // RSS/Atom/JSON Feeds

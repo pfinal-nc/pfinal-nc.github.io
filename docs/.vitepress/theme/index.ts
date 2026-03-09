@@ -1,5 +1,6 @@
 import DefaultTheme from "@sugarat/theme"
 import clientEnhance from "./client.js"
+import CookieConsent from "./components/CookieConsent.vue"
 
 import "./user-theme.css"
 import "./style.scss"
@@ -7,7 +8,9 @@ import "./style.scss"
 export default {
   extends: DefaultTheme,
   enhanceApp(ctx) {
-    // 调用 client.js 的 enhanceApp（404 重定向、标签隐藏、统计等）
     clientEnhance.enhanceApp?.(ctx)
+  },
+  globalComponents: {
+    CookieConsent
   }
 }

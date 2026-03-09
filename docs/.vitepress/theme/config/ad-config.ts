@@ -44,10 +44,10 @@ export interface AdPositions {
   }
 }
 
-// 全局广告开关
-export const AD_ENABLED = true
-// Ezoic 广告开关（可以在 Ezoic 审核通过后启用）
-export const EZOIC_ENABLED = true
+// 全局广告开关（AdSense 审核期间关闭所有广告）
+export const AD_ENABLED = false
+// Ezoic 广告开关（AdSense 审核期间禁用）
+export const EZOIC_ENABLED = false
 
 // 广告配置
 export const adConfig: AdPositions = {
@@ -55,14 +55,14 @@ export const adConfig: AdPositions = {
   articleMiddle: {
     // Monetag - In-Page Push（弹窗类型）
     monetag: {
-      zoneId: '9114535', // Bright tag - In-Page Push
+      zoneId: '9114535',
       adType: 'inpage-push',
-      enabled: AD_ENABLED && false // 暂时禁用，优先使用 Ezoic
+      enabled: false
     },
-    // Ezoic - 文章中间广告位置
+    // Ezoic - AdSense 审核期间禁用
     ezoic: {
-      placementId: '118', // Article Middle - In-Content 1 (mid_content)
-      enabled: EZOIC_ENABLED && true
+      placementId: '118',
+      enabled: false
     }
   },
   
@@ -70,14 +70,14 @@ export const adConfig: AdPositions = {
   articleBottom: {
     // Monetag - Native Banner（全屏类型）
     monetag: {
-      zoneId: '9154483', // The best tag - Native Banner (Interstitial)
+      zoneId: '9154483',
       adType: 'native-banner',
-      enabled: AD_ENABLED && false // 暂时禁用，优先使用 Ezoic
+      enabled: false
     },
-    // Ezoic - 文章底部广告位置
+    // Ezoic - AdSense 审核期间禁用
     ezoic: {
-      placementId: '119', // Article Bottom - Bottom of Page
-      enabled: EZOIC_ENABLED && true
+      placementId: '119',
+      enabled: false
     }
   },
   
