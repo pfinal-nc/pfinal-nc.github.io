@@ -1,21 +1,21 @@
 ---
-title: "PostgreSQL 安全最佳实践 2025 - 生产环境加固完整指南"
-date: 2025-12-18
-updated: 2025-12-18
+title: PostgreSQL 安全最佳实践 2025 - 生产环境加固完整指南
+date: 2025-12-18T00:00:00.000Z
+updated: 2025-12-18T00:00:00.000Z
 authors:
-  - "PFinal南丞"
+  - PFinal南丞
 categories:
-  - "开发与系统"
-  - "数据库"
-  - "安全"
+  - 开发与系统
+  - 数据库
+  - 安全
 tags:
-  - "postgresql"
-  - "安全"
-  - "数据库安全"
-  - "最佳实践"
-  - "pg_hba.conf"
-  - "ssl"
-  - "row level security"
+  - postgresql
+  - 安全
+  - 数据库安全
+  - 最佳实践
+  - pg_hba.conf
+  - ssl
+  - row level security
 keywords:
   - postgresql security best practices
   - postgresql authentication configuration
@@ -30,7 +30,13 @@ keywords:
   - 数据库安全加固
   - PostgreSQL权限管理
   - PFinalClub
-description: "PostgreSQL Security Best Practices 2025: 从认证配置到数据加密的生产环境安全加固完整指南。包含 pg_hba.conf 配置、Row Level Security、SSL/TLS 加密、审计日志等实战案例，助你构建安全的数据库系统。"
+description: >-
+  PostgreSQL Security Best Practices 2025: 从认证配置到数据加密的生产环境安全加固完整指南。包含
+  pg_hba.conf 配置、Row Level Security、SSL/TLS 加密、审计日志等实战案例，助你构建安全的数据库系统。
+course:
+  name: Go 后端工程师成长路线
+  module: 3
+  lesson: 3.2
 ---
 
 # PostgreSQL Security Best Practices 2025 - 生产环境安全加固完整指南

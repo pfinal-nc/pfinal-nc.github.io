@@ -1,21 +1,21 @@
 ---
-title: "MySQL 生产环境安全配置 2025 - 企业级安全加固完整指南"
-date: 2025-12-22
-updated: 2025-12-22
+title: MySQL 生产环境安全配置 2025 - 企业级安全加固完整指南
+date: 2025-12-22T00:00:00.000Z
+updated: 2025-12-22T00:00:00.000Z
 authors:
-  - "PFinal南丞"
+  - PFinal南丞
 categories:
-  - "开发与系统"
-  - "数据库"
-  - "安全"
+  - 开发与系统
+  - 数据库
+  - 安全
 tags:
-  - "mysql"
-  - "安全"
-  - "数据库安全"
-  - "最佳实践"
-  - "生产环境"
-  - "安全加固"
-  - "数据加密"
+  - mysql
+  - 安全
+  - 数据库安全
+  - 最佳实践
+  - 生产环境
+  - 安全加固
+  - 数据加密
 keywords:
   - mysql security best practices
   - mysql authentication configuration
@@ -29,20 +29,28 @@ keywords:
   - MySQL SSL/TLS加密配置
   - MySQL审计日志
   - PFinalClub
-description: "MySQL 生产环境安全配置与加固完整指南 2025：从认证安全到数据加密的企业级安全加固方案。包含用户权限管理、SSL/TLS 加密、审计日志、SQL注入防护、备份安全等实战案例，助你构建安全的 MySQL 数据库系统。"
-# AI 搜索优化：大家还在问 → FAQPage Schema
+description: >-
+  MySQL 生产环境安全配置与加固完整指南 2025：从认证安全到数据加密的企业级安全加固方案。包含用户权限管理、SSL/TLS
+  加密、审计日志、SQL注入防护、备份安全等实战案例，助你构建安全的 MySQL 数据库系统。
 faq:
   - question: MySQL 生产环境如何做用户权限管理？
-    answer: 遵循最小权限原则，为应用创建专用账号并只授权指定库表；使用 MySQL 8.0+ 的 caching_sha2_password 认证插件，配合 validate_password 组件强制强密码策略。
+    answer: >-
+      遵循最小权限原则，为应用创建专用账号并只授权指定库表；使用 MySQL 8.0+ 的 caching_sha2_password 认证插件，配合
+      validate_password 组件强制强密码策略。
   - question: MySQL 如何配置 SSL/TLS 加密？
-    answer: 在 my.cnf 中配置 ssl_ca、ssl_cert、ssl_key 指向 CA 与服务器证书，设置 require_secure_transport=ON 强制远程连接使用 SSL，并禁用旧版 SSL 协议。
+    answer: >-
+      在 my.cnf 中配置 ssl_ca、ssl_cert、ssl_key 指向 CA 与服务器证书，设置
+      require_secure_transport=ON 强制远程连接使用 SSL，并禁用旧版 SSL 协议。
   - question: MySQL 审计日志怎么开启和配置？
-    answer: 可使用 MySQL Enterprise Audit 或开源审计插件（如 Percona Audit Log）；在 my.cnf 中配置审计插件并指定日志路径与格式，按需过滤用户或语句类型。
+    answer: >-
+      可使用 MySQL Enterprise Audit 或开源审计插件（如 Percona Audit Log）；在 my.cnf
+      中配置审计插件并指定日志路径与格式，按需过滤用户或语句类型。
   - question: 如何防护 MySQL SQL 注入？
-    answer: 应用层使用预编译语句（Prepared Statement）并严格校验输入；数据库侧限制用户权限、关闭不必要的存储过程/文件权限，配合 WAF 与审计日志做行为分析。
+    answer: >-
+      应用层使用预编译语句（Prepared Statement）并严格校验输入；数据库侧限制用户权限、关闭不必要的存储过程/文件权限，配合 WAF
+      与审计日志做行为分析。
   - question: MySQL 备份如何加密存储？
     answer: 使用 mysqldump 配合 openssl 或 gpg 加密输出，或使用 XtraBackup 的加密选项；密钥单独保管，备份与密钥分离存储。
-# AI 搜索优化：步骤型指南 → HowTo Schema
 howTo:
   name: MySQL生产环境安全配置企业级加固步骤
   description: 从认证、网络、加密到审计与备份的完整安全加固流程
@@ -63,6 +71,10 @@ howTo:
       text: 文件权限、进程用户、内核参数与补丁管理。
     - name: 高级防护与配置清单
       text: 资源限制、连接限流、安全配置清单与定期巡检。
+course:
+  name: Go 后端工程师成长路线
+  module: 3
+  lesson: 3.1
 ---
 
 # MySQL生产环境安全配置：企业级安全加固完整指南

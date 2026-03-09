@@ -1,13 +1,19 @@
 ---
 title: 从 trace 到洞察 Go 项目的可观测性闭环实践
-date: 2025-10-29 10:00:00
+date: 2025-10-29T10:00:00.000Z
 tags:
   - Golang
   - 可观测性
   - OpenTelemetry
-description: 基于实际项目经验，深入讲解如何将 OpenTelemetry 的 trace、metrics、logs 三大信号从简单的数据收集转变为驱动决策的可观测性闭环。
+description: >-
+  基于实际项目经验，深入讲解如何将 OpenTelemetry 的 trace、metrics、logs
+  三大信号从简单的数据收集转变为驱动决策的可观测性闭环。
 author: PFinal南丞
-keywords: Go 可观测性, OpenTelemetry, trace, metrics, logs, 分布式追踪, SLO, 告警, 链路追踪
+keywords: 'Go 可观测性, OpenTelemetry, trace, metrics, logs, 分布式追踪, SLO, 告警, 链路追踪'
+course:
+  name: Go 后端工程师成长路线
+  module: 5
+  lesson: 5.5
 ---
 
 # 从 trace 到洞察：Go 项目的可观测性闭环实践

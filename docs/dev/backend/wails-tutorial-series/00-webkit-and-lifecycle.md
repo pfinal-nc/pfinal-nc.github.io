@@ -5,13 +5,17 @@ author: PFinalClub
 description: 深入理解 Wails 中的 WebKit 技术原理、wails.Run() 运行路线以及应用生命周期管理机制。
 recommend: 后端工程
 keywords:
-  - "Wails教程"
-  - "WebKit技术"
-  - "应用生命周期"
-  - "wails.Run()"
-  - "Go桌面应用开发"
-  - "Wails框架"
-  - "桌面应用开发"
+  - Wails教程
+  - WebKit技术
+  - 应用生命周期
+  - wails.Run()
+  - Go桌面应用开发
+  - Wails框架
+  - 桌面应用开发
+course:
+  name: Wails 跨平台桌面开发实战
+  module: 1
+  lesson: 1.1
 ---
 
 # Wails 教程系列 - WebKit 与生命周期深度解析

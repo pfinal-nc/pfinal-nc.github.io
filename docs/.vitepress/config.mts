@@ -23,6 +23,7 @@ export default defineConfig({
     // 精简导航至 7 个核心分类，关于/联系/隐私保留在 footer，分散链接权重
     nav: [
       { text: '首页', link: '/' },
+      { text: '📚 课程', link: '/courses/' },
       { text: '攻防研究', link: '/security/offensive/' },
       { text: '安全工程', link: '/security/engineering/' },
       {

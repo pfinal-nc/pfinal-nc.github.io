@@ -11,6 +11,10 @@ author: PFinal南丞
 keywords: 'Go, 零拷贝, IO, 性能优化, 读取器, 实战, 编程, 技术, 经验分享'
 sticky: true
 recommend: 后端工程
+course:
+  name: Go 后端工程师成长路线
+  module: 1
+  lesson: 1.5
 ---
 
 # Go 零拷贝读取器：让 IO 性能飞起来的秘密武器

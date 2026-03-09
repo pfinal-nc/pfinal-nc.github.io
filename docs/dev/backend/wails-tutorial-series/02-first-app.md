@@ -5,13 +5,17 @@ author: PFinalClub
 description: 深入理解 Wails 项目创建流程、架构原理和最佳实践，为资深开发者提供全面的技术指导。
 recommend: 后端工程
 keywords:
-  - "Wails项目创建"
-  - "Wails应用开发"
-  - "wails init"
-  - "Wails模板"
-  - "Go桌面应用"
-  - "Wails架构"
-  - "Wails最佳实践"
+  - Wails项目创建
+  - Wails应用开发
+  - wails init
+  - Wails模板
+  - Go桌面应用
+  - Wails架构
+  - Wails最佳实践
+course:
+  name: Wails 跨平台桌面开发实战
+  module: 1
+  lesson: 1.3
 ---
 
 # Wails 教程系列 - 创建你的第一个应用
