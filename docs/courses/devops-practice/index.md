@@ -1,5 +1,5 @@
 ---
-title: "DevOps 工程实践 - 完整课程大纲 | 2025"
+title: "DevOps 工程实践 - 完整课程大纲 | 2026"
 description: "系统学习 DevOps 工程实践，从 Docker 容器化到 Kubernetes 编排，从 CI/CD 流水线到监控告警体系，打造现代化工程能力。"
 keywords:
   - DevOps 教程

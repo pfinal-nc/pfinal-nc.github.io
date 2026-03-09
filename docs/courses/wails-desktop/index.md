@@ -1,5 +1,5 @@
 ---
-title: "Wails 跨平台桌面开发实战 - 完整课程大纲 | 2025"
+title: "Wails 跨平台桌面开发实战 - 完整课程大纲 | 2026"
 description: "使用 Go 和前端技术栈（Vue/React）构建跨平台桌面应用，从入门到实战，包含抖音直播助手、密码管理器等真实项目案例。"
 keywords:
   - Wails 教程
