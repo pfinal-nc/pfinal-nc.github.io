@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://friday-go.icu/ARTICLE_ORGANIZATION_REPORT</loc>
-<lastmod>2026-03-09T07:24:04.000Z</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
 <loc>https://friday-go.icu/Tools/Arc%20%E6%B5%8F%E8%A7%88%E5%99%A8%E6%9B%B4%E7%AC%A6%E5%90%88%E5%BC%80%E5%8F%91%E8%80%85</loc>
 <lastmod>2025-12-11T10:25:51.000Z</lastmod>
 <changefreq>weekly</changefreq>
@@ -152,13 +146,13 @@
 </url>
 <url>
 <loc>https://friday-go.icu/courses/devops-practice/</loc>
-<lastmod>2026-03-09T07:06:46.000Z</lastmod>
+<lastmod>2026-03-09T10:10:10.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
 <url>
 <loc>https://friday-go.icu/courses/golang-backend/</loc>
-<lastmod>2026-03-09T07:06:46.000Z</lastmod>
+<lastmod>2026-03-09T10:10:10.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -170,19 +164,19 @@
 </url>
 <url>
 <loc>https://friday-go.icu/courses/rxjs/</loc>
-<lastmod>2026-03-09T07:06:46.000Z</lastmod>
+<lastmod>2026-03-09T10:10:10.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
 <url>
 <loc>https://friday-go.icu/courses/security-engineer/</loc>
-<lastmod>2026-03-09T07:06:46.000Z</lastmod>
+<lastmod>2026-03-09T10:10:10.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
 <url>
 <loc>https://friday-go.icu/courses/wails-desktop/</loc>
-<lastmod>2026-03-09T07:06:46.000Z</lastmod>
+<lastmod>2026-03-09T10:10:10.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
