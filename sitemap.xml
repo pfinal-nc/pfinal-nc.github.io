@@ -409,6 +409,12 @@
 <priority>0.8</priority>
 </url>
 <url>
+<loc>https://friday-go.icu/dev/backend/rust/Tauri%E5%AE%9E%E6%88%98%EF%BC%9A%E7%94%A8Go%E5%92%8CRust%E6%9E%84%E5%BB%BA%E8%BD%BB%E9%87%8F%E7%BA%A7%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8</loc>
+<lastmod>2026-03-09T00:55:46.000Z</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
 <loc>https://friday-go.icu/dev/backend/rxjs/advanced-topics/custom-operators</loc>
 <lastmod>2026-03-09T03:59:22.000Z</lastmod>
 <changefreq>weekly</changefreq>
