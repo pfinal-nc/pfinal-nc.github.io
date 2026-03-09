@@ -26,6 +26,10 @@ keywords:
   - asyncio最佳实践
   - Python并发模型
 recommend: 后端工程
+course:
+  name: Python 异步编程
+  module: 1
+  lesson: 1.1
 ---
 
 # Python Asyncio高级模式 - 从入门到精通的异步编程指南

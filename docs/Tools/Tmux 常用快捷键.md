@@ -1,17 +1,16 @@
 ---
-title: "Tmux 常用快捷键 - 完整使用指南"
-date: 2022-03-13 15:46:00
-keywords: Tmux, 终端复用, 快捷键, 会话管理, Linux工具, 终端工具, 命令行效率, 窗口管理
+title: Tmux 常用快捷键 - 完整使用指南
+date: 2022-03-13T15:46:00.000Z
+keywords: 'Tmux, 终端复用, 快捷键, 会话管理, Linux工具, 终端工具, 命令行效率, 窗口管理'
 tag:
   - 工具
 sticky: true
 description: Tmux 常用快捷键
-descriptionHTML: '
-<span style="color:var(--description-font-color);">Tmux 常用快捷键</span>
-<pre style="background-color: #292b30; padding: 15px; border-radius: 10px;" class="shiki material-theme-palenight"><code>
-    <span class="line"><span style="color:#FFCB6B;">tmux</span><span style="color:#A6ACCD;"> </span><span style="color:#C3E88D;">new</span><span style="color:#A6ACCD;"> </span><span style="color:#C3E88D;">-s pfinal</span></span>
-</code>
-</pre>'
+descriptionHTML: ' <span style="color:var(--description-font-color);">Tmux 常用快捷键</span> <pre style="background-color: #292b30; padding: 15px; border-radius: 10px;" class="shiki material-theme-palenight"><code> <span class="line"><span style="color:#FFCB6B;">tmux</span><span style="color:#A6ACCD;"> </span><span style="color:#C3E88D;">new</span><span style="color:#A6ACCD;"> </span><span style="color:#C3E88D;">-s pfinal</span></span> </code> </pre>'
+course:
+  name: 开发者工具集
+  module: 1
+  lesson: 1.4
 ---
 
 # Tmux 常用快捷键

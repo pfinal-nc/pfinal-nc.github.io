@@ -26,6 +26,10 @@ keywords:
   - 数据可视化案例
   - Python数据分析
 recommend: 后端工程
+course:
+  name: Python 数据可视化
+  module: 1
+  lesson: 1.1
 ---
 
 # Python数据可视化实战 - Matplotlib与Seaborn从入门到精通

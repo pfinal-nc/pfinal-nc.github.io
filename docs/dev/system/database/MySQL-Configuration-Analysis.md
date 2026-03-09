@@ -1,8 +1,8 @@
 ---
-title: "MySQL配置文件解析 - 完整使用指南"
-date: 2022-04-09 11:31:32
+title: MySQL配置文件解析 - 完整使用指南
+date: 2022-04-09T11:31:32.000Z
 tags:
-    - MySQL
+  - MySQL
 description: 详细介绍MySQL配置文件的解析，包括配置文件的位置、常用配置项、优化建议等，帮助开发者更好地管理和优化MySQL数据库。
 author: PFinal南丞
 keywords:
@@ -16,6 +16,10 @@ keywords:
   - MySQL性能优化
   - MySQL调优实战
   - MySQL配置文件分析
+course:
+  name: Go 后端工程师成长路线
+  module: 3
+  lesson: 3.1
 ---
 
 

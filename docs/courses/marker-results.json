@@ -1,0 +1,382 @@
+{
+  "added": [
+    {
+      "status": "added",
+      "path": "docs/dev/backend/golang/Deep-Dive-Go-Memory-Allocation.md",
+      "course": {
+        "name": "Go 后端工程师成长路线",
+        "module": 1,
+        "lesson": 1.1
+      }
+    },
+    {
+      "status": "added",
+      "path": "docs/dev/system/database/MySQL-Configuration-Analysis.md",
+      "course": {
+        "name": "Go 后端工程师成长路线",
+        "module": 3,
+        "lesson": 3.1
+      }
+    },
+    {
+      "status": "added",
+      "path": "docs/dev/backend/rxjs/introduction/introduction.md",
+      "course": {
+        "name": "RxJS 响应式编程实战手册",
+        "module": 1,
+        "lesson": 1.1
+      }
+    },
+    {
+      "status": "added",
+      "path": "docs/dev/backend/rxjs/core-concepts/observables.md",
+      "course": {
+        "name": "RxJS 响应式编程实战手册",
+        "module": 1,
+        "lesson": 1.2
+      }
+    },
+    {
+      "status": "added",
+      "path": "docs/dev/backend/rxjs/core-concepts/observers.md",
+      "course": {
+        "name": "RxJS 响应式编程实战手册",
+        "module": 1,
+        "lesson": 1.3
+      }
+    },
+    {
+      "status": "added",
+      "path": "docs/dev/backend/rxjs/core-concepts/subjects.md",
+      "course": {
+        "name": "RxJS 响应式编程实战手册",
+        "module": 1,
+        "lesson": 1.5
+      }
+    },
+    {
+      "status": "added",
+      "path": "docs/dev/backend/rxjs/core-concepts/operators.md",
+      "course": {
+        "name": "RxJS 响应式编程实战手册",
+        "module": 1,
+        "lesson": 1.6
+      }
+    },
+    {
+      "status": "added",
+      "path": "docs/thinking/method/PHP 8.x 企业级开发实战指南 从语言特性到生产部署.md",
+      "course": {
+        "name": "PHP 企业级开发实战",
+        "module": 1,
+        "lesson": 1.1
+      }
+    },
+    {
+      "status": "added",
+      "path": "docs/dev/backend/python/Python-Asyncio-Advanced-Patterns.md",
+      "course": {
+        "name": "Python 异步编程",
+        "module": 1,
+        "lesson": 1.1
+      }
+    },
+    {
+      "status": "added",
+      "path": "docs/dev/backend/python/Python-Data-Visualization-Guide.md",
+      "course": {
+        "name": "Python 数据可视化",
+        "module": 1,
+        "lesson": 1.1
+      }
+    },
+    {
+      "status": "added",
+      "path": "docs/tools/Git 基本操作.md",
+      "course": {
+        "name": "开发者工具集",
+        "module": 1,
+        "lesson": 1.1
+      }
+    },
+    {
+      "status": "added",
+      "path": "docs/tools/Tmux 常用快捷键.md",
+      "course": {
+        "name": "开发者工具集",
+        "module": 1,
+        "lesson": 1.4
+      }
+    },
+    {
+      "status": "added",
+      "path": "docs/data/automation/MCP 提示语管理工具.md",
+      "course": {
+        "name": "AI 工程与自动化",
+        "module": 1,
+        "lesson": 1.3
+      }
+    },
+    {
+      "status": "added",
+      "path": "docs/data/automation/autogen-financial-analysis.md",
+      "course": {
+        "name": "AI 工程与自动化",
+        "module": 2,
+        "lesson": 2.1
+      }
+    },
+    {
+      "status": "added",
+      "path": "docs/data/automation/爬虫常见的加密解密算法.md",
+      "course": {
+        "name": "数据采集工程",
+        "module": 1,
+        "lesson": 1.2
+      }
+    },
+    {
+      "status": "added",
+      "path": "docs/data/automation/爬虫常见的加密解密算法特征收集.md",
+      "course": {
+        "name": "数据采集工程",
+        "module": 1,
+        "lesson": 1.2
+      }
+    },
+    {
+      "status": "added",
+      "path": "docs/thinking/notes/Vibe-Coding-时代的开发者：如何跟-ChatGPT-5.1-一起写代码，而不是被替代.md",
+      "course": {
+        "name": "AI 编程效率提升",
+        "module": 1,
+        "lesson": 1.2
+      }
+    }
+  ],
+  "exists": [
+    {
+      "status": "exists",
+      "path": "docs/dev/backend/golang/Go 零拷贝读取器实战与原理解析.md",
+      "course": {
+        "name": "Go 后端工程师成长路线",
+        "module": 1,
+        "lesson": 1.5
+      }
+    },
+    {
+      "status": "exists",
+      "path": "docs/dev/backend/golang/如何实现 RESTful API 版本控制.md",
+      "course": {
+        "name": "Go 后端工程师成长路线",
+        "module": 2,
+        "lesson": 2.3
+      }
+    },
+    {
+      "status": "exists",
+      "path": "docs/thinking/method/从 trace 到洞察：Go 项目的可观测性闭环实践.md",
+      "course": {
+        "name": "Go 后端工程师成长路线",
+        "module": 5,
+        "lesson": 5.5
+      }
+    },
+    {
+      "status": "exists",
+      "path": "docs/thinking/method/别再盲接 OTel：Go 可观察性接入的 8 个大坑.md",
+      "course": {
+        "name": "Go 后端工程师成长路线",
+        "module": 5,
+        "lesson": 5.5
+      }
+    },
+    {
+      "status": "exists",
+      "path": "docs/tools/单文件代码部署工具.md",
+      "course": {
+        "name": "DevOps 工程实践",
+        "module": 1,
+        "lesson": 1.5
+      }
+    }
+  ],
+  "notFound": [
+    {
+      "status": "not_found",
+      "path": "docs/dev/backend/golang/Go 语言并发模式实战指南.md"
+    },
+    {
+      "status": "not_found",
+      "path": "docs/dev/backend/golang/Go 1.26 SIMD 编程实战：从入门到高性能优化.md"
+    },
+    {
+      "status": "not_found",
+      "path": "docs/dev/backend/golang/深入理解 Go Channel 批量读取与实际应用.md"
+    },
+    {
+      "status": "not_found",
+      "path": "docs/dev/backend/golang/runtime.free 打破 Go GC 性能瓶颈的秘密武器.md"
+    },
+    {
+      "status": "not_found",
+      "path": "docs/dev/backend/golang/Stop-The-World 其实没停下-Go-GC-的微暂停真相.md"
+    },
+    {
+      "status": "not_found",
+      "path": "docs/dev/backend/golang/2025 年最佳 Go Web 框架深度解析：资深开发者的选择指南.md"
+    },
+    {
+      "status": "not_found",
+      "path": "docs/thinking/method/2025 年最佳 Go-Web 框架深度解析：资深开发者的选择指南.md"
+    },
+    {
+      "status": "not_found",
+      "path": "docs/dev/backend/golang/接口参数设计 - 多场景复用的优雅之道.md"
+    },
+    {
+      "status": "not_found",
+      "path": "docs/thinking/method/基于 golang 的高性能游戏接口设计.md"
+    },
+    {
+      "status": "not_found",
+      "path": "docs/thinking/method/Golang Socket 通信架构分析与实现 - 构建高性能游戏服务器.md"
+    },
+    {
+      "status": "not_found",
+      "path": "docs/dev/backend/golang/ClickHouse 实战：从入门到高性能 OLAP 查询.md"
+    },
+    {
+      "status": "not_found",
+      "path": "docs/dev/system/database/PostgreSQL-10 个鲜为人知的强大功能.md"
+    },
+    {
+      "status": "not_found",
+      "path": "docs/thinking/method/高质量 Golang 后端的现代软件工程原则.md"
+    },
+    {
+      "status": "not_found",
+      "path": "docs/thinking/method/GitOps 实战 - 从应用部署到全生命周期管理.md"
+    },
+    {
+      "status": "not_found",
+      "path": "docs/dev/backend/golang/GitOps 实战：从应用部署到全生命周期管理.md"
+    },
+    {
+      "status": "not_found",
+      "path": "docs/tools/使用 Devslog 结构化日志处理.md"
+    },
+    {
+      "status": "not_found",
+      "path": "docs/dev/backend/golang/基于 Wails 的抖音直播工具.md"
+    },
+    {
+      "status": "not_found",
+      "path": "docs/dev/backend/golang/基于 wails 和 Tailwindcss 的应用开发.md"
+    },
+    {
+      "status": "not_found",
+      "path": "docs/dev/backend/golang/基于 Wails 和 Vue.js 打造跨平台桌面应用.md"
+    },
+    {
+      "status": "not_found",
+      "path": "docs/dev/backend/golang/基于 Wails 的 Mac 桌面应用开发.md"
+    },
+    {
+      "status": "not_found",
+      "path": "docs/dev/backend/golang/提升 Wails 应用性能：探索 Go-Cache 的高效内存缓存方案.md"
+    },
+    {
+      "status": "not_found",
+      "path": "docs/thinking/method/Fyne-深度技术解析 - 面向资深 Go 开发者的架构设计分析.md"
+    },
+    {
+      "status": "not_found",
+      "path": "docs/thinking/method/Fyne 与 Wails 深度对比 - 选择最适合你的 Go 桌面应用框架.md"
+    },
+    {
+      "status": "not_found",
+      "path": "docs/dev/backend/php/现代 PHP 开发实战.md"
+    },
+    {
+      "status": "not_found",
+      "path": "docs/dev/backend/php/PHP 旧项目重构实战：从单体到微服务.md"
+    },
+    {
+      "status": "not_found",
+      "path": "docs/dev/backend/python/FastAPI 现代化 Web 开发 - 异步开发、自动 API 文档生成.md"
+    },
+    {
+      "status": "not_found",
+      "path": "docs/dev/backend/python/Flask 轻量级应用构建 - 扩展开发、蓝图设计.md"
+    },
+    {
+      "status": "not_found",
+      "path": "docs/tools/Docker 部署 Go 项目实践指南.md"
+    },
+    {
+      "status": "not_found",
+      "path": "docs/security/engineering/10 个 Golang 安全陷阱及真正有效的修复方案.md"
+    },
+    {
+      "status": "not_found",
+      "path": "docs/security/engineering/golang Web 应用完整安全指南.md"
+    },
+    {
+      "status": "not_found",
+      "path": "docs/security/engineering/golang 中的网络安全 TLS SSL 的实现.md"
+    },
+    {
+      "status": "not_found",
+      "path": "docs/security/engineering/Go 语言主流安全库使用指南.md"
+    },
+    {
+      "status": "not_found",
+      "path": "docs/tools/从手动到自动-Go 语言助力快速识别代码中的安全隐患.md"
+    },
+    {
+      "status": "not_found",
+      "path": "docs/tools/Git 高级命令教程.md"
+    },
+    {
+      "status": "not_found",
+      "path": "docs/tools/VSCode 快捷键.md"
+    },
+    {
+      "status": "not_found",
+      "path": "docs/tools/PHPStorm 快捷键.md"
+    },
+    {
+      "status": "not_found",
+      "path": "docs/tools/IDE 偷懒小工具.md"
+    },
+    {
+      "status": "not_found",
+      "path": "docs/data/automation/Go 构建远程存储 MCP 服务器实战.md"
+    },
+    {
+      "status": "not_found",
+      "path": "docs/data/automation/MCP 服务器精选：提升 AI 编程效率的 5 大神器.md"
+    },
+    {
+      "status": "not_found",
+      "path": "docs/data/automation/爬虫 JS 逆向 Webpack 技巧记录.md"
+    },
+    {
+      "status": "not_found",
+      "path": "docs/data/automation/Python 协程.md"
+    },
+    {
+      "status": "not_found",
+      "path": "docs/thinking/method/从 0 到 1 构建自己的思考体系.md"
+    },
+    {
+      "status": "not_found",
+      "path": "docs/thinking/notes/Qwen Code 30 个使用小技巧.md"
+    },
+    {
+      "status": "not_found",
+      "path": "docs/thinking/notes/使用扣子 AI 打造公众号机器人.md"
+    }
+  ]
+}

@@ -1,13 +1,15 @@
 ---
-title: "Vibe Coding 时代的开发者 如何跟 ChatGPT 5.1 一起写代码，而不是被替代"
-date: 2025-11-28
+title: Vibe Coding 时代的开发者 如何跟 ChatGPT 5.1 一起写代码，而不是被替代
+date: 2025-11-28T00:00:00.000Z
 author: PFinal南丞
 category: 工具
 tags:
   - AI编程
   - ChatGPT
   - 开发效率
-description: "在 Vibe Coding 时代，ChatGPT 5.1 已经坐在你的工位上了。这篇文章聊的不是“会不会被 AI 替代”，而是：如何和 ChatGPT 5.1 一起写代码，让它加班，你下班。"
+description: >-
+  在 Vibe Coding 时代，ChatGPT 5.1 已经坐在你的工位上了。这篇文章聊的不是“会不会被 AI 替代”，而是：如何和 ChatGPT
+  5.1 一起写代码，让它加班，你下班。
 keywords:
   - vibe coding
   - chatgpt 5.1 coding
@@ -18,6 +20,10 @@ keywords:
   - ai 代码 质量
   - ai 调试 难点
   - 开发者 职业 焦虑 ai
+course:
+  name: AI 编程效率提升
+  module: 1
+  lesson: 1.2
 ---
 
 # Vibe Coding 时代的开发者：如何跟 ChatGPT 5.1 一起写代码，而不是被替代

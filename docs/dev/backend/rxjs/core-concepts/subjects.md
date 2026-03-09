@@ -1,9 +1,13 @@
 ---
-title: "Subject 主体 - RxJS 核心概念"
-date: 2025-03-09
+title: Subject 主体 - RxJS 核心概念
+date: 2025-03-09T00:00:00.000Z
 author: PFinal南丞
 description: 详解 RxJS Subject，BehaviorSubject，ReplaySubject，AsyncSubject 的区别和使用场景。
-keywords: RxJS, Subject, BehaviorSubject, ReplaySubject, AsyncSubject, 多播, 状态管理
+keywords: 'RxJS, Subject, BehaviorSubject, ReplaySubject, AsyncSubject, 多播, 状态管理'
+course:
+  name: RxJS 响应式编程实战手册
+  module: 1
+  lesson: 1.5
 ---
 
 # Subject 主体

@@ -7,6 +7,10 @@ description: 深入Go内存分配
 author: PFinal南丞
 keywords: '深入Go内存分配, golang, 内存分配'
 recommend: 后端工程
+course:
+  name: Go 后端工程师成长路线
+  module: 1
+  lesson: 1.1
 ---
 
 # 深入Go内存分配
