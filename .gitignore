@@ -24,3 +24,6 @@ scripts/check-seo-issues.mjs
 scripts/fix-seo-issues.mjs
 
 sync2github.sh
+docs/ARTICLE_ORGANIZATION_SUGGESTIONS.md
+docs/article-analysis-report.json
+scripts/analyze-articles.js
