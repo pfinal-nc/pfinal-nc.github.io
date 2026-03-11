@@ -11,12 +11,25 @@
     },
     "items": [
         {
+            "id": "https://friday-go.icu/dev/backend/golang/wails/README",
+            "content_html": "全面的Wails桌面应用开发指南，涵盖从入门到实战的完整内容，包括教程系列、实战项目、性能优化、系统集成等，帮助Go开发者构建高性能跨平台桌面应用。",
+            "url": "https://friday-go.icu/dev/backend/golang/wails/README",
+            "title": "Wails 桌面应用开发 - Go 跨平台框架完整指南 | PFinalClub",
+            "summary": "全面的Wails桌面应用开发指南，涵盖从入门到实战的完整内容，包括教程系列、实战项目、性能优化、系统集成等，帮助Go开发者构建高性能跨平台桌面应用。",
+            "date_modified": "2026-03-11T07:43:38.752Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": []
+        },
+        {
             "id": "https://friday-go.icu/dev/system/database",
             "content_html": "PFinalClub 数据库中文专题导航页：系统整理 MySQL 配置、PostgreSQL 功能、数据库优化等核心文章，让中文读者可以按专题快速找到高质量实战内容。",
             "url": "https://friday-go.icu/dev/system/database",
             "title": "数据库技术专题 2025 - MySQL / PostgreSQL 配置优化与实战",
             "summary": "PFinalClub 数据库中文专题导航页：系统整理 MySQL 配置、PostgreSQL 功能、数据库优化等核心文章，让中文读者可以按专题快速找到高质量实战内容。",
-            "date_modified": "2026-03-10T12:31:40.912Z",
+            "date_modified": "2026-03-11T07:43:38.747Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -29,20 +42,7 @@
             "url": "https://friday-go.icu/dev/backend/python",
             "title": "Python 开发技术专题 2025 - 从入门到精通的实战指南 | PFinalClub",
             "summary": "Python开发技术专题：从基础语法到高级应用，涵盖Django、Flask、FastAPI等主流框架，数据科学、AI、自动化等领域。2025年最新Python开发实践指南。",
-            "date_modified": "2026-03-10T12:31:40.902Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": []
-        },
-        {
-            "id": "https://friday-go.icu/dev/backend/php",
-            "content_html": "PHP开发技术专题：从基础语法到框架应用，涵盖Laravel、ThinkPHP、Yii等主流框架，数据库操作、API开发、性能优化等内容。2025年最新PHP开发实践指南。",
-            "url": "https://friday-go.icu/dev/backend/php",
-            "title": "PHP 开发技术专题 2025 - 从入门到精通的实战指南 | PFinalClub",
-            "summary": "PHP开发技术专题：从基础语法到框架应用，涵盖Laravel、ThinkPHP、Yii等主流框架，数据库操作、API开发、性能优化等内容。2025年最新PHP开发实践指南。",
-            "date_modified": "2026-03-10T12:31:40.899Z",
+            "date_modified": "2026-03-11T07:43:38.739Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -55,7 +55,20 @@
             "url": "https://friday-go.icu/dev/backend/golang",
             "title": "Golang 开发技术专题 2025 - 从入门到精通的实战指南 | PFinalClub",
             "summary": "Golang开发技术专题：从基础语法到高级架构设计，涵盖微服务、并发编程、性能优化等核心主题。2025年最新Golang开发实践指南。",
-            "date_modified": "2026-03-10T12:31:40.889Z",
+            "date_modified": "2026-03-11T07:43:38.725Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": []
+        },
+        {
+            "id": "https://friday-go.icu/dev/backend/php",
+            "content_html": "PHP开发技术专题：从基础语法到框架应用，涵盖Laravel、ThinkPHP、Yii等主流框架，数据库操作、API开发、性能优化等内容。2025年最新PHP开发实践指南。",
+            "url": "https://friday-go.icu/dev/backend/php",
+            "title": "PHP 开发技术专题 2025 - 从入门到精通的实战指南 | PFinalClub",
+            "summary": "PHP开发技术专题：从基础语法到框架应用，涵盖Laravel、ThinkPHP、Yii等主流框架，数据库操作、API开发、性能优化等内容。2025年最新PHP开发实践指南。",
+            "date_modified": "2026-03-11T07:43:38.716Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -68,20 +81,7 @@
             "url": "https://friday-go.icu/thinking/method",
             "title": "技术架构与方法论 | 架构设计 学习路径 工程实践 | PFinalClub",
             "summary": "深入的技术架构与方法论指南，涵盖架构设计原则、系统化学习路径、工程实践方法论、技术哲学思考等内容。提供从技术深度到思维高度的完整成长体系。",
-            "date_modified": "2026-03-10T12:31:40.878Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": []
-        },
-        {
-            "id": "https://friday-go.icu/security/offensive",
-            "content_html": "深入的安全攻防研究指南，涵盖Web安全漏洞分析、内网渗透技术、红蓝对抗实战演练、渗透测试方法论等攻防一体实践内容。提供从攻击到防御的完整安全研究体系。",
-            "url": "https://friday-go.icu/security/offensive",
-            "title": "安全攻防研究 | Web安全 内网渗透 红蓝对抗实战 | PFinalClub",
-            "summary": "深入的安全攻防研究指南，涵盖Web安全漏洞分析、内网渗透技术、红蓝对抗实战演练、渗透测试方法论等攻防一体实践内容。提供从攻击到防御的完整安全研究体系。",
-            "date_modified": "2026-03-10T12:31:40.873Z",
+            "date_modified": "2026-03-11T07:43:38.708Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -94,7 +94,20 @@
             "url": "https://friday-go.icu/security/engineering",
             "title": "安全工程实践 | SSH安全 Golang安全 服务器加固 | PFinalClub",
             "summary": "全面的安全工程实践指南，涵盖SSH安全加固、Golang安全开发、服务器防护、WAF配置、DevOps安全集成等工程化落地方案。提供从基础安全到企业级防护的完整解决方案。",
-            "date_modified": "2026-03-10T12:31:40.872Z",
+            "date_modified": "2026-03-11T07:43:38.704Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": []
+        },
+        {
+            "id": "https://friday-go.icu/security/offensive",
+            "content_html": "深入的安全攻防研究指南，涵盖Web安全漏洞分析、内网渗透技术、红蓝对抗实战演练、渗透测试方法论等攻防一体实践内容。提供从攻击到防御的完整安全研究体系。",
+            "url": "https://friday-go.icu/security/offensive",
+            "title": "安全攻防研究 | Web安全 内网渗透 红蓝对抗实战 | PFinalClub",
+            "summary": "深入的安全攻防研究指南，涵盖Web安全漏洞分析、内网渗透技术、红蓝对抗实战演练、渗透测试方法论等攻防一体实践内容。提供从攻击到防御的完整安全研究体系。",
+            "date_modified": "2026-03-11T07:43:38.704Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -107,7 +120,7 @@
             "url": "https://friday-go.icu/dev/system",
             "title": "系统与基础 2025 - 数据库/容器/可观测性技术导航",
             "summary": "覆盖数据库、Linux、网络、容器等系统基础与实践文章。",
-            "date_modified": "2026-03-10T12:31:40.869Z",
+            "date_modified": "2026-03-11T07:43:38.702Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -123,7 +136,7 @@
             "url": "https://friday-go.icu/data/automation",
             "title": "数据采集与自动化 | 爬虫技术 AI工程 机器人开发 | PFinalClub",
             "summary": "专业的数据采集与自动化技术指南，涵盖爬虫开发、AI工程实践、机器人开发、数据生产线构建等实战内容。提供从数据采集到自动化处理的完整技术栈解决方案。",
-            "date_modified": "2026-03-10T12:31:40.868Z",
+            "date_modified": "2026-03-11T07:43:38.700Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -136,7 +149,7 @@
             "url": "https://friday-go.icu/courses/wails-desktop",
             "title": "Wails 跨平台桌面开发实战 - 完整课程大纲 | 2026",
             "summary": "使用 Go 和前端技术栈（Vue/React）构建跨平台桌面应用，从入门到实战，包含抖音直播助手、密码管理器等真实项目案例。",
-            "date_modified": "2026-03-10T12:31:40.865Z",
+            "date_modified": "2026-03-11T07:43:38.697Z",
             "author": {
                 "name": "PFinal 南丞",
                 "url": "https://friday-go.icu"
@@ -150,12 +163,30 @@
             ]
         },
         {
+            "id": "https://friday-go.icu/courses/golang-backend",
+            "content_html": "系统化的 Go 后端工程师学习路径，从语言基础到微服务架构，涵盖并发编程、性能优化、数据库设计、可观测性体系等核心技能，包含完整实战项目。",
+            "url": "https://friday-go.icu/courses/golang-backend",
+            "title": "Go 后端工程师成长路线 - 完整课程大纲 | 2026",
+            "summary": "系统化的 Go 后端工程师学习路径，从语言基础到微服务架构，涵盖并发编程、性能优化、数据库设计、可观测性体系等核心技能，包含完整实战项目。",
+            "date_modified": "2026-03-11T07:43:38.696Z",
+            "author": {
+                "name": "PFinal 南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "course",
+                "golang",
+                "backend",
+                "learning-path"
+            ]
+        },
+        {
             "id": "https://friday-go.icu/courses/rxjs",
             "content_html": "系统学习 RxJS 响应式编程，从 Observable 核心概念到高级操作符应用，包含搜索建议、拖放、状态管理等实战案例，帮助前端开发者掌握异步编程利器。",
             "url": "https://friday-go.icu/courses/rxjs",
             "title": "RxJS 响应式编程实战手册 - 完整课程大纲 | 2026",
             "summary": "系统学习 RxJS 响应式编程，从 Observable 核心概念到高级操作符应用，包含搜索建议、拖放、状态管理等实战案例，帮助前端开发者掌握异步编程利器。",
-            "date_modified": "2026-03-10T12:31:40.864Z",
+            "date_modified": "2026-03-11T07:43:38.696Z",
             "author": {
                 "name": "PFinal 南丞",
                 "url": "https://friday-go.icu"
@@ -174,7 +205,7 @@
             "url": "https://friday-go.icu/courses/security-engineer",
             "title": "安全工程师成长路线 - 完整课程大纲 | 2026",
             "summary": "系统学习网络安全与工程安全，从 SSH 加固到 Web 应用防护，从 Go 安全开发到攻防研究，打造攻防一体的安全工程能力。",
-            "date_modified": "2026-03-10T12:31:40.864Z",
+            "date_modified": "2026-03-11T07:43:38.696Z",
             "author": {
                 "name": "PFinal 南丞",
                 "url": "https://friday-go.icu"
@@ -188,12 +219,25 @@
             ]
         },
         {
+            "id": "https://friday-go.icu/security",
+            "content_html": "全面的网络安全体系指南，涵盖Web安全、应用安全、安全工程、攻防研究、服务器加固、密码学等实战内容。提供从防御加固到攻防研究的完整安全知识体系。",
+            "url": "https://friday-go.icu/security",
+            "title": "Web安全 · 工程安全 | 攻防研究 安全工程 | PFinalClub",
+            "summary": "全面的网络安全体系指南，涵盖Web安全、应用安全、安全工程、攻防研究、服务器加固、密码学等实战内容。提供从防御加固到攻防研究的完整安全知识体系。",
+            "date_modified": "2026-03-11T07:43:38.695Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": []
+        },
+        {
             "id": "https://friday-go.icu/courses/devops-practice",
             "content_html": "系统学习 DevOps 工程实践，从 Docker 容器化到 Kubernetes 编排，从 CI/CD 流水线到监控告警体系，打造现代化工程能力。",
             "url": "https://friday-go.icu/courses/devops-practice",
             "title": "DevOps 工程实践 - 完整课程大纲 | 2026",
             "summary": "系统学习 DevOps 工程实践，从 Docker 容器化到 Kubernetes 编排，从 CI/CD 流水线到监控告警体系，打造现代化工程能力。",
-            "date_modified": "2026-03-10T12:31:40.863Z",
+            "date_modified": "2026-03-11T07:43:38.695Z",
             "author": {
                 "name": "PFinal 南丞",
                 "url": "https://friday-go.icu"
@@ -208,30 +252,12 @@
             ]
         },
         {
-            "id": "https://friday-go.icu/courses/golang-backend",
-            "content_html": "系统化的 Go 后端工程师学习路径，从语言基础到微服务架构，涵盖并发编程、性能优化、数据库设计、可观测性体系等核心技能，包含完整实战项目。",
-            "url": "https://friday-go.icu/courses/golang-backend",
-            "title": "Go 后端工程师成长路线 - 完整课程大纲 | 2026",
-            "summary": "系统化的 Go 后端工程师学习路径，从语言基础到微服务架构，涵盖并发编程、性能优化、数据库设计、可观测性体系等核心技能，包含完整实战项目。",
-            "date_modified": "2026-03-10T12:31:40.863Z",
-            "author": {
-                "name": "PFinal 南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": [
-                "course",
-                "golang",
-                "backend",
-                "learning-path"
-            ]
-        },
-        {
-            "id": "https://friday-go.icu/security",
-            "content_html": "全面的网络安全体系指南，涵盖Web安全、应用安全、安全工程、攻防研究、服务器加固、密码学等实战内容。提供从防御加固到攻防研究的完整安全知识体系。",
-            "url": "https://friday-go.icu/security",
-            "title": "Web安全 · 工程安全 | 攻防研究 安全工程 | PFinalClub",
-            "summary": "全面的网络安全体系指南，涵盖Web安全、应用安全、安全工程、攻防研究、服务器加固、密码学等实战内容。提供从防御加固到攻防研究的完整安全知识体系。",
-            "date_modified": "2026-03-10T12:31:40.862Z",
+            "id": "https://friday-go.icu/courses",
+            "content_html": "PFinalClub 提供系统化的技术课程体系，涵盖 Go 后端工程师、Wails 桌面开发、RxJS 响应式编程、DevOps 实践、安全工程等完整学习路径，从入门到精通的实战教程。",
+            "url": "https://friday-go.icu/courses",
+            "title": "PFinalClub 技术课程体系 - 系统化学习路径 | 2026",
+            "summary": "PFinalClub 提供系统化的技术课程体系，涵盖 Go 后端工程师、Wails 桌面开发、RxJS 响应式编程、DevOps 实践、安全工程等完整学习路径，从入门到精通的实战教程。",
+            "date_modified": "2026-03-11T07:43:38.694Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -244,33 +270,7 @@
             "url": "https://friday-go.icu/data",
             "title": "数据科学与工程 | 数据采集 数据分析 数据可视化 AI工程 | PFinalClub",
             "summary": "全面的数据科学与工程知识体系，涵盖数据采集、数据分析、数据可视化、AI工程、机器学习等核心领域，提供从数据获取到智能应用的完整技术栈解决方案。",
-            "date_modified": "2026-03-10T12:31:40.861Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": []
-        },
-        {
-            "id": "https://friday-go.icu/indie",
-            "content_html": "专业的独立开发与产品实践指南，涵盖SaaS产品开发、技术创业路径、产品设计与增长策略等内容。提供从创意到商业化的完整产品开发体系。",
-            "url": "https://friday-go.icu/indie",
-            "title": "独立开发与产品实践 | SaaS开发 技术创业 产品增长 | PFinalClub",
-            "summary": "专业的独立开发与产品实践指南，涵盖SaaS产品开发、技术创业路径、产品设计与增长策略等内容。提供从创意到商业化的完整产品开发体系。",
-            "date_modified": "2026-03-10T12:31:40.861Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": []
-        },
-        {
-            "id": "https://friday-go.icu/courses",
-            "content_html": "PFinalClub 提供系统化的技术课程体系，涵盖 Go 后端工程师、Wails 桌面开发、RxJS 响应式编程、DevOps 实践、安全工程等完整学习路径，从入门到精通的实战教程。",
-            "url": "https://friday-go.icu/courses",
-            "title": "PFinalClub 技术课程体系 - 系统化学习路径 | 2026",
-            "summary": "PFinalClub 提供系统化的技术课程体系，涵盖 Go 后端工程师、Wails 桌面开发、RxJS 响应式编程、DevOps 实践、安全工程等完整学习路径，从入门到精通的实战教程。",
-            "date_modified": "2026-03-10T12:31:40.860Z",
+            "date_modified": "2026-03-11T07:43:38.694Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -283,7 +283,7 @@
             "url": "https://friday-go.icu/Tools",
             "title": "工具与实用程序中文专题导航 - AI 工具 / 开发工具 / 效率提升 2025",
             "summary": "PFinalClub 工具与实用程序中文专题导航页：系统整理 AI 工具目录、开发工具、CLI 工具、Docker 指南、效率技巧等核心文章，让中文读者可以按专题快速找到高质量实战内容。",
-            "date_modified": "2026-03-10T12:31:40.856Z",
+            "date_modified": "2026-03-11T07:43:38.692Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -296,7 +296,7 @@
             "url": "https://friday-go.icu/Tools/Git高级命令教程",
             "title": "Git Advanced Commands 2025 - 12个提升效率的高级命令完整指南",
             "summary": "Git 高级命令完整教程：worktree 多工作目录、reflog 找回丢失提交、bisect 二分查找 Bug、stash 进阶、cherry-pick 选择性合并等 12 个实用命令详解，附实战示例。",
-            "date_modified": "2026-03-10T12:31:40.854Z",
+            "date_modified": "2026-03-11T07:43:38.690Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -306,6 +306,318 @@
                 "版本控制",
                 "开发工具",
                 "DevOps"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/learning-roadmap",
+            "content_html": "PFinalClub完整学习路线图，涵盖Golang、PHP、Python、DevOps、AI工程化、安全工程等技术栈，从入门到精通的系统学习路径。",
+            "url": "https://friday-go.icu/learning-roadmap",
+            "title": "学习路线图 - PFinalClub",
+            "summary": "PFinalClub完整学习路线图，涵盖Golang、PHP、Python、DevOps、AI工程化、安全工程等技术栈，从入门到精通的系统学习路径。",
+            "date_modified": "2026-03-11T00:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "learning-path",
+                "roadmap",
+                "tutorial"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/thinking/method/2026-企业级-AI-编程实践手册精华分享",
+            "content_html": "深度解读 TRAE 团队《2026 企业级 AI 编程实践手册》，涵盖 Context Engineering、Skills、Spec、Rules、MCP、智能体六大核心方法论， 以及用 TRAE 开发 TRAE 的真实实践案例。从\"会用 AI\"到\"精通 AI 编程\"的完整成长路径。",
+            "url": "https://friday-go.icu/thinking/method/2026-企业级-AI-编程实践手册精华分享",
+            "title": "2026 企业级 AI 编程实践手册精华分享",
+            "summary": "深度解读 TRAE 团队《2026 企业级 AI 编程实践手册》，涵盖 Context Engineering、Skills、Spec、Rules、MCP、智能体六大核心方法论， 以及用 TRAE 开发 TRAE 的真实实践案例。从\"会用 AI\"到\"精通 AI 编程\"的完整成长路径。",
+            "date_modified": "2026-03-11T00:00:00.000Z",
+            "author": {
+                "name": "PFinal 南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "AI 编程",
+                "方法论",
+                "TRAE",
+                "Context Engineering",
+                "Skills"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/dev/backend/python/FastAPI-从零开始构建高性能API-快速入门指南",
+            "content_html": "FastAPI 是现代、快速（高性能）的 Web 框架，用于基于标准 Python 类型提示使用 Python 3.8+ 构建 API。本文将从零开始，带你快速上手 FastAPI，构建第一个高性能 RESTful API。",
+            "url": "https://friday-go.icu/dev/backend/python/FastAPI-从零开始构建高性能API-快速入门指南",
+            "title": "FastAPI 从零开始构建高性能 API：快速入门指南",
+            "summary": "FastAPI 是现代、快速（高性能）的 Web 框架，用于基于标准 Python 类型提示使用 Python 3.8+ 构建 API。本文将从零开始，带你快速上手 FastAPI，构建第一个高性能 RESTful API。",
+            "date_modified": "2026-03-11T00:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "python",
+                "fastapi",
+                "web",
+                "api",
+                "tutorial",
+                "async"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/dev/backend/python/FastAPI中间件与依赖注入-构建可扩展的API架构",
+            "content_html": "深入理解 FastAPI 的中间件和依赖注入机制，学习如何构建可扩展、可维护的 API 架构。包括自定义中间件、依赖注入、数据库连接、认证授权等高级主题。",
+            "url": "https://friday-go.icu/dev/backend/python/FastAPI中间件与依赖注入-构建可扩展的API架构",
+            "title": "FastAPI 中间件与依赖注入：构建可扩展的 API 架构",
+            "summary": "深入理解 FastAPI 的中间件和依赖注入机制，学习如何构建可扩展、可维护的 API 架构。包括自定义中间件、依赖注入、数据库连接、认证授权等高级主题。",
+            "date_modified": "2026-03-11T00:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "python",
+                "fastapi",
+                "middleware",
+                "dependency-injection",
+                "architecture",
+                "advanced"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/dev/backend/python/FastAPI实战案例-从零构建企业级API",
+            "content_html": "通过一个完整的实战案例，学习如何从零开始构建企业级 FastAPI 应用。包括项目架构、数据库设计、认证授权、API 文档、部署上线等完整流程。",
+            "url": "https://friday-go.icu/dev/backend/python/FastAPI实战案例-从零构建企业级API",
+            "title": "FastAPI 实战案例：从零构建企业级 API",
+            "summary": "通过一个完整的实战案例，学习如何从零开始构建企业级 FastAPI 应用。包括项目架构、数据库设计、认证授权、API 文档、部署上线等完整流程。",
+            "date_modified": "2026-03-11T00:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "python",
+                "fastapi",
+                "case-study",
+                "enterprise",
+                "architecture",
+                "full-stack",
+                "production"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/dev/backend/python/FastAPI异步编程与性能优化-打造高并发API",
+            "content_html": "深入理解 FastAPI 的异步编程机制和性能优化技巧，学习如何打造高并发的 API。包括异步 I/O、数据库优化、缓存策略、并发控制等高级主题。",
+            "url": "https://friday-go.icu/dev/backend/python/FastAPI异步编程与性能优化-打造高并发API",
+            "title": "FastAPI 异步编程与性能优化：打造高并发 API",
+            "summary": "深入理解 FastAPI 的异步编程机制和性能优化技巧，学习如何打造高并发的 API。包括异步 I/O、数据库优化、缓存策略、并发控制等高级主题。",
+            "date_modified": "2026-03-11T00:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "python",
+                "fastapi",
+                "async",
+                "performance",
+                "optimization",
+                "high-concurrency"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/dev/backend/python/FastAPI测试与部署-生产环境最佳实践",
+            "content_html": "学习如何测试和部署 FastAPI 应用到生产环境。包括单元测试、集成测试、Docker 部署、Kubernetes 部署、CI/CD 流程等生产环境最佳实践。",
+            "url": "https://friday-go.icu/dev/backend/python/FastAPI测试与部署-生产环境最佳实践",
+            "title": "FastAPI 测试与部署：生产环境最佳实践",
+            "summary": "学习如何测试和部署 FastAPI 应用到生产环境。包括单元测试、集成测试、Docker 部署、Kubernetes 部署、CI/CD 流程等生产环境最佳实践。",
+            "date_modified": "2026-03-11T00:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "python",
+                "fastapi",
+                "testing",
+                "deployment",
+                "docker",
+                "kubernetes",
+                "cicd",
+                "production"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/dev/backend/python/Python-TensorFlow实战-Keras入门到精通",
+            "content_html": "全面掌握 TensorFlow 和 Keras 框架，构建和训练深度学习模型",
+            "url": "https://friday-go.icu/dev/backend/python/Python-TensorFlow实战-Keras入门到精通",
+            "title": "Python TensorFlow 实战：Keras 入门到精通",
+            "summary": "全面掌握 TensorFlow 和 Keras 框架，构建和训练深度学习模型",
+            "date_modified": "2026-03-11T00:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "Python",
+                "TensorFlow",
+                "Keras",
+                "深度学习",
+                "神经网络"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/dev/backend/python/Python-Web爬虫实战-从入门到精通",
+            "content_html": "系统学习 Python Web 爬虫技术，掌握 Requests、BeautifulSoup、Scrapy 等核心库，构建高性能爬虫系统",
+            "url": "https://friday-go.icu/dev/backend/python/Python-Web爬虫实战-从入门到精通",
+            "title": "Python Web 爬虫实战：从入门到精通",
+            "summary": "系统学习 Python Web 爬虫技术，掌握 Requests、BeautifulSoup、Scrapy 等核心库，构建高性能爬虫系统",
+            "date_modified": "2026-03-11T00:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "Python",
+                "Web爬虫",
+                "Scrapy",
+                "BeautifulSoup",
+                "数据采集"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/dev/backend/python/Python-推荐系统实战-从算法到应用",
+            "content_html": "全面掌握推荐系统技术，从协同过滤到深度学习，构建个性化推荐引擎",
+            "url": "https://friday-go.icu/dev/backend/python/Python-推荐系统实战-从算法到应用",
+            "title": "Python 推荐系统实战：从算法到应用",
+            "summary": "全面掌握推荐系统技术，从协同过滤到深度学习，构建个性化推荐引擎",
+            "date_modified": "2026-03-11T00:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "Python",
+                "推荐系统",
+                "机器学习",
+                "深度学习",
+                "协同过滤"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/dev/backend/python/Python-数据分析入门-Pandas与NumPy基础",
+            "content_html": "深入理解 Pandas 和 NumPy 的核心概念，掌握数据分析的基础技能，从数据处理到可视化完整流程",
+            "url": "https://friday-go.icu/dev/backend/python/Python-数据分析入门-Pandas与NumPy基础",
+            "title": "Python 数据分析入门：Pandas 与 NumPy 基础",
+            "summary": "深入理解 Pandas 和 NumPy 的核心概念，掌握数据分析的基础技能，从数据处理到可视化完整流程",
+            "date_modified": "2026-03-11T00:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "Python",
+                "Pandas",
+                "NumPy",
+                "数据分析",
+                "数据科学"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/dev/backend/python/Python-数据可视化实战-Matplotlib-Seaborn-Plotly完全指南",
+            "content_html": "深入掌握三大可视化库的使用技巧，从基础图表到高级可视化，打造专业级数据展示",
+            "url": "https://friday-go.icu/dev/backend/python/Python-数据可视化实战-Matplotlib-Seaborn-Plotly完全指南",
+            "title": "Python 数据可视化实战：Matplotlib、Seaborn 与 Plotly 完全指南",
+            "summary": "深入掌握三大可视化库的使用技巧，从基础图表到高级可视化，打造专业级数据展示",
+            "date_modified": "2026-03-11T00:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "Python",
+                "Matplotlib",
+                "Seaborn",
+                "Plotly",
+                "数据可视化",
+                "数据分析"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/dev/backend/python/Python-时间序列分析-从基础到实战",
+            "content_html": "深入掌握时间序列分析的核心方法，包括趋势分析、季节性分解、预测建模等实用技术",
+            "url": "https://friday-go.icu/dev/backend/python/Python-时间序列分析-从基础到实战",
+            "title": "Python 时间序列分析：从基础到实战",
+            "summary": "深入掌握时间序列分析的核心方法，包括趋势分析、季节性分解、预测建模等实用技术",
+            "date_modified": "2026-03-11T00:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "Python",
+                "时间序列",
+                "数据分析",
+                "Pandas",
+                "Prophet",
+                "机器学习"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/dev/backend/python/Python-机器学习入门-Scikit-learn实战指南",
+            "content_html": "从零开始掌握机器学习，使用 Scikit-learn 构建真实世界的机器学习应用",
+            "url": "https://friday-go.icu/dev/backend/python/Python-机器学习入门-Scikit-learn实战指南",
+            "title": "Python 机器学习入门：Scikit-learn 实战指南",
+            "summary": "从零开始掌握机器学习，使用 Scikit-learn 构建真实世界的机器学习应用",
+            "date_modified": "2026-03-11T00:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "Python",
+                "机器学习",
+                "Scikit-learn",
+                "数据科学",
+                "AI"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/dev/backend/python/Python-深度学习入门-PyTorch实战指南",
+            "content_html": "从零开始学习 PyTorch 深度学习框架，掌握神经网络、CNN、RNN 等核心技术",
+            "url": "https://friday-go.icu/dev/backend/python/Python-深度学习入门-PyTorch实战指南",
+            "title": "Python 深度学习入门：PyTorch 实战指南",
+            "summary": "从零开始学习 PyTorch 深度学习框架，掌握神经网络、CNN、RNN 等核心技术",
+            "date_modified": "2026-03-11T00:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "Python",
+                "PyTorch",
+                "深度学习",
+                "神经网络",
+                "AI"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/dev/backend/python/Python-自然语言处理-NLP实战指南",
+            "content_html": "深入掌握 NLP 技术，使用 NLTK、spaCy、Transformers 等工具处理文本数据",
+            "url": "https://friday-go.icu/dev/backend/python/Python-自然语言处理-NLP实战指南",
+            "title": "Python 自然语言处理（NLP）实战指南",
+            "summary": "深入掌握 NLP 技术，使用 NLTK、spaCy、Transformers 等工具处理文本数据",
+            "date_modified": "2026-03-11T00:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "Python",
+                "NLP",
+                "自然语言处理",
+                "Transformers",
+                "深度学习"
             ]
         },
         {
@@ -324,6 +636,25 @@
                 "AI推理",
                 "边缘计算",
                 "模型部署"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/dev/backend/golang/wails/wails-gonavi-practice",
+            "content_html": "介绍两款基于Wails开发的优秀桌面应用：GoNavi多数据库管理工具和TinyRDM Redis桌面管理器，展示Wails生态的魅力和实力。",
+            "url": "https://friday-go.icu/dev/backend/golang/wails/wails-gonavi-practice",
+            "title": "Wails 生态巡礼：两款让我惊艳的桌面应用（GoNavi & TinyRDM）",
+            "summary": "介绍两款基于Wails开发的优秀桌面应用：GoNavi多数据库管理工具和TinyRDM Redis桌面管理器，展示Wails生态的魅力和实力。",
+            "date_modified": "2026-03-09T18:24:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "wails",
+                "golang",
+                "desktop",
+                "database",
+                "redis"
             ]
         },
         {
@@ -546,338 +877,6 @@
                 "思维模型",
                 "个人成长",
                 "决策科学"
-            ]
-        },
-        {
-            "id": "https://friday-go.icu/dev/backend/golang/Go 1.26 SIMD编程实战：从入门到高性能优化",
-            "content_html": "深入探讨Go 1.26中的SIMD（单指令多数据）编程，涵盖向量化指令集基础、编译器自动优化、手动内联汇编实践，以及如何在实际项目中应用SIMD实现2-10倍的性能提升。面向有经验的Go开发者，提供完整代码示例与benchmark对比。",
-            "url": "https://friday-go.icu/dev/backend/golang/Go 1.26 SIMD编程实战：从入门到高性能优化",
-            "title": "Go 1.26 SIMD编程实战：从入门到高性能优化",
-            "summary": "深入探讨Go 1.26中的SIMD（单指令多数据）编程，涵盖向量化指令集基础、编译器自动优化、手动内联汇编实践，以及如何在实际项目中应用SIMD实现2-10倍的性能提升。面向有经验的Go开发者，提供完整代码示例与benchmark对比。",
-            "date_modified": "2026-02-25T09:46:00.000Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": [
-                "Go语言",
-                "性能优化",
-                "并行计算",
-                "SIMD",
-                "编译器"
-            ]
-        },
-        {
-            "id": "https://friday-go.icu/dev/backend/python/FastAPI现代化Web开发 - 异步开发、自动API文档生成",
-            "content_html": "深入探讨FastAPI框架的异步开发核心原理、自动API文档生成机制，以及在实际项目中的性能优化技巧与最佳实践，助力构建高性能现代化Web服务",
-            "url": "https://friday-go.icu/dev/backend/python/FastAPI现代化Web开发 - 异步开发、自动API文档生成",
-            "title": "FastAPI现代化Web开发：异步开发与自动API文档生成实战",
-            "summary": "深入探讨FastAPI框架的异步开发核心原理、自动API文档生成机制，以及在实际项目中的性能优化技巧与最佳实践，助力构建高性能现代化Web服务",
-            "date_modified": "2026-02-14T19:00:00.000Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": [
-                "Python",
-                "FastAPI",
-                "异步编程",
-                "API文档"
-            ]
-        },
-        {
-            "id": "https://friday-go.icu/dev/backend/golang/runtime.free 打破Go GC性能瓶颈的秘密武器",
-            "content_html": "深入解析Go 1.26中的runtime.free机制，如何通过编译器自动化与标准库手动优化，绕过GC直接释放内存，实现高达2倍的性能提升。面向有经验的Go开发者，提供实战代码示例、benchmark数据对比和最佳实践。",
-            "url": "https://friday-go.icu/dev/backend/golang/runtime.free 打破Go GC性能瓶颈的秘密武器",
-            "title": "runtime.free 打破Go GC性能瓶颈的秘密武器",
-            "summary": "深入解析Go 1.26中的runtime.free机制，如何通过编译器自动化与标准库手动优化，绕过GC直接释放内存，实现高达2倍的性能提升。面向有经验的Go开发者，提供实战代码示例、benchmark数据对比和最佳实践。",
-            "date_modified": "2026-02-13T09:28:00.000Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": [
-                "Go语言",
-                "性能优化",
-                "内存管理",
-                "GC调优"
-            ]
-        },
-        {
-            "id": "https://friday-go.icu/Tools/服务器进程日志分析：从头皮发麻到AI解救",
-            "content_html": "维护Web服务器时，面对密密麻麻的进程信息头皮发麻？这篇文章教你用Shell脚本记录服务器状态，配合AI分析，轻松搞定进程分析、性能监控、卡顿排查等问题。",
-            "url": "https://friday-go.icu/Tools/服务器进程日志分析：从头皮发麻到AI解救",
-            "title": "服务器进程日志分析：从头皮发麻到AI解救",
-            "summary": "维护Web服务器时，面对密密麻麻的进程信息头皮发麻？这篇文章教你用Shell脚本记录服务器状态，配合AI分析，轻松搞定进程分析、性能监控、卡顿排查等问题。",
-            "date_modified": "2025-12-26T11:10:00.000Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": [
-                "工具",
-                "Shell",
-                "Linux",
-                "服务器监控",
-                "AI"
-            ]
-        },
-        {
-            "id": "https://friday-go.icu/dev/system/database/MySQL-Production-Security-Hardening-Guide-2025",
-            "content_html": "MySQL 生产环境安全配置与加固完整指南 2025：从认证安全到数据加密的企业级安全加固方案。包含用户权限管理、SSL/TLS 加密、审计日志、SQL注入防护、备份安全等实战案例，助你构建安全的 MySQL 数据库系统。",
-            "url": "https://friday-go.icu/dev/system/database/MySQL-Production-Security-Hardening-Guide-2025",
-            "title": "MySQL 生产环境安全配置 2025 - 企业级安全加固完整指南",
-            "summary": "MySQL 生产环境安全配置与加固完整指南 2025：从认证安全到数据加密的企业级安全加固方案。包含用户权限管理、SSL/TLS 加密、审计日志、SQL注入防护、备份安全等实战案例，助你构建安全的 MySQL 数据库系统。",
-            "date_modified": "2025-12-22T00:00:00.000Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": [
-                "mysql",
-                "安全",
-                "数据库安全",
-                "最佳实践",
-                "生产环境",
-                "安全加固",
-                "数据加密"
-            ]
-        },
-        {
-            "id": "https://friday-go.icu/dev",
-            "content_html": "专业的后端开发与系统架构指南，涵盖Go、PHP、Python实战教程，性能优化，微服务架构设计，容器化部署等工程实践。提供从入门到精通的完整技术栈学习路径。",
-            "url": "https://friday-go.icu/dev",
-            "title": "后端开发与系统架构 2025 - Go/PHP/Python 实战教程与学习路径 | PFinalClub",
-            "summary": "专业的后端开发与系统架构指南，涵盖Go、PHP、Python实战教程，性能优化，微服务架构设计，容器化部署等工程实践。提供从入门到精通的完整技术栈学习路径。",
-            "date_modified": "2025-12-19T12:30:00.000Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": [
-                "dev",
-                "golang",
-                "php",
-                "python",
-                "数据库"
-            ]
-        },
-        {
-            "id": "https://friday-go.icu/dev/backend/php/现代PHP开发实战",
-            "content_html": "深入探索PHP 8.x新特性、架构设计、性能优化和工程化实践。涵盖Attributes、Enums、Fibers、Laravel框架、API设计、并发编程、DevOps等高级主题。",
-            "url": "https://friday-go.icu/dev/backend/php/现代PHP开发实战",
-            "title": "PHP 8.x 高阶实战 2025 - 架构、性能与工程化完整指南",
-            "summary": "深入探索PHP 8.x新特性、架构设计、性能优化和工程化实践。涵盖Attributes、Enums、Fibers、Laravel框架、API设计、并发编程、DevOps等高级主题。",
-            "date_modified": "2025-12-18T15:30:00.000Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": [
-                "php",
-                "Laravel",
-                "架构设计"
-            ]
-        },
-        {
-            "id": "https://friday-go.icu/security/engineering/SSH-Security-Hardening-Guide-2025",
-            "content_html": "SSH Security Hardening Guide 2025: 从iptables速率限制到fail2ban蜜罐的生产环境暴力破解防护完整方案。包含5层防护策略、自动化部署脚本、监控告警系统，助你构建安全的SSH访问体系。",
-            "url": "https://friday-go.icu/security/engineering/SSH-Security-Hardening-Guide-2025",
-            "title": "SSH Security Hardening Guide 2025 - 暴力破解防护完整方案",
-            "summary": "SSH Security Hardening Guide 2025: 从iptables速率限制到fail2ban蜜罐的生产环境暴力破解防护完整方案。包含5层防护策略、自动化部署脚本、监控告警系统，助你构建安全的SSH访问体系。",
-            "date_modified": "2025-12-18T00:00:00.000Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": [
-                "ssh",
-                "安全加固",
-                "iptables",
-                "fail2ban",
-                "蜜罐",
-                "暴力破解防护",
-                "双因素认证"
-            ]
-        },
-        {
-            "id": "https://friday-go.icu/dev/system/database/PostgreSQL-Security-Best-Practices-2025",
-            "content_html": "PostgreSQL Security Best Practices 2025: 从认证配置到数据加密的生产环境安全加固完整指南。包含 pg_hba.conf 配置、Row Level Security、SSL/TLS 加密、审计日志等实战案例，助你构建安全的数据库系统。",
-            "url": "https://friday-go.icu/dev/system/database/PostgreSQL-Security-Best-Practices-2025",
-            "title": "PostgreSQL 安全最佳实践 2025 - 生产环境加固完整指南",
-            "summary": "PostgreSQL Security Best Practices 2025: 从认证配置到数据加密的生产环境安全加固完整指南。包含 pg_hba.conf 配置、Row Level Security、SSL/TLS 加密、审计日志等实战案例，助你构建安全的数据库系统。",
-            "date_modified": "2025-12-18T00:00:00.000Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": [
-                "postgresql",
-                "安全",
-                "数据库安全",
-                "最佳实践",
-                "pg_hba.conf",
-                "ssl",
-                "row level security"
-            ]
-        },
-        {
-            "id": "https://friday-go.icu/dev/backend/python/Python-Asyncio-Advanced-Patterns",
-            "content_html": "深入探讨Python Asyncio的高级模式，包括异步上下文管理器、异步迭代器、任务组、异步队列等核心概念，通过实战案例展示如何构建高性能异步应用。",
-            "url": "https://friday-go.icu/dev/backend/python/Python-Asyncio-Advanced-Patterns",
-            "title": "Python Asyncio 高级模式 2025 - 异步编程从入门到精通",
-            "summary": "深入探讨Python Asyncio的高级模式，包括异步上下文管理器、异步迭代器、任务组、异步队列等核心概念，通过实战案例展示如何构建高性能异步应用。",
-            "date_modified": "2025-12-16T00:00:00.000Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": [
-                "python",
-                "asyncio",
-                "异步编程",
-                "并发",
-                "高性能"
-            ]
-        },
-        {
-            "id": "https://friday-go.icu/dev/backend/python/Python-Data-Visualization-Guide",
-            "content_html": "深入探讨Python数据可视化的核心库Matplotlib和Seaborn，从基础图表到高级可视化，通过实战案例展示如何创建精美、专业的数据可视化图表。",
-            "url": "https://friday-go.icu/dev/backend/python/Python-Data-Visualization-Guide",
-            "title": "Python 数据可视化实战 2025 - Matplotlib 与 Seaborn 从入门到精通",
-            "summary": "深入探讨Python数据可视化的核心库Matplotlib和Seaborn，从基础图表到高级可视化，通过实战案例展示如何创建精美、专业的数据可视化图表。",
-            "date_modified": "2025-12-16T00:00:00.000Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": [
-                "python",
-                "数据可视化",
-                "matplotlib",
-                "seaborn",
-                "数据分析"
-            ]
-        },
-        {
-            "id": "https://friday-go.icu/dev/system/database/PostgreSQL-Performance-Optimization-Guide",
-            "content_html": "深入探讨PostgreSQL性能优化的各个方面，包括配置优化、SQL调优、索引策略、查询计划分析等，通过实战案例展示如何将PostgreSQL性能提升5-10倍。",
-            "url": "https://friday-go.icu/dev/system/database/PostgreSQL-Performance-Optimization-Guide",
-            "title": "PostgreSQL 性能优化实战 2025 - 配置与 SQL 调优完整指南",
-            "summary": "深入探讨PostgreSQL性能优化的各个方面，包括配置优化、SQL调优、索引策略、查询计划分析等，通过实战案例展示如何将PostgreSQL性能提升5-10倍。",
-            "date_modified": "2025-12-16T00:00:00.000Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": [
-                "postgresql",
-                "性能优化",
-                "数据库调优",
-                "sql优化",
-                "postgresql配置"
-            ]
-        },
-        {
-            "id": "https://friday-go.icu/thinking/method/nginx-security-gateway-guide",
-            "content_html": "从0搭建企业级Nginx安全网关实战指南，通过3个核心步骤实现90% Web漏洞防护。涵盖版本隐藏、敏感文件保护、Host头攻击防护、安全响应头配置等关键安全技术，提供完整配置模板和验证方法，符合等保2.0要求。",
-            "url": "https://friday-go.icu/thinking/method/nginx-security-gateway-guide",
-            "title": "搭建Nginx安全网关：3步堵住90%的Web漏洞！企业级防护实战指南",
-            "summary": "从0搭建企业级Nginx安全网关实战指南，通过3个核心步骤实现90% Web漏洞防护。涵盖版本隐藏、敏感文件保护、Host头攻击防护、安全响应头配置等关键安全技术，提供完整配置模板和验证方法，符合等保2.0要求。",
-            "date_modified": "2025-12-12T00:00:00.000Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": [
-                "nginx",
-                "安全网关",
-                "web安全",
-                "安全加固",
-                "企业级防护",
-                "安全最佳实践",
-                "等保合规",
-                "渗透测试",
-                "安全防护"
-            ]
-        },
-        {
-            "id": "https://friday-go.icu/dev/backend",
-            "content_html": "聚合 Go/PHP/Python 等后端工程实践与性能优化文章。",
-            "url": "https://friday-go.icu/dev/backend",
-            "title": "后端工程 2025 - Go/PHP/Python 技术导航",
-            "summary": "聚合 Go/PHP/Python 等后端工程实践与性能优化文章。",
-            "date_modified": "2025-12-10T11:31:32.000Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": [
-                "golang",
-                "php",
-                "python",
-                "后端开发",
-                "架构设计",
-                "性能优化"
-            ]
-        },
-        {
-            "id": "https://friday-go.icu/dev/backend/golang/接口参数设计-多场景复用的优雅之道",
-            "content_html": "资深开发者实战经验：接口参数设计最佳实践。从参数爆炸到优雅重构，详解参数分层、接口拆分、Builder模式、策略模式、CQRS等5种解决方案。附真实重构案例和完整代码示例。",
-            "url": "https://friday-go.icu/dev/backend/golang/接口参数设计-多场景复用的优雅之道",
-            "title": "接口参数设计：多场景复用的优雅之道 - Golang 实战指南",
-            "summary": "资深开发者实战经验：接口参数设计最佳实践。从参数爆炸到优雅重构，详解参数分层、接口拆分、Builder模式、策略模式、CQRS等5种解决方案。附真实重构案例和完整代码示例。",
-            "date_modified": "2025-12-01T10:30:00.000Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": [
-                "golang",
-                "接口设计",
-                "架构设计",
-                "API设计",
-                "代码重构",
-                "设计模式"
-            ]
-        },
-        {
-            "id": "https://friday-go.icu/thinking/notes/Vibe-Coding-时代的开发者：如何跟-ChatGPT-5.1-一起写代码，而不是被替代",
-            "content_html": "在 Vibe Coding 时代，ChatGPT 5.1 已经坐在你的工位上了。这篇文章聊的不是“会不会被 AI 替代”，而是：如何和 ChatGPT 5.1 一起写代码，让它加班，你下班。",
-            "url": "https://friday-go.icu/thinking/notes/Vibe-Coding-时代的开发者：如何跟-ChatGPT-5.1-一起写代码，而不是被替代",
-            "title": "Vibe Coding 时代的开发者 如何跟 ChatGPT 5.1 一起写代码，而不是被替代",
-            "summary": "在 Vibe Coding 时代，ChatGPT 5.1 已经坐在你的工位上了。这篇文章聊的不是“会不会被 AI 替代”，而是：如何和 ChatGPT 5.1 一起写代码，让它加班，你下班。",
-            "date_modified": "2025-11-28T00:00:00.000Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": [
-                "AI编程",
-                "ChatGPT",
-                "开发效率"
-            ]
-        },
-        {
-            "id": "https://friday-go.icu/dev/backend/php/让 Qwen3 和 Deepseek 懂 Function Calling-PHP篇-opt",
-            "content_html": "实战教程：如何让本地运行的 Qwen3、Deepseek-Coder-V3、GLM4-Chat 等模型像 OpenAI GPT-4 一样支持原生 Function Calling。通过 pfinal-asyncio 异步框架实现完全兼容 OpenAI 接口规范的工具调用，并发执行性能提升 200%-500%，零 API 费用，数据完全本地化。",
-            "url": "https://friday-go.icu/dev/backend/php/让 Qwen3 和 Deepseek 懂 Function Calling-PHP篇-opt",
-            "title": "PHP Function Calling 实战 - 让本地大模型兼容 OpenAI 接口",
-            "summary": "实战教程：如何让本地运行的 Qwen3、Deepseek-Coder-V3、GLM4-Chat 等模型像 OpenAI GPT-4 一样支持原生 Function Calling。通过 pfinal-asyncio 异步框架实现完全兼容 OpenAI 接口规范的工具调用，并发执行性能提升 200%-500%，零 API 费用，数据完全本地化。",
-            "date_modified": "2025-11-19T15:30:00.000Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": [
-                "php",
-                "AI",
-                "Function Calling",
-                "异步编程",
-                "大语言模型",
-                "Qwen3",
-                "Deepseek",
-                "GLM4"
             ]
         }
     ]
