@@ -13,16 +13,18 @@ export default defineConfig({
   description: 'PFinalClub是一个以后端 + DevOps + AI 工程实践为核心的小众高质量技术博客。提供原创技术文章、实战教程、架构设计、性能优化等专业内容，专注于Go、PHP、Python后端开发、容器化部署、CI/CD和AI工程化应用。',
   themeConfig: {
     outline: {
-      level: [2, 3],
-      label: '目录'
+      level: [2, 3, 4],
+      label: '目录',
+      dynamic: true
     },
     returnToTopLabel: '回到顶部',
     sidebarMenuLabel: '相关文章',
     lastUpdatedText: '上次更新于',
     logo: '/logo.png',
-    // 精简导航至 7 个核心分类，关于/联系/隐私保留在 footer，分散链接权重
+    // 精简导航至 8 个核心分类，关于/联系/隐私保留在 footer，分散链接权重
     nav: [
       { text: '首页', link: '/' },
+      { text: '🗺️ 学习路线', link: '/learning-roadmap' },
       { text: '📚 课程', link: '/courses/' },
       { text: '攻防研究', link: '/security/offensive/' },
       { text: '安全工程', link: '/security/engineering/' },

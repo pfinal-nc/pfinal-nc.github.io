@@ -52,7 +52,7 @@ func main() {
 > 分阶段构建,通过仅保留二进制文件来减小镜像大小.使用分阶段构建技术，剥离了使用golang:alpine作为编译镜像来编译得到二进制可执行文件的过程，并基于scratch生成一个简单的、非常小的新镜像
 
 ```Dockerfile
-FROM golang:1.23-alpine AS builder
+FROM golang:alpine AS builder
 
 # 为我们的镜像设置必要的环境变量
 ENV GO111MODULE=on \

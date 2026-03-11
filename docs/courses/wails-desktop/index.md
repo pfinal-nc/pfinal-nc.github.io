@@ -188,7 +188,7 @@ course:
 # Go 1.21+
 go version
 
-# Node.js 18+
+# Node.js 18+ 或 20+ (推荐 20 LTS)
 node --version
 
 # Wails CLI

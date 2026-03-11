@@ -67,9 +67,9 @@ jobs:
     - uses: actions/checkout@v4
 
     - name: Set up Go
-      uses: actions/setup-go@v5
+      uses: actions/setup-go@v4
       with:
-        go-version: "1.23"
+        go-version: "1.22"
 
     - name: Build
       run: |

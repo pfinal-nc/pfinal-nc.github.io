@@ -73,7 +73,7 @@ course:
 | 1.3 | 并发模式实战 | Worker 池、Pipeline、Fan-in/Fan-out | ✅ |
 | 1.4 | Go GC 机制与调优 | GC 算法、STW 优化、GOGC 调参 | ✅ |
 | 1.5 | 性能分析与优化 | pprof、trace、benchmark、SIMD 优化 | ✅ |
-| 1.6 | Go 1.26 新特性 | 泛型进阶、标准库更新 | 📝 |
+| 1.6 | Go 1.23+ 新特性 | 泛型进阶、标准库更新 | 📝 |
 
 **推荐文章：**
 - [Go 语言并发模式实战指南](/thinking/method/Go 语言并发模式实战指南.md)

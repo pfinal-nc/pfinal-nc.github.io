@@ -23,7 +23,11 @@ pageClass: python-hub-page
 ## 📚 精选教程系列
 
 ### 框架深度解析
-- [**FastAPI现代化Web开发**](/dev/backend/python/FastAPI现代化开发) - 异步开发、自动API文档生成
+- [**FastAPI 从零开始构建高性能 API：快速入门指南**](/dev/backend/python/FastAPI-从零开始构建高性能API-快速入门指南) 🟢 - 极速性能、自动文档、类型安全
+- [**FastAPI 中间件与依赖注入：构建可扩展的 API 架构**](/dev/backend/python/FastAPI中间件与依赖注入-构建可扩展的API架构.md) 🟡 - 自定义中间件、依赖注入、数据库连接
+- [**FastAPI 异步编程与性能优化：打造高并发 API**](/dev/backend/python/FastAPI异步编程与性能优化-打造高并发API.md) 🔴 - 异步 I/O、缓存策略、并发控制
+- [**FastAPI 测试与部署：生产环境最佳实践**](/dev/backend/python/FastAPI测试与部署-生产环境最佳实践.md) 🟡 - 单元测试、Docker 部署、CI/CD
+- [**FastAPI 实战案例：从零构建企业级 API**](/dev/backend/python/FastAPI实战案例-从零构建企业级API.md) 🔴 - 完整项目、认证授权、生产部署
 - [**Django企业级应用开发**](/dev/backend/python/Django企业级开发) - ORM、认证、安全最佳实践
 - [**Flask轻量级应用构建**](/dev/backend/python/Flask轻量级开发) - 扩展开发、蓝图设计
 - [**Scrapy爬虫框架实战**](/data/automation/Scrapy爬虫实战) - 分布式爬虫、反爬虫对策
@@ -35,8 +39,15 @@ pageClass: python-hub-page
 - [**Python类型提示与MyPy**](/dev/backend/python/Python类型提示) - 静态类型检查, 类型安全
 
 ### 数据科学与AI
-- [**Python数据分析实战**](/data/automation/Python数据分析) - Pandas, NumPy, 数据清洗
-- [**Python机器学习入门**](/data/automation/Python机器学习入门) - Scikit-learn, 模型训练与评估
+- [**Python 数据分析入门：Pandas 与 NumPy 基础**](/dev/backend/python/Python-数据分析入门-Pandas与NumPy基础.md) 🟢 - 核心库、数据处理、基础可视化
+- [**Python 数据可视化实战：Matplotlib、Seaborn 与 Plotly 完全指南**](/dev/backend/python/Python-数据可视化实战-Matplotlib-Seaborn-Plotly完全指南.md) 🟡 - 统计图表、交互式可视化、仪表板
+- [**Python 时间序列分析：从基础到实战**](/dev/backend/python/Python-时间序列分析-从基础到实战.md) 🟡 - 趋势分析、季节性分解、预测建模
+- [**Python 机器学习入门：Scikit-learn 实战指南**](/dev/backend/python/Python-机器学习入门-Scikit-learn实战指南.md) 🟢 - 分类、回归、聚类、模型评估
+- [**Python 深度学习入门：PyTorch 实战指南**](/dev/backend/python/Python-深度学习入门-PyTorch实战指南.md) 🟡 - 神经网络、CNN、RNN、实战案例
+- [**Python TensorFlow 实战：Keras 入门到精通**](/dev/backend/python/Python-TensorFlow实战-Keras入门到精通.md) 🟡 - Sequential API、Functional API、迁移学习
+- [**Python 自然语言处理（NLP）实战指南**](/dev/backend/python/Python-自然语言处理-NLP实战指南.md) 🟡 - 文本预处理、词嵌入、Transformers、BERT
+- [**Python 推荐系统实战：从算法到应用**](/dev/backend/python/Python-推荐系统实战-从算法到应用.md) 🟡 - 协同过滤、深度学习推荐、系统评估
+- [**Python Web 爬虫实战：从入门到精通**](/dev/backend/python/Python-Web爬虫实战-从入门到精通.md) 🟡 - Requests、BeautifulSoup、Scrapy、反爬虫
 - [**Python深度学习实践**](/data/automation/Python深度学习) - PyTorch, TensorFlow应用
 - [**Python自动化运维**](/tools/Python自动化运维) - Ansible, Fabric, 自定义脚本
 

@@ -1,3 +1,24 @@
+---
+title: "Wails 生态巡礼：两款让我惊艳的桌面应用（GoNavi & TinyRDM）"
+date: 2026-03-09 18:24:00
+author: PFinal南丞
+description: "介绍两款基于Wails开发的优秀桌面应用：GoNavi多数据库管理工具和TinyRDM Redis桌面管理器，展示Wails生态的魅力和实力。"
+keywords:
+  - Wails
+  - Go桌面应用
+  - 跨平台开发
+  - 数据库工具
+  - Redis管理
+  - 开源项目
+  - 桌面应用
+tags:
+  - wails
+  - golang
+  - desktop
+  - database
+  - redis
+---
+
 # Wails 生态巡礼：两款让我惊艳的桌面应用（GoNavi & TinyRDM）
 
 > 作为 Wails 的忠实粉丝，今天想和大家分享两款让我眼前一亮的开源项目。
@@ -99,12 +120,12 @@
 
 ```yaml
 后端:
-  - Go 1.23+
+  - Go 1.24
   - Wails v2
 
 前端:
-  - React 18+ + TypeScript
-  - Vite 5+
+  - React 18 + TypeScript
+  - Vite
   - Ant Design 5
   - Zustand (状态管理)
   - Monaco Editor (SQL 编辑器)

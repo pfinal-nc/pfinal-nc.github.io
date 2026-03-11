@@ -123,24 +123,24 @@ IN:
 	pyenv versions
 OUT:
   * system (set by /root/.pyenv/version)
-    3.6.5
+    3.12.0
 ```
 - 切换 Python 版本
 
-    有三种切换方式 glocal local shell*
+    有三种切换方式 global local shell*
 
-    glocal 全局环境，在未再次使用 glocal切换环境之前，一直使用此环境。
+    global 全局环境，在未再次使用 global 切换环境之前，一直使用此环境。
 
-    local 本次登录环境，重启后，则环境失效，并返回当前glocal的环境。
+    local 本地环境，对当前目录及其子目录生效（推荐用于项目环境）。
 
-    shell 局部（临时）环境。关闭命令行窗口，则环境失效，并返回当前glocal的环境。
+    shell 局部（临时）环境。关闭命令行窗口，则环境失效，并返回当前 global 的环境。
 
-    pyenv glocal 3.6.5
+    pyenv global 3.12.0
 
 - 卸载指定版本
 
 ```
-    pyenv uninstall 3.6.5
+    pyenv uninstall 3.12.0
 ```
 
 ### 安装 virtualenv

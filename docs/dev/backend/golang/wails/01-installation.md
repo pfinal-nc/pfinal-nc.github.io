@@ -32,16 +32,16 @@ course:
 - **macOS**: 10.13+ AMD64, 11.0+ ARM64  
 - **Linux**: AMD64/ARM64
 
-## 1. 安装 Go 语言 (1.21+)
+## 1. 安装 Go 语言 (1.20+)
 
 Wails 是用 Go 写的，所以第一步就是装 Go。
 
 ### 下载与安装
 
-去 [Go 官网](https://golang.org/dl/) 下载适合你系统的版本。推荐使用 **Go 1.21+** 版本。
+去 [Go 官网](https://golang.org/dl/) 下载适合你系统的版本。
 
 - macOS 用户：用 `.pkg` 安装包
-- Windows 用户：用 `.msi` 安装包
+- Windows 用户：用 `.msi` 安装包  
 - Linux 用户：下载 `.tar.gz` 包解压到 `/usr/local`
 
 ### 验证安装
@@ -55,10 +55,10 @@ go version
 应该能看到类似这样的输出：
 
 ```
-go version go1.23.5 darwin/arm64
+go version go1.22.5 darwin/arm64
 ```
 
-如果显示 `command not found` 或版本太低（低于 1.21），说明安装有问题或者 PATH 没配好。
+如果显示 `command not found` 或版本太低，说明安装有问题或者 PATH 没配好。
 
 ### 配置 GOPATH 和 PATH
 
@@ -172,7 +172,7 @@ wails version
 ....\Go\pkg\mod\github.com\wailsapp\wails\[email protected]\pkg\templates\templates.go:28:12: pattern all:ides/*: no matching files found
 ```
 
-请检查你是不是已经装了 Go 1.21+：
+请检查你是不是已经装了 Go 1.18+：
 
 ```bash
 go version
@@ -259,7 +259,7 @@ go install github.com/wailsapp/wails/v2/cmd/wails@latest
    # 检查 Node.js 版本
    node --version
    
-   # 确保版本 >= 18
+   # 确保版本 >= 15
    ```
 
 6. **重新启动 wails dev：**
