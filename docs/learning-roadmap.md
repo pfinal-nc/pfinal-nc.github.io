@@ -44,21 +44,21 @@ tags:
 ### 🟢 第一阶段：Go 语言基础（2-3周）
 
 #### 1.1 环境搭建与基础语法
-- [Go 环境搭建与配置](/dev/backend/golang/index) 🟢
-- [Go 基础语法速通](/dev/backend/golang/index) 🟢
-- [Go 变量、常量与数据类型](/dev/backend/golang/index) 🟢
-- [Go 控制流程与函数](/dev/backend/golang/index) 🟢
+- [Go 环境搭建与配置](/dev/backend/golang/index.md) 🟢
+- [Go 基础语法速通](/dev/backend/golang/index.md) 🟢
+- [Go 变量、常量与数据类型](/dev/backend/golang/index.md) 🟢
+- [Go 控制流程与函数](/dev/backend/golang/index.md) 🟢
 
 #### 1.2 数据结构与算法
-- [Go 数组与切片](/dev/backend/golang/index) 🟢
-- [Go 映射（Map）详解](/dev/backend/golang/index) 🟢
-- [Go 结构体与方法](/dev/backend/golang/index) 🟢
-- [Go 接口与多态](/dev/backend/golang/index) 🟢
+- [Go 数组与切片](/dev/backend/golang/index.md) 🟢
+- [Go 映射（Map）详解](/dev/backend/golang/index.md) 🟢
+- [Go 结构体与方法](/dev/backend/golang/index.md) 🟢
+- [Go 接口与多态](/dev/backend/golang/index.md) 🟢
 
 #### 1.3 并发编程基础
 - [Go 协程（Goroutine）入门](/dev/backend/golang/golang 实现协程池.md) 🟢
 - [Go 通道（Channel）详解](/dev/backend/golang/深入理解Go Channel 批量读取与实际应用.md) 🟢
-- [Go 并发模式：WaitGroup 与 Mutex](/dev/backend/golang/index) 🟡
+- [Go 并发模式：WaitGroup 与 Mutex](/dev/backend/golang/index.md) 🟡
 
 **📌 阶段目标**：掌握 Go 语言基础语法，能够编写简单的并发程序
 
@@ -68,18 +68,18 @@ tags:
 
 #### 2.1 Web 框架
 - [2025年最佳 Go Web 框架深度解析](/dev/backend/golang/2025年将改变我们软件构建方式的6个Go库.md) 🟡
-- [Gin 框架实战指南](/dev/backend/golang/index) 🟡
-- [Echo 框架从入门到精通](/dev/backend/golang/index) 🟡
+- [Gin 框架实战指南](/dev/backend/golang/index.md) 🟡
+- [Echo 框架从入门到精通](/dev/backend/golang/index.md) 🟡
 
 #### 2.2 数据库操作
-- [Go 数据库操作指南](/dev/backend/golang/index) 🟡
-- [GORM 实战教程](/dev/backend/golang/index) 🟡
-- [Go Redis 实践](/dev/backend/golang/index) 🟡
+- [Go 数据库操作指南](/dev/backend/golang/index.md) 🟡
+- [GORM 实战教程](/dev/backend/golang/index.md) 🟡
+- [Go Redis 实践](/dev/backend/golang/index.md) 🟡
 
 #### 2.3 RESTful API 设计
 - [Go RESTful API 最佳实践](/dev/backend/golang/如何实现 RESTful API 版本控制.md) 🟡
-- [Go JWT 认证与授权](/dev/backend/golang/index) 🟡
-- [Go 中间件设计模式](/dev/backend/golang/index) 🟡
+- [Go JWT 认证与授权](/dev/backend/golang/index.md) 🟡
+- [Go 中间件设计模式](/dev/backend/golang/index.md) 🟡
 
 **📌 阶段目标**：能够独立开发完整的 RESTful API，掌握常用 Web 框架
 
@@ -88,9 +88,9 @@ tags:
 ### 🔴 第三阶段：微服务与性能优化（6-8周）
 
 #### 3.1 微服务架构
-- [Go 微服务架构设计](/dev/backend/golang/index) 🔴
-- [gRPC 与 Protobuf 实战](/dev/backend/golang/index) 🔴
-- [Go 服务治理：熔断、限流、降级](/dev/backend/golang/index) 🔴
+- [Go 微服务架构设计](/dev/backend/golang/index.md) 🔴
+- [gRPC 与 Protobuf 实战](/dev/backend/golang/index.md) 🔴
+- [Go 服务治理：熔断、限流、降级](/dev/backend/golang/index.md) 🔴
 
 #### 3.2 性能优化
 - [Go 性能调优实战](/dev/backend/golang/Deep-Dive-Go-Memory-Allocation.md) 🔴
@@ -98,9 +98,9 @@ tags:
 - [Go 并发模式进阶](/dev/backend/golang/golang 实现协程池.md) 🔴
 
 #### 3.3 可观测性
-- [Go 集成 Prometheus 监控](/dev/backend/golang/index) 🔴
-- [Go 分布式追踪实战](/dev/backend/golang/index) 🔴
-- [Go 日志与错误处理最佳实践](/dev/backend/golang/index) 🔴
+- [Go 集成 Prometheus 监控](/dev/backend/golang/index.md) 🔴
+- [Go 分布式追踪实战](/dev/backend/golang/index.md) 🔴
+- [Go 日志与错误处理最佳实践](/dev/backend/golang/index.md) 🔴
 
 **📌 阶段目标**：掌握微服务架构，能够进行性能优化和系统监控
 
@@ -128,7 +128,7 @@ tags:
 #### 5.1 Go 安全开发
 - [10 个 Golang 安全陷阱及真正有效的修复方案](/security/engineering/10个Golang安全陷阱及真正有效的修复方案.md) 🔴
 - [Go Web 安全最佳实践](/security/engineering/golang Web应用完整安全指南.md) 🔴
-- [Go 密码存储与加密实战](/security/engineering/index) 🔴
+- [Go 密码存储与加密实战](/security/engineering/index.md) 🔴
 
 **📌 阶段目标**：掌握 Go 安全开发，能够识别和修复常见安全漏洞
 
@@ -140,10 +140,10 @@ tags:
 
 #### 1.1 PHP 8.x 新特性
 - [PHP 8.x 开发实战指南](/dev/backend/php/现代PHP开发实战.md) 🟢
-- [PHP 8.4 新特性详解](/dev/backend/php/index) 🟢
+- [PHP 8.4 新特性详解](/dev/backend/php/index.md) 🟢
 
 #### 1.2 现代 PHP 实践
-- [PHP 类型系统深入](/dev/backend/php/index) 🟡
+- [PHP 类型系统深入](/dev/backend/php/index.md) 🟡
 - [PHP 异常处理最佳实践](/dev/backend/php/PHP 错误与异常处理.md) 🟡
 
 **📌 阶段目标**：掌握 PHP 8.x 新特性和现代 PHP 开发实践
@@ -153,12 +153,12 @@ tags:
 ### 🟡 第二阶段：框架与生态（4-6周）
 
 #### 2.1 Laravel 框架
-- [Laravel 框架从入门到精通](/dev/backend/php/index) 🟡
-- [Laravel 生态系统深度解析](/dev/backend/php/index) 🟡
+- [Laravel 框架从入门到精通](/dev/backend/php/index.md) 🟡
+- [Laravel 生态系统深度解析](/dev/backend/php/index.md) 🟡
 
 #### 2.2 ThinkPHP 框架
 - [ThinkPHP 20 年发展史](/dev/backend/php/ThinkPHP近20年-中国Web开发的时代印记.md) 🟡
-- [ThinkPHP 实战开发指南](/dev/backend/php/index) 🟡
+- [ThinkPHP 实战开发指南](/dev/backend/php/index.md) 🟡
 
 #### 2.3 并发编程
 - [Go 协程与 PHP Fibers 并发编程对比](/dev/backend/php/Go协程与PHP-Fibers并发编程对比.md) 🔴
@@ -172,12 +172,12 @@ tags:
 ### 🟢 第一阶段：Python 基础（2-3周）
 
 #### 1.1 Python 基础语法
-- [Python 基础语法速通](/dev/backend/python/index) 🟢
-- [Python 数据结构与算法](/dev/backend/python/index) 🟢
+- [Python 基础语法速通](/dev/backend/python/index.md) 🟢
+- [Python 数据结构与算法](/dev/backend/python/index.md) 🟢
 
 #### 1.2 Web 开发
 - [FastAPI 快速入门](/dev/backend/python/FastAPI-从零开始构建高性能API-快速入门指南.md) 🟢
-- [Flask 实战教程](/dev/backend/python/Flask轻量级应用构建%20-%20扩展开发、蓝图设计.md) 🟢
+- [Flask 实战教程](/dev/backend/python/Flask轻量级应用构建 - 扩展开发、蓝图设计.md) 🟢
 
 **📌 阶段目标**：掌握 Python 基础语法和 Web 开发
 
@@ -186,12 +186,12 @@ tags:
 ### 🟡 第二阶段：数据采集（3-4周）
 
 #### 2.1 爬虫开发
-- [Scrapy 爬虫实战](/dev/backend/python/Scrapy爬虫框架实战%20-%20分布式爬虫、反爬虫对策.md) 🟡
+- [Scrapy 爬虫实战](/dev/backend/python/Scrapy爬虫框架实战 - 分布式爬虫、反爬虫对策.md) 🟡
 - [Python 爬虫反爬策略](/dev/backend/python/Python-Web爬虫实战-从入门到精通.md) 🟡
 
 #### 2.2 数据清洗
 - [Pandas 数据清洗实战](/dev/backend/python/Python-数据分析入门-Pandas与NumPy基础.md) 🟡
-- [Python 数据处理最佳实践](/dev/backend/python/index) 🟡
+- [Python 数据处理最佳实践](/dev/backend/python/index.md) 🟡
 
 **📌 阶段目标**：能够使用 Python 进行数据采集和清洗
 
@@ -200,11 +200,11 @@ tags:
 ### 🔴 第三阶段：数据分析与可视化（4-6周）
 
 #### 3.1 数据分析
-- [Python 数据分析实战](/dev/backend/python/index) 🔴
+- [Python 数据分析实战](/dev/backend/python/index.md) 🔴
 - [Matplotlib 可视化实战](/dev/backend/python/Python-数据可视化实战-Matplotlib-Seaborn-Plotly完全指南.md) 🔴
 
 #### 3.2 AI 工程化
-- [AI 编程助手工程化实践](/data/automation/index) 🔴
+- [AI 编程助手工程化实践](/data/automation/index.md) 🔴
 - [MCP 服务器精选：提升 AI 编程效率的 5 大神器](/data/automation/MCP服务器精选：提升AI编程效率的5大神器.md) 🔴
 - [Golang 实现 RAG 系统：从 OpenAI 到向量数据库](/dev/backend/golang/Golang实现RAG系统-从OpenAI到向量数据库.md) 🔴
 
@@ -217,11 +217,11 @@ tags:
 ### 🟢 第一阶段：容器化（2-3周）
 
 #### 1.1 Docker 基础
-- [Docker 基础入门](/dev/system/index) 🟢
+- [Docker 基础入门](/dev/system/index.md) 🟢
 - [Docker 最佳实践](/tools/Docker部署Go项目实践指南.md) 🟡
 
 #### 1.2 容器编排
-- [Kubernetes 基础入门](/dev/system/index) 🟡
+- [Kubernetes 基础入门](/dev/system/index.md) 🟡
 
 **📌 阶段目标**：掌握 Docker 和 Kubernetes 基础
 
@@ -230,12 +230,12 @@ tags:
 ### 🟡 第二阶段：CI/CD（3-4周）
 
 #### 2.1 持续集成
-- [CI/CD 最佳实践](/dev/system/index) 🟡
-- [GitHub Actions 实战](/dev/system/index) 🟡
+- [CI/CD 最佳实践](/dev/system/index.md) 🟡
+- [GitHub Actions 实战](/dev/system/index.md) 🟡
 
 #### 2.2 监控与日志
-- [Prometheus 监控实战](/dev/system/index) 🔴
-- [Grafana 可视化实战](/dev/system/index) 🔴
+- [Prometheus 监控实战](/dev/system/index.md) 🔴
+- [Grafana 可视化实战](/dev/system/index.md) 🔴
 
 **📌 阶段目标**：能够搭建 CI/CD 流水线，实现监控告警
 
@@ -244,12 +244,12 @@ tags:
 ### 🔴 第三阶段：可观测性（4-6周）
 
 #### 3.1 分布式追踪
-- [OpenTelemetry 实战](/dev/system/index) 🔴
-- [分布式链路追踪最佳实践](/dev/system/index) 🔴
+- [OpenTelemetry 实战](/dev/system/index.md) 🔴
+- [分布式链路追踪最佳实践](/dev/system/index.md) 🔴
 
 #### 3.2 日志聚合
-- [ELK 日志系统实战](/dev/system/index) 🔴
-- [Loki 日志系统实战](/dev/system/index) 🔴
+- [ELK 日志系统实战](/dev/system/index.md) 🔴
+- [Loki 日志系统实战](/dev/system/index.md) 🔴
 
 **📌 阶段目标**：掌握可观测性三要素（监控、追踪、日志）
 
@@ -260,9 +260,9 @@ tags:
 ### 🟢 第一阶段：Web 安全基础（2-3周）
 
 #### 1.1 常见漏洞
-- [SQL 注入攻击与防护](/security/engineering/index) 🟢
-- [XSS 攻击与防护](/security/engineering/index) 🟢
-- [CSRF 攻击与防护](/security/engineering/index) 🟢
+- [SQL 注入攻击与防护](/security/engineering/index.md) 🟢
+- [XSS 攻击与防护](/security/engineering/index.md) 🟢
+- [CSRF 攻击与防护](/security/engineering/index.md) 🟢
 
 **📌 阶段目标**：理解常见 Web 漏洞原理和防护方法
 
@@ -272,10 +272,10 @@ tags:
 
 #### 2.1 SSH 安全
 - [SSH 安全加固指南](/security/engineering/SSH-Security-Hardening-Guide-2025.md) 🟡
-- [蜜罐部署实战](/security/engineering/index) 🟡
+- [蜜罐部署实战](/security/engineering/index.md) 🟡
 
 #### 2.2 系统加固
-- [Linux 系统安全加固](/security/engineering/index) 🟡
+- [Linux 系统安全加固](/security/engineering/index.md) 🟡
 
 **📌 阶段目标**：能够进行系统安全加固
 
@@ -284,8 +284,8 @@ tags:
 ### 🔴 第三阶段：攻防研究（4-6周）
 
 #### 3.1 渗透测试
-- [渗透测试方法论](/security/offensive/index) 🔴
-- [内网渗透实战](/security/offensive/index) 🔴
+- [渗透测试方法论](/security/offensive/index.md) 🔴
+- [内网渗透实战](/security/offensive/index.md) 🔴
 
 **📌 阶段目标**：掌握渗透测试和攻防技术
 
@@ -296,8 +296,8 @@ tags:
 ### 🟢 第一阶段：AI 基础（2-3周）
 
 #### 1.1 大模型基础
-- [大模型应用开发指南](/data/automation/index) 🟢
-- [Prompt Engineering 实战](/data/automation/index) 🟢
+- [大模型应用开发指南](/data/automation/index.md) 🟢
+- [Prompt Engineering 实战](/data/automation/index.md) 🟢
 
 **📌 阶段目标**：理解大模型基础和 Prompt 工程
 
@@ -307,10 +307,10 @@ tags:
 
 #### 2.1 RAG 实战
 - [Golang 实现 RAG 系统：从 OpenAI 到向量数据库](/dev/backend/golang/Golang实现RAG系统-从OpenAI到向量数据库.md) 🔴
-- [向量数据库实战](/data/automation/index) 🔴
+- [向量数据库实战](/data/automation/index.md) 🔴
 
 #### 2.2 Function Calling
-- [Function Calling 工程化实战](/data/automation/index) 🔴
+- [Function Calling 工程化实战](/data/automation/index.md) 🔴
 
 **📌 阶段目标**：能够搭建 RAG 系统，掌握 Function Calling
 
@@ -319,8 +319,8 @@ tags:
 ### 🔴 第三阶段：AI 应用（4-6周）
 
 #### 3.1 MCP 服务器
-- [MCP 服务器开发实战](/data/automation/index) 🔴
-- [AI 编程助手工程化实践](/data/automation/index) 🔴
+- [MCP 服务器开发实战](/data/automation/index.md) 🔴
+- [AI 编程助手工程化实践](/data/automation/index.md) 🔴
 
 #### 3.2 边缘部署
 - [大模型边缘部署实战](/dev/backend/golang/大模型边缘部署实战：基于Go语言的轻量级推理引擎.md) 🔴
