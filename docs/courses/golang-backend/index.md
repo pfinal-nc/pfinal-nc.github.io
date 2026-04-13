@@ -77,10 +77,10 @@ course:
 
 **推荐文章：**
 - [Go 语言并发模式实战指南](/thinking/method/Go 语言并发模式实战指南.md)
-- [Go 1.26 SIMD 编程实战](/dev/backend/golang/Go%201.26%20SIMD 编程实战：从入门到高性能优化.md)
-- [深入理解 Go Channel 批量读取](/dev/backend/golang/深入理解 Go%20Channel%20 批量读取与实际应用.md)
-- [Go 零拷贝读取器实战与原理解析](/dev/backend/golang/Go%20 零拷贝读取器实战与原理解析.md)
-- [runtime.free 打破 Go GC 性能瓶颈](/dev/backend/golang/runtime.free%20 打破 Go%20GC 性能瓶颈的秘密武器.md)
+- [Go 1.26 SIMD 编程实战](/dev/backend/golang/Go 1.26 SIMD 编程实战：从入门到高性能优化.md)
+- [深入理解 Go Channel 批量读取](/dev/backend/golang/深入理解 Go Channel 批量读取与实际应用.md)
+- [Go 零拷贝读取器实战与原理解析](/dev/backend/golang/Go 零拷贝读取器实战与原理解析.md)
+- [runtime.free 打破 Go GC 性能瓶颈](/dev/backend/golang/runtime.free 打破 Go GC 性能瓶颈的秘密武器.md)
 - [Stop-The-World 其实没停下](/dev/backend/golang/Stop-The-World 其实没停下-Go-GC-的微暂停真相.md)
 
 </div>
@@ -104,9 +104,9 @@ course:
 
 **推荐文章：**
 - [2025 年最佳 Go Web 框架深度解析](/thinking/method/2025 年最佳 Go-Web 框架深度解析：资深开发者的选择指南.md)
-- [如何实现 RESTful API 版本控制](/dev/backend/golang/如何实现%20RESTful%20API%20 版本控制.md)
+- [如何实现 RESTful API 版本控制](/dev/backend/golang/如何实现 RESTful API  版本控制.md)
 - [接口参数设计 - 多场景复用的优雅之道](/dev/backend/golang/接口参数设计 - 多场景复用的优雅之道.md)
-- [基于 golang 的高性能游戏接口设计](/thinking/method/基于 golang%20 的高性能游戏接口设计.md)
+- [基于 golang 的高性能游戏接口设计](/thinking/method/基于 golang  的高性能游戏接口设计.md)
 
 </div>
 
@@ -177,8 +177,8 @@ course:
 | 5.6 | 告警与值班 | 告警分级、降噪、On-call 流程 | 📝 |
 
 **推荐文章：**
-- [从 trace 到洞察：Go 项目的可观测性闭环实践](/thinking/method/从%20trace%20 到洞察：Go%20 项目的可观测性闭环实践.md)
-- [别再盲接 OTel：Go 可观察性接入的 8 个大坑](/thinking/method/别再盲接%20OTel：Go%20 可观察性接入的%208%20 个大坑.md)
+- [从 trace 到洞察：Go 项目的可观测性闭环实践](/thinking/method/从 trace 到洞察：Go 项目的可观测性闭环实践.md)
+- [别再盲接 OTel：Go 可观察性接入的 8 个大坑](/thinking/method/别再盲接 OTel：Go 可观察性接入的 8 个大坑.md)
 - [使用 Devslog 结构化日志处理](/tools/使用 Devslog 结构化日志处理.md)
 
 </div>

@@ -59,7 +59,7 @@ tags:
 - [SSH 安全加固指南 2025](../../security/engineering/SSH-Security-Hardening-Guide-2025.md) - 服务器安全最佳实践
 
 ### 网络安全
-- [golang 中的网络安全 TLS/SSL 的实现](../../security/engineering/golang%20中的网络安全TLS%20SSL的实现.md)
+- [golang 中的网络安全 TLS/SSL 的实现](../../security/engineering/golang 中的网络安全TLS SSL的实现.md)
 
 ## 📚 学习资源
 

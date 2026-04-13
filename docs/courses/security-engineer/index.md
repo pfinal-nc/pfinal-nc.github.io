@@ -110,7 +110,7 @@ course:
 
 **推荐文章：**
 - [10 个 Golang 安全陷阱及真正有效的修复方案](/security/engineering/10 个 Golang 安全陷阱及真正有效的修复方案.md)
-- [Golang Web 应用完整安全指南](/security/engineering/golang%20Web 应用完整安全指南.md)
+- [Golang Web 应用完整安全指南](/security/engineering/golang Web 应用完整安全指南.md)
 - [MySQL Production Security Hardening Guide 2025](/dev/system/database/MySQL-Production-Security-Hardening-Guide-2025.md)
 - [PostgreSQL Security Best Practices 2025](/dev/system/database/PostgreSQL-Security-Best-Practices-2025.md)
 
@@ -150,7 +150,7 @@ course:
 | 3.7 | 代码审计 | 静态分析、模糊测试、漏洞扫描 | 📝 |
 
 **推荐文章：**
-- [Golang 中的网络安全 TLS/SSL 的实现](/security/engineering/golang%20 中的网络安全 TLS%20SSL 的实现.md)
+- [Golang 中的网络安全 TLS/SSL 的实现](/security/engineering/golang 中的网络安全 TLS SSL 的实现.md)
 - [Go 语言主流安全库使用指南](/security/engineering/Go 语言主流安全库使用指南.md)
 
 **Go 安全代码示例：**

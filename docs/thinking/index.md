@@ -50,8 +50,8 @@ date: 2025-12-19 12:30:00
 
 #### 系统设计与架构
 - [高质量 Golang 后端的现代软件工程原则](/thinking/method/高质量Golang后端的现代软件工程原则.md)
-- [从 trace 到洞察：Go 项目的可观测性闭环实践](/thinking/method/从%20trace%20到洞察：Go%20项目的可观测性闭环实践.md)
-- [别再盲接 OTel：Go 可观察性接入的 8 个大坑](/thinking/method/别再盲接%20OTel：Go%20可观察性接入的%208%20个大坑.md)
+- [从 trace 到洞察：Go 项目的可观测性闭环实践](/thinking/method/从 trace 到洞察：Go 项目的可观测性闭环实践.md)
+- [别再盲接 OTel：Go 可观察性接入的 8 个大坑](/thinking/method/别再盲接 OTel：Go 可观察性接入的 8 个大坑.md)
 
 #### 框架深度解析
 - [2025 年最佳 Go Web 框架深度解析：资深开发者的选择指南](/thinking/method/2025年最佳Go-Web框架深度解析：资深开发者的选择指南.md)
@@ -60,14 +60,14 @@ date: 2025-12-19 12:30:00
 
 #### 并发与性能
 - [Go 语言并发模式实战指南](/thinking/method/Go语言并发模式实战指南.md)
-- [Golang Socket 通信架构分析与实现 - 构建高性能游戏服务器](/thinking/method/Golang%20Socket%20通信架构分析与实现-构建高性能游戏服务器.md)
+- [Golang Socket 通信架构分析与实现 - 构建高性能游戏服务器](/thinking/method/Golang Socket 通信架构分析与实现-构建高性能游戏服务器.md)
 
 #### DevOps 与运维
 - [GitOps 实战 - 从应用部署到全生命周期管理](/thinking/method/GitOps实战-从应用部署到全生命周期管理.md)
 - [Nginx 安全网关：3 步堵住 90% 的 Web 漏洞](/thinking/method/nginx-security-gateway-guide.md)
 
 #### 测试与质量
-- [测试驱动开发 - 以测试为引擎的软件工程实践](/thinking/method/测试驱动开发%20以测试为引擎的软件工程实践.md)
+- [测试驱动开发 - 以测试为引擎的软件工程实践](/thinking/method/测试驱动开发 以测试为引擎的软件工程实践.md)
 
 ---
 
@@ -77,13 +77,13 @@ date: 2025-12-19 12:30:00
 
 #### AI 编程助手
 - [Vibe-Coding – 时代的开发者：如何跟 ChatGPT 5.1 一起写代码，而不是被替代](/tools/Vibe-Coding-时代的开发者：如何跟-ChatGPT-5.1-一起写代码，而不是被替代.md)
-- [Qwen Code 30 个使用小技巧](/tools/Qwen%20Code%2030个使用小技巧.md)
+- [Qwen Code 30 个使用小技巧](/tools/Qwen Code 30个使用小技巧.md)
 
 #### Wails 实践
 - [Wails Gonavi 实践](/dev/backend/golang/wails/wails-gonavi-practice.md)
 
 #### 系统对比
-- [现代 Web 系统开发 与 传统 Web 系统开发 的差异](/thinking/method/现代Web系统开发%20与%20传统Web系统开发%20的差异.md)
+- [现代 Web 系统开发 与 传统 Web 系统开发 的差异](/thinking/method/现代Web系统开发 与 传统Web系统开发 的差异.md)
 
 #### AI 工具应用
 - [使用扣子 AI 打造公众号机器人](/data/automation/使用扣子AI打造公众号机器人.md)
@@ -100,7 +100,7 @@ date: 2025-12-19 12:30:00
 ### 具体路径
 1. **建立工程意识**
    - [现代软件工程原则](/thinking/method/高质量Golang后端的现代软件工程原则.md)
-   - [测试驱动开发](/thinking/method/测试驱动开发%20以测试为引擎的软件工程实践.md)
+   - [测试驱动开发](/thinking/method/测试驱动开发 以测试为引擎的软件工程实践.md)
 
 2. **掌握架构设计**
    - [系统设计方法论](/thinking/method/)
@@ -108,7 +108,7 @@ date: 2025-12-19 12:30:00
 
 3. **深入性能优化**
    - [并发编程模式](/thinking/method/Go语言并发模式实战指南.md)
-   - [可观测性实践](/thinking/method/从%20trace%20到洞察：Go%20项目的可观测性闭环实践.md)
+   - [可观测性实践](/thinking/method/从 trace 到洞察：Go 项目的可观测性闭环实践.md)
 
 4. **建立运维思维**
    - [GitOps 实战](/thinking/method/GitOps实战-从应用部署到全生命周期管理.md)

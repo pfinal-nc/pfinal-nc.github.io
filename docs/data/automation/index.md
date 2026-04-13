@@ -40,8 +40,8 @@ keywords:
 
 ### MCP服务器技术
 - [MCP服务器精选：提升AI编程效率的5大神器](MCP服务器精选：提升AI编程效率的5大神器.md) - Context7、Sequential Thinking、Filesystem等核心工具
-- [MCP 提示语管理工具](MCP%20提示语管理工具.md) - 一键管理AI提示词，提升编程效率
-- [Go 构建远程存储MCP服务器实战](Go%20构建远程存储MCP服务器实战.md) - Go语言构建高效远程存储服务
+- [MCP 提示语管理工具](MCP 提示语管理工具.md) - 一键管理AI提示词，提升编程效率
+- [Go 构建远程存储MCP服务器实战](Go 构建远程存储MCP服务器实战.md) - Go语言构建高效远程存储服务
 
 ### 智能自动化系统
 - [AutoGen金融分析系统](autogen-financial-analysis.md) - 基于多智能体协作的金融分析自动化框架

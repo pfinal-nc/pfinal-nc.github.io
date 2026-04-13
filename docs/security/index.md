@@ -106,8 +106,8 @@ keywords:
 
 ### 应用安全 🛡️
 - [10 个 Golang 安全陷阱及真正有效的修复方案](/security/engineering/10个Golang安全陷阱及真正有效的修复方案.md)
-- [Golang Web 应用完整安全指南](/security/engineering/golang%20Web应用完整安全指南.md)
-- [Golang 中的网络安全 TLS/SSL 的实现](/security/engineering/golang%20中的网络安全TLS%20SSL的实现.md)
+- [Golang Web 应用完整安全指南](/security/engineering/golang Web应用完整安全指南.md)
+- [Golang 中的网络安全 TLS/SSL 的实现](/security/engineering/golang 中的网络安全TLS SSL的实现.md)
 
 ### 安全工具链 🔧
 - [Go 语言主流安全库使用指南](/security/engineering/Go语言主流安全库使用指南.md)
@@ -120,10 +120,10 @@ keywords:
 → 参考 [SSH Security Hardening Guide 2025](/security/engineering/SSH-Security-Hardening-Guide-2025.md)
 
 ### Web 应用有哪些常见漏洞？
-→ 参考 [Golang Web 应用完整安全指南](/security/engineering/golang%20Web应用完整安全指南.md)
+→ 参考 [Golang Web 应用完整安全指南](/security/engineering/golang Web应用完整安全指南.md)
 
 ### 如何建立安全的加密通信？
-→ 参考 [Golang 中的网络安全 TLS/SSL 的实现](/security/engineering/golang%20中的网络安全TLS%20SSL的实现.md)
+→ 参考 [Golang 中的网络安全 TLS/SSL 的实现](/security/engineering/golang 中的网络安全TLS SSL的实现.md)
 
 ### Go 开发有哪些安全陷阱？
 → 参考 [10 个 Golang 安全陷阱及真正有效的修复方案](/security/engineering/10个Golang安全陷阱及真正有效的修复方案.md)

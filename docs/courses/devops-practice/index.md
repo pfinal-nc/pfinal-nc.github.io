@@ -199,8 +199,8 @@ jobs:
 | 4.7 | Go 应用监控 | 指标暴露、健康检查、pprof | ✅ |
 
 **推荐文章：**
-- [从 trace 到洞察：Go 项目的可观测性闭环实践](/thinking/method/从%20trace%20 到洞察：Go%20 项目的可观测性闭环实践.md)
-- [别再盲接 OTel：Go 可观察性接入的 8 个大坑](/thinking/method/别再盲接%20OTel：Go%20 可观察性接入的%208%20 个大坑.md)
+- [从 trace 到洞察：Go 项目的可观测性闭环实践](/thinking/method/从 trace 到洞察：Go 项目的可观测性闭环实践.md)
+- [别再盲接 OTel：Go 可观察性接入的 8 个大坑](/thinking/method/别再盲接 OTel：Go 可观察性接入的 8 个大坑.md)
 - [使用 Devslog 结构化日志处理](/tools/使用 Devslog 结构化日志处理.md)
 
 **监控体系架构图：**

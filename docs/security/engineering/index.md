@@ -33,10 +33,10 @@ recommend: 安全
 - **[10个Golang安全陷阱及真正有效的修复方案](./10个Golang安全陷阱及真正有效的修复方案.md)**  
   发现 Go 开发中的 10 个关键安全陷阱，学习在生产环境中真正有效的修复方案。
 
-- **[Golang Web应用完整安全指南](./golang%20Web应用完整安全指南.md)**  
+- **[Golang Web应用完整安全指南](./golang Web应用完整安全指南.md)**  
   覆盖常见 Web 安全问题（XSS、SQL 注入、认证、权限）及其在 Go 项目里的实战防护方案。
 
-- **[Golang 中的网络安全 TLS/SSL 的实现](./golang%20中的网络安全TLS%20SSL的实现.md)**  
+- **[Golang 中的网络安全 TLS/SSL 的实现](./golang 中的网络安全TLS SSL的实现.md)**  
   从基础概念到 Go 代码实战，带你把 HTTPS / TLS 这一块补全。
 
 - **[Go语言主流安全库使用指南](./Go语言主流安全库使用指南.md)**  

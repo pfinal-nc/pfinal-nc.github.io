@@ -127,7 +127,7 @@ course:
 - 日志分析
 
 **相关文章：**
-- [Go 开发终端小工具](/dev/backend/golang/Go%20 开发终端小工具.md)
+- [Go 开发终端小工具](/dev/backend/golang/Go 开发终端小工具.md)
 - [GO 语言开发终端小工具后续](/dev/backend/golang/GO 语言开发终端小工具后续.md)
 
 </div>
