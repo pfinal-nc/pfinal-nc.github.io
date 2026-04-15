@@ -1,9 +1,15 @@
 ---
 title: RxJS 简介 - 响应式编程入门指南
-date: 2025-03-09T00:00:00.000Z
+date: 2025-03-09 00:00:00
 author: PFinal南丞
 description: RxJS 简介，介绍响应式编程的核心概念，与 Promise/async-await 的深度对比，帮助前端开发者快速理解 RxJS 的优势。
-keywords: 'RxJS, 响应式编程, Observable, Promise, async-await, FRP'
+keywords:
+  - RxJS
+  - 响应式编程
+  - Observable
+  - Promise
+  - async-await
+  - FRP
 course:
   name: RxJS 响应式编程实战手册
   module: 1

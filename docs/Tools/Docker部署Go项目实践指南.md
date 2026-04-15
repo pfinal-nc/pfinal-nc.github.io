@@ -6,7 +6,15 @@ tags:
   - 工具
   - Docker
 description: "Docker部署Go项目实践指南"
-keywords: Docker, Go部署, 容器化, Dockerfile, 多阶段构建, Go项目部署, 镜像优化, DevOps
+keywords:
+  - Docker
+  - Go部署
+  - 容器化
+  - Dockerfile
+  - 多阶段构建
+  - Go项目部署
+  - 镜像优化
+  - DevOps
 ---
 
 # Docker部署Go项目实践指南

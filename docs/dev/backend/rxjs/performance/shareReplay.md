@@ -1,9 +1,14 @@
 ---
 title: "shareReplay 性能优化 - RxJS"
-date: 2025-03-09
+date: 2025-03-09 00:00:00
 author: PFinal南丞
 description: RxJS 性能优化，使用 shareReplay 避免重复的 HTTP 请求，详解 bufferSize 和 refCount 参数。
-keywords: RxJS, shareReplay, 性能优化, 缓存, HTTP
+keywords:
+  - RxJS
+  - shareReplay
+  - 性能优化
+  - 缓存
+  - HTTP
 ---
 
 # 性能优化：使用 shareReplay 避免重复工作

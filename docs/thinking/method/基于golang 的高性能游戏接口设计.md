@@ -5,7 +5,15 @@ tags:
     - golang
     - 游戏开发
 author: PFinal南丞
-keywords: golang, 游戏开发, 接口设计, 高性能, 高并发, 游戏服务器, 游戏接口, 游戏框架
+keywords:
+  - golang
+  - 游戏开发
+  - 接口设计
+  - 高性能
+  - 高并发
+  - 游戏服务器
+  - 游戏接口
+  - 游戏框架
 description: 介绍基于 golang 的高性能游戏接口设计，包括游戏服务器架构、接口设计原则、性能优化和高并发处理。
 ---
 

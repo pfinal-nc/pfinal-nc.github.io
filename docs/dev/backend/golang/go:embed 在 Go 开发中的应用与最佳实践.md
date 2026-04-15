@@ -1,11 +1,19 @@
 ---
 title: go embed 在 Go 开发中的应用与最佳实践
-date: 2024-08-24T09:32:24.000Z
+date: 2024-08-24 09:32:24
 tags:
   - golang
 description: 'go:embed 在 Go 开发中的应用与最佳实践'
 author: PFinal南丞
-keywords: 'go:embed 在 Go 开发中的应用与最佳实践, golang, 项目创建, 快速创建, 工具, 项目, 快速, 工具'
+keywords:
+  - go:embed 在 Go 开发中的应用与最佳实践
+  - golang
+  - 项目创建
+  - 快速创建
+  - 工具
+  - 项目
+  - 快速
+  - 工具
 recommend: 后端工程
 ---
 # go:embed 在 Go 开发中的应用与最佳实践

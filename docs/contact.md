@@ -1,9 +1,17 @@
 ---
 title: 联系我们 - 与PFinalClub取得联系
-date: 2024-03-14
+date: 2024-03-14 00:00:00
 author: PFinal南丞
 description: 联系PFinalClub获取技术支持、合作机会、咨询服务或只是打个招呼。我们在这里帮助您满足开发需求。
-keywords: 联系, 合作, 咨询, 技术支持, 开源, 培训, 研讨会, PFinalClub
+keywords:
+  - 联系
+  - 合作
+  - 咨询
+  - 技术支持
+  - 开源
+  - 培训
+  - 研讨会
+  - PFinalClub
 ---
 
 # 联系我们 - 与PFinalClub取得联系

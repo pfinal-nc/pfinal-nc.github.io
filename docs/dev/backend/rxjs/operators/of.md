@@ -1,9 +1,13 @@
 ---
 title: "of 创建操作符 - RxJS"
-date: 2025-03-09
+date: 2025-03-09 00:00:00
 author: PFinal南丞
 description: RxJS of 操作符，依次发出任意数量的值然后完成。
-keywords: RxJS, of, 操作符, 创建Observable
+keywords:
+  - RxJS
+  - of
+  - 操作符
+  - 创建Observable
 ---
 
 # of

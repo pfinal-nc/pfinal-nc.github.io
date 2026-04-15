@@ -1,6 +1,6 @@
 ---
 title: Go testing/synctest 深度解析 2025 - 异步测试实战指南
-date: 2025-09-22T17:15:27.000Z
+date: 2025-09-22 17:15:27
 tags:
   - golang
   - testing

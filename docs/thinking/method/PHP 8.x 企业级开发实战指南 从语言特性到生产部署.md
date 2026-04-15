@@ -1,6 +1,6 @@
 ---
 title: PHP 8.x 企业级开发实战指南 从语言特性到生产部署
-date: 2025-10-11T10:00:02.000Z
+date: 2025-10-11 10:00:02
 author: PFinal南丞
 tag:
   - PHP
@@ -8,7 +8,12 @@ tag:
   - 架构设计
   - 性能优化
 description: 深入探讨PHP 8.x在企业级应用开发中的最佳实践，涵盖架构设计、性能优化、工程化部署等核心话题
-keywords: 'PHP8, 企业级开发, 架构设计, 性能优化, 工程化'
+keywords:
+  - PHP8
+  - 企业级开发
+  - 架构设计
+  - 性能优化
+  - 工程化
 course:
   name: PHP 企业级开发实战
   module: 1

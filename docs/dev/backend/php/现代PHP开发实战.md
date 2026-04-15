@@ -22,7 +22,7 @@ tags:
   - php
   - Laravel
   - 架构设计
-date: 2025-12-18T15:30:00.000Z
+date: 2025-12-18 15:30:00
 recommend: 后端工程
 ---
 

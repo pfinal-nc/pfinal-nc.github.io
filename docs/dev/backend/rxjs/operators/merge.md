@@ -1,9 +1,13 @@
 ---
 title: "merge 合并流 - RxJS 操作符"
-date: 2025-03-09
+date: 2025-03-09 00:00:00
 author: PFinal南丞
 description: RxJS merge 操作符，将多个 Observable 合并为一个，按时间顺序发出所有值。
-keywords: RxJS, merge, 操作符, 合并
+keywords:
+  - RxJS
+  - merge
+  - 操作符
+  - 合并
 ---
 
 # merge

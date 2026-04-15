@@ -1,6 +1,6 @@
 ---
 title: "学习路线图 - PFinalClub"
-date: 2026-03-11
+date: 2026-03-11 00:00:00
 author: PFinal南丞
 description: "PFinalClub完整学习路线图，涵盖Golang、PHP、Python、DevOps、AI工程化、安全工程等技术栈，从入门到精通的系统学习路径。"
 keywords:

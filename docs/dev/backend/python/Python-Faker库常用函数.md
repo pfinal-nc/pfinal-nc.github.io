@@ -1,6 +1,6 @@
 ---
 title: Python Faker 库 - 完整使用指南与常用函数实战
-date: 2023-04-05T22:10:20.000Z
+date: 2023-04-05 22:10:20
 tags:
   - python
 description: Faker库常用函数

@@ -1,9 +1,15 @@
 ---
 title: "RxJS 实战手册 - 目录与指南"
-date: 2025-03-09
+date: 2025-03-09 00:00:00
 author: PFinal南丞
 description: RxJS 实战手册，帮助前端开发者快速入门并精通 RxJS，内容涵盖从基础概念到高级应用的方方面面。
-keywords: RxJS, 响应式编程, Observable, 操作符, TypeScript, 前端开发
+keywords:
+  - RxJS
+  - 响应式编程
+  - Observable
+  - 操作符
+  - TypeScript
+  - 前端开发
 ---
 
 # RxJS 实战手册

@@ -1,6 +1,6 @@
 ---
 title: Vibe Coding 时代的开发者 如何跟 ChatGPT 5.1 一起写代码，而不是被替代
-date: 2025-11-28T00:00:00.000Z
+date: 2025-11-28 00:00:00
 author: PFinal南丞
 category: 工具
 tags:

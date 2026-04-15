@@ -6,7 +6,15 @@ tags:
     - 工具
 description: 用 Golang 与 Color 库打造多彩命令行体验，让 CLI 工具焕然一新
 author: PFinal南丞
-keywords: Golang, Color库, CLI工具, 命令行美化, 终端彩色输出, fatih/color, 开发工具, 终端体验优化
+keywords:
+  - Golang
+  - Color库
+  - CLI工具
+  - 命令行美化
+  - 终端彩色输出
+  - fatih/color
+  - 开发工具
+  - 终端体验优化
 sticky: true
 ---
 # 让CLI工具焕然一新！用golang与Color库打造多彩命令行体验

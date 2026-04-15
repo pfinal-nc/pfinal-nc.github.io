@@ -6,7 +6,15 @@ tags:
     - VSCode
 description: VSCode常用快捷键总结，提高开发效率
 author: PFinal南丞
-keywords: VSCode, 快捷键, Visual Studio Code, 代码编辑器, 开发效率, IDE技巧, 键盘快捷键, 编程工具
+keywords:
+  - VSCode
+  - 快捷键
+  - Visual Studio Code
+  - 代码编辑器
+  - 开发效率
+  - IDE技巧
+  - 键盘快捷键
+  - 编程工具
 ---
 
 # VSCode快捷键

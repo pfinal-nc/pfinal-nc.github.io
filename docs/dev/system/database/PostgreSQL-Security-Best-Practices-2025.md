@@ -1,6 +1,6 @@
 ---
 title: PostgreSQL 安全最佳实践 2025 - 生产环境加固完整指南
-date: 2025-12-18T00:00:00.000Z
+date: 2025-12-18 00:00:00
 updated: 2025-12-18T00:00:00.000Z
 authors:
   - PFinal南丞

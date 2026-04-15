@@ -1,12 +1,14 @@
 ---
 title: "TCP/IP HTTP 学习 - 使用指南"
-date: 2020-06-09T11:31:32.000Z
+date: 2020-06-09 11:31:32
 tags:
   - TCP/IP
   - HTTP
   - php
 description: 学习TCP/IP HTTP协议
-keywords: 'TCP/IP,HTTP'
+keywords:
+  - TCP/IP
+  - HTTP
 author: PFinal南丞
 recommend: 后端工程
 ---

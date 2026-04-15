@@ -1,9 +1,13 @@
 ---
 title: "exhaustMap 耗尽映射 - RxJS 操作符"
-date: 2025-03-09
+date: 2025-03-09 00:00:00
 author: PFinal南丞
 description: RxJS exhaustMap 操作符，当内部 Observable 执行完成前忽略所有新值，防止重复提交。
-keywords: RxJS, exhaustMap, 操作符, 防止重复提交
+keywords:
+  - RxJS
+  - exhaustMap
+  - 操作符
+  - 防止重复提交
 ---
 
 # exhaustMap

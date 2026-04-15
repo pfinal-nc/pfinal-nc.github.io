@@ -3,7 +3,12 @@ title: "Scrapy爬虫框架实战：分布式爬虫与反爬虫对策"
 date: 2026-03-02 03:07:00
 author: PFinal南丞
 description: "深入探讨Scrapy框架的分布式爬虫实现方案，分析Scrapy-Redis架构原理，并提供实战反爬虫对策与性能优化技巧"
-keywords: Scrapy分布式爬虫, Scrapy-Redis, 反爬虫对策, 爬虫性能优化, Python爬虫实战
+keywords:
+  - Scrapy分布式爬虫
+  - Scrapy-Redis
+  - 反爬虫对策
+  - 爬虫性能优化
+  - Python爬虫实战
 tags:
   - Python
   - Scrapy

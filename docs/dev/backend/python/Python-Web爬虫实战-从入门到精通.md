@@ -1,7 +1,16 @@
 ---
 title: Python Web 爬虫实战：从入门到精通
-date: 2026-03-11
+date: 2026-03-11 00:00:00
 description: 系统学习 Python Web 爬虫技术，掌握 Requests、BeautifulSoup、Scrapy 等核心库，构建高性能爬虫系统
+keywords:
+  - Python
+  - Web爬虫
+  - Scrapy
+  - BeautifulSoup
+  - 数据采集
+  - Python Web 爬虫实战：从入门到精通
+  - PFinalClub
+  - 技术博客
 tags: [Python, Web爬虫, Scrapy, BeautifulSoup, 数据采集]
 difficulty: 🟡 进阶
 category: dev/backend/python

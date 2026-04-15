@@ -1,9 +1,14 @@
 ---
 title: "tap 副作用操作符 - RxJS"
-date: 2025-03-09
+date: 2025-03-09 00:00:00
 author: PFinal南丞
 description: RxJS tap 操作符，用于执行副作用（如日志），不影响流中的数据。
-keywords: RxJS, tap, 操作符, 副作用, 调试
+keywords:
+  - RxJS
+  - tap
+  - 操作符
+  - 副作用
+  - 调试
 ---
 
 # tap

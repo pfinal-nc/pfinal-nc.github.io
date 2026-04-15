@@ -1,9 +1,14 @@
 ---
 title: "concatMap 串联映射 - RxJS 操作符"
-date: 2025-03-09
+date: 2025-03-09 00:00:00
 author: PFinal南丞
 description: 详解 RxJS concatMap 操作符，与 mergeMap、switchMap 的对比，以及顺序执行的使用场景。
-keywords: RxJS, concatMap, 操作符, 顺序执行, HTTP请求
+keywords:
+  - RxJS
+  - concatMap
+  - 操作符
+  - 顺序执行
+  - HTTP请求
 ---
 
 # concatMap

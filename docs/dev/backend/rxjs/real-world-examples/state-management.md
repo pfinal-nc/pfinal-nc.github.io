@@ -1,9 +1,13 @@
 ---
 title: "状态管理实战 - RxJS 实战案例"
-date: 2025-03-09
+date: 2025-03-09 00:00:00
 author: PFinal南丞
 description: RxJS 实战案例，展示如何使用 BehaviorSubject 实现简单的状态管理。
-keywords: RxJS, 状态管理, BehaviorSubject, 实战
+keywords:
+  - RxJS
+  - 状态管理
+  - BehaviorSubject
+  - 实战
 ---
 
 # 状态管理实战

@@ -1,6 +1,6 @@
 ---
 title: "FastAPI 从零开始构建高性能 API：快速入门指南"
-date: 2026-03-11
+date: 2026-03-11 00:00:00
 author: PFinal南丞
 description: "FastAPI 是现代、快速（高性能）的 Web 框架，用于基于标准 Python 类型提示使用 Python 3.8+ 构建 API。本文将从零开始，带你快速上手 FastAPI，构建第一个高性能 RESTful API。"
 keywords:

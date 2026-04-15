@@ -1,11 +1,20 @@
 ---
 title: "Python 常用网站搜集 - 使用指南"
-date: 2023-04-03T21:58:33.000Z
+date: 2023-04-03 21:58:33
 tags:
   - python
 description: 搜集python常用的网站资源
 author: PFinal南丞
-keywords: 'Python, 网站, 搜集, 资源, 开发, 编程, 工具, 镜像站, 爬虫'
+keywords:
+  - Python
+  - 网站
+  - 搜集
+  - 资源
+  - 开发
+  - 编程
+  - 工具
+  - 镜像站
+  - 爬虫
 recommend: 后端工程
 ---
 # Python常用网站搜集

@@ -1,6 +1,6 @@
 ---
 title: "FastAPI 实战案例：从零构建企业级 API"
-date: 2026-03-11
+date: 2026-03-11 00:00:00
 author: PFinal南丞
 description: "通过一个完整的实战案例，学习如何从零开始构建企业级 FastAPI 应用。包括项目架构、数据库设计、认证授权、API 文档、部署上线等完整流程。"
 keywords:

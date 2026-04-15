@@ -1,9 +1,13 @@
 ---
 title: "map 转换操作符 - RxJS"
-date: 2025-03-09
+date: 2025-03-09 00:00:00
 author: PFinal南丞
 description: RxJS map 操作符详解，对源 Observable 发出的每个值应用投射函数进行转换。
-keywords: RxJS, map, 操作符, 转换
+keywords:
+  - RxJS
+  - map
+  - 操作符
+  - 转换
 ---
 
 # map

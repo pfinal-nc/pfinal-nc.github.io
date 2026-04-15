@@ -3,7 +3,14 @@ title: "Tauri实战：用Go和Rust构建轻量级桌面应用"
 date: 2026-03-09 08:30:00
 author: PFinal南丞
 description: "深入解析Tauri 2.0框架，探讨如何结合Go语言的后端能力与Rust的安全高效，构建跨平台的轻量级桌面应用。涵盖核心概念、Go-Rust集成方案、实战开发步骤、性能优化与打包部署全流程。"
-keywords: Tauri框架, Go语言, Rust语言, 桌面应用开发, 跨平台开发, Sidecar模式, Go绑定
+keywords:
+  - Tauri框架
+  - Go语言
+  - Rust语言
+  - 桌面应用开发
+  - 跨平台开发
+  - Sidecar模式
+  - Go绑定
 tags:
   - Rust
   - Go语言

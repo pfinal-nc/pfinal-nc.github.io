@@ -3,7 +3,13 @@ title: "ClickHouse实战：从入门到高性能OLAP查询"
 date: 2026-03-03 00:45:00
 author: PFinal南丞
 description: "深入探索ClickHouse列式OLAP数据库的核心特性与实战应用，涵盖架构设计、Go语言集成、性能优化策略，助力开发者构建高效数据分析系统"
-keywords: ClickHouse, OLAP, 列式存储, Go语言, 性能优化, 实战
+keywords:
+  - ClickHouse
+  - OLAP
+  - 列式存储
+  - Go语言
+  - 性能优化
+  - 实战
 tags:
   - ClickHouse
   - OLAP

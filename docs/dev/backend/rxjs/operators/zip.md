@@ -1,9 +1,13 @@
 ---
 title: "zip 配对组合 - RxJS 操作符"
-date: 2025-03-09
+date: 2025-03-09 00:00:00
 author: PFinal南丞
 description: RxJS zip 操作符，将多个 Observable 的值按顺序配对组合。
-keywords: RxJS, zip, 操作符, 配对
+keywords:
+  - RxJS
+  - zip
+  - 操作符
+  - 配对
 ---
 
 # zip

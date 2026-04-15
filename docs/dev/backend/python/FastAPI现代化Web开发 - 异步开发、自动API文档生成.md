@@ -3,7 +3,14 @@ title: "FastAPI现代化Web开发：异步开发与自动API文档生成实战"
 date: 2026-02-14 19:00:00
 author: PFinal南丞
 description: "深入探讨FastAPI框架的异步开发核心原理、自动API文档生成机制，以及在实际项目中的性能优化技巧与最佳实践，助力构建高性能现代化Web服务"
-keywords: FastAPI, 异步开发, API文档, Swagger, Redoc, Python, Web开发
+keywords:
+  - FastAPI
+  - 异步开发
+  - API文档
+  - Swagger
+  - Redoc
+  - Python
+  - Web开发
 tags:
   - Python
   - FastAPI

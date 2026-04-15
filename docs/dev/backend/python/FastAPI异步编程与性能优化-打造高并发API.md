@@ -1,6 +1,6 @@
 ---
 title: "FastAPI 异步编程与性能优化：打造高并发 API"
-date: 2026-03-11
+date: 2026-03-11 00:00:00
 author: PFinal南丞
 description: "深入理解 FastAPI 的异步编程机制和性能优化技巧，学习如何打造高并发的 API。包括异步 I/O、数据库优化、缓存策略、并发控制等高级主题。"
 keywords:

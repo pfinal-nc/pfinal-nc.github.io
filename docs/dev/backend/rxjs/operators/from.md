@@ -1,9 +1,14 @@
 ---
 title: "from 创建操作符 - RxJS"
-date: 2025-03-09
+date: 2025-03-09 00:00:00
 author: PFinal南丞
 description: RxJS from 操作符，从数组、Promise、迭代器等创建 Observable。
-keywords: RxJS, from, 操作符, 创建Observable, Promise
+keywords:
+  - RxJS
+  - from
+  - 操作符
+  - 创建Observable
+  - Promise
 ---
 
 # from

@@ -1,7 +1,17 @@
 ---
 title: Python 数据可视化实战：Matplotlib、Seaborn 与 Plotly 完全指南
-date: 2026-03-11
+date: 2026-03-11 00:00:00
 description: 深入掌握三大可视化库的使用技巧，从基础图表到高级可视化，打造专业级数据展示
+keywords:
+  - Python
+  - Matplotlib
+  - Seaborn
+  - Plotly
+  - 数据可视化
+  - 数据分析
+  - Python 数据可视化实战：Matplotlib、Seaborn 与 Plotly 完全指南
+  - PFinalClub
+  - 技术博客
 tags: [Python, Matplotlib, Seaborn, Plotly, 数据可视化, 数据分析]
 difficulty: 🟡 进阶
 category: dev/backend/python

@@ -1,9 +1,15 @@
 ---
 title: "switchMap 切换映射 - RxJS 操作符"
-date: 2025-03-09
+date: 2025-03-09 00:00:00
 author: PFinal南丞
 description: 详解 RxJS switchMap 操作符，包含弹珠图、Type-Ahead 搜索示例以及使用场景和注意事项。
-keywords: RxJS, switchMap, 操作符, Type-Ahead, 搜索, 异步
+keywords:
+  - RxJS
+  - switchMap
+  - 操作符
+  - Type-Ahead
+  - 搜索
+  - 异步
 ---
 
 # switchMap

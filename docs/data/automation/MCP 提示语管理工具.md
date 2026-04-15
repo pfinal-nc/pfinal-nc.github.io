@@ -1,6 +1,6 @@
 ---
 title: MCP 提示语管理工具 - Cursor & Windsurf 实战
-date: 2025-06-05T10:14:02.000Z
+date: 2025-06-05 10:14:02
 tags:
   - 工具
   - MCP

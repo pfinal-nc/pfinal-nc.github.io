@@ -3,7 +3,14 @@ title: "GitOps实战：从应用部署到全生命周期管理"
 date: 2026-03-03 19:00:00
 author: PFinal南丞
 description: "深入解析GitOps在现代云原生环境中的完整实践路径，涵盖从工具链选型、多环境管理、安全合规到灾难恢复的全生命周期管理策略，助力企业构建可审计、可重复、自愈的现代化部署体系。"
-keywords: GitOps, 云原生, 持续部署, ArgoCD, Flux, DevOps, Kubernetes
+keywords:
+  - GitOps
+  - 云原生
+  - 持续部署
+  - ArgoCD
+  - Flux
+  - DevOps
+  - Kubernetes
 tags:
   - GitOps
   - 云原生

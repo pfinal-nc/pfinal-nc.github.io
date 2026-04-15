@@ -1,7 +1,7 @@
 ---
 title: "Go Concurrency Patterns 2025 - 7种核心并发模式实战指南"
 slug: "go-concurrency-patterns-guide"
-date: 2024-11-08
+date: 2024-11-08 00:00:00
 updated: 2024-11-08
 authors:
   - "PFinal南丞"

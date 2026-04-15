@@ -1,6 +1,6 @@
 ---
 title: Golang 10 大必备库 2025 - 加速开发的实战指南
-date: 2025-07-12T10:30:00.000Z
+date: 2025-07-12 10:30:00
 tags:
   - golang
   - 工具
@@ -11,10 +11,21 @@ description: >-
   10 Essential Go Libraries for 2025: Gin, GORM, Viper, Zap
   等核心库完整指南。从代码质量到性能优化，全面提升 Go 开发效率 300%。
 author: PFinal南丞
-keywords: >-
-  essential go libraries, best go libraries 2025, go development tools, golang
-  libraries, gin framework, gorm tutorial, go viper config, go zap logging,
-  golang best tools, go开发工具, Go库推荐, PFinalClub,
+keywords:
+  - >-
+  essential go libraries
+  - best go libraries 2025
+  - go development tools
+  - golang
+  libraries
+  - gin framework
+  - gorm tutorial
+  - go viper config
+  - go zap logging
+  - golang best tools
+  - go开发工具
+  - Go库推荐
+  - PFinalClub
 sticky: true
 recommend: 后端工程
 ---

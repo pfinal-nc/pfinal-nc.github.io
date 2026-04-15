@@ -1,7 +1,16 @@
 ---
 title: Python 深度学习入门：PyTorch 实战指南
-date: 2026-03-11
+date: 2026-03-11 00:00:00
 description: 从零开始学习 PyTorch 深度学习框架，掌握神经网络、CNN、RNN 等核心技术
+keywords:
+  - Python
+  - PyTorch
+  - 深度学习
+  - 神经网络
+  - AI
+  - Python 深度学习入门：PyTorch 实战指南
+  - PFinalClub
+  - 技术博客
 tags: [Python, PyTorch, 深度学习, 神经网络, AI]
 difficulty: 🟡 进阶
 category: dev/backend/python

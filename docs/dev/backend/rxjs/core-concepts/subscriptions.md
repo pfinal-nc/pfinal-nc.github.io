@@ -1,9 +1,15 @@
 ---
 title: "Subscription 订阅与内存管理 - RxJS 核心概念"
-date: 2025-03-09
+date: 2025-03-09 00:00:00
 author: PFinal南丞
 description: 详解 RxJS Subscription 订阅管理，包含手动取消订阅、add 方法以及 takeUntil 最佳实践。
-keywords: RxJS, Subscription, unsubscribe, takeUntil, 内存管理, 内存泄漏
+keywords:
+  - RxJS
+  - Subscription
+  - unsubscribe
+  - takeUntil
+  - 内存管理
+  - 内存泄漏
 ---
 
 # Subscription 订阅与内存管理

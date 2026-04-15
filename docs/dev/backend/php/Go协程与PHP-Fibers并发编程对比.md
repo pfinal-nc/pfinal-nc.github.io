@@ -1,6 +1,6 @@
 ---
 title: Go 协程 vs PHP Fibers - 并发编程的两种实现对比
-date: 2025-10-19T10:00:02.000Z
+date: 2025-10-19 10:00:02
 author: PFinal南丞
 tag:
   - php
@@ -10,7 +10,14 @@ tag:
   - Fibers
   - 异步编程
 description: 深入对比 Go 协程与 PHP Fibers 两种并发编程模型的技术特点、实现机制和实际应用场景，帮助开发者理解它们的差异和适用场景
-keywords: 'Go协程, PHP Fibers, 并发编程, 异步编程, 协程调度, 高并发, 性能优化'
+keywords:
+  - Go协程
+  - PHP Fibers
+  - 并发编程
+  - 异步编程
+  - 协程调度
+  - 高并发
+  - 性能优化
 recommend: 后端工程
 ---
 

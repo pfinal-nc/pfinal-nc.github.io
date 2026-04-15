@@ -1,9 +1,15 @@
 ---
 title: "mergeMap 并发映射 - RxJS 操作符"
-date: 2025-03-09
+date: 2025-03-09 00:00:00
 author: PFinal南丞
 description: 详解 RxJS mergeMap 操作符，包含弹珠图、并发请求示例以及并发控制。
-keywords: RxJS, mergeMap, flatMap, 操作符, 并发, HTTP请求
+keywords:
+  - RxJS
+  - mergeMap
+  - flatMap
+  - 操作符
+  - 并发
+  - HTTP请求
 ---
 
 # mergeMap (又名 flatMap)

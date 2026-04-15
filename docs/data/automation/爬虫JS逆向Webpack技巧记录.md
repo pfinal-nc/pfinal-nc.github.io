@@ -1,7 +1,7 @@
 ---
 title: "Python爬虫JS逆向实战指南（Webpack加密破解与数据采集）"
 slug: "python-js-reverse-webpack"
-date: 2023-05-15
+date: 2023-05-15 00:00:00
 updated: 2023-05-15
 authors:
   - "PFinal南丞"

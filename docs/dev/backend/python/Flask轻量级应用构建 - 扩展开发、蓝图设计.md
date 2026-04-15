@@ -3,7 +3,14 @@ title: "Flask轻量级应用构建 - 扩展开发、蓝图设计"
 date: 2026-03-02 19:00:00
 author: PFinal南丞
 description: "深入探讨Flask轻量级Web框架的模块化开发实践，涵盖蓝图（Blueprint）的核心机制、扩展开发集成、配置管理策略以及生产环境部署优化，为有经验的开发者提供实战指导"
-keywords: Flask, 蓝图, Blueprint, 扩展开发, Python Web, 模块化开发, 轻量级框架
+keywords:
+  - Flask
+  - 蓝图
+  - Blueprint
+  - 扩展开发
+  - Python Web
+  - 模块化开发
+  - 轻量级框架
 tags:
   - Python
   - Flask

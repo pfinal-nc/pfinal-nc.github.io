@@ -3,7 +3,14 @@ title: "runtime.free 打破Go GC性能瓶颈的秘密武器"
 date: 2026-02-13 09:28:00
 author: PFinal南丞
 description: "深入解析Go 1.26中的runtime.free机制，如何通过编译器自动化与标准库手动优化，绕过GC直接释放内存，实现高达2倍的性能提升。面向有经验的Go开发者，提供实战代码示例、benchmark数据对比和最佳实践。"
-keywords: Go GC, runtime.free, 内存优化, 性能提升, 编译器优化, strings.Builder, 垃圾回收
+keywords:
+  - Go GC
+  - runtime.free
+  - 内存优化
+  - 性能提升
+  - 编译器优化
+  - strings.Builder
+  - 垃圾回收
 tags:
   - Go语言
   - 性能优化

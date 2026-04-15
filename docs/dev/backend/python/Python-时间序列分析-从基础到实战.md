@@ -1,7 +1,17 @@
 ---
 title: Python 时间序列分析：从基础到实战
-date: 2026-03-11
+date: 2026-03-11 00:00:00
 description: 深入掌握时间序列分析的核心方法，包括趋势分析、季节性分解、预测建模等实用技术
+keywords:
+  - Python
+  - 时间序列
+  - 数据分析
+  - Pandas
+  - Prophet
+  - 机器学习
+  - Python 时间序列分析：从基础到实战
+  - PFinalClub
+  - 技术博客
 tags: [Python, 时间序列, 数据分析, Pandas, Prophet, 机器学习]
 difficulty: 🟡 进阶
 category: dev/backend/python

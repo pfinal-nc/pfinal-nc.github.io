@@ -9,8 +9,15 @@ tags:
   - 架构设计
   - 性能优化
   
-keywords: 后端工程,Go,PHP,Python,性能优化,Wails,桌面应用,全栈开发
-
+keywords:
+  - 后端工程
+  - Go
+  - PHP
+  - Python
+  - 性能优化
+  - Wails
+  - 桌面应用
+  - 全栈开发
 # 推荐分类：设置后，推荐算法会匹配所有有相同 recommend 值的文章，不再限制路径深度
 # 这样 /dev/backend/index.md 就能匹配到子目录下的文章了
 recommend: 后端工程

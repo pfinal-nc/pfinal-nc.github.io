@@ -1,6 +1,6 @@
 ---
 title: ThinkPHP 近 20 年 - 中国 Web 开发的时代印记与实战经验
-date: 2025-07-16T10:00:02.000Z
+date: 2025-07-16 10:00:02
 author: PFinal南丞
 tags:
   - php

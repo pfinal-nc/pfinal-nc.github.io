@@ -1,9 +1,13 @@
 ---
 title: "filter 过滤操作符 - RxJS"
-date: 2025-03-09
+date: 2025-03-09 00:00:00
 author: PFinal南丞
 description: RxJS filter 操作符详解，只发出满足指定谓词函数的值。
-keywords: RxJS, filter, 操作符, 过滤
+keywords:
+  - RxJS
+  - filter
+  - 操作符
+  - 过滤
 ---
 
 # filter

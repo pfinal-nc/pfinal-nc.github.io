@@ -6,7 +6,15 @@ tags:
 
 description: 介绍Composer配置文件的基本概念和使用方法，包括配置文件的位置、依赖管理、包管理、版本控制等。
 author: PFinal南丞
-keywords: Composer, PHP依赖管理, composer.json, 包管理, 版本控制, PSR规范, PHP开发工具, Packagist
+keywords:
+  - Composer
+  - PHP依赖管理
+  - composer.json
+  - 包管理
+  - 版本控制
+  - PSR规范
+  - PHP开发工具
+  - Packagist
 ---
 
 # Composer配置文件说明

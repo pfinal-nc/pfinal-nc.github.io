@@ -1,9 +1,13 @@
 ---
 title: Observer 观察者 - RxJS 核心概念
-date: 2025-03-09T00:00:00.000Z
+date: 2025-03-09 00:00:00
 author: PFinal南丞
 description: 详解 RxJS Observer 观察者模式，包含 next、error、complete 三个回调函数的使用方法。
-keywords: 'RxJS, Observer, 观察者模式, subscribe'
+keywords:
+  - RxJS
+  - Observer
+  - 观察者模式
+  - subscribe
 course:
   name: RxJS 响应式编程实战手册
   module: 1

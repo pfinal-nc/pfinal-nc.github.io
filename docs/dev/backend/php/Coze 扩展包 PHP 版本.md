@@ -1,13 +1,16 @@
 ---
 title: PHP Coze 扩展包 - 完整使用指南与集成实战
-date: 2025-07-28T10:00:02.000Z
+date: 2025-07-28 10:00:02
 author: PFinal南丞
 tag:
   - PHP
   - Coze
   - Composer
 description: 'Coze 官方提供了 Python,Node,Go 版本的 SDK 就是没有提供 PHP 版本的 于是自己动手搞了个 PHP 版本的'
-keywords: 'Coze, 构建, 手工'
+keywords:
+  - Coze
+  - 构建
+  - 手工
 recommend: 后端工程
 ---
 

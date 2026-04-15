@@ -1,7 +1,16 @@
 ---
 title: Python 数据分析入门：Pandas 与 NumPy 基础
-date: 2026-03-11
+date: 2026-03-11 00:00:00
 description: 深入理解 Pandas 和 NumPy 的核心概念，掌握数据分析的基础技能，从数据处理到可视化完整流程
+keywords:
+  - Python
+  - Pandas
+  - NumPy
+  - 数据分析
+  - 数据科学
+  - Python 数据分析入门：Pandas 与 NumPy 基础
+  - PFinalClub
+  - 技术博客
 tags: [Python, Pandas, NumPy, 数据分析, 数据科学]
 difficulty: 🟢 入门
 category: dev/backend/python

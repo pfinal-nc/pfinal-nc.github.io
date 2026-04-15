@@ -1,12 +1,20 @@
 ---
 title: Git 基本操作 - 完整使用指南
-date: 2022-08-23T22:08:16.000Z
+date: 2022-08-23 22:08:16
 tags:
   - 工具
   - Git
 description: Git 基本操作
 author: PFinal南丞
-keywords: 'Git, 版本控制, Git命令, 代码管理, 分支管理, 仓库操作, 协作开发, Git教程'
+keywords:
+  - Git
+  - 版本控制
+  - Git命令
+  - 代码管理
+  - 分支管理
+  - 仓库操作
+  - 协作开发
+  - Git教程
 course:
   name: 开发者工具集
   module: 1

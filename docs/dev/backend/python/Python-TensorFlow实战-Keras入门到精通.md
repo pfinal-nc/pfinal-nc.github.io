@@ -1,7 +1,16 @@
 ---
 title: Python TensorFlow 实战：Keras 入门到精通
-date: 2026-03-11
+date: 2026-03-11 00:00:00
 description: 全面掌握 TensorFlow 和 Keras 框架，构建和训练深度学习模型
+keywords:
+  - Python
+  - TensorFlow
+  - Keras
+  - 深度学习
+  - 神经网络
+  - Python TensorFlow 实战：Keras 入门到精通
+  - PFinalClub
+  - 技术博客
 tags: [Python, TensorFlow, Keras, 深度学习, 神经网络]
 difficulty: 🟡 进阶
 category: dev/backend/python

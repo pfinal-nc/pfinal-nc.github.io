@@ -1,13 +1,18 @@
 ---
 title: 9 个微型 SaaS 理念 2025 - 低竞争高需求的市场机会
-date: 2025-07-07T15:00:00.000Z
+date: 2025-07-07 15:00:00
 tags:
   - golang
   - SaaS
   - 创业
   - 编程技术
 author: PFinal南丞
-keywords: 'SaaS, 创业, 微型产品, 编程, PFinalClub'
+keywords:
+  - SaaS
+  - 创业
+  - 微型产品
+  - 编程
+  - PFinalClub
 description: 你是否想过，SaaS 领域还有哪些“蓝海”？本文分享 9 个几乎没有竞争、但需求巨大的微型 SaaS 创业点子，附带实用建议与技术实现思路。
 recommend: 后端工程
 ---

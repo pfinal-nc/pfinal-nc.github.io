@@ -7,7 +7,15 @@ tags:
     - Rust
 description: Broot 是一款由 Rust 编写的高效终端文件管理器，提供直观的树状视图、模糊搜索、快速导航和文件预览等强大功能
 author: PFinal南丞
-keywords: Broot, 命令行工具, 文件管理, 终端工具, Rust, 目录导航, 文件浏览器, CLI工具
+keywords:
+  - Broot
+  - 命令行工具
+  - 文件管理
+  - 终端工具
+  - Rust
+  - 目录导航
+  - 文件浏览器
+  - CLI工具
 sticky: true
 ---
 

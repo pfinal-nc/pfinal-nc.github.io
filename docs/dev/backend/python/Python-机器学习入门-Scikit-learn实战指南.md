@@ -1,7 +1,16 @@
 ---
 title: Python 机器学习入门：Scikit-learn 实战指南
-date: 2026-03-11
+date: 2026-03-11 00:00:00
 description: 从零开始掌握机器学习，使用 Scikit-learn 构建真实世界的机器学习应用
+keywords:
+  - Python
+  - 机器学习
+  - Scikit-learn
+  - 数据科学
+  - AI
+  - Python 机器学习入门：Scikit-learn 实战指南
+  - PFinalClub
+  - 技术博客
 tags: [Python, 机器学习, Scikit-learn, 数据科学, AI]
 difficulty: 🟢 入门
 category: dev/backend/python

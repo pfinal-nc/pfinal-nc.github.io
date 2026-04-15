@@ -1,6 +1,6 @@
 ---
 title: PostgreSQL 性能优化实战 2025 - 配置与 SQL 调优完整指南
-date: 2025-12-16T00:00:00.000Z
+date: 2025-12-16 00:00:00
 updated: 2025-12-16T00:00:00.000Z
 authors:
   - PFinal南丞

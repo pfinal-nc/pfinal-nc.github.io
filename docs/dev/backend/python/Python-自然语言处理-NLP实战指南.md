@@ -1,7 +1,16 @@
 ---
 title: Python 自然语言处理（NLP）实战指南
-date: 2026-03-11
+date: 2026-03-11 00:00:00
 description: 深入掌握 NLP 技术，使用 NLTK、spaCy、Transformers 等工具处理文本数据
+keywords:
+  - Python
+  - NLP
+  - 自然语言处理
+  - Transformers
+  - 深度学习
+  - Python 自然语言处理（NLP）实战指南
+  - PFinalClub
+  - 技术博客
 tags: [Python, NLP, 自然语言处理, Transformers, 深度学习]
 difficulty: 🟡 进阶
 category: dev/backend/python

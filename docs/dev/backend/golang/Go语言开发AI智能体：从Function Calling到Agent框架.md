@@ -3,7 +3,13 @@ title: "Go语言开发AI智能体：从Function Calling到Agent框架"
 date: 2026-03-05 05:11:00
 author: PFinal南丞
 description: "深入探讨Go语言中AI智能体开发的核心技术，从基础的Function Calling机制到企业级Agent框架实践，涵盖Eino、go-agent等主流框架实战"
-keywords: Go语言, AI智能体, Function Calling, Agent框架, Eino, go-agent
+keywords:
+  - Go语言
+  - AI智能体
+  - Function Calling
+  - Agent框架
+  - Eino
+  - go-agent
 tags:
   - Go语言
   - AI智能体

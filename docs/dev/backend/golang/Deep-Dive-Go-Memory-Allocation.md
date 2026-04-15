@@ -1,11 +1,14 @@
 ---
 title: 深入Go内存分配
-date: 2024-11-13T09:32:24.000Z
+date: 2024-11-13 09:32:24
 tags:
   - golang
 description: 深入Go内存分配
 author: PFinal南丞
-keywords: '深入Go内存分配, golang, 内存分配'
+keywords:
+  - 深入Go内存分配
+  - golang
+  - 内存分配
 recommend: 后端工程
 course:
   name: Go 后端工程师成长路线

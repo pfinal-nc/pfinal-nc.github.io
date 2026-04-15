@@ -1,7 +1,16 @@
 ---
 title: Python 推荐系统实战：从算法到应用
-date: 2026-03-11
+date: 2026-03-11 00:00:00
 description: 全面掌握推荐系统技术，从协同过滤到深度学习，构建个性化推荐引擎
+keywords:
+  - Python
+  - 推荐系统
+  - 机器学习
+  - 深度学习
+  - 协同过滤
+  - Python 推荐系统实战：从算法到应用
+  - PFinalClub
+  - 技术博客
 tags: [Python, 推荐系统, 机器学习, 深度学习, 协同过滤]
 difficulty: 🟡 进阶
 category: dev/backend/python

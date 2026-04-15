@@ -5,7 +5,15 @@ tags:
     - 工具
 description: 收集一些开发过程中常用的小工具
 author: PFinal南丞
-keywords: IDE插件, 开发工具, Layui插件, 代码补全, 效率工具, VSCode插件, PHPStorm插件, 编程效率
+keywords:
+  - IDE插件
+  - 开发工具
+  - Layui插件
+  - 代码补全
+  - 效率工具
+  - VSCode插件
+  - PHPStorm插件
+  - 编程效率
 ---
 
 # IDE偷懒小工具

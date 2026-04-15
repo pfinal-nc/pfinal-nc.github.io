@@ -1,9 +1,14 @@
 ---
 title: "HTTP 请求处理实战 - RxJS 实战案例"
-date: 2025-03-09
+date: 2025-03-09 00:00:00
 author: PFinal南丞
 description: RxJS 实战案例，展示如何使用 ajax 处理 HTTP 请求，包含错误处理重试策略和请求依赖。
-keywords: RxJS, HTTP, ajax, retry, 请求处理
+keywords:
+  - RxJS
+  - HTTP
+  - ajax
+  - retry
+  - 请求处理
 ---
 
 # HTTP 请求处理实战

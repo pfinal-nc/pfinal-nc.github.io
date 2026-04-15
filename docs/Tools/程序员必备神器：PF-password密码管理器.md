@@ -9,7 +9,13 @@ tags:
   - 效率
 description: 作为一个注册了无数网站的程序员，密码管理一直是我的痛点。为了解决这个问题，我开发了一个简单的Alfred插件来管理密码，今天分享给大家。
 author: PFinal南丞
-keywords: Alfred插件, 密码管理器, Python, 工具开发, 效率提升, 密码管理
+keywords:
+  - Alfred插件
+  - 密码管理器
+  - Python
+  - 工具开发
+  - 效率提升
+  - 密码管理
 ---
 
 # 因为密码太多记不住，我写了个Alfred插件来管理密码

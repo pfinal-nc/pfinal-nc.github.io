@@ -1,7 +1,7 @@
 ---
 title: "搭建Nginx安全网关：3步堵住90%的Web漏洞！企业级防护实战指南"
 slug: "nginx-security-gateway-zero-to-production"
-date: 2025-12-12
+date: 2025-12-12 00:00:00
 updated: 2025-12-12
 authors:
   - "PFinal南丞"

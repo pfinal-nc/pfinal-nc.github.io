@@ -1,6 +1,6 @@
 ---
 title: PHP Function Calling 实战 - 让本地大模型兼容 OpenAI 接口
-date: 2025-11-19T15:30:00.000Z
+date: 2025-11-19 15:30:00
 author: PFinal南丞
 tags:
   - php
@@ -11,9 +11,23 @@ tags:
   - Qwen3
   - Deepseek
   - GLM4
-keywords: >-
-  PHP异步编程, Function Calling, Tool Calls, pfinal-asyncio, Qwen3, Deepseek, GLM4,
-  OpenAI兼容, AI Agent, 本地大模型, PHP协程, 异步并发, Ollama, 工具调用, PHP AI开发
+keywords:
+  - >-
+  PHP异步编程
+  - Function Calling
+  - Tool Calls
+  - pfinal-asyncio
+  - Qwen3
+  - Deepseek
+  - GLM4
+  - OpenAI兼容
+  - AI Agent
+  - 本地大模型
+  - PHP协程
+  - 异步并发
+  - Ollama
+  - 工具调用
+  - PHP AI开发
 description: >-
   实战教程：如何让本地运行的 Qwen3、Deepseek-Coder-V3、GLM4-Chat 等模型像 OpenAI GPT-4 一样支持原生
   Function Calling。通过 pfinal-asyncio 异步框架实现完全兼容 OpenAI 接口规范的工具调用，并发执行性能提升

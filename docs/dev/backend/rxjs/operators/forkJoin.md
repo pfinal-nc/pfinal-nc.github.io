@@ -1,9 +1,14 @@
 ---
 title: "forkJoin 并行等待 - RxJS 操作符"
-date: 2025-03-09
+date: 2025-03-09 00:00:00
 author: PFinal南丞
 description: RxJS forkJoin 操作符，类似于 Promise.all，等待所有 Observable 完成后发出最后的一个值。
-keywords: RxJS, forkJoin, 操作符, Promise.all, 并行
+keywords:
+  - RxJS
+  - forkJoin
+  - 操作符
+  - Promise.all
+  - 并行
 ---
 
 # forkJoin

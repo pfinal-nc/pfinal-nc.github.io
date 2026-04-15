@@ -1,11 +1,22 @@
 ---
 title: "Redis 基础知识 - 使用指南"
-date: 2022-11-24T22:47:02.000Z
+date: 2022-11-24 22:47:02
 tags:
   - Redis
 description: Redis 是一个开源的使用 ANSI C 语言编写、支持网络、可基于内存亦可持久化的日志型、Key-Value 数据库，并提供多种语言的 API。
 author: PFinal南丞
-keywords: 'Redis, 基本知识, 总结, 数据库, NoSQL, 缓存, 计数器, 排行榜, 社交网络, 消息队列, 分布式锁'
+keywords:
+  - Redis
+  - 基本知识
+  - 总结
+  - 数据库
+  - NoSQL
+  - 缓存
+  - 计数器
+  - 排行榜
+  - 社交网络
+  - 消息队列
+  - 分布式锁
 recommend: 后端工程
 ---
 

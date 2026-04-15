@@ -1,9 +1,14 @@
 ---
 title: Observable 可观察对象 - RxJS 核心概念
-date: 2025-03-09T00:00:00.000Z
+date: 2025-03-09 00:00:00
 author: PFinal南丞
 description: 深入理解 RxJS Observable，详解 Cold vs Hot Observables 的区别，以及如何将 Cold 转换为 Hot。
-keywords: 'RxJS, Observable, Cold Observable, Hot Observable, 响应式编程'
+keywords:
+  - RxJS
+  - Observable
+  - Cold Observable
+  - Hot Observable
+  - 响应式编程
 course:
   name: RxJS 响应式编程实战手册
   module: 1

@@ -6,7 +6,15 @@ tags:
     - PHP
 description: PHPStorm快捷键
 author: PFinal南丞
-keywords: PHPStorm, 快捷键, IDE, PHP开发, 效率提升, JetBrains, 开发工具, 编辑器技巧
+keywords:
+  - PHPStorm
+  - 快捷键
+  - IDE
+  - PHP开发
+  - 效率提升
+  - JetBrains
+  - 开发工具
+  - 编辑器技巧
 ---    
 
 # PHPStorm快捷键

@@ -1,6 +1,6 @@
 ---
 title: Wails 教程系列 - 创建你的第一个应用
-date: 2025-08-22T00:00:00.000Z
+date: 2025-08-22 00:00:00
 author: PFinalClub
 description: 深入理解 Wails 项目创建流程、架构原理和最佳实践，为资深开发者提供全面的技术指导。
 recommend: 后端工程

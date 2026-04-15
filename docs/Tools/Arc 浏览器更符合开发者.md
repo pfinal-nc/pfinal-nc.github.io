@@ -7,7 +7,13 @@ tags:
   - 效率
 description: Arc浏览器深度体验：为什么它更适合开发者使用
 author: PFinal南丞
-keywords: Arc浏览器, 开发者工具, 效率提升, 标签管理, Space功能, 浏览器体验
+keywords:
+  - Arc浏览器
+  - 开发者工具
+  - 效率提升
+  - 标签管理
+  - Space功能
+  - 浏览器体验
 ---  
 
 ## 什么是 Arc 浏览器？

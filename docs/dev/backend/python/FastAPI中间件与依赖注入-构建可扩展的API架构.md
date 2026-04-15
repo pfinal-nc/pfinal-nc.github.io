@@ -1,6 +1,6 @@
 ---
 title: "FastAPI 中间件与依赖注入：构建可扩展的 API 架构"
-date: 2026-03-11
+date: 2026-03-11 00:00:00
 author: PFinal南丞
 description: "深入理解 FastAPI 的中间件和依赖注入机制，学习如何构建可扩展、可维护的 API 架构。包括自定义中间件、依赖注入、数据库连接、认证授权等高级主题。"
 keywords:

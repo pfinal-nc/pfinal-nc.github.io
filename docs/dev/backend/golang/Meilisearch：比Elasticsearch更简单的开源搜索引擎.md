@@ -3,7 +3,13 @@ title: "Meilisearch：比Elasticsearch更简单的开源搜索引擎实战"
 date: 2026-03-05 04:10:00
 author: PFinal南丞
 description: "深入解析现代搜索引擎Meilisearch的核心优势、与Elasticsearch的对比、Go SDK实战应用及生产环境部署指南，帮助开发者快速构建高性能搜索功能"
-keywords: Meilisearch, Elasticsearch, Go SDK, 搜索引擎, 全文检索, 实战教程
+keywords:
+  - Meilisearch
+  - Elasticsearch
+  - Go SDK
+  - 搜索引擎
+  - 全文检索
+  - 实战教程
 tags:
   - Go语言
   - 搜索引擎

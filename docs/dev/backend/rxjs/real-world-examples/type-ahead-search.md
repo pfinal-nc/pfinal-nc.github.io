@@ -1,9 +1,15 @@
 ---
 title: "Type-Ahead 搜索实战 - RxJS 实战案例"
-date: 2025-03-09
+date: 2025-03-09 00:00:00
 author: PFinal南丞
 description: RxJS 实战案例，展示如何使用 debounceTime、distinctUntilChanged、switchMap 实现 Type-Ahead 搜索功能。
-keywords: RxJS, Type-Ahead, 搜索, debounce, switchMap, 实战
+keywords:
+  - RxJS
+  - Type-Ahead
+  - 搜索
+  - debounce
+  - switchMap
+  - 实战
 ---
 
 # Type-Ahead 搜索实战

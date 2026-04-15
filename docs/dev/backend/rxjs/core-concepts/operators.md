@@ -1,9 +1,15 @@
 ---
 title: RxJS 操作符详解 - 分类与使用
-date: 2025-03-09T00:00:00.000Z
+date: 2025-03-09 00:00:00
 author: PFinal南丞
 description: RxJS 操作符详解，包含创建、转换、过滤、组合、错误处理等各类操作符的分类和使用场景。
-keywords: 'RxJS, 操作符, Operators, pipe, map, filter'
+keywords:
+  - RxJS
+  - 操作符
+  - Operators
+  - pipe
+  - map
+  - filter
 course:
   name: RxJS 响应式编程实战手册
   module: 1

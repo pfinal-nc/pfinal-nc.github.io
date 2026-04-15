@@ -1,6 +1,6 @@
 ---
 title: "Fyne 深度技术解析 - Go 实战指南"
-date: 2025-01-27
+date: 2025-01-27 00:00:00
 author: PFinal南丞
 description: 深入分析 Fyne 框架的架构设计、技术实现和设计模式，为资深 Go 开发者提供技术洞察。
 tags:
@@ -9,7 +9,15 @@ tags:
   - Fyne
   - 架构设计
   - 跨平台
-keywords: Fyne框架, Go GUI, 架构设计, 跨平台开发, Widget系统, 渲染引擎, 主题系统, Go桌面应用
+keywords:
+  - Fyne框架
+  - Go GUI
+  - 架构设计
+  - 跨平台开发
+  - Widget系统
+  - 渲染引擎
+  - 主题系统
+  - Go桌面应用
 ---
 
 # Fyne 深度技术解析,从 Wails 到 Fyne

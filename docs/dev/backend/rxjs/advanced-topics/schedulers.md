@@ -1,9 +1,13 @@
 ---
 title: "调度器 Schedulers - RxJS 高级主题"
-date: 2025-03-09
+date: 2025-03-09 00:00:00
 author: PFinal南丞
 description: RxJS 调度器详解，queueScheduler、asyncScheduler、asapScheduler 的区别和使用场景。
-keywords: RxJS, Scheduler, 调度器, 异步
+keywords:
+  - RxJS
+  - Scheduler
+  - 调度器
+  - 异步
 ---
 
 # 调度器 Schedulers

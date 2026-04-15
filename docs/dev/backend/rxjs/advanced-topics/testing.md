@@ -1,9 +1,13 @@
 ---
 title: "RxJS 测试 - 高级主题"
-date: 2025-03-09
+date: 2025-03-09 00:00:00
 author: PFinal南丞
 description: RxJS 测试，详解如何使用 TestScheduler 和 marble diagrams 进行测试。
-keywords: RxJS, 测试, TestScheduler, marble
+keywords:
+  - RxJS
+  - 测试
+  - TestScheduler
+  - marble
 ---
 
 # RxJS 测试

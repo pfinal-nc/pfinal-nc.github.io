@@ -1,9 +1,13 @@
 ---
 title: "concat 串联流 - RxJS 操作符"
-date: 2025-03-09
+date: 2025-03-09 00:00:00
 author: PFinal南丞
 description: RxJS concat 操作符，按顺序依次执行多个 Observable，前一个完成才执行下一个。
-keywords: RxJS, concat, 操作符, 串联
+keywords:
+  - RxJS
+  - concat
+  - 操作符
+  - 串联
 ---
 
 # concat

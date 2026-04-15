@@ -9,7 +9,14 @@ tags:
   - AI
 description: 维护Web服务器时，面对密密麻麻的进程信息头皮发麻？这篇文章教你用Shell脚本记录服务器状态，配合AI分析，轻松搞定进程分析、性能监控、卡顿排查等问题。
 author: PFinal南丞
-keywords: 服务器监控, 进程分析, Shell脚本, Linux命令, 性能优化, AI辅助分析, 服务器卡顿
+keywords:
+  - 服务器监控
+  - 进程分析
+  - Shell脚本
+  - Linux命令
+  - 性能优化
+  - AI辅助分析
+  - 服务器卡顿
 ---
 
 # 服务器进程日志分析：从头皮发麻到AI解救

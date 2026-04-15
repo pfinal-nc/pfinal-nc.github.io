@@ -3,7 +3,20 @@ title: "关于PFinalClub - 后端 + DevOps + AI 工程实践技术博客"
 date: 2025-03-13 15:46:00
 author: PFinal南丞
 description: 了解PFinalClub，一个以后端 + DevOps + AI 工程实践为核心的小众高质量博客。发现我们的使命、专业技能和分享知识的承诺。
-keywords: 关于, PFinalClub, 开发者社区, PHP, Golang, Python, 微服务, 云原生, 技术博客, 开源, 后端开发, DevOps, AI工程
+keywords:
+  - 关于
+  - PFinalClub
+  - 开发者社区
+  - PHP
+  - Golang
+  - Python
+  - 微服务
+  - 云原生
+  - 技术博客
+  - 开源
+  - 后端开发
+  - DevOps
+  - AI工程
 original: true
 ---
 
