@@ -16,6 +16,13 @@ course:
   name: Wails 跨平台桌面开发实战
   module: 1
   lesson: 1.2
+tags:
+  - AI
+  - Backend
+  - Desktop
+  - Git
+  - Golang
+  - HTTP
 ---
 
 # Wails 教程系列 - 环境搭建与安装

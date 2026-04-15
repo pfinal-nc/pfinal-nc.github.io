@@ -8,6 +8,12 @@ keywords:
   - map
   - 操作符
   - 转换
+tags:
+  - Frontend
+  - JavaScript
+  - Operators
+  - Performance
+  - RxJS
 ---
 
 # map

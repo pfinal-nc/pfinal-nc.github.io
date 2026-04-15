@@ -8,6 +8,12 @@ keywords:
   - 测试
   - TestScheduler
   - marble
+tags:
+  - Frontend
+  - JavaScript
+  - RxJS
+  - Testing
+  - Tools
 ---
 
 # RxJS 测试

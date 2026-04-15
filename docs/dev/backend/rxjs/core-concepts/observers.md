@@ -12,6 +12,10 @@ course:
   name: RxJS 响应式编程实战手册
   module: 1
   lesson: 1.3
+tags:
+  - Frontend
+  - JavaScript
+  - RxJS
 ---
 
 # Observer 观察者

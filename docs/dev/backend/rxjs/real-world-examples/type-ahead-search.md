@@ -10,6 +10,12 @@ keywords:
   - debounce
   - switchMap
   - 实战
+tags:
+  - Frontend
+  - Git
+  - HTTP
+  - JavaScript
+  - RxJS
 ---
 
 # Type-Ahead 搜索实战

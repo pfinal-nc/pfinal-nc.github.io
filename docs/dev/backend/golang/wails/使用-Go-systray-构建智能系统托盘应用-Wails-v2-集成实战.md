@@ -24,6 +24,13 @@ course:
   name: Wails 跨平台桌面开发实战
   module: 3
   lesson: 3.1
+tags:
+  - AI
+  - Backend
+  - Desktop
+  - Git
+  - Golang
+  - HTTP
 ---
 
 # 使用 Go systray 构建智能系统托盘应用 - Wails v2 集成实战

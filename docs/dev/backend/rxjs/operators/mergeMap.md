@@ -10,6 +10,13 @@ keywords:
   - 操作符
   - 并发
   - HTTP请求
+tags:
+  - Frontend
+  - HTTP
+  - JavaScript
+  - Operators
+  - Performance
+  - RxJS
 ---
 
 # mergeMap (又名 flatMap)

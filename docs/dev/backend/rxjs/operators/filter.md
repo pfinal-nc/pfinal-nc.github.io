@@ -8,6 +8,11 @@ keywords:
   - filter
   - 操作符
   - 过滤
+tags:
+  - Frontend
+  - JavaScript
+  - Operators
+  - RxJS
 ---
 
 # filter

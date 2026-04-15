@@ -9,6 +9,13 @@ keywords:
   - 操作符
   - 顺序执行
   - HTTP请求
+tags:
+  - AI
+  - Frontend
+  - HTTP
+  - JavaScript
+  - Operators
+  - Performance
 ---
 
 # concatMap

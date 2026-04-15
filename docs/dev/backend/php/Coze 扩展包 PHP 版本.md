@@ -12,6 +12,13 @@ keywords:
   - 构建
   - 手工
 recommend: 后端工程
+tags:
+  - AI
+  - Backend
+  - Git
+  - Golang
+  - HTTP
+  - JavaScript
 ---
 
 ## 背景

@@ -14,6 +14,13 @@ course:
   name: RxJS 响应式编程实战手册
   module: 1
   lesson: 1.6
+tags:
+  - Frontend
+  - JavaScript
+  - Operators
+  - Performance
+  - RxJS
+  - Security
 ---
 
 # RxJS 操作符详解

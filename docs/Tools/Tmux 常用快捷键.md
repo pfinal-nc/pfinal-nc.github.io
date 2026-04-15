@@ -19,6 +19,9 @@ course:
   name: 开发者工具集
   module: 1
   lesson: 1.4
+tags:
+  - Tools
+  - Tutorial
 ---
 
 # Tmux 常用快捷键

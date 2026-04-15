@@ -9,6 +9,11 @@ keywords:
   - 操作符
   - 副作用
   - 调试
+tags:
+  - Frontend
+  - JavaScript
+  - Operators
+  - RxJS
 ---
 
 # tap

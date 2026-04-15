@@ -8,6 +8,11 @@ keywords:
   - 状态管理
   - BehaviorSubject
   - 实战
+tags:
+  - Frontend
+  - JavaScript
+  - React
+  - RxJS
 ---
 
 # 状态管理实战

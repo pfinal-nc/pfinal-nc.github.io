@@ -8,6 +8,11 @@ keywords:
   - concat
   - 操作符
   - 串联
+tags:
+  - Frontend
+  - JavaScript
+  - Operators
+  - RxJS
 ---
 
 # concat

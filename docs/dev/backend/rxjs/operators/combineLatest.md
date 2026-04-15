@@ -8,6 +8,12 @@ keywords:
   - combineLatest
   - 操作符
   - 组合
+tags:
+  - Frontend
+  - JavaScript
+  - Operators
+  - RxJS
+  - Tools
 ---
 
 # combineLatest

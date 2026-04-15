@@ -9,6 +9,13 @@ keywords:
   - 性能优化
   - 缓存
   - HTTP
+tags:
+  - Frontend
+  - HTTP
+  - JavaScript
+  - Performance
+  - RxJS
+  - Security
 ---
 
 # 性能优化：使用 shareReplay 避免重复工作

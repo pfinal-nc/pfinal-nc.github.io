@@ -8,6 +8,12 @@ keywords:
   - 拖放
   - drag-and-drop
   - 实战
+tags:
+  - AI
+  - Frontend
+  - JavaScript
+  - RxJS
+  - Tools
 ---
 
 # 拖放实现实战

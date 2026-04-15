@@ -16,6 +16,13 @@ course:
   name: Wails 跨平台桌面开发实战
   module: 2
   lesson: 2.3
+tags:
+  - AI
+  - Backend
+  - Desktop
+  - Golang
+  - HTTP
+  - Performance
 ---
 
 # Wails 教程系列 - 后端开发 (Go)

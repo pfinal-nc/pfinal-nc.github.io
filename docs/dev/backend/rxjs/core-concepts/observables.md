@@ -13,6 +13,13 @@ course:
   name: RxJS 响应式编程实战手册
   module: 1
   lesson: 1.2
+tags:
+  - Frontend
+  - HTTP
+  - JavaScript
+  - Performance
+  - RxJS
+  - Tools
 ---
 
 # Observable 可观察对象

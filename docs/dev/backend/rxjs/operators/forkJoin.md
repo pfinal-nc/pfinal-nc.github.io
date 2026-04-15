@@ -9,6 +9,12 @@ keywords:
   - 操作符
   - Promise.all
   - 并行
+tags:
+  - Frontend
+  - HTTP
+  - JavaScript
+  - Operators
+  - RxJS
 ---
 
 # forkJoin

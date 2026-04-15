@@ -8,6 +8,11 @@ keywords:
   - zip
   - 操作符
   - 配对
+tags:
+  - Frontend
+  - JavaScript
+  - Operators
+  - RxJS
 ---
 
 # zip

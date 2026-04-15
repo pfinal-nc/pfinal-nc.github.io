@@ -16,6 +16,13 @@ course:
   name: Wails 跨平台桌面开发实战
   module: 1
   lesson: 1.1
+tags:
+  - AI
+  - Architecture
+  - Backend
+  - Desktop
+  - Golang
+  - HTTP
 ---
 
 # Wails 教程系列 - WebKit 与生命周期深度解析

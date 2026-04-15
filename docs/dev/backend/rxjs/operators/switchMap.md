@@ -10,6 +10,13 @@ keywords:
   - Type-Ahead
   - 搜索
   - 异步
+tags:
+  - Frontend
+  - Git
+  - HTTP
+  - JavaScript
+  - Operators
+  - Performance
 ---
 
 # switchMap

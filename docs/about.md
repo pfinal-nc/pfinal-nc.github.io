@@ -18,6 +18,13 @@ keywords:
   - DevOps
   - AI工程
 original: true
+tags:
+  - AI
+  - Algorithm
+  - Architecture
+  - Crawler
+  - Database
+  - Docker
 ---
 
 # 关于PFinalClub

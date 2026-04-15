@@ -7,6 +7,11 @@ keywords:
   - RxJS
   - 自定义操作符
   - Operators
+tags:
+  - Frontend
+  - JavaScript
+  - Operators
+  - RxJS
 ---
 
 # 自定义操作符

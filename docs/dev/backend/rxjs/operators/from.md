@@ -9,6 +9,11 @@ keywords:
   - 操作符
   - 创建Observable
   - Promise
+tags:
+  - Frontend
+  - JavaScript
+  - Operators
+  - RxJS
 ---
 
 # from

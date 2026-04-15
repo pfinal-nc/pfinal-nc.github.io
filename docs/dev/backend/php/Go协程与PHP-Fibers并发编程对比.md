@@ -19,6 +19,13 @@ keywords:
   - 高并发
   - 性能优化
 recommend: 后端工程
+tags:
+  - AI
+  - Architecture
+  - Backend
+  - Golang
+  - HTTP
+  - PHP
 ---
 
 # Go 协程与 PHP Fibers-并发编程的两种实现

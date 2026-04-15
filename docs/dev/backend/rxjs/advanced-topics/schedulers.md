@@ -8,6 +8,11 @@ keywords:
   - Scheduler
   - 调度器
   - 异步
+tags:
+  - Frontend
+  - JavaScript
+  - Performance
+  - RxJS
 ---
 
 # 调度器 Schedulers

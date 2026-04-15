@@ -8,6 +8,11 @@ keywords:
   - merge
   - 操作符
   - 合并
+tags:
+  - Frontend
+  - JavaScript
+  - Operators
+  - RxJS
 ---
 
 # merge

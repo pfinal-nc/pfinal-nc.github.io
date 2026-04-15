@@ -18,6 +18,13 @@ course:
   name: PHP 企业级开发实战
   module: 1
   lesson: 1.1
+tags:
+  - Architecture
+  - HTTP
+  - PHP
+  - Performance
+  - Security
+  - Tutorial
 ---
 
 # PHP 8.x 企业级开发实战指南：从语言特性到生产部署

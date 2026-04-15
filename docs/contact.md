@@ -12,6 +12,13 @@ keywords:
   - 培训
   - 研讨会
   - PFinalClub
+tags:
+  - AI
+  - Architecture
+  - Database
+  - Docker
+  - Git
+  - Golang
 ---
 
 # 联系我们 - 与PFinalClub取得联系

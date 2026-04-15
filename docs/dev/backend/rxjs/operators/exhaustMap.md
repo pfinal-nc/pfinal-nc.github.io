@@ -8,6 +8,13 @@ keywords:
   - exhaustMap
   - 操作符
   - 防止重复提交
+tags:
+  - AI
+  - Frontend
+  - HTTP
+  - JavaScript
+  - Operators
+  - Performance
 ---
 
 # exhaustMap

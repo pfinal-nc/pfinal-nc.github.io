@@ -15,6 +15,12 @@ course:
   name: RxJS 响应式编程实战手册
   module: 1
   lesson: 1.5
+tags:
+  - Frontend
+  - JavaScript
+  - Performance
+  - Reactive
+  - RxJS
 ---
 
 # Subject 主体

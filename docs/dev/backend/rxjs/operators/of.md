@@ -8,6 +8,12 @@ keywords:
   - of
   - 操作符
   - 创建Observable
+tags:
+  - Frontend
+  - JavaScript
+  - Operators
+  - RxJS
+  - Testing
 ---
 
 # of

@@ -9,6 +9,13 @@ keywords:
   - 桌面应用开发
   - Go GUI
   - Wails性能优化
+tags:
+  - AI
+  - Architecture
+  - Backend
+  - Desktop
+  - Git
+  - Golang
 ---
 
 # Wails 桌面应用开发

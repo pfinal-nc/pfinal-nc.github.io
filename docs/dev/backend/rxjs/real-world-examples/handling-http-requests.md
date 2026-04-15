@@ -9,6 +9,13 @@ keywords:
   - ajax
   - retry
   - 请求处理
+tags:
+  - AI
+  - Frontend
+  - Git
+  - HTTP
+  - JavaScript
+  - RxJS
 ---
 
 # HTTP 请求处理实战

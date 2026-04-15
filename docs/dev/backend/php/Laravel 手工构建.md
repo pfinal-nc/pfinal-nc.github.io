@@ -20,6 +20,13 @@ keywords:
   - 依赖注入容器
   - PHP框架设计模式
 recommend: 后端工程
+tags:
+  - AI
+  - Architecture
+  - Backend
+  - Database
+  - Docker
+  - HTTP
 ---
 
 #  Laravel 手工构建
