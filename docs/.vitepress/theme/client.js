@@ -180,6 +180,7 @@ export default {
           trackInternalLinks()
           trackSearchEvents()
           trackShareEvents()
+          injectMonetagAds()
         }, 100)
       }
 
@@ -191,6 +192,7 @@ export default {
           trackInternalLinks()
           trackSearchEvents()
           trackShareEvents()
+          injectMonetagAds()
         }, 100)
       } else {
         window.addEventListener('load', () => {
@@ -200,6 +202,7 @@ export default {
             trackInternalLinks()
             trackSearchEvents()
             trackShareEvents()
+            injectMonetagAds()
           }, 100)
         })
       }
@@ -220,11 +223,38 @@ export default {
         ads.crossOrigin = 'anonymous'
         ads.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2154665617309406'
         document.head.appendChild(ads)
-        // 广告联盟 tag
-        const adTag = document.createElement('script')
-        adTag.dataset.zone = '9182859'
-        adTag.src = 'https://al5sm.com/tag.min.js'
-        document.head.appendChild(adTag)
+        
+        // Monetag 广告注入
+        injectMonetagAds()
+      }
+      
+      // 注入 Monetag 广告容器
+      function injectMonetagAds() {
+        // 检查是否是文章页面
+        const isArticlePage = document.querySelector('article') || document.querySelector('.content-container')
+        if (!isArticlePage) return
+        
+        // 文章底部广告容器
+        const articleBottom = document.querySelector('.content-container') || document.querySelector('article')
+        if (articleBottom && !document.getElementById('monetag-article-bottom')) {
+          const bottomAd = document.createElement('div')
+          bottomAd.id = 'monetag-article-bottom'
+          bottomAd.innerHTML = '<div data-zone="9154483" style="min-height:90px;margin:2rem 0;"></div>'
+          articleBottom.appendChild(bottomAd)
+        }
+        
+        // 加载 Monetag 脚本
+        if (!window.__monetagLoaded) {
+          window.__monetagLoaded = true
+          const script = document.createElement('script')
+          script.innerHTML = `
+            (function(s){
+              s.dataset.zone='9154483';
+              s.src='https://nap5k.com/tag.min.js';
+            })(document.body.appendChild(document.createElement('script')))
+          `
+          document.body.appendChild(script)
+        }
       }
       if (typeof requestIdleCallback !== 'undefined') {
         requestIdleCallback(() => loadDeferredAnalyticsAndAds(), { timeout: 3000 })
