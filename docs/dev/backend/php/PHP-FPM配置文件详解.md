@@ -5,8 +5,7 @@ author: PFinal南丞
 tags:
   - php
 keywords:
-  - >-
-  PHP-FPM配置文件解析
+  - PHP-FPM配置文件解析
   - php
   - 工具
   - php-fpm配置文件

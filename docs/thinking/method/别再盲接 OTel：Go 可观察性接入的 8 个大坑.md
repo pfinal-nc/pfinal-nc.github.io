@@ -9,8 +9,7 @@ description: >-
   统一、指标高基数控制、Exporter 超时与降级、以及版本升级兼容等关键问题，并给出可落地的默认配置与演练清单。
 author: PFinal南丞
 keywords:
-  - >-
-  OTel
+  - OTel
   - OpenTelemetry
   - Go 可观察性
   - Go 监控

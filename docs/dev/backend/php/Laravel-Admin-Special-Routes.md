@@ -7,8 +7,7 @@ tags:
 description: Laravel-admin特殊路由操作
 author: PFinal南丞
 keywords:
-  - >-
-  PHP
+  - PHP
   - 进程
   - 线程
   - 解析

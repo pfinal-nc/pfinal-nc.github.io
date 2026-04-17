@@ -6,8 +6,7 @@ tags:
 description: PHP 大杀器之生成器
 author: PFinal南丞
 keywords:
-  - >-
-  PHP
+  - PHP
   - 生成器
   - 解析
   - PHP生成器

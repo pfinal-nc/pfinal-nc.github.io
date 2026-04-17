@@ -12,8 +12,7 @@ description: >-
   等核心库完整指南。从代码质量到性能优化，全面提升 Go 开发效率 300%。
 author: PFinal南丞
 keywords:
-  - >-
-  essential go libraries
+  - essential go libraries
   - best go libraries 2025
   - go development tools
   - golang

@@ -7,8 +7,7 @@ tags:
 description: 基于Wails的Mac桌面应用开发
 author: PFinal南丞
 keywords:
-  - >-
-  Wails
+  - Wails
   - Golang
   - Go
   - GUI

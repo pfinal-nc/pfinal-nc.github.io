@@ -6,8 +6,7 @@ tags:
 description: PHP配置文件详解
 author: PFinal南丞
 keywords:
-  - >-
-  PHP
+  - PHP
   - 配置文件
   - 详解
   - 编程

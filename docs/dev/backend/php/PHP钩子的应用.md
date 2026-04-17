@@ -6,8 +6,7 @@ tags:
 description: 详细介绍PHP钩子的应用，包括钩子的概念、应用场景、实现方式等，帮助开发者更好地利用PHP的钩子功能，提高程序的性能和响应速度。
 author: PFinal南丞
 keywords:
-  - >-
-  PHP钩子
+  - PHP钩子
   - php
   - 工具
   - php钩子

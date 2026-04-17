@@ -7,8 +7,7 @@ tags:
 description: Laravel-Carbon-类使用
 author: PFinal南丞
 keywords:
-  - >-
-  Laravel
+  - Laravel
   - Carbon
   - 类
   - 使用

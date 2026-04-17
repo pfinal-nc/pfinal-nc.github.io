@@ -6,8 +6,7 @@ tags:
   - PHP8.5
   - 属性
 keywords:
-  - >-
-  PHP8.5
+  - PHP8.5
   - NoDiscard属性
   - PHP属性
   - 返回值检查

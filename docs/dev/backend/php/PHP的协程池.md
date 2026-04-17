@@ -9,8 +9,7 @@ tags:
   - Go
   - 高并发
 keywords:
-  - >-
-  PHP协程池
+  - PHP协程池
   - Workerman协程
   - PHP高并发
   - 协程池实现

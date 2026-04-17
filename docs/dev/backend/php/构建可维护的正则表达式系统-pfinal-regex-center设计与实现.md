@@ -9,8 +9,7 @@ tags:
   - 安全编程
   - 性能优化
 keywords:
-  - >-
-  PHP正则表达式
+  - PHP正则表达式
   - 正则管理
   - pfinal-regex-center
   - ReDoS防护
