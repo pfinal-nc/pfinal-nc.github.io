@@ -180,8 +180,12 @@ export default {
           trackInternalLinks()
           trackSearchEvents()
           trackShareEvents()
-          injectMonetagAds()
         }, 100)
+        
+        // 广告需要更长的延迟确保内容渲染完成
+        setTimeout(() => {
+          injectMonetagAds()
+        }, 500)
       }
 
       // 页面加载时也执行一次
@@ -192,8 +196,10 @@ export default {
           trackInternalLinks()
           trackSearchEvents()
           trackShareEvents()
-          injectMonetagAds()
         }, 100)
+        setTimeout(() => {
+          injectMonetagAds()
+        }, 500)
       } else {
         window.addEventListener('load', () => {
           handle404Redirect();
@@ -202,8 +208,10 @@ export default {
             trackInternalLinks()
             trackSearchEvents()
             trackShareEvents()
-            injectMonetagAds()
           }, 100)
+          setTimeout(() => {
+            injectMonetagAds()
+          }, 500)
         })
       }
 
@@ -230,20 +238,23 @@ export default {
       
       // 注入 Monetag 广告容器
       function injectMonetagAds() {
-        // 检查是否是文章页面
-        const isArticlePage = document.querySelector('article') || document.querySelector('.content-container')
-        if (!isArticlePage) return
+        // 检查是否是文章页面（VitePress 文章页有 .vp-doc 或 main 内容区）
+        const articleContainer = document.querySelector('.vp-doc') || 
+                                 document.querySelector('article') || 
+                                 document.querySelector('.content-container') ||
+                                 document.querySelector('#VPContent')
+        if (!articleContainer) return
         
-        // 文章底部广告容器
-        const articleBottom = document.querySelector('.content-container') || document.querySelector('article')
-        if (articleBottom && !document.getElementById('monetag-article-bottom')) {
+        // 文章底部广告容器 - 插入到文章容器末尾
+        if (!document.getElementById('monetag-article-bottom')) {
           const bottomAd = document.createElement('div')
           bottomAd.id = 'monetag-article-bottom'
-          bottomAd.innerHTML = '<div data-zone="9154483" style="min-height:90px;margin:2rem 0;"></div>'
-          articleBottom.appendChild(bottomAd)
+          bottomAd.className = 'monetag-ad-wrapper'
+          bottomAd.innerHTML = '<div data-zone="9154483" style="min-height:90px;margin:2rem 0;text-align:center;"></div>'
+          articleContainer.appendChild(bottomAd)
         }
         
-        // 加载 Monetag 脚本
+        // 加载 Monetag 脚本（只加载一次）
         if (!window.__monetagLoaded) {
           window.__monetagLoaded = true
           const script = document.createElement('script')
