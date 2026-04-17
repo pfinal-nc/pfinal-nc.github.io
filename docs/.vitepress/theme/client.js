@@ -203,6 +203,7 @@ export default {
             trackSearchEvents()
             trackShareEvents()
           }, 100)
+        })
       }
 
       // 延迟加载 GA4，不阻塞首屏，提升 LCP/FCP
