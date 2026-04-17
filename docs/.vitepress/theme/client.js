@@ -220,6 +220,11 @@ export default {
         ads.crossOrigin = 'anonymous'
         ads.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2154665617309406'
         document.head.appendChild(ads)
+        // 广告联盟 tag
+        const adTag = document.createElement('script')
+        adTag.dataset.zone = '9182859'
+        adTag.src = 'https://al5sm.com/tag.min.js'
+        document.head.appendChild(adTag)
       }
       if (typeof requestIdleCallback !== 'undefined') {
         requestIdleCallback(() => loadDeferredAnalyticsAndAds(), { timeout: 3000 })
