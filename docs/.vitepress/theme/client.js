@@ -182,10 +182,7 @@ export default {
           trackShareEvents()
         }, 100)
         
-        // 广告需要更长的延迟确保内容渲染完成
-        setTimeout(() => {
-          injectMonetagAds()
-        }, 500)
+        // Monetag 广告脚本已在 config.mts head 中加载，无需额外操作
       }
 
       // 页面加载时也执行一次
@@ -197,9 +194,6 @@ export default {
           trackSearchEvents()
           trackShareEvents()
         }, 100)
-        setTimeout(() => {
-          injectMonetagAds()
-        }, 500)
       } else {
         window.addEventListener('load', () => {
           handle404Redirect();
@@ -209,10 +203,6 @@ export default {
             trackSearchEvents()
             trackShareEvents()
           }, 100)
-          setTimeout(() => {
-            injectMonetagAds()
-          }, 500)
-        })
       }
 
       // 延迟加载 GA4，不阻塞首屏，提升 LCP/FCP
