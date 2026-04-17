@@ -146,24 +146,15 @@ export default defineConfig({
     ['meta', {name:'google-site-verification', content:'K5jxzJ_KXsS0QhsQnBIuKyxt6BGlPD-w1URDWGTWHo8'}],
     ['meta', {name:'360-site-verification', content:'bafd565a2170482bd9ff0c063ba5a41a'}],
     ['meta', {name:'yandex-verification', content:'20badebe204f6b0b'}],
-    // Monetag 广告脚本 - 直接加载确保生效
-    ['script', { async: true, src: 'https://nap5k.com/tag.min.js', 'data-zone': '9154483', 'data-cfasync': 'false' }],
-    // Monetag 广告容器注入
+    // Monetag 广告脚本 - inpage-push 类型 (zone 9114325)
     ['script', {}, `
       (function() {
-        function injectAds() {
-          var container = document.querySelector('.vp-doc') || document.querySelector('article') || document.querySelector('.content-container') || document.querySelector('#VPContent');
-          if (!container || document.getElementById('monetag-article-bottom')) return;
-          var adDiv = document.createElement('div');
-          adDiv.id = 'monetag-article-bottom';
-          adDiv.innerHTML = '<div data-zone="9154483" style="min-height:90px;margin:2rem 0;text-align:center;"></div>';
-          container.appendChild(adDiv);
-        }
-        if (document.readyState === 'complete') {
-          setTimeout(injectAds, 1000);
-        } else {
-          window.addEventListener('load', function() { setTimeout(injectAds, 1000); });
-        }
+        var s = document.createElement('script');
+        s.async = true;
+        s.dataset.zone = '9114325';
+        s.src = 'https://al5sm.com/tag.min.js';
+        s.setAttribute('data-cfasync', 'false');
+        document.head.appendChild(s);
       })();
     `],
     // GA4 与 AdSense 已移至 client.js 延迟加载，减轻首屏阻塞、提升 LCP
