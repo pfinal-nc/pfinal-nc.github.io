@@ -147,7 +147,25 @@ export default defineConfig({
     ['meta', {name:'360-site-verification', content:'bafd565a2170482bd9ff0c063ba5a41a'}],
     ['meta', {name:'yandex-verification', content:'20badebe204f6b0b'}],
     // Monetag 广告脚本 - 直接加载确保生效
-    ['script', { async: '', src: 'https://nap5k.com/tag.min.js', 'data-zone': '9154483' }],
+    ['script', { async: true, src: 'https://nap5k.com/tag.min.js', 'data-zone': '9154483' }],
+    // Monetag 广告容器注入
+    ['script', {}, `
+      (function() {
+        function injectAds() {
+          var container = document.querySelector('.vp-doc') || document.querySelector('article') || document.querySelector('.content-container') || document.querySelector('#VPContent');
+          if (!container || document.getElementById('monetag-article-bottom')) return;
+          var adDiv = document.createElement('div');
+          adDiv.id = 'monetag-article-bottom';
+          adDiv.innerHTML = '<div data-zone="9154483" style="min-height:90px;margin:2rem 0;text-align:center;"></div>';
+          container.appendChild(adDiv);
+        }
+        if (document.readyState === 'complete') {
+          setTimeout(injectAds, 1000);
+        } else {
+          window.addEventListener('load', function() { setTimeout(injectAds, 1000); });
+        }
+      })();
+    `],
     // GA4 与 AdSense 已移至 client.js 延迟加载，减轻首屏阻塞、提升 LCP
     // Schema.org 结构化数据 - WebSite
     ['script', { type: 'application/ld+json' }, JSON.stringify({
