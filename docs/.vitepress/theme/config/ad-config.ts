@@ -45,7 +45,7 @@ export interface AdPositions {
 }
 
 // 全局广告开关（AdSense 审核期间关闭所有广告）
-export const AD_ENABLED = false
+export const AD_ENABLED = true
 // Ezoic 广告开关（AdSense 审核期间禁用）
 export const EZOIC_ENABLED = false
 
@@ -57,7 +57,7 @@ export const adConfig: AdPositions = {
     monetag: {
       zoneId: '9114535',
       adType: 'inpage-push',
-      enabled: false
+      enabled: true
     },
     // Ezoic - AdSense 审核期间禁用
     ezoic: {
@@ -72,7 +72,7 @@ export const adConfig: AdPositions = {
     monetag: {
       zoneId: '9154483',
       adType: 'native-banner',
-      enabled: false
+      enabled: true
     },
     // Ezoic - AdSense 审核期间禁用
     ezoic: {
@@ -86,7 +86,7 @@ export const adConfig: AdPositions = {
     monetag: {
       zoneId: '9899685', // Pleasant tag - Direct link
       adType: 'direct-link',
-      enabled: false
+      enabled: true
     },
     ezoic: {
       placementId: '103', // TODO: 替换为实际的 Ezoic Placement ID
@@ -99,7 +99,7 @@ export const adConfig: AdPositions = {
     monetag: {
       zoneId: '9894528', // Immortal tag - Direct link
       adType: 'direct-link',
-      enabled: false
+      enabled: true
     },
     ezoic: {
       placementId: '104', // TODO: 替换为实际的 Ezoic Placement ID
@@ -112,7 +112,7 @@ export const adConfig: AdPositions = {
     monetag: {
       zoneId: '9114325', // Hot tag - OnClick (Popunder)
       adType: 'onclick-popunder',
-      enabled: false
+      enabled: true
     },
     ezoic: {
       placementId: '', // Ezoic 不支持 Popunder
