@@ -98,13 +98,20 @@ course:
 
 | 课时 | 主题 | 内容 | 状态 |
 |------|------|------|------|
-| 2.1 | K8s 架构与概念 | Master/Node、Pod、Namespace | 📝 |
-| 2.2 | 工作负载 | Deployment、StatefulSet、DaemonSet | 📝 |
-| 2.3 | 服务发现 | Service、Ingress、DNS | 📝 |
-| 2.4 | 配置管理 | ConfigMap、Secret、环境变量 | 📝 |
+| 2.1 | [K8s 架构与概念](/courses/devops-practice/k8s-architecture) | Master/Node、Pod、Namespace、kubectl | ✅ |
+| 2.2 | [工作负载](/courses/devops-practice/k8s-workloads) | Deployment、StatefulSet、DaemonSet、探针 | ✅ |
+| 2.3 | [服务发现与网络](/courses/devops-practice/k8s-networking) | Service、Ingress、DNS、NetworkPolicy | ✅ |
+| 2.4 | [配置管理](/courses/devops-practice/k8s-config) | ConfigMap、Secret、Vault、RBAC | ✅ |
 | 2.5 | 存储管理 | Volume、PVC、StorageClass | 📝 |
 | 2.6 | 自动扩缩容 | HPA、VPA、Cluster Autoscaler | 📝 |
 | 2.7 | Helm 包管理 | Chart 结构、模板、依赖管理 | 📝 |
+
+**推荐文章：**
+- [K8s 架构与核心概念全解析](/courses/devops-practice/k8s-architecture)
+- [K8s 工作负载深度解析](/courses/devops-practice/k8s-workloads)
+- [K8s 服务发现与网络](/courses/devops-practice/k8s-networking)
+- [K8s 配置管理：ConfigMap 与 Secret](/courses/devops-practice/k8s-config)
+- [用 Go 构建一个类 kubectl 的命令行工具](/dev/backend/golang/用 Go 构建一个类 kubectl 的命令行工具)
 
 **实战练习：**
 - 在本地使用 Minikube/Kind 搭建 K8s 环境
@@ -351,11 +358,11 @@ DevOps 工具链
 | 模块 | 进度 | 状态 |
 |------|------|------|
 | 模块 1：Docker 容器化 | 1/6 | 🚧 进行中 |
-| 模块 2：Kubernetes 编排 | 0/7 | 📝 规划中 |
+| 模块 2：Kubernetes 编排 | 4/7 | 🚧 进行中 |
 | 模块 3：CI/CD流水线 | 2/7 | 🚧 进行中 |
 | 模块 4：监控与可观测性 | 3/7 | 🚧 进行中 |
 
-**总体进度：** 6/27 (22%)
+**总体进度：** 10/27 (37%)
 
 </div>
 
