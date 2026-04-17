@@ -146,12 +146,12 @@ export default defineConfig({
     ['meta', {name:'google-site-verification', content:'K5jxzJ_KXsS0QhsQnBIuKyxt6BGlPD-w1URDWGTWHo8'}],
     ['meta', {name:'360-site-verification', content:'bafd565a2170482bd9ff0c063ba5a41a'}],
     ['meta', {name:'yandex-verification', content:'20badebe204f6b0b'}],
-    // Monetag 广告脚本 - inpage-push 类型 (zone 9114325)
+    // Monetag 广告脚本 - In-Page Push 类型 (zone 9114536 Anti-AdBlock)
     ['script', {}, `
       (function() {
         var s = document.createElement('script');
         s.async = true;
-        s.dataset.zone = '9114325';
+        s.dataset.zone = '9114536';
         s.src = 'https://al5sm.com/tag.min.js';
         s.setAttribute('data-cfasync', 'false');
         document.head.appendChild(s);
