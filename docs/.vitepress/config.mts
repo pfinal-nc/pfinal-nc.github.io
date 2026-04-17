@@ -146,6 +146,8 @@ export default defineConfig({
     ['meta', {name:'google-site-verification', content:'K5jxzJ_KXsS0QhsQnBIuKyxt6BGlPD-w1URDWGTWHo8'}],
     ['meta', {name:'360-site-verification', content:'bafd565a2170482bd9ff0c063ba5a41a'}],
     ['meta', {name:'yandex-verification', content:'20badebe204f6b0b'}],
+    // Monetag 广告脚本 - 直接加载确保生效
+    ['script', { async: '', src: 'https://nap5k.com/tag.min.js', 'data-zone': '9154483' }],
     // GA4 与 AdSense 已移至 client.js 延迟加载，减轻首屏阻塞、提升 LCP
     // Schema.org 结构化数据 - WebSite
     ['script', { type: 'application/ld+json' }, JSON.stringify({

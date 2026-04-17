@@ -236,13 +236,12 @@ export default {
         injectMonetagAds()
       }
       
-      // 注入 Monetag 广告容器
+      // 注入 Monetag 广告容器（脚本已在 head 中加载，这里只创建容器）
       function injectMonetagAds() {
-        // 检查是否是文章页面（VitePress 文章页有 .vp-doc 或 main 内容区）
+        // 检查是否是文章页面（VitePress 文章页有 .vp-doc）
         const articleContainer = document.querySelector('.vp-doc') || 
                                  document.querySelector('article') || 
-                                 document.querySelector('.content-container') ||
-                                 document.querySelector('#VPContent')
+                                 document.querySelector('.content-container')
         if (!articleContainer) return
         
         // 文章底部广告容器 - 插入到文章容器末尾
@@ -252,19 +251,6 @@ export default {
           bottomAd.className = 'monetag-ad-wrapper'
           bottomAd.innerHTML = '<div data-zone="9154483" style="min-height:90px;margin:2rem 0;text-align:center;"></div>'
           articleContainer.appendChild(bottomAd)
-        }
-        
-        // 加载 Monetag 脚本（只加载一次）
-        if (!window.__monetagLoaded) {
-          window.__monetagLoaded = true
-          const script = document.createElement('script')
-          script.innerHTML = `
-            (function(s){
-              s.dataset.zone='9154483';
-              s.src='https://nap5k.com/tag.min.js';
-            })(document.body.appendChild(document.createElement('script')))
-          `
-          document.body.appendChild(script)
         }
       }
       if (typeof requestIdleCallback !== 'undefined') {
