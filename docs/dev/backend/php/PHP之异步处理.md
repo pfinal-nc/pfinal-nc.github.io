@@ -13,8 +13,7 @@ keywords:
   - PHP之异步处理
   - PHP异步编程
   - PHP消息队列
-  - PHP
-  Redis队列
+  - PHP Redis队列
   - PHP异步请求
   - PHP fsockopen
   - PHP curl异步

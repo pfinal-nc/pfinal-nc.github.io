@@ -15,8 +15,7 @@ keywords:
   - essential go libraries
   - best go libraries 2025
   - go development tools
-  - golang
-  libraries
+  - golang libraries
   - gin framework
   - gorm tutorial
   - go viper config

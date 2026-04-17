@@ -12,8 +12,7 @@ keywords:
   - Laravel架构设计
   - Composer包管理
   - Laravel核心组件
-  - PHP
-  MVC框架
+  - PHP MVC框架
   - 框架构建教程
   - Laravel路由系统
   - 依赖注入容器

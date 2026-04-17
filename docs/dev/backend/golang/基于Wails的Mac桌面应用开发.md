@@ -25,8 +25,7 @@ keywords:
   - Golang GUI
   - Go桌面开发
   - Golang桌面开发
-  - Wails for
-  Mac
+  - Wails for Mac
   - WebView2
   - WebKit
   - React

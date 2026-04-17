@@ -16,8 +16,7 @@ keywords:
   - Laravel-Carbon-类使用
   - Laravel Carbon时间处理
   - Laravel Carbon日期操作
-  - Laravel
-  Carbon时间格式化
+  - Laravel Carbon时间格式化
   - Laravel Carbon时区处理
   - Laravel Carbon日期比较
   - Laravel Carbon时间计算
