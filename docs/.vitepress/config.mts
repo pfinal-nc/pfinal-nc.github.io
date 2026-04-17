@@ -147,7 +147,8 @@ export default defineConfig({
     ['meta', {name:'360-site-verification', content:'bafd565a2170482bd9ff0c063ba5a41a'}],
     ['meta', {name:'yandex-verification', content:'20badebe204f6b0b'}],
     // Monetag 广告脚本
-    ['script', {}, `(function(s){s.dataset.zone='9114325',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))`],
+    ['script', {}, `(function(s){s.dataset.zone='9114535',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))`],
+    
     // GA4 与 AdSense 已移至 client.js 延迟加载，减轻首屏阻塞、提升 LCP
     // Schema.org 结构化数据 - WebSite
     ['script', { type: 'application/ld+json' }, JSON.stringify({
