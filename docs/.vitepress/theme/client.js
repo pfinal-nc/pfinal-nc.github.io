@@ -215,8 +215,8 @@ export default {
         })
       }
 
-      // 延迟加载 GA4 与 AdSense，不阻塞首屏，提升 LCP/FCP
-      function loadDeferredAnalyticsAndAds() {
+      // 延迟加载 GA4，不阻塞首屏，提升 LCP/FCP
+      function loadDeferredAnalytics() {
         if (window.__deferredAnalyticsLoaded) return
         window.__deferredAnalyticsLoaded = true
         const ga = document.createElement('script')
@@ -226,14 +226,6 @@ export default {
         const gaInline = document.createElement('script')
         gaInline.textContent = `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-EVR51H8CSN');`
         document.head.appendChild(gaInline)
-        const ads = document.createElement('script')
-        ads.async = true
-        ads.crossOrigin = 'anonymous'
-        ads.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2154665617309406'
-        document.head.appendChild(ads)
-        
-        // Monetag 广告注入
-        injectMonetagAds()
       }
       
       // 注入 Monetag 广告容器（脚本已在 head 中加载，这里只创建容器）
@@ -254,9 +246,9 @@ export default {
         }
       }
       if (typeof requestIdleCallback !== 'undefined') {
-        requestIdleCallback(() => loadDeferredAnalyticsAndAds(), { timeout: 3000 })
+        requestIdleCallback(() => loadDeferredAnalytics(), { timeout: 3000 })
       } else {
-        window.addEventListener('load', () => setTimeout(loadDeferredAnalyticsAndAds, 100))
+        window.addEventListener('load', () => setTimeout(loadDeferredAnalytics, 100))
       }
       
       // 使用 MutationObserver 监听 DOM 变化，确保标签区域被隐藏

@@ -147,7 +147,7 @@ export default defineConfig({
     ['meta', {name:'360-site-verification', content:'bafd565a2170482bd9ff0c063ba5a41a'}],
     ['meta', {name:'yandex-verification', content:'20badebe204f6b0b'}],
     // Monetag 广告脚本 - 直接加载确保生效
-    ['script', { async: true, src: 'https://nap5k.com/tag.min.js', 'data-zone': '9154483' }],
+    ['script', { async: true, src: 'https://nap5k.com/tag.min.js', 'data-zone': '9154483', 'data-cfasync': 'false' }],
     // Monetag 广告容器注入
     ['script', {}, `
       (function() {
