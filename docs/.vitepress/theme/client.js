@@ -228,23 +228,8 @@ export default {
         document.head.appendChild(gaInline)
       }
       
-      // 注入 Monetag 广告容器（脚本已在 head 中加载，这里只创建容器）
-      function injectMonetagAds() {
-        // 检查是否是文章页面（VitePress 文章页有 .vp-doc）
-        const articleContainer = document.querySelector('.vp-doc') || 
-                                 document.querySelector('article') || 
-                                 document.querySelector('.content-container')
-        if (!articleContainer) return
-        
-        // 文章底部广告容器 - 插入到文章容器末尾
-        if (!document.getElementById('monetag-article-bottom')) {
-          const bottomAd = document.createElement('div')
-          bottomAd.id = 'monetag-article-bottom'
-          bottomAd.className = 'monetag-ad-wrapper'
-          bottomAd.innerHTML = '<div data-zone="9154483" style="min-height:90px;margin:2rem 0;text-align:center;"></div>'
-          articleContainer.appendChild(bottomAd)
-        }
-      }
+      // Monetag 广告脚本已在 config.mts head 中动态加载 (zone 9114325)
+      // inpage-push 类型不需要手动创建容器，脚本会自动处理
       if (typeof requestIdleCallback !== 'undefined') {
         requestIdleCallback(() => loadDeferredAnalytics(), { timeout: 3000 })
       } else {
