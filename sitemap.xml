@@ -709,6 +709,12 @@
 <priority>0.8</priority>
 </url>
 <url>
+<loc>https://friday-go.icu/security/engineering/golang-security-best-practices</loc>
+<lastmod>2026-04-20T01:56:16.000Z</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
 <loc>https://friday-go.icu/security/engineering/</loc>
 <lastmod>2026-04-15T03:57:38.000Z</lastmod>
 <changefreq>weekly</changefreq>
