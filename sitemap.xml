@@ -14,7 +14,7 @@
 </url>
 <url>
 <loc>https://friday-go.icu/Tools/Composer%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%AF%B4%E6%98%8E</loc>
-<lastmod>2026-04-15T03:16:52.000Z</lastmod>
+<lastmod>2026-04-21T03:51:57.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -38,19 +38,19 @@
 </url>
 <url>
 <loc>https://friday-go.icu/Tools/IDE%E5%81%B7%E6%87%92%E5%B0%8F%E5%B7%A5%E5%85%B7</loc>
-<lastmod>2026-04-15T03:16:52.000Z</lastmod>
+<lastmod>2026-04-21T03:51:57.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
 <url>
 <loc>https://friday-go.icu/Tools/Nginx%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%AF%A6%E8%A7%A3</loc>
-<lastmod>2026-04-15T03:16:52.000Z</lastmod>
+<lastmod>2026-04-21T03:51:57.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
 <url>
 <loc>https://friday-go.icu/Tools/PHPStorm%E5%BF%AB%E6%8D%B7%E9%94%AE</loc>
-<lastmod>2026-04-15T03:16:52.000Z</lastmod>
+<lastmod>2026-04-21T03:51:57.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -248,7 +248,7 @@
 </url>
 <url>
 <loc>https://friday-go.icu/data/automation/%E7%88%AC%E8%99%ABJS%E9%80%86%E5%90%91Webpack%E6%8A%80%E5%B7%A7%E8%AE%B0%E5%BD%95</loc>
-<lastmod>2026-04-15T03:16:52.000Z</lastmod>
+<lastmod>2026-04-21T03:51:57.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -836,7 +836,7 @@
 </url>
 <url>
 <loc>https://friday-go.icu/thinking/method/Go%E8%AF%AD%E8%A8%80%E5%B9%B6%E5%8F%91%E6%A8%A1%E5%BC%8F%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97</loc>
-<lastmod>2026-04-15T03:16:52.000Z</lastmod>
+<lastmod>2026-04-21T03:51:57.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -854,7 +854,7 @@
 </url>
 <url>
 <loc>https://friday-go.icu/thinking/method/nginx-security-gateway-guide</loc>
-<lastmod>2026-04-15T03:16:52.000Z</lastmod>
+<lastmod>2026-04-21T03:51:57.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -920,7 +920,7 @@
 </url>
 <url>
 <loc>https://friday-go.icu/wails-gonavi-practice</loc>
-<lastmod>2026-03-11T07:41:44.000Z</lastmod>
+<lastmod>2026-04-21T03:51:57.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
