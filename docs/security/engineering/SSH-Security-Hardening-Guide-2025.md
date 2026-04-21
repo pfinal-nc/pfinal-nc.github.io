@@ -71,11 +71,11 @@ course:
 # SSH Security Hardening Guide 2025 - 暴力破解防护完整方案
 
 **安全系列文章：**
-- [蜜罐部署实战](./honeypot-deployment.md) - 主动防御体系构建
-- [Golang Web 应用完整安全指南](./golang Web应用完整安全指南.md) - 应用安全开发
-- [Web 安全三大漏洞攻防实战](./sql-injection-xss-csrf.md) - SQL注入、XSS、CSRF详解
-- [Nginx 安全网关配置完全指南](../../thinking/method/nginx-security-gateway-guide.md) - Web 服务器安全
-- [Kubernetes 基础入门](../../dev/system/kubernetes-basics.md) - 容器安全基础
+- [蜜罐部署实战](/security/engineering/honeypot-deployment) - 主动防御体系构建
+- [Golang Web 应用完整安全指南](/security/engineering/golang Web应用完整安全指南) - 应用安全开发
+- [Web 安全三大漏洞攻防实战](/security/engineering/sql-injection-xss-csrf) - SQL注入、XSS、CSRF详解
+- [Nginx 安全网关配置完全指南](/thinking/method/nginx-security-gateway-guide) - Web 服务器安全
+- [Kubernetes 基础入门](/dev/system/kubernetes-basics) - 容器安全基础
 
 ## 前言：一次来自僵尸网络的攻击
 

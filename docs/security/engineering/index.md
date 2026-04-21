@@ -60,7 +60,7 @@ DDoS防护  日志审计  安全编码  访问控制
 
 SSH 是服务器管理的主要入口，也是攻击者的首要目标。
 
-- **[SSH Security Hardening Guide 2025 - 暴力破解防护完整方案](./SSH-Security-Hardening-Guide-2025.md)** ⭐ **推荐阅读**  
+- **[SSH Security Hardening Guide 2025 - 暴力破解防护完整方案](/security/engineering/SSH-Security-Hardening-Guide-2025)** ⭐ **推荐阅读**  
   从 iptables 速率限制到 fail2ban 蜜罐的 **5 层防护体系**，包含一键部署脚本和安全审计工具。
 
 **核心要点**：

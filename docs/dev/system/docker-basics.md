@@ -20,10 +20,10 @@ tags:
 > Docker 让"在我本地好好的"成为历史。通过容器技术，你可以确保应用在开发、测试、生产环境中完全一致地运行。
 
 **DevOps 学习路径：**
-- [Kubernetes 基础入门](./kubernetes-basics.md) - 容器编排进阶
-- [Docker 部署 Go 项目实践指南](../../tools/Docker部署Go项目实践指南.md) - Go 项目容器化
-- [GitOps 实战：从应用部署到全生命周期管理](../backend/golang/GitOps实战：从应用部署到全生命周期管理.md) - 现代化部署流程
-- [Nginx 配置文件详解](../../tools/Nginx配置文件详解.md) - 反向代理配置
+- [Kubernetes 基础入门](/dev/system/kubernetes-basics) - 容器编排进阶
+- [Docker 部署 Go 项目实践指南](/tools/Docker部署Go项目实践指南) - Go 项目容器化
+- [GitOps 实战：从应用部署到全生命周期管理](/dev/backend/golang/GitOps实战：从应用部署到全生命周期管理) - 现代化部署流程
+- [Nginx 配置文件详解](/tools/Nginx配置文件详解) - 反向代理配置
 
 ## 一、核心概念
 

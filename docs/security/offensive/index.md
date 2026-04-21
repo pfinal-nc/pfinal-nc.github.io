@@ -24,14 +24,14 @@ recommend: 安全
 以下为本站已发布的安全相关文章，可直接阅读：
 
 ### 安全工程与加固
-- [安全工程实践导航](../engineering/index.md) - 安全开发、运维、架构实践
-- [SSH Security Hardening Guide 2025 - 暴力破解防护完整方案](../engineering/SSH-Security-Hardening-Guide-2025.md) - iptables、fail2ban、5 层防护体系
-- [Nginx安全网关：3步堵住90%的Web漏洞](../../thinking/method/nginx-security-gateway-guide.md) - Web 服务器安全加固
-- [Golang Web应用完整安全指南](../engineering/golang Web应用完整安全指南.md) - Go 语言应用安全
-- [10个Golang安全陷阱及真正有效的修复方案](../engineering/10个Golang安全陷阱及真正有效的修复方案.md)
-- [Go语言主流安全库使用指南](../engineering/Go语言主流安全库使用指南.md)
-- [golang 中的网络安全 TLS/SSL 实现](../engineering/golang 中的网络安全TLS SSL的实现.md)
-- [代码安全扫描自动化](../../tools/从手动到自动-Go语言助力快速识别代码中的安全隐患.md) - 自动化安全检测
+- [安全工程实践导航](/security/engineering/) - 安全开发、运维、架构实践
+- [SSH Security Hardening Guide 2025 - 暴力破解防护完整方案](/security/engineering/SSH-Security-Hardening-Guide-2025) - iptables、fail2ban、5 层防护体系
+- [Nginx安全网关：3步堵住90%的Web漏洞](/thinking/method/nginx-security-gateway-guide) - Web 服务器安全加固
+- [Golang Web应用完整安全指南](/security/engineering/golang Web应用完整安全指南) - Go 语言应用安全
+- [10个Golang安全陷阱及真正有效的修复方案](/security/engineering/10个Golang安全陷阱及真正有效的修复方案)
+- [Go语言主流安全库使用指南](/security/engineering/Go语言主流安全库使用指南)
+- [golang 中的网络安全 TLS/SSL 实现](/security/engineering/golang 中的网络安全TLS SSL的实现)
+- [代码安全扫描自动化](/tools/从手动到自动-Go语言助力快速识别代码中的安全隐患) - 自动化安全检测
 
 ---
 

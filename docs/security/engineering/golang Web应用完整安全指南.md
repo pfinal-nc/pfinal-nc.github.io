@@ -33,11 +33,11 @@ recommend: 安全
 在当今的网络环境中，应用程序的安全性变得越来越重要。作为一个现代化的编程语言，golang提供了多种内置特性和第三方库来帮助开发者构建安全的Web应用。本文将深入探讨golang中的常见安全威胁及其防范措施。
 
 **相关安全文章：**
-- [10个Golang安全陷阱及真正有效的修复方案](./10个Golang安全陷阱及真正有效的修复方案.md) - 常见安全问题汇总
-- [Go语言主流安全库使用指南](./Go语言主流安全库使用指南.md) - 安全库推荐
-- [Web安全三大漏洞攻防实战](./sql-injection-xss-csrf.md) - SQL注入、XSS、CSRF详解
-- [Gin框架实战指南](../../dev/backend/golang/gin-framework-guide.md) - 安全Web开发框架
-- [SSH安全加固指南2025](./SSH-Security-Hardening-Guide-2025.md) - 服务器安全加固
+- [10个Golang安全陷阱及真正有效的修复方案](/security/engineering/10个Golang安全陷阱及真正有效的修复方案) - 常见安全问题汇总
+- [Go语言主流安全库使用指南](/security/engineering/Go语言主流安全库使用指南) - 安全库推荐
+- [Web安全三大漏洞攻防实战](/security/engineering/sql-injection-xss-csrf) - SQL注入、XSS、CSRF详解
+- [Gin框架实战指南](/dev/backend/golang/gin-framework-guide) - 安全Web开发框架
+- [SSH安全加固指南2025](/security/engineering/SSH-Security-Hardening-Guide-2025) - 服务器安全加固
 
 ## 目录
 

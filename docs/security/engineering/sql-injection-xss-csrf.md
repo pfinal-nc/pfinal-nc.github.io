@@ -20,11 +20,11 @@ tags:
 > 这三类漏洞常年霸占 OWASP Top 10 榜单，几乎所有 Web 应用都曾面临它们的威胁。理解攻击原理，才能写出真正安全的代码。
 
 **Web 安全系列文章：**
-- [Golang Web 应用完整安全指南](./golang Web应用完整安全指南.md) - Go 语言安全开发指南
-- [10个Golang安全陷阱及真正有效的修复方案](./10个Golang安全陷阱及真正有效的修复方案.md) - 常见安全问题汇总
-- [Go语言主流安全库使用指南](./Go语言主流安全库使用指南.md) - 安全库推荐
-- [Gin框架实战指南](../../dev/backend/golang/gin-framework-guide.md) - 安全Web框架
-- [蜜罐部署实战](./honeypot-deployment.md) - 主动防御体系
+- [Golang Web 应用完整安全指南](/security/engineering/golang Web应用完整安全指南) - Go 语言安全开发指南
+- [10个Golang安全陷阱及真正有效的修复方案](/security/engineering/10个Golang安全陷阱及真正有效的修复方案) - 常见安全问题汇总
+- [Go语言主流安全库使用指南](/security/engineering/Go语言主流安全库使用指南) - 安全库推荐
+- [Gin框架实战指南](/dev/backend/golang/gin-framework-guide) - 安全Web框架
+- [蜜罐部署实战](/security/engineering/honeypot-deployment) - 主动防御体系
 
 ## 一、SQL 注入（SQL Injection）
 

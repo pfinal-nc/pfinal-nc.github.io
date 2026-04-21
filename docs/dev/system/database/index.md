@@ -24,23 +24,23 @@ keywords:
 
 ## 1. MySQL 配置与优化
 
-- **[MySQL 生产环境安全配置与加固完整指南 2025](./MySQL-Production-Security-Hardening-Guide-2025.md)**  
+- **[MySQL 生产环境安全配置与加固完整指南 2025](/dev/system/database/MySQL-Production-Security-Hardening-Guide-2025)**  
   企业级 MySQL 安全加固完整指南，涵盖认证安全、SSL/TLS 加密、审计日志、SQL注入防护、备份安全等8大核心主题，包含30+实战配置示例和安全检查脚本。
 
-- **[MySQL 配置文件分析](/zh/数据库/MySQL-Configuration-Analysis.md)**  
+- **[MySQL 配置文件分析](/dev/system/database/MySQL-Configuration-Analysis)**  
   理解和配置 MySQL 配置文件的完整指南，包括性能调优和优化设置。
 
 ---
 
 ## 2. PostgreSQL 高级功能与安全
 
-- **[PostgreSQL Security Best Practices 2025 - 生产环境安全加固完整指南](./PostgreSQL-Security-Best-Practices-2025.md)**  
+- **[PostgreSQL Security Best Practices 2025 - 生产环境安全加固完整指南](/dev/system/database/PostgreSQL-Security-Best-Practices-2025)**  
   从认证配置到数据加密的生产环境安全加固完整指南，包含 pg_hba.conf、Row Level Security、SSL/TLS、审计日志等实战案例。
 
-- **[PostgreSQL 性能优化实战 - 从配置到SQL调优](./PostgreSQL-Performance-Optimization-Guide.md)**  
+- **[PostgreSQL 性能优化实战 - 从配置到SQL调优](/dev/system/database/PostgreSQL-Performance-Optimization-Guide)**  
   深入探讨 PostgreSQL 性能优化的各个方面，包括配置优化、SQL调优、索引策略、查询计划分析等实战内容。
 
-- **[PostgreSQL 10 个鲜为人知的强大功能](./PostgreSQL-10个鲜为人知的强大功能.md)**  
+- **[PostgreSQL 10 个鲜为人知的强大功能](/dev/system/database/PostgreSQL-10个鲜为人知的强大功能)**  
   深入探索 PostgreSQL 中 10 个鲜为人知但非常强大的功能，从全文搜索到逻辑复制，提升数据库开发效率。
 
 ---

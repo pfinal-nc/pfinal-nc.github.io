@@ -22,11 +22,11 @@ tags:
 在微服务架构中，服务间通信是核心问题。gRPC 作为 Google 开源的高性能 RPC 框架，结合 Protocol Buffers 序列化协议，已成为 Go 微服务开发的首选方案。
 
 **微服务系列文章：**
-- [Go 微服务治理：熔断、限流与降级](./circuit-breaker-rate-limiting.md) - 服务治理实战
-- [Go 基础语法速通](./go-basic-syntax.md) - Go 语言基础
-- [Go 并发：WaitGroup、Mutex、RWMutex 深度解析](./go-waitgroup-mutex.md) - 并发编程
-- [Kubernetes 基础入门](../../system/kubernetes-basics.md) - 容器编排
-- [Docker 基础入门](../../system/docker-basics.md) - 容器化技术
+- [Go 微服务治理：熔断、限流与降级](/dev/backend/golang/circuit-breaker-rate-limiting) - 服务治理实战
+- [Go 基础语法速通](/dev/backend/golang/go-basic-syntax) - Go 语言基础
+- [Go 并发：WaitGroup、Mutex、RWMutex 深度解析](/dev/backend/golang/go-waitgroup-mutex) - 并发编程
+- [Kubernetes 基础入门](/dev/system/kubernetes-basics) - 容器编排
+- [Docker 基础入门](/dev/system/docker-basics) - 容器化技术
 
 ## 为什么选择 gRPC？
 

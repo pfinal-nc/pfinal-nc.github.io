@@ -20,11 +20,11 @@ tags:
 > PHP 8.4 于 2024 年 11 月正式发布，带来了期待已久的「属性钩子」特性，以及多项语法糖和性能改进。如果你还在用 PHP 8.2 或更早版本，本文帮你快速掌握升级的理由。
 
 **PHP 系列文章：**
-- [Composer 配置文件说明](../../../tools/Composer配置文件说明.md) - 依赖管理
-- [Nginx 配置文件详解](../../../tools/Nginx配置文件详解.md) - Web 服务器配置
-- [Web 安全三大漏洞攻防实战](../../../security/engineering/sql-injection-xss-csrf.md) - PHP 安全防护
-- [Docker 基础入门](../../system/docker-basics.md) - PHP 项目容器化
-- [Redis 基本知识总结](./Redis基本知识总结.md) - 缓存技术
+- [Composer 配置文件说明](/tools/Composer配置文件说明) - 依赖管理
+- [Nginx 配置文件详解](/tools/Nginx配置文件详解) - Web 服务器配置
+- [Web 安全三大漏洞攻防实战](/security/engineering/sql-injection-xss-csrf) - PHP 安全防护
+- [Docker 基础入门](/dev/system/docker-basics) - PHP 项目容器化
+- [Redis 基本知识总结](/dev/backend/php/Redis基本知识总结) - 缓存技术
 
 ## 一、属性钩子（Property Hooks）⭐ 重磅特性
 

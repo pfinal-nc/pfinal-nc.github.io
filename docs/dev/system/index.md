@@ -24,39 +24,39 @@ tags:
 ## 🗄️ 数据库与存储
 
 ### PostgreSQL 深度优化
-- [PostgreSQL 10个鲜为人知的强大功能](database/PostgreSQL-10个鲜为人知的强大功能.md)
-- [PostgreSQL 性能优化指南](database/PostgreSQL-Performance-Optimization-Guide.md)
-- [PostgreSQL 安全最佳实践 2025](database/PostgreSQL-Security-Best-Practices-2025.md)
+- [PostgreSQL 10个鲜为人知的强大功能](/dev/system/database/PostgreSQL-10个鲜为人知的强大功能) - 高级功能探索
+- [PostgreSQL 性能优化指南](/dev/system/database/PostgreSQL-Performance-Optimization-Guide) - 性能调优实战
+- [PostgreSQL 安全最佳实践 2025](/dev/system/database/PostgreSQL-Security-Best-Practices-2025) - 数据库安全加固
 
 ### MySQL 配置与管理
-- [MySQL 配置分析](database/MySQL-Configuration-Analysis.md)
+- [MySQL 配置分析](/dev/system/database/MySQL-Configuration-Analysis) - 配置优化指南
 
 ## 🌐 网络与协议
 
 ### 网络基础
-- [TCP/IP HTTP 学习](../backend/php/TCP-IP-HTTP学习.md) - 网络协议基础与分层架构
+- [TCP/IP HTTP 学习](/dev/backend/php/TCP-IP-HTTP学习) - 网络协议基础与分层架构
 
 ### Web服务器配置
-- [Nginx 配置文件详解](../../tools/Nginx配置文件详解.md) - 详细配置解析与最佳实践
+- [Nginx 配置文件详解](/tools/Nginx配置文件详解) - 详细配置解析与最佳实践
 
 ## 🐳 容器化与部署
 
 ### Docker 实践
-- [Docker 部署 Go 项目实践指南](../../tools/Docker部署Go项目实践指南.md) - 容器化部署完整流程
+- [Docker 部署 Go 项目实践指南](/tools/Docker部署Go项目实践指南) - 容器化部署完整流程
 
 ## 🔧 系统运维工具
 
 ### 监控与日志
-- [使用 Devslog 做结构化日志处理](../../tools/使用Devslog结构化日志处理.md) - 从字符串日志到结构化日志
+- [使用 Devslog 做结构化日志处理](/tools/使用Devslog结构化日志处理) - 从字符串日志到结构化日志
 
 ### 命令行工具
-- [Broot - 高效的命令行文件管理器](../../tools/Broot-高效的命令行文件管理器.md)
-- [开源开发者必备 - toilet 终端 ASCII 艺术字工具](../../tools/开源开发者必备-toilet终端ASCII艺术字工具.md)
+- [Broot - 高效的命令行文件管理器](/tools/Broot-高效的命令行文件管理器)
+- [开源开发者必备 - toilet 终端 ASCII 艺术字工具](/tools/开源开发者必备-toilet终端ASCII艺术字工具)
 
 ## 🛡️ 安全加固
 
 ### SSH 安全
-- [SSH 安全加固指南 2025](../../security/engineering/SSH-Security-Hardening-Guide-2025.md) - 服务器安全最佳实践
+- [SSH 安全加固指南 2025](/security/engineering/SSH-Security-Hardening-Guide-2025) - 服务器安全最佳实践
 
 ### 网络安全
 - [golang 中的网络安全 TLS/SSL 的实现](../../security/engineering/golang 中的网络安全TLS SSL的实现.md)

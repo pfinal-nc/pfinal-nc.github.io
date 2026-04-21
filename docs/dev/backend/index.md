@@ -35,97 +35,97 @@ author: PFinal南丞
 
 ### 🚀 Go 语言开发
 - **核心语言特性**
-  - [深入理解 Go Channel 批量读取与实际应用](./golang/深入理解Go Channel 批量读取与实际应用.md)
-  - [Go 零拷贝读取器实战与原理解析](golang/Go 零拷贝读取器实战与原理解析.md)
-  - [golang 实现协程池](golang/golang 实现协程池.md)
-  - [Stop-The-World-其实没停下-Go-GC-的微暂停真相](golang/Stop-The-World-其实没停下-Go-GC-的微暂停真相.md)
-  - [Deep-Dive-Go-Memory-Allocation](golang/Deep-Dive-Go-Memory-Allocation.md)
+  - [深入理解 Go Channel 批量读取与实际应用](/dev/backend/golang/深入理解Go Channel 批量读取与实际应用)
+  - [Go 零拷贝读取器实战与原理解析](/dev/backend/golang/Go 零拷贝读取器实战与原理解析)
+  - [golang 实现协程池](/dev/backend/golang/golang 实现协程池)
+  - [Stop-The-World-其实没停下-Go-GC-的微暂停真相](/dev/backend/golang/Stop-The-World-其实没停下-Go-GC-的微暂停真相)
+  - [Deep-Dive-Go-Memory-Allocation](/dev/backend/golang/Deep-Dive-Go-Memory-Allocation)
 
 - **架构与设计**
-  - [接口参数设计：多场景复用的优雅之道](golang/接口参数设计-多场景复用的优雅之道.md)
+  - [接口参数设计：多场景复用的优雅之道](/dev/backend/golang/接口参数设计-多场景复用的优雅之道)
 
 - **工具与库**
-  - [加快开发速度的十大必备Go库](golang/加快开发速度的十大必备Go库.md)
-  - [2025年将改变我们软件构建方式的6个Go库](golang/2025年将改变我们软件构建方式的6个Go库.md)
-  - [golang系统库之gopsutil](golang/golang系统库之gopsutil.md)
-  - [golang提升效率的小工具](golang/golang提升效率的小工具.md)
+  - [加快开发速度的十大必备Go库](/dev/backend/golang/加快开发速度的十大必备Go库)
+  - [2025年将改变我们软件构建方式的6个Go库](/dev/backend/golang/2025年将改变我们软件构建方式的6个Go库)
+  - [golang系统库之gopsutil](/dev/backend/golang/golang系统库之gopsutil)
+  - [golang提升效率的小工具](/dev/backend/golang/golang提升效率的小工具)
 
 - **实用扩展包**
-  - [AutoCorrent专有名词大小写扩展包](golang/AutoCorrent专有名词大小写扩展包.md)
-  - [Golang中国地址生成扩展包](golang/Golang中国地址生成扩展包.md)
-  - [golang 脱敏扩展包：简化敏感信息处理的利器](golang/golang 脱敏扩展包：简化敏感信息处理的利器.md)
-  - [Gomail邮件发送包](golang/Gomail邮件发送包.md)
+  - [AutoCorrent专有名词大小写扩展包](/dev/backend/golang/AutoCorrent专有名词大小写扩展包)
+  - [Golang中国地址生成扩展包](/dev/backend/golang/Golang中国地址生成扩展包)
+  - [golang 脱敏扩展包：简化敏感信息处理的利器](/dev/backend/golang/golang 脱敏扩展包：简化敏感信息处理的利器)
+  - [Gomail邮件发送包](/dev/backend/golang/Gomail邮件发送包)
 
 - **项目实战**
-  - [用 Go 构建一个类 kubectl 的命令行工具](golang/用 Go 构建一个类 kubectl 的命令行工具.md)
-  - [Golang实现RAG系统-从OpenAI到向量数据库](golang/Golang实现RAG系统-从OpenAI到向量数据库.md)
-  - [Go 开发IP过滤小脚本](golang/Go 开发IP过滤小脚本.md)
-  - [Go 开发终端小工具](golang/Go 开发终端小工具.md)
+  - [用 Go 构建一个类 kubectl 的命令行工具](/dev/backend/golang/用 Go 构建一个类 kubectl 的命令行工具)
+  - [Golang实现RAG系统-从OpenAI到向量数据库](/dev/backend/golang/Golang实现RAG系统-从OpenAI到向量数据库)
+  - [Go 开发IP过滤小脚本](/dev/backend/golang/Go 开发IP过滤小脚本)
+  - [Go 开发终端小工具](/dev/backend/golang/Go 开发终端小工具)
 
 ### 🐘 PHP 开发
 - **Laravel 框架**
-  - [Laravel 手工构建](php/Laravel-手工构建.md)
-  - [Laravel-Admin-Special-Routes](php/Laravel-Admin-Special-Routes.md)
-  - [Laravel-Carbon-Class-Usage](php/Laravel-Carbon-Class-Usage.md)
+  - [Laravel 手工构建](/dev/backend/php/Laravel 手工构建)
+  - [Laravel-Admin-Special-Routes](/dev/backend/php/Laravel-Admin-Special-Routes)
+  - [Laravel-Carbon-Class-Usage](/dev/backend/php/Laravel-Carbon-Class-Usage)
 
 - **语言特性与优化**
-  - [PHP 大杀器之生成器](php/PHP-大杀器之生成器.md)
-  - [PHP之异步处理](php/PHP之异步处理.md)
-  - [PHP的协程池](php/PHP的协程池.md)
-  - [PHP-8.5-NoDiscard-属性详解](php/PHP-8.5-NoDiscard-属性详解.md)
+  - [PHP 大杀器之生成器](/dev/backend/php/PHP 大杀器之生成器)
+  - [PHP之异步处理](/dev/backend/php/PHP之异步处理)
+  - [PHP的协程池](/dev/backend/php/PHP的协程池)
+  - [PHP-8.5-NoDiscard-属性详解](/dev/backend/php/PHP-8.5-NoDiscard-属性详解)
 
 - **配置与部署**
-  - [PHP-FPM配置文件详解](php/PHP-FPM配置文件详解.md)
-  - [PHP配置文件详解](php/PHP配置文件详解.md)
-  - [Redis-Configuration-Guide](php/Redis-Configuration-Guide.md)
+  - [PHP-FPM配置文件详解](/dev/backend/php/PHP-FPM配置文件详解)
+  - [PHP配置文件详解](/dev/backend/php/PHP配置文件详解)
+  - [Redis-Configuration-Guide](/dev/backend/php/Redis-Configuration-Guide)
 
 - **实用工具**
-  - [构建可维护的正则表达式系统-pfinal-regex-center设计与实现](php/构建可维护的正则表达式系统-pfinal-regex-center设计与实现.md)
-  - [PHP MCP 扩展](php/PHP-MCP-扩展.md)
-  - [Coze 扩展包 PHP 版本](php/Coze-扩展包-PHP-版本.md)
+  - [构建可维护的正则表达式系统-pfinal-regex-center设计与实现](/dev/backend/php/构建可维护的正则表达式系统-pfinal-regex-center设计与实现)
+  - [PHP MCP 扩展](/dev/backend/php/PHP-MCP-扩展)
+  - [Coze 扩展包 PHP 版本](/dev/backend/php/Coze-扩展包-PHP-版本)
 
 ### 🐍 Python 开发
 - **异步编程**
-  - [Python-Asyncio-Advanced-Patterns](python/Python-Asyncio-Advanced-Patterns.md)
+  - [Python-Asyncio-Advanced-Patterns](/dev/backend/python/Python-Asyncio-Advanced-Patterns)
 
 - **数据可视化**
-  - [Python-Data-Visualization-Guide](python/Python-Data-Visualization-Guide.md)
+  - [Python-Data-Visualization-Guide](/dev/backend/python/Python-Data-Visualization-Guide)
 
 - **开发工具**
-  - [Python版本管理神器之pyenv](python/Python版本管理神器之pyenv.md)
-  - [Python-Faker库常用函数](python/Python-Faker库常用函数.md)
-  - [Python常用网站搜集](python/Python常用网站搜集.md)
+  - [Python版本管理神器之pyenv](/dev/backend/python/Python版本管理神器之pyenv)
+  - [Python-Faker库常用函数](/dev/backend/python/Python-Faker库常用函数)
+  - [Python常用网站搜集](/dev/backend/python/Python常用网站搜集)
 
 ## 💻 桌面与全栈开发
 
 ### Wails 系列教程
-- [Wails 教程系列](wails-tutorial-series/index.md)
-  - [00 - Webkit 与生命周期](wails-tutorial-series/00-webkit-and-lifecycle.md)
-  - [01 - 安装与环境配置](wails-tutorial-series/01-installation.md)
-  - [02 - 第一个应用](wails-tutorial-series/02-first-app.md)
-  - [03 - 核心概念](wails-tutorial-series/03-core-concepts.md)
-  - [04 - 前端开发](wails-tutorial-series/04-frontend-development.md)
-  - [05 - 后端开发](wails-tutorial-series/05-backend-development.md)
+- [Wails 教程系列](/dev/backend/golang/wails-tutorial-series/)
+  - [00 - Webkit 与生命周期](/dev/backend/golang/wails-tutorial-series/00-webkit-and-lifecycle)
+  - [01 - 安装与环境配置](/dev/backend/golang/wails-tutorial-series/01-installation)
+  - [02 - 第一个应用](/dev/backend/golang/wails-tutorial-series/02-first-app)
+  - [03 - 核心概念](/dev/backend/golang/wails-tutorial-series/03-core-concepts)
+  - [04 - 前端开发](/dev/backend/golang/wails-tutorial-series/04-frontend-development)
+  - [05 - 后端开发](/dev/backend/golang/wails-tutorial-series/05-backend-development)
 
 ### Wails 实战项目
-- [基于Wails和Vue.js打造跨平台桌面应用](golang/基于Wails和Vue.js打造跨平台桌面应用.md)
-- [基于Wails的Mac桌面应用开发](golang/基于Wails的Mac桌面应用开发.md)
-- [基于Wails的抖音直播工具](golang/基于Wails的抖音直播工具.md)
-- [基于wails和Tailwindcss的应用开发](golang/基于wails和Tailwindcss的应用开发.md)
-- [提升Wails应用性能：探索Go-Cache的高效内存缓存方案](golang/提升Wails应用性能：探索Go-Cache的高效内存缓存方案.md)
+- [基于Wails和Vue.js打造跨平台桌面应用](/dev/backend/golang/基于Wails和Vue.js打造跨平台桌面应用)
+- [基于Wails的Mac桌面应用开发](/dev/backend/golang/基于Wails的Mac桌面应用开发)
+- [基于Wails的抖音直播工具](/dev/backend/golang/基于Wails的抖音直播工具)
+- [基于wails和Tailwindcss的应用开发](/dev/backend/golang/基于wails和Tailwindcss的应用开发)
+- [提升Wails应用性能：探索Go-Cache的高效内存缓存方案](/dev/backend/golang/提升Wails应用性能：探索Go-Cache的高效内存缓存方案)
 
 ## 🔧 开发工具与技巧
 
-- [Create Go App CLI 一款快速创建golang项目的工具](golang/Create Go App CLI 一款快速创建golang项目的工具.md)
-- [Go-WASM构建WebAssembly应用的全新尝试](golang/Go-WASM构建WebAssembly应用的全新尝试.md)
-- [如何实现 RESTful API 版本控制](golang/如何实现 RESTful API 版本控制.md)
-- [使用Go实现服务端事件推送SSE](golang/使用Go实现服务端事件推送SSE.md)
+- [Create Go App CLI 一款快速创建golang项目的工具](/dev/backend/golang/Create Go App CLI 一款快速创建golang项目的工具)
+- [Go-WASM构建WebAssembly应用的全新尝试](/dev/backend/golang/Go-WASM构建WebAssembly应用的全新尝试)
+- [如何实现 RESTful API 版本控制](/dev/backend/golang/如何实现 RESTful API 版本控制)
+- [使用Go实现服务端事件推送SSE](/dev/backend/golang/使用Go实现服务端事件推送SSE)
 
 ## 📈 性能优化
 
-- [Speed-Boost-Static-API-with-Go](golang/Speed-Boost-Static-API-with-Go.md)
-- [Go 语言的高性能 User-Agent 解析库](golang/Go 语言的高性能 User-Agent 解析库.md)
-- [go:embed 在 Go 开发中的应用与最佳实践](golang/go:embed 在 Go 开发中的应用与最佳实践.md)
+- [Speed-Boost-Static-API-with-Go](/dev/backend/golang/Speed-Boost-Static-API-with-Go)
+- [Go 语言的高性能 User-Agent 解析库](/dev/backend/golang/Go 语言的高性能 User-Agent 解析库)
+- [go:embed 在 Go 开发中的应用与最佳实践](/dev/backend/golang/go:embed 在 Go 开发中的应用与最佳实践)
 
 ## 🎯 测试与质量
 

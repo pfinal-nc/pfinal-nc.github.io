@@ -18,11 +18,11 @@ keywords:
 # Nginx配置文件详解
 
 **相关文章推荐：**
-- [Nginx 安全网关配置完全指南](../thinking/method/nginx-security-gateway-guide.md) - 安全防护配置
-- [Docker 基础入门](../dev/system/docker-basics.md) - 容器化部署
-- [Kubernetes 基础入门](../dev/system/kubernetes-basics.md) - 容器编排
-- [SSH 安全加固指南 2025](../security/engineering/SSH-Security-Hardening-Guide-2025.md) - 服务器安全
-- [Web 安全三大漏洞攻防实战](../security/engineering/sql-injection-xss-csrf.md) - 应用安全
+- [Nginx 安全网关配置完全指南](/thinking/method/nginx-security-gateway-guide) - 安全防护配置
+- [Docker 基础入门](/dev/system/docker-basics) - 容器化部署
+- [Kubernetes 基础入门](/dev/system/kubernetes-basics) - 容器编排
+- [SSH 安全加固指南 2025](/security/engineering/SSH-Security-Hardening-Guide-2025) - 服务器安全
+- [Web 安全三大漏洞攻防实战](/security/engineering/sql-injection-xss-csrf) - 应用安全
 
 ```
 #定义Nginx运行的用户和用户组
