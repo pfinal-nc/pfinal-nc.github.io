@@ -20,6 +20,12 @@ tags:
 
 > GORM 是 Go 生态中最流行的 ORM 库，星标 38k+。GORM v2 支持 MySQL、PostgreSQL、SQLite、SQL Server，提供了链式 API、关联预加载、软删除等强大特性。
 
+**相关文章推荐：**
+- [Go 基础语法速通](./go-basic-syntax.md) - 快速掌握 Go 语言基础
+- [Gin 框架实战指南](./gin-framework-guide.md) - 构建高性能 Web API
+- [Go 数组、切片、Map、结构体、接口深度解析](./go-slice-map.md) - 数据结构详解
+- [PostgreSQL 性能优化完全指南](../system/database/PostgreSQL-Performance-Optimization-Guide.md) - 数据库优化实战
+
 ## 一、安装与连接
 
 ```bash

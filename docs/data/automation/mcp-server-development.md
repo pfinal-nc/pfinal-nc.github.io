@@ -22,6 +22,13 @@ tags:
 
 Model Context Protocol (MCP) 是 Anthropic 推出的开放协议，旨在标准化 AI 助手与外部工具、数据源的集成方式。通过 MCP，开发者可以为 Claude 等 AI 助手扩展无限能力。
 
+**AI 开发系列文章：**
+- [向量数据库实战](./vector-database-guide.md) - RAG 应用基础
+- [Golang 实现 RAG 系统](../../dev/backend/golang/Golang实现RAG系统-从OpenAI到向量数据库.md) - RAG 系统完整实战
+- [Prompt Engineering 实战技巧](../../security/engineering/prompt-engineering.md) - 提示工程技巧
+- [Go 基础语法速通](../../dev/backend/golang/go-basic-syntax.md) - Go 语言基础
+- [gRPC 与 Protobuf 实战](../../dev/backend/golang/grpc-protobuf-guide.md) - 服务间通信
+
 ## 什么是 MCP？
 
 ### MCP 架构

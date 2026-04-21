@@ -19,6 +19,12 @@ tags:
 
 > Go（Golang）是 Google 开发的静态强类型、编译型语言。它语法简洁、并发能力强、编译速度快，是现代后端开发的热门选择。
 
+**学习路径推荐：**
+- [Go 数组、切片、Map、结构体、接口深度解析](./go-slice-map.md) - 数据结构进阶
+- [Go 并发：WaitGroup、Mutex、RWMutex 深度解析](./go-waitgroup-mutex.md) - 并发编程入门
+- [Gin 框架实战指南](./gin-framework-guide.md) - Web 开发实战
+- [GORM 实战教程](./gorm-tutorial.md) - 数据库操作
+
 ## 一、Hello World
 
 ```go

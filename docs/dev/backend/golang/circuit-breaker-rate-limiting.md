@@ -23,6 +23,13 @@ tags:
 
 在分布式系统中，服务间的依赖关系错综复杂。当某个服务出现故障时，如果不加以控制，故障可能会像滚雪球一样蔓延，导致整个系统瘫痪。熔断、限流和降级是保障微服务稳定性的三大法宝。
 
+**微服务架构系列：**
+- [gRPC 与 Protobuf 实战](./grpc-protobuf-guide.md) - 微服务通信
+- [Go 基础语法速通](./go-basic-syntax.md) - Go 语言基础
+- [Kubernetes 基础入门](../../system/kubernetes-basics.md) - 容器编排
+- [Docker 基础入门](../../system/docker-basics.md) - 容器化技术
+- [Gin 框架实战指南](./gin-framework-guide.md) - Web 框架
+
 ## 为什么需要服务治理？
 
 ### 雪崩效应
