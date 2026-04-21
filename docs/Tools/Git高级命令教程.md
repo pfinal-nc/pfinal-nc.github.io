@@ -1,5 +1,7 @@
 ---
 title: "Git Advanced Commands 2025 - 12个提升效率的高级命令完整指南"
+date: 2025-01-15 10:00:00
+author: PFinal南丞
 description: "Git 高级命令完整教程：worktree 多工作目录、reflog 找回丢失提交、bisect 二分查找 Bug、stash 进阶、cherry-pick 选择性合并等 12 个实用命令详解，附实战示例。"
 keywords:
   - git advanced commands

@@ -1,6 +1,6 @@
 # VitePress Frontmatter 检查报告
 
-生成时间: 2026-04-21 11:46:36
+生成时间: 2026-04-21 12:02:53
 
 ---
 
@@ -9,8 +9,8 @@
 - 总文件数: 258
 - 有效frontmatter: 258
 - 缺少frontmatter: 0
-- 包含keywords: 257
-- 包含description: 257
+- 包含keywords: 258
+- 包含description: 258
 
 ---
 
@@ -18,15 +18,12 @@
 
 ### 1. 缺少title的文章
 
-- /Users/pfinal/Documents/pfinal-vue-blog/docs/wails-gonavi-practice.md
 
 ### 2. 缺少description的文章
 
-- /Users/pfinal/Documents/pfinal-vue-blog/docs/wails-gonavi-practice.md
 
 ### 3. 缺少keywords的文章
 
-- /Users/pfinal/Documents/pfinal-vue-blog/docs/wails-gonavi-practice.md
 
 ### 4. Frontmatter格式示例
 
@@ -36,8 +33,7 @@
 title: "Composer配置文件说明 - 完整使用指南"
 date: 2022-07-04 17:34:31
 tags:
-    - PHP
-
+  - PHP
 description: 介绍Composer配置文件的基本概念和使用方法，包括配置文件的位置、依赖管理、包管理、版本控制等。
 author: PFinal南丞
 keywords:
@@ -52,6 +48,7 @@ keywords:
 ---
 
 # Composer配置文件说明
+
 ```
 
 **文件**: 服务器进程日志分析：从头皮发麻到AI解救.md
@@ -132,7 +129,7 @@ keywords:
 title: "如何开发和使用 IDE偷懒小工具 - 完整实战指南"
 date: 2024-05-31 13:59:31
 tags:
-    - 工具
+  - 工具
 description: 收集一些开发过程中常用的小工具
 author: PFinal南丞
 keywords:
