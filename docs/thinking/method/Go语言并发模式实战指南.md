@@ -30,7 +30,6 @@ keywords:
 summary: "Go Concurrency Patterns Guide: 深入解析 7 种核心并发模式（Worker Pool、Fan-Out/Fan-In、Pipeline 等），包含实际应用场景和性能对比。"
 description: "Go Concurrency Patterns 2025: Master 7 essential Go concurrency patterns with practical examples. Includes worker pools, fan-out/fan-in, pipelines, and performance optimization."
 readingTime: 18
-cover: "/images/go-concurrency-patterns.png"
 status: "published"
 toc: true
 faq:

@@ -3,7 +3,7 @@ title: Nginx配置文件详解
 date: 2023-04-27 22:10:20
 author: PFinal南丞
 tags:
-    - Nginx
+  - Nginx
 description: Nginx配置文件详解
 keywords:
   - Nginx

@@ -2,7 +2,7 @@
 title: "如何开发和使用 IDE偷懒小工具 - 完整实战指南"
 date: 2024-05-31 13:59:31
 tags:
-    - 工具
+  - 工具
 description: 收集一些开发过程中常用的小工具
 author: PFinal南丞
 keywords:

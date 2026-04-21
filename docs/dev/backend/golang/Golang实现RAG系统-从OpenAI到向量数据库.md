@@ -35,7 +35,6 @@ description: >-
   Golang RAG System Tutorial 2025: Build production-ready RAG applications with
   Go, OpenAI API, and vector databases. Complete guide for AI engineering.
 readingTime: 15
-cover: /images/go-rag-system.png
 status: published
 toc: true
 recommend: 后端工程

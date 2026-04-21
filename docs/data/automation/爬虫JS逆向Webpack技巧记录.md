@@ -24,7 +24,6 @@ keywords:
 description: "Python爬虫JS逆向实战指南，深入解析Webpack加密机制和破解方法，提供完整的数据采集解决方案和实战案例，帮助开发者掌握JS逆向核心技术。"
 summary: "详细讲解Python爬虫中的JS逆向技术，重点分析Webpack加密机制和破解方法，提供完整的数据采集解决方案和实战案例。"
 readingTime: 12
-cover: "/images/python-js-reverse.png"
 status: "published"
 toc: true
 ---
