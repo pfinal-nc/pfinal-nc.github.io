@@ -6,6 +6,9 @@ on:
   pull_request:
     branches: [master]
   workflow_dispatch:
+  schedule:
+    # 每天早上 9:00 (UTC+8) 自动构建
+    - cron: '0 1 * * *'
 
 env:
   TZ: Asia/Shanghai
