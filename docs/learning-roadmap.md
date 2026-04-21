@@ -88,9 +88,9 @@ tags:
 ### 🔴 第三阶段：微服务与性能优化（6-8周）
 
 #### 3.1 微服务架构
-- [Go 微服务架构设计](/dev/backend/golang/gin-framework-guide.md) 🔴
-- [gRPC 与 Protobuf 实战](/dev/backend/golang/gin-framework-guide.md) 🔴
-- [Go 服务治理：熔断、限流、降级](/dev/backend/golang/gin-framework-guide.md) 🔴
+- [Go 微服务架构设计](/dev/backend/golang/grpc-protobuf-guide.md) 🔴
+- [gRPC 与 Protobuf 实战](/dev/backend/golang/grpc-protobuf-guide.md) 🔴
+- [Go 服务治理：熔断、限流、降级](/dev/backend/golang/circuit-breaker-rate-limiting.md) 🔴
 
 #### 3.2 性能优化
 - [Go 性能调优实战](/dev/backend/golang/Deep-Dive-Go-Memory-Allocation.md) 🔴
@@ -98,8 +98,8 @@ tags:
 - [Go 并发模式进阶](/dev/backend/golang/golang 实现协程池.md) 🔴
 
 #### 3.3 可观测性
-- [Go 集成 Prometheus 监控](/dev/backend/golang/gin-framework-guide.md) 🔴
-- [Go 分布式追踪实战](/dev/backend/golang/gin-framework-guide.md) 🔴
+- [Go 集成 Prometheus 监控](/dev/backend/golang/circuit-breaker-rate-limiting.md) 🔴
+- [Go 分布式追踪实战](/dev/backend/golang/grpc-protobuf-guide.md) 🔴
 - [Go 日志与错误处理最佳实践](/dev/backend/golang/2025年更清洁的Go代码：紧凑的错误管理.md) 🔴
 
 **📌 阶段目标**：掌握微服务架构，能够进行性能优化和系统监控
@@ -221,7 +221,7 @@ tags:
 - [Docker 最佳实践](/tools/Docker部署Go项目实践指南.md) 🟡
 
 #### 1.2 容器编排
-- [Kubernetes 基础入门](/dev/system/docker-basics.md) 🟡
+- [Kubernetes 基础入门](/dev/system/kubernetes-basics.md) 🟡
 
 **📌 阶段目标**：掌握 Docker 和 Kubernetes 基础
 
@@ -272,7 +272,7 @@ tags:
 
 #### 2.1 SSH 安全
 - [SSH 安全加固指南](/security/engineering/SSH-Security-Hardening-Guide-2025.md) 🟡
-- [蜜罐部署实战](/security/engineering/SSH安全加固完全指南.md) 🟡
+- [蜜罐部署实战](/security/engineering/honeypot-deployment.md) 🟡
 
 #### 2.2 系统加固
 - [Linux 系统安全加固](/security/engineering/golang-security-best-practices.md) 🟡
@@ -307,7 +307,7 @@ tags:
 
 #### 2.1 RAG 实战
 - [Golang 实现 RAG 系统：从 OpenAI 到向量数据库](/dev/backend/golang/Golang实现RAG系统-从OpenAI到向量数据库.md) 🔴
-- [向量数据库实战](/dev/backend/golang/RAG落地实战：从0到1构建企业级知识库问答系统.md) 🔴
+- [向量数据库实战](/data/automation/vector-database-guide.md) 🔴
 
 #### 2.2 Function Calling
 - [Function Calling 工程化实战](/dev/backend/golang/Go语言开发AI智能体：从Function Calling到Agent框架.md) 🔴
@@ -319,7 +319,7 @@ tags:
 ### 🔴 第三阶段：AI 应用（4-6周）
 
 #### 3.1 MCP 服务器
-- [MCP 服务器开发实战](/data/automation/Go 构建远程存储MCP服务器实战.md) 🔴
+- [MCP 服务器开发实战](/data/automation/mcp-server-development.md) 🔴
 - [AI 编程助手工程化实践](/data/automation/MCP服务器精选：提升AI编程效率的5大神器.md) 🔴
 
 #### 3.2 边缘部署
