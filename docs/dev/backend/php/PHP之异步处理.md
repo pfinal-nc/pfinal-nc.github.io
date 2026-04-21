@@ -33,11 +33,11 @@ recommend: 后端工程
 > 详细介绍PHP异步处理的相关知识，包括异步处理的概念、应用场景、实现方式等，帮助开发者更好地利用PHP的异步处理能力。
 
 **相关文章推荐：**
-- [PHP 8.4 新特性详解](./php-8-4-new-features.md) - 最新 PHP 语言特性
-- [PHP 大杀器之生成器](./PHP 大杀器之生成器.md) - 生成器与迭代器
-- [PHP 的协程池](./PHP的协程池.md) - 协程并发处理
-- [Redis 基本知识总结](./Redis基本知识总结.md) - 缓存与队列
-- [Go协程与PHP-Fibers并发编程对比](../php/Go协程与PHP-Fibers并发编程对比.md) - 跨语言并发对比
+- [PHP 8.4 新特性详解](/dev/backend/php/php-8-4-new-features) - 最新 PHP 语言特性
+- [PHP 大杀器之生成器](/dev/backend/php/PHP 大杀器之生成器) - 生成器与迭代器
+- [PHP 的协程池](/dev/backend/php/PHP的协程池) - 协程并发处理
+- [Redis 基本知识总结](/dev/backend/php/Redis基本知识总结) - 缓存与队列
+- [Go协程与PHP-Fibers并发编程对比](/dev/backend/php/Go协程与PHP-Fibers并发编程对比) - 跨语言并发对比
 
 个人理解在项目中使用消息队列一般是有如下几个原因：
 

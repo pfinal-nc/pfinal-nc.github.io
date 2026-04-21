@@ -21,10 +21,10 @@ tags:
 > Gin 是目前 GitHub Star 最多的 Go Web 框架（7万+），以其极高的性能和简洁的 API 著称。基准测试中，Gin 的路由性能比标准库 `net/http` 快约 40 倍。
 
 **相关文章推荐：**
-- [Go 基础语法速通](./go-basic-syntax.md) - 快速掌握 Go 语言基础
-- [Go 并发：WaitGroup、Mutex、RWMutex 深度解析](./go-waitgroup-mutex.md) - 并发编程核心原语
-- [GORM 实战教程](./gorm-tutorial.md) - Go 语言 ORM 完整指南
-- [Go 微服务治理：熔断、限流与降级](./circuit-breaker-rate-limiting.md) - 生产级服务治理
+- [Go 基础语法速通](/dev/backend/golang/go-basic-syntax) - 快速掌握 Go 语言基础
+- [Go 并发：WaitGroup、Mutex、RWMutex 深度解析](/dev/backend/golang/go-waitgroup-mutex) - 并发编程核心原语
+- [GORM 实战教程](/dev/backend/golang/gorm-tutorial) - Go 语言 ORM 完整指南
+- [Go 微服务治理：熔断、限流与降级](/dev/backend/golang/circuit-breaker-rate-limiting) - 生产级服务治理
 
 ## 一、安装与快速开始
 

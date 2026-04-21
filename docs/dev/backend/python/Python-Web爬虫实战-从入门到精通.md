@@ -21,11 +21,11 @@ category: dev/backend/python
 > Web 爬虫是自动获取互联网数据的重要技术。本文将带你从零开始，系统地掌握 Python Web 爬虫的核心技术，从简单的页面抓取到复杂的分布式爬虫系统。
 
 **相关文章推荐：**
-- [FastAPI 从零开始构建高性能 API：快速入门指南](./FastAPI-从零开始构建高性能API-快速入门指南.md) - Web API 开发
-- [Python 数据分析入门：Pandas 与 NumPy 基础](./Python-数据分析入门-Pandas与NumPy基础.md) - 数据处理基础
-- [Python 数据可视化实战：Matplotlib、Seaborn 与 Plotly 完全指南](./Python-数据可视化实战-Matplotlib-Seaborn-Plotly完全指南.md) - 数据可视化
-- [Scrapy 爬虫框架实战：分布式爬虫与反爬虫对策](./Scrapy爬虫框架实战 - 分布式爬虫、反爬虫对策.md) - 高级爬虫框架
-- [爬虫 JS 逆向 Webpack 技巧记录](../../data/automation/爬虫JS逆向Webpack技巧记录.md) - 反爬虫对抗技术
+- [FastAPI 从零开始构建高性能 API：快速入门指南](/dev/backend/python/FastAPI-从零开始构建高性能API-快速入门指南) - Web API 开发
+- [Python 数据分析入门：Pandas 与 NumPy 基础](/dev/backend/python/Python-数据分析入门-Pandas与NumPy基础) - 数据处理基础
+- [Python 数据可视化实战：Matplotlib、Seaborn 与 Plotly 完全指南](/dev/backend/python/Python-数据可视化实战-Matplotlib-Seaborn-Plotly完全指南) - 数据可视化
+- [Scrapy 爬虫框架实战：分布式爬虫与反爬虫对策](/dev/backend/python/Scrapy爬虫框架实战 - 分布式爬虫、反爬虫对策) - 高级爬虫框架
+- [爬虫 JS 逆向 Webpack 技巧记录](/data/automation/爬虫JS逆向Webpack技巧记录) - 反爬虫对抗技术
 
 ## 🕷️ 爬虫基础概念
 

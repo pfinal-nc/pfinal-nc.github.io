@@ -24,11 +24,11 @@ recommend: 后端工程
 > 在 Go 语言中,虽然协程的创建成本相对较低,但在高并发场景下,无限制地创建协程仍可能导致系统资源耗尽。协程池通过复用一组预创建的协程来处理任务,可以有效控制协程数量,提升系统性能和稳定性。
 
 **相关文章推荐：**
-- [Go 基础语法速通](./go-basic-syntax.md) - 快速掌握 Go 语言基础
-- [Go 并发模式：WaitGroup、Mutex 与 sync 包实战](./go-waitgroup-mutex.md) - 并发编程核心原语
-- [深入理解 Go Channel 批量读取与实际应用](./深入理解Go Channel 批量读取与实际应用.md) - 并发通信机制
-- [Go 微服务治理：熔断、限流与降级](./circuit-breaker-rate-limiting.md) - 生产级服务治理
-- [Gin 框架实战指南](./gin-framework-guide.md) - 高性能 Web API 开发
+- [Go 基础语法速通](/dev/backend/golang/go-basic-syntax) - 快速掌握 Go 语言基础
+- [Go 并发模式：WaitGroup、Mutex 与 sync 包实战](/dev/backend/golang/go-waitgroup-mutex) - 并发编程核心原语
+- [深入理解 Go Channel 批量读取与实际应用](/dev/backend/golang/深入理解Go Channel 批量读取与实际应用) - 并发通信机制
+- [Go 微服务治理：熔断、限流与降级](/dev/backend/golang/circuit-breaker-rate-limiting) - 生产级服务治理
+- [Gin 框架实战指南](/dev/backend/golang/gin-framework-guide) - 高性能 Web API 开发
 
 ## 1. 前言
 

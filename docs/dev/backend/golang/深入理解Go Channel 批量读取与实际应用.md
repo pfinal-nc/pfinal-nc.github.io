@@ -17,11 +17,11 @@ recommend: 后端工程
 > 在 Go 语言中，channel 是一种用于在 goroutine 之间进行通信的机制。它允许一个 goroutine 发送数据到另一个 goroutine，从而实现并发编程。
 
 **相关文章推荐：**
-- [Go 基础语法速通](./go-basic-syntax.md) - 快速掌握 Go 语言基础
-- [Go 并发模式：WaitGroup、Mutex 与 sync 包实战](./go-waitgroup-mutex.md) - 并发编程核心原语
-- [Golang 协程池实现 - 实战指南](./golang 实现协程池.md) - 协程池模式详解
-- [Go 微服务治理：熔断、限流与降级](./circuit-breaker-rate-limiting.md) - 生产级服务治理
-- [Gin 框架实战指南](./gin-framework-guide.md) - 高性能 Web API 开发
+- [Go 基础语法速通](/dev/backend/golang/go-basic-syntax) - 快速掌握 Go 语言基础
+- [Go 并发模式：WaitGroup、Mutex 与 sync 包实战](/dev/backend/golang/go-waitgroup-mutex) - 并发编程核心原语
+- [Golang 协程池实现 - 实战指南](/dev/backend/golang/golang 实现协程池) - 协程池模式详解
+- [Go 微服务治理：熔断、限流与降级](/dev/backend/golang/circuit-breaker-rate-limiting) - 生产级服务治理
+- [Gin 框架实战指南](/dev/backend/golang/gin-framework-guide) - 高性能 Web API 开发
 
 本文将介绍 Go 中的 channel，包括其定义、常见类型、如何读取数据以及如何批量读取数据。
 

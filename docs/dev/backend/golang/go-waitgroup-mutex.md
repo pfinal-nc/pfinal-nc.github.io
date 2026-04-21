@@ -20,11 +20,11 @@ tags:
 > Go 的并发是它最强大的特性之一。但并发编程也意味着数据竞争、死锁等风险。本文带你掌握 sync 包的核心工具，安全地驾驭并发。
 
 **相关文章推荐：**
-- [Go 基础语法速通](./go-basic-syntax.md) - 快速掌握 Go 语言基础
-- [深入理解 Go Channel 批量读取与实际应用](./深入理解Go Channel 批量读取与实际应用.md) - 并发通信机制
-- [Golang 协程池实现 - 实战指南](./golang 实现协程池.md) - 协程池模式详解
-- [Go 微服务治理：熔断、限流与降级](./circuit-breaker-rate-limiting.md) - 生产级服务治理
-- [Gin 框架实战指南](./gin-framework-guide.md) - 高性能 Web API 开发
+- [Go 基础语法速通](/dev/backend/golang/go-basic-syntax) - 快速掌握 Go 语言基础
+- [深入理解 Go Channel 批量读取与实际应用](/dev/backend/golang/深入理解Go Channel 批量读取与实际应用) - 并发通信机制
+- [Golang 协程池实现 - 实战指南](/dev/backend/golang/golang 实现协程池) - 协程池模式详解
+- [Go 微服务治理：熔断、限流与降级](/dev/backend/golang/circuit-breaker-rate-limiting) - 生产级服务治理
+- [Gin 框架实战指南](/dev/backend/golang/gin-framework-guide) - 高性能 Web API 开发
 
 ## 一、为什么需要同步原语？
 
