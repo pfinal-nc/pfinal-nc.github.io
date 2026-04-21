@@ -20,7 +20,7 @@
 </url>
 <url>
 <loc>https://friday-go.icu/Tools/Docker%E9%83%A8%E7%BD%B2Go%E9%A1%B9%E7%9B%AE%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%8D%97</loc>
-<lastmod>2026-04-15T03:16:52.000Z</lastmod>
+<lastmod>2026-04-21T05:41:33.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -44,7 +44,7 @@
 </url>
 <url>
 <loc>https://friday-go.icu/Tools/Nginx%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%AF%A6%E8%A7%A3</loc>
-<lastmod>2026-04-21T03:51:57.000Z</lastmod>
+<lastmod>2026-04-21T05:41:33.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -230,7 +230,7 @@
 </url>
 <url>
 <loc>https://friday-go.icu/data/automation/mcp-server-development</loc>
-<lastmod>2026-04-21T03:24:11.000Z</lastmod>
+<lastmod>2026-04-21T05:41:33.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -242,7 +242,7 @@
 </url>
 <url>
 <loc>https://friday-go.icu/data/automation/vector-database-guide</loc>
-<lastmod>2026-04-21T03:24:11.000Z</lastmod>
+<lastmod>2026-04-21T05:41:33.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -416,7 +416,7 @@
 </url>
 <url>
 <loc>https://friday-go.icu/dev/backend/php/php-8-4-new-features</loc>
-<lastmod>2026-04-21T02:53:37.000Z</lastmod>
+<lastmod>2026-04-21T05:41:33.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -668,7 +668,7 @@
 </url>
 <url>
 <loc>https://friday-go.icu/dev/system/docker-basics</loc>
-<lastmod>2026-04-21T02:53:37.000Z</lastmod>
+<lastmod>2026-04-21T05:41:33.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -680,7 +680,7 @@
 </url>
 <url>
 <loc>https://friday-go.icu/dev/system/kubernetes-basics</loc>
-<lastmod>2026-04-21T03:24:11.000Z</lastmod>
+<lastmod>2026-04-21T05:41:33.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -722,7 +722,7 @@
 </url>
 <url>
 <loc>https://friday-go.icu/security/engineering/SSH-Security-Hardening-Guide-2025</loc>
-<lastmod>2026-04-15T03:16:52.000Z</lastmod>
+<lastmod>2026-04-21T05:41:33.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -734,7 +734,7 @@
 </url>
 <url>
 <loc>https://friday-go.icu/security/engineering/golang%20Web%E5%BA%94%E7%94%A8%E5%AE%8C%E6%95%B4%E5%AE%89%E5%85%A8%E6%8C%87%E5%8D%97</loc>
-<lastmod>2026-04-15T03:16:52.000Z</lastmod>
+<lastmod>2026-04-21T05:41:33.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -752,7 +752,7 @@
 </url>
 <url>
 <loc>https://friday-go.icu/security/engineering/honeypot-deployment</loc>
-<lastmod>2026-04-21T03:24:11.000Z</lastmod>
+<lastmod>2026-04-21T05:41:33.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -764,7 +764,7 @@
 </url>
 <url>
 <loc>https://friday-go.icu/security/engineering/sql-injection-xss-csrf</loc>
-<lastmod>2026-04-21T02:53:37.000Z</lastmod>
+<lastmod>2026-04-21T05:41:33.000Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
