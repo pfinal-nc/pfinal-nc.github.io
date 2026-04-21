@@ -27,8 +27,16 @@ tags:
   - HTTP
 ---
 
-#  Laravel 手工构建
+# Laravel 手工构建
 
+> 手工构建 Laravel 框架，详细介绍从项目初始化到添加各个组件的完整过程。
+
+**相关文章推荐：**
+- [PHP 8.4 新特性详解](./php-8-4-new-features.md) - 最新 PHP 语言特性
+- [Composer 配置文件说明](../../../tools/Composer配置文件说明.md) - PHP 依赖管理
+- [Nginx 配置文件详解](../../../tools/Nginx配置文件详解.md) - Web 服务器配置
+- [Web 安全三大漏洞攻防实战](../../../security/engineering/sql-injection-xss-csrf.md) - PHP 安全防护
+- [Redis 基本知识总结](./Redis基本知识总结.md) - 缓存技术
 
 ## 手工构建laravel框架
 构建过程分为项目初始化,路由组件添加,控制器模块添加,模型组件添加和视图组件添加。

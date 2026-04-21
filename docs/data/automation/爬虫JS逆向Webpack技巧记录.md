@@ -27,7 +27,16 @@ readingTime: 12
 status: "published"
 toc: true
 ---
-# 爬虫JS逆向Webpack技巧记录
+# 爬虫 JS 逆向 Webpack 技巧记录
+
+> Python 爬虫 JS 逆向实战指南，深入解析 Webpack 加密机制和破解方法。
+
+**相关文章推荐：**
+- [Python Web 爬虫实战：从入门到精通](../../dev/backend/python/Python-Web爬虫实战-从入门到精通.md) - 爬虫基础技术
+- [Scrapy 爬虫框架实战：分布式爬虫与反爬虫对策](../../dev/backend/python/Scrapy爬虫框架实战 - 分布式爬虫、反爬虫对策.md) - 高级爬虫框架
+- [Python 数据分析入门：Pandas 与 NumPy 基础](../../dev/backend/python/Python-数据分析入门-Pandas与NumPy基础.md) - 数据处理基础
+- [爬虫常见的加密解密算法](./爬虫常见的加密解密算法.md) - 加密算法解析
+- [Python 协程](./Python协程.md) - 异步编程基础
 
 ## 概念:
   

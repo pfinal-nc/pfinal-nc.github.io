@@ -26,6 +26,13 @@ difficulty: 入门
 
 > FastAPI 是现代、快速（高性能）的 Web 框架，用于基于标准 Python 类型提示使用 Python 3.8+ 构建 API。本文将从零开始，带你快速上手 FastAPI，构建第一个高性能 RESTful API。
 
+**相关文章推荐：**
+- [FastAPI 中间件与依赖注入：构建可扩展的 API 架构](./FastAPI中间件与依赖注入-构建可扩展的API架构.md) - 进阶架构设计
+- [FastAPI 异步编程与性能优化：打造高并发 API](./FastAPI异步编程与性能优化-打造高并发API.md) - 性能优化实战
+- [FastAPI 实战案例：从零构建企业级 API](./FastAPI实战案例-从零构建企业级API.md) - 完整项目实战
+- [Python Web 爬虫实战：从入门到精通](./Python-Web爬虫实战-从入门到精通.md) - 数据采集技术
+- [Python 数据分析入门：Pandas 与 NumPy 基础](./Python-数据分析入门-Pandas与NumPy基础.md) - 数据处理基础
+
 ---
 
 ## 📖 为什么选择 FastAPI？
