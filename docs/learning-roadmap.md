@@ -44,7 +44,8 @@ tags:
 ### 🟢 第一阶段：Go 语言基础（2-3周）
 
 #### 1.1 环境搭建与基础语法
-- [Go 环境搭建与配置](/dev/backend/golang/index.md) 🟢
+- [Go 环境搭建与配置](/dev/backend/golang/go-1-24-new-features.md) 🟢
+- [Go 1.24 新特性深度解析](/dev/backend/golang/go-1-24-new-features.md) 🟢
 - [Go 基础语法速通](/dev/backend/golang/index.md) 🟢
 - [Go 变量、常量与数据类型](/dev/backend/golang/index.md) 🟢
 - [Go 控制流程与函数](/dev/backend/golang/index.md) 🟢
