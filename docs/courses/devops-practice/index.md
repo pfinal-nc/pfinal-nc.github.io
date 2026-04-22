@@ -78,8 +78,8 @@ course:
 | 1.6 | 容器安全 | 非 root 运行、镜像签名、漏洞扫描 | 📝 |
 
 **推荐文章：**
-- [Docker 部署 Go 项目实践指南](/tools/Docker 部署 Go 项目实践指南.md)
-- [单文件代码部署工具](/tools/单文件代码部署工具.md)
+- [Docker 部署 Go 项目实践指南](/tools/Docker-Go-Deployment)
+- [单文件代码部署工具](/tools/单文件代码部署工具)
 
 **实战练习：**
 - 将现有 Go 应用容器化
@@ -139,7 +139,7 @@ course:
 | 3.7 | GitOps 实践 | ArgoCD、Flux、声明式部署 | ✅ |
 
 **推荐文章：**
-- [GitOps 实战：从应用部署到全生命周期管理](/thinking/method/GitOps 实战 - 从应用部署到全生命周期管理.md)
+- [GitOps 实战：从应用部署到全生命周期管理](/thinking/method/GitOps-Practice-Guide)
 
 **GitHub Actions 示例：**
 
@@ -206,9 +206,9 @@ jobs:
 | 4.7 | Go 应用监控 | 指标暴露、健康检查、pprof | ✅ |
 
 **推荐文章：**
-- [从 trace 到洞察：Go 项目的可观测性闭环实践](/thinking/method/从 trace 到洞察：Go 项目的可观测性闭环实践.md)
-- [别再盲接 OTel：Go 可观察性接入的 8 个大坑](/thinking/method/别再盲接 OTel：Go 可观察性接入的 8 个大坑.md)
-- [使用 Devslog 结构化日志处理](/tools/使用 Devslog 结构化日志处理.md)
+- [从 trace 到洞察：Go 项目的可观测性闭环实践](/thinking/method/Go-Observability-Practice)
+- [别再盲接 OTel：Go 可观察性接入的 8 个大坑](/thinking/method/Go-OTel-Pitfalls)
+- [使用 Devslog 结构化日志处理](/tools/Devslog-Structured-Logging)
 
 **监控体系架构图：**
 

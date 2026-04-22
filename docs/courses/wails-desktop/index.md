@@ -65,9 +65,9 @@ course:
 
 | 课时 | 主题 | 内容 | 文章 | 状态 |
 |------|------|------|------|------|
-| 1.1 | Wails 简介与架构 | Wails 是什么、与 Electron/Tauri 对比、工作原理 | [00-webkit-and-lifecycle](/dev/backend/wails-tutorial-series/00-webkit-and-lifecycle.md) | ✅ |
-| 1.2 | 环境搭建与安装 | Go 环境、Node.js、Wails CLI 安装 | [01-installation](/dev/backend/wails-tutorial-series/01-installation.md) | ✅ |
-| 1.3 | 第一个 Wails 应用 | 项目创建、目录结构、运行调试 | [02-first-app](/dev/backend/wails-tutorial-series/02-first-app.md) | ✅ |
+| 1.1 | Wails 简介与架构 | Wails 是什么、与 Electron/Tauri 对比、工作原理 | [00-webkit-and-lifecycle](/dev/backend/wails-tutorial-series/00-webkit-and-lifecycle) | ✅ |
+| 1.2 | 环境搭建与安装 | Go 环境、Node.js、Wails CLI 安装 | [01-installation](/dev/backend/wails-tutorial-series/01-installation) | ✅ |
+| 1.3 | 第一个 Wails 应用 | 项目创建、目录结构、运行调试 | [02-first-app](/dev/backend/wails-tutorial-series/02-first-app) | ✅ |
 
 </div>
 
@@ -79,9 +79,9 @@ course:
 
 | 课时 | 主题 | 内容 | 文章 | 状态 |
 |------|------|------|------|------|
-| 2.1 | Wails 核心概念 | 应用结构、生命周期、事件系统 | [03-core-concepts](/dev/backend/wails-tutorial-series/03-core-concepts.md) | ✅ |
-| 2.2 | 前端开发 | Vue/React集成、组件开发、状态管理 | [04-frontend-development](/dev/backend/wails-tutorial-series/04-frontend-development.md) | ✅ |
-| 2.3 | 后端开发 | Go 结构体方法暴露、类型转换、错误处理 | [05-backend-development](/dev/backend/wails-tutorial-series/05-backend-development.md) | ✅ |
+| 2.1 | Wails 核心概念 | 应用结构、生命周期、事件系统 | [03-core-concepts](/dev/backend/wails-tutorial-series/03-core-concepts) | ✅ |
+| 2.2 | 前端开发 | Vue/React集成、组件开发、状态管理 | [04-frontend-development](/dev/backend/wails-tutorial-series/04-frontend-development) | ✅ |
+| 2.3 | 后端开发 | Go 结构体方法暴露、类型转换、错误处理 | [05-backend-development](/dev/backend/wails-tutorial-series/05-backend-development) | ✅ |
 
 </div>
 
@@ -100,8 +100,8 @@ course:
 - 系统托盘集成
 
 **相关文章：**
-- [程序员必备神器：PF-password 密码管理器](/tools/程序员必备神器：PF-password 密码管理器.md)
-- [使用 Go-systray 构建智能系统托盘应用](/dev/backend/golang/使用-Go-systray-构建智能系统托盘应用-Wails-v2-集成实战.md)
+- [程序员必备神器：PF-password 密码管理器](/tools/PF-Password-Manager)
+- [使用 Go-systray 构建智能系统托盘应用](/dev/backend/golang/使用-Go-systray-构建智能系统托盘应用-Wails-v2-集成实战)
 
 ---
 
@@ -114,7 +114,7 @@ course:
 - 通知提醒
 
 **相关文章：**
-- [基于 Wails 的抖音直播工具](/dev/backend/golang/基于 Wails 的抖音直播工具.md)
+- [基于 Wails 的抖音直播工具](/dev/backend/golang/Wails-Douyin-Live-Tool)
 
 ---
 
@@ -127,8 +127,8 @@ course:
 - 日志分析
 
 **相关文章：**
-- [Go 开发终端小工具](/dev/backend/golang/Go 开发终端小工具.md)
-- [GO 语言开发终端小工具后续](/dev/backend/golang/GO 语言开发终端小工具后续.md)
+- [Go 开发终端小工具](/dev/backend/golang/Go 开发终端小工具)
+- [GO 语言开发终端小工具后续](/dev/backend/golang/Go-Terminal-Tool-Advanced)
 
 </div>
 
@@ -146,10 +146,10 @@ course:
 | 4.4 | 调试技巧 | 前端调试、Go 调试、性能分析 | 📝 |
 
 **推荐文章：**
-- [基于 wails 和 Tailwindcss 的应用开发](/dev/backend/golang/基于 wails 和 Tailwindcss 的应用开发.md)
-- [基于 Wails 和 Vue.js 打造跨平台桌面应用](/dev/backend/golang/基于 Wails 和 Vue.js 打造跨平台桌面应用.md)
-- [基于 Wails 的 Mac 桌面应用开发](/dev/backend/golang/基于 Wails 的 Mac 桌面应用开发.md)
-- [提升 Wails 应用性能：探索 Go-Cache 的高效内存缓存方案](/dev/backend/golang/提升 Wails 应用性能：探索 Go-Cache 的高效内存缓存方案.md)
+- [基于 wails 和 Tailwindcss 的应用开发](/dev/backend/golang/Wails-Tailwind-Development)
+- [基于 Wails 和 Vue.js 打造跨平台桌面应用](/dev/backend/golang/Wails-Vue-Desktop-App)
+- [基于 Wails 的 Mac 桌面应用开发](/dev/backend/golang/Wails-Mac-Development)
+- [提升 Wails 应用性能：探索 Go-Cache 的高效内存缓存方案](/dev/backend/golang/Wails-Go-Cache-Performance)
 
 </div>
 
