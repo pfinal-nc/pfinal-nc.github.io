@@ -4,7 +4,7 @@
         <title>PFinalClub Tech Blog</title>
         <link>https://friday-go.icu</link>
         <description>PFinalClub - 专注于 Golang, PHP, Python 的技术博客，分享微服务、云原生、架构设计等实战经验</description>
-        <lastBuildDate>Wed, 22 Apr 2026 02:13:38 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 22 Apr 2026 07:04:26 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-CN</language>
@@ -19,7 +19,7 @@
             <title><![CDATA[Wails 桌面应用开发 - Go 跨平台框架完整指南 | PFinalClub]]></title>
             <link>https://friday-go.icu/dev/backend/golang/wails/README</link>
             <guid>https://friday-go.icu/dev/backend/golang/wails/README</guid>
-            <pubDate>Wed, 22 Apr 2026 02:13:38 GMT</pubDate>
+            <pubDate>Wed, 22 Apr 2026 07:04:26 GMT</pubDate>
             <description><![CDATA[全面的Wails桌面应用开发指南，涵盖从入门到实战的完整内容，包括教程系列、实战项目、性能优化、系统集成等，帮助Go开发者构建高性能跨平台桌面应用。]]></description>
             <content:encoded><![CDATA[全面的Wails桌面应用开发指南，涵盖从入门到实战的完整内容，包括教程系列、实战项目、性能优化、系统集成等，帮助Go开发者构建高性能跨平台桌面应用。]]></content:encoded>
             <category>AI</category>
@@ -33,15 +33,23 @@
             <title><![CDATA[数据库技术专题 2025 - MySQL / PostgreSQL 配置优化与实战]]></title>
             <link>https://friday-go.icu/dev/system/database</link>
             <guid>https://friday-go.icu/dev/system/database</guid>
-            <pubDate>Wed, 22 Apr 2026 02:13:38 GMT</pubDate>
+            <pubDate>Wed, 22 Apr 2026 07:04:26 GMT</pubDate>
             <description><![CDATA[PFinalClub 数据库中文专题导航页：系统整理 MySQL 配置、PostgreSQL 功能、数据库优化等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></description>
             <content:encoded><![CDATA[PFinalClub 数据库中文专题导航页：系统整理 MySQL 配置、PostgreSQL 功能、数据库优化等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Golang 开发技术专题 2025 - 从入门到精通的实战指南 | PFinalClub]]></title>
+            <link>https://friday-go.icu/dev/backend/golang</link>
+            <guid>https://friday-go.icu/dev/backend/golang</guid>
+            <pubDate>Wed, 22 Apr 2026 07:04:26 GMT</pubDate>
+            <description><![CDATA[Golang开发技术专题：从基础语法到高级架构设计，涵盖微服务、并发编程、性能优化等核心主题。2025年最新Golang开发实践指南。]]></description>
+            <content:encoded><![CDATA[Golang开发技术专题：从基础语法到高级架构设计，涵盖微服务、并发编程、性能优化等核心主题。2025年最新Golang开发实践指南。]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Python 开发技术专题 2025 - 从入门到精通的实战指南 | PFinalClub]]></title>
             <link>https://friday-go.icu/dev/backend/python</link>
             <guid>https://friday-go.icu/dev/backend/python</guid>
-            <pubDate>Wed, 22 Apr 2026 02:13:38 GMT</pubDate>
+            <pubDate>Wed, 22 Apr 2026 07:04:26 GMT</pubDate>
             <description><![CDATA[Python开发技术专题：从基础语法到高级应用，涵盖Django、Flask、FastAPI等主流框架，数据科学、AI、自动化等领域。2025年最新Python开发实践指南。]]></description>
             <content:encoded><![CDATA[Python开发技术专题：从基础语法到高级应用，涵盖Django、Flask、FastAPI等主流框架，数据科学、AI、自动化等领域。2025年最新Python开发实践指南。]]></content:encoded>
         </item>
@@ -49,23 +57,15 @@
             <title><![CDATA[PHP 开发技术专题 2025 - 从入门到精通的实战指南 | PFinalClub]]></title>
             <link>https://friday-go.icu/dev/backend/php</link>
             <guid>https://friday-go.icu/dev/backend/php</guid>
-            <pubDate>Wed, 22 Apr 2026 02:13:38 GMT</pubDate>
+            <pubDate>Wed, 22 Apr 2026 07:04:26 GMT</pubDate>
             <description><![CDATA[PHP开发技术专题：从基础语法到框架应用，涵盖Laravel、ThinkPHP、Yii等主流框架，数据库操作、API开发、性能优化等内容。2025年最新PHP开发实践指南。]]></description>
             <content:encoded><![CDATA[PHP开发技术专题：从基础语法到框架应用，涵盖Laravel、ThinkPHP、Yii等主流框架，数据库操作、API开发、性能优化等内容。2025年最新PHP开发实践指南。]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Golang 开发技术专题 2025 - 从入门到精通的实战指南 | PFinalClub]]></title>
-            <link>https://friday-go.icu/dev/backend/golang</link>
-            <guid>https://friday-go.icu/dev/backend/golang</guid>
-            <pubDate>Wed, 22 Apr 2026 02:13:38 GMT</pubDate>
-            <description><![CDATA[Golang开发技术专题：从基础语法到高级架构设计，涵盖微服务、并发编程、性能优化等核心主题。2025年最新Golang开发实践指南。]]></description>
-            <content:encoded><![CDATA[Golang开发技术专题：从基础语法到高级架构设计，涵盖微服务、并发编程、性能优化等核心主题。2025年最新Golang开发实践指南。]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[技术架构与方法论 | 架构设计 学习路径 工程实践 | PFinalClub]]></title>
             <link>https://friday-go.icu/thinking/method</link>
             <guid>https://friday-go.icu/thinking/method</guid>
-            <pubDate>Wed, 22 Apr 2026 02:13:38 GMT</pubDate>
+            <pubDate>Wed, 22 Apr 2026 07:04:26 GMT</pubDate>
             <description><![CDATA[深入的技术架构与方法论指南，涵盖架构设计原则、系统化学习路径、工程实践方法论、技术哲学思考等内容。提供从技术深度到思维高度的完整成长体系。]]></description>
             <content:encoded><![CDATA[深入的技术架构与方法论指南，涵盖架构设计原则、系统化学习路径、工程实践方法论、技术哲学思考等内容。提供从技术深度到思维高度的完整成长体系。]]></content:encoded>
         </item>
@@ -73,7 +73,7 @@
             <title><![CDATA[安全工程实践 | SSH安全 Golang安全 服务器加固 | PFinalClub]]></title>
             <link>https://friday-go.icu/security/engineering</link>
             <guid>https://friday-go.icu/security/engineering</guid>
-            <pubDate>Wed, 22 Apr 2026 02:13:38 GMT</pubDate>
+            <pubDate>Wed, 22 Apr 2026 07:04:26 GMT</pubDate>
             <description><![CDATA[全面的安全工程实践指南，涵盖SSH安全加固、Golang安全开发、服务器防护、WAF配置、DevOps安全集成等工程化落地方案。提供从基础安全到企业级防护的完整解决方案。]]></description>
             <content:encoded><![CDATA[全面的安全工程实践指南，涵盖SSH安全加固、Golang安全开发、服务器防护、WAF配置、DevOps安全集成等工程化落地方案。提供从基础安全到企业级防护的完整解决方案。]]></content:encoded>
         </item>
@@ -81,7 +81,7 @@
             <title><![CDATA[安全攻防研究 | Web安全 内网渗透 红蓝对抗实战 | PFinalClub]]></title>
             <link>https://friday-go.icu/security/offensive</link>
             <guid>https://friday-go.icu/security/offensive</guid>
-            <pubDate>Wed, 22 Apr 2026 02:13:38 GMT</pubDate>
+            <pubDate>Wed, 22 Apr 2026 07:04:26 GMT</pubDate>
             <description><![CDATA[深入的安全攻防研究指南，涵盖Web安全漏洞分析、内网渗透技术、红蓝对抗实战演练、渗透测试方法论等攻防一体实践内容。提供从攻击到防御的完整安全研究体系。]]></description>
             <content:encoded><![CDATA[深入的安全攻防研究指南，涵盖Web安全漏洞分析、内网渗透技术、红蓝对抗实战演练、渗透测试方法论等攻防一体实践内容。提供从攻击到防御的完整安全研究体系。]]></content:encoded>
         </item>
@@ -89,7 +89,7 @@
             <title><![CDATA[系统与基础 2025 - 数据库/容器/可观测性技术导航]]></title>
             <link>https://friday-go.icu/dev/system</link>
             <guid>https://friday-go.icu/dev/system</guid>
-            <pubDate>Wed, 22 Apr 2026 02:13:38 GMT</pubDate>
+            <pubDate>Wed, 22 Apr 2026 07:04:26 GMT</pubDate>
             <description><![CDATA[覆盖数据库、Linux、网络、容器等系统基础与实践文章。]]></description>
             <content:encoded><![CDATA[覆盖数据库、Linux、网络、容器等系统基础与实践文章。]]></content:encoded>
             <category>PostgreSQL</category>
@@ -99,28 +99,27 @@
             <title><![CDATA[数据采集与自动化 | 爬虫技术 AI工程 机器人开发 | PFinalClub]]></title>
             <link>https://friday-go.icu/data/automation</link>
             <guid>https://friday-go.icu/data/automation</guid>
-            <pubDate>Wed, 22 Apr 2026 02:13:38 GMT</pubDate>
+            <pubDate>Wed, 22 Apr 2026 07:04:26 GMT</pubDate>
             <description><![CDATA[专业的数据采集与自动化技术指南，涵盖爬虫开发、AI工程实践、机器人开发、数据生产线构建等实战内容。提供从数据采集到自动化处理的完整技术栈解决方案。]]></description>
             <content:encoded><![CDATA[专业的数据采集与自动化技术指南，涵盖爬虫开发、AI工程实践、机器人开发、数据生产线构建等实战内容。提供从数据采集到自动化处理的完整技术栈解决方案。]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Wails 跨平台桌面开发实战 - 完整课程大纲 | 2026]]></title>
-            <link>https://friday-go.icu/courses/wails-desktop</link>
-            <guid>https://friday-go.icu/courses/wails-desktop</guid>
-            <pubDate>Wed, 22 Apr 2026 02:13:38 GMT</pubDate>
-            <description><![CDATA[使用 Go 和前端技术栈（Vue/React）构建跨平台桌面应用，从入门到实战，包含抖音直播助手、密码管理器等真实项目案例。]]></description>
-            <content:encoded><![CDATA[使用 Go 和前端技术栈（Vue/React）构建跨平台桌面应用，从入门到实战，包含抖音直播助手、密码管理器等真实项目案例。]]></content:encoded>
+            <title><![CDATA[Go 后端工程师成长路线 - 完整课程大纲 | 2026]]></title>
+            <link>https://friday-go.icu/courses/golang-backend</link>
+            <guid>https://friday-go.icu/courses/golang-backend</guid>
+            <pubDate>Wed, 22 Apr 2026 07:04:26 GMT</pubDate>
+            <description><![CDATA[系统化的 Go 后端工程师学习路径，从语言基础到微服务架构，涵盖并发编程、性能优化、数据库设计、可观测性体系等核心技能，包含完整实战项目。]]></description>
+            <content:encoded><![CDATA[系统化的 Go 后端工程师学习路径，从语言基础到微服务架构，涵盖并发编程、性能优化、数据库设计、可观测性体系等核心技能，包含完整实战项目。]]></content:encoded>
             <category>course</category>
-            <category>wails</category>
             <category>golang</category>
-            <category>desktop</category>
-            <category>cross-platform</category>
+            <category>backend</category>
+            <category>learning-path</category>
         </item>
         <item>
             <title><![CDATA[RxJS 响应式编程实战手册 - 完整课程大纲 | 2026]]></title>
             <link>https://friday-go.icu/courses/rxjs</link>
             <guid>https://friday-go.icu/courses/rxjs</guid>
-            <pubDate>Wed, 22 Apr 2026 02:13:38 GMT</pubDate>
+            <pubDate>Wed, 22 Apr 2026 07:04:26 GMT</pubDate>
             <description><![CDATA[系统学习 RxJS 响应式编程，从 Observable 核心概念到高级操作符应用，包含搜索建议、拖放、状态管理等实战案例，帮助前端开发者掌握异步编程利器。]]></description>
             <content:encoded><![CDATA[系统学习 RxJS 响应式编程，从 Observable 核心概念到高级操作符应用，包含搜索建议、拖放、状态管理等实战案例，帮助前端开发者掌握异步编程利器。]]></content:encoded>
             <category>course</category>
@@ -133,7 +132,7 @@
             <title><![CDATA[安全工程师成长路线 - 完整课程大纲 | 2026]]></title>
             <link>https://friday-go.icu/courses/security-engineer</link>
             <guid>https://friday-go.icu/courses/security-engineer</guid>
-            <pubDate>Wed, 22 Apr 2026 02:13:38 GMT</pubDate>
+            <pubDate>Wed, 22 Apr 2026 07:04:26 GMT</pubDate>
             <description><![CDATA[系统学习网络安全与工程安全，从 SSH 加固到 Web 应用防护，从 Go 安全开发到攻防研究，打造攻防一体的安全工程能力。]]></description>
             <content:encoded><![CDATA[系统学习网络安全与工程安全，从 SSH 加固到 Web 应用防护，从 Go 安全开发到攻防研究，打造攻防一体的安全工程能力。]]></content:encoded>
             <category>course</category>
@@ -143,30 +142,23 @@
             <category>penetration-testing</category>
         </item>
         <item>
-            <title><![CDATA[Go 后端工程师成长路线 - 完整课程大纲 | 2026]]></title>
-            <link>https://friday-go.icu/courses/golang-backend</link>
-            <guid>https://friday-go.icu/courses/golang-backend</guid>
-            <pubDate>Wed, 22 Apr 2026 02:13:38 GMT</pubDate>
-            <description><![CDATA[系统化的 Go 后端工程师学习路径，从语言基础到微服务架构，涵盖并发编程、性能优化、数据库设计、可观测性体系等核心技能，包含完整实战项目。]]></description>
-            <content:encoded><![CDATA[系统化的 Go 后端工程师学习路径，从语言基础到微服务架构，涵盖并发编程、性能优化、数据库设计、可观测性体系等核心技能，包含完整实战项目。]]></content:encoded>
+            <title><![CDATA[Wails 跨平台桌面开发实战 - 完整课程大纲 | 2026]]></title>
+            <link>https://friday-go.icu/courses/wails-desktop</link>
+            <guid>https://friday-go.icu/courses/wails-desktop</guid>
+            <pubDate>Wed, 22 Apr 2026 07:04:26 GMT</pubDate>
+            <description><![CDATA[使用 Go 和前端技术栈（Vue/React）构建跨平台桌面应用，从入门到实战，包含抖音直播助手、密码管理器等真实项目案例。]]></description>
+            <content:encoded><![CDATA[使用 Go 和前端技术栈（Vue/React）构建跨平台桌面应用，从入门到实战，包含抖音直播助手、密码管理器等真实项目案例。]]></content:encoded>
             <category>course</category>
+            <category>wails</category>
             <category>golang</category>
-            <category>backend</category>
-            <category>learning-path</category>
-        </item>
-        <item>
-            <title><![CDATA[Web安全 · 工程安全 | 攻防研究 安全工程 | PFinalClub]]></title>
-            <link>https://friday-go.icu/security</link>
-            <guid>https://friday-go.icu/security</guid>
-            <pubDate>Wed, 22 Apr 2026 02:13:38 GMT</pubDate>
-            <description><![CDATA[全面的网络安全体系指南，涵盖Web安全、应用安全、安全工程、攻防研究、服务器加固、密码学等实战内容。提供从防御加固到攻防研究的完整安全知识体系。]]></description>
-            <content:encoded><![CDATA[全面的网络安全体系指南，涵盖Web安全、应用安全、安全工程、攻防研究、服务器加固、密码学等实战内容。提供从防御加固到攻防研究的完整安全知识体系。]]></content:encoded>
+            <category>desktop</category>
+            <category>cross-platform</category>
         </item>
         <item>
             <title><![CDATA[DevOps 工程实践 - 完整课程大纲 | 2026]]></title>
             <link>https://friday-go.icu/courses/devops-practice</link>
             <guid>https://friday-go.icu/courses/devops-practice</guid>
-            <pubDate>Wed, 22 Apr 2026 02:13:38 GMT</pubDate>
+            <pubDate>Wed, 22 Apr 2026 07:04:26 GMT</pubDate>
             <description><![CDATA[系统学习 DevOps 工程实践，从 Docker 容器化到 Kubernetes 编排，从 CI/CD 流水线到监控告警体系，打造现代化工程能力。]]></description>
             <content:encoded><![CDATA[系统学习 DevOps 工程实践，从 Docker 容器化到 Kubernetes 编排，从 CI/CD 流水线到监控告警体系，打造现代化工程能力。]]></content:encoded>
             <category>course</category>
@@ -177,10 +169,18 @@
             <category>monitoring</category>
         </item>
         <item>
+            <title><![CDATA[Web安全 · 工程安全 | 攻防研究 安全工程 | PFinalClub]]></title>
+            <link>https://friday-go.icu/security</link>
+            <guid>https://friday-go.icu/security</guid>
+            <pubDate>Wed, 22 Apr 2026 07:04:26 GMT</pubDate>
+            <description><![CDATA[全面的网络安全体系指南，涵盖Web安全、应用安全、安全工程、攻防研究、服务器加固、密码学等实战内容。提供从防御加固到攻防研究的完整安全知识体系。]]></description>
+            <content:encoded><![CDATA[全面的网络安全体系指南，涵盖Web安全、应用安全、安全工程、攻防研究、服务器加固、密码学等实战内容。提供从防御加固到攻防研究的完整安全知识体系。]]></content:encoded>
+        </item>
+        <item>
             <title><![CDATA[PFinalClub 技术课程体系 - 系统化学习路径 | 2026]]></title>
             <link>https://friday-go.icu/courses</link>
             <guid>https://friday-go.icu/courses</guid>
-            <pubDate>Wed, 22 Apr 2026 02:13:38 GMT</pubDate>
+            <pubDate>Wed, 22 Apr 2026 07:04:26 GMT</pubDate>
             <description><![CDATA[PFinalClub 提供系统化的技术课程体系，涵盖 Go 后端工程师、Wails 桌面开发、RxJS 响应式编程、DevOps 实践、安全工程等完整学习路径，从入门到精通的实战教程。]]></description>
             <content:encoded><![CDATA[PFinalClub 提供系统化的技术课程体系，涵盖 Go 后端工程师、Wails 桌面开发、RxJS 响应式编程、DevOps 实践、安全工程等完整学习路径，从入门到精通的实战教程。]]></content:encoded>
         </item>
@@ -188,7 +188,7 @@
             <title><![CDATA[数据科学与工程 | 数据采集 数据分析 数据可视化 AI工程 | PFinalClub]]></title>
             <link>https://friday-go.icu/data</link>
             <guid>https://friday-go.icu/data</guid>
-            <pubDate>Wed, 22 Apr 2026 02:13:38 GMT</pubDate>
+            <pubDate>Wed, 22 Apr 2026 07:04:26 GMT</pubDate>
             <description><![CDATA[全面的数据科学与工程知识体系，涵盖数据采集、数据分析、数据可视化、AI工程、机器学习等核心领域，提供从数据获取到智能应用的完整技术栈解决方案。]]></description>
             <content:encoded><![CDATA[全面的数据科学与工程知识体系，涵盖数据采集、数据分析、数据可视化、AI工程、机器学习等核心领域，提供从数据获取到智能应用的完整技术栈解决方案。]]></content:encoded>
         </item>
@@ -196,9 +196,45 @@
             <title><![CDATA[工具与实用程序中文专题导航 - AI 工具 / 开发工具 / 效率提升 2025]]></title>
             <link>https://friday-go.icu/Tools</link>
             <guid>https://friday-go.icu/Tools</guid>
-            <pubDate>Wed, 22 Apr 2026 02:13:38 GMT</pubDate>
+            <pubDate>Wed, 22 Apr 2026 07:04:26 GMT</pubDate>
             <description><![CDATA[PFinalClub 工具与实用程序中文专题导航页：系统整理 AI 工具目录、开发工具、CLI 工具、Docker 指南、效率技巧等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></description>
             <content:encoded><![CDATA[PFinalClub 工具与实用程序中文专题导航页：系统整理 AI 工具目录、开发工具、CLI 工具、Docker 指南、效率技巧等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[使用 Devslog 结构化日志处理]]></title>
+            <link>https://friday-go.icu/Tools/Devslog-Structured-Logging</link>
+            <guid>https://friday-go.icu/Tools/Devslog-Structured-Logging</guid>
+            <pubDate>Wed, 22 Apr 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[介绍 Devslog 结构化日志库的使用方法，包括日志格式化、级别控制、性能优化等实战技巧。]]></description>
+            <content:encoded><![CDATA[介绍 Devslog 结构化日志库的使用方法，包括日志格式化、级别控制、性能优化等实战技巧。]]></content:encoded>
+            <category>golang</category>
+            <category>logging</category>
+            <category>devslog</category>
+            <category>structured-logging</category>
+        </item>
+        <item>
+            <title><![CDATA[Docker 部署 Go 项目实践指南]]></title>
+            <link>https://friday-go.icu/Tools/Docker-Go-Deployment</link>
+            <guid>https://friday-go.icu/Tools/Docker-Go-Deployment</guid>
+            <pubDate>Wed, 22 Apr 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[详细介绍如何使用 Docker 容器化部署 Go 项目，包括多阶段构建、镜像优化、Compose 配置等最佳实践。]]></description>
+            <content:encoded><![CDATA[详细介绍如何使用 Docker 容器化部署 Go 项目，包括多阶段构建、镜像优化、Compose 配置等最佳实践。]]></content:encoded>
+            <category>docker</category>
+            <category>golang</category>
+            <category>deployment</category>
+            <category>container</category>
+        </item>
+        <item>
+            <title><![CDATA[程序员必备神器：PF-password 密码管理器]]></title>
+            <link>https://friday-go.icu/Tools/PF-Password-Manager</link>
+            <guid>https://friday-go.icu/Tools/PF-Password-Manager</guid>
+            <pubDate>Wed, 22 Apr 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[介绍 PF-password 密码管理器的功能特点、技术实现和使用方法，一款专为程序员设计的开源密码管理工具。]]></description>
+            <content:encoded><![CDATA[介绍 PF-password 密码管理器的功能特点、技术实现和使用方法，一款专为程序员设计的开源密码管理工具。]]></content:encoded>
+            <category>tools</category>
+            <category>password-manager</category>
+            <category>security</category>
+            <category>wails</category>
         </item>
         <item>
             <title><![CDATA[大模型应用开发指南]]></title>
@@ -310,6 +346,55 @@
             <category>DevOps</category>
         </item>
         <item>
+            <title><![CDATA[Go 语言主流安全库使用指南]]></title>
+            <link>https://friday-go.icu/security/engineering/Go-Security-Libraries</link>
+            <guid>https://friday-go.icu/security/engineering/Go-Security-Libraries</guid>
+            <pubDate>Wed, 22 Apr 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[介绍 Go 语言中主流的安全库，包括密码学、认证、授权、输入验证等方面的优秀库及其使用方法。]]></description>
+            <content:encoded><![CDATA[介绍 Go 语言中主流的安全库，包括密码学、认证、授权、输入验证等方面的优秀库及其使用方法。]]></content:encoded>
+            <category>golang</category>
+            <category>security</category>
+            <category>libraries</category>
+            <category>cryptography</category>
+        </item>
+        <item>
+            <title><![CDATA[10 个 Golang 安全陷阱及真正有效的修复方案]]></title>
+            <link>https://friday-go.icu/security/engineering/Go-Security-Pitfalls</link>
+            <guid>https://friday-go.icu/security/engineering/Go-Security-Pitfalls</guid>
+            <pubDate>Wed, 22 Apr 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[总结 Go 开发中最常见的 10 个安全陷阱，包括 SQL 注入、路径遍历、不安全的反序列化等，并提供有效的修复方案。]]></description>
+            <content:encoded><![CDATA[总结 Go 开发中最常见的 10 个安全陷阱，包括 SQL 注入、路径遍历、不安全的反序列化等，并提供有效的修复方案。]]></content:encoded>
+            <category>golang</category>
+            <category>security</category>
+            <category>vulnerabilities</category>
+            <category>best-practices</category>
+        </item>
+        <item>
+            <title><![CDATA[Golang 中的网络安全 TLS/SSL 的实现]]></title>
+            <link>https://friday-go.icu/security/engineering/Go-TLS-SSL-Guide</link>
+            <guid>https://friday-go.icu/security/engineering/Go-TLS-SSL-Guide</guid>
+            <pubDate>Wed, 22 Apr 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[深入讲解 Go 语言中 TLS/SSL 的实现方法，包括证书配置、双向认证、证书验证等网络安全核心技术。]]></description>
+            <content:encoded><![CDATA[深入讲解 Go 语言中 TLS/SSL 的实现方法，包括证书配置、双向认证、证书验证等网络安全核心技术。]]></content:encoded>
+            <category>golang</category>
+            <category>tls</category>
+            <category>ssl</category>
+            <category>security</category>
+            <category>networking</category>
+        </item>
+        <item>
+            <title><![CDATA[Golang Web 应用完整安全指南]]></title>
+            <link>https://friday-go.icu/security/engineering/Go-Web-Security-Guide</link>
+            <guid>https://friday-go.icu/security/engineering/Go-Web-Security-Guide</guid>
+            <pubDate>Wed, 22 Apr 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[全面讲解 Go Web 应用的安全防护策略，包括认证授权、输入验证、CSRF 防护、安全头等核心安全措施。]]></description>
+            <content:encoded><![CDATA[全面讲解 Go Web 应用的安全防护策略，包括认证授权、输入验证、CSRF 防护、安全头等核心安全措施。]]></content:encoded>
+            <category>golang</category>
+            <category>web-security</category>
+            <category>authentication</category>
+            <category>authorization</category>
+        </item>
+        <item>
             <title><![CDATA[Linux 系统安全加固：构建安全的生产环境]]></title>
             <link>https://friday-go.icu/security/engineering/linux-security-hardening</link>
             <guid>https://friday-go.icu/security/engineering/linux-security-hardening</guid>
@@ -345,233 +430,147 @@
             <category>offensive</category>
         </item>
         <item>
-            <title><![CDATA[Go 通道（Channel）详解：Goroutine 通信的艺术]]></title>
-            <link>https://friday-go.icu/dev/backend/golang/go-channel-guide</link>
-            <guid>https://friday-go.icu/dev/backend/golang/go-channel-guide</guid>
+            <title><![CDATA[GitOps 实战：从应用部署到全生命周期管理]]></title>
+            <link>https://friday-go.icu/thinking/method/GitOps-Practice-Guide</link>
+            <guid>https://friday-go.icu/thinking/method/GitOps-Practice-Guide</guid>
             <pubDate>Wed, 22 Apr 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[深入讲解 Go 语言 Channel 的概念、类型、操作方式以及高级用法，帮助开发者掌握 Goroutine 之间安全通信的核心机制。]]></description>
-            <content:encoded><![CDATA[深入讲解 Go 语言 Channel 的概念、类型、操作方式以及高级用法，帮助开发者掌握 Goroutine 之间安全通信的核心机制。]]></content:encoded>
-            <category>Go</category>
-            <category>Concurrency</category>
-            <category>Channel</category>
-            <category>Tutorial</category>
-        </item>
-        <item>
-            <title><![CDATA[Go 并发模式进阶：高级并发编程技巧]]></title>
-            <link>https://friday-go.icu/dev/backend/golang/go-concurrency-patterns-advanced</link>
-            <guid>https://friday-go.icu/dev/backend/golang/go-concurrency-patterns-advanced</guid>
-            <pubDate>Wed, 22 Apr 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[深入讲解 Go 语言的高级并发编程模式，包括 Pipeline、Fan-out/Fan-in、Context 控制、错误处理等实战技巧。]]></description>
-            <content:encoded><![CDATA[深入讲解 Go 语言的高级并发编程模式，包括 Pipeline、Fan-out/Fan-in、Context 控制、错误处理等实战技巧。]]></content:encoded>
-            <category>Go</category>
-            <category>Concurrency</category>
-            <category>Patterns</category>
-            <category>Advanced</category>
-        </item>
-        <item>
-            <title><![CDATA[Go 分布式追踪实战]]></title>
-            <link>https://friday-go.icu/dev/backend/golang/go-distributed-tracing</link>
-            <guid>https://friday-go.icu/dev/backend/golang/go-distributed-tracing</guid>
-            <pubDate>Wed, 22 Apr 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[深入学习 Go 语言分布式追踪实现，掌握 OpenTelemetry、Jaeger、Zipkin 等工具的使用，构建完整的分布式链路追踪系统。]]></description>
-            <content:encoded><![CDATA[深入学习 Go 语言分布式追踪实现，掌握 OpenTelemetry、Jaeger、Zipkin 等工具的使用，构建完整的分布式链路追踪系统。]]></content:encoded>
-            <category>golang</category>
-            <category>distributed-tracing</category>
-            <category>observability</category>
-            <category>microservices</category>
-        </item>
-        <item>
-            <title><![CDATA[Go 协程（Goroutine）入门：轻量级并发编程]]></title>
-            <link>https://friday-go.icu/dev/backend/golang/go-goroutine-intro</link>
-            <guid>https://friday-go.icu/dev/backend/golang/go-goroutine-intro</guid>
-            <pubDate>Wed, 22 Apr 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[深入浅出讲解 Go 语言协程（Goroutine）的概念、创建方式、生命周期管理以及最佳实践，帮助开发者掌握 Go 并发编程的基础。]]></description>
-            <content:encoded><![CDATA[深入浅出讲解 Go 语言协程（Goroutine）的概念、创建方式、生命周期管理以及最佳实践，帮助开发者掌握 Go 并发编程的基础。]]></content:encoded>
-            <category>Go</category>
-            <category>Concurrency</category>
-            <category>Tutorial</category>
-        </item>
-        <item>
-            <title><![CDATA[Go JWT 认证与授权实战]]></title>
-            <link>https://friday-go.icu/dev/backend/golang/go-jwt-auth</link>
-            <guid>https://friday-go.icu/dev/backend/golang/go-jwt-auth</guid>
-            <pubDate>Wed, 22 Apr 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[深入学习 Go 语言 JWT 认证实现，掌握 Token 生成、验证、刷新机制，以及 RBAC 权限控制，构建安全的 API 认证系统。]]></description>
-            <content:encoded><![CDATA[深入学习 Go 语言 JWT 认证实现，掌握 Token 生成、验证、刷新机制，以及 RBAC 权限控制，构建安全的 API 认证系统。]]></content:encoded>
-            <category>golang</category>
-            <category>jwt</category>
-            <category>authentication</category>
-            <category>authorization</category>
-            <category>security</category>
-        </item>
-        <item>
-            <title><![CDATA[Go 内存管理与垃圾回收：深入理解 GC 机制]]></title>
-            <link>https://friday-go.icu/dev/backend/golang/go-memory-management-gc</link>
-            <guid>https://friday-go.icu/dev/backend/golang/go-memory-management-gc</guid>
-            <pubDate>Wed, 22 Apr 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[深入讲解 Go 语言的内存管理机制和垃圾回收器（GC）的工作原理，包括内存分配、GC 算法、调优技巧等内容。]]></description>
-            <content:encoded><![CDATA[深入讲解 Go 语言的内存管理机制和垃圾回收器（GC）的工作原理，包括内存分配、GC 算法、调优技巧等内容。]]></content:encoded>
-            <category>Go</category>
-            <category>Memory</category>
-            <category>GC</category>
-            <category>Performance</category>
-        </item>
-        <item>
-            <title><![CDATA[Go 中间件设计模式]]></title>
-            <link>https://friday-go.icu/dev/backend/golang/go-middleware-patterns</link>
-            <guid>https://friday-go.icu/dev/backend/golang/go-middleware-patterns</guid>
-            <pubDate>Wed, 22 Apr 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[深入学习 Go 语言中间件设计模式，掌握洋葱模型、链式调用、AOP 编程等核心技术，构建可扩展的 HTTP 中间件系统。]]></description>
-            <content:encoded><![CDATA[深入学习 Go 语言中间件设计模式，掌握洋葱模型、链式调用、AOP 编程等核心技术，构建可扩展的 HTTP 中间件系统。]]></content:encoded>
-            <category>golang</category>
-            <category>middleware</category>
-            <category>design-pattern</category>
-            <category>web-development</category>
-        </item>
-        <item>
-            <title><![CDATA[Go 集成 Prometheus 监控]]></title>
-            <link>https://friday-go.icu/dev/backend/golang/go-prometheus-monitoring</link>
-            <guid>https://friday-go.icu/dev/backend/golang/go-prometheus-monitoring</guid>
-            <pubDate>Wed, 22 Apr 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[深入学习 Go 语言集成 Prometheus 监控系统，掌握指标类型、自定义指标、Grafana 可视化等核心技能，构建完整的应用监控体系。]]></description>
-            <content:encoded><![CDATA[深入学习 Go 语言集成 Prometheus 监控系统，掌握指标类型、自定义指标、Grafana 可视化等核心技能，构建完整的应用监控体系。]]></content:encoded>
-            <category>golang</category>
-            <category>prometheus</category>
-            <category>monitoring</category>
-            <category>observability</category>
-        </item>
-        <item>
-            <title><![CDATA[Go Redis 实践指南]]></title>
-            <link>https://friday-go.icu/dev/backend/golang/go-redis-practice</link>
-            <guid>https://friday-go.icu/dev/backend/golang/go-redis-practice</guid>
-            <pubDate>Wed, 22 Apr 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[深入学习 Go 语言操作 Redis，掌握连接池、常用数据结构、分布式锁、缓存模式等核心技能，构建高性能缓存系统。]]></description>
-            <content:encoded><![CDATA[深入学习 Go 语言操作 Redis，掌握连接池、常用数据结构、分布式锁、缓存模式等核心技能，构建高性能缓存系统。]]></content:encoded>
-            <category>golang</category>
-            <category>redis</category>
-            <category>caching</category>
-            <category>distributed-lock</category>
-        </item>
-        <item>
-            <title><![CDATA[Go RESTful API 最佳实践：构建高质量 Web 服务]]></title>
-            <link>https://friday-go.icu/dev/backend/golang/go-restful-api-best-practices</link>
-            <guid>https://friday-go.icu/dev/backend/golang/go-restful-api-best-practices</guid>
-            <pubDate>Wed, 22 Apr 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[全面讲解使用 Go 语言构建 RESTful API 的最佳实践，包括路由设计、请求处理、错误处理、版本控制、文档生成等核心主题。]]></description>
-            <content:encoded><![CDATA[全面讲解使用 Go 语言构建 RESTful API 的最佳实践，包括路由设计、请求处理、错误处理、版本控制、文档生成等核心主题。]]></content:encoded>
-            <category>Go</category>
-            <category>API</category>
-            <category>REST</category>
-            <category>Best Practices</category>
-        </item>
-        <item>
-            <title><![CDATA[GORM 实战教程：Go 语言 ORM 从入门到高级]]></title>
-            <link>https://friday-go.icu/dev/backend/golang/gorm-tutorial</link>
-            <guid>https://friday-go.icu/dev/backend/golang/gorm-tutorial</guid>
-            <pubDate>Tue, 21 Apr 2026 10:30:00 GMT</pubDate>
-            <description><![CDATA[全面讲解 GORM v2 的使用：模型定义、CRUD、关联查询、事务、软删除、钩子、性能优化，以及与 MySQL/PostgreSQL 的最佳实践。]]></description>
-            <content:encoded><![CDATA[全面讲解 GORM v2 的使用：模型定义、CRUD、关联查询、事务、软删除、钩子、性能优化，以及与 MySQL/PostgreSQL 的最佳实践。]]></content:encoded>
-            <category>golang</category>
-            <category>gorm</category>
-            <category>database</category>
-            <category>tutorial</category>
-        </item>
-        <item>
-            <title><![CDATA[MCP 服务器开发实战：构建 AI 编程助手扩展]]></title>
-            <link>https://friday-go.icu/data/automation/mcp-server-development</link>
-            <guid>https://friday-go.icu/data/automation/mcp-server-development</guid>
-            <pubDate>Tue, 21 Apr 2026 10:00:00 GMT</pubDate>
-            <description><![CDATA[深入讲解 Model Context Protocol (MCP) 协议、服务器开发、工具定义与 AI 助手集成，包含完整实战项目]]></description>
-            <content:encoded><![CDATA[深入讲解 Model Context Protocol (MCP) 协议、服务器开发、工具定义与 AI 助手集成，包含完整实战项目]]></content:encoded>
-            <category>ai</category>
-            <category>mcp</category>
-            <category>llm</category>
-            <category>claude</category>
-            <category>tools</category>
-        </item>
-        <item>
-            <title><![CDATA[Prompt Engineering 实战：写出真正有效的 AI 提示词]]></title>
-            <link>https://friday-go.icu/data/automation/prompt-engineering</link>
-            <guid>https://friday-go.icu/data/automation/prompt-engineering</guid>
-            <pubDate>Tue, 21 Apr 2026 10:00:00 GMT</pubDate>
-            <description><![CDATA[从零系统讲解 Prompt Engineering 核心技巧：角色设定、思维链、少样本学习、结构化输出、防止幻觉，以及与 GPT/Claude/DeepSeek 配合的最佳实践。]]></description>
-            <content:encoded><![CDATA[从零系统讲解 Prompt Engineering 核心技巧：角色设定、思维链、少样本学习、结构化输出、防止幻觉，以及与 GPT/Claude/DeepSeek 配合的最佳实践。]]></content:encoded>
-            <category>ai</category>
-            <category>prompt</category>
-            <category>llm</category>
-            <category>tutorial</category>
-        </item>
-        <item>
-            <title><![CDATA[向量数据库实战：从 Embedding 到 RAG 应用]]></title>
-            <link>https://friday-go.icu/data/automation/vector-database-guide</link>
-            <guid>https://friday-go.icu/data/automation/vector-database-guide</guid>
-            <pubDate>Tue, 21 Apr 2026 10:00:00 GMT</pubDate>
-            <description><![CDATA[深入讲解向量数据库原理、Embedding 技术、相似度搜索算法，以及基于向量数据库的 RAG 系统构建实战]]></description>
-            <content:encoded><![CDATA[深入讲解向量数据库原理、Embedding 技术、相似度搜索算法，以及基于向量数据库的 RAG 系统构建实战]]></content:encoded>
-            <category>ai</category>
-            <category>vector-database</category>
-            <category>embedding</category>
-            <category>rag</category>
-            <category>llm</category>
-        </item>
-        <item>
-            <title><![CDATA[Docker 基础入门：从零开始掌握容器化技术]]></title>
-            <link>https://friday-go.icu/dev/system/docker-basics</link>
-            <guid>https://friday-go.icu/dev/system/docker-basics</guid>
-            <pubDate>Tue, 21 Apr 2026 10:00:00 GMT</pubDate>
-            <description><![CDATA[全面讲解 Docker 核心概念：镜像、容器、Dockerfile、网络、数据卷，以及 Docker Compose 多容器编排，带你从零掌握现代容器化开发。]]></description>
-            <content:encoded><![CDATA[全面讲解 Docker 核心概念：镜像、容器、Dockerfile、网络、数据卷，以及 Docker Compose 多容器编排，带你从零掌握现代容器化开发。]]></content:encoded>
+            <description><![CDATA[全面讲解 GitOps 核心理念、工具链和实践方法，包括 ArgoCD、Flux 等工具的使用，帮助你实现声明式持续交付。]]></description>
+            <content:encoded><![CDATA[全面讲解 GitOps 核心理念、工具链和实践方法，包括 ArgoCD、Flux 等工具的使用，帮助你实现声明式持续交付。]]></content:encoded>
+            <category>gitops</category>
             <category>devops</category>
-            <category>docker</category>
-            <category>tutorial</category>
-        </item>
-        <item>
-            <title><![CDATA[Kubernetes 基础入门：从容器编排到生产实践]]></title>
-            <link>https://friday-go.icu/dev/system/kubernetes-basics</link>
-            <guid>https://friday-go.icu/dev/system/kubernetes-basics</guid>
-            <pubDate>Tue, 21 Apr 2026 10:00:00 GMT</pubDate>
-            <description><![CDATA[全面讲解 Kubernetes 核心概念、资源对象、部署策略和实战技巧，帮助开发者快速掌握 K8s 容器编排技术]]></description>
-            <content:encoded><![CDATA[全面讲解 Kubernetes 核心概念、资源对象、部署策略和实战技巧，帮助开发者快速掌握 K8s 容器编排技术]]></content:encoded>
             <category>kubernetes</category>
-            <category>docker</category>
-            <category>devops</category>
-            <category>cloud-native</category>
+            <category>cicd</category>
         </item>
         <item>
-            <title><![CDATA[蜜罐部署实战：构建主动防御体系]]></title>
-            <link>https://friday-go.icu/security/engineering/honeypot-deployment</link>
-            <guid>https://friday-go.icu/security/engineering/honeypot-deployment</guid>
-            <pubDate>Tue, 21 Apr 2026 10:00:00 GMT</pubDate>
-            <description><![CDATA[深入讲解蜜罐技术原理、分类、部署方案与实战，包含 SSH 蜜罐、Web 蜜罐、数据库蜜罐的搭建与联动防御]]></description>
-            <content:encoded><![CDATA[深入讲解蜜罐技术原理、分类、部署方案与实战，包含 SSH 蜜罐、Web 蜜罐、数据库蜜罐的搭建与联动防御]]></content:encoded>
-            <category>security</category>
-            <category>honeypot</category>
-            <category>defense</category>
-            <category>threat-intelligence</category>
-        </item>
-        <item>
-            <title><![CDATA[SQL 注入、XSS、CSRF 攻击原理与防护实战]]></title>
-            <link>https://friday-go.icu/security/engineering/sql-injection-xss-csrf</link>
-            <guid>https://friday-go.icu/security/engineering/sql-injection-xss-csrf</guid>
-            <pubDate>Tue, 21 Apr 2026 10:00:00 GMT</pubDate>
-            <description><![CDATA[深入讲解 SQL 注入、XSS、CSRF 三大 Web 安全漏洞的攻击原理、实战演示与防护方案，包含 Go 和 PHP 语言的具体防护代码实现。]]></description>
-            <content:encoded><![CDATA[深入讲解 SQL 注入、XSS、CSRF 三大 Web 安全漏洞的攻击原理、实战演示与防护方案，包含 Go 和 PHP 语言的具体防护代码实现。]]></content:encoded>
-            <category>security</category>
-            <category>web-security</category>
-            <category>tutorial</category>
-        </item>
-        <item>
-            <title><![CDATA[Go 微服务治理：熔断、限流与降级实战]]></title>
-            <link>https://friday-go.icu/dev/backend/golang/circuit-breaker-rate-limiting</link>
-            <guid>https://friday-go.icu/dev/backend/golang/circuit-breaker-rate-limiting</guid>
-            <pubDate>Tue, 21 Apr 2026 10:00:00 GMT</pubDate>
-            <description><![CDATA[深入讲解 Go 微服务中的熔断、限流、降级机制，包含 Hystrix、Token Bucket、漏桶算法等实现方案与实战代码]]></description>
-            <content:encoded><![CDATA[深入讲解 Go 微服务中的熔断、限流、降级机制，包含 Hystrix、Token Bucket、漏桶算法等实现方案与实战代码]]></content:encoded>
+            <title><![CDATA[Go 语言并发模式实战指南]]></title>
+            <link>https://friday-go.icu/thinking/method/Go-Concurrency-Patterns-Guide</link>
+            <guid>https://friday-go.icu/thinking/method/Go-Concurrency-Patterns-Guide</guid>
+            <pubDate>Wed, 22 Apr 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[深入讲解 Go 语言并发编程模式，包括 Worker 池、Pipeline、Fan-in/Fan-out 等实战技巧，帮助你掌握高性能并发程序设计。]]></description>
+            <content:encoded><![CDATA[深入讲解 Go 语言并发编程模式，包括 Worker 池、Pipeline、Fan-in/Fan-out 等实战技巧，帮助你掌握高性能并发程序设计。]]></content:encoded>
             <category>golang</category>
-            <category>microservices</category>
-            <category>circuit-breaker</category>
-            <category>rate-limiting</category>
-            <category>resilience</category>
+            <category>concurrency</category>
+            <category>patterns</category>
+        </item>
+        <item>
+            <title><![CDATA[别再盲接 OTel：Go 可观察性接入的 8 个大坑]]></title>
+            <link>https://friday-go.icu/thinking/method/Go-OTel-Pitfalls</link>
+            <guid>https://friday-go.icu/thinking/method/Go-OTel-Pitfalls</guid>
+            <pubDate>Wed, 22 Apr 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[总结 Go 项目接入 OpenTelemetry 时常见的 8 个坑点，包括性能问题、上下文传播、采样策略等，帮助你少走弯路。]]></description>
+            <content:encoded><![CDATA[总结 Go 项目接入 OpenTelemetry 时常见的 8 个坑点，包括性能问题、上下文传播、采样策略等，帮助你少走弯路。]]></content:encoded>
+            <category>golang</category>
+            <category>opentelemetry</category>
+            <category>observability</category>
+            <category>pitfalls</category>
+        </item>
+        <item>
+            <title><![CDATA[从 trace 到洞察：Go 项目的可观测性闭环实践]]></title>
+            <link>https://friday-go.icu/thinking/method/Go-Observability-Practice</link>
+            <guid>https://friday-go.icu/thinking/method/Go-Observability-Practice</guid>
+            <pubDate>Wed, 22 Apr 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[全面讲解 Go 项目可观测性的三大支柱：日志、指标、追踪，以及如何构建完整的可观测性体系。]]></description>
+            <content:encoded><![CDATA[全面讲解 Go 项目可观测性的三大支柱：日志、指标、追踪，以及如何构建完整的可观测性体系。]]></content:encoded>
+            <category>golang</category>
+            <category>observability</category>
+            <category>opentelemetry</category>
+            <category>tracing</category>
+            <category>monitoring</category>
+        </item>
+        <item>
+            <title><![CDATA[2025 年最佳 Go Web 框架深度解析：资深开发者的选择指南]]></title>
+            <link>https://friday-go.icu/thinking/method/Go-Web-Framework-2025</link>
+            <guid>https://friday-go.icu/thinking/method/Go-Web-Framework-2025</guid>
+            <pubDate>Wed, 22 Apr 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[全面评测 2025 年主流 Go Web 框架：Gin、Echo、Fiber、Chi，从性能、功能、生态等维度分析，帮助你选择最适合项目的框架。]]></description>
+            <content:encoded><![CDATA[全面评测 2025 年主流 Go Web 框架：Gin、Echo、Fiber、Chi，从性能、功能、生态等维度分析，帮助你选择最适合项目的框架。]]></content:encoded>
+            <category>golang</category>
+            <category>web-framework</category>
+            <category>comparison</category>
+        </item>
+        <item>
+            <title><![CDATA[基于 golang 的高性能游戏接口设计]]></title>
+            <link>https://friday-go.icu/thinking/method/High-Performance-Go-Game-API</link>
+            <guid>https://friday-go.icu/thinking/method/High-Performance-Go-Game-API</guid>
+            <pubDate>Wed, 22 Apr 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[深入讲解如何使用 Go 语言设计高性能游戏后端接口，包括长连接管理、状态同步、房间系统等核心技术。]]></description>
+            <content:encoded><![CDATA[深入讲解如何使用 Go 语言设计高性能游戏后端接口，包括长连接管理、状态同步、房间系统等核心技术。]]></content:encoded>
+            <category>golang</category>
+            <category>game-development</category>
+            <category>websocket</category>
+            <category>performance</category>
+        </item>
+        <item>
+            <title><![CDATA[高质量 Golang 后端的现代软件工程原则]]></title>
+            <link>https://friday-go.icu/thinking/method/Modern-Go-Backend-Engineering</link>
+            <guid>https://friday-go.icu/thinking/method/Modern-Go-Backend-Engineering</guid>
+            <pubDate>Wed, 22 Apr 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[深入讲解构建高质量 Go 后端应用的现代软件工程原则，包括架构设计、代码组织、测试策略和最佳实践。]]></description>
+            <content:encoded><![CDATA[深入讲解构建高质量 Go 后端应用的现代软件工程原则，包括架构设计、代码组织、测试策略和最佳实践。]]></content:encoded>
+            <category>golang</category>
+            <category>software-engineering</category>
+            <category>architecture</category>
+            <category>best-practices</category>
+        </item>
+        <item>
+            <title><![CDATA[ClickHouse 实战：从入门到高性能 OLAP 查询]]></title>
+            <link>https://friday-go.icu/dev/backend/golang/ClickHouse-OLAP-Guide</link>
+            <guid>https://friday-go.icu/dev/backend/golang/ClickHouse-OLAP-Guide</guid>
+            <pubDate>Wed, 22 Apr 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[全面讲解 ClickHouse 列式数据库的核心概念、性能优化技巧和实战案例，帮助你构建高性能数据分析系统。]]></description>
+            <content:encoded><![CDATA[全面讲解 ClickHouse 列式数据库的核心概念、性能优化技巧和实战案例，帮助你构建高性能数据分析系统。]]></content:encoded>
+            <category>clickhouse</category>
+            <category>olap</category>
+            <category>database</category>
+            <category>analytics</category>
+        </item>
+        <item>
+            <title><![CDATA[深入理解 Go Channel 批量读取与实际应用]]></title>
+            <link>https://friday-go.icu/dev/backend/golang/Go-Channel-Batch-Read</link>
+            <guid>https://friday-go.icu/dev/backend/golang/Go-Channel-Batch-Read</guid>
+            <pubDate>Wed, 22 Apr 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[详细讲解 Go Channel 批量读取技术，包括性能优化、实际应用场景和最佳实践，帮助你掌握高效的数据处理模式。]]></description>
+            <content:encoded><![CDATA[详细讲解 Go Channel 批量读取技术，包括性能优化、实际应用场景和最佳实践，帮助你掌握高效的数据处理模式。]]></content:encoded>
+            <category>golang</category>
+            <category>channel</category>
+            <category>concurrency</category>
+            <category>performance</category>
+        </item>
+        <item>
+            <title><![CDATA[接口参数设计 - 多场景复用的优雅之道]]></title>
+            <link>https://friday-go.icu/dev/backend/golang/Go-Interface-Parameter-Design</link>
+            <guid>https://friday-go.icu/dev/backend/golang/Go-Interface-Parameter-Design</guid>
+            <pubDate>Wed, 22 Apr 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[深入讲解 Go 语言接口参数设计的高级技巧，包括泛型、可选参数、Builder 模式等，帮助你设计可复用、易维护的 API 接口。]]></description>
+            <content:encoded><![CDATA[深入讲解 Go 语言接口参数设计的高级技巧，包括泛型、可选参数、Builder 模式等，帮助你设计可复用、易维护的 API 接口。]]></content:encoded>
+            <category>golang</category>
+            <category>api-design</category>
+            <category>interface</category>
+            <category>generics</category>
+        </item>
+        <item>
+            <title><![CDATA[如何实现 RESTful API 版本控制]]></title>
+            <link>https://friday-go.icu/dev/backend/golang/Go-RESTful-API-Versioning</link>
+            <guid>https://friday-go.icu/dev/backend/golang/Go-RESTful-API-Versioning</guid>
+            <pubDate>Wed, 22 Apr 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[全面讲解 RESTful API 版本控制的多种策略，包括 URL、Header、参数等方式，以及各自的优缺点和最佳实践。]]></description>
+            <content:encoded><![CDATA[全面讲解 RESTful API 版本控制的多种策略，包括 URL、Header、参数等方式，以及各自的优缺点和最佳实践。]]></content:encoded>
+            <category>golang</category>
+            <category>api</category>
+            <category>rest</category>
+            <category>versioning</category>
+        </item>
+        <item>
+            <title><![CDATA[Go 1.26 SIMD 编程实战：从入门到高性能优化]]></title>
+            <link>https://friday-go.icu/dev/backend/golang/Go-SIMD-Programming</link>
+            <guid>https://friday-go.icu/dev/backend/golang/Go-SIMD-Programming</guid>
+            <pubDate>Wed, 22 Apr 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[深入讲解 Go 1.26 引入的 SIMD（单指令多数据）编程技术，包括向量指令、性能优化技巧和实战案例。]]></description>
+            <content:encoded><![CDATA[深入讲解 Go 1.26 引入的 SIMD（单指令多数据）编程技术，包括向量指令、性能优化技巧和实战案例。]]></content:encoded>
+            <category>golang</category>
+            <category>simd</category>
+            <category>performance</category>
+            <category>optimization</category>
         </item>
     </channel>
 </rss>
