@@ -179,7 +179,7 @@ course:
 **推荐文章：**
 - [从 trace 到洞察：Go 项目的可观测性闭环实践](/thinking/method/Go-Observability-Practice)
 - [别再盲接 OTel：Go 可观察性接入的 8 个大坑](/thinking/method/Go-OTel-Pitfalls)
-- [使用 Devslog 结构化日志处理](/tools/Devslog-Structured-Logging)
+- [使用 Devslog 结构化日志处理](/Tools/Devslog-Structured-Logging)
 
 </div>
 

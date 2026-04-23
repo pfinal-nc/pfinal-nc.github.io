@@ -78,8 +78,8 @@ course:
 | 1.6 | 容器安全 | 非 root 运行、镜像签名、漏洞扫描 | 📝 |
 
 **推荐文章：**
-- [Docker 部署 Go 项目实践指南](/tools/Docker-Go-Deployment)
-- [单文件代码部署工具](/tools/单文件代码部署工具)
+- [Docker 部署 Go 项目实践指南](/Tools/Docker-Go-Deployment)
+- [单文件代码部署工具](/Tools/单文件代码部署工具)
 
 **实战练习：**
 - 将现有 Go 应用容器化
@@ -208,7 +208,7 @@ jobs:
 **推荐文章：**
 - [从 trace 到洞察：Go 项目的可观测性闭环实践](/thinking/method/Go-Observability-Practice)
 - [别再盲接 OTel：Go 可观察性接入的 8 个大坑](/thinking/method/Go-OTel-Pitfalls)
-- [使用 Devslog 结构化日志处理](/tools/Devslog-Structured-Logging)
+- [使用 Devslog 结构化日志处理](/Tools/Devslog-Structured-Logging)
 
 **监控体系架构图：**
 

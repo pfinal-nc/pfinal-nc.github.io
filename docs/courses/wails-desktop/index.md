@@ -100,7 +100,7 @@ course:
 - 系统托盘集成
 
 **相关文章：**
-- [程序员必备神器：PF-password 密码管理器](/tools/PF-Password-Manager)
+- [程序员必备神器：PF-password 密码管理器](/Tools/PF-Password-Manager)
 - [使用 Go-systray 构建智能系统托盘应用](/dev/backend/golang/使用-Go-systray-构建智能系统托盘应用-Wails-v2-集成实战)
 
 ---
