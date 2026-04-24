@@ -29,7 +29,7 @@ description: 系统讲解 AI 提示词工程的核心技巧，包括零样本、
 
 ### 示例：代码审查助手
 
-```
+```text
 你是一位资深 Go 后端工程师，专注于代码质量和安全性。
 
 请审查以下 Go 代码，重点关注：
@@ -39,19 +39,11 @@ description: 系统讲解 AI 提示词工程的核心技巧，包括零样本、
 4. 代码可维护性
 
 输出格式：
-## 严重问题（必须修复）
-- [问题描述] → [修复建议]
+- ## 严重问题（必须修复）→ [问题描述]: [修复建议]
+- ## 一般建议 → [建议内容]
+- ## 优点 → [值得保留的好实践]
 
-## 一般建议
-- [建议内容]
-
-## 优点
-- [值得保留的好实践]
-
-代码如下：
-```go
-[你的代码]
-```
+代码如下：（在此粘贴 Go 代码）
 ```
 
 ## 核心技术
@@ -60,7 +52,7 @@ description: 系统讲解 AI 提示词工程的核心技巧，包括零样本、
 
 直接描述任务，不提供示例：
 
-```
+```text
 将以下 JSON 数据转换为 Markdown 表格：
 
 {"name": "Alice", "age": 30, "city": "上海"}
@@ -71,27 +63,20 @@ description: 系统讲解 AI 提示词工程的核心技巧，包括零样本、
 
 提供 2-5 个示例，让模型学习模式：
 
-```
+```text
 将英文技术术语翻译为中文，保持专业性：
 
-英文：goroutine
-中文：协程
-
-英文：middleware
-中文：中间件
-
-英文：garbage collection
-中文：垃圾回收
-
-英文：channel
-中文：
+英文：goroutine → 中文：协程
+英文：middleware → 中文：中间件
+英文：garbage collection → 中文：垃圾回收
+英文：channel → 中文：
 ```
 
 ### 思维链提示（Chain of Thought）
 
 要求模型展示推理过程：
 
-```
+```text
 分析这段代码是否有竞态条件，请一步步推理：
 
 var counter int
@@ -117,7 +102,7 @@ func main() {
 
 让模型检查自己的输出：
 
-```
+```text
 请完成以下任务，然后检查你的答案：
 
 任务：写一个 Go 函数，安全地从 map 中读取值
@@ -134,7 +119,7 @@ func main() {
 
 ### 代码生成
 
-```
+```text
 ## 任务
 用 Go 实现一个并发安全的缓存，要求：
 
@@ -158,7 +143,7 @@ func main() {
 
 ### 文档生成
 
-```
+```text
 为以下 Go 函数生成 godoc 风格的注释：
 
 func (c *Cache) Set(key string, value interface{}, ttl time.Duration) {
@@ -180,23 +165,21 @@ func (c *Cache) Set(key string, value interface{}, ttl time.Duration) {
 
 ### 错误排查
 
-```
+```text
 我遇到了以下错误，请帮我排查原因并给出解决方案：
 
 错误信息：
-```
+
 panic: runtime error: invalid memory address or nil pointer dereference
 goroutine 1 [running]:
 main.main()
     /tmp/main.go:15 +0x1d
-```
 
 代码（第 13-17 行）：
-```go
+
 resp, _ := http.Get("https://api.example.com/data")
 body, _ := io.ReadAll(resp.Body)
 defer resp.Body.Close()
-```
 
 请分析：
 1. 错误的根本原因
@@ -207,7 +190,7 @@ defer resp.Body.Close()
 
 ### 代码重构
 
-```
+```text
 请重构以下代码，使其更符合 Go 最佳实践：
 
 [粘贴你的代码]
@@ -231,7 +214,7 @@ defer resp.Body.Close()
 
 用多轮对话模拟专家评审：
 
-```
+```text
 轮次 1 - 初稿：
 作为架构师，请设计一个短链接服务的系统架构...
 
@@ -244,7 +227,7 @@ defer resp.Body.Close()
 
 ### 结构化输出
 
-```
+```text
 请分析以下代码的质量，以 JSON 格式输出：
 
 {
@@ -271,18 +254,12 @@ defer resp.Body.Close()
 # Python 提示词模板示例
 from string import Template
 
-CODE_REVIEW_TEMPLATE = Template("""
+CODE_REVIEW_TEMPLATE = Template("""\
 你是一位资深 $language 工程师。
 
 请审查以下代码，关注：$focus_areas
 
-代码：
-```$language
-$code
-```
-
-输出严重问题（必须修复）和一般建议。
-""")
+输出严重问题（必须修复）和一般建议。""")
 
 prompt = CODE_REVIEW_TEMPLATE.substitute(
     language="Go",
