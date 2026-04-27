@@ -82,14 +82,12 @@ export default defineConfig({
           return false
         }
 
-        // 排除旧的英文分类URL路径，避免在sitemap中包含
-        if (url.includes('/golang/') ||
-            url.includes('/PHP/') ||
-            url.includes('/python/') ||
-            url.includes('/Tools/') ||
-            url.includes('/database/')) {
-          return false
-        }
+        // 注意：旧的英文路径排除规则已移除
+        // 因为当前实际文章路径就是 /dev/backend/golang/, /Tools/, /dev/system/database/ 等
+        // 之前的规则误把所有主要分类都过滤掉了，导致 sitemap.xml 为空（0 字节）
+        // 2026-04-27 修复：只排除真正不存在的旧路径前缀
+        // 旧的单层路径 /golang/, /php/, /python/ 等已通过 _redirects 和 client.js 301 重定向到新路径
+        // sitemap 中应包含所有有效的新路径 URL
 
         // 排除中文分类的重复内容（因为现在是主要分类）
         if (url.includes('/zh/security/') ||
@@ -128,6 +126,10 @@ export default defineConfig({
     ['link', { rel: 'alternate', type: 'application/rss+xml', title: 'PFinalClub RSS Feed', href: '/feed.xml' }],
     ['link', { rel: 'alternate', type: 'application/atom+xml', title: 'PFinalClub Atom Feed', href: '/feed.atom' }],
     ['link', { rel: 'alternate', type: 'application/json', title: 'PFinalClub JSON Feed', href: '/feed.json' }],
+    // hreflang: 告诉搜索引擎这是简体中文页面（提升中文搜索排名）
+    ['link', { rel: 'alternate', hreflang: 'zh-CN', href: 'https://friday-go.icu/' }],
+    ['link', { rel: 'alternate', hreflang: 'zh-Hans', href: 'https://friday-go.icu/' }],
+    ['link', { rel: 'alternate', hreflang: 'x-default', href: 'https://friday-go.icu/' }],
     // canonical 标签在 transformPageData 中动态添加，不在这里设置全局的
     ['meta', { name: 'author', content: 'PFinal南丞' }],
     ['meta', { name: 'robots', content: 'index,follow' }],
@@ -254,10 +256,48 @@ export default defineConfig({
     ]);
 
     // 为有封面的页面添加 og:image（提升社交分享与 SEO）
+    // 如果文章没有 cover/image 字段，则根据路径自动选择分类默认封面图
     const coverOrImage = pageData.frontmatter.cover || pageData.frontmatter.image;
+    let ogImageUrl: string | undefined;
+
     if (coverOrImage && typeof coverOrImage === 'string') {
-      const ogImageUrl = coverOrImage.startsWith('http') ? coverOrImage : `${baseUrl}${coverOrImage.startsWith('/') ? '' : '/'}${coverOrImage}`;
+      ogImageUrl = coverOrImage.startsWith('http') ? coverOrImage : `${baseUrl}${coverOrImage.startsWith('/') ? '' : '/'}${coverOrImage}`;
+    } else {
+      // og:image fallback：根据页面路径自动匹配分类默认封面
+      const categoryCoverMap: Record<string, string> = {
+        'dev/backend/golang': '/images/covers/golang.svg',
+        'dev/backend/php': '/images/covers/php.svg',
+        'dev/backend/python': '/images/covers/python.svg',
+        'dev/backend/rxjs': '/images/covers/default.svg',
+        'dev/backend/wails': '/images/covers/golang.svg',
+        'dev/backend/rust': '/images/covers/golang.svg',
+        'dev/system/database': '/images/covers/database.svg',
+        'dev/system': '/images/covers/devops.svg',
+        'security/engineering': '/images/covers/security-engineering.svg',
+        'security/offensive': '/images/covers/security-offensive.svg',
+        'data/automation': '/images/covers/data-automation.svg',
+        'thinking/method': '/images/covers/thinking-method.svg',
+        'thinking/notes': '/images/covers/thinking-notes.svg',
+        'tools': '/images/covers/tools.svg',
+        'ai': '/images/covers/ai.svg',
+        'courses': '/images/courses/courses.svg',
+        'devops': '/images/covers/devops.svg',
+      };
+
+      // 查找最长的匹配路径前缀（更具体的路径优先）
+      const matchedPrefix = Object.keys(categoryCoverMap)
+        .filter(prefix => currentPath.startsWith(prefix))
+        .sort((a, b) => b.length - a.length)[0];
+
+      if (matchedPrefix) {
+        ogImageUrl = `${baseUrl}${categoryCoverMap[matchedPrefix]}`;
+      }
+    }
+
+    if (ogImageUrl) {
       pageData.frontmatter.head.push(['meta', { property: 'og:image', content: ogImageUrl }]);
+      // 同时设置 twitter:image，确保 Twitter 卡片也有图片
+      pageData.frontmatter.head.push(['meta', { name: 'twitter:image', content: ogImageUrl }]);
     }
 
     // 判断是否为文章详情页（这里假设详情页没有设置 layout）

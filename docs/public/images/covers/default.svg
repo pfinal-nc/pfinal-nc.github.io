@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2C3E50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a202c;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="bar1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00ADD8;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#00ADD8;stop-opacity:0.1" />
+    </linearGradient>
+    <linearGradient id="bar2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#777BB4;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#777BB4;stop-opacity:0.05" />
+    </linearGradient>
+    <linearGradient id="bar3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#306998;stop-opacity:0.5" />
+      <stop offset="100%" style="stop-color:#306998;stop-opacity:0.03" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" rx="12"/>
+
+  <!-- Decorative colored bars representing multiple categories -->
+  <rect x="0" y="150" width="500" height="3" fill="url(#bar1)" rx="1"/>
+  <rect x="0" y="165" width="350" height="3" fill="url(#bar2)" rx="1"/>
+  <rect x="0" y="180" width="420" height="3" fill="url(#bar3)" rx="1"/>
+
+  <!-- Subtle code fragments -->
+  <text x="850" y="420" font-family="monospace" font-size="14" fill="#ffffff" opacity="0.10">Go · PHP · Python</text>
+  <text x="850" y="442" font-family="monospace" font-size="14" fill="#ffffff" opacity="0.10">Security · DevOps · Database</text>
+  <text x="850" y="464" font-family="monospace" font-size="14" fill="#ffffff" opacity="0.10">AI · Data · Thinking · Tools</text>
+
+  <!-- Decorative circles -->
+  <circle cx="1080" cy="160" r="70" fill="#00ADD8" opacity="0.04"/>
+  <circle cx="120" cy="500" r="130" fill="#777BB4" opacity="0.03"/>
+
+  <!-- Center accent line -->
+  <rect x="0" y="290" width="1200" height="2" fill="#ffffff" opacity="0.1"/>
+
+  <!-- Main title -->
+  <text x="600" y="360" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="64" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="-1">PFinalClub</text>
+  <text x="600" y="405" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="22" fill="#AAB4BE" text-anchor="middle" letter-spacing="6">后端 + DevOps + AI 工程实践</text>
+
+  <!-- Bottom branding bar -->
+  <text x="600" y="565" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="15" fill="#ffffff" opacity="0.4" text-anchor="middle">friday-go.icu · 技术博客</text>
+</svg>

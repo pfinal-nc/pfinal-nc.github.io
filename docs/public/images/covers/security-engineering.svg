@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#C0392B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7B241C;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#E74C3C;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#E74C3C;stop-opacity:0" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" rx="12"/>
+  
+  <!-- Decorative security icons (text-based) -->
+  <text x="80" y="180" font-family="monospace" font-size="16" fill="#ffffff" opacity="0.15"># Security Audit Checklist</text>
+  <text x="80" y="210" font-family="monospace" font-size="16" fill="#ffffff" opacity="0.15">- SQL Injection Prevention ✓</text>
+  <text x="80" y="240" font-family="monospace" font-size="16" fill="#ffffff" opacity="0.15">- XSS / CSRF Protection ✓</text>
+  <text x="80" y="270" font-family="monospace" font-size="16" fill="#ffffff" opacity="0.15">- TLS Hardening & Headers</text>
+
+  <text x="700" y="410" font-family="monospace" font-size="15" fill="#ffffff" opacity="0.12">OWASP Top 10 · Zero Trust</text>
+  <text x="700" y="435" font-family="monospace" font-size="15" fill="#ffffff" opacity="0.12">WAF · SSH Hardening · Honeypot</text>
+  <text x="700" y="460" font-family="monospace" font-size="15" fill="#ffffff" opacity="0.12">Input Validation · AuthN/AuthZ</text>
+
+  <!-- Shield shape decoration -->
+  <polygon points="1060,100 1120,130 1120,190 1060,240 1000,190 1000,130" fill="#ffffff" opacity="0.06"/>
+  <circle cx="140" cy="530" r="120" fill="#ffffff" opacity="0.04"/>
+
+  <rect x="0" y="280" width="1200" height="3" fill="url(#accent)"/>
+
+  <text x="600" y="340" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="72" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="-2">安全工程</text>
+  <text x="600" y="395" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="26" fill="#E74C3C" text-anchor="middle" letter-spacing="8">Web安全与防御体系</text>
+
+  <text x="600" y="570" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" fill="#ffffff" opacity="0.5" text-anchor="middle">PFinalClub 技术博客</text>
+</svg>
