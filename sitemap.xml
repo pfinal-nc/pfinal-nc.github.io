@@ -643,6 +643,12 @@
 <priority>0.8</priority>
 </url>
 <url>
+<loc>https://friday-go.icu/dev/backend/golang/go-production-logging-healthcheck</loc>
+<lastmod>2026-05-06T01:19:13.000Z</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
 <loc>https://friday-go.icu/dev/backend/golang/go-prometheus-monitoring</loc>
 <lastmod>2026-04-22T02:11:32.000Z</lastmod>
 <changefreq>weekly</changefreq>
