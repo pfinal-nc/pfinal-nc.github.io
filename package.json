@@ -35,6 +35,11 @@
     "vitepress": "1.6.4"
   },
   "pnpm": {
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "esbuild",
+      "sharp"
+    ],
     "peerDependencyRules": {
       "ignoreMissing": [
         "@algolia/client-search",
