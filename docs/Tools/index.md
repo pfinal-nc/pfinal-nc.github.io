@@ -42,10 +42,10 @@ PFinalClub 团队精心打造的免费在线工具，包括：
 
 ## 1. AI 工具与编程助手
 
-- **[Vibe Coding – 时代的开发者：如何跟 ChatGPT 5.1 一起写代码，而不是被替代](/tools/Vibe-Coding-时代的开发者：如何跟-ChatGPT-5.1-一起写代码，而不是被替代)**
+- **[Vibe Coding – 时代的开发者：如何跟 ChatGPT 5.1 一起写代码，而不是被替代](/thinking/notes/Vibe-Coding-时代的开发者：如何跟-ChatGPT-5.1-一起写代码，而不是被替代)**
   在现代开发时代如何有效使用 ChatGPT 5.1 和 AI 编程助手的指南。
 
-- **[Qwen Code 30 个使用小技巧](/tools/Qwen Code 30个使用小技巧)**
+- **[Qwen Code 30 个使用小技巧](/thinking/notes/Qwen Code 30个使用小技巧)**
   使用 Qwen AI 编程助手提升开发效率的实用技巧和窍门。
 
 - **[AutoGen 在金融数据分析中的应用 – 使用 AI 代理自动化工作流](/data/automation/autogen-financial-analysis)**
@@ -61,7 +61,7 @@ PFinalClub 团队精心打造的免费在线工具，包括：
 
 ## 2. CLI 工具与命令行
 
-- **[Broot – 高效的命令行文件管理器](/tools/Broot-高效的命令行文件管理器)**
+- **[Broot – 高效的命令行文件管理器](/Tools/Broot-高效的命令行文件管理器)**
   发现强大的命令行工具，实现高效的文件导航和目录管理。
 
 - **[让 CLI 工具焕然一新！用 golang 与 Color 库打造多彩命令行体验](/dev/backend/golang/让CLI工具焕然一新！用golang与Color库打造多彩命令行体验)**
@@ -71,43 +71,43 @@ PFinalClub 团队精心打造的免费在线工具，包括：
 
 ## 3. 部署与 DevOps 工具
 
-- **[Docker 部署 Go 项目实践指南](/tools/Docker部署Go项目实践指南)**
+- **[Docker 部署 Go 项目实践指南](/Tools/Docker部署Go项目实践指南)**
   使用 Docker 容器化和部署 Go 项目的完整指南，包括最佳实践和优化。
 
-- **[Nginx 配置文件详解](/tools/Nginx配置文件详解)**
+- **[Nginx 配置文件详解](/Tools/Nginx配置文件详解)**
   Nginx 配置文件的详细解析和最佳实践。
 
 ---
 
 ## 4. 包管理与配置
 
-- **[Composer 配置文件说明](/tools/Composer配置文件说明)**
+- **[Composer 配置文件说明](/Tools/Composer配置文件说明)**
   理解和配置 Composer 进行 PHP 依赖管理的完整指南。
 
 ---
 
 ## 5. 开发环境与编辑器
 
-- **[Arc 浏览器更符合开发者](/tools/Arc 浏览器更符合开发者)**
+- **[Arc 浏览器更符合开发者](/Tools/Arc 浏览器更符合开发者)**
   介绍 Arc 浏览器如何更好地满足开发者的需求。
 
-- **[PHPStorm 快捷键](/tools/PHPStorm快捷键)**
+- **[PHPStorm 快捷键](/Tools/PHPStorm快捷键)**
   PHPStorm IDE 常用快捷键和效率技巧。
 
-- **[VSCode 快捷键](/tools/VSCode快捷键)**
+- **[VSCode 快捷键](/Tools/VSCode快捷键)**
   Visual Studio Code 常用快捷键和效率技巧。
 
-- **[Tmux 常用快捷键](/tools/Tmux 常用快捷键)**
+- **[Tmux 常用快捷键](/Tools/Tmux 常用快捷键)**
   Tmux 终端复用器的常用快捷键和配置技巧。
 
-- **[IDE 偷懒小工具](/tools/IDE偷懒小工具)**
+- **[IDE 偷懒小工具](/Tools/IDE偷懒小工具)**
   提升 IDE 使用效率的小工具和技巧。
 
 ---
 
 ## 6. 日志与监控工具
 
-- **[使用 Devslog 做结构化日志处理](/tools/使用Devslog结构化日志处理)**
+- **[使用 Devslog 做结构化日志处理](/Tools/使用Devslog结构化日志处理)**
   从"乱七八糟的字符串日志"升级到结构化日志，方便后续接入 ELK / Loki / ClickHouse 等。
 
 - **[从手动到自动：Go 语言助力快速识别代码中的安全隐患](/security/engineering/从手动到自动-Go语言助力快速识别代码中的安全隐患)**

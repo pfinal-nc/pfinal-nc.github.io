@@ -43,7 +43,7 @@ pageClass: php-hub-page
 
 ### 开发工具
 - [**PHP开发环境搭建**](/dev/backend/php/PHP开发环境搭建) - Docker, Xdebug, IDE配置
-- [**Composer依赖管理**](/tools/Composer配置文件说明) - 依赖管理, 自定义包开发
+- [**Composer依赖管理**](/Tools/Composer配置文件说明) - 依赖管理, 自定义包开发
 - [**PHP单元测试实践**](/dev/backend/php/PHP单元测试) - PHPUnit, 测试驱动开发
 
 ### 最佳实践

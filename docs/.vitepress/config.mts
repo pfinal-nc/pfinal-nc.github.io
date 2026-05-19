@@ -41,6 +41,7 @@ export default defineConfig({
       },
       { text: '数据与自动化', link: '/data/automation/' },
       { text: '思考/方法论', link: '/thinking/method/' },
+      // 注意：Linux / GitHub Pages 环境路径大小写敏感，站点实际目录为 /tools
       { text: '在线工具', link: '/Tools/' }
     ],
     socialLinks: [
@@ -278,7 +279,7 @@ export default defineConfig({
         'data/automation': '/images/covers/data-automation.svg',
         'thinking/method': '/images/covers/thinking-method.svg',
         'thinking/notes': '/images/covers/thinking-notes.svg',
-        'tools': '/images/covers/tools.svg',
+        'Tools': '/images/covers/tools.svg',
         'ai': '/images/covers/ai.svg',
         'courses': '/images/courses/courses.svg',
         'devops': '/images/covers/devops.svg',
@@ -603,7 +604,7 @@ export default defineConfig({
             security: '安全',
             data: '数据与自动化',
             thinking: '思考/方法论',
-            tools: '工具',
+            Tools: '工具',
             backend: '后端',
             golang: 'Golang',
             php: 'PHP',

@@ -24,7 +24,7 @@ keywords:
 - [Kubernetes 基础入门](/dev/system/kubernetes-basics) - 容器编排进阶
 - [Gin 框架实战指南](/dev/backend/golang/gin-framework-guide) - Go Web 开发
 - [GitOps 实战](/dev/backend/golang/GitOps实战：从应用部署到全生命周期管理) - 自动化部署
-- [Nginx 配置文件详解](/tools/Nginx配置文件详解) - 反向代理配置
+- [Nginx 配置文件详解](/Tools/Nginx配置文件详解) - 反向代理配置
 
 ### 准备 GoWeb 代码
 

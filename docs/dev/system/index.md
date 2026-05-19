@@ -37,21 +37,21 @@ tags:
 - [TCP/IP HTTP 学习](/dev/backend/php/TCP-IP-HTTP学习) - 网络协议基础与分层架构
 
 ### Web服务器配置
-- [Nginx 配置文件详解](/tools/Nginx配置文件详解) - 详细配置解析与最佳实践
+- [Nginx 配置文件详解](/Tools/Nginx配置文件详解) - 详细配置解析与最佳实践
 
 ## 🐳 容器化与部署
 
 ### Docker 实践
-- [Docker 部署 Go 项目实践指南](/tools/Docker部署Go项目实践指南) - 容器化部署完整流程
+- [Docker 部署 Go 项目实践指南](/Tools/Docker部署Go项目实践指南) - 容器化部署完整流程
 
 ## 🔧 系统运维工具
 
 ### 监控与日志
-- [使用 Devslog 做结构化日志处理](/tools/使用Devslog结构化日志处理) - 从字符串日志到结构化日志
+- [使用 Devslog 做结构化日志处理](/Tools/使用Devslog结构化日志处理) - 从字符串日志到结构化日志
 
 ### 命令行工具
-- [Broot - 高效的命令行文件管理器](/tools/Broot-高效的命令行文件管理器)
-- [开源开发者必备 - toilet 终端 ASCII 艺术字工具](/tools/开源开发者必备-toilet终端ASCII艺术字工具)
+- [Broot - 高效的命令行文件管理器](/Tools/Broot-高效的命令行文件管理器)
+- [开源开发者必备 - toilet 终端 ASCII 艺术字工具](/Tools/开源开发者必备-toilet终端ASCII艺术字工具)
 
 ## 🛡️ 安全加固
 

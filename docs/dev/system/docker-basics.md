@@ -21,9 +21,9 @@ tags:
 
 **DevOps 学习路径：**
 - [Kubernetes 基础入门](/dev/system/kubernetes-basics) - 容器编排进阶
-- [Docker 部署 Go 项目实践指南](/tools/Docker部署Go项目实践指南) - Go 项目容器化
+- [Docker 部署 Go 项目实践指南](/Tools/Docker部署Go项目实践指南) - Go 项目容器化
 - [GitOps 实战：从应用部署到全生命周期管理](/dev/backend/golang/GitOps实战：从应用部署到全生命周期管理) - 现代化部署流程
-- [Nginx 配置文件详解](/tools/Nginx配置文件详解) - 反向代理配置
+- [Nginx 配置文件详解](/Tools/Nginx配置文件详解) - 反向代理配置
 
 ## 一、核心概念
 

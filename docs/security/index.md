@@ -101,32 +101,32 @@ keywords:
 ## 精选文章推荐
 
 ### 新鲜热辣 🔥
-- [SSH Security Hardening Guide 2025 - 暴力破解防护完整方案](/security/engineering/SSH-Security-Hardening-Guide-2025.md)
+- [SSH Security Hardening Guide 2025 - 暴力破解防护完整方案](/security/engineering/SSH-Security-Hardening-Guide-2025)
   5 层防护体系、失败密钥分析、蜜罐部署、一键脚本
 
 ### 应用安全 🛡️
-- [10 个 Golang 安全陷阱及真正有效的修复方案](/security/engineering/10个Golang安全陷阱及真正有效的修复方案.md)
-- [Golang Web 应用完整安全指南](/security/engineering/golang Web应用完整安全指南.md)
-- [Golang 中的网络安全 TLS/SSL 的实现](/security/engineering/golang 中的网络安全TLS SSL的实现.md)
+- [10 个 Golang 安全陷阱及真正有效的修复方案](/security/engineering/10个Golang安全陷阱及真正有效的修复方案)
+- [Golang Web 应用完整安全指南](/security/engineering/golang Web应用完整安全指南)
+- [Golang 中的网络安全 TLS/SSL 的实现](/security/engineering/golang 中的网络安全TLS SSL的实现)
 
 ### 安全工具链 🔧
-- [Go 语言主流安全库使用指南](/security/engineering/Go语言主流安全库使用指南.md)
+- [Go 语言主流安全库使用指南](/security/engineering/Go语言主流安全库使用指南)
 
 ---
 
 ## 常见问题速查
 
 ### 服务器被爆破了怎么办？
-→ 参考 [SSH Security Hardening Guide 2025](/security/engineering/SSH-Security-Hardening-Guide-2025.md)
+→ 参考 [SSH Security Hardening Guide 2025](/security/engineering/SSH-Security-Hardening-Guide-2025)
 
 ### Web 应用有哪些常见漏洞？
-→ 参考 [Golang Web 应用完整安全指南](/security/engineering/golang Web应用完整安全指南.md)
+→ 参考 [Golang Web 应用完整安全指南](/security/engineering/golang Web应用完整安全指南)
 
 ### 如何建立安全的加密通信？
-→ 参考 [Golang 中的网络安全 TLS/SSL 的实现](/security/engineering/golang 中的网络安全TLS SSL的实现.md)
+→ 参考 [Golang 中的网络安全 TLS/SSL 的实现](/security/engineering/golang 中的网络安全TLS SSL的实现)
 
 ### Go 开发有哪些安全陷阱？
-→ 参考 [10 个 Golang 安全陷阱及真正有效的修复方案](/security/engineering/10个Golang安全陷阱及真正有效的修复方案.md)
+→ 参考 [10 个 Golang 安全陷阱及真正有效的修复方案](/security/engineering/10个Golang安全陷阱及真正有效的修复方案)
 
 ---
 

@@ -561,7 +561,7 @@ func wordCount(s string) map[string]int {
 | 并发 | goroutine/channel | 线程/Future | asyncio |
 | 编译速度 | 极快 | 慢 | 解释执行 |
 
-Go 的设计哲学是"少即是多"——语法规则极少，却能高效解决复杂问题。掌握这些基础语法后，下一步建议学习 [Go 数组与切片](/dev/backend/golang/go-slice-map.md) 和 [Go 并发编程](/dev/backend/golang/go-waitgroup-mutex.md)。
+Go 的设计哲学是"少即是多"——语法规则极少，却能高效解决复杂问题。掌握这些基础语法后，下一步建议学习 [Go 数组与切片](/dev/backend/golang/go-slice-map) 和 [Go 并发编程](/dev/backend/golang/go-waitgroup-mutex)。
 
 ---
 

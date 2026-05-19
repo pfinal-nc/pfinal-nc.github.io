@@ -49,25 +49,25 @@ date: 2025-12-19 12:30:00
 从工程化视角探索系统设计、架构原则和技术决策。
 
 #### 系统设计与架构
-- [高质量 Golang 后端的现代软件工程原则](/thinking/method/高质量Golang后端的现代软件工程原则.md)
-- [从 trace 到洞察：Go 项目的可观测性闭环实践](/thinking/method/从 trace 到洞察：Go 项目的可观测性闭环实践.md)
-- [别再盲接 OTel：Go 可观察性接入的 8 个大坑](/thinking/method/别再盲接 OTel：Go 可观察性接入的 8 个大坑.md)
+- [高质量 Golang 后端的现代软件工程原则](/thinking/method/高质量Golang后端的现代软件工程原则)
+- [从 trace 到洞察：Go 项目的可观测性闭环实践](/thinking/method/从 trace 到洞察：Go 项目的可观测性闭环实践)
+- [别再盲接 OTel：Go 可观察性接入的 8 个大坑](/thinking/method/别再盲接 OTel：Go 可观察性接入的 8 个大坑)
 
 #### 框架深度解析
-- [2025 年最佳 Go Web 框架深度解析：资深开发者的选择指南](/thinking/method/2025年最佳Go-Web框架深度解析：资深开发者的选择指南.md)
-- [Fyne 深度技术解析 - 面向资深 Go 开发者的架构设计分析](/thinking/method/Fyne-深度技术解析-面向资深Go开发者的架构设计分析.md)
-- [Fyne 与 Wails 深度对比 - 选择最适合你的 Go 桌面应用框架](/dev/backend/golang/wails/Fyne与Wails深度对比-选择最适合你的Go桌面应用框架.md)
+- [2025 年最佳 Go Web 框架深度解析：资深开发者的选择指南](/thinking/method/2025年最佳Go-Web框架深度解析：资深开发者的选择指南)
+- [Fyne 深度技术解析 - 面向资深 Go 开发者的架构设计分析](/thinking/method/Fyne-深度技术解析-面向资深Go开发者的架构设计分析)
+- [Fyne 与 Wails 深度对比 - 选择最适合你的 Go 桌面应用框架](/dev/backend/golang/wails/Fyne与Wails深度对比-选择最适合你的Go桌面应用框架)
 
 #### 并发与性能
-- [Go 语言并发模式实战指南](/thinking/method/Go语言并发模式实战指南.md)
-- [Golang Socket 通信架构分析与实现 - 构建高性能游戏服务器](/thinking/method/Golang Socket 通信架构分析与实现-构建高性能游戏服务器.md)
+- [Go 语言并发模式实战指南](/thinking/method/Go语言并发模式实战指南)
+- [Golang Socket 通信架构分析与实现 - 构建高性能游戏服务器](/thinking/method/Golang Socket 通信架构分析与实现-构建高性能游戏服务器)
 
 #### DevOps 与运维
-- [GitOps 实战 - 从应用部署到全生命周期管理](/thinking/method/GitOps实战-从应用部署到全生命周期管理.md)
-- [Nginx 安全网关：3 步堵住 90% 的 Web 漏洞](/thinking/method/nginx-security-gateway-guide.md)
+- [GitOps 实战 - 从应用部署到全生命周期管理](/thinking/method/GitOps实战-从应用部署到全生命周期管理)
+- [Nginx 安全网关：3 步堵住 90% 的 Web 漏洞](/thinking/method/nginx-security-gateway-guide)
 
 #### 测试与质量
-- [测试驱动开发 - 以测试为引擎的软件工程实践](/thinking/method/测试驱动开发 以测试为引擎的软件工程实践.md)
+- [测试驱动开发 - 以测试为引擎的软件工程实践](/thinking/method/测试驱动开发 以测试为引擎的软件工程实践)
 
 ---
 
@@ -76,17 +76,17 @@ date: 2025-12-19 12:30:00
 日常开发中的工具使用、技巧总结和经验分享。
 
 #### AI 编程助手
-- [Vibe-Coding – 时代的开发者：如何跟 ChatGPT 5.1 一起写代码，而不是被替代](/tools/Vibe-Coding-时代的开发者：如何跟-ChatGPT-5.1-一起写代码，而不是被替代.md)
-- [Qwen Code 30 个使用小技巧](/tools/Qwen Code 30个使用小技巧.md)
+- [Vibe-Coding – 时代的开发者：如何跟 ChatGPT 5.1 一起写代码，而不是被替代](/thinking/notes/Vibe-Coding-时代的开发者：如何跟-ChatGPT-5.1-一起写代码，而不是被替代)
+- [Qwen Code 30 个使用小技巧](/thinking/notes/Qwen Code 30个使用小技巧)
 
 #### Wails 实践
-- [Wails Gonavi 实践](/dev/backend/golang/wails/wails-gonavi-practice.md)
+- [Wails Gonavi 实践](/dev/backend/golang/wails/wails-gonavi-practice)
 
 #### 系统对比
-- [现代 Web 系统开发 与 传统 Web 系统开发 的差异](/thinking/method/现代Web系统开发 与 传统Web系统开发 的差异.md)
+- [现代 Web 系统开发 与 传统 Web 系统开发 的差异](/thinking/method/现代Web系统开发 与 传统Web系统开发 的差异)
 
 #### AI 工具应用
-- [使用扣子 AI 打造公众号机器人](/data/automation/使用扣子AI打造公众号机器人.md)
+- [使用扣子 AI 打造公众号机器人](/thinking/notes/使用扣子AI打造公众号机器人)
 
 ---
 
@@ -99,19 +99,19 @@ date: 2025-12-19 12:30:00
 
 ### 具体路径
 1. **建立工程意识**
-   - [现代软件工程原则](/thinking/method/高质量Golang后端的现代软件工程原则.md)
-   - [测试驱动开发](/thinking/method/测试驱动开发 以测试为引擎的软件工程实践.md)
+   - [现代软件工程原则](/thinking/method/高质量Golang后端的现代软件工程原则)
+   - [测试驱动开发](/thinking/method/测试驱动开发 以测试为引擎的软件工程实践)
 
 2. **掌握架构设计**
    - [系统设计方法论](/thinking/method/)
-   - [框架深度解析](/thinking/method/2025年最佳Go-Web框架深度解析：资深开发者的选择指南.md)
+   - [框架深度解析](/thinking/method/2025年最佳Go-Web框架深度解析：资深开发者的选择指南)
 
 3. **深入性能优化**
-   - [并发编程模式](/thinking/method/Go语言并发模式实战指南.md)
-   - [可观测性实践](/thinking/method/从 trace 到洞察：Go 项目的可观测性闭环实践.md)
+   - [并发编程模式](/thinking/method/Go语言并发模式实战指南)
+   - [可观测性实践](/thinking/method/从 trace 到洞察：Go 项目的可观测性闭环实践)
 
 4. **建立运维思维**
-   - [GitOps 实战](/thinking/method/GitOps实战-从应用部署到全生命周期管理.md)
+   - [GitOps 实战](/thinking/method/GitOps实战-从应用部署到全生命周期管理)
    - [DevOps 工程实践](/courses/devops-practice/)
 
 ---

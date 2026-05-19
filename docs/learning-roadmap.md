@@ -218,7 +218,7 @@ tags:
 
 #### 1.1 Docker 基础
 - [Docker 基础入门：从零开始掌握容器化技术](/dev/system/docker-basics) 🟢
-- [Docker 最佳实践](/tools/Docker部署Go项目实践指南) 🟡
+- [Docker 最佳实践](/Tools/Docker部署Go项目实践指南) 🟡
 
 #### 1.2 容器编排
 - [Kubernetes 基础入门](/dev/system/kubernetes-basics) 🟡

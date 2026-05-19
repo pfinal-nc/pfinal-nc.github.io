@@ -33,8 +33,8 @@ tags:
 
 **相关文章推荐：**
 - [PHP 8.4 新特性详解](/dev/backend/php/php-8-4-new-features) - 最新 PHP 语言特性
-- [Composer 配置文件说明](/tools/Composer配置文件说明) - PHP 依赖管理
-- [Nginx 配置文件详解](/tools/Nginx配置文件详解) - Web 服务器配置
+- [Composer 配置文件说明](/Tools/Composer配置文件说明) - PHP 依赖管理
+- [Nginx 配置文件详解](/Tools/Nginx配置文件详解) - Web 服务器配置
 - [Web 安全三大漏洞攻防实战](/security/engineering/sql-injection-xss-csrf) - PHP 安全防护
 - [Redis 基本知识总结](/dev/backend/php/Redis基本知识总结) - 缓存技术
 

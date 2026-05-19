@@ -33,11 +33,11 @@ pageClass: golang-hub-page
 - [**Go数据库操作指南**](/dev/backend/golang/Go数据库操作) - GORM, SQLx, 连接池配置
 
 ### 💻 桌面应用开发 (Wails)
-- [**Wails 桌面应用开发完整指南**](/dev/backend/golang/wails/README.md) - Go 跨平台桌面应用框架
-  - [完整教程系列](/dev/backend/golang/wails/index.md) - 从入门到进阶的完整路径
-  - [实战项目合集](/dev/backend/golang/wails/README.md#实战项目) - 系统托盘、直播工具等
-  - [性能优化指南](/dev/backend/golang/wails/README.md#性能优化) - 内存缓存、启动优化等
-  - [框架对比分析](/dev/backend/golang/wails/Fyne与Wails深度对比-选择最适合你的Go桌面应用框架.md) - Wails vs Fyne
+- [**Wails 桌面应用开发完整指南**](/dev/backend/golang/wails/) - Go 跨平台桌面应用框架
+  - [完整教程系列](/dev/backend/golang/wails/) - 从入门到进阶的完整路径
+  - [实战项目合集](/dev/backend/golang/wails/README#实战项目) - 系统托盘、直播工具等
+  - [性能优化指南](/dev/backend/golang/wails/README#性能优化) - 内存缓存、启动优化等
+  - [框架对比分析](/dev/backend/golang/wails/Fyne与Wails深度对比-选择最适合你的Go桌面应用框架) - Wails vs Fyne
 
 ### 高级主题
 - [**Golang实现RAG系统-从OpenAI到向量数据库**](/dev/backend/golang/Golang实现RAG系统-从OpenAI到向量数据库) - AI工程实践

@@ -10,11 +10,11 @@ const redirectRules = [
   { from: '/golang/Golang实现RAG系统-从OpenAI到向量数据库', to: '/dev/backend/golang/Golang实现RAG系统-从OpenAI到向量数据库' },
   
   // 代码安全扫描文章（旧路径含冒号）
-  { from: '/tools/从手动到自动：Go语言助力快速识别代码中的安全隐患', to: '/tools/从手动到自动-Go语言助力快速识别代码中的安全隐患' },
-  { from: '/Tools/从手动到自动：Go语言助力快速识别代码中的安全隐患', to: '/tools/从手动到自动-Go语言助力快速识别代码中的安全隐患' },
+  { from: '/tools/从手动到自动：Go语言助力快速识别代码中的安全隐患', to: '/Tools/从手动到自动-Go语言助力快速识别代码中的安全隐患' },
+  { from: '/Tools/从手动到自动：Go语言助力快速识别代码中的安全隐患', to: '/Tools/从手动到自动-Go语言助力快速识别代码中的安全隐患' },
   // Arc 浏览器文章
-  { from: '/工具/Arc 浏览器更符合开发者', to: '/tools/Arc 浏览器更符合开发者' },
-  { from: '/工具/Arc浏览器更符合开发者', to: '/tools/Arc 浏览器更符合开发者' },
+  { from: '/工具/Arc 浏览器更符合开发者', to: '/Tools/Arc 浏览器更符合开发者' },
+  { from: '/工具/Arc浏览器更符合开发者', to: '/Tools/Arc 浏览器更符合开发者' },
   
   // ThinkPHP 文章
   { from: '/zh/php/ThinkPHP-20-Years-of-Chinese-Web-Development', to: '/dev/backend/php/ThinkPHP近20年-中国Web开发的时代印记' },
@@ -27,8 +27,8 @@ const redirectRules = [
   { from: '/golang/Go-Develop-Terminal-Tools', to: '/dev/backend/golang/Go 开发终端小工具' },
   
   // Tools 文章重定向
-  { from: '/Tools/Make-CLI-Tools-Brand-New-with-Golang-and-Color', to: '/tools/让CLI工具焕然一新！用golang与Color库打造多彩命令行体验' },
-  { from: '/Tools/Composer-Configuration-File-Explanation', to: '/tools/Composer配置文件说明' },
+  { from: '/Tools/Make-CLI-Tools-Brand-New-with-Golang-and-Color', to: '/Tools/让CLI工具焕然一新！用golang与Color库打造多彩命令行体验' },
+  { from: '/Tools/Composer-Configuration-File-Explanation', to: '/Tools/Composer配置文件说明' },
   
   // 多语言路径重定向
   { from: '/zh/数据库/PostgreSQL-10个鲜为人知的强大功能', to: '/dev/system/database/PostgreSQL-10个鲜为人知的强大功能' },
