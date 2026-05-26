@@ -98,6 +98,44 @@
       flex-wrap: wrap;
       margin-top: 30px;
     }
+    .search {
+      display: flex;
+      gap: 10px;
+      margin: 20px 0 10px;
+    }
+    .search input {
+      flex: 1;
+      padding: 12px 14px;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      font-size: 15px;
+      outline: none;
+    }
+    .search input:focus {
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+    }
+    .search button {
+      padding: 12px 16px;
+      border: none;
+      border-radius: 10px;
+      background: #111827;
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .quick-links {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #6b7280;
+    }
+    .quick-links a {
+      color: #3b82f6;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+    .quick-links a:hover { text-decoration: underline; }
     .btn {
       padding: 12px 30px;
       border: none;
@@ -166,6 +204,18 @@
     <div class="error-code">404</div>
     <h1>🔍 页面未找到</h1>
     <p>抱歉，您访问的页面不存在或已被移动到新地址。</p>
+
+    <form class="search" action="/" method="GET">
+      <input name="s" type="search" placeholder="试试搜索：Go / Kubernetes / RAG ..." aria-label="站内搜索" />
+      <button type="submit">搜索</button>
+    </form>
+    <div class="quick-links">
+      快速入口：
+      <a href="/dev/backend/golang/">Golang</a>
+      <a href="/devops/docker-best-practices">DevOps</a>
+      <a href="/data/automation/">数据与自动化</a>
+      <a href="/tools/">工具</a>
+    </div>
     
     <div id="redirect-info" style="display: none;">
       <div class="redirect-message">
@@ -181,109 +231,229 @@
     
     <div class="buttons">
       <a href="/" class="btn btn-primary">🏠 返回首页</a>
-      <a href="/about" class="btn btn-secondary">📧 联系我们</a>
+      <a href="/contact" class="btn btn-secondary">📧 联系我们</a>
     </div>
   </div>
 
   <script>
     // URL 重定向映射表 - 基于 Search Console 发现的 404 错误 (2025-12-17 更新)
     const redirectMap = {
-      // ========== 2025-12-17 新增 - Search Console 404 修复 ==========
-      // Wails 教程系列
       '/wails-tutorial-series': '/dev/backend/wails-tutorial-series/',
       '/wails-tutorial-series/': '/dev/backend/wails-tutorial-series/',
-      
-      // Golang RAG 系统文章
-      '/golang/Golang实现RAG系统-从OpenAI到向量数据库': '/dev/backend/golang/Golang实现RAG系统-从OpenAI到向量数据库',
-      '/golang/Golang实现RAG系统-从OpenAI到向量数据库.html': '/dev/backend/golang/Golang实现RAG系统-从OpenAI到向量数据库',
-      
-      // Arc 浏览器文章（工具目录）
-      '/工具/Arc 浏览器更符合开发者': '/Tools/Arc 浏览器更符合开发者',
-      '/工具/Arc浏览器更符合开发者': '/Tools/Arc 浏览器更符合开发者',
-      
-      // ThinkPHP 文章（多语言路径重定向）
-      '/zh/php/ThinkPHP-20-Years-of-Chinese-Web-Development': '/dev/backend/php/ThinkPHP近20年-中国Web开发的时代印记',
-      '/php/ThinkPHP-20-Years-of-Chinese-Web-Development': '/dev/backend/php/ThinkPHP近20年-中国Web开发的时代印记',
-      
-      // ========== 具体文章重定向 ==========
-      // 爬虫相关文章 - 已移动到 /data/automation/
       '/爬虫JS逆向Webpack技巧记录.html': '/data/automation/爬虫JS逆向Webpack技巧记录',
       '/爬虫JS逆向Webpack技巧记录': '/data/automation/爬虫JS逆向Webpack技巧记录',
-      
-      // ========== Golang 文章重定向（/golang/ 前缀） ==========
-      // 这些旧路径需要重定向到新的 /dev/backend/golang/ 路径
-      '/golang/Go-CLI-Utility-Development-Practice.html': '/dev/backend/golang/Create Go App CLI 一款快速创建golang项目的工具',
-      '/golang/Go-CLI-Utility-Development-Practice': '/dev/backend/golang/Create Go App CLI 一款快速创建golang项目的工具',
-      '/golang/mastering-go-testing-advanced-techniques': '/dev/backend/golang/Go-testing-synctest-深度解析与实战指南',
-      '/golang/high-performance-websockets-go': '/dev/backend/golang/',
-      '/golang/Quick-Start-to-MCP-Server-Development-in-VSCode.html': '/dev/backend/golang/VS Code 中 MCP 服务器的开发者快速入门',
-      '/golang/Quick-Start-to-MCP-Server-Development-in-VSCode': '/dev/backend/golang/VS Code 中 MCP 服务器的开发者快速入门',
-      '/golang/Go-Develop-Terminal-Tools.html': '/dev/backend/golang/Go 开发终端小工具',
-      '/golang/Go-Develop-Terminal-Tools': '/dev/backend/golang/Go 开发终端小工具',
-      
-      // ========== Tools 文章重定向 ==========
-      '/Tools/Make-CLI-Tools-Brand-New-with-Golang-and-Color': '/tools/让CLI工具焕然一新！用golang与Color库打造多彩命令行体验',
-      '/Tools/Composer-Configuration-File-Explanation': '/tools/Composer配置文件说明',
-      '/Tools/AutoGen in Financial Data Analysis: Automating Workflows with AI Agents.html': '/data/automation/',
-      
-      // ========== 多语言路径重定向（/zh/ 前缀） ==========
-      '/zh/数据库/PostgreSQL-10个鲜为人知的强大功能': '/dev/system/database/PostgreSQL-10个鲜为人知的强大功能',
-      '/zh/wails-tutorial-series/02-first-app.html': '/dev/backend/wails-tutorial-series/02-first-app',
-      '/zh/wails-tutorial-series/00-webkit-and-lifecycle.html': '/dev/backend/wails-tutorial-series/00-webkit-and-lifecycle',
-      
-      // ========== PHP 文章重定向 ==========
-      '/php/Laravel-Manual-Build': '/dev/backend/php/',
-      
-      // ========== 分类页重定向 ==========
-      // 工具分类 → Tools 目录
-      '/categories/工具/': '/Tools/',
-      '/categories/工具': '/Tools/',
-      '/categories/tools/': '/Tools/',
-      '/categories/tools': '/Tools/',
-      '/工具/': '/Tools/',
-      '/工具': '/Tools/',
-      
-      // Golang 分类 → dev/backend/golang 目录
+      '/categories/工具/': '/tools/',
+      '/categories/工具': '/tools/',
+      '/categories/tools/': '/tools/',
+      '/categories/tools': '/tools/',
+      '/工具/': '/tools/',
+      '/工具': '/tools/',
       '/categories/golang/index.html': '/dev/backend/golang/',
       '/categories/golang/': '/dev/backend/golang/',
       '/categories/golang': '/dev/backend/golang/',
-      '/golang/': '/dev/backend/golang/',
-      '/golang': '/dev/backend/golang/',
-      
-      // PHP 分类 → dev/backend/php 目录
       '/categories/php/': '/dev/backend/php/',
       '/categories/php': '/dev/backend/php/',
-      '/php/': '/dev/backend/php/',
-      
-      // 经验分类 → 首页
+      '/categories/python/': '/dev/backend/python/',
+      '/categories/python': '/dev/backend/python/',
       '/categories/经验/': '/',
       '/categories/经验': '/',
-      '/categories/experience/': '/',
-      '/categories/experience': '/',
-      
-      // ========== 归档和特殊页面 ==========
       '/archives/': '/',
-      '/archive/': '/',
       '/archives': '/',
+      '/archive/': '/',
       '/archive': '/',
-      
-      // 友链页面 → 联系页面
       '/links/': '/contact',
       '/links': '/contact',
-      '/link/': '/contact',
-      '/link': '/contact',
-      
-      // ========== 通用分类页 ==========
+      '/golang/': '/dev/backend/golang/',
+      '/golang': '/dev/backend/golang/',
+      '/php/': '/dev/backend/php/',
+      '/php': '/dev/backend/php/',
+      '/python/': '/dev/backend/python/',
+      '/python': '/dev/backend/python/',
+      '/zh/php/ThinkPHP-20-Years-of-Chinese-Web-Development': '/dev/backend/php/ThinkPHP近20年-中国Web开发的时代印记',
+      '/zh/数据库/PostgreSQL-10个鲜为人知的强大功能': '/dev/system/database/PostgreSQL-10个鲜为人知的强大功能',
+      '/zh/wails-tutorial-series/02-first-app.html': '/dev/backend/wails-tutorial-series/02-first-app',
+      '/zh/wails-tutorial-series/00-webkit-and-lifecycle.html': '/dev/backend/wails-tutorial-series/00-webkit-and-lifecycle',
+      '/php/Laravel-Manual-Build': '/dev/backend/php/',
+      '/Tools/Make-CLI-Tools-Brand-New-with-Golang-and-Color': '/tools/让CLI工具焕然一新！用golang与Color库打造多彩命令行体验',
+      '/Tools/Composer-Configuration-File-Explanation': '/tools/Composer配置文件说明',
+      '/工具/Arc 浏览器更符合开发者': '/tools/Arc 浏览器更符合开发者',
+      '/工具/Arc浏览器更符合开发者': '/tools/Arc 浏览器更符合开发者',
       '/categories/': '/',
       '/category/': '/',
-      '/categories': '/',
-      '/category': '/',
-      
-      // ========== 标签页重定向 ==========
       '/tag/': '/',
       '/tags/': '/',
-      '/tag': '/',
-      '/tags': '/',
+      '/golang/Golang中国地址生成扩展包': '/dev/backend/golang/Golang中国地址生成扩展包',
+      '/golang/go-database-sql': '/dev/backend/golang/go-database-sql',
+      '/golang/circuit-breaker-rate-limiting': '/dev/backend/golang/circuit-breaker-rate-limiting',
+      '/golang/使用-Go-systray-构建智能系统托盘应用-Wails-v2-集成实战': '/dev/backend/golang/wails/使用-Go-systray-构建智能系统托盘应用-Wails-v2-集成实战',
+      '/golang/Go-Terminal-Tool-Advanced': '/dev/backend/golang/Go-Terminal-Tool-Advanced',
+      '/golang/go-slice-map': '/dev/backend/golang/go-slice-map',
+      '/golang/golang 脱敏扩展包：简化敏感信息处理的利器': '/dev/backend/golang/golang 脱敏扩展包：简化敏感信息处理的利器',
+      '/golang/2025年将改变我们软件构建方式的6个Go库': '/dev/backend/golang/2025年将改变我们软件构建方式的6个Go库',
+      '/golang/Go 1.26 SIMD编程实战：从入门到高性能优化': '/dev/backend/golang/Go 1.26 SIMD编程实战：从入门到高性能优化',
+      '/golang/Go-1.22新特性实战指南-路由升级与循环变量修复': '/dev/backend/golang/Go-1.22新特性实战指南-路由升级与循环变量修复',
+      '/golang/用 Go 构建一个类 kubectl 的命令行工具': '/dev/backend/golang/用 Go 构建一个类 kubectl 的命令行工具',
+      '/golang/ClickHouse-OLAP-Guide': '/dev/backend/golang/ClickHouse-OLAP-Guide',
+      '/golang/VS Code 中 MCP 服务器的开发者快速入门': '/dev/backend/golang/VS Code 中 MCP 服务器的开发者快速入门',
+      '/golang/2025年最佳Go技术博客推荐：资深开发者的学习宝库': '/dev/backend/golang/2025年最佳Go技术博客推荐：资深开发者的学习宝库',
+      '/golang/go-concurrency-patterns-advanced': '/dev/backend/golang/go-concurrency-patterns-advanced',
+      '/golang/go-distributed-tracing': '/dev/backend/golang/go-distributed-tracing',
+      '/golang/Go-Channel-Batch-Read': '/dev/backend/golang/Go-Channel-Batch-Read',
+      '/golang/go-prometheus-monitoring': '/dev/backend/golang/go-prometheus-monitoring',
+      '/golang/Go 开发终端小工具': '/dev/backend/golang/Go 开发终端小工具',
+      '/golang/go-testing-guide': '/dev/backend/golang/go-testing-guide',
+      '/golang/go-context-guide': '/dev/backend/golang/go-context-guide',
+      '/golang/Wails-Vue-Desktop-App': '/dev/backend/golang/Wails-Vue-Desktop-App',
+      '/golang/go-middleware-patterns': '/dev/backend/golang/go-middleware-patterns',
+      '/golang/提升生产力的 Golang 实用工具推荐让开发更轻松': '/dev/backend/golang/提升生产力的 Golang 实用工具推荐让开发更轻松',
+      '/golang/基于Wails的Mac桌面应用开发': '/dev/backend/golang/wails/基于Wails的Mac桌面应用开发',
+      '/golang/golang系统库之gopsutil': '/dev/backend/golang/golang系统库之gopsutil',
+      '/golang/Go-WASM构建WebAssembly应用的全新尝试': '/dev/backend/golang/Go-WASM构建WebAssembly应用的全新尝试',
+      '/golang/go-restful-api-best-practices': '/dev/backend/golang/go-restful-api-best-practices',
+      '/golang/基于wails和Tailwindcss的应用开发': '/dev/backend/golang/wails/基于wails和Tailwindcss的应用开发',
+      '/golang/加快开发速度的十大必备Go库': '/dev/backend/golang/加快开发速度的十大必备Go库',
+      '/golang/go-goroutine-intro': '/dev/backend/golang/go-goroutine-intro',
+      '/golang/microservices-architecture': '/dev/backend/golang/microservices-architecture',
+      '/golang/使用Go实现服务端事件推送SSE': '/dev/backend/golang/使用Go实现服务端事件推送SSE',
+      '/golang/go-error-handling': '/dev/backend/golang/go-error-handling',
+      '/golang/大模型边缘部署实战：基于Go语言的轻量级推理引擎': '/dev/backend/golang/大模型边缘部署实战：基于Go语言的轻量级推理引擎',
+      '/golang/基于Wails和Vue.js打造跨平台桌面应用': '/dev/backend/golang/wails/基于Wails和Vue.js打造跨平台桌面应用',
+      '/golang/ClickHouse实战：从入门到高性能OLAP查询': '/dev/backend/golang/ClickHouse实战：从入门到高性能OLAP查询',
+      '/golang/go-1-24-new-features': '/dev/backend/golang/go-1-24-new-features',
+      '/golang/Go-SIMD-Programming': '/dev/backend/golang/Go-SIMD-Programming',
+      '/golang/grpc-in-go': '/dev/backend/golang/grpc-in-go',
+      '/golang/Gomail邮件发送包': '/dev/backend/golang/Gomail邮件发送包',
+      '/golang/go:embed 在 Go 开发中的应用与最佳实践': '/dev/backend/golang/go:embed 在 Go 开发中的应用与最佳实践',
+      '/golang/2025年更清洁的Go代码：紧凑的错误管理': '/dev/backend/golang/2025年更清洁的Go代码：紧凑的错误管理',
+      '/golang/Golang实现RAG系统-从OpenAI到向量数据库': '/dev/backend/golang/Golang实现RAG系统-从OpenAI到向量数据库',
+      '/golang/Go-Interface-Parameter-Design': '/dev/backend/golang/Go-Interface-Parameter-Design',
+      '/golang/基于Wails的抖音直播工具': '/dev/backend/golang/wails/基于Wails的抖音直播工具',
+      '/golang/让CLI工具焕然一新！用golang与Color库打造多彩命令行体验': '/dev/backend/golang/让CLI工具焕然一新！用golang与Color库打造多彩命令行体验',
+      '/golang/Go语言开发AI智能体：从Function Calling到Agent框架': '/dev/backend/golang/Go语言开发AI智能体：从Function Calling到Agent框架',
+      '/golang/深入理解Go Channel 批量读取与实际应用': '/dev/backend/golang/深入理解Go Channel 批量读取与实际应用',
+      '/golang/go-waitgroup-mutex': '/dev/backend/golang/go-waitgroup-mutex',
+      '/golang/Wails-Mac-Development': '/dev/backend/golang/Wails-Mac-Development',
+      '/golang/Create Go App CLI 一款快速创建golang项目的工具': '/dev/backend/golang/Create Go App CLI 一款快速创建golang项目的工具',
+      '/golang/Go 语言的高性能 User-Agent 解析库': '/dev/backend/golang/Go 语言的高性能 User-Agent 解析库',
+      '/golang/Go-STW-Truth': '/dev/backend/golang/Go-STW-Truth',
+      '/golang/Go 开发IP过滤小脚本': '/dev/backend/golang/Go 开发IP过滤小脚本',
+      '/golang/golang提升效率的小工具': '/dev/backend/golang/golang提升效率的小工具',
+      '/golang/如何实现 RESTful API 版本控制': '/dev/backend/golang/如何实现 RESTful API 版本控制',
+      '/golang/go-jwt-auth': '/dev/backend/golang/go-jwt-auth',
+      '/golang/AutoCorrent专有名词大小写扩展包': '/dev/backend/golang/AutoCorrent专有名词大小写扩展包',
+      '/golang/Go-Zero-Copy-Reader': '/dev/backend/golang/Go-Zero-Copy-Reader',
+      '/golang/golang 实现协程池': '/dev/backend/golang/golang 实现协程池',
+      '/golang/Wails-Go-Cache-Performance': '/dev/backend/golang/Wails-Go-Cache-Performance',
+      '/golang/Meilisearch：比Elasticsearch更简单的开源搜索引擎': '/dev/backend/golang/Meilisearch：比Elasticsearch更简单的开源搜索引擎',
+      '/golang/Speed-Boost-Static-API-with-Go': '/dev/backend/golang/Speed-Boost-Static-API-with-Go',
+      '/golang/go-channel-guide': '/dev/backend/golang/go-channel-guide',
+      '/golang/RAG落地实战：从0到1构建企业级知识库问答系统': '/dev/backend/golang/RAG落地实战：从0到1构建企业级知识库问答系统',
+      '/golang/GitOps实战：从应用部署到全生命周期管理': '/dev/backend/golang/GitOps实战：从应用部署到全生命周期管理',
+      '/golang/go-basic-syntax': '/dev/backend/golang/go-basic-syntax',
+      '/golang/沃尔玛AI购物、自动化购买决策  的技术原理': '/dev/backend/golang/沃尔玛AI购物、自动化购买决策  的技术原理',
+      '/golang/go-performance-optimization': '/dev/backend/golang/go-performance-optimization',
+      '/golang/Go-RESTful-API-Versioning': '/dev/backend/golang/Go-RESTful-API-Versioning',
+      '/golang/Stop-The-World-其实没停下-Go-GC-的微暂停真相': '/dev/backend/golang/Stop-The-World-其实没停下-Go-GC-的微暂停真相',
+      '/golang/gorm-tutorial': '/dev/backend/golang/gorm-tutorial',
+      '/golang/提升Wails应用性能：探索Go-Cache的高效内存缓存方案': '/dev/backend/golang/wails/提升Wails应用性能：探索Go-Cache的高效内存缓存方案',
+      '/golang/每个-Golang-程序员都需要这个': '/dev/backend/golang/每个-Golang-程序员都需要这个',
+      '/golang/go-workspace-modules': '/dev/backend/golang/go-workspace-modules',
+      '/golang/go-memory-management-gc': '/dev/backend/golang/go-memory-management-gc',
+      '/golang/Go-testing-synctest-深度解析与实战指南': '/dev/backend/golang/Go-testing-synctest-深度解析与实战指南',
+      '/golang/Wails-Douyin-Live-Tool': '/dev/backend/golang/Wails-Douyin-Live-Tool',
+      '/golang/go-redis-practice': '/dev/backend/golang/go-redis-practice',
+      '/golang/Wails-Tailwind-Development': '/dev/backend/golang/Wails-Tailwind-Development',
+      '/golang/go-production-logging-healthcheck': '/dev/backend/golang/go-production-logging-healthcheck',
+      '/golang/Go 零拷贝读取器实战与原理解析': '/dev/backend/golang/Go 零拷贝读取器实战与原理解析',
+      '/golang/GO语言开发终端小工具后续': '/dev/backend/golang/GO语言开发终端小工具后续',
+      '/golang/grpc-protobuf-guide': '/dev/backend/golang/grpc-protobuf-guide',
+      '/golang/接口参数设计-多场景复用的优雅之道': '/dev/backend/golang/接口参数设计-多场景复用的优雅之道',
+      '/golang/runtime.free 打破Go GC性能瓶颈的秘密武器': '/dev/backend/golang/runtime.free 打破Go GC性能瓶颈的秘密武器',
+      '/golang/9个没有竞争但需求巨大的微型SaaS理念': '/dev/backend/golang/9个没有竞争但需求巨大的微型SaaS理念',
+      '/golang/gin-framework-guide': '/dev/backend/golang/gin-framework-guide',
+      '/golang/Go-runtime-free-GC-Optimization': '/dev/backend/golang/Go-runtime-free-GC-Optimization',
+      '/golang/go-generics-guide': '/dev/backend/golang/go-generics-guide',
+      '/golang/Deep-Dive-Go-Memory-Allocation': '/dev/backend/golang/Deep-Dive-Go-Memory-Allocation',
+      '/golang/00-webkit-and-lifecycle': '/dev/backend/golang/wails/00-webkit-and-lifecycle',
+      '/golang/04-frontend-development': '/dev/backend/golang/wails/04-frontend-development',
+      '/golang/01-installation': '/dev/backend/golang/wails/01-installation',
+      '/golang/wails-gonavi-practice': '/dev/backend/golang/wails/wails-gonavi-practice',
+      '/golang/02-first-app': '/dev/backend/golang/wails/02-first-app',
+      '/golang/README': '/dev/backend/golang/wails/README',
+      '/golang/Fyne与Wails深度对比-选择最适合你的Go桌面应用框架': '/dev/backend/golang/wails/Fyne与Wails深度对比-选择最适合你的Go桌面应用框架',
+      '/golang/03-core-concepts': '/dev/backend/golang/wails/03-core-concepts',
+      '/golang/05-backend-development': '/dev/backend/golang/wails/05-backend-development',
+      '/Tools/Composer配置文件说明': '/tools/Composer配置文件说明',
+      '/Tools/服务器进程日志分析：从头皮发麻到AI解救': '/tools/服务器进程日志分析：从头皮发麻到AI解救',
+      '/Tools/程序员必备神器：PF-password密码管理器': '/tools/程序员必备神器：PF-password密码管理器',
+      '/Tools/Arc 浏览器更符合开发者': '/tools/Arc 浏览器更符合开发者',
+      '/Tools/IDE偷懒小工具': '/tools/IDE偷懒小工具',
+      '/Tools/Git高级命令教程': '/tools/Git高级命令教程',
+      '/Tools/单文件代码部署工具': '/tools/单文件代码部署工具',
+      '/Tools/PHPStorm快捷键': '/tools/PHPStorm快捷键',
+      '/Tools/浏览器小技巧': '/tools/浏览器小技巧',
+      '/Tools/Tmux 常用快捷键': '/tools/Tmux 常用快捷键',
+      '/Tools/PF-Password-Manager': '/tools/PF-Password-Manager',
+      '/Tools/开源开发者必备-toilet终端ASCII艺术字工具': '/tools/开源开发者必备-toilet终端ASCII艺术字工具',
+      '/Tools/Nginx配置文件详解': '/tools/Nginx配置文件详解',
+      '/Tools/使用Devslog结构化日志处理': '/tools/使用Devslog结构化日志处理',
+      '/Tools/Docker部署Go项目实践指南': '/tools/Docker部署Go项目实践指南',
+      '/Tools/使用Homebrew Tap发布个人工具': '/tools/使用Homebrew Tap发布个人工具',
+      '/Tools/Git 基本操作': '/tools/Git 基本操作',
+      '/Tools/online-tools': '/tools/online-tools',
+      '/Tools/VSCode快捷键': '/tools/VSCode快捷键',
+      '/Tools/Devslog-Structured-Logging': '/tools/Devslog-Structured-Logging',
+      '/Tools/Docker-Go-Deployment': '/tools/Docker-Go-Deployment',
+      '/Tools/Broot-高效的命令行文件管理器': '/tools/Broot-高效的命令行文件管理器',
+      '/php/Redis-Configuration-Guide': '/dev/backend/php/Redis-Configuration-Guide',
+      '/php/PHP配置文件详解': '/dev/backend/php/PHP配置文件详解',
+      '/php/PHP $_SESSION 引发的Bug': '/dev/backend/php/PHP $_SESSION 引发的Bug',
+      '/php/构建可维护的正则表达式系统-pfinal-regex-center设计与实现': '/dev/backend/php/构建可维护的正则表达式系统-pfinal-regex-center设计与实现',
+      '/php/Coze 扩展包 PHP 版本': '/dev/backend/php/Coze 扩展包 PHP 版本',
+      '/php/PHP MCP 扩展': '/dev/backend/php/PHP MCP 扩展',
+      '/php/Redis基本知识总结': '/dev/backend/php/Redis基本知识总结',
+      '/php/PHP的协程池': '/dev/backend/php/PHP的协程池',
+      '/php/Laravel 手工构建': '/dev/backend/php/Laravel 手工构建',
+      '/php/TCP-IP-HTTP学习': '/dev/backend/php/TCP-IP-HTTP学习',
+      '/php/PHP钩子的应用': '/dev/backend/php/PHP钩子的应用',
+      '/php/Go协程与PHP-Fibers并发编程对比': '/dev/backend/php/Go协程与PHP-Fibers并发编程对比',
+      '/php/PHP旧项目重构实战：从单体到微服务': '/dev/backend/php/PHP旧项目重构实战：从单体到微服务',
+      '/php/PHP-Process-Thread-Analysis': '/dev/backend/php/PHP-Process-Thread-Analysis',
+      '/php/ThinkPHP近20年-中国Web开发的时代印记': '/dev/backend/php/ThinkPHP近20年-中国Web开发的时代印记',
+      '/php/现代PHP开发实战': '/dev/backend/php/现代PHP开发实战',
+      '/php/让 Qwen3 和 Deepseek 懂 Function Calling-PHP篇-opt': '/dev/backend/php/让 Qwen3 和 Deepseek 懂 Function Calling-PHP篇-opt',
+      '/php/PHP之异步处理': '/dev/backend/php/PHP之异步处理',
+      '/php/PHP-FPM配置文件详解': '/dev/backend/php/PHP-FPM配置文件详解',
+      '/php/PHP $_SERVER详解': '/dev/backend/php/PHP $_SERVER详解',
+      '/php/Laravel-Carbon-Class-Usage': '/dev/backend/php/Laravel-Carbon-Class-Usage',
+      '/php/PHP 错误与异常处理': '/dev/backend/php/PHP 错误与异常处理',
+      '/php/Laravel-Admin-Special-Routes': '/dev/backend/php/Laravel-Admin-Special-Routes',
+      '/php/PHP 大杀器之生成器': '/dev/backend/php/PHP 大杀器之生成器',
+      '/php/php-8-4-new-features': '/dev/backend/php/php-8-4-new-features',
+      '/php/PHP-8.5-NoDiscard-属性详解': '/dev/backend/php/PHP-8.5-NoDiscard-属性详解',
+      '/python/Python-时间序列分析-从基础到实战': '/dev/backend/python/Python-时间序列分析-从基础到实战',
+      '/python/Python-Asyncio-Advanced-Patterns': '/dev/backend/python/Python-Asyncio-Advanced-Patterns',
+      '/python/Scrapy爬虫框架实战 - 分布式爬虫、反爬虫对策': '/dev/backend/python/Scrapy爬虫框架实战 - 分布式爬虫、反爬虫对策',
+      '/python/Python-自然语言处理-NLP实战指南': '/dev/backend/python/Python-自然语言处理-NLP实战指南',
+      '/python/Flask轻量级应用构建 - 扩展开发、蓝图设计': '/dev/backend/python/Flask轻量级应用构建 - 扩展开发、蓝图设计',
+      '/python/Python-Web爬虫实战-从入门到精通': '/dev/backend/python/Python-Web爬虫实战-从入门到精通',
+      '/python/Python-Faker库常用函数': '/dev/backend/python/Python-Faker库常用函数',
+      '/python/Python常用网站搜集': '/dev/backend/python/Python常用网站搜集',
+      '/python/Python-数据可视化实战-Matplotlib-Seaborn-Plotly完全指南': '/dev/backend/python/Python-数据可视化实战-Matplotlib-Seaborn-Plotly完全指南',
+      '/python/python-automation-scripts': '/dev/backend/python/python-automation-scripts',
+      '/python/Python-Data-Visualization-Guide': '/dev/backend/python/Python-Data-Visualization-Guide',
+      '/python/FastAPI测试与部署-生产环境最佳实践': '/dev/backend/python/FastAPI测试与部署-生产环境最佳实践',
+      '/python/Python-数据分析入门-Pandas与NumPy基础': '/dev/backend/python/Python-数据分析入门-Pandas与NumPy基础',
+      '/python/Python-机器学习入门-Scikit-learn实战指南': '/dev/backend/python/Python-机器学习入门-Scikit-learn实战指南',
+      '/python/Python版本管理神器之pyenv': '/dev/backend/python/Python版本管理神器之pyenv',
+      '/python/FastAPI中间件与依赖注入-构建可扩展的API架构': '/dev/backend/python/FastAPI中间件与依赖注入-构建可扩展的API架构',
+      '/python/FastAPI现代化Web开发 - 异步开发、自动API文档生成': '/dev/backend/python/FastAPI现代化Web开发 - 异步开发、自动API文档生成',
+      '/python/FastAPI-从零开始构建高性能API-快速入门指南': '/dev/backend/python/FastAPI-从零开始构建高性能API-快速入门指南',
+      '/python/Python-推荐系统实战-从算法到应用': '/dev/backend/python/Python-推荐系统实战-从算法到应用',
+      '/python/Python-深度学习入门-PyTorch实战指南': '/dev/backend/python/Python-深度学习入门-PyTorch实战指南',
+      '/python/FastAPI异步编程与性能优化-打造高并发API': '/dev/backend/python/FastAPI异步编程与性能优化-打造高并发API',
+      '/python/FastAPI实战案例-从零构建企业级API': '/dev/backend/python/FastAPI实战案例-从零构建企业级API',
+      '/python/Python-TensorFlow实战-Keras入门到精通': '/dev/backend/python/Python-TensorFlow实战-Keras入门到精通',
     };
 
     // 智能重定向函数
@@ -291,6 +461,17 @@
       const currentPath = window.location.pathname;
       const currentPathLower = currentPath.toLowerCase();
       console.log('Current 404 path:', currentPath);
+
+      // 0. 处理大小写导致的路径问题（macOS 本地通常不敏感，但 GitHub Pages/Linux 敏感）
+      // 例如：/Tools/xxx → /tools/xxx
+      if (currentPathLower === '/tools' || currentPathLower === '/tools/' || currentPathLower.startsWith('/tools/')) {
+        const canonicalPath = '/tools' + currentPath.substring('/tools'.length);
+        if (canonicalPath !== currentPath) {
+          console.log('Case-normalized redirect:', canonicalPath);
+          showRedirectMessage(canonicalPath, false);
+          return;
+        }
+      }
       
       // 1. 精确匹配（优先级最高）
       if (redirectMap[currentPath]) {
@@ -307,8 +488,8 @@
           const category = parts[1];
           // 特殊分类映射
           const categoryMap = {
-            '工具': '/Tools/',
-            'tools': '/Tools/',
+            '工具': '/tools/',
+            'tools': '/tools/',
             'golang': '/dev/backend/golang/',
             'go': '/dev/backend/golang/',
             'php': '/dev/backend/php/',
@@ -410,7 +591,7 @@
             `/dev/backend/golang/${slug}`,
             `/dev/backend/php/${slug}`,
             `/data/automation/${slug}`,
-            `/Tools/${slug}`
+            `/tools/${slug}`
           ];
           console.log('Post/article redirect:', possibleUrls[0]);
           showRedirectMessage(possibleUrls[0], true);
@@ -560,4 +741,3 @@
   </script>
 </body>
 </html>
-
