@@ -10,9 +10,9 @@ keywords:
   - Docker Compose
   - 容器化技术
 tags:
-  - devops
-  - docker
-  - tutorial
+  - DevOps
+  - Docker
+  - Tutorial
 ---
 
 # Docker 基础入门：从零开始掌握容器化技术

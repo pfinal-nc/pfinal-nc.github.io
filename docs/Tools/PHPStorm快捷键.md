@@ -3,14 +3,14 @@ title: "PHPStorm 快捷键 - 使用指南"
 date: 2022-07-04 10:31:10
 tags:
   - 工具
-  - PHP
+  - php
 description: PHPStorm快捷键
 author: PFinal南丞
 keywords:
   - PHPStorm
   - 快捷键
   - IDE
-  - PHP开发
+  - php
   - 效率提升
   - JetBrains
   - 开发工具

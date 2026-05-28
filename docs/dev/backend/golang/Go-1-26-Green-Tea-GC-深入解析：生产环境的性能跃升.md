@@ -13,7 +13,7 @@ keywords:
   - GC 调优
   - 向量化扫描
 tags:
-  - Go语言
+  - golang
   - 性能优化
   - 运行时
   - GC

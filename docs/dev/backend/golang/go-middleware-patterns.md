@@ -4,7 +4,7 @@ date: 2026-04-22 00:00:00
 author: PFinal南丞
 description: "深入学习 Go 语言中间件设计模式，掌握洋葱模型、链式调用、AOP 编程等核心技术，构建可扩展的 HTTP 中间件系统。"
 keywords:
-  - Go
+  - golang
   - 中间件
   - Middleware
   - 洋葱模型

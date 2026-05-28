@@ -4,7 +4,7 @@ description: "全面梳理 Go 语言安全开发实践，涵盖 SQL 注入、XSS
 date: 2026-04-20 10:00:00
 author: PFinal南丞
 tags:
-  - Golang
+  - golang
   - 安全开发
   - 代码审计
   - gosec

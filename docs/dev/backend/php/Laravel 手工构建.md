@@ -8,20 +8,18 @@ tag:
 description: '手工构建laravel 框架,详细介绍了从项目初始化到添加各个组件的完整过程。'
 keywords:
   - Laravel手工构建
-  - PHP框架开发
+  - PHP框架
   - Laravel架构设计
   - Composer包管理
   - Laravel核心组件
-  - PHP MVC框架
   - 框架构建教程
   - Laravel路由系统
   - 依赖注入容器
-  - PHP框架设计模式
 recommend: 后端工程
 tags:
   - AI
   - Architecture
-  - Backend
+  - 后端开发
   - Database
   - Docker
   - HTTP

@@ -4,7 +4,7 @@ date: 2026-04-22 00:00:00
 author: PFinal南丞
 description: "深入学习 Go 语言集成 Prometheus 监控系统，掌握指标类型、自定义指标、Grafana 可视化等核心技能，构建完整的应用监控体系。"
 keywords:
-  - Go
+  - golang
   - Prometheus
   - 监控
   - Metrics
@@ -14,7 +14,7 @@ tags:
   - golang
   - prometheus
   - monitoring
-  - observability
+  - Observability
 ---
 
 # Go 集成 Prometheus 监控

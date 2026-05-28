@@ -12,7 +12,7 @@ keywords:
   - 代码补全
   - 效率工具
   - VSCode插件
-  - PHPStorm插件
+  - PHPStorm
   - 编程效率
 ---
 

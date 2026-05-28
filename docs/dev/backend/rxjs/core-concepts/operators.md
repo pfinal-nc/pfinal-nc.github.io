@@ -15,12 +15,12 @@ course:
   module: 1
   lesson: 1.6
 tags:
-  - Frontend
+  - 前端开发
   - JavaScript
   - Operators
   - Performance
   - RxJS
-  - Security
+  - security
 ---
 
 # RxJS 操作符详解

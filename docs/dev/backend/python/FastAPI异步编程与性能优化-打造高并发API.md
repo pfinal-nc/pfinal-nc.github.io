@@ -13,10 +13,10 @@ keywords:
   - 缓存
   - 并发控制
 tags:
-  - python
-  - fastapi
+  - Python
+  - FastAPI
   - async
-  - performance
+  - Performance
   - optimization
   - high-concurrency
 difficulty: 高级

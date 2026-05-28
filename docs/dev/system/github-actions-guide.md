@@ -12,7 +12,7 @@ keywords:
 tags:
   - github-actions
   - cicd
-  - devops
+  - DevOps
   - automation
 ---
 

@@ -4,14 +4,14 @@ date: 2026-04-22
 author: PFinal南丞
 description: "深入讲解 Go 语言的高级并发编程模式，包括 Pipeline、Fan-out/Fan-in、Context 控制、错误处理等实战技巧。"
 keywords:
-  - Go
+  - golang
   - 并发模式
   - Pipeline
   - Fan-out
   - Context
   - 高级并发
 tags:
-  - Go
+  - golang
   - Concurrency
   - Patterns
   - Advanced

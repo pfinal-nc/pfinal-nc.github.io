@@ -11,17 +11,17 @@ keywords:
   - Node.js安装
   - Wails CLI
   - 桌面应用开发环境
-  - Wails教程
+  - Wails
 course:
   name: Wails 跨平台桌面开发实战
   module: 1
   lesson: 1.2
 tags:
   - AI
-  - Backend
+  - 后端开发
   - Desktop
   - Git
-  - Golang
+  - golang
   - HTTP
 ---
 

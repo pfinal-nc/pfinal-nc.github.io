@@ -7,8 +7,8 @@ keywords:
   - 关于
   - PFinalClub
   - 开发者社区
-  - PHP
-  - Golang
+  - php
+  - golang
   - Python
   - 微服务
   - 云原生

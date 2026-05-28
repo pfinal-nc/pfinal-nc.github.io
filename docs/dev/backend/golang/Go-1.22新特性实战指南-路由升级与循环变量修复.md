@@ -9,7 +9,7 @@ keywords:
   - 循环变量修复
   - 内联增强
 tags:
-  - Go语言
+  - golang
   - 运行时
   - 安全工程
   - 密码学

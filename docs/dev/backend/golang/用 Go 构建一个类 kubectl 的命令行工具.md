@@ -2,11 +2,11 @@
 title: 用 Go 构建一个类 `kubectl` 的命令行工具
 date: 2025-07-17 17:15:27
 tags:
-  - Golang
+  - golang
 description: 打造你的 CLI 神器：用 Go 构建一个类 `kubectl` 的命令行工具
 author: PFinal南丞
 keywords:
-  - Go
+  - golang
   - 命令行工具
   - kubectl
   - CLI

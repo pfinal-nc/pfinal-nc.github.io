@@ -4,7 +4,7 @@ date: 2026-04-22 00:00:00
 author: PFinal南丞
 description: "深入学习 Go 语言分布式追踪实现，掌握 OpenTelemetry、Jaeger、Zipkin 等工具的使用，构建完整的分布式链路追踪系统。"
 keywords:
-  - Go
+  - golang
   - 分布式追踪
   - Distributed Tracing
   - OpenTelemetry
@@ -13,7 +13,7 @@ keywords:
 tags:
   - golang
   - distributed-tracing
-  - observability
+  - Observability
   - microservices
 ---
 

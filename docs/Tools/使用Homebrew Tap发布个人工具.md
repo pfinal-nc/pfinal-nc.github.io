@@ -8,7 +8,7 @@ author: PFinal南丞
 keywords:
   - Homebrew Tap
   - 工具发布
-  - Golang
+  - golang
   - GoReleaser
   - GitHub Actions
   - MacOS包管理

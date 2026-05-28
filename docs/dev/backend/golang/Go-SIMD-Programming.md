@@ -12,7 +12,7 @@ date: 2026-04-22
 tags:
   - golang
   - simd
-  - performance
+  - Performance
   - optimization
 ---
 

@@ -10,7 +10,7 @@ keywords:
   - 边缘计算
   - 性能优化
 tags:
-  - Go语言
+  - golang
   - AI推理
   - 边缘计算
   - 模型部署

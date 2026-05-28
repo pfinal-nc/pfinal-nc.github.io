@@ -11,7 +11,7 @@ tags:
 description: 探索构建高质量 Golang 后端的现代软件工程原则，从架构设计到性能优化，从代码质量到团队协作，为你提供实用的技术指南和最佳实践。
 author: PFinal南丞
 keywords:
-  - Golang
+  - golang
   - 软件工程
   - 架构设计
   - 最佳实践

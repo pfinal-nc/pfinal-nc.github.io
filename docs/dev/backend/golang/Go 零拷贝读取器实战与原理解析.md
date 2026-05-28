@@ -9,7 +9,7 @@ tags:
 description: 结合实战案例，深入浅出地介绍 Go 语言中的零拷贝读取器原理、实现方式、技术挑战与最佳实践。
 author: PFinal南丞
 keywords:
-  - Go
+  - golang
   - 零拷贝
   - IO
   - 性能优化

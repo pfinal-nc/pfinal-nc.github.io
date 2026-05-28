@@ -10,7 +10,7 @@ keywords:
   - Promise.all
   - 并行
 tags:
-  - Frontend
+  - 前端开发
   - HTTP
   - JavaScript
   - Operators

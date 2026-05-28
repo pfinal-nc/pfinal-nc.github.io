@@ -12,7 +12,7 @@ tags:
   - Deepseek
   - GLM4
 keywords:
-  - PHP异步编程
+  - PHP异步
   - Function Calling
   - Tool Calls
   - pfinal-asyncio
@@ -26,7 +26,7 @@ keywords:
   - 异步并发
   - Ollama
   - 工具调用
-  - PHP AI开发
+  - php
 description: >-
   实战教程：如何让本地运行的 Qwen3、Deepseek-Coder-V3、GLM4-Chat 等模型像 OpenAI GPT-4 一样支持原生
   Function Calling。通过 pfinal-asyncio 异步框架实现完全兼容 OpenAI 接口规范的工具调用，并发执行性能提升

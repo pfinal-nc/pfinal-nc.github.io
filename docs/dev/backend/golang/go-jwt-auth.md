@@ -4,7 +4,7 @@ date: 2026-04-22 00:00:00
 author: PFinal南丞
 description: "深入学习 Go 语言 JWT 认证实现，掌握 Token 生成、验证、刷新机制，以及 RBAC 权限控制，构建安全的 API 认证系统。"
 keywords:
-  - Go
+  - golang
   - JWT
   - 认证
   - 授权

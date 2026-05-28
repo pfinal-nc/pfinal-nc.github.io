@@ -4,13 +4,13 @@ date: 2026-04-22
 author: PFinal南丞
 description: "深入讲解 Go 语言的内存管理机制和垃圾回收器（GC）的工作原理，包括内存分配、GC 算法、调优技巧等内容。"
 keywords:
-  - Go
+  - golang
   - 内存管理
   - 垃圾回收
   - GC
   - 性能优化
 tags:
-  - Go
+  - golang
   - Memory
   - GC
   - Performance

@@ -3,14 +3,14 @@ title: "Docker 部署 Go 项目实践指南"
 description: "详细介绍如何使用 Docker 容器化部署 Go 项目，包括多阶段构建、镜像优化、Compose 配置等最佳实践。"
 keywords:
   - Docker
-  - Go
+  - golang
   - 容器化
   - 部署
   - 多阶段构建
 author: PFinal南丞
 date: 2026-04-22
 tags:
-  - docker
+  - Docker
   - golang
   - deployment
   - container

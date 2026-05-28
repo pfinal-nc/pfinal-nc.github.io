@@ -4,7 +4,7 @@ description: "专业的后端开发与系统架构指南，涵盖Go、PHP、Pyth
 keywords:
   - 后端开发
   - Go教程
-  - PHP开发
+  - php
   - Python后端
   - 系统架构
   - 性能优化
@@ -16,7 +16,7 @@ tags:
   - dev
   - golang
   - php
-  - python
+  - Python
   - 数据库
 sticky: true
 date: 2025-12-19 12:30:00

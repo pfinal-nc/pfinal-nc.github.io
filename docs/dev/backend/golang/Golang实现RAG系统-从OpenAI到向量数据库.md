@@ -9,7 +9,7 @@ categories:
   - 开发与系统
   - Go实战
 tags:
-  - go
+  - golang
   - rag
   - ai-engineering
   - 向量数据库

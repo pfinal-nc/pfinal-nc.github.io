@@ -9,18 +9,18 @@ keywords:
   - Go语言开发
   - Wails业务逻辑
   - 系统API调用
-  - Go桌面应用
+  - golang
   - Wails数据处理
-  - Wails教程
+  - Wails
 course:
   name: Wails 跨平台桌面开发实战
   module: 2
   lesson: 2.3
 tags:
   - AI
-  - Backend
+  - 后端开发
   - Desktop
-  - Golang
+  - golang
   - HTTP
   - Performance
 ---

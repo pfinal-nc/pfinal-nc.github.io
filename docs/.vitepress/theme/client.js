@@ -15,8 +15,8 @@ export default {
 
         // 智能重定向规则（基于 GSC 发现的 404 错误 - 2025-12-17 更新）
         const redirectRules = [
-          { from: '/wails-tutorial-series', to: '/dev/backend/wails-tutorial-series/' },
-          { from: '/wails-tutorial-series/', to: '/dev/backend/wails-tutorial-series/' },
+          { from: '/wails-tutorial-series', to: '/dev/backend/golang/wails/' },
+          { from: '/wails-tutorial-series/', to: '/dev/backend/golang/wails/' },
           { from: '/爬虫JS逆向Webpack技巧记录.html', to: '/data/automation/爬虫JS逆向Webpack技巧记录' },
           { from: '/爬虫JS逆向Webpack技巧记录', to: '/data/automation/爬虫JS逆向Webpack技巧记录' },
           { from: '/categories/工具/', to: '/Tools/' },
@@ -48,8 +48,8 @@ export default {
           { from: '/python', to: '/dev/backend/python/' },
           { from: '/zh/php/ThinkPHP-20-Years-of-Chinese-Web-Development', to: '/dev/backend/php/ThinkPHP近20年-中国Web开发的时代印记' },
           { from: '/zh/数据库/PostgreSQL-10个鲜为人知的强大功能', to: '/dev/system/database/PostgreSQL-10个鲜为人知的强大功能' },
-          { from: '/zh/wails-tutorial-series/02-first-app.html', to: '/dev/backend/wails-tutorial-series/02-first-app' },
-          { from: '/zh/wails-tutorial-series/00-webkit-and-lifecycle.html', to: '/dev/backend/wails-tutorial-series/00-webkit-and-lifecycle' },
+          { from: '/zh/wails-tutorial-series/02-first-app.html', to: '/dev/backend/golang/wails/02-first-app' },
+          { from: '/zh/wails-tutorial-series/00-webkit-and-lifecycle.html', to: '/dev/backend/golang/wails/00-webkit-and-lifecycle' },
           { from: '/php/Laravel-Manual-Build', to: '/dev/backend/php/' },
           { from: '/Tools/Make-CLI-Tools-Brand-New-with-Golang-and-Color', to: '/Tools/让CLI工具焕然一新！用golang与Color库打造多彩命令行体验' },
           { from: '/Tools/Composer-Configuration-File-Explanation', to: '/Tools/Composer配置文件说明' },

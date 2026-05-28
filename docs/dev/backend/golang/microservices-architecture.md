@@ -3,7 +3,7 @@ title: Go 微服务架构实战指南
 date: 2026-04-24
 category: dev/backend/golang
 tags:
-  - Go
+  - golang
   - 微服务
   - gRPC
   - 架构设计

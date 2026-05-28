@@ -12,7 +12,7 @@ keywords:
   - 开发
   - 尝试
   - 桌面应用
-  - Go
+  - golang
   - Web开发
   - Tailwindcss
   - sqlite

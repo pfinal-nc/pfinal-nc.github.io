@@ -7,15 +7,12 @@ tags:
 description: Laravel-admin特殊路由操作
 author: PFinal南丞
 keywords:
-  - PHP
+  - php
   - 进程
   - 线程
   - 解析
   - PHP进程
   - PHP线程
-  - PHP进程线程
-  - PHP进程线程解析
-  - PHP进程线程解析
   - Laravel-admin特殊路由操作
   - Laravel-admin路由配置
   - Laravel-admin分表设计

@@ -2,7 +2,7 @@
 title: 从 trace 到洞察 Go 项目的可观测性闭环实践
 date: 2025-10-29 10:00:00
 tags:
-  - Golang
+  - golang
   - 可观测性
   - OpenTelemetry
 description: >-

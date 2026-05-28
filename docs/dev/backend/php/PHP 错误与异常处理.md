@@ -6,7 +6,7 @@ tags:
 description: 详细介绍PHP错误与异常处理的概念、分类、处理方式等，帮助开发者更好地处理程序中的错误和异常，提高程序的健壮性和稳定性。
 author: PFinal南丞
 keywords:
-  - PHP
+  - php
   - 错误与异常处理
   - 异常
   - 错误
@@ -16,17 +16,7 @@ keywords:
   - 程序
   - 健壮性
   - 稳定性
-  - PHP错误与异常处理
-  - PHP错误处理机制
-  - PHP异常处理教程
-  - PHP错误级别
-  - PHP错误日志
-  - PHP异常捕获
-  - PHP程序健壮性
-  - PHP错误调试
-  - PHP异常处理最佳实践
-  - PHP错误处理技巧
-  - PHP程序稳定性
+  - PHP错误处理
 recommend: 后端工程
 ---
 

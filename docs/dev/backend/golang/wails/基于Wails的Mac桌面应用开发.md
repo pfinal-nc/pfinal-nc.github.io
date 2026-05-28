@@ -8,20 +8,17 @@ description: 基于Wails的Mac桌面应用开发
 author: PFinal南丞
 keywords:
   - Wails
-  - Golang
-  - Go
+  - golang
   - GUI
   - 桌面应用
   - Mac
   - macOS
   - 跨平台
-  - Wails教程
   - Wails指南
   - Wails安装
   - Wails初始化
   - Wails开发
   - Wails构建
-  - Go GUI
   - Golang GUI
   - Go桌面开发
   - Golang桌面开发

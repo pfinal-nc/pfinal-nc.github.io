@@ -11,8 +11,8 @@ author: PFinal南丞
 date: 2026-04-22
 tags:
   - gitops
-  - devops
-  - kubernetes
+  - DevOps
+  - Kubernetes
   - cicd
 ---
 

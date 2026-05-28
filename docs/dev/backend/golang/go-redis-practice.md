@@ -4,7 +4,7 @@ date: 2026-04-22 00:00:00
 author: PFinal南丞
 description: "深入学习 Go 语言操作 Redis，掌握连接池、常用数据结构、分布式锁、缓存模式等核心技能，构建高性能缓存系统。"
 keywords:
-  - Go
+  - golang
   - Redis
   - 缓存
   - 分布式锁

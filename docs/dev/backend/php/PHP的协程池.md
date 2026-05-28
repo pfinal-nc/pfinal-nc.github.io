@@ -6,22 +6,21 @@ tags:
   - php
   - Workerman
   - 协程
-  - Go
+  - golang
   - 高并发
 keywords:
-  - PHP协程池
+  - PHP协程
   - Workerman协程
   - PHP高并发
   - 协程池实现
   - Go协程池
-  - PHP并发编程
+  - PHP并发
   - Channel通道
   - 协程调度
   - 数据库连接池
   - 动态协程池
-  - PHP性能优化
+  - PHP性能
   - Workerman实战
-  - PHP协程化
   - 高并发优化
   - 协程池监控
 description: >-

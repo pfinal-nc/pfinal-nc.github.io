@@ -88,7 +88,7 @@ function formatCategoryName(name: string): string {
     'zh': '中文',
     '工具': '工具',
     '数据库': '数据库',
-    'wails-tutorial-series': 'Wails 教程系列'
+    'golang/wails': 'Wails 教程系列'
   }
   
   return categoryMap[name] || name.charAt(0).toUpperCase() + name.slice(1)

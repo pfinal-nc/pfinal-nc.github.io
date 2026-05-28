@@ -8,7 +8,7 @@ keywords:
   - 限流
   - 降级
   - 微服务
-  - Go
+  - golang
   - Circuit Breaker
   - Rate Limiting
 tags:

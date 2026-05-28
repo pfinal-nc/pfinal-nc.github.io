@@ -13,7 +13,7 @@ course:
   module: 1
   lesson: 1.3
 tags:
-  - Frontend
+  - 前端开发
   - JavaScript
   - RxJS
 ---

@@ -13,7 +13,7 @@ tags:
   - golang
   - gorm
   - database
-  - tutorial
+  - Tutorial
 ---
 
 # GORM 实战教程：Go 语言 ORM 从入门到高级

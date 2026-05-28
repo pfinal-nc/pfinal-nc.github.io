@@ -8,7 +8,7 @@ categories:
   - 开发与系统
   - Python 实战
 tags:
-  - python
+  - Python
   - asyncio
   - 异步编程
   - 并发

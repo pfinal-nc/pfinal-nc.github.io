@@ -4,20 +4,19 @@ date: 2025-01-27 00:00:00
 author: PFinal南丞
 description: 深入分析 Fyne 框架的架构设计、技术实现和设计模式，为资深 Go 开发者提供技术洞察。
 tags:
-  - Go
+  - golang
   - GUI
   - Fyne
   - 架构设计
   - 跨平台
 keywords:
   - Fyne框架
-  - Go GUI
+  - golang
   - 架构设计
   - 跨平台开发
   - Widget系统
   - 渲染引擎
   - 主题系统
-  - Go桌面应用
 ---
 
 # Fyne 深度技术解析,从 Wails 到 Fyne
@@ -1128,7 +1127,7 @@ func (eh *ErrorHandler) HandlePanic() {
 **相关文章：**
 - [Fyne vs Wails：深度对比分析](/zh/golang/Fyne与Wails深度对比-选择最适合你的Go桌面应用框架)
 - [基于Wails的Mac桌面应用开发](/zh/golang/基于Wails的Mac桌面应用开发)
-- [Wails 教程系列：核心概念详解](/zh/wails-tutorial-series/03-core-concepts)
+- [Wails 教程系列：核心概念详解](/dev/backend/golang/wails/03-core-concepts)
 
 **实用工具：**
 - [Fyne Doctor](https://github.com/wbtools/fyne-doctor) - Fyne 开发环境诊断工具

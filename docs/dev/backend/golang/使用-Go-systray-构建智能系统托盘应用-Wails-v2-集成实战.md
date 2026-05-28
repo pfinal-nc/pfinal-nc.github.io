@@ -12,11 +12,11 @@ tag:
 description: 深入讲解如何使用 Go systray 库构建智能系统托盘应用，结合 Wails v2 框架实现跨平台桌面应用开发，包含完整的实战案例和最佳实践
 keywords:
   - Go systray
-  - Wails v2
+  - Wails
   - 系统托盘
   - 桌面应用
   - 跨平台开发
-  - Go GUI
+  - golang
   - 系统集成
   - 后台服务
 recommend: 后端工程
@@ -26,10 +26,10 @@ course:
   lesson: 3.1
 tags:
   - AI
-  - Backend
+  - 后端开发
   - Desktop
   - Git
-  - Golang
+  - golang
   - HTTP
 ---
 

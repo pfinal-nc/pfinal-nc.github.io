@@ -12,7 +12,7 @@ keywords:
   - strings.Builder
   - 垃圾回收
 tags:
-  - Go语言
+  - golang
   - 性能优化
   - 内存管理
   - GC调优

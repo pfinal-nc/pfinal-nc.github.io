@@ -13,7 +13,7 @@ tags:
   - tools
   - password-manager
   - security
-  - wails
+  - Wails
 ---
 
 # 程序员必备神器：PF-password 密码管理器

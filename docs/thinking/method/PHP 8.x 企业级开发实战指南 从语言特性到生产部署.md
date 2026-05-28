@@ -21,9 +21,9 @@ course:
 tags:
   - Architecture
   - HTTP
-  - PHP
+  - php
   - Performance
-  - Security
+  - security
   - Tutorial
 ---
 

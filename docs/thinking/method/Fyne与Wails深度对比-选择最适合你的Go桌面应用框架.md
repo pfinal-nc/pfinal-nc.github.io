@@ -20,7 +20,7 @@ keywords:
   - wails vs electron
   - best go gui framework 2025
   - golang desktop application
-  - Go GUI
+  - golang
   - 跨平台开发
   - PFinalClub
 ---

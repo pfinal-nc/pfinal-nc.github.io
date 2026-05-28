@@ -3,7 +3,7 @@ title: "Wails 生态巡礼：两款让我惊艳的桌面应用（GoNavi & TinyRD
 date: 2025-03-10 14:30:00
 tags:
   - Wails
-  - Go
+  - golang
   - 桌面应用
   - 工具推荐
 description: 介绍两款基于 Wails 构建的优秀开源工具：GoNavi 多数据库管理工具和 TinyRDM Redis 桌面管理器，分享 Wails 框架的优势和生态发展。
@@ -13,7 +13,7 @@ keywords:
   - GoNavi
   - TinyRDM
   - 桌面应用开发
-  - Go
+  - golang
   - WebView
   - Electron 替代品
   - Redis 客户端

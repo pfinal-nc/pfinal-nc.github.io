@@ -14,7 +14,7 @@ course:
   module: 1
   lesson: 1.2
 tags:
-  - Frontend
+  - 前端开发
   - HTTP
   - JavaScript
   - Performance

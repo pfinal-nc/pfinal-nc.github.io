@@ -14,9 +14,9 @@ keywords:
 recommend: 后端工程
 tags:
   - AI
-  - Backend
+  - 后端开发
   - Git
-  - Golang
+  - golang
   - HTTP
   - JavaScript
 ---

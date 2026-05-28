@@ -13,13 +13,11 @@ keywords:
   - PHP MCP扩展开发
   - Workerman框架
   - 模型上下文协议
-  - PHP AI集成
+  - php
   - Anthropic MCP
-  - PHP开源项目
   - 大语言模型接口
-  - PHP生态发展
   - 智能应用开发
-  - PHP异步编程
+  - PHP异步
 recommend: 后端工程
 ---
 

@@ -4,7 +4,7 @@ date: 2026-02-25 09:46:00
 author: PFinal南丞
 description: "深入探讨Go 1.26中的SIMD（单指令多数据）编程，涵盖向量化指令集基础、编译器自动优化、手动内联汇编实践，以及如何在实际项目中应用SIMD实现2-10倍的性能提升。面向有经验的Go开发者，提供完整代码示例与benchmark对比。"
 keywords:
-  - Go
+  - golang
   - SIMD
   - 向量化
   - 性能优化
@@ -14,7 +14,7 @@ keywords:
   - SSE
   - 编译器优化
 tags:
-  - Go语言
+  - golang
   - 性能优化
   - 并行计算
   - SIMD

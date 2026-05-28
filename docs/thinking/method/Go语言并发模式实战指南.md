@@ -9,7 +9,7 @@ categories:
   - "开发与系统"
   - "Go实战"
 tags:
-  - "go"
+  - "golang"
   - "并发编程"
   - "高性能"
   - "goroutine"

@@ -12,7 +12,7 @@ keywords:
   - 安全运维
 tags:
   - Linux
-  - Security
+  - security
   - Hardening
   - System
 ---

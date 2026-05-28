@@ -13,7 +13,7 @@ tags:
   - golang
   - gc
   - memory
-  - performance
+  - Performance
 ---
 
 # runtime.free 打破 Go GC 性能瓶颈的秘密武器

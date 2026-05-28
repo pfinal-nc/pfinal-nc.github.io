@@ -13,7 +13,7 @@ author: PFinal 南丞
 category: 课程
 tags:
   - course
-  - wails
+  - Wails
   - golang
   - desktop
   - cross-platform
@@ -65,9 +65,9 @@ course:
 
 | 课时 | 主题 | 内容 | 文章 | 状态 |
 |------|------|------|------|------|
-| 1.1 | Wails 简介与架构 | Wails 是什么、与 Electron/Tauri 对比、工作原理 | [00-webkit-and-lifecycle](/dev/backend/wails-tutorial-series/00-webkit-and-lifecycle) | ✅ |
-| 1.2 | 环境搭建与安装 | Go 环境、Node.js、Wails CLI 安装 | [01-installation](/dev/backend/wails-tutorial-series/01-installation) | ✅ |
-| 1.3 | 第一个 Wails 应用 | 项目创建、目录结构、运行调试 | [02-first-app](/dev/backend/wails-tutorial-series/02-first-app) | ✅ |
+| 1.1 | Wails 简介与架构 | Wails 是什么、与 Electron/Tauri 对比、工作原理 | [00-webkit-and-lifecycle](/dev/backend/golang/wails/00-webkit-and-lifecycle) | ✅ |
+| 1.2 | 环境搭建与安装 | Go 环境、Node.js、Wails CLI 安装 | [01-installation](/dev/backend/golang/wails/01-installation) | ✅ |
+| 1.3 | 第一个 Wails 应用 | 项目创建、目录结构、运行调试 | [02-first-app](/dev/backend/golang/wails/02-first-app) | ✅ |
 
 </div>
 
@@ -79,9 +79,9 @@ course:
 
 | 课时 | 主题 | 内容 | 文章 | 状态 |
 |------|------|------|------|------|
-| 2.1 | Wails 核心概念 | 应用结构、生命周期、事件系统 | [03-core-concepts](/dev/backend/wails-tutorial-series/03-core-concepts) | ✅ |
-| 2.2 | 前端开发 | Vue/React集成、组件开发、状态管理 | [04-frontend-development](/dev/backend/wails-tutorial-series/04-frontend-development) | ✅ |
-| 2.3 | 后端开发 | Go 结构体方法暴露、类型转换、错误处理 | [05-backend-development](/dev/backend/wails-tutorial-series/05-backend-development) | ✅ |
+| 2.1 | Wails 核心概念 | 应用结构、生命周期、事件系统 | [03-core-concepts](/dev/backend/golang/wails/03-core-concepts) | ✅ |
+| 2.2 | 前端开发 | Vue/React集成、组件开发、状态管理 | [04-frontend-development](/dev/backend/golang/wails/04-frontend-development) | ✅ |
+| 2.3 | 后端开发 | Go 结构体方法暴露、类型转换、错误处理 | [05-backend-development](/dev/backend/golang/wails/05-backend-development) | ✅ |
 
 </div>
 

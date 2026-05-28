@@ -9,7 +9,7 @@ tags:
 description: 深度分析 PHP $_SESSION 引发的Bug，包括常见问题、解决方案、最佳实践和会话管理优化技巧
 author: PFinal南丞
 keywords:
-  - PHP
+  - php
   - $_SESSION
   - 会话管理
   - PHP会话

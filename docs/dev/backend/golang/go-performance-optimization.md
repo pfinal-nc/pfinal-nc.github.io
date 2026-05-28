@@ -3,7 +3,7 @@ title: Go 性能优化实战：从 pprof 到内存管理
 date: 2026-04-24
 category: dev/backend/golang
 tags:
-  - Go
+  - golang
   - 性能优化
   - pprof
   - 内存管理

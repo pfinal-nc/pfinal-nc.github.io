@@ -3,7 +3,7 @@ title: gRPC 在 Go 中的实战应用
 date: 2026-04-24
 category: dev/backend/golang
 tags:
-  - Go
+  - golang
   - gRPC
   - Protocol Buffers
   - 微服务

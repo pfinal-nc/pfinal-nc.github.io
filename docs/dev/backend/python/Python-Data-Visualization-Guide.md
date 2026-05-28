@@ -8,7 +8,7 @@ categories:
   - 开发与系统
   - Python 实战
 tags:
-  - python
+  - Python
   - 数据可视化
   - matplotlib
   - seaborn

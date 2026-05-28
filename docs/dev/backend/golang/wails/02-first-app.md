@@ -9,7 +9,7 @@ keywords:
   - Wails应用开发
   - wails init
   - Wails模板
-  - Go桌面应用
+  - golang
   - Wails架构
   - Wails最佳实践
 course:
@@ -19,10 +19,10 @@ course:
 tags:
   - AI
   - Architecture
-  - Backend
+  - 后端开发
   - Desktop
   - Git
-  - Golang
+  - golang
 ---
 
 # Wails 教程系列 - 创建你的第一个应用

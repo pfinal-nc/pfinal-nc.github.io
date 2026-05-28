@@ -4,15 +4,15 @@ description: 聚合 Go/PHP/Python 等后端工程实践与性能优化文章。
 tags:
   - golang
   - php
-  - python
+  - Python
   - 后端开发
   - 架构设计
   - 性能优化
   
 keywords:
   - 后端工程
-  - Go
-  - PHP
+  - golang
+  - php
   - Python
   - 性能优化
   - Wails
@@ -99,13 +99,13 @@ author: PFinal南丞
 ## 💻 桌面与全栈开发
 
 ### Wails 系列教程
-- [Wails 教程系列](/dev/backend/golang/wails-tutorial-series/)
-  - [00 - Webkit 与生命周期](/dev/backend/golang/wails-tutorial-series/00-webkit-and-lifecycle)
-  - [01 - 安装与环境配置](/dev/backend/golang/wails-tutorial-series/01-installation)
-  - [02 - 第一个应用](/dev/backend/golang/wails-tutorial-series/02-first-app)
-  - [03 - 核心概念](/dev/backend/golang/wails-tutorial-series/03-core-concepts)
-  - [04 - 前端开发](/dev/backend/golang/wails-tutorial-series/04-frontend-development)
-  - [05 - 后端开发](/dev/backend/golang/wails-tutorial-series/05-backend-development)
+- [Wails 教程系列](/dev/backend/golang/wails/)
+  - [00 - Webkit 与生命周期](/dev/backend/golang/wails/00-webkit-and-lifecycle)
+  - [01 - 安装与环境配置](/dev/backend/golang/wails/01-installation)
+  - [02 - 第一个应用](/dev/backend/golang/wails/02-first-app)
+  - [03 - 核心概念](/dev/backend/golang/wails/03-core-concepts)
+  - [04 - 前端开发](/dev/backend/golang/wails/04-frontend-development)
+  - [05 - 后端开发](/dev/backend/golang/wails/05-backend-development)
 
 ### Wails 实战项目
 - [基于Wails和Vue.js打造跨平台桌面应用](/dev/backend/golang/基于Wails和Vue.js打造跨平台桌面应用)

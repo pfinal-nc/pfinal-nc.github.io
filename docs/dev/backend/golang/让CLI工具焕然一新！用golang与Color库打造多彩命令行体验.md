@@ -7,7 +7,7 @@ tags:
 description: 用 Golang 与 Color 库打造多彩命令行体验，让 CLI 工具焕然一新
 author: PFinal南丞
 keywords:
-  - Golang
+  - golang
   - Color库
   - CLI工具
   - 命令行美化

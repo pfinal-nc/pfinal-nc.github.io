@@ -270,7 +270,6 @@ export default defineConfig({
         'dev/backend/php': '/images/covers/php.svg',
         'dev/backend/python': '/images/covers/python.svg',
         'dev/backend/rxjs': '/images/covers/default.svg',
-        'dev/backend/wails': '/images/covers/golang.svg',
         'dev/backend/rust': '/images/covers/golang.svg',
         'dev/system/database': '/images/covers/database.svg',
         'dev/system': '/images/covers/devops.svg',

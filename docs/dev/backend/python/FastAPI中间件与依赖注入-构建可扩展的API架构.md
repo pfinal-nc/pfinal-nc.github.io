@@ -13,8 +13,8 @@ keywords:
   - 认证授权
   - Python
 tags:
-  - python
-  - fastapi
+  - Python
+  - FastAPI
   - middleware
   - dependency-injection
   - architecture

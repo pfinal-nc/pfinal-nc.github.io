@@ -13,11 +13,11 @@ keywords:
   - ASGI
   - 高性能API
 tags:
-  - python
-  - fastapi
+  - Python
+  - FastAPI
   - web
   - api
-  - tutorial
+  - Tutorial
   - async
 difficulty: 入门
 ---

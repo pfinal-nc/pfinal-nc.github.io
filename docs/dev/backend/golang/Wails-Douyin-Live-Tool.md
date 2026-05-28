@@ -6,12 +6,12 @@ keywords:
   - 抖音直播
   - 直播工具
   - 桌面应用
-  - Go
+  - golang
 author: PFinal南丞
 date: 2026-04-22
 tags:
   - golang
-  - wails
+  - Wails
   - live-streaming
   - douyin
 ---

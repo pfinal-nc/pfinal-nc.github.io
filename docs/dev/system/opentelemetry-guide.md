@@ -12,9 +12,9 @@ keywords:
   - Jaeger
 tags:
   - opentelemetry
-  - observability
+  - Observability
   - tracing
-  - devops
+  - DevOps
 ---
 
 # OpenTelemetry 实战指南

@@ -22,10 +22,10 @@ recommend: 后端工程
 tags:
   - AI
   - Architecture
-  - Backend
-  - Golang
+  - 后端开发
+  - golang
   - HTTP
-  - PHP
+  - php
 ---
 
 # Go 协程与 PHP Fibers-并发编程的两种实现

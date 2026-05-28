@@ -14,7 +14,7 @@ tags:
   - grafana
   - visualization
   - monitoring
-  - devops
+  - DevOps
 ---
 
 # Grafana 可视化实战指南

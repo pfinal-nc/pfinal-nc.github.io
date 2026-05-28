@@ -8,12 +8,9 @@ tags:
 description: PHP $_SERVER 超全局变量完全指南，包含所有变量详解、实际应用场景、安全注意事项和最佳实践
 author: PFinal南丞
 keywords:
-  - PHP
+  - php
   - $_SERVER
-  - PHP服务器变量
-  - PHP环境变量
-  - PHP请求信息
-  - PHP服务器信息
+  - PHP服务器
   - PHP安全
   - PHP最佳实践
 recommend: 后端工程

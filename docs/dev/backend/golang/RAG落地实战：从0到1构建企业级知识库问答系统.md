@@ -7,7 +7,7 @@ keywords:
   - RAG
   - 知识库问答
   - 企业级应用
-  - Golang
+  - golang
   - 检索增强生成
   - 向量数据库
   - LLM
@@ -15,7 +15,7 @@ tags:
   - RAG
   - 知识库问答
   - 企业级应用
-  - Golang
+  - golang
   - 人工智能
 recommend: 后端工程
 ---

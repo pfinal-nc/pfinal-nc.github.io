@@ -8,7 +8,7 @@ description: 在 Go 终端小工具基础上新增天气查询、手机归属地
 author: PFinal南丞
 keywords:
   - Go语言开发终端小工具后续
-  - Go
+  - golang
   - 工具
   - 终端
   - 小工具

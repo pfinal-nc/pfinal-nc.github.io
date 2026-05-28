@@ -7,7 +7,7 @@ tags:
 description: 从手动到自动：Go语言助力快速识别代码中的安全隐患
 author: PFinal南丞
 keywords:
-  - Go语言
+  - golang
   - 代码安全
   - 敏感信息检测
   - 安全扫描

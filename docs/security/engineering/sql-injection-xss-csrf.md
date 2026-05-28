@@ -12,7 +12,7 @@ keywords:
 tags:
   - security
   - web-security
-  - tutorial
+  - Tutorial
 ---
 
 # SQL 注入、XSS、CSRF 攻击原理与防护实战

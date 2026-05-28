@@ -8,7 +8,7 @@ tags:
 description: 分享每个Golang程序员都应该掌握的核心工具和技能，从代码质量到性能优化，从开发效率到部署运维，全面提升Go开发能力。
 author: PFinal南丞
 keywords:
-  - Golang
+  - golang
   - Go开发
   - 程序员必备
   - 开发工具

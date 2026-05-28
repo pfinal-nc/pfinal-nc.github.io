@@ -6,7 +6,7 @@ description: "PFinalClub完整学习路线图，涵盖Golang、PHP、Python、De
 keywords:
   - 学习路线
   - Go学习路径
-  - PHP学习路径
+  - php
   - Python学习路径
   - 后端开发
   - DevOps
@@ -15,7 +15,7 @@ keywords:
 tags:
   - learning-path
   - roadmap
-  - tutorial
+  - Tutorial
 ---
 
 # 🗺️ PFinalClub 学习路线图

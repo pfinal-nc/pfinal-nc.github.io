@@ -2,17 +2,16 @@
 title: "Composer配置文件说明 - 完整使用指南"
 date: 2022-07-04 17:34:31
 tags:
-  - PHP
+  - php
 description: 介绍Composer配置文件的基本概念和使用方法，包括配置文件的位置、依赖管理、包管理、版本控制等。
 author: PFinal南丞
 keywords:
   - Composer
-  - PHP依赖管理
+  - php
   - composer.json
   - 包管理
   - 版本控制
   - PSR规范
-  - PHP开发工具
   - Packagist
 ---
 

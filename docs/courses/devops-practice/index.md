@@ -15,9 +15,9 @@ author: PFinal 南丞
 category: 课程
 tags:
   - course
-  - devops
-  - docker
-  - kubernetes
+  - DevOps
+  - Docker
+  - Kubernetes
   - ci-cd
   - monitoring
 course:

@@ -14,8 +14,8 @@ keywords:
 tags:
   - distributed-tracing
   - microservices
-  - observability
-  - devops
+  - Observability
+  - DevOps
 ---
 
 # 分布式链路追踪最佳实践

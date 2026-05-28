@@ -13,12 +13,12 @@ keywords:
   - CI/CD
   - 最佳实践
 tags:
-  - python
-  - fastapi
+  - Python
+  - FastAPI
   - testing
   - deployment
-  - docker
-  - kubernetes
+  - Docker
+  - Kubernetes
   - cicd
   - production
 difficulty: 进阶

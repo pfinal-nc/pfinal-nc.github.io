@@ -19,10 +19,10 @@ course:
 tags:
   - AI
   - Architecture
-  - Backend
+  - 后端开发
   - Desktop
   - Git
-  - Golang
+  - golang
 ---
 
 # Wails 教程系列 - 核心概念详解

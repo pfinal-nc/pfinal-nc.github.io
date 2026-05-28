@@ -10,12 +10,12 @@ keywords:
   - 缓存
   - HTTP
 tags:
-  - Frontend
+  - 前端开发
   - HTTP
   - JavaScript
   - Performance
   - RxJS
-  - Security
+  - security
 ---
 
 # 性能优化：使用 shareReplay 避免重复工作

@@ -3,7 +3,7 @@ title: "pyenv - Python 版本管理指南"
 date: 2023-04-27 22:10:20
 author: PFinal南丞
 tags:
-  - python
+  - Python
 keywords:
   - Python版本管理
   - pyenv教程

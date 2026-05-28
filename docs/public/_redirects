@@ -37,10 +37,10 @@ http://miao.friday-go.icu/* https://miao.friday-go.icu/:splat 301!
 /links/ /contact 301
 /links /contact 301
 
-# Wails 教程系列重定向
-/wails-tutorial-series /dev/backend/wails-tutorial-series/ 301
-/wails-tutorial-series/ /dev/backend/wails-tutorial-series/ 301
-/wails-tutorial-series/* /dev/backend/wails-tutorial-series/:splat 301
+# Wails 教程系列重定向（已合并至 golang/wails）
+/wails-tutorial-series /dev/backend/golang/wails/ 301
+/wails-tutorial-series/ /dev/backend/golang/wails/ 301
+/wails-tutorial-series/* /dev/backend/golang/wails/:splat 301
 
 # Golang 文章重定向
 /golang/Go-CLI-Utility-Development-Practice* /dev/backend/golang/Create Go App CLI 一款快速创建golang项目的工具 301

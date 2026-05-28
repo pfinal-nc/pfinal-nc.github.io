@@ -16,7 +16,7 @@ course:
   lesson: 1.1
 tags:
   - AI
-  - Frontend
+  - 前端开发
   - HTTP
   - JavaScript
   - React

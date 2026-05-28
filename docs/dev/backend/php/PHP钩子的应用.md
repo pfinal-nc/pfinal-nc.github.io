@@ -9,21 +9,7 @@ keywords:
   - PHP钩子
   - php
   - 工具
-  - php钩子
-  - php钩子应用
-  - php钩子的实现
-  - PHP钩子的应用
-  - PHP插件机制
-  - PHP钩子编程
-  - PHP事件驱动
-  - PHP插件开发
-  - PHP钩子实现
   - PHP扩展开发
-  - PHP钩子最佳实践
-  - PHP钩子教程
-  - PHP插件架构
-  - PHP钩子设计模式
-  - PHP钩子技术
 recommend: 后端工程
 ---
 

@@ -5,14 +5,14 @@ author: PFinal南丞
 description: "介绍两款基于Wails开发的优秀桌面应用：GoNavi多数据库管理工具和TinyRDM Redis桌面管理器，展示Wails生态的魅力和实力。"
 keywords:
   - Wails
-  - Go桌面应用
+  - golang
   - 跨平台开发
   - 数据库工具
   - Redis管理
   - 开源项目
   - 桌面应用
 tags:
-  - wails
+  - Wails
   - golang
   - desktop
   - database

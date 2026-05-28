@@ -18,7 +18,7 @@ tags:
   - Database
   - Docker
   - Git
-  - Golang
+  - golang
 ---
 
 # 联系我们 - 与PFinalClub取得联系

@@ -2,7 +2,7 @@
 title: "Python 常用网站搜集 - 使用指南"
 date: 2023-04-03 21:58:33
 tags:
-  - python
+  - Python
 description: 搜集python常用的网站资源
 author: PFinal南丞
 keywords:

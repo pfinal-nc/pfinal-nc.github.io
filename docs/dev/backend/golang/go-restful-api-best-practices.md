@@ -4,13 +4,13 @@ date: 2026-04-22
 author: PFinal南丞
 description: "全面讲解使用 Go 语言构建 RESTful API 的最佳实践，包括路由设计、请求处理、错误处理、版本控制、文档生成等核心主题。"
 keywords:
-  - Go
+  - golang
   - RESTful API
   - Web 开发
   - 最佳实践
   - API 设计
 tags:
-  - Go
+  - golang
   - API
   - REST
   - Best Practices

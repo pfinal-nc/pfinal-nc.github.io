@@ -5,7 +5,7 @@ author: PFinalClub
 description: 深入理解 Wails 中的 WebKit 技术原理、wails.Run() 运行路线以及应用生命周期管理机制。
 recommend: 后端工程
 keywords:
-  - Wails教程
+  - Wails
   - WebKit技术
   - 应用生命周期
   - wails.Run()
@@ -19,9 +19,9 @@ course:
 tags:
   - AI
   - Architecture
-  - Backend
+  - 后端开发
   - Desktop
-  - Golang
+  - golang
   - HTTP
 ---
 

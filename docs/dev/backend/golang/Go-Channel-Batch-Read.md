@@ -13,7 +13,7 @@ tags:
   - golang
   - channel
   - concurrency
-  - performance
+  - Performance
 ---
 
 # 深入理解 Go Channel 批量读取与实际应用

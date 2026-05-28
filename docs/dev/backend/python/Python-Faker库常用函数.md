@@ -2,7 +2,7 @@
 title: Python Faker 库 - 完整使用指南与常用函数实战
 date: 2023-04-05 22:10:20
 tags:
-  - python
+  - Python
 description: Faker库常用函数
 author: PFinal南丞
 keywords:

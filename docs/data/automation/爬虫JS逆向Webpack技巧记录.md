@@ -9,7 +9,7 @@ categories:
   - "数据与自动化"
   - "爬虫技术"
 tags:
-  - "python"
+  - "Python"
   - "爬虫"
   - "js逆向"
   - "webpack"

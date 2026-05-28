@@ -16,7 +16,7 @@ course:
   module: 1
   lesson: 1.5
 tags:
-  - Frontend
+  - 前端开发
   - JavaScript
   - Performance
   - Reactive

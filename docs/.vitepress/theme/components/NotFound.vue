@@ -3,8 +3,8 @@ import { onMounted } from 'vue'
 
 // 重定向规则（基于 GSC 发现的 404 错误 - 2025-12-17 更新）
 const redirectRules = [
-  // Wails 教程系列
-  { from: '/wails-tutorial-series', to: '/dev/backend/wails-tutorial-series/' },
+  // Wails 教程系列（已合并至 golang/wails）
+  { from: '/wails-tutorial-series', to: '/dev/backend/golang/wails/' },
   
   // Golang RAG 系统文章
   { from: '/golang/Golang实现RAG系统-从OpenAI到向量数据库', to: '/dev/backend/golang/Golang实现RAG系统-从OpenAI到向量数据库' },
@@ -32,7 +32,7 @@ const redirectRules = [
   
   // 多语言路径重定向
   { from: '/zh/数据库/PostgreSQL-10个鲜为人知的强大功能', to: '/dev/system/database/PostgreSQL-10个鲜为人知的强大功能' },
-  { from: '/zh/wails-tutorial-series/', to: '/dev/backend/wails-tutorial-series/' },
+  { from: '/zh/wails-tutorial-series/', to: '/dev/backend/golang/wails/' },
   
   // 爬虫文章
   { from: '/爬虫JS逆向Webpack技巧记录', to: '/data/automation/爬虫JS逆向Webpack技巧记录' },

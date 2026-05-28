@@ -11,9 +11,9 @@ author: PFinal南丞
 date: 2026-04-22
 tags:
   - golang
-  - wails
+  - Wails
   - cache
-  - performance
+  - Performance
 ---
 
 # 提升 Wails 应用性能：探索 Go-Cache 的高效内存缓存方案

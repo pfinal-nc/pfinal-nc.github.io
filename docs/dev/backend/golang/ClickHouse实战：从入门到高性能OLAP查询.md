@@ -7,14 +7,14 @@ keywords:
   - ClickHouse
   - OLAP
   - 列式存储
-  - Go语言
+  - golang
   - 性能优化
   - 实战
 tags:
   - ClickHouse
   - OLAP
   - 数据库
-  - Go语言
+  - golang
   - 性能优化
 recommend: 后端工程
 ---

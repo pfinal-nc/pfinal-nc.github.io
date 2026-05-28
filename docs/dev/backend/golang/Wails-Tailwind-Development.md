@@ -6,12 +6,12 @@ keywords:
   - Tailwind CSS
   - 桌面应用
   - UI 开发
-  - Go
+  - golang
 author: PFinal南丞
 date: 2026-04-22
 tags:
   - golang
-  - wails
+  - Wails
   - tailwindcss
   - ui
 ---

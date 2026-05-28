@@ -10,7 +10,7 @@ keywords:
   - 创建Observable
   - Promise
 tags:
-  - Frontend
+  - 前端开发
   - JavaScript
   - Operators
   - RxJS
