@@ -47,14 +47,6 @@ const blogTheme = getThemeConfig({
     // message 字段支持配置为HTML内容，配置多条可以配置为数组
     // message: '下面 的内容和图标都是可以修改的噢（当然本条内容也是可以隐藏的）',
     copyright: 'MIT License | PFinalClub',
-    // icpRecord: {
-    //   name: '蜀ICP备19011724号',
-    //   link: 'https://beian.miit.gov.cn/'
-    // },
-    // securityRecord: {
-    //   name: '公网安备xxxxx',
-    //   link: 'https://www.beian.gov.cn/portal/index.do'
-    // },
     version: false,
     
   },

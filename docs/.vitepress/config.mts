@@ -153,6 +153,10 @@ export default defineConfig({
     
     // Monetag 广告脚本
     ['script', {}, `(function(s){s.dataset.zone='9114535',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))`],
+    // Monetag 全局横幅（Zone 11120977）
+    ['script', { src: 'https://5gvci.com/act/files/tag.min.js?z=11120977', 'data-cfasync': 'false', async: '' }],
+    // Monetag OnClick Popunder（Zone 9114325）
+    ['script', {}, `(function(s){s.dataset.zone='9114325',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))`],
     
     // GA4 与 AdSense 已移至 client.js 延迟加载，减轻首屏阻塞、提升 LCP
     // Schema.org 结构化数据 - WebSite
