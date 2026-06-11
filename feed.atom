@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://friday-go.icu</id>
     <title>PFinalClub Tech Blog</title>
-    <updated>2026-06-10T01:53:35.914Z</updated>
+    <updated>2026-06-11T10:36:20.796Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>PFinal南丞</name>
@@ -19,7 +19,7 @@
         <title type="html"><![CDATA[Wails 桌面应用开发 - Go 跨平台框架完整指南 | PFinalClub]]></title>
         <id>https://friday-go.icu/dev/backend/golang/wails/README</id>
         <link href="https://friday-go.icu/dev/backend/golang/wails/README"/>
-        <updated>2026-06-10T01:53:35.906Z</updated>
+        <updated>2026-06-11T10:36:20.788Z</updated>
         <summary type="html"><![CDATA[全面的Wails桌面应用开发指南，涵盖从入门到实战的完整内容，包括教程系列、实战项目、性能优化、系统集成等，帮助Go开发者构建高性能跨平台桌面应用。]]></summary>
         <content type="html"><![CDATA[全面的Wails桌面应用开发指南，涵盖从入门到实战的完整内容，包括教程系列、实战项目、性能优化、系统集成等，帮助Go开发者构建高性能跨平台桌面应用。]]></content>
         <author>
@@ -37,21 +37,9 @@
         <title type="html"><![CDATA[数据库技术专题 2025 - MySQL / PostgreSQL 配置优化与实战]]></title>
         <id>https://friday-go.icu/dev/system/database</id>
         <link href="https://friday-go.icu/dev/system/database"/>
-        <updated>2026-06-10T01:53:35.904Z</updated>
+        <updated>2026-06-11T10:36:20.786Z</updated>
         <summary type="html"><![CDATA[PFinalClub 数据库中文专题导航页：系统整理 MySQL 配置、PostgreSQL 功能、数据库优化等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></summary>
         <content type="html"><![CDATA[PFinalClub 数据库中文专题导航页：系统整理 MySQL 配置、PostgreSQL 功能、数据库优化等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></content>
-        <author>
-            <name>PFinal南丞</name>
-            <uri>https://friday-go.icu</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Python 开发技术专题 2025 - 从入门到精通的实战指南 | PFinalClub]]></title>
-        <id>https://friday-go.icu/dev/backend/python</id>
-        <link href="https://friday-go.icu/dev/backend/python"/>
-        <updated>2026-06-10T01:53:35.900Z</updated>
-        <summary type="html"><![CDATA[Python开发技术专题：从基础语法到高级应用，涵盖Django、Flask、FastAPI等主流框架，数据科学、AI、自动化等领域。2025年最新Python开发实践指南。]]></summary>
-        <content type="html"><![CDATA[Python开发技术专题：从基础语法到高级应用，涵盖Django、Flask、FastAPI等主流框架，数据科学、AI、自动化等领域。2025年最新Python开发实践指南。]]></content>
         <author>
             <name>PFinal南丞</name>
             <uri>https://friday-go.icu</uri>
@@ -61,9 +49,21 @@
         <title type="html"><![CDATA[Golang 开发技术专题 2025 - 从入门到精通的实战指南 | PFinalClub]]></title>
         <id>https://friday-go.icu/dev/backend/golang</id>
         <link href="https://friday-go.icu/dev/backend/golang"/>
-        <updated>2026-06-10T01:53:35.888Z</updated>
+        <updated>2026-06-11T10:36:20.778Z</updated>
         <summary type="html"><![CDATA[Golang开发技术专题：从基础语法到高级架构设计，涵盖微服务、并发编程、性能优化等核心主题。2025年最新Golang开发实践指南。]]></summary>
         <content type="html"><![CDATA[Golang开发技术专题：从基础语法到高级架构设计，涵盖微服务、并发编程、性能优化等核心主题。2025年最新Golang开发实践指南。]]></content>
+        <author>
+            <name>PFinal南丞</name>
+            <uri>https://friday-go.icu</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python 开发技术专题 2025 - 从入门到精通的实战指南 | PFinalClub]]></title>
+        <id>https://friday-go.icu/dev/backend/python</id>
+        <link href="https://friday-go.icu/dev/backend/python"/>
+        <updated>2026-06-11T10:36:20.759Z</updated>
+        <summary type="html"><![CDATA[Python开发技术专题：从基础语法到高级应用，涵盖Django、Flask、FastAPI等主流框架，数据科学、AI、自动化等领域。2025年最新Python开发实践指南。]]></summary>
+        <content type="html"><![CDATA[Python开发技术专题：从基础语法到高级应用，涵盖Django、Flask、FastAPI等主流框架，数据科学、AI、自动化等领域。2025年最新Python开发实践指南。]]></content>
         <author>
             <name>PFinal南丞</name>
             <uri>https://friday-go.icu</uri>
@@ -73,7 +73,7 @@
         <title type="html"><![CDATA[PHP 开发技术专题 2025 - 从入门到精通的实战指南 | PFinalClub]]></title>
         <id>https://friday-go.icu/dev/backend/php</id>
         <link href="https://friday-go.icu/dev/backend/php"/>
-        <updated>2026-06-10T01:53:35.871Z</updated>
+        <updated>2026-06-11T10:36:20.753Z</updated>
         <summary type="html"><![CDATA[PHP开发技术专题：从基础语法到框架应用，涵盖Laravel、ThinkPHP、Yii等主流框架，数据库操作、API开发、性能优化等内容。2025年最新PHP开发实践指南。]]></summary>
         <content type="html"><![CDATA[PHP开发技术专题：从基础语法到框架应用，涵盖Laravel、ThinkPHP、Yii等主流框架，数据库操作、API开发、性能优化等内容。2025年最新PHP开发实践指南。]]></content>
         <author>
@@ -85,7 +85,7 @@
         <title type="html"><![CDATA[技术架构与方法论 | 架构设计 学习路径 工程实践 | PFinalClub]]></title>
         <id>https://friday-go.icu/thinking/method</id>
         <link href="https://friday-go.icu/thinking/method"/>
-        <updated>2026-06-10T01:53:35.856Z</updated>
+        <updated>2026-06-11T10:36:20.740Z</updated>
         <summary type="html"><![CDATA[深入的技术架构与方法论指南，涵盖架构设计原则、系统化学习路径、工程实践方法论、技术哲学思考等内容。提供从技术深度到思维高度的完整成长体系。]]></summary>
         <content type="html"><![CDATA[深入的技术架构与方法论指南，涵盖架构设计原则、系统化学习路径、工程实践方法论、技术哲学思考等内容。提供从技术深度到思维高度的完整成长体系。]]></content>
         <author>
@@ -97,7 +97,7 @@
         <title type="html"><![CDATA[安全攻防研究 | Web安全 内网渗透 红蓝对抗实战 | PFinalClub]]></title>
         <id>https://friday-go.icu/security/offensive</id>
         <link href="https://friday-go.icu/security/offensive"/>
-        <updated>2026-06-10T01:53:35.848Z</updated>
+        <updated>2026-06-11T10:36:20.731Z</updated>
         <summary type="html"><![CDATA[深入的安全攻防研究指南，涵盖Web安全漏洞分析、内网渗透技术、红蓝对抗实战演练、渗透测试方法论等攻防一体实践内容。提供从攻击到防御的完整安全研究体系。]]></summary>
         <content type="html"><![CDATA[深入的安全攻防研究指南，涵盖Web安全漏洞分析、内网渗透技术、红蓝对抗实战演练、渗透测试方法论等攻防一体实践内容。提供从攻击到防御的完整安全研究体系。]]></content>
         <author>
@@ -109,7 +109,7 @@
         <title type="html"><![CDATA[安全工程实践 | SSH安全 Golang安全 服务器加固 | PFinalClub]]></title>
         <id>https://friday-go.icu/security/engineering</id>
         <link href="https://friday-go.icu/security/engineering"/>
-        <updated>2026-06-10T01:53:35.847Z</updated>
+        <updated>2026-06-11T10:36:20.729Z</updated>
         <summary type="html"><![CDATA[全面的安全工程实践指南，涵盖SSH安全加固、Golang安全开发、服务器防护、WAF配置、DevOps安全集成等工程化落地方案。提供从基础安全到企业级防护的完整解决方案。]]></summary>
         <content type="html"><![CDATA[全面的安全工程实践指南，涵盖SSH安全加固、Golang安全开发、服务器防护、WAF配置、DevOps安全集成等工程化落地方案。提供从基础安全到企业级防护的完整解决方案。]]></content>
         <author>
@@ -121,7 +121,7 @@
         <title type="html"><![CDATA[系统与基础 2025 - 数据库/容器/可观测性技术导航]]></title>
         <id>https://friday-go.icu/dev/system</id>
         <link href="https://friday-go.icu/dev/system"/>
-        <updated>2026-06-10T01:53:35.843Z</updated>
+        <updated>2026-06-11T10:36:20.725Z</updated>
         <summary type="html"><![CDATA[覆盖数据库、Linux、网络、容器等系统基础与实践文章。]]></summary>
         <content type="html"><![CDATA[覆盖数据库、Linux、网络、容器等系统基础与实践文章。]]></content>
         <author>
@@ -135,7 +135,7 @@
         <title type="html"><![CDATA[数据采集与自动化 | 爬虫技术 AI工程 机器人开发 | PFinalClub]]></title>
         <id>https://friday-go.icu/data/automation</id>
         <link href="https://friday-go.icu/data/automation"/>
-        <updated>2026-06-10T01:53:35.839Z</updated>
+        <updated>2026-06-11T10:36:20.722Z</updated>
         <summary type="html"><![CDATA[专业的数据采集与自动化技术指南，涵盖爬虫开发、AI工程实践、机器人开发、数据生产线构建等实战内容。提供从数据采集到自动化处理的完整技术栈解决方案。]]></summary>
         <content type="html"><![CDATA[专业的数据采集与自动化技术指南，涵盖爬虫开发、AI工程实践、机器人开发、数据生产线构建等实战内容。提供从数据采集到自动化处理的完整技术栈解决方案。]]></content>
         <author>
@@ -144,10 +144,27 @@
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[安全工程师成长路线 - 完整课程大纲 | 2026]]></title>
+        <id>https://friday-go.icu/courses/security-engineer</id>
+        <link href="https://friday-go.icu/courses/security-engineer"/>
+        <updated>2026-06-11T10:36:20.720Z</updated>
+        <summary type="html"><![CDATA[系统学习网络安全与工程安全，从 SSH 加固到 Web 应用防护，从 Go 安全开发到攻防研究，打造攻防一体的安全工程能力。]]></summary>
+        <content type="html"><![CDATA[系统学习网络安全与工程安全，从 SSH 加固到 Web 应用防护，从 Go 安全开发到攻防研究，打造攻防一体的安全工程能力。]]></content>
+        <author>
+            <name>PFinal 南丞</name>
+            <uri>https://friday-go.icu</uri>
+        </author>
+        <category label="course"/>
+        <category label="security"/>
+        <category label="cybersecurity"/>
+        <category label="devsecops"/>
+        <category label="penetration-testing"/>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Wails 跨平台桌面开发实战 - 完整课程大纲 | 2026]]></title>
         <id>https://friday-go.icu/courses/wails-desktop</id>
         <link href="https://friday-go.icu/courses/wails-desktop"/>
-        <updated>2026-06-10T01:53:35.837Z</updated>
+        <updated>2026-06-11T10:36:20.720Z</updated>
         <summary type="html"><![CDATA[使用 Go 和前端技术栈（Vue/React）构建跨平台桌面应用，从入门到实战，包含抖音直播助手、密码管理器等真实项目案例。]]></summary>
         <content type="html"><![CDATA[使用 Go 和前端技术栈（Vue/React）构建跨平台桌面应用，从入门到实战，包含抖音直播助手、密码管理器等真实项目案例。]]></content>
         <author>
@@ -164,7 +181,7 @@
         <title type="html"><![CDATA[Go 后端工程师成长路线 - 完整课程大纲 | 2026]]></title>
         <id>https://friday-go.icu/courses/golang-backend</id>
         <link href="https://friday-go.icu/courses/golang-backend"/>
-        <updated>2026-06-10T01:53:35.836Z</updated>
+        <updated>2026-06-11T10:36:20.719Z</updated>
         <summary type="html"><![CDATA[系统化的 Go 后端工程师学习路径，从语言基础到微服务架构，涵盖并发编程、性能优化、数据库设计、可观测性体系等核心技能，包含完整实战项目。]]></summary>
         <content type="html"><![CDATA[系统化的 Go 后端工程师学习路径，从语言基础到微服务架构，涵盖并发编程、性能优化、数据库设计、可观测性体系等核心技能，包含完整实战项目。]]></content>
         <author>
@@ -180,7 +197,7 @@
         <title type="html"><![CDATA[RxJS 响应式编程实战手册 - 完整课程大纲 | 2026]]></title>
         <id>https://friday-go.icu/courses/rxjs</id>
         <link href="https://friday-go.icu/courses/rxjs"/>
-        <updated>2026-06-10T01:53:35.836Z</updated>
+        <updated>2026-06-11T10:36:20.719Z</updated>
         <summary type="html"><![CDATA[系统学习 RxJS 响应式编程，从 Observable 核心概念到高级操作符应用，包含搜索建议、拖放、状态管理等实战案例，帮助前端开发者掌握异步编程利器。]]></summary>
         <content type="html"><![CDATA[系统学习 RxJS 响应式编程，从 Observable 核心概念到高级操作符应用，包含搜索建议、拖放、状态管理等实战案例，帮助前端开发者掌握异步编程利器。]]></content>
         <author>
@@ -194,27 +211,10 @@
         <category label="reactive-programming"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[安全工程师成长路线 - 完整课程大纲 | 2026]]></title>
-        <id>https://friday-go.icu/courses/security-engineer</id>
-        <link href="https://friday-go.icu/courses/security-engineer"/>
-        <updated>2026-06-10T01:53:35.836Z</updated>
-        <summary type="html"><![CDATA[系统学习网络安全与工程安全，从 SSH 加固到 Web 应用防护，从 Go 安全开发到攻防研究，打造攻防一体的安全工程能力。]]></summary>
-        <content type="html"><![CDATA[系统学习网络安全与工程安全，从 SSH 加固到 Web 应用防护，从 Go 安全开发到攻防研究，打造攻防一体的安全工程能力。]]></content>
-        <author>
-            <name>PFinal 南丞</name>
-            <uri>https://friday-go.icu</uri>
-        </author>
-        <category label="course"/>
-        <category label="security"/>
-        <category label="cybersecurity"/>
-        <category label="devsecops"/>
-        <category label="penetration-testing"/>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[DevOps 工程实践 - 完整课程大纲 | 2026]]></title>
         <id>https://friday-go.icu/courses/devops-practice</id>
         <link href="https://friday-go.icu/courses/devops-practice"/>
-        <updated>2026-06-10T01:53:35.835Z</updated>
+        <updated>2026-06-11T10:36:20.717Z</updated>
         <summary type="html"><![CDATA[系统学习 DevOps 工程实践，从 Docker 容器化到 Kubernetes 编排，从 CI/CD 流水线到监控告警体系，打造现代化工程能力。]]></summary>
         <content type="html"><![CDATA[系统学习 DevOps 工程实践，从 Docker 容器化到 Kubernetes 编排，从 CI/CD 流水线到监控告警体系，打造现代化工程能力。]]></content>
         <author>
@@ -232,7 +232,7 @@
         <title type="html"><![CDATA[Web安全 · 工程安全 | 攻防研究 安全工程 | PFinalClub]]></title>
         <id>https://friday-go.icu/security</id>
         <link href="https://friday-go.icu/security"/>
-        <updated>2026-06-10T01:53:35.834Z</updated>
+        <updated>2026-06-11T10:36:20.716Z</updated>
         <summary type="html"><![CDATA[全面的网络安全体系指南，涵盖Web安全、应用安全、安全工程、攻防研究、服务器加固、密码学等实战内容。提供从防御加固到攻防研究的完整安全知识体系。]]></summary>
         <content type="html"><![CDATA[全面的网络安全体系指南，涵盖Web安全、应用安全、安全工程、攻防研究、服务器加固、密码学等实战内容。提供从防御加固到攻防研究的完整安全知识体系。]]></content>
         <author>
@@ -244,7 +244,7 @@
         <title type="html"><![CDATA[PFinalClub 技术课程体系 - 系统化学习路径 | 2026]]></title>
         <id>https://friday-go.icu/courses</id>
         <link href="https://friday-go.icu/courses"/>
-        <updated>2026-06-10T01:53:35.832Z</updated>
+        <updated>2026-06-11T10:36:20.714Z</updated>
         <summary type="html"><![CDATA[PFinalClub 提供系统化的技术课程体系，涵盖 Go 后端工程师、Wails 桌面开发、RxJS 响应式编程、DevOps 实践、安全工程等完整学习路径，从入门到精通的实战教程。]]></summary>
         <content type="html"><![CDATA[PFinalClub 提供系统化的技术课程体系，涵盖 Go 后端工程师、Wails 桌面开发、RxJS 响应式编程、DevOps 实践、安全工程等完整学习路径，从入门到精通的实战教程。]]></content>
         <author>
@@ -256,7 +256,7 @@
         <title type="html"><![CDATA[数据科学与工程 | 数据采集 数据分析 数据可视化 AI工程 | PFinalClub]]></title>
         <id>https://friday-go.icu/data</id>
         <link href="https://friday-go.icu/data"/>
-        <updated>2026-06-10T01:53:35.832Z</updated>
+        <updated>2026-06-11T10:36:20.714Z</updated>
         <summary type="html"><![CDATA[全面的数据科学与工程知识体系，涵盖数据采集、数据分析、数据可视化、AI工程、机器学习等核心领域，提供从数据获取到智能应用的完整技术栈解决方案。]]></summary>
         <content type="html"><![CDATA[全面的数据科学与工程知识体系，涵盖数据采集、数据分析、数据可视化、AI工程、机器学习等核心领域，提供从数据获取到智能应用的完整技术栈解决方案。]]></content>
         <author>
@@ -268,7 +268,7 @@
         <title type="html"><![CDATA[工具与实用程序中文专题导航 - AI 工具 / 开发工具 / 效率提升 2025]]></title>
         <id>https://friday-go.icu/Tools</id>
         <link href="https://friday-go.icu/Tools"/>
-        <updated>2026-06-10T01:53:35.824Z</updated>
+        <updated>2026-06-11T10:36:20.709Z</updated>
         <summary type="html"><![CDATA[PFinalClub 工具与实用程序中文专题导航页：系统整理 AI 工具目录、开发工具、CLI 工具、Docker 指南、效率技巧等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></summary>
         <content type="html"><![CDATA[PFinalClub 工具与实用程序中文专题导航页：系统整理 AI 工具目录、开发工具、CLI 工具、Docker 指南、效率技巧等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></content>
         <author>
@@ -280,13 +280,65 @@
         <title type="html"><![CDATA[🛠️ 开发者在线工具集 - PFinalClub]]></title>
         <id>https://friday-go.icu/Tools/online-tools</id>
         <link href="https://friday-go.icu/Tools/online-tools"/>
-        <updated>2026-06-10T01:53:35.824Z</updated>
+        <updated>2026-06-11T10:36:20.709Z</updated>
         <summary type="html"><![CDATA[PFinalClub 开发者在线工具集合：密码生成器、AI 工具导航、Prompt 模板、节日营销日历、BMI 计算器等，免费使用。]]></summary>
         <content type="html"><![CDATA[PFinalClub 开发者在线工具集合：密码生成器、AI 工具导航、Prompt 模板、节日营销日历、BMI 计算器等，免费使用。]]></content>
         <author>
             <name>PFinal南丞</name>
             <uri>https://friday-go.icu</uri>
         </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[FastMCP 3.0 实战：用 Python 构建生产级 MCP Server]]></title>
+        <id>https://friday-go.icu/ai/fastmcp-3-0-production-mcp-server-2026</id>
+        <link href="https://friday-go.icu/ai/fastmcp-3-0-production-mcp-server-2026"/>
+        <updated>2026-06-11T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[从零开始掌握 FastMCP 3.0，使用 Python 构建生产级 MCP Server。涵盖 Streamable HTTP、组件版本控制、细粒度授权、资源管理、性能优化和生产部署完整指南。]]></summary>
+        <content type="html"><![CDATA[从零开始掌握 FastMCP 3.0，使用 Python 构建生产级 MCP Server。涵盖 Streamable HTTP、组件版本控制、细粒度授权、资源管理、性能优化和生产部署完整指南。]]></content>
+        <author>
+            <name>PFinal南丞</name>
+            <uri>https://friday-go.icu</uri>
+        </author>
+        <category label="mcp"/>
+        <category label="Python"/>
+        <category label="ai-agent"/>
+        <category label="FastMCP"/>
+        <category label="llm"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CTF 2026 云安全攻防：从容器逃逸到 K8s 渗透实战]]></title>
+        <id>https://friday-go.icu/security/offensive/ctf-2026-cloud-security-container-k8s</id>
+        <link href="https://friday-go.icu/security/offensive/ctf-2026-cloud-security-container-k8s"/>
+        <updated>2026-06-11T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[深入解析 2026 年 CTF 云安全攻防趋势，从容器逃逸到 K8s 渗透，涵盖 SSRF 云服务攻击、WAF 绕过、跨模块融合、实战解题框架和分阶段备考策略。]]></summary>
+        <content type="html"><![CDATA[深入解析 2026 年 CTF 云安全攻防趋势，从容器逃逸到 K8s 渗透，涵盖 SSRF 云服务攻击、WAF 绕过、跨模块融合、实战解题框架和分阶段备考策略。]]></content>
+        <author>
+            <name>PFinal南丞</name>
+            <uri>https://friday-go.icu</uri>
+        </author>
+        <category label="ctf"/>
+        <category label="security"/>
+        <category label="container"/>
+        <category label="kubernetes"/>
+        <category label="cloud"/>
+        <category label="渗透测试"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Rust vs Go 2026：性能基准、内存安全与后端选型实战]]></title>
+        <id>https://friday-go.icu/dev/backend/golang/rust-vs-go-2026-performance-comparison</id>
+        <link href="https://friday-go.icu/dev/backend/golang/rust-vs-go-2026-performance-comparison"/>
+        <updated>2026-06-11T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[全面对比 Rust 和 Go 在 2026 年的性能基准、内存效率、并发模型、开发者体验和生态系统，附带真实基准测试数据、Discord/Cloudflare 案例和清晰选型决策指南。]]></summary>
+        <content type="html"><![CDATA[全面对比 Rust 和 Go 在 2026 年的性能基准、内存效率、并发模型、开发者体验和生态系统，附带真实基准测试数据、Discord/Cloudflare 案例和清晰选型决策指南。]]></content>
+        <author>
+            <name>PFinal南丞</name>
+            <uri>https://friday-go.icu</uri>
+        </author>
+        <category label="golang"/>
+        <category label="rust"/>
+        <category label="performance"/>
+        <category label="后端"/>
+        <category label="选型"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[2026 AI Agent 工程化：从原型到生产的 10 个关键决策]]></title>
@@ -306,22 +358,6 @@
         <category label="工程化"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Go 结构化并发实战：errgroup 从原理到生产最佳实践]]></title>
-        <id>https://friday-go.icu/dev/backend/golang/go-errgroup-structured-concurrency</id>
-        <link href="https://friday-go.icu/dev/backend/golang/go-errgroup-structured-concurrency"/>
-        <updated>2026-06-10T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[深入讲解 Go 语言结构化并发编程模式，基于 golang.org/x/sync/errgroup 实现任务编排、错误传播与优雅取消，涵盖超时控制、并发限制、多级任务编排等生产级实战技巧。]]></summary>
-        <content type="html"><![CDATA[深入讲解 Go 语言结构化并发编程模式，基于 golang.org/x/sync/errgroup 实现任务编排、错误传播与优雅取消，涵盖超时控制、并发限制、多级任务编排等生产级实战技巧。]]></content>
-        <author>
-            <name>PFinal南丞</name>
-            <uri>https://friday-go.icu</uri>
-        </author>
-        <category label="golang"/>
-        <category label="Concurrency"/>
-        <category label="errgroup"/>
-        <category label="Context"/>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[Polars vs Pandas vs DuckDB：2026 Python 数据处理引擎终极横评]]></title>
         <id>https://friday-go.icu/dev/backend/python/polars-vs-pandas-vs-duckdb-2026</id>
         <link href="https://friday-go.icu/dev/backend/python/polars-vs-pandas-vs-duckdb-2026"/>
@@ -337,6 +373,22 @@
         <category label="Pandas"/>
         <category label="DuckDB"/>
         <category label="性能优化"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Go 结构化并发实战：errgroup 从原理到生产最佳实践]]></title>
+        <id>https://friday-go.icu/dev/backend/golang/go-errgroup-structured-concurrency</id>
+        <link href="https://friday-go.icu/dev/backend/golang/go-errgroup-structured-concurrency"/>
+        <updated>2026-06-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[深入讲解 Go 语言结构化并发编程模式，基于 golang.org/x/sync/errgroup 实现任务编排、错误传播与优雅取消，涵盖超时控制、并发限制、多级任务编排等生产级实战技巧。]]></summary>
+        <content type="html"><![CDATA[深入讲解 Go 语言结构化并发编程模式，基于 golang.org/x/sync/errgroup 实现任务编排、错误传播与优雅取消，涵盖超时控制、并发限制、多级任务编排等生产级实战技巧。]]></content>
+        <author>
+            <name>PFinal南丞</name>
+            <uri>https://friday-go.icu</uri>
+        </author>
+        <category label="golang"/>
+        <category label="Concurrency"/>
+        <category label="errgroup"/>
+        <category label="Context"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[MCP 2026 无状态协议革命与 OpenAI Secure Tunnel 实战]]></title>
@@ -725,59 +777,6 @@
         <category label="course"/>
         <category label="memory"/>
         <category label="performance"/>
-        <category label="lesson"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Lesson 1.2: 并发编程核心]]></title>
-        <id>https://friday-go.icu/courses/golang-backend/module-1/1-2-concurrency-core</id>
-        <link href="https://friday-go.icu/courses/golang-backend/module-1/1-2-concurrency-core"/>
-        <updated>2026-05-26T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[掌握 Goroutine、Channel、select 和 Context 的核心机制与最佳实践]]></summary>
-        <content type="html"><![CDATA[掌握 Goroutine、Channel、select 和 Context 的核心机制与最佳实践]]></content>
-        <author>
-            <name>PFinal南丞</name>
-            <uri>https://friday-go.icu</uri>
-        </author>
-        <category label="golang"/>
-        <category label="course"/>
-        <category label="concurrency"/>
-        <category label="goroutine"/>
-        <category label="channel"/>
-        <category label="lesson"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Lesson 1.3: 并发模式实战]]></title>
-        <id>https://friday-go.icu/courses/golang-backend/module-1/1-3-concurrency-patterns</id>
-        <link href="https://friday-go.icu/courses/golang-backend/module-1/1-3-concurrency-patterns"/>
-        <updated>2026-05-26T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[掌握 Worker Pool、Pipeline、Fan-in/Fan-out 等经典并发模式]]></summary>
-        <content type="html"><![CDATA[掌握 Worker Pool、Pipeline、Fan-in/Fan-out 等经典并发模式]]></content>
-        <author>
-            <name>PFinal南丞</name>
-            <uri>https://friday-go.icu</uri>
-        </author>
-        <category label="golang"/>
-        <category label="course"/>
-        <category label="concurrency"/>
-        <category label="patterns"/>
-        <category label="lesson"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Lesson 1.4: Go GC 机制与调优]]></title>
-        <id>https://friday-go.icu/courses/golang-backend/module-1/1-4-gc-tuning</id>
-        <link href="https://friday-go.icu/courses/golang-backend/module-1/1-4-gc-tuning"/>
-        <updated>2026-05-26T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[深入理解 Go 垃圾回收机制，掌握 GC 调优技巧与 STW 优化]]></summary>
-        <content type="html"><![CDATA[深入理解 Go 垃圾回收机制，掌握 GC 调优技巧与 STW 优化]]></content>
-        <author>
-            <name>PFinal南丞</name>
-            <uri>https://friday-go.icu</uri>
-        </author>
-        <category label="golang"/>
-        <category label="course"/>
-        <category label="gc"/>
-        <category label="performance"/>
-        <category label="memory"/>
         <category label="lesson"/>
     </entry>
 </feed>
