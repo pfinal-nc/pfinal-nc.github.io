@@ -767,3 +767,8 @@ async def config2(settings2: Settings = Depends(get_settings_no_cache)):
 ---
 
 *最后更新：2026年3月11日*
+
+## 相关阅读
+
+- [FastAPI 从零开始构建高性能 API：快速入门指南](/dev/backend/python/FastAPI-从零开始构建高性能API-快速入门指南)
+- [Python Web 爬虫实战：从入门到精通](/dev/backend/python/Python-Web爬虫实战-从入门到精通)

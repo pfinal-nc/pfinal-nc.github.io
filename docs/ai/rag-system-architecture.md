@@ -781,3 +781,9 @@ volumes:
 *文章字数: 约 8000 字*  
 *配套代码: 完整可运行*  
 *最后更新: 2026-04-15*
+
+## 相关阅读
+
+- [关于PFinalClub - 后端 + DevOps + AI 工程实践技术博客](/about)
+- [联系我们 - 与PFinalClub取得联系](/contact)
+- [MCP 服务器开发实战：构建 AI 编程助手扩展](/data/automation/mcp-server-development)

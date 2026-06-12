@@ -579,4 +579,10 @@ $response = $chat->sendMessage('测试消息');
 ---
 
 *作者：PFinal南丞 - 一个热爱PHP和开源的程序员*  
-*最后更新：2025-11-10* 
+*最后更新：2025-11-10*
+
+## 相关阅读
+
+- [关于PFinalClub - 后端 + DevOps + AI 工程实践技术博客](/about)
+- [联系我们 - 与PFinalClub取得联系](/contact)
+- [MCP 服务器开发实战：构建 AI 编程助手扩展](/data/automation/mcp-server-development)

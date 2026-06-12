@@ -2241,3 +2241,8 @@ func TestApp_ErrorHandling(t *testing.T) {
 - [绑定方法](https://wails.golang.ac.cn/docs/guides/application-development/binding-methods) - 方法绑定的详细说明
 - [运行时参考](https://wails.golang.ac.cn/docs/reference/runtime) - JavaScript 运行时的完整 API
 
+## 相关阅读
+
+- [关于PFinalClub - 后端 + DevOps + AI 工程实践技术博客](/about)
+- [联系我们 - 与PFinalClub取得联系](/contact)
+- [MCP 服务器开发实战：构建 AI 编程助手扩展](/data/automation/mcp-server-development)

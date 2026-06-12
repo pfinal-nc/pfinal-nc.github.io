@@ -1725,3 +1725,9 @@ func (d *DebugApp) enableDebugLogging() {
 5. **高级特性**: 自定义模板、微服务集成和故障排除
 
 这些技术为构建企业级 Wails 应用提供了完整的技术栈。在后续文章中，我们将继续深入 Wails 的其他高级特性。
+
+## 相关阅读
+
+- [关于PFinalClub - 后端 + DevOps + AI 工程实践技术博客](/about)
+- [联系我们 - 与PFinalClub取得联系](/contact)
+- [MCP 服务器开发实战：构建 AI 编程助手扩展](/data/automation/mcp-server-development)

@@ -92,3 +92,6 @@ keywords:
 
 [开发小工具插件](https://plugins.jetbrains.com/plugin/download?rel=true&amp;updateId=543972)
 
+## 相关阅读
+
+- [Docker部署Go项目实践指南](/tools/Docker部署Go项目实践指南)

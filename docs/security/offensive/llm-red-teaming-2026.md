@@ -938,6 +938,12 @@ LLM 红队测试在 2026 年已经从"可选"变为"必需"。关键要点：
 
 **一句话总结**：会攻才能善防。LLM 红队测试不是一次性活动，而是需要持续执行的安全实践——每次模型更新、Prompt 调整、工具新增，都需要重新评估。
 
+
+
+## 相关阅读
+
+- [蜜罐部署实战：构建主动防御体系](/security/engineering/honeypot-deployment)
+- [SQL 注入、XSS、CSRF 攻击原理与防护实战](/security/engineering/sql-injection-xss-csrf)
 ## 参考资料
 
 - [OWASP LLM Top 10 (2026 Update)](https://owasp.org/www-project-top-10-for-large-language-model-applications/)

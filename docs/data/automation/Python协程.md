@@ -119,10 +119,7 @@ Task <Task finished name='Task-1'>
 ```
 > 上面代码,定义了 loop 对象之后，接着调用了它的 create_task 方法将 coroutine 对象转化为 task 对象，打印输出一下，发现它是 pending 状态。接着，将 task 对象添加到事件循环中执行，随后打印输出 task 对象，发现它的状态变成了 finished，同时还可以看到其 result 变成了 1，也就是定义的 execute 方法的返回结果。
 
+## 相关阅读
 
-
-
-
-
-
-        
+- [FastAPI 从零开始构建高性能 API：快速入门指南](/dev/backend/python/FastAPI-从零开始构建高性能API-快速入门指南)
+- [Python Web 爬虫实战：从入门到精通](/dev/backend/python/Python-Web爬虫实战-从入门到精通)

@@ -667,3 +667,9 @@ project/
 ---
 
 *本文基于2025年最新技术趋势和实际项目经验编写，所有框架都经过生产环境验证。建议在实际项目选型时，结合具体业务需求进行技术验证和性能测试。技术选型的核心原则是：没有最好的框架，只有最适合项目需求的框架。*
+
+## 相关阅读
+
+- [Go 零拷贝读取器实战与原理解析](/dev/backend/golang/Go 零拷贝读取器实战与原理解析)
+- [Go 并发模式进阶：高级并发编程技巧](/dev/backend/golang/go-concurrency-patterns-advanced)
+- [Go 内存管理与垃圾回收：深入理解 GC 机制](/dev/backend/golang/go-memory-management-gc)

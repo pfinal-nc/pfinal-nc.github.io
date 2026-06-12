@@ -448,3 +448,8 @@ Python 自动化脚本的最佳实践：
 4. **日志记录** - 使用轮转日志，便于排查问题
 5. **命令行界面** - 用 argparse 让脚本更易用
 6. **错误处理** - 捕获异常，记录日志，保证脚本健壮性
+
+## 相关阅读
+
+- [FastAPI 从零开始构建高性能 API：快速入门指南](/dev/backend/python/FastAPI-从零开始构建高性能API-快速入门指南)
+- [Python Web 爬虫实战：从入门到精通](/dev/backend/python/Python-Web爬虫实战-从入门到精通)

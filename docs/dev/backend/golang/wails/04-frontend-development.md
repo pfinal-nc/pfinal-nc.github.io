@@ -1203,3 +1203,7 @@ export const errorHandler = new ErrorHandler()
 - [Vite 5.0 发布](https://vitejs.dev/blog/announcing-vite5) - 构建工具升级
 
 这些技术为构建高质量的 Wails 应用提供了完整的前端开发方案。下一篇文章我们会聊聊后端开发技术栈和系统集成。
+
+## 相关阅读
+
+- [Wails 桌面应用开发 - Go 跨平台框架完整指南 | PFinalClub](/dev/backend/golang/wails/README)

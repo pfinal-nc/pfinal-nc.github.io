@@ -683,3 +683,9 @@ $largeArray = unserialize(gzuncompress($_SESSION['large_data']));
 
 *最后更新：2025-11-10*  
 *作者：PFinal南丞*
+
+## 相关阅读
+
+- [PHP 生成器 - 使用指南](/dev/backend/php/PHP 大杀器之生成器)
+- [PHP 异步处理 - 使用指南](/dev/backend/php/PHP之异步处理)
+- [PHP 8.4 新特性详解：属性钩子、非对称可见性与更多](/dev/backend/php/php-8-4-new-features)

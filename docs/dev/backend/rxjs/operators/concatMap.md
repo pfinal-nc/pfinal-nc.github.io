@@ -76,3 +76,9 @@ setting$.pipe(
 *   `switchMap`: **只关心最新**的，取消之前的。
 
 选择哪个操作符，取决于你希望如何处理当源 Observable 发出新值时，内部 Observable 的行为。
+
+## 相关阅读
+
+- [关于PFinalClub - 后端 + DevOps + AI 工程实践技术博客](/about)
+- [联系我们 - 与PFinalClub取得联系](/contact)
+- [MCP 服务器开发实战：构建 AI 编程助手扩展](/data/automation/mcp-server-development)

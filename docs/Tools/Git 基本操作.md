@@ -428,3 +428,8 @@ $ ls
 README.md
 ```
 s
+
+## 相关阅读
+
+- [Docker部署Go项目实践指南](/tools/Docker部署Go项目实践指南)
+- [Git Advanced Commands 2025 - 12个提升效率的高级命令完整指南](/tools/Git高级命令教程)

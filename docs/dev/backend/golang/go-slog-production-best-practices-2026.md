@@ -687,3 +687,9 @@ slog 在 2026 年已经成为 Go 日志的事实标准。总结关键实践：
 - [otelslog Bridge](https://pkg.go.dev/go.opentelemetry.io/contrib/bridges/otelslog)
 - [sloglint Linter](https://github.com/go-simpler/sloglint)
 - [Dash0 - Logging in Go with Slog: A Practitioner's Guide](https://www.dash0.com/guides/logging-in-go-with-slog)
+
+## 相关阅读
+
+- [Go 零拷贝读取器实战与原理解析](/dev/backend/golang/Go 零拷贝读取器实战与原理解析)
+- [Go 并发模式进阶：高级并发编程技巧](/dev/backend/golang/go-concurrency-patterns-advanced)
+- [Go 内存管理与垃圾回收：深入理解 GC 机制](/dev/backend/golang/go-memory-management-gc)

@@ -643,6 +643,12 @@ summary_pd.pivot(
 
 **一句话建议**：新项目直接上 Polars + DuckDB 组合，老项目逐步迁移。
 
+
+
+## 相关阅读
+
+- [FastAPI 从零开始构建高性能 API：快速入门指南](/dev/backend/python/FastAPI-从零开始构建高性能API-快速入门指南)
+- [Python Web 爬虫实战：从入门到精通](/dev/backend/python/Python-Web爬虫实战-从入门到精通)
 ## 参考资料
 
 - [Polars User Guide](https://docs.pola.rs/)

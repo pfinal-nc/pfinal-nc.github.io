@@ -142,3 +142,9 @@ func searchContent(filePath string, content string) ([][]string, error) {
 ## 扩展用途
 
 除了常规的敏感信息查找之外，这款小工具还有着广泛的应用场景。尤其是在网络安全领域，它可以帮助红队成员或是内部安全团队在进行渗透测试时快速定位潜在的风险点。通过对目标主机上存储的各种文档和配置文件进行细致检查，可以揭示出不少未被注意到的安全隐患，如硬编码的凭据、不安全的API调用等。因此，对于提升整体IT环境的安全性来说，这样一个简单但高效的辅助工具有着不可忽视的价值。
+
+## 相关阅读
+
+- [Go 零拷贝读取器实战与原理解析](/dev/backend/golang/Go 零拷贝读取器实战与原理解析)
+- [Go 并发模式进阶：高级并发编程技巧](/dev/backend/golang/go-concurrency-patterns-advanced)
+- [Go 内存管理与垃圾回收：深入理解 GC 机制](/dev/backend/golang/go-memory-management-gc)

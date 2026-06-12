@@ -2646,3 +2646,9 @@ func (a *App) ProcessWithTracing(ctx context.Context, data string) (*Result, err
 - **简化部署和运维**：通过配置管理和健康检查
 
 运用这些企业级后端开发技能，可以构建功能强大、安全可靠、高性能的 Wails 桌面应用。下一篇文章将深入探讨前后端之间的详细交互方式，包括方法调用、事件通信以及数据传输格式。
+
+## 相关阅读
+
+- [关于PFinalClub - 后端 + DevOps + AI 工程实践技术博客](/about)
+- [联系我们 - 与PFinalClub取得联系](/contact)
+- [MCP 服务器开发实战：构建 AI 编程助手扩展](/data/automation/mcp-server-development)

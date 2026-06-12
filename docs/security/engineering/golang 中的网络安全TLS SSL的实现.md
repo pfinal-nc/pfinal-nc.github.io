@@ -217,3 +217,9 @@ config := &tls.Config{
 
 ## 总结
 网络安全是现代应用程序开发的重要组成部分。通过实现 TLS/SSL，可以有效保护数据传输的安全性。golang 提供了强大而灵活的工具来实现和管理 TLS 连接。开发者应该在应用中实现和维护安全的网络通信，并保持对最新安全实践的关注。定期的安全审计和更新对于维护系统的整体安全性至关重要。
+
+## 相关阅读
+
+- [Go 零拷贝读取器实战与原理解析](/dev/backend/golang/Go 零拷贝读取器实战与原理解析)
+- [Go 并发模式进阶：高级并发编程技巧](/dev/backend/golang/go-concurrency-patterns-advanced)
+- [Go 内存管理与垃圾回收：深入理解 GC 机制](/dev/backend/golang/go-memory-management-gc)

@@ -978,3 +978,9 @@ Go 协程和 PHP Fibers 是两种不同的并发编程方案，各有特点：
 - 根据项目需求和团队技术栈来选择
 
 理解这两种并发模型的特点，有助于在实际项目中做出合适的技术选择。
+
+## 相关阅读
+
+- [关于PFinalClub - 后端 + DevOps + AI 工程实践技术博客](/about)
+- [联系我们 - 与PFinalClub取得联系](/contact)
+- [MCP 服务器开发实战：构建 AI 编程助手扩展](/data/automation/mcp-server-development)

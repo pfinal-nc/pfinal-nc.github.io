@@ -720,6 +720,13 @@ Agent 生产化成熟度模型
 
 10 个决策不是先后顺序，而是一个整体 —— 缺任何一个，生产环境都会用故障来教你补课。
 
+
+
+## 相关阅读
+
+- [关于PFinalClub - 后端 + DevOps + AI 工程实践技术博客](/about)
+- [联系我们 - 与PFinalClub取得联系](/contact)
+- [MCP 服务器开发实战：构建 AI 编程助手扩展](/data/automation/mcp-server-development)
 ## 参考资料
 
 - [MCP 2026：无状态协议革命与 OpenAI 安全隧道](https://www.liuqi.dev/blog/mcp-2026-stateless-revolution)

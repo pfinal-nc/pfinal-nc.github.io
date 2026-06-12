@@ -174,3 +174,9 @@ var pfCdCmd = &cobra.Command{
 ### 总结
 
 彩色化输出不仅可以提升CLI工具的视觉效果，还可以帮助用户更快速地识别关键信息。`fatih/color`库提供了一个简单而强大的方式来实现这一点，无论是简单的颜色设置还是复杂的样式组合，都能轻易达成。通过将色彩融入你的CLI工具中，你不仅可以让用户的体验得到改善，同时也能让你的工具从众多同类产品中脱颖而出
+
+## 相关阅读
+
+- [Go 零拷贝读取器实战与原理解析](/dev/backend/golang/Go 零拷贝读取器实战与原理解析)
+- [Go 并发模式进阶：高级并发编程技巧](/dev/backend/golang/go-concurrency-patterns-advanced)
+- [Go 内存管理与垃圾回收：深入理解 GC 机制](/dev/backend/golang/go-memory-management-gc)

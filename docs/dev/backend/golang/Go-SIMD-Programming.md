@@ -311,3 +311,9 @@ SIMD 编程是提升 Go 应用性能的重要手段：
 3. **性能提升**：通常可获得 4-16 倍的加速
 
 随着 Go 对 SIMD 支持的完善，未来将有更多场景可以受益于向量计算。
+
+## 相关阅读
+
+- [Go 零拷贝读取器实战与原理解析](/dev/backend/golang/Go 零拷贝读取器实战与原理解析)
+- [Go 并发模式进阶：高级并发编程技巧](/dev/backend/golang/go-concurrency-patterns-advanced)
+- [Go 内存管理与垃圾回收：深入理解 GC 机制](/dev/backend/golang/go-memory-management-gc)

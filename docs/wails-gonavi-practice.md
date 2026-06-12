@@ -483,3 +483,7 @@ myapp/
 *本文基于公开资料整理，如有不准确之处欢迎指正。*
 
 *最后更新：2026 年 3 月 9 日*
+
+## 相关阅读
+
+- [Wails 桌面应用开发 - Go 跨平台框架完整指南 | PFinalClub](/dev/backend/golang/wails/README)

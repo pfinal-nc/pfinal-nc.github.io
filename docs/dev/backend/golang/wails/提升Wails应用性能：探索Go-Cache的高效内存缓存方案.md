@@ -248,3 +248,9 @@ func main() {
 #### 总结
 
 对于那些正在构建基于 Wails 或其他 Go 语言框架的应用程序，并且希望简化临时数据存储流程的开发者来说，`go-cache` 提供了一个理想的解决方案。它不仅减少了对外部存储系统的依赖，还提升了应用的整体响应速度。如果你正在寻找一种简便的方法来提升你的 Go 应用程序的性能，不妨试试 `go-cache`。
+
+## 相关阅读
+
+- [Go 零拷贝读取器实战与原理解析](/dev/backend/golang/Go 零拷贝读取器实战与原理解析)
+- [Go 并发模式进阶：高级并发编程技巧](/dev/backend/golang/go-concurrency-patterns-advanced)
+- [Go 内存管理与垃圾回收：深入理解 GC 机制](/dev/backend/golang/go-memory-management-gc)

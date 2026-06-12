@@ -594,6 +594,12 @@ LLM 安全性不是一个"功能"——它是 AI 应用的基础设施层。2026
 
 AI 安全没有银弹，但**分层防御 + 最小权限 + 持续监控**的组合策略可以显著降低风险。记住：如果一个 Agent 拥有的权限超过了它完成任务所需的最低权限，那它就是一个**已被攻破的 Agent**——只是你还没发现。
 
+
+
+## 相关阅读
+
+- [蜜罐部署实战：构建主动防御体系](/security/engineering/honeypot-deployment)
+- [SQL 注入、XSS、CSRF 攻击原理与防护实战](/security/engineering/sql-injection-xss-csrf)
 ## 参考资料
 
 - [AI 安全：2026年人工智能AI攻击面分析报告](https://cloud.tencent.com/developer/article/2620792)

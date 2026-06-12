@@ -608,3 +608,8 @@ fig.write_image('chart.png', width=1200, height=800, scale=2)
   - [Plotly Gallery](https://plotly.com/python/plotly-fundamentals/)
 
 掌握数据可视化，让你的数据分析结果更加生动有力！
+
+## 相关阅读
+
+- [FastAPI 从零开始构建高性能 API：快速入门指南](/dev/backend/python/FastAPI-从零开始构建高性能API-快速入门指南)
+- [Python Web 爬虫实战：从入门到精通](/dev/backend/python/Python-Web爬虫实战-从入门到精通)

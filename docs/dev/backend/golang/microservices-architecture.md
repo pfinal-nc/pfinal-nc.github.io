@@ -1322,3 +1322,9 @@ func (c *RedisCache) GetWithLock(ctx context.Context, key string, lockTTL time.D
 ---
 
 > 💡 **提示**：微服务不是银弹。对于小型团队和项目，先从单体架构开始，当遇到真正的扩展性瓶颈时再考虑迁移到微服务。
+
+## 相关阅读
+
+- [Go 零拷贝读取器实战与原理解析](/dev/backend/golang/Go 零拷贝读取器实战与原理解析)
+- [Go 并发模式进阶：高级并发编程技巧](/dev/backend/golang/go-concurrency-patterns-advanced)
+- [Go 内存管理与垃圾回收：深入理解 GC 机制](/dev/backend/golang/go-memory-management-gc)

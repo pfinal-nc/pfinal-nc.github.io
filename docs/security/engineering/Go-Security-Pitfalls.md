@@ -407,3 +407,9 @@ func redirectHandler(w http.ResponseWriter, r *http.Request) {
 | 不安全的重定向 | 中 | URL 白名单 |
 
 安全编程需要时刻保持警惕，遵循最佳实践。
+
+## 相关阅读
+
+- [Go 零拷贝读取器实战与原理解析](/dev/backend/golang/Go 零拷贝读取器实战与原理解析)
+- [Go 并发模式进阶：高级并发编程技巧](/dev/backend/golang/go-concurrency-patterns-advanced)
+- [Go 内存管理与垃圾回收：深入理解 GC 机制](/dev/backend/golang/go-memory-management-gc)

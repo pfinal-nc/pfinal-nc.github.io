@@ -780,3 +780,9 @@ Go语言在AI智能体开发领域展现出独特优势。通过Function Calling
 - 高性能场景：自定义Function Calling实现 + 深度优化
 
 AI智能体开发不仅是技术挑战，更是工程艺术的体现。Go语言，让智能体开发既强大又优雅。
+
+## 相关阅读
+
+- [Go 零拷贝读取器实战与原理解析](/dev/backend/golang/Go 零拷贝读取器实战与原理解析)
+- [Go 并发模式进阶：高级并发编程技巧](/dev/backend/golang/go-concurrency-patterns-advanced)
+- [Go 内存管理与垃圾回收：深入理解 GC 机制](/dev/backend/golang/go-memory-management-gc)

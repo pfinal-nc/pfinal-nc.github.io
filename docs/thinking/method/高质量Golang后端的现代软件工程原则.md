@@ -2922,3 +2922,9 @@ func (bc *BlockchainClient) ListenToEvents(contractAddress string, eventName str
 - [Go 语言并发模式实战指南](./Go语言并发模式实战指南.md)
 - [基于 Wails 和 Vue.js 打造跨平台桌面应用](./基于Wails和Vue.js打造跨平台桌面应用.md)
 - [Go 语言实现守护进程的技术详解](./Go语言实现守护进程的技术详解.md)
+
+## 相关阅读
+
+- [Go 零拷贝读取器实战与原理解析](/dev/backend/golang/Go 零拷贝读取器实战与原理解析)
+- [Go 并发模式进阶：高级并发编程技巧](/dev/backend/golang/go-concurrency-patterns-advanced)
+- [Go 内存管理与垃圾回收：深入理解 GC 机制](/dev/backend/golang/go-memory-management-gc)

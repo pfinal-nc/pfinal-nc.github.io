@@ -1392,3 +1392,9 @@ func main() {
 
 可观测性不是"一次性项目"，而是持续演进的工程文化。
 当每个工程师都能自信回答"我的代码能被观测吗？"时，你就成功了。
+
+## 相关阅读
+
+- [Go 零拷贝读取器实战与原理解析](/dev/backend/golang/Go 零拷贝读取器实战与原理解析)
+- [Go 并发模式进阶：高级并发编程技巧](/dev/backend/golang/go-concurrency-patterns-advanced)
+- [Go 内存管理与垃圾回收：深入理解 GC 机制](/dev/backend/golang/go-memory-management-gc)

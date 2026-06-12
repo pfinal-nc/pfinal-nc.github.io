@@ -1096,3 +1096,9 @@ jobs:
 **项目源码**: [https://github.com/PFinal-tool/pf_tools](https://github.com/PFinal-tool/pf_tools)
 
 希望这些工具能帮助你成为更高效的 Go 开发者！如果你有其他好用的工具推荐，欢迎留言分享。
+
+## 相关阅读
+
+- [Go 零拷贝读取器实战与原理解析](/dev/backend/golang/Go 零拷贝读取器实战与原理解析)
+- [Go 并发模式进阶：高级并发编程技巧](/dev/backend/golang/go-concurrency-patterns-advanced)
+- [Go 内存管理与垃圾回收：深入理解 GC 机制](/dev/backend/golang/go-memory-management-gc)

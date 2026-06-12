@@ -137,3 +137,9 @@ func handleConn(conn net.Conn) {
 ### 总结
 
 最后的最后,我也不知道我这玩意儿该叫啥, 因为, 其实, 它就是一个转发代理, 只不过, 它对流量进行了限制, 并且对流量进行了统计, 并且提供了管理面板.
+
+## 相关阅读
+
+- [Go 零拷贝读取器实战与原理解析](/dev/backend/golang/Go 零拷贝读取器实战与原理解析)
+- [Go 并发模式进阶：高级并发编程技巧](/dev/backend/golang/go-concurrency-patterns-advanced)
+- [Go 内存管理与垃圾回收：深入理解 GC 机制](/dev/backend/golang/go-memory-management-gc)

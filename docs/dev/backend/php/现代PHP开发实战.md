@@ -2340,3 +2340,9 @@ jobs:
 **记住**：技术只是工具，真正的价值在于用它们解决实际问题。保持好奇心，持续学习，享受编程的乐趣！
 
 </div>
+
+## 相关阅读
+
+- [PHP 生成器 - 使用指南](/dev/backend/php/PHP 大杀器之生成器)
+- [PHP 8.4 新特性详解：属性钩子、非对称可见性与更多](/dev/backend/php/php-8-4-new-features)
+- [PHP 异步处理 - 使用指南](/dev/backend/php/PHP之异步处理)

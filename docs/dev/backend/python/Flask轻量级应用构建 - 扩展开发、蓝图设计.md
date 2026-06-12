@@ -730,3 +730,8 @@ def setup_logging(app):
 5. **性能监控**：集成APM工具监控应用性能指标
 
 Flask的简洁性和灵活性使其成为构建现代Web应用的理想选择。通过合理的模块化设计和最佳实践的应用，开发者可以构建出既高效又易于维护的生产级应用。随着项目规模的扩大，这些设计原则和模式将发挥越来越重要的作用。
+
+## 相关阅读
+
+- [FastAPI 从零开始构建高性能 API：快速入门指南](/dev/backend/python/FastAPI-从零开始构建高性能API-快速入门指南)
+- [Python Web 爬虫实战：从入门到精通](/dev/backend/python/Python-Web爬虫实战-从入门到精通)

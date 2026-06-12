@@ -237,3 +237,9 @@ export default {
 ## 五、总结
 
 使用 Wails 开发桌面应用，可以快速构建跨平台的直播工具。Go 处理后端逻辑，Vue 构建界面，开发体验非常好。
+
+## 相关阅读
+
+- [Go 零拷贝读取器实战与原理解析](/dev/backend/golang/Go 零拷贝读取器实战与原理解析)
+- [Go 并发模式进阶：高级并发编程技巧](/dev/backend/golang/go-concurrency-patterns-advanced)
+- [Go 内存管理与垃圾回收：深入理解 GC 机制](/dev/backend/golang/go-memory-management-gc)

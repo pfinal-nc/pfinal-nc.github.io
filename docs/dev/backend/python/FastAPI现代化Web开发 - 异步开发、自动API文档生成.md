@@ -392,3 +392,8 @@ FastAPI 作为现代化 Python Web 框架的杰出代表，通过深度集成异
 
 > **技术路上的苦行僧**  
 > —— PFinalClub 标语
+
+## 相关阅读
+
+- [FastAPI 从零开始构建高性能 API：快速入门指南](/dev/backend/python/FastAPI-从零开始构建高性能API-快速入门指南)
+- [Python Web 爬虫实战：从入门到精通](/dev/backend/python/Python-Web爬虫实战-从入门到精通)

@@ -355,3 +355,9 @@ func (bp *BatchProcessor) flush() {
 | 预分配内存 | 复用对象，预分配切片 | 减少分配开销 |
 
 Go 的 GC 已经做到了极低的暂停时间，但理解 STW 的机制，能帮助我们写出更高效的程序。
+
+## 相关阅读
+
+- [Go 零拷贝读取器实战与原理解析](/dev/backend/golang/Go 零拷贝读取器实战与原理解析)
+- [Go 并发模式进阶：高级并发编程技巧](/dev/backend/golang/go-concurrency-patterns-advanced)
+- [Go 内存管理与垃圾回收：深入理解 GC 机制](/dev/backend/golang/go-memory-management-gc)

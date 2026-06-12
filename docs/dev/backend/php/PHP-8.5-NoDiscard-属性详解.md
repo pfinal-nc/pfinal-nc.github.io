@@ -338,4 +338,10 @@ $users = $queryResult->fetchAll();
 
 ---
 
-*"代码质量不是偶然的，而是通过持续的努力和正确的工具实现的。"* —— 这句话在PHP 8.5的`#[\NoDiscard]`属性上得到了完美体现。 
+*"代码质量不是偶然的，而是通过持续的努力和正确的工具实现的。"* —— 这句话在PHP 8.5的`#[\NoDiscard]`属性上得到了完美体现。
+
+## 相关阅读
+
+- [PHP 生成器 - 使用指南](/dev/backend/php/PHP 大杀器之生成器)
+- [PHP 8.4 新特性详解：属性钩子、非对称可见性与更多](/dev/backend/php/php-8-4-new-features)
+- [PHP 异步处理 - 使用指南](/dev/backend/php/PHP之异步处理)

@@ -965,6 +965,13 @@ case TaskFailed:
 
 > Agent 系统的瓶颈永远是 **LLM 推理**（通常 500ms-5s），协议开销可忽略不计。
 
+
+
+## 相关阅读
+
+- [MCP 服务器开发实战：构建 AI 编程助手扩展](/data/automation/mcp-server-development)
+- [关于PFinalClub - 后端 + DevOps + AI 工程实践技术博客](/about)
+- [联系我们 - 与PFinalClub取得联系](/contact)
 ## 参考资料
 
 - [MCP 官方规范](https://modelcontextprotocol.io/)

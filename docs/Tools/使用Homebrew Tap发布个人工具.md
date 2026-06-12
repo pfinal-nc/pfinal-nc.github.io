@@ -320,3 +320,7 @@ brew tap PFinal-tool/pf_tools && brew install pf_tools
 ```
 
 如果安装过程顺利完成，并且可以正常运行 pf_tools 命令，那么说明我们成功地通过 Homebrew 发布了这个工具。
+
+## 相关阅读
+
+- [Docker部署Go项目实践指南](/tools/Docker部署Go项目实践指南)

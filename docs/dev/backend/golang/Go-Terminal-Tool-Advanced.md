@@ -291,3 +291,9 @@ func initConfig() {
 ## 八、总结
 
 通过不断迭代，这个终端小工具已经成为日常开发的好帮手。使用 Cobra 框架让命令组织更加清晰，每个子命令都可以独立开发和测试。
+
+## 相关阅读
+
+- [Go 零拷贝读取器实战与原理解析](/dev/backend/golang/Go 零拷贝读取器实战与原理解析)
+- [Go 并发模式进阶：高级并发编程技巧](/dev/backend/golang/go-concurrency-patterns-advanced)
+- [Go 内存管理与垃圾回收：深入理解 GC 机制](/dev/backend/golang/go-memory-management-gc)

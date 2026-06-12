@@ -153,3 +153,8 @@ func TestCustomerIDcard(T *testing.T) {
 
 其中，`DesensitizedUtil.go` 文件提供了默认的脱敏方法和自定义脱敏方法。这些方法帮助你在开发中轻松实现敏感信息的脱敏处理。
 
+## 相关阅读
+
+- [Go 零拷贝读取器实战与原理解析](/dev/backend/golang/Go 零拷贝读取器实战与原理解析)
+- [Go 并发模式进阶：高级并发编程技巧](/dev/backend/golang/go-concurrency-patterns-advanced)
+- [Go 内存管理与垃圾回收：深入理解 GC 机制](/dev/backend/golang/go-memory-management-gc)

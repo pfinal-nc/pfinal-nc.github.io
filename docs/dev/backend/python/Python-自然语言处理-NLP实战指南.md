@@ -765,3 +765,8 @@ if __name__ == "__main__":
    - 实战项目
 
 ## 📖 掌握 NLP，让机器理解人类语言！
+
+## 相关阅读
+
+- [FastAPI 从零开始构建高性能 API：快速入门指南](/dev/backend/python/FastAPI-从零开始构建高性能API-快速入门指南)
+- [Python Web 爬虫实战：从入门到精通](/dev/backend/python/Python-Web爬虫实战-从入门到精通)

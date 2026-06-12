@@ -788,3 +788,8 @@ class RealTimeRecommender:
    - 音乐推荐系统
 
 掌握推荐系统技术，打造个性化用户体验！
+
+## 相关阅读
+
+- [FastAPI 从零开始构建高性能 API：快速入门指南](/dev/backend/python/FastAPI-从零开始构建高性能API-快速入门指南)
+- [Python Web 爬虫实战：从入门到精通](/dev/backend/python/Python-Web爬虫实战-从入门到精通)

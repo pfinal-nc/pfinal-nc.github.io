@@ -346,6 +346,13 @@ Cursor Pro 单位成本略低（但补全体验不可替代）
 
 工具在进化，但原则不变：AI 是副驾驶，你是机长。
 
+
+
+## 相关阅读
+
+- [关于PFinalClub - 后端 + DevOps + AI 工程实践技术博客](/about)
+- [联系我们 - 与PFinalClub取得联系](/contact)
+- [MCP 服务器开发实战：构建 AI 编程助手扩展](/data/automation/mcp-server-development)
 ## 参考资料
 
 - [Cursor vs Claude Code vs Windsurf: 2026 Guide - Y Build](https://ybuild.ai/zh/blog/cursor-vs-claude-code-vs-windsurf-ai-coding-tools-2026)

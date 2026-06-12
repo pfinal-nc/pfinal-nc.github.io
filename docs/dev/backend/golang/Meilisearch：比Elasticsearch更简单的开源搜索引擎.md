@@ -553,3 +553,9 @@ Meilisearch作为新一代搜索引擎，在简单性、性能和开发体验方
 - [Go SDK GitHub仓库](https://github.com/meilisearch/meilisearch-go)
 - [Meilisearch Cloud托管服务](https://www.meilisearch.com/cloud)
 - [社区论坛和Discord](https://discord.gg/meilisearch)
+
+## 相关阅读
+
+- [Go 零拷贝读取器实战与原理解析](/dev/backend/golang/Go 零拷贝读取器实战与原理解析)
+- [Go 并发模式进阶：高级并发编程技巧](/dev/backend/golang/go-concurrency-patterns-advanced)
+- [Go 内存管理与垃圾回收：深入理解 GC 机制](/dev/backend/golang/go-memory-management-gc)

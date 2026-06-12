@@ -229,6 +229,8 @@ func init() {
 
 通过这些示例，可以看到 go:embed 指令在嵌入静态资源方面的强大功能和灵活性。开发者可以根据实际需求，选择最适合的嵌入方式，提高程序的可移植性和部署效率。
 
+## 相关阅读
 
-
-
+- [Go 零拷贝读取器实战与原理解析](/dev/backend/golang/Go 零拷贝读取器实战与原理解析)
+- [Go 并发模式进阶：高级并发编程技巧](/dev/backend/golang/go-concurrency-patterns-advanced)
+- [Go 内存管理与垃圾回收：深入理解 GC 机制](/dev/backend/golang/go-memory-management-gc)

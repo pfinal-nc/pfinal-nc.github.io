@@ -77,3 +77,9 @@ fromEvent(loginButton, 'click').pipe(
 | `concatMap` | **排队**，按顺序处理 | 纪律严明的队列 | 保证异步任务的顺序性 |
 | `switchMap` | **切换**，只关心最新的 | 喜新厌旧 | 处理只关心最新结果的场景（如搜索） |
 | `exhaustMap` | **忽略**，直到当前任务完成 | 忙碌的工人 | 防止重复触发（如点击） |
+
+## 相关阅读
+
+- [关于PFinalClub - 后端 + DevOps + AI 工程实践技术博客](/about)
+- [联系我们 - 与PFinalClub取得联系](/contact)
+- [MCP 服务器开发实战：构建 AI 编程助手扩展](/data/automation/mcp-server-development)

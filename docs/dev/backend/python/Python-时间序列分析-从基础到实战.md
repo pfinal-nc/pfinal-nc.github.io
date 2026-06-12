@@ -672,3 +672,8 @@ df['expanding_mean'] = df['sales'].expanding().mean()
   - Kaggle - Time Series forecasting
 
 掌握时间序列分析，为业务决策提供强有力的数据支持！
+
+## 相关阅读
+
+- [FastAPI 从零开始构建高性能 API：快速入门指南](/dev/backend/python/FastAPI-从零开始构建高性能API-快速入门指南)
+- [Python Web 爬虫实战：从入门到精通](/dev/backend/python/Python-Web爬虫实战-从入门到精通)

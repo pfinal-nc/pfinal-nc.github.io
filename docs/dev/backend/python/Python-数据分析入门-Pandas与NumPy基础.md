@@ -544,3 +544,8 @@ df = df.rename(columns={
 - 大数据处理（Dask、PySpark）
 
 数据分析是数据科学的基础，打好基础将为后续学习机器学习、深度学习等高级主题奠定坚实基础。持续练习，多看实战案例，你将很快成为一名优秀的数据分析师！
+
+## 相关阅读
+
+- [FastAPI 从零开始构建高性能 API：快速入门指南](/dev/backend/python/FastAPI-从零开始构建高性能API-快速入门指南)
+- [Python Web 爬虫实战：从入门到精通](/dev/backend/python/Python-Web爬虫实战-从入门到精通)

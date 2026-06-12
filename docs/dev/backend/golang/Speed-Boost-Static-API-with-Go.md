@@ -172,3 +172,9 @@ func main() {
 ## 总结 
 
 以上方法展示了如何使用 Go 语言实现一个简单的静态化 API，在优化过程中，通过添加文件锁定机制、内存缓存和异步更新，进一步提升了系统的性能和稳定性。文件锁定机制避免了读写冲突，内存缓存加速了数据读取，而异步更新则防止了主服务的阻塞。通过这些优化，静态化API不仅提高了系统的响应速度和并发处理能力，还降低了对后端和数据库的压力。
+
+## 相关阅读
+
+- [Go 零拷贝读取器实战与原理解析](/dev/backend/golang/Go 零拷贝读取器实战与原理解析)
+- [Go 并发模式进阶：高级并发编程技巧](/dev/backend/golang/go-concurrency-patterns-advanced)
+- [Go 内存管理与垃圾回收：深入理解 GC 机制](/dev/backend/golang/go-memory-management-gc)

@@ -838,6 +838,11 @@ FastMCP 3.0 让 Python 构建生产级 MCP Server 变得前所未有的简单。
 
 如果你正在为 AI Agent 构建工具链，FastMCP 3.0 是目前最值得投入学习的 MCP 框架。
 
+
+
+## 相关阅读
+
+- [MCP 服务器开发实战：构建 AI 编程助手扩展](/data/automation/mcp-server-development)
 ## 参考资料
 
 - [FastMCP 官方文档](https://fastmcp.wiki/zh/getting-started/welcome)

@@ -595,3 +595,9 @@ curl -X POST http://raspberrypi.local:8080/infer \
 
 > "未来，不是最大的模型赢，而是最会'瘦身'的模型统治边缘。"  
 > —— 2026年，写在树莓派跑通Qwen-2B的夜晚
+
+## 相关阅读
+
+- [Go 零拷贝读取器实战与原理解析](/dev/backend/golang/Go 零拷贝读取器实战与原理解析)
+- [Go 并发模式进阶：高级并发编程技巧](/dev/backend/golang/go-concurrency-patterns-advanced)
+- [Go 内存管理与垃圾回收：深入理解 GC 机制](/dev/backend/golang/go-memory-management-gc)

@@ -419,6 +419,13 @@ func (a *AuditLogger) LogToolCall(entry AuditEntry) error {
 
 **关键数字**：85% 的 GenAI 部署仍在"盲飞"——现在接入追踪的团队，当 Agent 出问题时，能在几分钟内从 trace 中找到根因，而竞争对手只能靠猜测。
 
+
+
+## 相关阅读
+
+- [关于PFinalClub - 后端 + DevOps + AI 工程实践技术博客](/about)
+- [联系我们 - 与PFinalClub取得联系](/contact)
+- [MCP 服务器开发实战：构建 AI 编程助手扩展](/data/automation/mcp-server-development)
 ## 参考资料
 
 - OpenTelemetry GenAI Semantic Conventions v1.41: https://opentelemetry.io/docs/specs/semconv/gen-ai/

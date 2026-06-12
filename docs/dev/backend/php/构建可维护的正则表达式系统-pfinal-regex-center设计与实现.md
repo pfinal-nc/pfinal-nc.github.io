@@ -1258,3 +1258,9 @@ if ($regex->test('email:basic', 'user@example.com')) {
 **许可证**：MIT License（开源免费，随便用）
 
 **贡献**：欢迎提交 Issue 和 Pull Request（一起让项目变得更好）
+
+## 相关阅读
+
+- [PHP 生成器 - 使用指南](/dev/backend/php/PHP 大杀器之生成器)
+- [PHP 异步处理 - 使用指南](/dev/backend/php/PHP之异步处理)
+- [PHP 8.4 新特性详解：属性钩子、非对称可见性与更多](/dev/backend/php/php-8-4-new-features)

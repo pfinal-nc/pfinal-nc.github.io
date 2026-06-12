@@ -464,3 +464,9 @@ Go 1.26 的 Green Tea GC 是 Go 运行时团队多年深耕的成果。它不是
 - [Go 官方博客：Go 1.26 is released](https://go.dev/blog/go1.26)
 - [Go 1.26 Interactive Tour - Anton Zhiyanov](https://antonz.org/go-1-26/)
 - [Green Tea: Understanding Go's Garbage Collector - Felipe Ascari](https://medium.com/@felipe.ascari_49171/green-tea-understanding-gos-garbage-collector-21cc1bc08725)
+
+## 相关阅读
+
+- [Go 零拷贝读取器实战与原理解析](/dev/backend/golang/Go 零拷贝读取器实战与原理解析)
+- [Go 并发模式进阶：高级并发编程技巧](/dev/backend/golang/go-concurrency-patterns-advanced)
+- [Go 内存管理与垃圾回收：深入理解 GC 机制](/dev/backend/golang/go-memory-management-gc)

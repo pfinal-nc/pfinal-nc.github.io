@@ -426,3 +426,9 @@ func TestUserAPI_Integration(t *testing.T) {
 | 测试覆盖 | 单元测试 + 集成测试 |
 
 遵循这些原则，能帮助你构建高质量的 Go 后端应用。
+
+## 相关阅读
+
+- [Go 零拷贝读取器实战与原理解析](/dev/backend/golang/Go 零拷贝读取器实战与原理解析)
+- [Go 并发模式进阶：高级并发编程技巧](/dev/backend/golang/go-concurrency-patterns-advanced)
+- [Go 内存管理与垃圾回收：深入理解 GC 机制](/dev/backend/golang/go-memory-management-gc)

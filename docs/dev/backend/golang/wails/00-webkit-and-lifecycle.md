@@ -564,3 +564,9 @@ func (a *App) shutdown(ctx context.Context) {
 - 开发模式和生产模式的资产加载策略不同
 
 在接下来的教程中，我们将基于这些基础知识，深入探讨 Wails 开发的各个方面。
+
+## 相关阅读
+
+- [Wails 桌面应用开发 - Go 跨平台框架完整指南 | PFinalClub](/dev/backend/golang/wails/README)
+- [关于PFinalClub - 后端 + DevOps + AI 工程实践技术博客](/about)
+- [联系我们 - 与PFinalClub取得联系](/contact)

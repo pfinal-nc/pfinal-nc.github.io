@@ -465,3 +465,9 @@ Gin 框架提供了：
 4. **丰富功能**：错误处理、模板渲染、静态文件等
 
 掌握 Gin，你就能快速构建生产级的 Go Web 应用！
+
+## 相关阅读
+
+- [Go 零拷贝读取器实战与原理解析](/dev/backend/golang/Go 零拷贝读取器实战与原理解析)
+- [Go 并发模式进阶：高级并发编程技巧](/dev/backend/golang/go-concurrency-patterns-advanced)
+- [Go 内存管理与垃圾回收：深入理解 GC 机制](/dev/backend/golang/go-memory-management-gc)

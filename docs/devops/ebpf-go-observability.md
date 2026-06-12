@@ -683,6 +683,13 @@ discovery:
 
 **一句话总结**：2026 年，eBPF 已从"前沿技术"变为"云原生基础设施标配"。从 Cilium 网络可观测切入，逐步扩展到 Tetragon 安全观测和 Beyla 应用指标，是风险最低、收益最高的落地路径。Go 作为 eBPF 用户态开发的优选语言，cilium/ebpf 库的成熟度已经足以支撑生产环境使用。
 
+
+
+## 相关阅读
+
+- [Go 零拷贝读取器实战与原理解析](/dev/backend/golang/Go 零拷贝读取器实战与原理解析)
+- [Go 并发模式进阶：高级并发编程技巧](/dev/backend/golang/go-concurrency-patterns-advanced)
+- [Go 内存管理与垃圾回收：深入理解 GC 机制](/dev/backend/golang/go-memory-management-gc)
 ## 参考资料
 
 - [eBPF.io 官方文档](https://ebpf.io/)

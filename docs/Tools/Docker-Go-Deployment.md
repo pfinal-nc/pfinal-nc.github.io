@@ -295,3 +295,7 @@ jobs:
 | 部署 | Docker Compose + CI/CD |
 
 Docker 让 Go 应用部署标准化，提高开发运维效率。
+
+## 相关阅读
+
+- [Docker部署Go项目实践指南](/tools/Docker部署Go项目实践指南)

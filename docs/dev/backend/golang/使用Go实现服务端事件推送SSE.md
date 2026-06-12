@@ -244,3 +244,9 @@ func main() {
 ## 总结
 
 通过将站内信推送从WebSocket切换到SSE，我们能够实现更高效的低频推送。SSE的简单实现和低资源消耗使其成为处理此类场景的理想选择。未来，如果有更多的优化需求或技术挑战，持续探索和调整将是提升系统性能和用户体验的关键。
+
+## 相关阅读
+
+- [Go 零拷贝读取器实战与原理解析](/dev/backend/golang/Go 零拷贝读取器实战与原理解析)
+- [Go 并发模式进阶：高级并发编程技巧](/dev/backend/golang/go-concurrency-patterns-advanced)
+- [Go 内存管理与垃圾回收：深入理解 GC 机制](/dev/backend/golang/go-memory-management-gc)

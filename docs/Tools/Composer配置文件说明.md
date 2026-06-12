@@ -208,3 +208,9 @@ $loader->add('Acme\\Test\\', __DIR__);
 除了 PSR-4 自动加载，classmap 也是支持的。这允许类被自动加载，即使不符合 PSR-0 规范。详细请查看 自动加载-参考。
 
 注意： Composer 提供了自己的 autoloader。如果你不想使用它，你可以仅仅引入 vendor/composer/autoload_*.php 文件，它返回一个关联数组，你可以通过这个关联数组配置自己的 autoloader。
+
+## 相关阅读
+
+- [PHP 生成器 - 使用指南](/dev/backend/php/PHP 大杀器之生成器)
+- [PHP 异步处理 - 使用指南](/dev/backend/php/PHP之异步处理)
+- [PHP 8.4 新特性详解：属性钩子、非对称可见性与更多](/dev/backend/php/php-8-4-new-features)

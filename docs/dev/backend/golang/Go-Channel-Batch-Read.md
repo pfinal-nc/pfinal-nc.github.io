@@ -526,3 +526,9 @@ func getOptimalBatchSize(scenario string) int {
 | 优先级批量 | 多优先级数据 | 优先处理高优先级 |
 
 掌握 Channel 批量读取技术，能让你的 Go 程序在处理流式数据时更加高效和可靠。
+
+## 相关阅读
+
+- [Go 零拷贝读取器实战与原理解析](/dev/backend/golang/Go 零拷贝读取器实战与原理解析)
+- [Go 通道（Channel）详解](/dev/backend/golang/go-channel-guide)
+- [Go 并发模式进阶：高级并发编程技巧](/dev/backend/golang/go-concurrency-patterns-advanced)

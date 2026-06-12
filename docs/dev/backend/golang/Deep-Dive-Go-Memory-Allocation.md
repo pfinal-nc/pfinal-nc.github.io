@@ -555,4 +555,8 @@ func leakMemory() {
 1. **内存分配情况**：访问 `http://localhost:6060/debug/pprof/heap` 可以查看当前堆内存的分配情况。
 2. **内存使用图**：使用 `go tool pprof` 命令可以生成内存使用的图形化视图，帮助开发者识别内存泄漏的来源。
 
+## 相关阅读
 
+- [Go 零拷贝读取器实战与原理解析](/dev/backend/golang/Go 零拷贝读取器实战与原理解析)
+- [Go 并发模式进阶：高级并发编程技巧](/dev/backend/golang/go-concurrency-patterns-advanced)
+- [Go 内存管理与垃圾回收：深入理解 GC 机制](/dev/backend/golang/go-memory-management-gc)

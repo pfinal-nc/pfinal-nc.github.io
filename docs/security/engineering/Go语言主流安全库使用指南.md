@@ -651,3 +651,9 @@ func validateArchive(path string) error {
 5. 结合其他安全措施，如输入验证和访问控制，以提高整体安全性
 ## 9. 总结
 Go 语言提供了许多安全增强库，如 `crypto/rand`、`text/template`、`github.com/google/safetext`、`github.com/google/safeopen`、`github.com/google/safearchive` 等。这些库可以帮助开发者在编写 Go 应用程序时提高安全性。
+
+## 相关阅读
+
+- [Go 零拷贝读取器实战与原理解析](/dev/backend/golang/Go 零拷贝读取器实战与原理解析)
+- [Go 并发模式进阶：高级并发编程技巧](/dev/backend/golang/go-concurrency-patterns-advanced)
+- [Go 内存管理与垃圾回收：深入理解 GC 机制](/dev/backend/golang/go-memory-management-gc)

@@ -301,3 +301,9 @@ prompt = CODE_REVIEW_TEMPLATE.substitute(
 6. **分解复杂任务** - 复杂问题拆成多步骤
 
 > 记住：AI 是工具，提示词是接口。掌握提示词工程，你就掌握了与 AI 高效协作的能力。
+
+## 相关阅读
+
+- [关于PFinalClub - 后端 + DevOps + AI 工程实践技术博客](/about)
+- [联系我们 - 与PFinalClub取得联系](/contact)
+- [MCP 服务器开发实战：构建 AI 编程助手扩展](/data/automation/mcp-server-development)

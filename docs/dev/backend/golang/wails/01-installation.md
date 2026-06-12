@@ -514,3 +514,9 @@ go env GOPROXY
 ---
 
 现在你的开发环境已经配置完毕，可以开始创建你的第一个 Wails 应用了。在下一篇文章中，我们将学习如何用 `wails init` 命令来创建一个新项目。
+
+## 相关阅读
+
+- [关于PFinalClub - 后端 + DevOps + AI 工程实践技术博客](/about)
+- [联系我们 - 与PFinalClub取得联系](/contact)
+- [MCP 服务器开发实战：构建 AI 编程助手扩展](/data/automation/mcp-server-development)
