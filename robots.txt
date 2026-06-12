@@ -1,5 +1,5 @@
 # robots.txt for friday-go.icu
-# Updated: 2026-02-11
+# Updated: 2026-06-12
 
 User-agent: *
 Allow: /
@@ -7,26 +7,20 @@ Allow: /
 # Sitemap location
 Sitemap: https://friday-go.icu/sitemap.xml
 
-# Allow static assets
-Allow: /*.css$
-Allow: /*.js$
-Allow: /*.png$
-Allow: /*.jpg$
-Allow: /*.jpeg$
-Allow: /*.gif$
-Allow: /*.svg$
-Allow: /*.ico$
-
-# Disallow specific patterns
+# Disallow query params for tag/category/type filtering
 Disallow: /*?tag=
 Disallow: /*?type=
 Disallow: /*?category=
-Disallow: /*?*
-Disallow: /404$
-Disallow: /404.html$
-Disallow: /*.html$  # Clean URLs preferred
+Disallow: /*?utm_*
 
-# Allow major search engines to crawl everything else
+# Disallow 404 pages
+Disallow: /404
+Disallow: /404.html
+
+# Disallow .html suffix (clean URLs preferred)
+Disallow: /*.html$
+
+# Allow major search engines
 User-agent: Googlebot
 Allow: /
 
@@ -44,6 +38,3 @@ Allow: /
 
 User-agent: Yandex
 Allow: /
-
-# Host declaration
-Host: friday-go.icu
