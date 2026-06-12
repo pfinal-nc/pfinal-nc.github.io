@@ -44,6 +44,17 @@ jobs:
       - name: Build
         run: pnpm build
 
+      - name: Generate Sitemap
+        run: node scripts/emergency-sitemap.mjs
+
+      - name: Copy sitemap to dist
+        run: cp docs/public/sitemap.xml docs/.vitepress/dist/sitemap.xml
+
+      - name: Submit Sitemap to Search Engines
+        run: |
+          curl -s "https://www.google.com/ping?sitemap=https://friday-go.icu/sitemap.xml" || true
+          curl -s "https://www.bing.com/ping?sitemap=https://friday-go.icu/sitemap.xml" || true
+
       - name: Fix preload links in HTML
         run: node scripts/fix-preload.js
 

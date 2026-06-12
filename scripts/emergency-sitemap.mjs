@@ -114,9 +114,11 @@ urls.push({
 
 // 专题索引页的高优先级路径
 const indexPaths = [
+  '', 'about',
   'dev', 'dev/backend', 'dev/backend/golang', 'dev/backend/php', 'dev/backend/python',
   'dev/system', 'dev/system/database',
   'security/engineering', 'security/offensive',
+  'ai', 'devops', 'indie',
   'data/automation',
   'thinking/method', 'thinking/notes',
   'Tools',
