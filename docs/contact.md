@@ -232,8 +232,8 @@ tags:
 
 ## 🔗 相关页面
 
-- [关于我们](/about.html) - 了解PFinalClub
-- [隐私政策](/privacy-policy.html) - 我们的隐私实践
+- [关于我们](/about) - 了解PFinalClub
+- [隐私政策](/privacy-policy) - 我们的隐私实践
 - [首页](/) - 浏览我们的最新文章
 
 ---
