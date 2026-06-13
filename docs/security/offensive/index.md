@@ -33,6 +33,22 @@ recommend: 安全
 - [golang 中的网络安全 TLS/SSL 实现](/security/engineering/golang 中的网络安全TLS SSL的实现)
 - [代码安全扫描自动化](/Tools/从手动到自动-Go语言助力快速识别代码中的安全隐患) - 自动化安全检测
 
+### 🔥 2026 攻防热点系列
+- [2026 H1 漏洞态势报告：供应链与 AI 成主战场](/security/offensive/2026-h1-vulnerability-landscape) - 半年盘点
+- [OWASP API Security Top 10 2026 + Go 防御实战](/security/offensive/owasp-api-security-top10-2026-go) - API 安全
+- [OWASP Agentic AI Top 10 2026 深度解读与防御实战](/security/offensive/owasp-agentic-ai-top10-2026) - AI Agent 安全
+- [CTF 2026 云安全攻防：从容器逃逸到 K8s 渗透实战](/security/offensive/ctf-2026-cloud-security-attack-and-defense) - 云原生 CTF
+- [LLM 红队测试 2026：企业级 AI 安全攻防实战指南](/security/offensive/llm-red-teaming-2026) - LLM 红队
+- [LLM 安全攻防实战：Prompt Injection 防御](/security/offensive/llm-prompt-injection-defense) - Prompt 注入
+- [Post-Quantum Cryptography 迁移实战：Go 开发者 PQC 落地指南](/security/offensive/post-quantum-cryptography-go-migration-2026) - 后量子密码学
+- [AI Multi-Agent Penetration Testing](/security/offensive/AI-Multi-Agent-Penetration-Testing) - 多 Agent 渗透
+
+### 🏗️ 经典方法论
+- [红队基础设施搭建指南](/security/offensive/红队基础设施搭建指南) - 红队 Infra
+- [内网渗透测试方法论](/security/offensive/internal-penetration-testing) - 内网方法论
+- [渗透测试方法论](/security/offensive/penetration-testing-methodology) - 标准流程
+- [WebShell 免杀与 Java 内存马技术研究](/security/offensive/webshell免杀与Java内存马技术研究) - 免杀技术
+
 ---
 
 ## 🎯 学习路径建议

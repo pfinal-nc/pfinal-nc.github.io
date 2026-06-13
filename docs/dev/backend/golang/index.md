@@ -81,6 +81,28 @@ pageClass: golang-hub-page
 3. 性能优化 → [Go性能优化实战](/dev/backend/golang/Go性能优化实战)
 4. 高级项目 → [Go大型项目实战](/dev/backend/golang/Go大型项目实战)
 
+## 🔥 2026 热点系列（持续更新）
+
+### AI × Go 交叉实战
+- [**Go 语言 AI Agent 开发实战**](/ai/ai-agent-development-go) - Function Calling 与多工具编排
+- [**MCP 服务器开发实战：用 Go 构建 AI 工具协议**](/ai/mcp-server-practice) - MCP 协议 Go 实现
+- [**Rust vs Go 2026：性能基准、内存安全与后端选型**](/dev/backend/golang/rust-vs-go-2026) - 选型决策
+
+### 2026 Go 工具链与性能
+- [**Go 1.26 SIMD 编程实战**](/dev/backend/golang/Go-1-26-SIMD编程实战) - SIMD 加速
+- [**Go 1.26 工具链与语法新特性深度解析**](/dev/backend/golang/Go-1-26-工具链与语法新特性) - 最新特性
+- [**Go errgroup 结构化并发：从原理到生产最佳实践**](/dev/backend/golang/go-errgroup-structured-concurrency-2026) - 并发模式
+- [**Go slog 结构化日志生产最佳实践**](/dev/backend/golang/go-slog-production-best-practices-2026) - 日志规范
+- [**Go 2026 Roadmap 深度解读**](/dev/backend/golang/Go-2026-Roadmap-Deep-Dive) - 路线图
+- [**Go goroutine 泄漏检测：从 pprof 到生产级并发调试**](/dev/backend/golang/go-goroutine-leak-detection-2026) - 调试实战
+
+### 安全 & 供应链
+- [**Go SBOM 实战：软件供应链安全**](/dev/backend/golang/go-sbom-supply-chain-security) - SBOM 落地
+- [**Go Fuzzing 实战：CI 集成到生产安全漏洞挖掘**](/dev/backend/golang/go-fuzzing-production-guide-2026) - 模糊测试
+- [**PQC 迁移实战：Go 开发者 PQC 落地指南**](/security/offensive/post-quantum-cryptography-go-migration-2026) - 后量子密码学
+
+---
+
 ## 📖 最新文章
 
 <div class="latest-articles-grid">
