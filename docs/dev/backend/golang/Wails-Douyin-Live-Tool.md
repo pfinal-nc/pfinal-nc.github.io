@@ -1,6 +1,6 @@
 ---
-title: "基于 Wails 的抖音直播工具"
-description: "介绍如何使用 Wails 框架开发抖音直播助手工具，包括弹幕获取、礼物统计、自动回复等功能实现。"
+title: "Wails 抖音直播助手实战：弹幕获取 + 礼物统计 + 自动回复"
+description: "用 Wails 框架开发抖音直播桌面助手：WebSocket 弹幕抓取、礼物打赏统计、关键词自动回复，附完整功能实现代码"
 keywords:
   - Wails
   - 抖音直播

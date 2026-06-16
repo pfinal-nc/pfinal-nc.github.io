@@ -1,9 +1,9 @@
 ---
-title: 使用Homebrew Tap发布个人工具
+title: "Homebrew Tap 发布个人工具实战 2026：Go CLI 一键分发全流程"
 date: 2024-08-21 09:49:32
 tags:
   - 工具
-description: 使用 Homebrew Tap 发布个人 CLI 工具到 Homebrew 的完整指南
+description: "5 步用 Homebrew Tap 发布 Go CLI 工具：GoReleaser + GitHub Actions 自动化，用户一行命令 brew install 即可安装，附带完整配置模板"
 author: PFinal南丞
 keywords:
   - Homebrew Tap

@@ -1,10 +1,10 @@
 ---
-title: Git 基本操作 - 完整使用指南
+title: "Git 基本操作完整指南 2026：30 个必会命令从入门到协作"
 date: 2022-08-23 22:08:16
 tags:
   - 工具
   - Git
-description: Git 基本操作
+description: "Git 30 个核心命令实战：clone/commit/branch/merge/rebase/cherry-pick，包含冲突解决、撤销操作、团队协作工作流，新手友好"
 author: PFinal南丞
 keywords:
   - Git

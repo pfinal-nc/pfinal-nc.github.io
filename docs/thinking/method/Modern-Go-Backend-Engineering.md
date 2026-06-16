@@ -1,6 +1,6 @@
 ---
-title: "高质量 Golang 后端的现代软件工程原则"
-description: "深入讲解构建高质量 Go 后端应用的现代软件工程原则，包括架构设计、代码组织、测试策略和最佳实践。"
+title: "Go 后端现代工程 7 大原则 2026：从架构到交付的实战指南"
+description: "构建高质量 Go 后端的 7 大工程原则：Clean Architecture + 依赖注入 + 表驱动测试 + CI/CD，附带真实项目代码组织示例"
 keywords:
   - Go 软件工程
   - 架构设计

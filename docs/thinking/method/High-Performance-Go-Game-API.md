@@ -1,6 +1,6 @@
 ---
-title: "基于 golang 的高性能游戏接口设计"
-description: "深入讲解如何使用 Go 语言设计高性能游戏后端接口，包括长连接管理、状态同步、房间系统等核心技术。"
+title: "Go 高性能游戏 API 设计实战：WebSocket + 房间系统 + 万级并发"
+description: "Go 游戏后端架构实战：WebSocket 长连接管理、房间状态同步、帧同步 vs 状态同步选型，压测达万级并发，附完整代码"
 keywords:
   - Go 游戏开发
   - 游戏后端

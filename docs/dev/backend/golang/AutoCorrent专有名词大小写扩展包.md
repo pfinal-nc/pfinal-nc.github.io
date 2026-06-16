@@ -1,9 +1,9 @@
 ---
-title: AutoCorrent专有名词大小写扩展包
+title: "Go 专有名词自动校正 AutoCorrect 实战：告别 iOS/MySQL 大小写错误"
 date: 2024-08-23 17:15:27
 tags:
   - golang
-description: 介绍 Go 专有名词大小写自动校正扩展包 AutoCorrect 的使用方法与最佳实践
+description: "Go AutoCorrect 扩展包实战：自动校正 iOS/MySQL/JavaScript 等 500+ 专有名词大小写，支持 Markdown/Go 注释/commit-msg 集成"
 author: PFinal南丞
 keywords:
   - AutoCorrent专有名词大小写扩展包

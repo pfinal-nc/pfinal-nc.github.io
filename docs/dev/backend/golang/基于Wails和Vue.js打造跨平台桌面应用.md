@@ -1,10 +1,10 @@
 ---
-title: 用Wails和Vue.js打造跨平台桌面应用程序
+title: "Wails + Vue.js 跨平台桌面应用实战 2026：从零构建可分发的 App"
 date: 2024-08-28 10:14:02
 tags:
   - golang
   - Wails
-description: 用Wails和Vue.js打造跨平台桌面应用程序
+description: "用 Wails v2 + Vue 3 构建 macOS/Windows 桌面应用：项目初始化、前后端通信、原生 API 调用、打包分发，附完整代码"
 author: PFinal南丞
 keywords:
   - 用Wails和Vue.js打造跨平台桌面应用程序

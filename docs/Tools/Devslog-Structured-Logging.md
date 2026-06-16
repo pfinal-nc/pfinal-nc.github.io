@@ -1,6 +1,6 @@
 ---
-title: "使用 Devslog 结构化日志处理"
-description: "介绍 Devslog 结构化日志库的使用方法，包括日志格式化、级别控制、性能优化等实战技巧。"
+title: "Devslog 结构化日志实战 2026：Go 日志可读性提升 10 倍"
+description: "Go 结构化日志库 Devslog 实战指南：Pretty Print 格式化、级别控制、性能基准测试对比 slog/zap，附带生产环境最佳实践"
 keywords:
   - Devslog
   - 结构化日志
