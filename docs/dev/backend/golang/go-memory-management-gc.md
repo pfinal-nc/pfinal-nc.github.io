@@ -1,8 +1,8 @@
 ---
-title: "Go 内存管理与垃圾回收：深入理解 GC 机制"
+title: "Go 内存管理与 GC 垃圾回收深度解析 2026：逃逸分析 + 三色标记 + 调优实战"
 date: 2026-04-22
 author: PFinal南丞
-description: "深入讲解 Go 语言的内存管理机制和垃圾回收器（GC）的工作原理，包括内存分配、GC 算法、调优技巧等内容。"
+description: "Go GC 机制深度拆解 2026：栈 vs 堆分配策略、逃逸分析实战、三色标记+混合写屏障原理、GOGC 调优与内存泄漏排查，附带 pprof 性能分析案例。"
 keywords:
   - golang
   - 内存管理

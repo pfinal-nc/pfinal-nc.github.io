@@ -1,6 +1,6 @@
 ---
-title: "Go 通道（Channel）详解"
-description: "深入讲解 Go 语言通道（Channel）的概念、使用方法和高级技巧，帮助你掌握 Go 并发编程的核心机制。"
+title: "Go Channel 通道详解 2026：从基础到高级的 15 个并发模式实战"
+description: "Go Channel 通道完全指南 2026：涵盖无缓冲/有缓冲/Select/超时控制等 15 种并发模式，附带可运行代码示例和性能对比，从入门到 goroutine 泄漏排查全覆盖。"
 keywords:
   - Go Channel
   - Go 通道

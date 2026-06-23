@@ -1,8 +1,8 @@
 ---
-title: "蜜罐部署实战：构建主动防御体系"
+title: "蜜罐部署实战 2026：SSH + Web + 数据库蜜罐搭建与主动防御体系构建"
 date: 2026-04-21 10:00:00
 author: PFinal南丞
-description: "深入讲解蜜罐技术原理、分类、部署方案与实战，包含 SSH 蜜罐、Web 蜜罐、数据库蜜罐的搭建与联动防御"
+description: "蜜罐技术全栈实战 2026：Cowrie SSH 蜜罐、Glastopf Web 蜜罐、ElasticHoney 数据库蜜罐从零搭建，结合 ELK 日志分析 + 威胁情报联动，构建主动欺骗防御体系。附带 Docker Compose 一键部署方案。"
 keywords:
   - 蜜罐
   - Honeypot

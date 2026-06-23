@@ -1,8 +1,8 @@
 ---
-title: "Go JWT 认证与授权实战"
+title: "Go JWT 认证与授权实战 2026：Token 生成 + RBAC 权限 + 刷新机制全解析"
 date: 2026-04-22 00:00:00
 author: PFinal南丞
-description: "深入学习 Go 语言 JWT 认证实现，掌握 Token 生成、验证、刷新机制，以及 RBAC 权限控制，构建安全的 API 认证系统。"
+description: "Go JWT 认证完整实战 2026：Access Token + Refresh Token 双 Token 机制、HMAC/RSA 签名选择、RBAC 角色权限模型、黑名单与主动失效策略，附带 gin + jwt-go 可运行代码。"
 keywords:
   - golang
   - JWT

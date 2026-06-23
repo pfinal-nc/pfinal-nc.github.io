@@ -1,8 +1,8 @@
 ---
-title: "Linux 系统安全加固：构建安全的生产环境"
+title: "Linux 安全加固实战 2026：12 项生产级硬核配置从 SSH 到审计日志"
 date: 2026-04-22
 author: PFinal南丞
-description: "全面讲解 Linux 系统安全加固的核心措施，包括用户管理、权限控制、网络安全、日志审计等内容，帮助构建安全的生产环境。"
+description: "Linux 服务器安全加固 12 项必做清单 2026：SSH 密钥认证+Fail2Ban、sudo 权限最小化、firewalld/iptables 规则、SELinux/AppArmor、auditd 审计日志、自动安全更新、内核参数调优。附 CIS Benchmark 对照检查表。"
 keywords:
   - Linux
   - 安全加固

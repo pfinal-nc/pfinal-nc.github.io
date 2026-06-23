@@ -1,5 +1,5 @@
 ---
-title: "GitOps实战：从应用部署到全生命周期管理"
+title: "GitOps 生产实战 2026：ArgoCD + Kustomize 从 Jenkins 迁移到全生命周期管理"
 date: 2025-02-09 09:30:00
 tags:
   - GitOps
@@ -8,7 +8,7 @@ tags:
   - CI/CD
   - 云原生
   - 持续交付
-description: "记录我们团队从Jenkins迁移到GitOps的完整过程，分享ArgoCD生产环境配置、踩坑经验，以及多集群管理的实践方案。不是理论教程，是实打实的经验总结。"
+description: "GitOps 生产级实战 2026：Jenkins → ArgoCD 迁移全记录，涵盖 Kustomize 环境分层、多集群 ApplicationSet、Sealed Secrets 密钥管理、PR 预览环境、回滚策略。真实踩坑经验总结，非理论教程。"
 author: PFinal南丞
 keywords:
   - GitOps

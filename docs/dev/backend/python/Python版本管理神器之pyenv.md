@@ -1,5 +1,5 @@
 ---
-title: "pyenv - Python 版本管理指南"
+title: "pyenv 完全指南 2026：Python 多版本管理 + 虚拟环境 + 项目级自动切换"
 date: 2023-04-27 22:10:20
 author: PFinal南丞
 tags:
@@ -15,7 +15,7 @@ keywords:
   - 开发环境管理
   - Python工具推荐
   - pyenv最佳实践
-description: 详细介绍pyenv这款强大的Python版本管理工具，包括安装配置、版本切换、虚拟环境管理等核心功能，帮助开发者轻松管理多个Python版本。
+description: "pyenv 从入门到精通 2026：macOS/Linux 安装避坑、Python 版本编译安装、global/local/shell 三级切换、pyenv-virtualenv 虚拟环境管理、.python-version 项目级自动切换、与 Poetry/pipenv 配合使用。附常见错误排查。"
 recommend: 后端工程
 ---
 

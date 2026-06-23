@@ -1,8 +1,8 @@
 ---
-title: "渗透测试方法论"
+title: "渗透测试方法论完整指南 2026：信息收集 → 漏洞扫描 → 提权 → 后渗透全流程"
 date: 2026-04-22 00:00:00
 author: PFinal南丞
-description: "系统学习渗透测试方法论，掌握信息收集、漏洞扫描、权限提升、后渗透等核心阶段的技术和工具，建立规范的渗透测试流程。"
+description: "渗透测试 6 阶段完整方法论 2026：PTES 标准详解、信息收集（被动+主动）、漏洞扫描（Nessus/OpenVAS）、权限提升（Linux/Windows）、横向移动与持久化、报告撰写规范。附 Kali Linux 工具链实战。"
 keywords:
   - 渗透测试
   - Penetration Testing

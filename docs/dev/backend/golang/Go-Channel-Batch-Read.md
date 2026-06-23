@@ -1,6 +1,6 @@
 ---
-title: "深入理解 Go Channel 批量读取与实际应用"
-description: "详细讲解 Go Channel 批量读取技术，包括性能优化、实际应用场景和最佳实践，帮助你掌握高效的数据处理模式。"
+title: "Go Channel 批量读取进阶 2026：扇入扇出 + Worker Pool + 背压控制实战"
+description: "Go Channel 批量读取高级实战 2026：扇入扇出模式、动态 Worker Pool、背压控制与限流、批量超时处理，配合 benchmark 性能对比和 goroutine 泄漏排查技巧。"
 keywords:
   - Go Channel
   - 批量读取
