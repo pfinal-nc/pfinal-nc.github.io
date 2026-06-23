@@ -1,8 +1,8 @@
 ---
-title: "RxJS 测试 - 高级主题"
+title: "RxJS 单元测试实战 2026：Marble Testing 入门到精通"
 date: 2025-03-09 00:00:00
 author: PFinal南丞
-description: RxJS 测试，详解如何使用 TestScheduler 和 marble diagrams 进行测试。
+description: "RxJS Marble Testing 完整指南：TestScheduler、cold/hot marble 区别、Vitest/Jest 集成、复杂场景 7 大模式，企业级 CI 集成"
 keywords:
   - RxJS
   - 测试

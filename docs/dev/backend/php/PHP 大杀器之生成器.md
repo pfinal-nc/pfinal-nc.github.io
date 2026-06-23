@@ -1,9 +1,9 @@
 ---
-title: "PHP 生成器 - 使用指南"
+title: "PHP 生成器完整指南 2026：从入门到协程底层原理"
 date: 2022-05-04 15:29:24
 tags:
   - php
-description: PHP 大杀器之生成器
+description: "PHP 生成器 7 大实战场景：yield / send / throw / 协程原理、内存节省 90%、与 Fiber 关系、与 Swoole 协程对比"
 author: PFinal南丞
 keywords:
   - php

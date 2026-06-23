@@ -1,8 +1,8 @@
 ---
-title: "PHP 8.4 新特性详解：属性钩子、非对称可见性与更多"
+title: "PHP 8.4 新特性深度解析 2026：property hooks 与 asymmetric visibility 实战"
 date: 2026-04-21 10:00:00
 author: PFinal南丞
-description: "全面解读 PHP 8.4 的核心新特性：属性钩子（Property Hooks）、非对称可见性、new 表达式不加括号、数组函数增强等，助你快速掌握最新 PHP 开发能力。"
+description: "PHP 8.4 五大新特性实战：property hooks / asymmetric visibility / array_find / new MyClass()->method() / #[\_] 弃用，附完整迁移指南"
 keywords:
   - PHP8
   - PHP 新特性

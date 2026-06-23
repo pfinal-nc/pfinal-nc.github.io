@@ -77,8 +77,8 @@ export default defineConfig({
 | watch / watchEffect | ✅ |
 | defineProps / defineEmits | ✅ |
 | 自定义指令 | ⚠️ 部分 |
-| <Transition> | ❌ 用 View Transition API |
-| <KeepAlive> | ❌ 改用 <Suspense> |
+| `<Transition>` | ❌ 用 View Transition API |
+| `<KeepAlive>` | ❌ 改用 `<Suspense>` |
 
 ## 三、性能对比
 
@@ -136,13 +136,13 @@ npx vue-doctor --vapor-check
 ```
 第一阶段：列表页、详情页等纯展示组件（80% 业务）
 第二阶段：表单组件（需测试 watch 行为）
-第三阶段：动画组件（<Transition> 替代方案）
+第三阶段：动画组件（`<Transition>` 替代方案）
 第四阶段：复杂状态组件
 ```
 
 ### 5.3 常见踩坑
 
-- `<Transition>` 不能直接用，改用 View Transition API
+- ``<Transition>`` 不能直接用，改用 View Transition API
 - 自定义指令需要适配 vapor 编译
 - HMR 行为有变化，需测试开发体验
 

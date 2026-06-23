@@ -1,9 +1,9 @@
 ---
-title: "PHP 错误与异常处理 - 使用指南"
+title: "PHP 错误与异常处理实战 2026：8 种错误类型与生产级 try/catch 模式"
 date: 2022-05-04 15:29:24
 tags:
   - php
-description: 详细介绍PHP错误与异常处理的概念、分类、处理方式等，帮助开发者更好地处理程序中的错误和异常，提高程序的健壮性和稳定性。
+description: "PHP 错误处理完整指南：8 种错误类型 + Error/Exception 区别 + 自定义异常体系 + 错误日志监控 + Sentry 集成实战"
 author: PFinal南丞
 keywords:
   - php

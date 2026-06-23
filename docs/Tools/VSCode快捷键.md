@@ -1,10 +1,10 @@
 ---
-title: "VSCode快捷键 - 完整使用指南"
+title: "VSCode 快捷键完整指南 2026：80 个必学命令覆盖开发全流程"
 date: 2025-08-21 10:00:00
 tags:
     - 工具
     - VSCode
-description: VSCode常用快捷键总结，提高开发效率
+description: "VSCode 80 个高频快捷键分类实战：编辑、搜索、调试、Git、插件、IntelliJ 习惯迁移，附 4 套主流预设配置（macOS/Windows/Linux）"
 author: PFinal南丞
 keywords:
   - VSCode

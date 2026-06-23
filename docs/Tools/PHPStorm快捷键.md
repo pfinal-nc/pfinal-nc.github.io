@@ -1,10 +1,10 @@
 ---
-title: "PHPStorm 快捷键 - 使用指南"
+title: "PHPStorm 快捷键完整指南 2026：50+ 必学组合提升编码效率 5 倍"
 date: 2022-07-04 10:31:10
 tags:
   - 工具
   - php
-description: PHPStorm快捷键
+description: "PHPStorm 50+ 高频快捷键实战分类整理：代码编辑、搜索、调试、重构、Git 操作，附 5 大场景速查表（macOS/Windows 双平台）"
 author: PFinal南丞
 keywords:
   - PHPStorm

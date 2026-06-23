@@ -1,8 +1,8 @@
 ---
-title: "自定义操作符 - RxJS 高级主题"
+title: "RxJS 自定义操作符实战 2026：5 种模式彻底掌握冷热流转换"
 date: 2025-03-09 00:00:00
 author: PFinal南丞
-description: RxJS 自定义操作符，详解如何创建可复用的管道操作符。
+description: "RxJS 自定义操作符 5 种生产模式完全指南：monoType / operatorFunction / pipe 组合 + Marble Testing，附 hot-cold 转换实战"
 keywords:
   - RxJS
   - 自定义操作符

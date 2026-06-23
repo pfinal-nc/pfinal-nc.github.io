@@ -1,5 +1,5 @@
 ---
-title: PHP-FPM 配置详解 - 生产环境调优实战指南
+title: "PHP-FPM 配置详解 2026：30 个核心参数与生产级调优模板"
 date: 2023-04-27 22:10:20
 author: PFinal南丞
 tags:
@@ -8,7 +8,7 @@ keywords:
   - PHP-FPM
   - php
   - 工具
-description: 详细介绍PHP-FPM配置文件解析，包括配置文件的基本结构、常用配置项、进程管理、日志记录等内容，帮助开发者更好地配置和管理PHP-FPM服务。
+description: "PHP-FPM 30 个核心参数实战：pm / pm.max_children / request_terminate_timeout / 慢日志，生产级配置模板与 502 排查指南"
 recommend: 后端工程
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "PHP 异步处理 - 使用指南"
+title: "PHP 异步处理实战 2026：6 种方案对比 + Swoole 协程最佳实践"
 date: 2022-04-27 22:10:20
 tags:
   - php
@@ -16,7 +16,7 @@ keywords:
   - PHP popen异步
   - PHP进程
   - PHP高并发处理
-description: 详细介绍PHP异步处理的相关知识，包括异步处理的概念、应用场景、实现方式等，帮助开发者更好地利用PHP的异步处理能力，提高程序的性能和响应速度。
+description: "PHP 异步处理 6 大方案对比：curl_multi / pcntl / Swoole / Fiber / amphp / ReactPHP，附秒杀场景 10 万 QPS 案例"
 author: PFinal南丞
 recommend: 后端工程
 ---

@@ -1,8 +1,8 @@
 ---
-title: "调度器 Schedulers - RxJS 高级主题"
+title: "RxJS Scheduler 实战 2026：async / animationFrame / queue 选型"
 date: 2025-03-09 00:00:00
 author: PFinal南丞
-description: RxJS 调度器详解，queueScheduler、asyncScheduler、asapScheduler 的区别和使用场景。
+description: "RxJS Scheduler 完整指南：7 大调度器对比 + 性能调优 + 动画场景实战，附 Web Worker 与 Signal 集成的现代实践"
 keywords:
   - RxJS
   - Scheduler

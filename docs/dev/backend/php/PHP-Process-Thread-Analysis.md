@@ -1,9 +1,9 @@
 ---
-title: "PHP 进程与线程解析 - 使用指南"
+title: "PHP 进程与线程模型分析 2026：FPM / Swoole / Fiber 三方案对比"
 date: 2022-07-04 15:29:24
 tags:
   - php
-description: PHP进程线程解析
+description: "PHP 进程模型完整指南：FPM 多进程 vs Swoole 协程 vs Fiber，10 万并发场景下的内存与性能对比，附选型决策树"
 author: PFinal南丞
 keywords:
   - php

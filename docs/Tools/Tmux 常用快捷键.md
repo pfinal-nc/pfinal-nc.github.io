@@ -1,5 +1,5 @@
 ---
-title: Tmux 常用快捷键 - 完整使用指南
+title: "Tmux 快捷键完整指南 2026：30 个命令从入门到高效远程开发"
 date: 2022-03-13 15:46:00
 keywords:
   - Tmux
@@ -13,7 +13,7 @@ keywords:
 tag:
   - 工具
 sticky: true
-description: Tmux 常用快捷键
+description: "Tmux 30 个核心快捷键实战：会话/窗口/面板管理 + 复制模式 + 脚本化配置，远程开发必备，附带 .tmux.conf 高效模板"
 descriptionHTML: ' <span style="color:var(--description-font-color);">Tmux 常用快捷键</span> <pre style="background-color: #292b30; padding: 15px; border-radius: 10px;" class="shiki material-theme-palenight"><code> <span class="line"><span style="color:#FFCB6B;">tmux</span><span style="color:#A6ACCD;"> </span><span style="color:#C3E88D;">new</span><span style="color:#A6ACCD;"> </span><span style="color:#C3E88D;">-s pfinal</span></span> </code> </pre>'
 course:
   name: 开发者工具集

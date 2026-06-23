@@ -1,6 +1,6 @@
 ---
-title: "Go 语言主流安全库使用指南"
-description: "介绍 Go 语言中主流的安全库，包括密码学、认证、授权、输入验证等方面的优秀库及其使用方法。"
+title: "Go 主流安全库实战指南 2026：7 大组件覆盖认证/加密/审计/漏洞防护"
+description: "Go 7 大主流安全库实战对比：jwt-go / casbin / crypto 最佳实践、OWASP 推荐组合、生产级配置示例与企业级集成"
 keywords:
   - Go 安全库
   - 密码学
