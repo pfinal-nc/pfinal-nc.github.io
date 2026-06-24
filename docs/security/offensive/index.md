@@ -43,6 +43,20 @@ recommend: 安全
 - [Post-Quantum Cryptography 迁移实战：Go 开发者 PQC 落地指南](/security/offensive/post-quantum-cryptography-go-migration-2026) - 后量子密码学
 - [AI Multi-Agent Penetration Testing](/security/offensive/AI-Multi-Agent-Penetration-Testing) - 多 Agent 渗透
 
+### 🛡️ 2026 漏洞深度分析（新增）
+- [NGINX CVE-2026-42945：潜伏 18 年的堆溢出 RCE 完整攻防指南](/security/offensive/nginx-cve-2026-42945-heap-overflow-rce-guide) - 2026-06-17
+- [MCP 安全危机 2026：30 个 CVE、系统性缺陷与实战防护](/security/offensive/mcp-security-crisis-30-cves-2026) - 2026-06-14
+- [LiteSpeed CVE-2026-54420 实战：CISA KEV 在野利用漏洞攻防](/security/offensive/litespeed-cve-2026-54420-kev-symlink-attack-guide) - 2026-06-19
+- [Cisco ISE CVE-2026-20181 RCE 深度剖析](/security/offensive/cisco-ise-cve-2026-20181-rce-deep-dive) - 2026-06-20
+- [LiteLLM CVE-2026-42271 MCP 注入实战](/security/offensive/litellm-cve-2026-42271-mcp-injection-exploitation) - 2026-06-20
+
+### 🔬 供应链与工具链安全
+- [Miasma 供应链蠕虫攻击深度分析：2026 年开源生态的至暗时刻](/security/offensive/miasma-supply-chain-worm-attack-2026) - 2026-06-15
+- [gosentry 实战：Go 模糊测试工具链革命——LibAFL 引擎与语法 Fuzzing](/security/offensive/gosentry-go-fuzzing-libafl-toolchain-2026) - 2026-06-23
+
+### 🏰 零信任架构
+- [零信任架构实战 2026：从 BeyondCorp 到 SPIFFE/SPIRE 的 Go 实现](/security/offensive/zero-trust-architecture-spiffe-spire-2026) - 2026-06-22
+
 ### 🏗️ 经典方法论
 - [红队基础设施搭建指南](/security/offensive/红队基础设施搭建指南) - 红队 Infra
 - [内网渗透测试方法论](/security/offensive/internal-penetration-testing) - 内网方法论

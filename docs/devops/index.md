@@ -15,15 +15,17 @@ cover: /images/covers/devops.svg
 
 ## 📦 容器化与编排
 
-| # | 主题 | 文章 |
-|---|------|------|
-| 1 | 🐳 Docker 最佳实践 | [Docker 最佳实践：从镜像优化到生产部署](/devops/docker-best-practices) |
+| # | 主题 | 文章 | 日期 |
+|---|------|------|------|
+| 1 | 🐳 Docker 最佳实践 | [Docker 最佳实践：从镜像优化到生产部署](/devops/docker-best-practices) | — |
+| 2 | ☸️ K8s 1.36 | [Kubernetes v1.36 Haru 深度实战：70 项增强全解读](/devops/kubernetes-v1-36-haru-deep-dive-2026) | 2026-06-16 |
 
 ## 🔍 可观测性
 
 | # | 主题 | 文章 | 日期 |
 |---|------|------|------|
 | 1 | 🔬 eBPF 零侵入监控 | [eBPF + Go：云原生可观测性零侵入监控实战](/devops/ebpf-go-observability) | 2026-06-08 |
+| 2 | 📡 OTel Go 1.32 | [OpenTelemetry Go SDK 1.32 实战：eBPF 自动注入 + Metric 限制](/devops/otel-go-sdk-1-32-ebpf-injection-2026) | 2026-06-20 |
 
 ## 🌐 WASM 替代容器
 
@@ -31,19 +33,29 @@ cover: /images/covers/devops.svg
 |---|------|------|------|
 | 1 | ⚡ WASM 服务端 | [WASM 2026 服务端实战：WASI Preview 2、Component Model 与容器替代方案](/devops/wasm-2026-server-side-wasi-component-model) | 2026-06-12 |
 
+## 🏗️ 平台工程与网络
+
+| # | 主题 | 文章 | 日期 |
+|---|------|------|------|
+| 1 | 🧩 Platform Engineering | [Platform Engineering 2026：用 Backstage 构建内部开发者平台](/devops/platform-engineering-backstage-idp-2026) | 2026-06-14 |
+| 2 | 🔗 Tailscale 自建 | [Tailscale 自建 DERP 中继服务器实战：延迟 250ms→20ms](/devops/tailscale-selfhost-derp-server-2026) | 2026-06-23 |
+
 ---
 
 ## 📊 系列文章统计
 
-- **容器化与编排**：1 篇
-- **可观测性**：1 篇（eBPF 实战）
+- **容器化与编排**：2 篇（Docker + K8s 1.36）
+- **可观测性**：2 篇（eBPF + OTel Go 1.32）
 - **WASM 演进**：1 篇（容器替代方案）
-- **累计 3 篇**，更新频率：每周 1 篇
+- **平台工程与网络**：2 篇（Backstage IDP + Tailscale DERP）
+- **累计 7 篇**，更新频率：每周 1-2 篇
 
 ---
 
 ## 🎯 下一步计划
 
-- 🔜 **K8s 1.36 新特性深度解读**
-- 🔜 **Platform Engineering IDP 实战**
+- ✅ K8s 1.36 Haru 深度解读（已完成）
+- ✅ Platform Engineering IDP 实战（已完成）
+- ✅ Tailscale 自建 DERP（已完成）
 - 🔜 **GitOps：ArgoCD vs Flux 对比**
+- 🔜 **FinOps 2026**：云成本优化实战

@@ -26,8 +26,10 @@ cover: /images/covers/ai.svg
 | 5 | 🔍 可观测 | [AI Agent 可观测性 2026：从 Tracing 到生产调试的完整技术栈](/ai/ai-agent-observability-2026) | 2026-06-12 |
 | 6 | 🐍 Python 落地 | [FastMCP 3.0 实战：用 Python 构建生产级 MCP Server](/ai/fastmcp-3-0-production-mcp-server-2026) | 2026-06-11 |
 | 7 | 🔒 无状态安全 | [MCP 2026 无状态协议革命与 OpenAI Secure Tunnel 实战](/ai/mcp-stateless-secure-tunnel-2026) | 2026-06-09 |
+| 8 | 🖥️ 前端集成 | [AG-UI 协议实战：让 AI Agent 与前端无缝对话](/ai/ag-ui-protocol-frontend-integration-2026) | 2026-06-15 |
+| 9 | 🤖 模型无关 | [OpenCode 架构实战：模型无关设计如何登顶 AI 编程排行榜](/ai/opencode-architecture-model-agnostic-agent-2026) | 2026-06-23 |
 
-**学习路径建议**：从 1→7 顺序阅读，1 是入门基础，3 和 5 是 2026 必备技能，7 是前沿探索。
+**学习路径建议**：从 1→7 顺序阅读，1 是入门基础，3 和 5 是 2026 必备技能，7 是前沿探索。8 打通 Agent 到前端最后一公里，9 是 AI 编程工具链巅峰之作。
 
 ---
 
@@ -43,18 +45,29 @@ cover: /images/covers/ai.svg
 | 6 | 🛠️ 工具横评 | [2026 AI 编程工具横评：Agent 时代的新工作流](/ai/ai-coding-tools-2026-comparison) | 2026 |
 
 ---
+## 🔌 模型接入实战
+
+> 2026 年主流模型 API 接入实战，覆盖 Claude Sonnet 4.6、Gemini 3.5 Flash 等，均提供 Go 语言完整代码。
+
+| # | 模型 | 文章 | 日期 |
+|---|------|------|------|
+| 1 | 🟠 Claude | [Claude Sonnet 4.6 Go 集成实战：1M 上下文 + Agent SDK](/ai/claude-sonnet-4-6-go-integration-2026) | 2026-06-21 |
+| 2 | 🔵 Gemini | [Gemini 3.5 Flash + Go 集成实战：4 倍速高性价比 AI 应用](/ai/gemini-3-5-flash-go-integration-2026) | 2026-06-19 |
+
+---
 
 ## 📊 系列文章统计
 
-- **AI Agent 全栈**：7 篇（2026 年新增 5 篇）
+- **AI Agent 全栈**：9 篇（2026 年新增 7 篇，含 AG-UI 前端集成 + OpenCode 架构）
 - **RAG / LLM 应用**：6 篇
-- **累计阅读量**：RAG 系统架构 19 次点击（GSC Top 1）
-- **更新频率**：每周 1-2 篇热点文章同步
+- **模型接入实战**：2 篇（Claude Sonnet 4.6 + Gemini 3.5 Flash）
+- **累计 17 篇**，更新频率：每周 2-3 篇热点文章同步
 
 ---
 
 ## 🎯 下一步计划
 
+- ✅ Claude Sonnet 4.6 + Gemini 3.5 Flash Go 集成（已完成）
 - 🔜 **Agent 安全专题**：OWASP Agentic AI Top 10 实战
 - 🔜 **GraphRAG 2026**：知识图谱增强的 RAG 系统
 - 🔜 **多模态 Agent**：视觉 + 语音 + 文本融合架构
