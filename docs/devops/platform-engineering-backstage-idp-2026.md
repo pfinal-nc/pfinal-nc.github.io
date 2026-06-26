@@ -1,5 +1,5 @@
 ---
-title: Platform Engineering 2026：用 Backstage 构建内部开发者平台实战指南
+title: "Platform Engineering 2026 实战：Backstage 构建内部开发者平台（IDP）完整指南"
 date: 2026-06-14 00:00:00
 tags:
   - devops

@@ -1,5 +1,5 @@
 ---
-title: "Composer配置文件说明 - 完整使用指南"
+title: "Composer 配置文件详解 2026：composer.json 从入门到生产级调优的完整指南"
 date: 2022-07-04 17:34:31
 tags:
   - php

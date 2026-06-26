@@ -1,5 +1,5 @@
 ---
-title: FinOps 2026 实战：用 Go 语言实现云成本优化全链路
+title: "FinOps 2026 实战：用 Go 语言实现云成本优化全链路（OpenCost + pprof 降本 30%）"
 date: 2026-06-24
 tags:
   - devops
