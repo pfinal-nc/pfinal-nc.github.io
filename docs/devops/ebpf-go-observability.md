@@ -1,5 +1,5 @@
 ---
-title: "eBPF + Go：云原生可观测性零侵入监控实战"
+title: "eBPF + Go 云原生可观测性实战 2026：零侵入监控从原理到生产（Cilium/Hubble）"
 date: 2026-06-08
 tags:
   - golang

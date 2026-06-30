@@ -1,6 +1,6 @@
 ---
-title: "MCP 服务器开发实战：用 Go 构建 AI 工具协议"
-description: "深入 MCP（Model Context Protocol）协议，用 Go 实现自定义 MCP 服务器"
+title: "MCP 服务器开发实战 2026：用 Go 构建企业级 AI 工具协议（完整代码）"
+description: "MCP 服务器开发实战 2026：深入 Model Context Protocol 协议规范，用 Go 构建可投产的 MCP 服务器，含 5 个企业案例（数据库/文件系统/GitHub/Slack/Jira）+ OAuth 鉴权 + 限流熔断完整实现。"
 date: 2026-05-26
 author: PFinal南丞
 category: AI工程

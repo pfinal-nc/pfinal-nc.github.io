@@ -1,8 +1,8 @@
 ---
-title: "SQL 注入、XSS、CSRF 攻击原理与防护实战"
+title: "SQL 注入 / XSS / CSRF 攻击原理与防护实战 2026（Go + PHP 双语言实现）"
 date: 2026-04-21 10:00:00
 author: PFinal南丞
-description: "深入讲解 SQL 注入、XSS、CSRF 三大 Web 安全漏洞的攻击原理、实战演示与防护方案，包含 Go 和 PHP 语言的具体防护代码实现。"
+description: "SQL 注入 / XSS / CSRF 三大 Web 漏洞实战 2026：12 个真实攻击案例复现 + Go/PHP 预编译参数化、HTML 转义、Token 校验完整防护代码，附 sqlmap 自动化检测和 WAF 规则配置。"
 keywords:
   - SQL 注入
   - XSS 攻击

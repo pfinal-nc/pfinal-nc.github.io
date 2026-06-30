@@ -1,6 +1,6 @@
 ---
-title: "Golang 中的网络安全 TLS/SSL 的实现"
-description: "深入讲解 Go 语言中 TLS/SSL 的实现方法，包括证书配置、双向认证、证书验证等网络安全核心技术。"
+title: "Golang TLS/SSL 网络安全实战 2026：双向认证 + 证书管理完整指南"
+description: "Golang TLS/SSL 网络安全实战 2026：深入讲解 Go 语言中 TLS 1.3 实现、证书签发/轮换、双向认证（mTLS）、证书验证加固、Pinning 与 Let’s Encrypt 自动化，附 8 段可投产代码。"
 keywords:
   - Go TLS
   - SSL

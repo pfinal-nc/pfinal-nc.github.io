@@ -1,6 +1,6 @@
 ---
-title: "Go 语言并发模式实战指南"
-description: "深入讲解 Go 语言并发编程模式，包括 Worker 池、Pipeline、Fan-in/Fan-out 等实战技巧，帮助你掌握高性能并发程序设计。"
+title: "Go 并发模式实战 2026：Worker Pool + Pipeline + Fan-in/out 等 12 个模式完整指南"
+description: "Go 并发模式实战 2026：系统讲解 12 种高并发模式（Worker Pool/Pipeline/Fan-in/Fan-out/Select 超时/errgroup/CSP/Channel 取消），附 benchmark 性能对比 + 4 个生产案例 + goroutine 泄漏排查。"
 keywords:
   - Go 并发模式
   - Worker Pool

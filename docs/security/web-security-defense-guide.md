@@ -1,5 +1,5 @@
 ---
-title: Web 安全实战：常见漏洞防御指南
+title: Web 安全实战 2026：OWASP Top 10 漏洞防御完整指南（SQL 注入/XSS/CSRF/越权/SSRF）
 date: 2026-04-24
 category: security
 tags:
@@ -8,7 +8,7 @@ tags:
   - SQL 注入
   - XSS
   - CSRF
-description: 系统讲解 Web 安全常见漏洞的原理、检测与防御方法，包括 SQL 注入、XSS、CSRF、越权、SSRF 等 OWASP Top 10 漏洞。
+description: Web 安全实战 2026：系统讲解 OWASP Top 10 漏洞原理与防御（SQL 注入/XSS/CSRF/越权/SSRF），附 12 个真实攻击案例 + 15 段可运行防护代码，2026 年最新威胁情报全覆盖。
 ---
 
 # Web 安全实战：常见漏洞防御指南

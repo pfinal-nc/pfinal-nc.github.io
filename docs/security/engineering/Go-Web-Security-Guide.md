@@ -1,6 +1,6 @@
 ---
-title: "Golang Web 应用完整安全指南"
-description: "全面讲解 Go Web 应用的安全防护策略，包括认证授权、输入验证、CSRF 防护、安全头等核心安全措施。"
+title: "Golang Web 应用安全实战 2026：认证 + 防护 + 安全头完整指南"
+description: "Golang Web 应用安全实战 2026：覆盖 JWT/RBAC 认证、CSP/XSS/CSRF 防护、HSTS/CORS 安全头、SQL 注入预编译、限流熔断全链路，附 gin/chi 框架 20+ 可投产代码片段。"
 keywords:
   - Go Web 安全
   - 认证授权

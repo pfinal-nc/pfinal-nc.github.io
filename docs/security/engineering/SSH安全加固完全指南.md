@@ -1,6 +1,6 @@
 ---
-title: "SSH 安全加固完全指南 - 服务器防护与 fail2ban 实战"
-description: "全面的 SSH 安全加固指南，涵盖基础配置优化、密钥认证、fail2ban 自动防护、双因素认证等实战方案，帮助构建企业级服务器安全防护体系"
+title: "SSH 安全加固实战 2026：密钥认证 + fail2ban + 双因素认证完整指南"
+description: "SSH 安全加固实战 2026：覆盖密钥认证、密码策略强化、fail2ban 自动封禁、Google Authenticator 双因素、Port Knocking、连接审计 6 大模块，附 30+ 配置示例和暴力破解防护清单。"
 date: 2026-04-15 13:30:00
 author: PFinal南丞
 tags:

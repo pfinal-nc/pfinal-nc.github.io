@@ -1,6 +1,6 @@
 ---
-title: "LLM 应用架构设计：从 RAG 到 Agent 的实战指南"
-description: "系统梳理 LLM 应用架构模式，从基础 RAG 到复杂 Agent 系统，包含 Go 实现示例"
+title: "LLM 应用架构实战 2026：从 RAG 到 Agent 的 7 种模式与 Go 落地完整指南"
+description: "LLM 应用架构实战 2026：系统梳理 7 种主流模式（基础 RAG → Multi-Agent → 反思式 Agent），含 5 个 Go 实现案例 + 3 个生产级架构图 + Anthropic/MCP 协议集成，覆盖 token 成本优化 60% 的实战技巧。"
 date: 2026-05-26
 author: PFinal南丞
 category: AI工程
