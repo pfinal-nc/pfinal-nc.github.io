@@ -51,6 +51,12 @@ pageClass: python-hub-page
 - [**Python深度学习实践**](/data/automation/Python深度学习) - PyTorch, TensorFlow应用
 - [**Python自动化运维**](/Tools/Python自动化运维) - Ansible, Fabric, 自定义脚本
 
+### 🚀 2026 AI 框架专题
+- [**Pydantic AI：Type-Safe Agent 框架实战**](/dev/backend/python/pydantic-ai-type-safe-agent-framework-2026) 🔴 - 类型安全 Agent 开发（2026-06-26）
+- [**Python AI 框架 2026 全景对比与选型指南**](/dev/backend/python/python-ai-frameworks-2026-comparison-guide) 🔴 - LangChain/LlamaIndex/AutoGen/CrewAI 横评（2026-06-30）
+- [**LlamaIndex 4 Agentic RAG 工作流实战**](/dev/backend/python/llamaindex-4-agentic-rag-workflow-2026) 🟡 - 2026 智能体 RAG
+- [**Polars vs Pandas vs DuckDB 2026 数据处理框架对比**](/dev/backend/python/polars-vs-pandas-vs-duckdb-2026) 🟡 - 2026 数据分析新选择
+
 ## 🛠️ 实用工具与技巧
 
 ### 开发工具

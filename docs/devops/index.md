@@ -32,6 +32,13 @@ cover: /images/covers/devops.svg
 | # | 主题 | 文章 | 日期 |
 |---|------|------|------|
 | 1 | ⚡ WASM 服务端 | [WASM 2026 服务端实战：WASI Preview 2、Component Model 与容器替代方案](/devops/wasm-2026-server-side-wasi-component-model) | 2026-06-12 |
+| 2 | 🌀 K8s WASM | [Kubernetes WASM 运行时实战：SpinKube 集成与生产部署](/devops/kubernetes-wasm-runtime-spinkube-2026) | 2026-06-26 |
+
+## 💰 FinOps 云成本
+
+| # | 主题 | 文章 | 日期 |
+|---|------|------|------|
+| 1 | 💸 Go FinOps | [FinOps 2026 实战：Go 驱动的云成本优化与 OpenCost 集成](/devops/finops-2026-go-cloud-cost-optimization) | 2026-06-24 |
 
 ## 🏗️ 平台工程与网络
 
@@ -46,9 +53,10 @@ cover: /images/covers/devops.svg
 
 - **容器化与编排**：2 篇（Docker + K8s 1.36）
 - **可观测性**：2 篇（eBPF + OTel Go 1.32）
-- **WASM 演进**：1 篇（容器替代方案）
+- **WASM 演进**：2 篇（服务端 WASI + K8s SpinKube 集成）
+- **FinOps 云成本**：1 篇（Go + OpenCost）
 - **平台工程与网络**：2 篇（Backstage IDP + Tailscale DERP）
-- **累计 7 篇**，更新频率：每周 1-2 篇
+- **累计 9 篇**，更新频率：每周 1-2 篇
 
 ---
 
@@ -57,5 +65,6 @@ cover: /images/covers/devops.svg
 - ✅ K8s 1.36 Haru 深度解读（已完成）
 - ✅ Platform Engineering IDP 实战（已完成）
 - ✅ Tailscale 自建 DERP（已完成）
+- ✅ K8s WASM SpinKube 集成（已完成）
+- ✅ FinOps 2026 Go 实战（已完成）
 - 🔜 **GitOps：ArgoCD vs Flux 对比**
-- 🔜 **FinOps 2026**：云成本优化实战

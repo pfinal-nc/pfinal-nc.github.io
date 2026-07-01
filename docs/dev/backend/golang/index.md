@@ -95,11 +95,15 @@ pageClass: golang-hub-page
 - [**Go slog 结构化日志生产最佳实践**](/dev/backend/golang/go-slog-production-best-practices-2026) - 日志规范
 - [**Go 2026 Roadmap 深度解读**](/dev/backend/golang/Go-2026-Roadmap-Deep-Dive) - 路线图
 - [**Go goroutine 泄漏检测：从 pprof 到生产级并发调试**](/dev/backend/golang/go-goroutine-leak-detection-2026) - 调试实战
+- [**Go btype B 树数据结构深度解析**](/dev/backend/golang/go-btype-btree-data-structure-2026) - 2026-06-24 运行时内部
+- [**Go Swiss Table Map 深度解析：性能与实现原理**](/dev/backend/golang/go-swiss-table-map-deep-dive-2026) - 2026-06-25 Map 性能优化
+- [**Go 1.27 encoding/json/v2 迁移实战**](/dev/backend/golang/go-1-27-encoding-json-v2-migration-2026) - 2026-07-01 标准库四年来最大重写
 
 ### 安全 & 供应链
 - [**Go SBOM 实战：软件供应链安全**](/dev/backend/golang/go-sbom-supply-chain-security) - SBOM 落地
 - [**Go Fuzzing 实战：CI 集成到生产安全漏洞挖掘**](/dev/backend/golang/go-fuzzing-production-guide-2026) - 模糊测试
 - [**PQC 迁移实战：Go 开发者 PQC 落地指南**](/security/offensive/post-quantum-cryptography-go-migration-2026) - 后量子密码学
+- [**gosentry 实战：Go 模糊测试工具链革命**](/security/offensive/gosentry-go-fuzzing-libafl-toolchain-2026) - 2026-06-23 LibAFL 引擎
 
 ---
 

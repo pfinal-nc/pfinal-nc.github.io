@@ -29,9 +29,16 @@ pageClass: php-hub-page
 
 ### 核心技术主题
 - [**PHP 8.x新特性详解**](/dev/backend/php/PHP8新特性详解) - Union Types, Attributes, Match等新功能
+- [**PHP 8.4 新特性深度解析 2026：property hooks 与 asymmetric visibility 实战**](/dev/backend/php/php-8-4-new-features) - PHP 8.4 五大新特性
+- [**PHP 8.5 Fiber 协程实战 2026**](/dev/backend/php/php-8-5-fiber-coroutine-2026) - Fiber 稳定化 + Swoole 6.0 + FrankenPHP 1.4
 - [**PHP并发与异步编程**](/dev/backend/php/PHP并发编程) - Swoole, ReactPHP, 并发处理
 - [**PHP性能优化实战**](/dev/backend/php/PHP性能优化) - OPcache, 内存管理, 查询优化
 - [**PHP安全开发指南**](/dev/backend/php/PHP安全开发) - XSS, CSRF, SQL注入防护
+
+### 🚀 2026 现代化与高并发
+- [**FrankenPHP 1.4 + Laravel 12 Worker 模式生产实战**](/dev/backend/php/frankenphp-1-4-laravel-worker-mode-2026) - 3 倍吞吐、状态隔离、迁移指南（2026-06-26）
+- [**Laravel 13 AI SDK 可中断任务实战**](/dev/backend/php/laravel-13-ai-sdk-interruptible-tasks-2026) - 2026 AI 原生框架
+- [**PHP 8.5 NoDiscard 属性详解**](/dev/backend/php/PHP-8.5-NoDiscard-属性详解) - 错误处理新特性
 
 ### 数据库与缓存
 - [**PHP数据库操作最佳实践**](/dev/backend/php/PHP数据库操作) - PDO, ORM, 查询优化
