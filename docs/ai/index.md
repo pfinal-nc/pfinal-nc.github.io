@@ -32,8 +32,9 @@ cover: /images/covers/ai.svg
 | 11 | 🗺️ MCP 路线图 | [MCP 2026 路线图深度解读：从协议到生态的演进](/ai/mcp-2026-roadmap-deep-dive) | 2026-06-24 |
 | 12 | 🐾 OpenClaw 实战 | [MCP 协议 2026 完全指南：从协议设计到 OpenClaw 生产级 Agent 工具集成](/ai/mcp-protocol-2026-complete-guide-openclaw) | 2026-06-30 |
 | 13 | 🔧 Harness Engineering | [Harness Engineering 2026 实战：Claude Code 源码泄露后的 AI Agent 工程范式革命](/ai/harness-engineering-claude-code-2026) | 2026-07-01 |
+| 14 | 🖥️ Codex CLI | [OpenAI Codex CLI 2026 生产工作流实战：从终端 Agent 到团队级治理](/ai/openai-codex-cli-production-workflow-2026) | 2026-07-02 |
 
-**学习路径建议**：从 1→7 顺序阅读，1 是入门基础，3 和 5 是 2026 必备技能，7 是前沿探索。8 打通 Agent 到前端最后一公里，9 是 AI 编程工具链巅峰之作。10-12 是 MCP 协议生态最新实战，从协议设计到生产级集成完整覆盖。
+**学习路径建议**：从 1→7 顺序阅读，1 是入门基础，3 和 5 是 2026 必备技能，7 是前沿探索。8 打通 Agent 到前端最后一公里，9 是 AI 编程工具链巅峰之作。10-12 是 MCP 协议生态最新实战，从协议设计到生产级集成完整覆盖。13-14 聚焦 AI 编程终端 Agent 的工程化与团队治理。
 
 ---
 
@@ -70,11 +71,11 @@ cover: /images/covers/ai.svg
 
 ## 📊 系列文章统计
 
-- **AI Agent 全栈**：12 篇（2026 年新增 10 篇，含 AG-UI 前端集成、OpenCode 架构、Agent Skills、MCP 路线图、OpenClaw 实战）
+- **AI Agent 全栈**：14 篇（2026 年新增 12 篇，含 AG-UI 前端集成、OpenCode 架构、Agent Skills、MCP 路线图、OpenClaw 实战、Harness Engineering、Codex CLI）
 - **RAG / LLM 应用**：6 篇
 - **模型接入实战**：2 篇（Claude Sonnet 4.6 + Gemini 3.5 Flash）
 - **LLM 评测与协议演进**：1 篇（RULER/MRCR 长上下文）
-- **累计 21 篇**，更新频率：每周 2-3 篇热点文章同步
+- **累计 23 篇**，更新频率：每周 2-3 篇热点文章同步
 
 ---
 

@@ -98,6 +98,7 @@ pageClass: golang-hub-page
 - [**Go btype B 树数据结构深度解析**](/dev/backend/golang/go-btype-btree-data-structure-2026) - 2026-06-24 运行时内部
 - [**Go Swiss Table Map 深度解析：性能与实现原理**](/dev/backend/golang/go-swiss-table-map-deep-dive-2026) - 2026-06-25 Map 性能优化
 - [**Go 1.27 encoding/json/v2 迁移实战**](/dev/backend/golang/go-1-27-encoding-json-v2-migration-2026) - 2026-07-01 标准库四年来最大重写
+- [**Go 1.27 泛型方法生产实战**](/dev/backend/golang/go-1-27-generic-methods-production-2026) - 2026-07-02 类型系统史诗级补完
 
 ### 安全 & 供应链
 - [**Go SBOM 实战：软件供应链安全**](/dev/backend/golang/go-sbom-supply-chain-security) - SBOM 落地

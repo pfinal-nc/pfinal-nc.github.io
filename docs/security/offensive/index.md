@@ -43,6 +43,7 @@ recommend: 安全
 - [Post-Quantum Cryptography 迁移实战：Go 开发者 PQC 落地指南](/security/offensive/post-quantum-cryptography-go-migration-2026) - 后量子密码学
 - [AI Multi-Agent Penetration Testing](/security/offensive/AI-Multi-Agent-Penetration-Testing) - 多 Agent 渗透
 - [AI 破解 CTF 2026：Veria Labs 52 题全解 Agent 技术深度拆解](/security/offensive/ai-broke-ctf-2026-veria-labs-agent-analysis) - 2026-06-30
+- [ToolHijacker 深度解析：LLM Agent 工具选择攻击原理与生产防御](/security/offensive/toolhijacker-llm-agent-tool-selection-attack-2026) - 2026-07-02
 
 ### 🛡️ 2026 漏洞深度分析（新增）
 - [NGINX CVE-2026-42945：潜伏 18 年的堆溢出 RCE 完整攻防指南](/security/offensive/nginx-cve-2026-42945-heap-overflow-rce-guide) - 2026-06-17
