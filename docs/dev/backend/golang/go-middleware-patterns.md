@@ -1,8 +1,8 @@
 ---
-title: "Go 中间件设计模式"
+title: "Go HTTP 中间件设计模式实战 2026：洋葱模型、链式调用与 AOP 最佳实践"
 date: 2026-04-22 00:00:00
 author: PFinal南丞
-description: "深入学习 Go 语言中间件设计模式，掌握洋葱模型、链式调用、AOP 编程等核心技术，构建可扩展的 HTTP 中间件系统。"
+description: "从原理解析到生产代码：Go 中间件洋葱模型、链式调用、AOP 编程、Gin/Echo 中间件实现，附可复用中间件模板。"
 keywords:
   - golang
   - 中间件

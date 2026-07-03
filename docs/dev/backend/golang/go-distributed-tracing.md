@@ -1,8 +1,8 @@
 ---
-title: "Go 分布式追踪实战"
+title: "Go 分布式追踪实战 2026：OpenTelemetry + Jaeger 完整接入与链路排查"
 date: 2026-04-22 00:00:00
 author: PFinal南丞
-description: "深入学习 Go 语言分布式追踪实现，掌握 OpenTelemetry、Jaeger、Zipkin 等工具的使用，构建完整的分布式链路追踪系统。"
+description: "微服务必会：Go 应用接入 OpenTelemetry、Jaeger 部署、Trace/Span/Baggage 传递、上下文注入与线上慢请求定位实战。"
 keywords:
   - golang
   - 分布式追踪

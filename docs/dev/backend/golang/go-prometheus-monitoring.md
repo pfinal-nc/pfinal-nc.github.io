@@ -1,8 +1,8 @@
 ---
-title: "Go 集成 Prometheus 监控"
+title: "Go + Prometheus 监控实战 2026：Counter/Gauge/Histogram 完整接入与 Grafana 可视化"
 date: 2026-04-22 00:00:00
 author: PFinal南丞
-description: "深入学习 Go 语言集成 Prometheus 监控系统，掌握指标类型、自定义指标、Grafana 可视化等核心技能，构建完整的应用监控体系。"
+description: "2026 年 Go 服务接入 Prometheus 完整指南：4 种指标类型、自定义 Exporter、HTTP 埋点、Grafana 看板配置与生产告警最佳实践。"
 keywords:
   - golang
   - Prometheus

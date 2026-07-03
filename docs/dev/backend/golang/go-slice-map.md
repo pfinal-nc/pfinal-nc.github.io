@@ -1,8 +1,8 @@
 ---
-title: "Go 数组、切片与 Map 深度解析"
+title: "Go Slice 与 Map 深度解析 2026：底层内存模型、扩容机制与 8 个高频坑点"
 date: 2026-04-21 09:30:00
 author: PFinal南丞
-description: "深入讲解 Go 语言的数组、切片（Slice）、映射（Map）核心数据结构，揭秘切片底层内存模型，掌握高性能数据处理技巧。"
+description: "图解 Go 数组、Slice、Map 底层实现：len/cap、扩容倍数、并发安全、内存泄漏与 8 个面试高频坑点，附性能优化建议。"
 keywords:
   - Go 切片
   - Go Map

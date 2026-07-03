@@ -1,8 +1,8 @@
 ---
-title: "大模型应用开发指南"
+title: "大模型应用开发实战 2026：Prompt + RAG + Function Calling + Agent 全链路指南"
 date: 2026-04-22 00:00:00
 author: PFinal南丞
-description: "系统学习大模型应用开发，掌握 Prompt Engineering、RAG、Function Calling、Agent 等核心技术，构建生产级 AI 应用。"
+description: "从 Prompt Engineering 到生产级 Agent：LLM 选型、RAG 检索增强、Function Calling、多 Agent 协作与成本优化实战。"
 keywords:
   - 大模型
   - LLM

@@ -1,6 +1,6 @@
 ---
-title: "接口参数设计 - 多场景复用的优雅之道"
-description: "深入讲解 Go 语言接口参数设计的高级技巧，包括泛型、可选参数、Builder 模式等，帮助你设计可复用、易维护的 API 接口。"
+title: "Go 接口参数设计实战 2026：泛型、Functional Options 与 Builder 模式 7 种写法对比"
+description: "Go API 参数设计全攻略：泛型约束、Functional Options、Builder、接口抽象等 7 种模式对比，写出可复用、易维护的接口。"
 keywords:
   - Go 接口设计
   - 参数设计

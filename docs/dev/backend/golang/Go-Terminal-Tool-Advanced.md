@@ -1,6 +1,6 @@
 ---
-title: "GO 语言开发终端小工具后续"
-description: "在 Go 终端小工具基础上新增天气查询、手机归属地、MD5/Base64、网络词汇、时间戳等子命令的开发与迭代记录，以及遇到的问题与解决方式。"
+title: "Go CLI 终端助手实战 2026：Cobra + 8 个常用命令开发全记录"
+description: "基于 Cobra 用 Go 开发全能终端助手：天气、手机号归属地、MD5/SHA256、Base64、时间戳、网络词典 8 大命令完整代码与踩坑记录。"
 keywords:
   - golang
   - 终端工具

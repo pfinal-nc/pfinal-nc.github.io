@@ -1,6 +1,6 @@
 ---
-title: "Go 协程（Goroutine）入门"
-description: "全面讲解 Go 语言协程（Goroutine）的概念、使用方法和最佳实践，帮助你掌握 Go 并发编程的基础。"
+title: "Go Goroutine 协程入门 2026：从 go 关键字到 WaitGroup 的 12 个实战示例"
+description: "零基础掌握 Go 协程：go 关键字、WaitGroup、Channel 通信、Goroutine 泄漏排查与 12 个可运行示例，10 分钟上手并发编程。"
 keywords:
   - Go 协程
   - Goroutine

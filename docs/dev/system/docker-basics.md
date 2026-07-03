@@ -1,8 +1,8 @@
 ---
-title: "Docker 基础入门：从零开始掌握容器化技术"
+title: "Docker 基础入门 2026：镜像、容器、Dockerfile、Compose 完整实战手册"
 date: 2026-04-21 10:00:00
 author: PFinal南丞
-description: "全面讲解 Docker 核心概念：镜像、容器、Dockerfile、网络、数据卷，以及 Docker Compose 多容器编排，带你从零掌握现代容器化开发。"
+description: "2026 年 Docker 零基础到生产：镜像构建、容器生命周期、网络与数据卷、Docker Compose 编排、多阶段构建优化完整示例。"
 keywords:
   - Docker 入门
   - Docker 教程
