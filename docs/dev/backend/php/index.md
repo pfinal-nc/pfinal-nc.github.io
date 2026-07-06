@@ -36,6 +36,7 @@ pageClass: php-hub-page
 - [**PHP安全开发指南**](/dev/backend/php/PHP安全开发) - XSS, CSRF, SQL注入防护
 
 ### 🚀 2026 现代化与高并发
+- [**PHP 8.5 Pipe Operator 生产实战**](/dev/backend/php/php-8-5-pipe-operator-production-2026) - 函数式管道操作符从语法糖到架构变革（2026-07-07）
 - [**FrankenPHP 1.4 + Laravel 12 Worker 模式生产实战**](/dev/backend/php/frankenphp-1-4-laravel-worker-mode-2026) - 3 倍吞吐、状态隔离、迁移指南（2026-06-26）
 - [**Laravel 13 AI SDK 可中断任务实战**](/dev/backend/php/laravel-13-ai-sdk-interruptible-tasks-2026) - 2026 AI 原生框架
 - [**PHP 8.5 NoDiscard 属性详解**](/dev/backend/php/PHP-8.5-NoDiscard-属性详解) - 错误处理新特性

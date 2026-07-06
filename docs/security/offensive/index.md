@@ -53,6 +53,7 @@ recommend: 安全
 - [LiteLLM CVE-2026-42271 MCP 注入实战](/security/offensive/litellm-cve-2026-42271-mcp-injection-exploitation) - 2026-06-20
 - [FrankenPHP CVE-2026-45062 深度复现：Unicode 路径分割漏洞 RCE](/security/offensive/frankenphp-cve-2026-45062-unicode-path-split-rce) - 2026-07-01
 - [CVE-2026-21876 深度复现：OWASP CRS 规则 922110 multipart 字符集绕过让 WAF 彻底失效](/security/offensive/cve-2026-21876-owasp-crs-waf-bypass-multipart-charset) - 2026-07-03
+- [NGINX CVE-2026-42530/42055 双 RCE 深度复现：HTTP/3 UAF 与 HTTP/2 堆溢出的攻防全解析](/security/offensive/nginx-cve-2026-42530-42055-http3-http2-double-rce-deep-dive) - 2026-07-06
 
 ### 🔬 供应链与工具链安全
 - [Miasma 供应链蠕虫攻击深度分析：2026 年开源生态的至暗时刻](/security/offensive/miasma-supply-chain-worm-attack-2026) - 2026-06-15

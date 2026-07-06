@@ -51,6 +51,9 @@ pageClass: python-hub-page
 - [**Python深度学习实践**](/data/automation/Python深度学习) - PyTorch, TensorFlow应用
 - [**Python自动化运维**](/Tools/Python自动化运维) - Ansible, Fabric, 自定义脚本
 
+### 🚀 2026 语言新特性
+- [**Python 3.15 新特性深度解析**](/dev/backend/python/python-3-15-new-features-2026) 🔴 - 延迟导入、frozendict、Tachyon 采样器（2026-07-07）
+
 ### 🚀 2026 AI 框架专题
 - [**Pydantic AI：Type-Safe Agent 框架实战**](/dev/backend/python/pydantic-ai-type-safe-agent-framework-2026) 🔴 - 类型安全 Agent 开发（2026-06-26）
 - [**Python AI 框架 2026 全景对比与选型指南**](/dev/backend/python/python-ai-frameworks-2026-comparison-guide) 🔴 - LangChain/LlamaIndex/AutoGen/CrewAI 横评（2026-06-30）
