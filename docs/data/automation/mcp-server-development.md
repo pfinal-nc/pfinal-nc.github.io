@@ -1,8 +1,8 @@
 ---
-title: "MCP 服务器开发实战：构建 AI 编程助手扩展"
+title: "MCP 服务器开发实战 2026：Claude + Cursor 工具定义的 5 步完整接入"
 date: 2026-04-21 10:00:00
 author: PFinal南丞
-description: "深入讲解 Model Context Protocol (MCP) 协议、服务器开发、工具定义与 AI 助手集成，包含完整实战项目"
+description: "MCP 服务器开发 5 步实战 2026：协议握手、工具定义、资源暴露、Prompt 模板 + Claude/Cursor 集成，附 TypeScript/Python 双语言项目代码"
 keywords:
   - MCP
   - Model Context Protocol

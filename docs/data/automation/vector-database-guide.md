@@ -1,8 +1,8 @@
 ---
-title: "向量数据库实战：从 Embedding 到 RAG 应用"
+title: "向量数据库实战 2026：4 种相似度算法 + Milvus/Qdrant RAG 系统构建"
 date: 2026-04-21 10:00:00
 author: PFinal南丞
-description: "深入讲解向量数据库原理、Embedding 技术、相似度搜索算法，以及基于向量数据库的 RAG 系统构建实战"
+description: "向量数据库 4 种相似度算法实战 2026：Embedding 技术、HNSW 索引、Milvus/Qdrant/Chroma 选型 + RAG 系统构建 7 步完整指南"
 keywords:
   - 向量数据库
   - Vector Database

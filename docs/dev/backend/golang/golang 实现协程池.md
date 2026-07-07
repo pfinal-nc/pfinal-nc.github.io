@@ -1,9 +1,9 @@
 ---
-title: "Golang 协程池实现 - 实战指南"
+title: "Go 协程池实战 2026：5 种 Worker Pool 模式 + 万级并发性能对比"
 date: 2024-11-09 11:31:32
 tags:
   - golang
-description: 详细介绍Golang实现协程池的方法，包括协程池的概念、应用场景、实现方式等，帮助开发者更好地利用Golang的协程池功能，提高程序的性能和响应速度。
+description: Go 协程池 5 种实现模式详解 2026：固定池、动态池、蚂蚁池、带优先级池、可取消池，万级并发压测对比 + Channel vs Mutex 模式选型指南
 author: PFinal南丞
 keywords:
   - Go协程池实现

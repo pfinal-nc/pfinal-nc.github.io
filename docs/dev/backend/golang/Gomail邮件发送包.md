@@ -1,9 +1,9 @@
 ---
-title: Gomail邮件发送包完整使用指南 - 如何集成并掌握核心功能
+title: Go Gomail 邮件发送实战 2026：SMTP + HTML + 附件的 6 种发送模式
 date: 2024-05-02 22:10:20
 tags:
   - golang
-description: 详细介绍Gomail邮件发送包，包括安装配置、邮件发送、邮件接收等核心功能，帮助开发者轻松管理多个Python版本。
+description: Go Gomail 邮件发送库实战 2026：SMTP 配置、HTML 邮件、附件发送、批量群发、TLS 加密与错误处理的 6 种模式，附带完整可运行代码
 author: PFinal南丞
 keywords:
   - Gomail邮件发送包

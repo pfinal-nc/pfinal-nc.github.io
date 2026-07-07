@@ -1,8 +1,8 @@
 ---
-title: Go Context 深度解析：超时、取消与值传递
+title: Go Context 实战 2026：4 种派生模式 + 10 个场景从 HTTP 到 gRPC
 date: 2026-04-27
 tags: [Golang, Context, 并发]
-description: 深入理解 Go context 包的设计原理与实战用法：WithCancel、WithTimeout、WithDeadline、WithValue，以及在 HTTP、gRPC、数据库等场景下的最佳实践。
+description: Go Context 4 种派生模式实战 2026：WithCancel/Timeout/Deadline/Value + 10 个真实场景（HTTP/gRPC/DB/MQ），避免 goroutine 泄漏的完整检查清单
 ---
 
 # Go Context 深度解析：超时、取消与值传递

@@ -1,8 +1,8 @@
 ---
-title: Go Modules 与 Workspace 多模块管理实战
+title: Go Modules + Workspace 多模块管理实战 2026：5 个核心配置 + 3 种协同方案
 date: 2026-04-27
 tags: [Golang, Modules, Workspace, 依赖管理]
-description: 全面讲解 Go 模块管理：go.mod 文件、版本管理、私有模块、replace 指令，以及 Go 1.18 引入的 Workspace 多模块协同开发实战。
+description: Go Modules + Workspace 5 个核心配置实战 2026：go.mod、版本语义、私有模块、replace、go.work + 3 种多模块协同方案，附 Monorepo 场景代码
 ---
 
 # Go Modules 与 Workspace 多模块管理实战

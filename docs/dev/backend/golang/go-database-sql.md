@@ -1,8 +1,8 @@
 ---
-title: Go database/sql 实战：连接池、事务与最佳实践
+title: Go database/sql 实战 2026：5 个连接池参数 + 8 条生产级最佳实践
 date: 2026-04-27
 tags: [Golang, 数据库, SQL, 连接池]
-description: 深入讲解 Go 标准库 database/sql 的正确用法：连接池配置、CRUD 操作、事务管理、预处理语句、防 SQL 注入，以及生产环境的优化策略。
+description: Go database/sql 5 个连接池参数调优 + 8 条生产级最佳实践：CRUD、事务、预处理、防注入、MySQL 集成，附压测数据与常见坑点排查
 ---
 
 # Go database/sql 实战：连接池、事务与最佳实践
