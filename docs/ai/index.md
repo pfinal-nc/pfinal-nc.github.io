@@ -36,8 +36,10 @@ cover: /images/covers/ai.svg
 | 15 | 📜 MCP 新规范 | [MCP 2026-07-28 Spec RC 迁移实战：无状态架构、OAuth 2.1 与七大 Breaking Changes 全解析](/ai/mcp-2026-07-28-spec-stateless-oauth-migration-2026) | 2026-07-03 |
 | 16 | 🍎 Safari MCP | [Safari MCP Server 实战：苹果 WebKit 的 AI Agent 调试新范式深度解析](/ai/safari-mcp-server-webkit-ai-agent-debugging-2026) | 2026-07-06 |
 | 17 | 🤖 AI 漏洞挖掘 | [Claude Mythos × CVE 3.5x 暴增：AI 漏洞挖掘范式革命深度解析](/ai/claude-mythos-ai-vulnerability-discovery-cve-surge-paradigm-2026) | 2026-07-06 |
+| 18 | 📋 Spec Kit | [GitHub Spec Kit 规格驱动开发实战：让 AI 编码 Agent 从 Vibe Coding 走向工程化治理](/ai/github-spec-kit-spec-driven-development-2026) | 2026-07-08 |
+| 19 | 🔄 LangGraph 1.0 | [LangGraph 1.0 Durable Execution 实战：持久化 Agent 工作流引擎的生产级架构与 Human-in-the-Loop 模式](/ai/langgraph-1-0-durable-execution-production-2026) | 2026-07-08 |
 
-**学习路径建议**：从 1→7 顺序阅读，1 是入门基础，3 和 5 是 2026 必备技能，7 是前沿探索。8 打通 Agent 到前端最后一公里，9 是 AI 编程工具链巅峰之作。10-12 是 MCP 协议生态最新实战，从协议设计到生产级集成完整覆盖。13-15 聚焦 AI 编程终端 Agent 的工程化、团队治理与协议规范迁移。
+**学习路径建议**：从 1→7 顺序阅读，1 是入门基础，3 和 5 是 2026 必备技能，7 是前沿探索。8 打通 Agent 到前端最后一公里，9 是 AI 编程工具链巅峰之作。10-12 是 MCP 协议生态最新实战，从协议设计到生产级集成完整覆盖。13-15 聚焦 AI 编程终端 Agent 的工程化、团队治理与协议规范迁移。18-19 进入 Agent 工程化治理与持久化执行的新阶段：18 用 SDD 治理 Vibe Coding 碎片化（GitHub Spec Kit 实战），19 详解 LangGraph 1.0 Durable Execution + Human-in-the-Loop 生产级架构（PostgresSaver/RedisSaver/HITL 中断恢复）。
 
 ---
 
@@ -74,11 +76,11 @@ cover: /images/covers/ai.svg
 
 ## 📊 系列文章统计
 
-- **AI Agent 全栈**：17 篇（2026 年新增 15 篇，含 AG-UI 前端集成、OpenCode 架构、Agent Skills、MCP 路线图、OpenClaw 实战、Harness Engineering、Codex CLI、MCP Spec RC、Safari MCP、AI 漏洞挖掘范式）
+- **AI Agent 全栈**：19 篇（2026 年新增 17 篇，含 AG-UI 前端集成、OpenCode 架构、Agent Skills、MCP 路线图、OpenClaw 实战、Harness Engineering、Codex CLI、MCP Spec RC、Safari MCP、AI 漏洞挖掘范式、GitHub Spec Kit、LangGraph 1.0）
 - **RAG / LLM 应用**：6 篇
 - **模型接入实战**：2 篇（Claude Sonnet 4.6 + Gemini 3.5 Flash）
 - **LLM 评测与协议演进**：1 篇（RULER/MRCR 长上下文）
-- **累计 26 篇**，更新频率：每周 2-3 篇热点文章同步
+- **累计 28 篇**，更新频率：每周 2-3 篇热点文章同步
 
 ---
 
