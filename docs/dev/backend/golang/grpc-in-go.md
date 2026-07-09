@@ -1,5 +1,5 @@
 ---
-title: gRPC 在 Go 中的实战应用
+title: Go gRPC 微服务实战 2026：Proto 定义、拦截器、流式通信完整代码
 date: 2026-04-24
 category: dev/backend/golang
 tags:
@@ -7,7 +7,7 @@ tags:
   - gRPC
   - Protocol Buffers
   - 微服务
-description: 从零开始学习 gRPC 在 Go 中的应用，包括 Protocol Buffers 定义、服务实现、拦截器、流式通信等核心内容。
+description: 2026 版 Go gRPC 微服务实战：从 .proto 定义到拦截器、双向流式通信，附带完整可运行代码与性能调优技巧。
 ---
 
 # gRPC 在 Go 中的实战应用

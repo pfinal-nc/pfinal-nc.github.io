@@ -1,11 +1,11 @@
 ---
-title: Broot-让文件导航更高效的命令行神器
+title: Broot 终端文件管理器实战 2026：Rust 写的命令行导航神器，替代 tree + cd
 date: 2025-10-15 09:33:00
 tags:
     - 工具
     - 命令行
     - Rust
-description: Broot 是一款由 Rust 编写的高效终端文件管理器，提供直观的树状视图、模糊搜索、快速导航和文件预览等强大功能
+description: 2026 版 Broot 实战：用 Rust 终端文件管理器替代 tree/cd，支持树状视图、模糊搜索、快速导航与文件预览。
 author: PFinal南丞
 keywords:
   - Broot

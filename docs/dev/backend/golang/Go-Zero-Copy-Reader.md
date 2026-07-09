@@ -1,6 +1,6 @@
 ---
-title: "Go 零拷贝读取器实战与原理解析"
-description: "深入讲解 Go 语言零拷贝技术，包括 sendfile、splice、mmap 等系统调用原理，以及如何在 Go 中实现高性能零拷贝数据传输，适用于文件传输、网络代理等场景。"
+title: "Go 零拷贝技术实战 2026：sendfile / splice / mmap 高性能 IO 解析"
+description: "2026 版 Go 高性能零拷贝实战：sendfile、splice、mmap 原理解析与网络代理/文件传输优化代码。"
 keywords:
   - Go 零拷贝
   - zero copy

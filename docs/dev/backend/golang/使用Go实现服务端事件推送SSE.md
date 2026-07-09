@@ -1,9 +1,9 @@
 ---
-title: "Go 服务端事件推送 SSE - 实战指南"
+title: "Go SSE 服务端推送实战 2026：替代 WebSocket 的轻量方案与代码"
 date: 2024-08-22 09:32:24
 tags:
   - golang
-description: 使用 Go 实现服务端事件推送 SSE 的完整实战指南，对比 WebSocket 选型与实现
+description: 2026 版 Go SSE 服务端事件推送实战：对比 WebSocket、实现单向实时推送、降低服务器资源消耗，附带完整代码。
 author: PFinal南丞
 keywords:
   - 使用Go实现服务端事件推送SSE

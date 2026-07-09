@@ -1,7 +1,7 @@
 ---
-title: Python 自然语言处理（NLP）实战指南
+title: Python NLP 实战指南 2026：NLTK + spaCy + Transformers 文本处理
 date: 2026-03-11 00:00:00
-description: 深入掌握 NLP 技术，使用 NLTK、spaCy、Transformers 等工具处理文本数据
+description: 2026 版 Python NLP 实战：从 NLTK/spaCy 基础到 Transformers 预训练模型，覆盖文本分类、命名实体识别与情感分析。
 keywords:
   - Python
   - NLP

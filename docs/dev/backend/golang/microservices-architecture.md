@@ -1,5 +1,5 @@
 ---
-title: Go 微服务架构实战指南
+title: Go 微服务架构实战指南 2026：服务拆分 + gRPC + 服务发现 + 配置管理
 date: 2026-04-24
 category: dev/backend/golang
 tags:
@@ -7,7 +7,7 @@ tags:
   - 微服务
   - gRPC
   - 架构设计
-description: 深入讲解 Go 语言在微服务架构中的应用，涵盖服务拆分、gRPC、服务发现、配置管理等核心主题。
+description: 2026 版 Go 微服务架构全指南：从单体拆分、服务通信、服务发现到配置管理与可观测性，附实战案例。
 ---
 
 # Go 微服务架构实战指南

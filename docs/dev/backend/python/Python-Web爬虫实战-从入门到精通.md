@@ -1,7 +1,7 @@
 ---
-title: Python Web 爬虫实战：从入门到精通
+title: Python Web 爬虫实战 2026：Requests + BeautifulSoup + Scrapy 完整项目代码
 date: 2026-03-11 00:00:00
-description: 系统学习 Python Web 爬虫技术，掌握 Requests、BeautifulSoup、Scrapy 等核心库，构建高性能爬虫系统
+description: 2026 版 Python Web 爬虫实战：从 Requests 入门到 BeautifulSoup/Scrapy 分布式爬虫，附带反爬对策与项目代码。
 keywords:
   - Python
   - Web爬虫

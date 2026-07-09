@@ -1,8 +1,8 @@
 ---
-title: "GitHub Actions 实战指南"
+title: "GitHub Actions CI/CD 实战指南 2026：工作流 + 矩阵构建 + 缓存优化 + 多环境部署"
 date: 2026-04-22 00:00:00
 author: PFinal南丞
-description: "从零开始学习 GitHub Actions，掌握 CI/CD 自动化工作流的配置与最佳实践，包括工作流触发、矩阵构建、缓存优化、多环境部署等核心技能。"
+description: "2026 版 GitHub Actions 实战：从工作流触发、矩阵构建到缓存优化与多环境部署的完整 CI/CD 指南。"
 keywords:
   - GitHub Actions
   - CI/CD

@@ -1,8 +1,8 @@
 ---
-title: "Grafana 可视化实战指南"
+title: "Grafana 可视化实战指南 2026：Dashboard 设计 + Prometheus 告警 + 变量模板"
 date: 2026-04-22 00:00:00
 author: PFinal南丞
-description: "深入学习 Grafana 可视化平台，掌握数据源配置、Dashboard 设计、告警规则设置、变量模板等核心功能，打造专业的监控可视化系统。"
+description: "2026 版 Grafana 监控可视化实战：数据源配置、Dashboard 设计、Prometheus 告警规则与变量模板完整指南。"
 keywords:
   - Grafana
   - 可视化
