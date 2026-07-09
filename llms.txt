@@ -1,0 +1,445 @@
+# https://friday-go.icu/llms.txt
+
+# PFinalClub 技术深度博客
+# 专注 Golang、Python、PHP、安全渗透、AI Agent、DevOps、独立开发
+# 作者: PFinal南丞 | URL: https://friday-go.icu
+
+## Golang 系列（110+篇）
+- https://friday-go.icu/dev/backend/golang/go-1-27-generic-methods-production-2026: Go 1.27 泛型方法生产实战：从类型参数到真实架构的落地指南
+- https://friday-go.icu/dev/backend/golang/go-1-27-encoding-json-v2-migration-2026: Go 1.27 encoding/json/v2 迁移实战：标准库四年来最大重写的生产级指南
+- https://friday-go.icu/dev/backend/golang/go-swiss-table-map-deep-dive-2026: Go Swiss Table Map 深度解析：从原理到生产调优实战
+- https://friday-go.icu/dev/backend/golang/go-btype-btree-data-structure-2026: Go btype 数据结构实战：比 Rust/C++ 更快的 B 树集合
+- https://friday-go.icu/dev/backend/golang/go-1-27-rc1-deep-dive-2026: Go 1.27 RC1 深度解析：泛型方法落地、json/v2 正式入库与运行时性能跃升
+- https://friday-go.icu/dev/backend/golang/go-1-25-container-aware-gomaxprocs-2026: Go 1.25 实战 2026：容器感知调度 + DWARF5 + JSON v2 完整迁移指南 — Go 1.25（2025-08 发布）三大新特性实战：GOMAXPROCS 容器感知、DWARF5 调试信息压缩、encoding/json/v2 性能翻倍
+- https://friday-go.icu/dev/backend/golang/go-http3-quic-production-deployment-2026: Go HTTP/3 + QUIC 生产部署实战 2026 — Go 1.24+ http3 标准库 + quic-go 双方案对比：CDN 接入、UDP 防火墙、Alt-Svc 协商、0-RTT、移动弱网优化
+- https://friday-go.icu/dev/backend/golang/go-1-24-range-over-func-7-patterns-2026: Go 1.24 range over func 迭代器：7 种生产级模式完全指南
+- https://friday-go.icu/dev/backend/golang/go-1-26-toolchain-new-expr-generics-cgo-2026: Go 1.26 工具链深度实战：new(expr) 语法糖 + 自引用泛型约束 + cgo 性能跃升
+- https://friday-go.icu/dev/backend/golang/go-websocket-high-concurrency-2026: Go WebSocket 高并发实时通信实战：从原理到万级连接的生产架构
+- https://friday-go.icu/dev/backend/golang/go-generic-methods-proposal-77273: Go 泛型方法实战：Proposal #77273 从提案到生产落地
+- https://friday-go.icu/dev/backend/golang/go-goroutine-leak-detection-2026: Go goroutine 泄漏检测：从 pprof 到生产级并发调试
+- https://friday-go.icu/dev/backend/golang/go-fuzzing-production-guide-2026: Go Fuzzing 实战：从 CI 集成到生产安全漏洞挖掘
+- https://friday-go.icu/dev/backend/golang/rust-vs-go-2026-performance-comparison: Rust vs Go 2026：性能基准、内存安全与后端选型实战
+- https://friday-go.icu/dev/backend/golang/go-errgroup-structured-concurrency: Go 结构化并发实战：errgroup 从原理到生产最佳实践 — 深入讲解 Go 语言结构化并发编程模式，基于 golang.org/x/sync/errgroup 实现任务编排、错误传播与优雅取消，涵盖超时控制、并发限制、多级任务编排等生产级实战技巧。
+- https://friday-go.icu/dev/backend/golang/go-slog-production-best-practices-2026: Go slog 结构化日志：从入门到生产最佳实践（2026）
+- https://friday-go.icu/dev/backend/golang/go-sbom-supply-chain-security: Go SBOM 实战：软件供应链安全从合规到落地
+- https://friday-go.icu/dev/backend/golang/go-1-27-preview: Go 1.27 前瞻：泛型方法、后量子密码学与性能跃升
+- https://friday-go.icu/dev/backend/golang/wails-v3-migration-guide: Go Wails v3 实战：从 v2 迁移到 v3 完整指南
+- https://friday-go.icu/dev/backend/golang/go-fuzzing-complete-guide: Go 模糊测试完全指南：从 go-fuzz 到 Go 1.24 原生 Fuzzing
+- https://friday-go.icu/dev/backend/golang/Go-2026-Roadmap-Deep-Dive: Go 2026 路线图深度解析：泛型方法、SIMD 与无 CGO 工具链
+- https://friday-go.icu/dev/backend/golang/Go-MCP-Server-Development: 用 Go 开发 MCP Server：让你的工具成为 AI Agent 的能力
+- https://friday-go.icu/dev/backend/golang/go-1.26-toolchain-syntax: Go 1.26 工具链与语法新特性深度解析
+- https://friday-go.icu/dev/backend/golang/Go-1-26-Green-Tea-GC-深入解析：生产环境的性能跃升: Go 1.26 Green Tea GC 深入解析：生产环境的性能跃升 — 深入解析 Go 1.26 正式默认启用的 Green Tea 垃圾回收器。从架构设计原理到生产环境实测，覆盖向量化扫描、NUMA 感知、Span 级工作队列等核心技术，以及 cgo 调用优化、小对象分配加速等配套改进，并提供完整的基准测试方
+- https://friday-go.icu/dev/backend/golang/go-production-logging-healthcheck: Go 生产级工程实践：slog 结构化日志与 health check 全解
+- https://friday-go.icu/dev/backend/golang/go-context-guide: Go Context 实战 2026：4 种派生模式 + 10 个场景从 HTTP 到 gRPC
+- https://friday-go.icu/dev/backend/golang/go-database-sql: Go database/sql 实战 2026：5 个连接池参数 + 8 条生产级最佳实践
+- https://friday-go.icu/dev/backend/golang/go-error-handling: Go 错误处理实战 2026：7 种模式从 errors.Is 到生产级 Wrapping
+- https://friday-go.icu/dev/backend/golang/go-generics-guide: Go 泛型实战 2026：类型参数 + 约束 + 3 种容器设计完整指南
+- https://friday-go.icu/dev/backend/golang/go-testing-guide: Go 单元测试实战 2026：6 种测试模式 + Fuzz 模糊测试完整接入
+- https://friday-go.icu/dev/backend/golang/go-workspace-modules: Go Modules + Workspace 多模块管理实战 2026：5 个核心配置 + 3 种协同方案
+- https://friday-go.icu/dev/backend/golang/go-performance-optimization: Go 性能优化实战：从 pprof 到内存管理
+- https://friday-go.icu/dev/backend/golang/grpc-in-go: gRPC 在 Go 中的实战应用
+- https://friday-go.icu/dev/backend/golang/microservices-architecture: Go 微服务架构实战指南
+- https://friday-go.icu/dev/backend/golang/Go-Zero-Copy-Reader: Go 零拷贝读取器实战与原理解析 — 深入讲解 Go 语言零拷贝技术，包括 sendfile、splice、mmap 等系统调用原理，以及如何在 Go 中实现高性能零拷贝数据传输，适用于文件传输、网络代理等场景。
+- https://friday-go.icu/dev/backend/golang/gin-framework-guide: Gin 框架实战指南 — 全面讲解 Go 语言最流行的 Web 框架 Gin，包括路由、中间件、参数绑定、验证等核心功能，帮助你快速构建高性能 Web 应用。
+- https://friday-go.icu/dev/backend/golang/go-channel-guide: Go Channel 通道详解 2026：从基础到高级的 15 个并发模式实战 — Go Channel 通道完全指南 2026：涵盖无缓冲/有缓冲/Select/超时控制等 15 种并发模式，附带可运行代码示例和性能对比，从入门到 goroutine 泄漏排查全覆盖。
+- https://friday-go.icu/dev/backend/golang/go-goroutine-intro: Go Goroutine 协程入门 2026：从 go 关键字到 WaitGroup 的 12 个实战示例 — 零基础掌握 Go 协程：go 关键字、WaitGroup、Channel 通信、Goroutine 泄漏排查与 12 个可运行示例，10 分钟上手并发编程。
+- https://friday-go.icu/dev/backend/golang/go-waitgroup-mutex: Go 并发模式：WaitGroup 与 Mutex — 深入讲解 Go 语言中的同步原语 WaitGroup 和 Mutex，帮助你掌握 Goroutine 同步和共享资源保护的最佳实践。
+- https://friday-go.icu/dev/backend/golang/go-distributed-tracing: Go 分布式追踪实战 2026：OpenTelemetry + Jaeger 完整接入与链路排查 — 微服务必会：Go 应用接入 OpenTelemetry、Jaeger 部署、Trace/Span/Baggage 传递、上下文注入与线上慢请求定位实战。
+- https://friday-go.icu/dev/backend/golang/go-jwt-auth: Go JWT 认证与授权实战 2026：Token 生成 + RBAC 权限 + 刷新机制全解析 — Go JWT 认证完整实战 2026：Access Token + Refresh Token 双 Token 机制、HMAC/RSA 签名选择、RBAC 角色权限模型、黑名单与主动失效策略，附带 gin + jwt-go 可运行代码。
+- https://friday-go.icu/dev/backend/golang/go-middleware-patterns: Go HTTP 中间件设计模式实战 2026：洋葱模型、链式调用与 AOP 最佳实践 — 从原理解析到生产代码：Go 中间件洋葱模型、链式调用、AOP 编程、Gin/Echo 中间件实现，附可复用中间件模板。
+- https://friday-go.icu/dev/backend/golang/go-prometheus-monitoring: Go + Prometheus 监控实战 2026：Counter/Gauge/Histogram 完整接入与 Grafana 可视化 — 2026 年 Go 服务接入 Prometheus 完整指南：4 种指标类型、自定义 Exporter、HTTP 埋点、Grafana 看板配置与生产告警最佳实践。
+- https://friday-go.icu/dev/backend/golang/go-redis-practice: Go Redis 实践指南 — 深入学习 Go 语言操作 Redis，掌握连接池、常用数据结构、分布式锁、缓存模式等核心技能，构建高性能缓存系统。
+- https://friday-go.icu/dev/backend/golang/ClickHouse-OLAP-Guide: ClickHouse 实战：从入门到高性能 OLAP 查询 — 全面讲解 ClickHouse 列式数据库的核心概念、性能优化技巧和实战案例，帮助你构建高性能数据分析系统。
+- https://friday-go.icu/dev/backend/golang/Go-Channel-Batch-Read: Go Channel 批量读取进阶 2026：扇入扇出 + Worker Pool + 背压控制实战 — Go Channel 批量读取高级实战 2026：扇入扇出模式、动态 Worker Pool、背压控制与限流、批量超时处理，配合 benchmark 性能对比和 goroutine 泄漏排查技巧。
+- https://friday-go.icu/dev/backend/golang/Go-Interface-Parameter-Design: Go 接口参数设计实战 2026：泛型、Functional Options 与 Builder 模式 7 种写法对比 — Go API 参数设计全攻略：泛型约束、Functional Options、Builder、接口抽象等 7 种模式对比，写出可复用、易维护的接口。
+- https://friday-go.icu/dev/backend/golang/Go-RESTful-API-Versioning: 如何实现 RESTful API 版本控制 — 全面讲解 RESTful API 版本控制的多种策略，包括 URL、Header、参数等方式，以及各自的优缺点和最佳实践。
+- https://friday-go.icu/dev/backend/golang/Go-SIMD-Programming: Go 1.26 SIMD 编程实战：从入门到高性能优化 — 深入讲解 Go 1.26 引入的 SIMD（单指令多数据）编程技术，包括向量指令、性能优化技巧和实战案例。
+- https://friday-go.icu/dev/backend/golang/Go-STW-Truth: Stop-The-World 其实没停下：Go GC 的微暂停真相 — 深入剖析 Go 垃圾回收器的 STW（Stop-The-World）机制，揭示微暂停的真相，以及如何优化 GC 暂停时间。
+- https://friday-go.icu/dev/backend/golang/Go-Terminal-Tool-Advanced: Go CLI 终端助手实战 2026：Cobra + 8 个常用命令开发全记录 — 基于 Cobra 用 Go 开发全能终端助手：天气、手机号归属地、MD5/SHA256、Base64、时间戳、网络词典 8 大命令完整代码与踩坑记录。
+- https://friday-go.icu/dev/backend/golang/Go-runtime-free-GC-Optimization: runtime.free 打破 Go GC 性能瓶颈的秘密武器 — 深入解析 Go runtime.free 机制，掌握如何通过手动内存管理优化 GC 性能，提升应用吞吐量和降低延迟。
+- https://friday-go.icu/dev/backend/golang/Wails-Douyin-Live-Tool: Wails 抖音直播助手实战：弹幕获取 + 礼物统计 + 自动回复 — 用 Wails 框架开发抖音直播桌面助手：WebSocket 弹幕抓取、礼物打赏统计、关键词自动回复，附完整功能实现代码
+- https://friday-go.icu/dev/backend/golang/Wails-Go-Cache-Performance: 提升 Wails 应用性能：探索 Go-Cache 的高效内存缓存方案 — 介绍如何在 Wails 桌面应用中使用 Go-Cache 实现高效内存缓存，提升应用响应速度和用户体验。
+- https://friday-go.icu/dev/backend/golang/Wails-Mac-Development: 基于 Wails 的 Mac 桌面应用开发 — 详细介绍如何使用 Wails 开发 macOS 原生风格的桌面应用，包括菜单栏、系统托盘、原生对话框等 Mac 特性集成。
+- https://friday-go.icu/dev/backend/golang/Wails-Tailwind-Development: 基于 wails 和 Tailwindcss 的应用开发 — 介绍如何在使用 Wails 开发桌面应用时集成 Tailwind CSS，打造美观且响应式的用户界面。
+- https://friday-go.icu/dev/backend/golang/Wails-Vue-Desktop-App: 基于 Wails 和 Vue.js 打造跨平台桌面应用 — 详细介绍如何使用 Wails 框架结合 Vue.js 开发跨平台桌面应用，包括项目搭建、组件开发、后端通信等完整流程。
+- https://friday-go.icu/dev/backend/golang/go-concurrency-patterns-advanced: Go 并发模式进阶 2026：Pipeline、Fan-out/Fan-in、Context 与错误处理实战 — Go 高级并发模式生产指南：Pipeline、Fan-out/Fan-in、Context 超时控制、Goroutine 错误聚合与限流，附完整可运行代码。
+- https://friday-go.icu/dev/backend/golang/go-memory-management-gc: Go 内存管理与 GC 垃圾回收深度解析 2026：逃逸分析 + 三色标记 + 调优实战 — Go GC 机制深度拆解 2026：栈 vs 堆分配策略、逃逸分析实战、三色标记+混合写屏障原理、GOGC 调优与内存泄漏排查，附带 pprof 性能分析案例。
+- https://friday-go.icu/dev/backend/golang/go-restful-api-best-practices: Go RESTful API 最佳实践：构建高质量 Web 服务 — 全面讲解使用 Go 语言构建 RESTful API 的最佳实践，包括路由设计、请求处理、错误处理、版本控制、文档生成等核心主题。
+- https://friday-go.icu/dev/backend/golang/gorm-tutorial: GORM 实战教程：Go 语言 ORM 从入门到高级 — 全面讲解 GORM v2 的使用：模型定义、CRUD、关联查询、事务、软删除、钩子、性能优化，以及与 MySQL/PostgreSQL 的最佳实践。
+- https://friday-go.icu/dev/backend/golang/circuit-breaker-rate-limiting: Go 微服务治理：熔断、限流与降级实战 — 深入讲解 Go 微服务中的熔断、限流、降级机制，包含 Hystrix、Token Bucket、漏桶算法等实现方案与实战代码
+- https://friday-go.icu/dev/backend/golang/grpc-protobuf-guide: gRPC 与 Protobuf 实战：Go 微服务通信最佳实践 — 深入讲解 gRPC 与 Protocol Buffers 在 Go 微服务中的应用，包含服务定义、四种通信模式、拦截器、负载均衡等实战内容
+- https://friday-go.icu/dev/backend/golang/go-1-24-new-features: Go 1.24 新特性深度解析：weak 包、iter 改进与性能提升实战 — Go 1.24 带来了 weak 包、iter 包改进、map 优化等新特性。本文深入解析这些特性，并提供实际应用场景和性能对比。
+- https://friday-go.icu/dev/backend/golang/go-slice-map: Go Slice 与 Map 深度解析 2026：底层内存模型、扩容机制与 8 个高频坑点 — 图解 Go 数组、Slice、Map 底层实现：len/cap、扩容倍数、并发安全、内存泄漏与 8 个面试高频坑点，附性能优化建议。
+- https://friday-go.icu/dev/backend/golang/go-basic-syntax: Go 基础语法速通：从零开始掌握 Go 语言 — 全面覆盖 Go 语言基础语法，包括变量声明、控制流程、函数、指针等核心概念，附带大量实战示例，帮助你快速上手 Go 语言开发。
+- https://friday-go.icu/dev/backend/golang/大模型边缘部署实战：基于Go语言的轻量级推理引擎: 大模型边缘部署实战：基于Go语言的轻量级推理引擎 — 深入探讨大模型边缘部署的核心挑战与解决方案，基于Go语言构建高性能轻量级推理引擎，覆盖模型量化、异构调度、内存优化等关键技术，实现生产环境高效部署
+- https://friday-go.icu/dev/backend/golang/wails/wails-gonavi-practice: Wails 生态巡礼：两款让我惊艳的桌面应用（GoNavi & TinyRDM） — 介绍两款基于Wails开发的优秀桌面应用：GoNavi多数据库管理工具和TinyRDM Redis桌面管理器，展示Wails生态的魅力和实力。
+- https://friday-go.icu/dev/backend/golang/Go-1.22新特性实战指南-路由升级与循环变量修复: Go 1.22+ 新特性实战指南 路由升级与循环变量修复 — Go 1.22 是近年来最具突破性的版本之一，带来了 `math/rand/v2`、循环变量修复、内联增强以及对 `http.ServeMux` 的重大改进。本文将从实际开发角度深入解析这些新特性，帮助你在项目中快速落地。
+- https://friday-go.icu/dev/backend/golang/Go语言开发AI智能体：从Function Calling到Agent框架: Go语言开发AI智能体：从Function Calling到Agent框架 — 深入探讨Go语言中AI智能体开发的核心技术，从基础的Function Calling机制到企业级Agent框架实践，涵盖Eino、go-agent等主流框架实战
+- https://friday-go.icu/dev/backend/golang/Meilisearch：比Elasticsearch更简单的开源搜索引擎: Meilisearch：比Elasticsearch更简单的开源搜索引擎实战 — 深入解析现代搜索引擎Meilisearch的核心优势、与Elasticsearch的对比、Go SDK实战应用及生产环境部署指南，帮助开发者快速构建高性能搜索功能
+- https://friday-go.icu/dev/backend/golang/GitOps实战：从应用部署到全生命周期管理: GitOps实战：从应用部署到全生命周期管理 — 深入解析GitOps在现代云原生环境中的完整实践路径，涵盖从工具链选型、多环境管理、安全合规到灾难恢复的全生命周期管理策略，助力企业构建可审计、可重复、自愈的现代化部署体系。
+- https://friday-go.icu/dev/backend/golang/ClickHouse实战：从入门到高性能OLAP查询: ClickHouse实战：从入门到高性能OLAP查询 — 深入探索ClickHouse列式OLAP数据库的核心特性与实战应用，涵盖架构设计、Go语言集成、性能优化策略，助力开发者构建高效数据分析系统
+- https://friday-go.icu/dev/backend/golang/RAG落地实战：从0到1构建企业级知识库问答系统: RAG落地实战：从0到1构建企业级知识库问答系统 — 深入解析RAG技术在企业级知识库问答系统中的完整落地流程，涵盖数据预处理、向量化、混合检索、生成优化与部署监控，提供实战代码与架构选型建议。
+- https://friday-go.icu/dev/backend/golang/Go 1.26 SIMD编程实战：从入门到高性能优化: Go 1.26 SIMD编程实战：从入门到高性能优化 — 深入探讨Go 1.26中的SIMD（单指令多数据）编程，涵盖向量化指令集基础、编译器自动优化、手动内联汇编实践，以及如何在实际项目中应用SIMD实现2-10倍的性能提升。面向有经验的Go开发者，提供完整代码示例与benchmark对比。
+- https://friday-go.icu/dev/backend/golang/runtime.free 打破Go GC性能瓶颈的秘密武器: runtime.free 打破Go GC性能瓶颈的秘密武器 — 深入解析Go 1.26中的runtime.free机制，如何通过编译器自动化与标准库手动优化，绕过GC直接释放内存，实现高达2倍的性能提升。面向有经验的Go开发者，提供实战代码示例、benchmark数据对比和最佳实践。
+- https://friday-go.icu/dev/backend/golang/wails/00-webkit-and-lifecycle: Wails 教程系列 - WebKit 与生命周期深度解析 — 深入理解 Wails 中的 WebKit 技术原理、wails.Run() 运行路线以及应用生命周期管理机制。
+- https://friday-go.icu/dev/backend/golang/wails/01-installation: Wails 教程系列 - 环境搭建与安装 — 详细介绍如何为 Wails 开发准备环境，包括 Go、Node.js 的安装以及 Wails CLI 的获取。
+- https://friday-go.icu/dev/backend/golang/wails/02-first-app: Wails 教程系列 - 创建你的第一个应用 — 深入理解 Wails 项目创建流程、架构原理和最佳实践，为资深开发者提供全面的技术指导。
+- https://friday-go.icu/dev/backend/golang/wails/03-core-concepts: Wails 教程系列 - 核心概念详解 — 深入理解 Wails 应用的核心概念，包括前后端架构、数据绑定、方法调用和事件驱动通信。
+- https://friday-go.icu/dev/backend/golang/wails/05-backend-development: Wails 教程系列 - 后端开发 (Go) — 学习如何在 Wails 应用中使用 Go 语言进行后端开发，包括业务逻辑实现、系统 API 调用和数据处理。
+- https://friday-go.icu/dev/backend/golang/如何实现 RESTful API 版本控制: Go 3 招 API 版本控制 2025 - 生产环境稳如老狗的实战技巧 — 深入探讨 RESTful API 版本控制的策略和实践，包括 URI、头部和内容协商方法，并提供 Go 语言的详细示例。
+- https://friday-go.icu/dev/backend/golang/Go-WASM构建WebAssembly应用的全新尝试: Go 和 WASM 构建 WebAssembly 应用的全新尝试 — 当 Go 语言遇上 WebAssembly，会碰撞出怎样的火花？让我们一起探索这个令人兴奋的技术组合，看看如何用 Go 构建高性能的 Web 应用。
+- https://friday-go.icu/dev/backend/golang/用 Go 构建一个类 kubectl 的命令行工具: 用 Go 构建一个类 `kubectl` 的命令行工具 — 打造你的 CLI 神器：用 Go 构建一个类 `kubectl` 的命令行工具
+- https://friday-go.icu/dev/backend/golang/每个-Golang-程序员都需要这个: 每个 Golang 程序员都需要这个 - 实战指南 — 分享每个Golang程序员都应该掌握的核心工具和技能，从代码质量到性能优化，从开发效率到部署运维，全面提升Go开发能力。
+- https://friday-go.icu/dev/backend/golang/9个没有竞争但需求巨大的微型SaaS理念: 9 个微型 SaaS 理念 2025 - 低竞争高需求的市场机会 — 你是否想过，SaaS 领域还有哪些“蓝海”？本文分享 9 个几乎没有竞争、但需求巨大的微型 SaaS 创业点子，附带实用建议与技术实现思路。
+- https://friday-go.icu/dev/backend/golang/Go 零拷贝读取器实战与原理解析: Go 零拷贝读取器实战与原理解析 — 结合实战案例，深入浅出地介绍 Go 语言中的零拷贝读取器原理、实现方式、技术挑战与最佳实践。
+- https://friday-go.icu/dev/backend/golang/VS Code 中 MCP 服务器的开发者快速入门: VS Code 中 MCP 服务器的开发者快速入门 — 结合实战案例，详细介绍如何在 VS Code 环境下高效开发 MCP 服务器，涵盖环境搭建、调试技巧、常见问题与最佳实践。
+- https://friday-go.icu/dev/backend/golang/沃尔玛AI购物、自动化购买决策  的技术原理: 沃尔玛AI购物、自动化购买决策的技术原理分析 — 沃尔玛AI购物、自动化购买决策  的技术原理分析
+- https://friday-go.icu/dev/backend/golang/wails/使用-Go-systray-构建智能系统托盘应用-Wails-v2-集成实战: 如何使用 Go systray 构建智能系统托盘应用 - Wails v2 集成实战完整指南 — 深入讲解如何使用 Go systray 库构建智能系统托盘应用，结合 Wails v2 框架实现跨平台桌面应用开发，包含完整的实战案例和最佳实践
+- https://friday-go.icu/dev/backend/golang/使用-Go-systray-构建智能系统托盘应用-Wails-v2-集成实战: 如何使用 Go systray 构建智能系统托盘应用 - Wails v2 集成实战完整指南 — 深入讲解如何使用 Go systray 库构建智能系统托盘应用，结合 Wails v2 框架实现跨平台桌面应用开发，包含完整的实战案例和最佳实践
+- https://friday-go.icu/dev/backend/golang/wails/04-frontend-development: Wails 教程系列 - 前端开发实战指南 — 手把手教你用最新的前端技术栈开发 Wails 应用，从入门到精通。
+- https://friday-go.icu/dev/backend/golang/wails/Fyne与Wails深度对比-选择最适合你的Go桌面应用框架: Fyne vs Wails 2025 - Go 桌面框架对比 — Fyne vs Wails 2025: 深入对比两大 Go 桌面应用框架的架构设计、性能表现、开发体验，帮助开发者选择最适合的技术方案。
+- https://friday-go.icu/dev/backend/golang/Deep-Dive-Go-Memory-Allocation: 深入Go内存分配 — 深入Go内存分配
+- https://friday-go.icu/dev/backend/golang/golang 实现协程池: Go 协程池实战 2026：5 种 Worker Pool 模式 + 万级并发性能对比 — Go 协程池 5 种实现模式详解 2026：固定池、动态池、蚂蚁池、带优先级池、可取消池，万级并发压测对比 + Channel vs Mutex 模式选型指南
+- https://friday-go.icu/dev/backend/golang/wails/基于Wails的抖音直播工具: 如何开发和使用 基于Wails的抖音直播 工具 - 完整实战指南 — 基于Wails的抖音直播工具
+- https://friday-go.icu/dev/backend/golang/基于Wails的抖音直播工具: 如何开发和使用 基于Wails的抖音直播 工具 - 完整实战指南 — 基于Wails的抖音直播工具
+- https://friday-go.icu/dev/backend/golang/让CLI工具焕然一新！用golang与Color库打造多彩命令行体验: 让CLI工具焕然一新！用golang与Color库打造多彩命令行体验 — 用 Golang 与 Color 库打造多彩命令行体验，让 CLI 工具焕然一新
+- https://friday-go.icu/dev/backend/golang/golang系统库之gopsutil: Golang gopsutil 使用指南 - CPU/内存/磁盘/网络指标获取实战 — 详细介绍golang系统库之gopsutil，包括安装配置、进程监控、系统信息获取等核心功能，帮助开发者轻松获取系统信息。
+- https://friday-go.icu/dev/backend/golang/Speed-Boost-Static-API-with-Go: Go 静态化 API 实战 - 提速利器的完整实现指南 — 使用 Go 实现静态化 API 提升响应速度的完整实战指南，涵盖缓存策略与高并发优化
+- https://friday-go.icu/dev/backend/golang/提升生产力的 Golang 实用工具推荐让开发更轻松: Golang 实用工具推荐 - 提升开发效率的精选清单 — 推荐提升生产力的 Golang 实用工具与扩展包，涵盖地址生成、数据脱敏、时间处理等
+- https://friday-go.icu/dev/backend/golang/Go 语言的高性能 User-Agent 解析库: Go 语言的高性能 User-Agent 解析库 — 详细介绍Go语言的高性能User-Agent解析库，包括安装配置、使用方法、性能测试等核心功能，帮助开发者轻松解析User-Agent信息。
+- https://friday-go.icu/dev/backend/golang/深入理解Go Channel 批量读取与实际应用: 深入理解 Go Channel 批量读取与实际应用 — 深入理解 Go Channel：批量读取与实际应用
+- https://friday-go.icu/dev/backend/golang/wails/基于Wails和Vue.js打造跨平台桌面应用: 用Wails和Vue.js打造跨平台桌面应用程序 — 用Wails和Vue.js打造跨平台桌面应用程序
+- https://friday-go.icu/dev/backend/golang/基于Wails和Vue.js打造跨平台桌面应用: Wails + Vue.js 跨平台桌面应用实战 2026：从零构建可分发的 App — 用 Wails v2 + Vue 3 构建 macOS/Windows 桌面应用：项目初始化、前后端通信、原生 API 调用、打包分发，附完整代码
+- https://friday-go.icu/dev/backend/golang/go:embed 在 Go 开发中的应用与最佳实践: go embed 在 Go 开发中的应用与最佳实践 — go:embed 在 Go 开发中的应用与最佳实践
+- https://friday-go.icu/dev/backend/golang/AutoCorrent专有名词大小写扩展包: Go 专有名词自动校正 AutoCorrect 实战：告别 iOS/MySQL 大小写错误 — Go AutoCorrect 扩展包实战：自动校正 iOS/MySQL/JavaScript 等 500+ 专有名词大小写，支持 Markdown/Go 注释/commit-msg 集成
+- https://friday-go.icu/dev/backend/golang/使用Go实现服务端事件推送SSE: Go 服务端事件推送 SSE - 实战指南 — 使用 Go 实现服务端事件推送 SSE 的完整实战指南，对比 WebSocket 选型与实现
+- https://friday-go.icu/dev/backend/golang/Create Go App CLI 一款快速创建golang项目的工具: Create Go App CLI - 快速创建 Golang 项目的实用工具 — 介绍一款快速创建golang项目的工具
+- https://friday-go.icu/dev/backend/golang/golang 脱敏扩展包：简化敏感信息处理的利器: Golang 脱敏扩展包 - 简化敏感信息处理的利器 — 详细介绍golang脱敏扩展包，包括安装配置、使用方法、常见问题等核心功能，帮助开发者轻松管理多个Python版本。
+- https://friday-go.icu/dev/backend/golang/Golang中国地址生成扩展包: golang中国地址生成扩展包完整使用指南 - 如何集成并掌握核心功能 — 详细介绍golang中国地址生成扩展包，包括安装配置、使用方法、示例代码等，帮助开发者快速生成中国地址数据。
+- https://friday-go.icu/dev/backend/golang/Gomail邮件发送包: Go Gomail 邮件发送实战 2026：SMTP + HTML + 附件的 6 种发送模式 — Go Gomail 邮件发送库实战 2026：SMTP 配置、HTML 邮件、附件发送、批量群发、TLS 加密与错误处理的 6 种模式，附带完整可运行代码
+- https://friday-go.icu/dev/backend/golang/GO语言开发终端小工具后续: Go 终端小工具进阶 - 天气/归属地/MD5 等实用命令开发实战 — 在 Go 终端小工具基础上新增天气查询、手机归属地、MD5/Base64、网络词汇、时间戳等子命令的开发与迭代记录，以及遇到的问题与解决方式。
+- https://friday-go.icu/dev/backend/golang/Go 开发IP过滤小脚本: Go IP 过滤小脚本 - 实战指南 — 详细介绍GO开发IP过滤小脚本，包括IP过滤的原理、应用场景、实现方式等，帮助开发者更好地利用IP过滤功能，提高程序的安全性和稳定性。
+- https://friday-go.icu/dev/backend/golang/wails/基于wails和Tailwindcss的应用开发: Wails + Tailwindcss 应用开发 - 实战指南 — 基于wails的应用尝试开发
+- https://friday-go.icu/dev/backend/golang/基于wails和Tailwindcss的应用开发: Wails + Tailwindcss 应用开发 - 实战指南 — 基于wails的应用尝试开发
+- https://friday-go.icu/dev/backend/golang/wails/基于Wails的Mac桌面应用开发: Wails Mac 桌面应用开发 - 实战指南 — 基于Wails的Mac桌面应用开发
+- https://friday-go.icu/dev/backend/golang/基于Wails的Mac桌面应用开发: Wails Mac 桌面应用开发 - 实战指南 — 基于Wails的Mac桌面应用开发
+- https://friday-go.icu/dev/backend/golang/wails/提升Wails应用性能：探索Go-Cache的高效内存缓存方案: 提升Wails应用性能-探索Go-Cache的高效内存缓存方案 — 介绍如何使用Go-Cache库来提升Wails应用程序的性能，包括缓存策略、内存管理和性能优化技巧。
+- https://friday-go.icu/dev/backend/golang/提升Wails应用性能：探索Go-Cache的高效内存缓存方案: 提升Wails应用性能-探索Go-Cache的高效内存缓存方案 — 介绍如何使用Go-Cache库来提升Wails应用程序的性能，包括缓存策略、内存管理和性能优化技巧。
+- https://friday-go.icu/dev/backend/golang/wails/README: Wails 桌面应用开发 - Go 跨平台框架完整指南 | PFinalClub — 全面的Wails桌面应用开发指南，涵盖从入门到实战的完整内容，包括教程系列、实战项目、性能优化、系统集成等，帮助Go开发者构建高性能跨平台桌面应用。
+
+## AI Agent 系列
+- https://friday-go.icu/ai/context-engineering-2026-ai-paradigm-shift: Context Engineering 上下文工程实战：从 Prompt Engineering 到 AI Agent 信息架构的范式跃迁
+- https://friday-go.icu/ai/x-mcp-server-managed-integration-2026: X MCP Server 实战：零配置接入 150+ API 端点的托管服务集成
+- https://friday-go.icu/ai/github-spec-kit-spec-driven-development-2026: GitHub Spec Kit 规格驱动开发实战：让 AI 编码 Agent 从 Vibe Coding 走向工程化治理
+- https://friday-go.icu/ai/langgraph-1-0-durable-execution-production-2026: LangGraph 1.0 Durable Execution 实战：持久化 Agent 工作流引擎的生产级架构与 Human-in-the-Loop 模式
+- https://friday-go.icu/ai/claude-mythos-ai-vulnerability-discovery-cve-surge-paradigm-2026: Claude Mythos × CVE 3.5x 暴增：AI 漏洞挖掘范式革命深度解析
+- https://friday-go.icu/ai/safari-mcp-server-webkit-ai-agent-debugging-2026: Safari MCP Server 实战：苹果 WebKit 的 AI Agent 调试新范式深度解析
+- https://friday-go.icu/ai/mcp-2026-07-28-spec-stateless-oauth-migration-2026: MCP 2026-07-28 Spec RC 迁移实战：无状态架构、OAuth 2.1 与七大 Breaking Changes 全解析
+- https://friday-go.icu/ai/openai-codex-cli-production-workflow-2026: OpenAI Codex CLI 2026 生产工作流实战：从终端 Agent 到团队级治理
+- https://friday-go.icu/ai/harness-engineering-claude-code-2026: Harness Engineering 2026 实战：Claude Code 源码泄露后的 AI Agent 工程范式革命
+- https://friday-go.icu/ai/mcp-protocol-2026-complete-guide-openclaw: MCP 协议 2026 完全指南：从协议设计到 OpenClaw 生产级 Agent 工具集成
+- https://friday-go.icu/ai/anthropic-agent-skills-2026: Anthropic Agent Skills 实战：让 AI Agent 掌握专业技能的标准化方案
+- https://friday-go.icu/ai/llm-long-context-ruler-mrcr-2026: LLM 长上下文 1M Token 时代：RULER 与 MRCR v2 评测体系深度解读
+- https://friday-go.icu/ai/mcp-2026-roadmap-deep-dive: MCP 2026 路线图深度解读：传输层演进、治理成熟与企业就绪
+- https://friday-go.icu/ai/opencode-architecture-model-agnostic-agent-2026: OpenCode 架构实战：开源 AI 编程 Agent 如何靠模型无关设计登顶排行榜
+- https://friday-go.icu/ai/claude-sonnet-4-6-go-integration-2026: Claude Sonnet 4.6 Go 集成实战 2026 — Claude Sonnet 4.6 全面替代 4.5 成为默认模型，1M 上下文 + 自适应推理 + Agent SDK，本文用 Go 实战接入、Tool Use、Prompt Caching、成本优化
+- https://friday-go.icu/ai/gemini-3-5-flash-go-integration-2026: Gemini 3.5 Flash + Go 集成实战：构建高性价比 AI 应用的完整指南
+- https://friday-go.icu/ai/ag-ui-protocol-frontend-integration-2026: AG-UI 协议实战：让 AI Agent 与前端无缝对话的完整指南
+- https://friday-go.icu/ai/ai-agent-observability-2026: AI Agent 可观测性 2026：从 Tracing 到生产调试的完整技术栈
+- https://friday-go.icu/ai/fastmcp-3-0-production-mcp-server-2026: FastMCP 3.0 实战：用 Python 构建生产级 MCP Server
+- https://friday-go.icu/ai/ai-agent-production-engineering-2026: 2026 AI Agent 工程化：从原型到生产的 10 个关键决策 — 从工程视角剖析 AI Agent 从 Demo 到生产环境落地的完整路径，涵盖架构设计、MCP 集成、工具调用可靠性、成本控制、安全护栏、可观测性、多 Agent 协作等关键决策点。
+- https://friday-go.icu/ai/mcp-stateless-secure-tunnel-2026: MCP 2026 无状态协议革命与 OpenAI Secure Tunnel 实战
+- https://friday-go.icu/ai/mcp-a2a-a2ui-protocol-stack: MCP + A2A + A2UI：2026 多 Agent 系统完整协议栈实战
+- https://friday-go.icu/ai/langchain-vs-llamaindex-2026: LangChain vs LlamaIndex 2026 深度对比：AI 应用框架选型指南
+- https://friday-go.icu/ai/ai-coding-tools-2026-comparison: 2026 AI 编程工具 Agent 时代横评：Cursor vs Claude Code vs Windsurf vs Copilot
+- https://friday-go.icu/ai/ai-agent-development-go: Go 语言 AI Agent 开发实战：从 Function Calling 到多工具编排 — 用 Go 构建 AI Agent 系统，实现 Function Calling、工具编排、记忆管理
+- https://friday-go.icu/ai/llm-application-architecture: LLM 应用架构实战 2026：从 RAG 到 Agent 的 7 种模式与 Go 落地完整指南 — LLM 应用架构实战 2026：系统梳理 7 种主流模式（基础 RAG → Multi-Agent → 反思式 Agent），含 5 个 Go 实现案例 + 3 个生产级架构图 + Anthropic/MCP 协议集成，覆盖 token 成
+- https://friday-go.icu/ai/llm-cost-optimization: LLM API 成本优化实战：从 Token 管理到模型分级 — 深入 LLM 成本控制策略：Token 压缩、缓存、模型分级、调用策略优化
+- https://friday-go.icu/ai/mcp-server-practice: MCP 服务器开发实战 2026：用 Go 构建企业级 AI 工具协议（完整代码） — MCP 服务器开发实战 2026：深入 Model Context Protocol 协议规范，用 Go 构建可投产的 MCP 服务器，含 5 个企业案例（数据库/文件系统/GitHub/Slack/Jira）+ OAuth 鉴权 + 限流
+- https://friday-go.icu/ai/prompt-engineering-guide: AI 提示词工程实战：从入门到精通
+- https://friday-go.icu/ai/rag-system-architecture: RAG 系统架构实战 2026：从原理到生产落地的完整指南（Python 代码 + 向量库选型） — RAG 系统架构实战 2026：深入解析检索增强生成 5 大核心模块（文档处理/向量化/混合检索/重排序/评估），附 4 套生产级 Python 实现 + 6 个向量库横向对比，附 Qdrant/Milvus 性能基准。
+
+## 安全渗透系列
+- https://friday-go.icu/security/offensive/adobe-coldfusion-cve-2026-48282-path-traversal-rce: Adobe ColdFusion CVE-2026-48282 深度解析：CVSS 10 路径穿越到 RCE 的完整攻击链
+- https://friday-go.icu/security/offensive/cve-2026-45659-sharepoint-rce-cisa-kev-2026: CVE-2026-45659 SharePoint RCE 实战：CISA KEV 新增在野利用漏洞的反序列化攻击链完整拆解
+- https://friday-go.icu/security/offensive/nginx-cve-2026-42530-42055-http3-http2-double-rce-deep-dive: NGINX CVE-2026-42530/42055 双 RCE 深度复现：HTTP/3 UAF 与 HTTP/2 堆溢出的攻防全解析
+- https://friday-go.icu/security/offensive/cve-2026-21876-owasp-crs-waf-bypass-multipart-charset: CVE-2026-21876 深度复现：OWASP CRS 规则 922110 multipart 字符集绕过让 WAF 彻底失效
+- https://friday-go.icu/security/offensive/toolhijacker-llm-agent-tool-selection-attack-2026: ToolHijacker 深度解析：LLM Agent 工具选择攻击原理与生产防御
+- https://friday-go.icu/security/offensive/frankenphp-cve-2026-45062-unicode-path-split-rce: FrankenPHP CVE-2026-45062 深度复现：Unicode 路径分割漏洞如何绕过 PHP 文件类型检查
+- https://friday-go.icu/security/offensive/ai-broke-ctf-2026-veria-labs-agent-analysis: AI 破解 CTF 2026：Veria Labs 52 题全解 Agent 技术深度拆解
+- https://friday-go.icu/security/offensive/gosentry-go-fuzzing-libafl-toolchain-2026: gosentry 实战：Go 模糊测试工具链分叉的革命性突破——LibAFL 引擎、结构感知与语法 Fuzzing
+- https://friday-go.icu/security/offensive/zero-trust-architecture-spiffe-spire-2026: 零信任架构实战 2026：从 BeyondCorp 到 SPIFFE/SPIRE 的 Go 实现 — 零信任核心三要素：身份、设备、上下文。BeyondCorp + SPIFFE/SPIRE Go SDK 实战，到生产级零信任网络完整方案
+- https://friday-go.icu/security/offensive/cisco-ise-cve-2026-20181-rce-deep-dive: Cisco ISE CVE-2026-20181 RCE 深度剖析 — 2026年6月17日 Cisco 紧急发布的高危 RCE 漏洞 CVE-2026-20181（CVSS 9.8）实战分析：缺陷组件、PoC 构造、检测规则、生产环境加固清单
+- https://friday-go.icu/security/offensive/litellm-cve-2026-42271-mcp-injection-exploitation: LiteLLM CVE-2026-42271 MCP 注入实战 — LiteLLM 高危 MCP 注入漏洞 CVE-2026-42271（CVSS 8.7，KEV 已加入）的攻击链复现、MITRE ATT&CK 映射、Snort 规则与 K8s 应急修复
+- https://friday-go.icu/security/offensive/litespeed-cve-2026-54420-kev-symlink-attack-guide: LiteSpeed CVE-2026-54420 实战：CISA KEV 在野利用漏洞的完整攻防指南
+- https://friday-go.icu/security/offensive/nginx-cve-2026-42945-heap-overflow-rce-guide: NGINX CVE-2026-42945 深度剖析：潜伏18年的堆溢出 RCE 漏洞完整攻防指南
+- https://friday-go.icu/security/offensive/miasma-supply-chain-worm-attack-2026: Miasma 供应链蠕虫攻击深度分析：2026 年开源生态的至暗时刻
+- https://friday-go.icu/security/offensive/mcp-security-crisis-30-cves-2026: MCP 安全危机 2026：30 个 CVE、系统性缺陷与实战防护
+- https://friday-go.icu/security/offensive/owasp-agentic-ai-top10-2026: OWASP Agentic AI Top 10 2026 深度解读与防御实战
+- https://friday-go.icu/security/offensive/post-quantum-cryptography-go-migration-2026: Post-Quantum Cryptography 迁移实战：Go 开发者的 PQC 落地指南
+- https://friday-go.icu/security/offensive/ctf-2026-cloud-security-container-k8s: CTF 2026 云安全攻防：从容器逃逸到 K8s 渗透实战
+- https://friday-go.icu/security/offensive/owasp-api-security-top10-2026-go: OWASP API Security Top 10 2026 深度解读与 Go 防御实战
+- https://friday-go.icu/security/offensive/llm-red-teaming-2026: LLM 红队测试 2026：企业级 AI 安全攻防实战指南
+- https://friday-go.icu/security/offensive/2026-h1-vulnerability-landscape: 2026 上半年高危漏洞全景：Linux 提权、供应链攻击与检测防御
+- https://friday-go.icu/security/offensive/AI-Multi-Agent-Penetration-Testing: AI 辅助渗透测试实战：Multi-Agent 自动化攻防框架搭建
+- https://friday-go.icu/security/offensive/llm-prompt-injection-defense: LLM 安全攻防实战：Prompt Injection 原理与全面防御体系
+- https://friday-go.icu/security/offensive/webshell免杀与Java内存马技术研究: WebShell 免杀与 Java 内存马技术研究 — 深入解析 WebShell 免杀技术与 Java 内存马原理，涵盖蚁剑/冰蝎流量混淆、编码绕过、特征修改、以及 Java Agent 与 Servlet 内存马的实现与检测方法。帮助安全研究人员理解攻防双方在 WebShell 层面的对抗技
+- https://friday-go.icu/security/offensive/红队基础设施搭建指南: 红队基础设施搭建指南：C2 框架与隐蔽通道构建 — 系统讲解红队测试中的基础设施搭建方法，涵盖 C2 框架选型与部署、域名前置、CDN 回源、流量混淆、日志规避等关键技术。通过 Sliver C2 实战案例演示如何构建安全的红队测试环境。
+- https://friday-go.icu/security/offensive/internal-penetration-testing: 内网渗透实战指南 — 深入学习内网渗透技术，掌握域环境渗透、横向移动、权限维持、隧道搭建等核心技能，理解内网攻击的完整流程。
+- https://friday-go.icu/security/offensive/penetration-testing-methodology: 渗透测试方法论完整指南 2026：信息收集 → 漏洞扫描 → 提权 → 后渗透全流程 — 渗透测试 6 阶段完整方法论 2026：PTES 标准详解、信息收集（被动+主动）、漏洞扫描（Nessus/OpenVAS）、权限提升（Linux/Windows）、横向移动与持久化、报告撰写规范。附 Kali Linux 工具链实战。
+
+## 安全工程系列
+- https://friday-go.icu/security/engineering/Go-Security-Libraries: Go 主流安全库实战指南 2026：7 大组件覆盖认证/加密/审计/漏洞防护 — Go 7 大主流安全库实战对比：jwt-go / casbin / crypto 最佳实践、OWASP 推荐组合、生产级配置示例与企业级集成
+- https://friday-go.icu/security/engineering/Go-Security-Pitfalls: 10 个 Golang 安全陷阱及真正有效的修复方案 — 总结 Go 开发中最常见的 10 个安全陷阱，包括 SQL 注入、路径遍历、不安全的反序列化等，并提供有效的修复方案。
+- https://friday-go.icu/security/engineering/Go-TLS-SSL-Guide: Golang TLS/SSL 网络安全实战 2026：双向认证 + 证书管理完整指南 — Golang TLS/SSL 网络安全实战 2026：深入讲解 Go 语言中 TLS 1.3 实现、证书签发/轮换、双向认证（mTLS）、证书验证加固、Pinning 与 Let’s Encrypt 自动化，附 8 段可投产代码。
+- https://friday-go.icu/security/engineering/Go-Web-Security-Guide: Golang Web 应用安全实战 2026：认证 + 防护 + 安全头完整指南 — Golang Web 应用安全实战 2026：覆盖 JWT/RBAC 认证、CSP/XSS/CSRF 防护、HSTS/CORS 安全头、SQL 注入预编译、限流熔断全链路，附 gin/chi 框架 20+ 可投产代码片段。
+- https://friday-go.icu/security/engineering/linux-security-hardening: Linux 安全加固实战 2026：12 项生产级硬核配置从 SSH 到审计日志 — Linux 服务器安全加固 12 项必做清单 2026：SSH 密钥认证+Fail2Ban、sudo 权限最小化、firewalld/iptables 规则、SELinux/AppArmor、auditd 审计日志、自动安全更新、内核参数调
+- https://friday-go.icu/security/engineering/honeypot-deployment: 蜜罐部署实战 2026：SSH + Web + 数据库蜜罐搭建与主动防御体系构建 — 蜜罐技术全栈实战 2026：Cowrie SSH 蜜罐、Glastopf Web 蜜罐、ElasticHoney 数据库蜜罐从零搭建，结合 ELK 日志分析 + 威胁情报联动，构建主动欺骗防御体系。附带 Docker Compose 一键部
+- https://friday-go.icu/security/engineering/sql-injection-xss-csrf: SQL 注入 / XSS / CSRF 攻击原理与防护实战 2026（Go + PHP 双语言实现） — SQL 注入 / XSS / CSRF 三大 Web 漏洞实战 2026：12 个真实攻击案例复现 + Go/PHP 预编译参数化、HTML 转义、Token 校验完整防护代码，附 sqlmap 自动化检测和 WAF 规则配置。
+- https://friday-go.icu/security/engineering/golang-security-best-practices: Golang 安全开发最佳实践 — 从代码审计到自动化防护 — 全面梳理 Go 语言安全开发实践，涵盖 SQL 注入、XSS、CSRF 常见漏洞防护，gosec/semgrep 静态分析工具使用，go mod 依赖安全审计，以及安全编码规范落地，帮助 Go 开发者构建更安全的应用
+- https://friday-go.icu/security/engineering/SSH安全加固完全指南: SSH 安全加固实战 2026：密钥认证 + fail2ban + 双因素认证完整指南 — SSH 安全加固实战 2026：覆盖密钥认证、密码策略强化、fail2ban 自动封禁、Google Authenticator 双因素、Port Knocking、连接审计 6 大模块，附 30+ 配置示例和暴力破解防护清单。
+- https://friday-go.icu/security/engineering/10个Golang安全陷阱及真正有效的修复方案: Go Security Best Practices 2025 - 10个安全陷阱及修复方案
+- https://friday-go.icu/security/engineering/golang 中的网络安全TLS SSL的实现: Golang 中的网络安全（TLS/SSL）的实现 — 本文将深入探讨如何在 golang 中实现 TLS，帮助开发者构建安全的网络通信。
+- https://friday-go.icu/security/engineering/golang Web应用完整安全指南: Golang Web应用完整安全指南 — 详细介绍golang web应用的安全问题，包括输入验证、输出编码、会话管理、文件上传、跨站脚本攻击、SQL注入、密码存储、身份验证、授权、安全配置、日志记录、错误处理、性能优化、安全审计等方面。
+- https://friday-go.icu/security/engineering/从手动到自动-Go语言助力快速识别代码中的安全隐患: 从手动到自动 - Go语言助力快速识别代码中的安全隐患 — 从手动到自动：Go语言助力快速识别代码中的安全隐患
+- https://friday-go.icu/security/engineering/Go语言主流安全库使用指南: Go语言主流安全库使用指南 — 详细介绍Go语言主流安全库的使用方法，包括crypto、encoding、hash、math、rand、strconv、time等库的使用，帮助开发者更好地保护应用程序的安全性。
+
+## DevOps / 云原生系列
+- https://friday-go.icu/devops/kubecon-europe-2026-ai-execution-gap-cloud-native-deep-dive: KubeCon Europe 2026 深度复盘：82% 采用率 vs 7% AI 部署率——云原生的第二次创始时刻
+- https://friday-go.icu/devops/kubernetes-wasm-runtime-spinkube-2026: K8s + WebAssembly 2026 集成实战：SpinKube、containerd Shim 与 RuntimeClass 让 WASM 成为 K8s 一等公民
+- https://friday-go.icu/devops/finops-2026-go-cloud-cost-optimization: FinOps 2026 实战：用 Go 语言实现云成本优化全链路（OpenCost + pprof 降本 30%）
+- https://friday-go.icu/devops/tailscale-selfhost-derp-server-2026: Tailscale 自建 DERP 中继服务器实战 2026 — Tailscale 国内自建 DERP 中继服务器完整部署，1 核 1G 云主机 + Docker + 反向代理，延迟从 250ms 降到 20ms
+- https://friday-go.icu/devops/otel-go-sdk-1-32-ebpf-injection-2026: OpenTelemetry Go SDK 1.32 实战 2026 — OTel Go 1.32 重大更新详解：eBPF 自动注入、metric SDK 默认 2000 cardinality 限制、Datadog 联合发布的 AI 工具链实战
+- https://friday-go.icu/devops/kubernetes-v1-36-haru-deep-dive-2026: Kubernetes v1.36 Haru 深度实战：从安全隔离到 AI 工作负载的 70 项增强
+- https://friday-go.icu/devops/platform-engineering-backstage-idp-2026: Platform Engineering 2026 实战：Backstage 构建内部开发者平台（IDP）完整指南
+- https://friday-go.icu/devops/wasm-2026-server-side-wasi-component-model: WASM 2026 服务端实战：WASI Preview 2、Component Model 与容器替代方案
+- https://friday-go.icu/devops/ebpf-go-observability: eBPF + Go 云原生可观测性实战 2026：零侵入监控从原理到生产（Cilium/Hubble）
+- https://friday-go.icu/devops/docker-best-practices: Docker 容器化最佳实践 2026：从镜像优化到 K8s 部署的 12 条生产级法则
+
+## Python 系列
+- https://friday-go.icu/dev/backend/python/python-3-15-new-features-2026: Python 3.15 新特性深度解析：延迟导入、frozendict、Tachyon 采样器与 2026 年最大更新
+- https://friday-go.icu/dev/backend/python/python-ai-frameworks-2026-comparison-guide: Python AI 框架 2026 全景对比与选型指南
+- https://friday-go.icu/dev/backend/python/pydantic-ai-type-safe-agent-framework-2026: Pydantic AI Type-Safe Agent 框架 2026 实战：用 Python 写生产级 LLM 应用的正确姿势
+- https://friday-go.icu/dev/backend/python/llamaindex-4-agentic-rag-workflow-2026: LlamaIndex 4.0 文档 Agent 实战：从 RAG 到 Agentic RAG 的架构跃迁
+- https://friday-go.icu/dev/backend/python/polars-vs-pandas-vs-duckdb-2026: Polars vs Pandas vs DuckDB：2026 Python 数据处理引擎终极横评 — 深度对比 Polars、Pandas 3.0 和 DuckDB 三大数据处理引擎，从架构原理、性能基准、内存效率到生产选型，附完整可运行代码示例和实际场景推荐。
+- https://friday-go.icu/dev/backend/python/python-automation-scripts: Python 自动化脚本实战 2026：10 个场景从文件处理到定时任务调度
+- https://friday-go.icu/dev/backend/python/FastAPI-从零开始构建高性能API-快速入门指南: FastAPI 从零开始构建高性能 API：快速入门指南 — FastAPI 是现代、快速（高性能）的 Web 框架，用于基于标准 Python 类型提示使用 Python 3.8+ 构建 API。本文将从零开始，带你快速上手 FastAPI，构建第一个高性能 RESTful API。
+- https://friday-go.icu/dev/backend/python/FastAPI中间件与依赖注入-构建可扩展的API架构: FastAPI 中间件与依赖注入：构建可扩展的 API 架构 — 深入理解 FastAPI 的中间件和依赖注入机制，学习如何构建可扩展、可维护的 API 架构。包括自定义中间件、依赖注入、数据库连接、认证授权等高级主题。
+- https://friday-go.icu/dev/backend/python/FastAPI实战案例-从零构建企业级API: FastAPI 实战案例：从零构建企业级 API — 通过一个完整的实战案例，学习如何从零开始构建企业级 FastAPI 应用。包括项目架构、数据库设计、认证授权、API 文档、部署上线等完整流程。
+- https://friday-go.icu/dev/backend/python/FastAPI异步编程与性能优化-打造高并发API: FastAPI 异步编程与性能优化：打造高并发 API — 深入理解 FastAPI 的异步编程机制和性能优化技巧，学习如何打造高并发的 API。包括异步 I/O、数据库优化、缓存策略、并发控制等高级主题。
+- https://friday-go.icu/dev/backend/python/FastAPI测试与部署-生产环境最佳实践: FastAPI 测试与部署：生产环境最佳实践 — 学习如何测试和部署 FastAPI 应用到生产环境。包括单元测试、集成测试、Docker 部署、Kubernetes 部署、CI/CD 流程等生产环境最佳实践。
+- https://friday-go.icu/dev/backend/python/Python-TensorFlow实战-Keras入门到精通: Python TensorFlow 实战：Keras 入门到精通 — 全面掌握 TensorFlow 和 Keras 框架，构建和训练深度学习模型
+- https://friday-go.icu/dev/backend/python/Python-Web爬虫实战-从入门到精通: Python Web 爬虫实战：从入门到精通 — 系统学习 Python Web 爬虫技术，掌握 Requests、BeautifulSoup、Scrapy 等核心库，构建高性能爬虫系统
+- https://friday-go.icu/dev/backend/python/Python-推荐系统实战-从算法到应用: Python 推荐系统实战：从算法到应用 — 全面掌握推荐系统技术，从协同过滤到深度学习，构建个性化推荐引擎
+- https://friday-go.icu/dev/backend/python/Python-数据分析入门-Pandas与NumPy基础: Python 数据分析入门：Pandas 与 NumPy 基础 — 深入理解 Pandas 和 NumPy 的核心概念，掌握数据分析的基础技能，从数据处理到可视化完整流程
+- https://friday-go.icu/dev/backend/python/Python-数据可视化实战-Matplotlib-Seaborn-Plotly完全指南: Python 数据可视化实战：Matplotlib、Seaborn 与 Plotly 完全指南 — 深入掌握三大可视化库的使用技巧，从基础图表到高级可视化，打造专业级数据展示
+- https://friday-go.icu/dev/backend/python/Python-时间序列分析-从基础到实战: Python 时间序列分析：从基础到实战 — 深入掌握时间序列分析的核心方法，包括趋势分析、季节性分解、预测建模等实用技术
+- https://friday-go.icu/dev/backend/python/Python-机器学习入门-Scikit-learn实战指南: Python 机器学习入门：Scikit-learn 实战指南 — 从零开始掌握机器学习，使用 Scikit-learn 构建真实世界的机器学习应用
+- https://friday-go.icu/dev/backend/python/Python-深度学习入门-PyTorch实战指南: Python 深度学习入门：PyTorch 实战指南 — 从零开始学习 PyTorch 深度学习框架，掌握神经网络、CNN、RNN 等核心技术
+- https://friday-go.icu/dev/backend/python/Python-自然语言处理-NLP实战指南: Python 自然语言处理（NLP）实战指南 — 深入掌握 NLP 技术，使用 NLTK、spaCy、Transformers 等工具处理文本数据
+- https://friday-go.icu/dev/backend/python/Flask轻量级应用构建 - 扩展开发、蓝图设计: Flask轻量级应用构建 - 扩展开发、蓝图设计 — 深入探讨Flask轻量级Web框架的模块化开发实践，涵盖蓝图（Blueprint）的核心机制、扩展开发集成、配置管理策略以及生产环境部署优化，为有经验的开发者提供实战指导
+- https://friday-go.icu/dev/backend/python/Scrapy爬虫框架实战 - 分布式爬虫、反爬虫对策: Scrapy爬虫框架实战：分布式爬虫与反爬虫对策 — 深入探讨Scrapy框架的分布式爬虫实现方案，分析Scrapy-Redis架构原理，并提供实战反爬虫对策与性能优化技巧
+- https://friday-go.icu/dev/backend/python/FastAPI现代化Web开发 - 异步开发、自动API文档生成: FastAPI现代化Web开发：异步开发与自动API文档生成实战 — 深入探讨FastAPI框架的异步开发核心原理、自动API文档生成机制，以及在实际项目中的性能优化技巧与最佳实践，助力构建高性能现代化Web服务
+- https://friday-go.icu/dev/backend/python/Python-Asyncio-Advanced-Patterns: Python Asyncio 高级模式 2025 - 异步编程从入门到精通 — 深入探讨Python Asyncio的高级模式，包括异步上下文管理器、异步迭代器、任务组、异步队列等核心概念，通过实战案例展示如何构建高性能异步应用。
+- https://friday-go.icu/dev/backend/python/Python-Data-Visualization-Guide: Python 数据可视化实战 2025 - Matplotlib 与 Seaborn 从入门到精通 — 深入探讨Python数据可视化的核心库Matplotlib和Seaborn，从基础图表到高级可视化，通过实战案例展示如何创建精美、专业的数据可视化图表。
+- https://friday-go.icu/dev/backend/python/Python版本管理神器之pyenv: pyenv 完全指南 2026：Python 多版本管理 + 虚拟环境 + 项目级自动切换 — pyenv 从入门到精通 2026：macOS/Linux 安装避坑、Python 版本编译安装、global/local/shell 三级切换、pyenv-virtualenv 虚拟环境管理、.python-version 项目级自动切换
+- https://friday-go.icu/dev/backend/python/Python-Faker库常用函数: Python Faker 库 - 完整使用指南与常用函数实战 — Faker库常用函数
+- https://friday-go.icu/dev/backend/python/Python常用网站搜集: Python 常用网站搜集 - 使用指南 — 搜集python常用的网站资源
+
+## PHP 系列
+- https://friday-go.icu/dev/backend/php/php-8-5-pipe-operator-production-2026: PHP 8.5 Pipe Operator 生产实战：函数式编程从语法糖到架构变革
+- https://friday-go.icu/dev/backend/php/frankenphp-1-4-laravel-worker-mode-2026: FrankenPHP 1.4 + Laravel 12 Worker 模式生产实战：3 倍吞吐背后的状态隔离与迁移指南
+- https://friday-go.icu/dev/backend/php/php-8-5-fiber-coroutine-2026: PHP 8.5 Fiber 协程实战 2026 — PHP 8.5 Fiber 稳定化 + Swoole 6.0 + FrankenPHP 1.4 协程对比：用真实电商秒杀场景验证 10 万 QPS
+- https://friday-go.icu/dev/backend/php/laravel-13-ai-sdk-interruptible-tasks-2026: Laravel 13 AI SDK 实战：从官方 AI 集成到可中断任务的全栈开发
+- https://friday-go.icu/dev/backend/php/php-8-4-new-features: PHP 8.4 新特性深度解析 2026：property hooks 与 asymmetric visibility 实战 — PHP 8.4 五大新特性实战：property hooks / asymmetric visibility / array_find / new MyClass()->method() / #[\_] 弃用，附完整迁移指南
+- https://friday-go.icu/dev/backend/php/PHP旧项目重构实战：从单体到微服务: PHP旧项目重构实战：从单体到微服务 — 深入探讨PHP单体应用如何渐进式重构为微服务架构，涵盖边界识别、技术选型、数据拆分、服务通信等实战要点，帮助有经验的开发者规避常见陷阱
+- https://friday-go.icu/dev/backend/php/Go协程与PHP-Fibers并发编程对比: Go 协程 vs PHP Fibers - 并发编程的两种实现对比 — 深入对比 Go 协程与 PHP Fibers 两种并发编程模型的技术特点、实现机制和实际应用场景，帮助开发者理解它们的差异和适用场景
+- https://friday-go.icu/dev/backend/php/PHP MCP 扩展: PHP MCP 扩展 - 开源实践与使用指南 — 分享我开发pfinalclub/php-mcp扩展的经历，探讨MCP协议对PHP生态的重要意义，以及为什么选择Workerman作为技术栈。
+- https://friday-go.icu/dev/backend/php/Coze 扩展包 PHP 版本: PHP Coze 扩展包 - 完整使用指南与集成实战 — Coze 官方提供了 Python,Node,Go 版本的 SDK 就是没有提供 PHP 版本的 于是自己动手搞了个 PHP 版本的
+- https://friday-go.icu/dev/backend/php/PHP-8.5-NoDiscard-属性详解: PHP 8.5 NoDiscard 属性 - 告别静默错误，提升代码质量 — 详细介绍PHP 8.5新增的#[\NoDiscard]属性，包括其作用、使用方法、实际应用案例和最佳实践，帮助开发者提高代码质量和避免静默错误。
+- https://friday-go.icu/dev/backend/php/PHP $_SESSION 引发的Bug: PHP $_SESSION 引发的Bug深度分析与解决方案 — 深度分析 PHP $_SESSION 引发的Bug，包括常见问题、解决方案、最佳实践和会话管理优化技巧
+- https://friday-go.icu/dev/backend/php/PHP-FPM配置文件详解: PHP-FPM 配置详解 2026：30 个核心参数与生产级调优模板 — PHP-FPM 30 个核心参数实战：pm / pm.max_children / request_terminate_timeout / 慢日志，生产级配置模板与 502 排查指南
+- https://friday-go.icu/dev/backend/php/Redis基本知识总结: Redis 基础知识 - 使用指南 — Redis 是一个开源的使用 ANSI C 语言编写、支持网络、可基于内存亦可持久化的日志型、Key-Value 数据库，并提供多种语言的 API。
+- https://friday-go.icu/dev/backend/php/PHP钩子的应用: PHP 钩子应用 - 使用指南 — 详细介绍PHP钩子的应用，包括钩子的概念、应用场景、实现方式等，帮助开发者更好地利用PHP的钩子功能，提高程序的性能和响应速度。
+- https://friday-go.icu/dev/backend/php/Laravel-Admin-Special-Routes: Laravel-admin 特殊路由 - 使用指南 — Laravel-admin特殊路由操作
+- https://friday-go.icu/dev/backend/php/Laravel-Carbon-Class-Usage: Laravel Carbon 类 - 使用指南 — Laravel-Carbon-类使用
+- https://friday-go.icu/dev/backend/php/PHP-Process-Thread-Analysis: PHP 进程与线程模型分析 2026：FPM / Swoole / Fiber 三方案对比 — PHP 进程模型完整指南：FPM 多进程 vs Swoole 协程 vs Fiber，10 万并发场景下的内存与性能对比，附选型决策树
+- https://friday-go.icu/dev/backend/php/PHP配置文件详解: PHP配置文件详解 — PHP配置文件详解
+- https://friday-go.icu/dev/backend/php/PHP 大杀器之生成器: PHP 生成器完整指南 2026：从入门到协程底层原理 — PHP 生成器 7 大实战场景：yield / send / throw / 协程原理、内存节省 90%、与 Fiber 关系、与 Swoole 协程对比
+- https://friday-go.icu/dev/backend/php/PHP 错误与异常处理: PHP 错误与异常处理实战 2026：8 种错误类型与生产级 try/catch 模式 — PHP 错误处理完整指南：8 种错误类型 + Error/Exception 区别 + 自定义异常体系 + 错误日志监控 + Sentry 集成实战
+- https://friday-go.icu/dev/backend/php/PHP之异步处理: PHP 异步处理实战 2026：6 种方案对比 + Swoole 协程最佳实践 — PHP 异步处理 6 大方案对比：curl_multi / pcntl / Swoole / Fiber / amphp / ReactPHP，附秒杀场景 10 万 QPS 案例
+- https://friday-go.icu/dev/backend/php/PHP $_SERVER详解: PHP $_SERVER 完全指南 - 超全局变量详解与实战 — PHP $_SERVER 超全局变量完全指南，包含所有变量详解、实际应用场景、安全注意事项和最佳实践
+- https://friday-go.icu/dev/backend/php/Redis-Configuration-Guide: PHP Redis 配置详解 - 缓存与会话管理实战 — 学习Redis配置文件
+- https://friday-go.icu/dev/backend/php/TCP-IP-HTTP学习: TCP/IP HTTP 学习 - 使用指南 — 学习TCP/IP HTTP协议
+- https://friday-go.icu/dev/backend/php/Laravel 手工构建: Laravel 手工构建 - 使用指南 — 手工构建laravel 框架,详细介绍了从项目初始化到添加各个组件的完整过程。
+
+## Rust 系列
+- https://friday-go.icu/dev/backend/rust/rust-2026-edition-deep-dive: Rust 2026 Edition 深度解析：Async Closures、异步 Trait 与系统编程新范式
+- https://friday-go.icu/dev/backend/rust/Rust异步编程从基础到实战: Rust 异步编程从基础到实战：async/await 与 Tokio 详解 — 系统讲解 Rust async/await 异步编程模型，从 Future trait 原理到 Tokio 运行时实战。涵盖异步 I/O、任务调度、异步同步原语、性能调优，以及与 Go goroutine 的对比分析，适合有 Go/Node
+- https://friday-go.icu/dev/backend/rust/Rust所有权系统深入剖析: Rust 所有权系统深入剖析：零成本抽象的底层原理 — 深入解析 Rust 所有权系统的设计哲学与工作原理，涵盖所有权规则、借用检查器、生命周期标注、智能指针及其在并发安全中的应用。从 C 语言的内存管理演进到 Rust 的所有权革命，帮助 Go 开发者理解为什么 Rust 能同时保证内存安全和
+- https://friday-go.icu/dev/backend/rust/Tauri实战：用Go和Rust构建轻量级桌面应用: Tauri实战：用Go和Rust构建轻量级桌面应用 — 深入解析Tauri 2.0框架，探讨如何结合Go语言的后端能力与Rust的安全高效，构建跨平台的轻量级桌面应用。涵盖核心概念、Go-Rust集成方案、实战开发步骤、性能优化与打包部署全流程。
+
+## 开发工具系列
+- https://friday-go.icu/tools/typescript-7-go-compiler-2026: TypeScript 7.0 RC 深度解析：微软用 Go 重写编译器，10倍性能提升背后的架构革命
+- https://friday-go.icu/tools/Devslog-Structured-Logging: Devslog 结构化日志实战 2026：Go 日志可读性提升 10 倍 — Go 结构化日志库 Devslog 实战指南：Pretty Print 格式化、级别控制、性能基准测试对比 slog/zap，附带生产环境最佳实践
+- https://friday-go.icu/tools/Docker-Go-Deployment: Docker 部署 Go 项目实践指南 — 详细介绍如何使用 Docker 容器化部署 Go 项目，包括多阶段构建、镜像优化、Compose 配置等最佳实践。
+- https://friday-go.icu/tools/PF-Password-Manager: 程序员必备神器：PF-password 密码管理器 — 介绍 PF-password 密码管理器的功能特点、技术实现和使用方法，一款专为程序员设计的开源密码管理工具。
+- https://friday-go.icu/tools/服务器进程日志分析：从头皮发麻到AI解救: 服务器进程日志分析 2026：Shell + AI 从头皮发麻到 5 秒定位故障 — 维护Web服务器时，面对密密麻麻的进程信息头皮发麻？这篇文章教你用Shell脚本记录服务器状态，配合AI分析，轻松搞定进程分析、性能监控、卡顿排查等问题。
+- https://friday-go.icu/tools/单文件代码部署工具: 单文件 PHP 部署工具实战 2026：一个文件搞定 Git + SSH 多项目部署 — 一个类似 Adminer.php 的单文件 PHP 代码部署工具，支持 Git + SSH 部署，简单易用，一个文件搞定所有部署需求。
+- https://friday-go.icu/tools/Broot-高效的命令行文件管理器: Broot-让文件导航更高效的命令行神器 — Broot 是一款由 Rust 编写的高效终端文件管理器，提供直观的树状视图、模糊搜索、快速导航和文件预览等强大功能
+- https://friday-go.icu/tools/VSCode快捷键: VSCode 快捷键完整指南 2026：80 个必学命令覆盖开发全流程 — VSCode 80 个高频快捷键分类实战：编辑、搜索、调试、Git、插件、IntelliJ 习惯迁移，附 4 套主流预设配置（macOS/Windows/Linux）
+- https://friday-go.icu/tools/Arc 浏览器更符合开发者: 别再为找标签浪费 2 小时了，Arc 的左手边藏着开发者的时间机器 — Arc浏览器深度体验：为什么它更适合开发者使用
+- https://friday-go.icu/tools/程序员必备神器：PF-password密码管理器: 每次登录都要翻记事本找密码-我写了个Alfred插件来管理密码 — 作为一个注册了无数网站的程序员，密码管理一直是我的痛点。为了解决这个问题，我开发了一个简单的Alfred插件来管理密码，今天分享给大家。
+- https://friday-go.icu/tools/Git高级命令教程: Git 高级命令实战 2026：worktree/reflog/bisect 等 12 个效率提升命令详解 — Git 高级命令完整教程：worktree 多工作目录、reflog 找回丢失提交、bisect 二分查找 Bug、stash 进阶、cherry-pick 选择性合并等 12 个实用命令详解，附实战示例。
+- https://friday-go.icu/tools/使用Devslog结构化日志处理: Devslog 结构化日志实战 2026：Go 日志可读性提升 10 倍的完整指南 — 使用 Devslog 实现 Go 结构化日志处理的实战指南
+- https://friday-go.icu/tools/开源开发者必备-toilet终端ASCII艺术字工具: toilet 终端 ASCII 艺术字工具 2026：让命令行输出瞬间变酷的 8 个技巧 — toilet 是一个用于在终端中生成大型 ASCII 艺术字的命令行工具
+- https://friday-go.icu/tools/使用Homebrew Tap发布个人工具: Homebrew Tap 发布个人工具实战 2026：Go CLI 一键分发全流程 — 5 步用 Homebrew Tap 发布 Go CLI 工具：GoReleaser + GitHub Actions 自动化，用户一行命令 brew install 即可安装，附带完整配置模板
+- https://friday-go.icu/tools/IDE偷懒小工具: IDE 偷懒小工具开发实战 2026：VSCode/PHPStorm 插件从 0 到 1 完整指南 — 收集一些开发过程中常用的小工具
+- https://friday-go.icu/tools/浏览器小技巧: Chrome DevTools 浏览器小技巧 30 招 2026：调试与性能分析实战指南 — Chrome/Firefox 开发者工具 30 个实战技巧：Console 高效调试、Network 性能分析、Memory 内存泄漏定位、Coverage 找出死代码
+- https://friday-go.icu/tools/Nginx配置文件详解: Nginx 配置文件详解 2026：从入门到生产级优化的完整指南 — Nginx 配置文件深度解读：server/location 匹配规则、反向代理、负载均衡、HTTPS、性能调优 20+ 参数，附生产环境模板
+- https://friday-go.icu/tools/Git 基本操作: Git 基本操作完整指南 2026：30 个必会命令从入门到协作 — Git 30 个核心命令实战：clone/commit/branch/merge/rebase/cherry-pick，包含冲突解决、撤销操作、团队协作工作流，新手友好
+- https://friday-go.icu/tools/Docker部署Go项目实践指南: Docker 部署 Go 项目实战 2026：多阶段构建 + 镜像体积减少 90% — Go 项目 Docker 化全流程：多阶段构建将镜像从 800MB 压缩到 20MB、Alpine vs Scratch 选型、Docker Compose 编排，附 Dockerfile 模板
+- https://friday-go.icu/tools/Composer配置文件说明: Composer 配置文件详解 2026：composer.json 从入门到生产级调优的完整指南 — 介绍Composer配置文件的基本概念和使用方法，包括配置文件的位置、依赖管理、包管理、版本控制等。
+- https://friday-go.icu/tools/PHPStorm快捷键: PHPStorm 快捷键完整指南 2026：50+ 必学组合提升编码效率 5 倍 — PHPStorm 50+ 高频快捷键实战分类整理：代码编辑、搜索、调试、重构、Git 操作，附 5 大场景速查表（macOS/Windows 双平台）
+- https://friday-go.icu/tools/Tmux 常用快捷键: Tmux 快捷键完整指南 2026：30 个命令从入门到高效远程开发 — Tmux 30 个核心快捷键实战：会话/窗口/面板管理 + 复制模式 + 脚本化配置，远程开发必备，附带 .tmux.conf 高效模板
+- https://friday-go.icu/tools/online-tools: 🛠️ 开发者在线工具集 - PFinalClub — PFinalClub 开发者在线工具集合：密码生成器、AI 工具导航、Prompt 模板、节日营销日历、BMI 计算器等，免费使用。
+
+## 开发工具系列
+- https://friday-go.icu/Tools/typescript-7-go-compiler-2026: TypeScript 7.0 RC 深度解析：微软用 Go 重写编译器，10倍性能提升背后的架构革命
+- https://friday-go.icu/Tools/Devslog-Structured-Logging: Devslog 结构化日志实战 2026：Go 日志可读性提升 10 倍 — Go 结构化日志库 Devslog 实战指南：Pretty Print 格式化、级别控制、性能基准测试对比 slog/zap，附带生产环境最佳实践
+- https://friday-go.icu/Tools/Docker-Go-Deployment: Docker 部署 Go 项目实践指南 — 详细介绍如何使用 Docker 容器化部署 Go 项目，包括多阶段构建、镜像优化、Compose 配置等最佳实践。
+- https://friday-go.icu/Tools/PF-Password-Manager: 程序员必备神器：PF-password 密码管理器 — 介绍 PF-password 密码管理器的功能特点、技术实现和使用方法，一款专为程序员设计的开源密码管理工具。
+- https://friday-go.icu/Tools/服务器进程日志分析：从头皮发麻到AI解救: 服务器进程日志分析 2026：Shell + AI 从头皮发麻到 5 秒定位故障 — 维护Web服务器时，面对密密麻麻的进程信息头皮发麻？这篇文章教你用Shell脚本记录服务器状态，配合AI分析，轻松搞定进程分析、性能监控、卡顿排查等问题。
+- https://friday-go.icu/Tools/单文件代码部署工具: 单文件 PHP 部署工具实战 2026：一个文件搞定 Git + SSH 多项目部署 — 一个类似 Adminer.php 的单文件 PHP 代码部署工具，支持 Git + SSH 部署，简单易用，一个文件搞定所有部署需求。
+- https://friday-go.icu/Tools/Broot-高效的命令行文件管理器: Broot-让文件导航更高效的命令行神器 — Broot 是一款由 Rust 编写的高效终端文件管理器，提供直观的树状视图、模糊搜索、快速导航和文件预览等强大功能
+- https://friday-go.icu/Tools/VSCode快捷键: VSCode 快捷键完整指南 2026：80 个必学命令覆盖开发全流程 — VSCode 80 个高频快捷键分类实战：编辑、搜索、调试、Git、插件、IntelliJ 习惯迁移，附 4 套主流预设配置（macOS/Windows/Linux）
+- https://friday-go.icu/Tools/Arc 浏览器更符合开发者: 别再为找标签浪费 2 小时了，Arc 的左手边藏着开发者的时间机器 — Arc浏览器深度体验：为什么它更适合开发者使用
+- https://friday-go.icu/Tools/程序员必备神器：PF-password密码管理器: 每次登录都要翻记事本找密码-我写了个Alfred插件来管理密码 — 作为一个注册了无数网站的程序员，密码管理一直是我的痛点。为了解决这个问题，我开发了一个简单的Alfred插件来管理密码，今天分享给大家。
+- https://friday-go.icu/Tools/Git高级命令教程: Git 高级命令实战 2026：worktree/reflog/bisect 等 12 个效率提升命令详解 — Git 高级命令完整教程：worktree 多工作目录、reflog 找回丢失提交、bisect 二分查找 Bug、stash 进阶、cherry-pick 选择性合并等 12 个实用命令详解，附实战示例。
+- https://friday-go.icu/Tools/使用Devslog结构化日志处理: Devslog 结构化日志实战 2026：Go 日志可读性提升 10 倍的完整指南 — 使用 Devslog 实现 Go 结构化日志处理的实战指南
+- https://friday-go.icu/Tools/开源开发者必备-toilet终端ASCII艺术字工具: toilet 终端 ASCII 艺术字工具 2026：让命令行输出瞬间变酷的 8 个技巧 — toilet 是一个用于在终端中生成大型 ASCII 艺术字的命令行工具
+- https://friday-go.icu/Tools/使用Homebrew Tap发布个人工具: Homebrew Tap 发布个人工具实战 2026：Go CLI 一键分发全流程 — 5 步用 Homebrew Tap 发布 Go CLI 工具：GoReleaser + GitHub Actions 自动化，用户一行命令 brew install 即可安装，附带完整配置模板
+- https://friday-go.icu/Tools/IDE偷懒小工具: IDE 偷懒小工具开发实战 2026：VSCode/PHPStorm 插件从 0 到 1 完整指南 — 收集一些开发过程中常用的小工具
+- https://friday-go.icu/Tools/浏览器小技巧: Chrome DevTools 浏览器小技巧 30 招 2026：调试与性能分析实战指南 — Chrome/Firefox 开发者工具 30 个实战技巧：Console 高效调试、Network 性能分析、Memory 内存泄漏定位、Coverage 找出死代码
+- https://friday-go.icu/Tools/Nginx配置文件详解: Nginx 配置文件详解 2026：从入门到生产级优化的完整指南 — Nginx 配置文件深度解读：server/location 匹配规则、反向代理、负载均衡、HTTPS、性能调优 20+ 参数，附生产环境模板
+- https://friday-go.icu/Tools/Git 基本操作: Git 基本操作完整指南 2026：30 个必会命令从入门到协作 — Git 30 个核心命令实战：clone/commit/branch/merge/rebase/cherry-pick，包含冲突解决、撤销操作、团队协作工作流，新手友好
+- https://friday-go.icu/Tools/Docker部署Go项目实践指南: Docker 部署 Go 项目实战 2026：多阶段构建 + 镜像体积减少 90% — Go 项目 Docker 化全流程：多阶段构建将镜像从 800MB 压缩到 20MB、Alpine vs Scratch 选型、Docker Compose 编排，附 Dockerfile 模板
+- https://friday-go.icu/Tools/Composer配置文件说明: Composer 配置文件详解 2026：composer.json 从入门到生产级调优的完整指南 — 介绍Composer配置文件的基本概念和使用方法，包括配置文件的位置、依赖管理、包管理、版本控制等。
+- https://friday-go.icu/Tools/PHPStorm快捷键: PHPStorm 快捷键完整指南 2026：50+ 必学组合提升编码效率 5 倍 — PHPStorm 50+ 高频快捷键实战分类整理：代码编辑、搜索、调试、重构、Git 操作，附 5 大场景速查表（macOS/Windows 双平台）
+- https://friday-go.icu/Tools/Tmux 常用快捷键: Tmux 快捷键完整指南 2026：30 个命令从入门到高效远程开发 — Tmux 30 个核心快捷键实战：会话/窗口/面板管理 + 复制模式 + 脚本化配置，远程开发必备，附带 .tmux.conf 高效模板
+- https://friday-go.icu/Tools/online-tools: 🛠️ 开发者在线工具集 - PFinalClub — PFinalClub 开发者在线工具集合：密码生成器、AI 工具导航、Prompt 模板、节日营销日历、BMI 计算器等，免费使用。
+
+## 系统运维系列
+- https://friday-go.icu/dev/system/distributed-tracing: 分布式链路追踪最佳实践 — 深入理解分布式链路追踪原理与实践，掌握 Trace、Span、Baggage 等核心概念，学习如何在微服务架构中实现全链路追踪和问题定位。
+- https://friday-go.icu/dev/system/elk-stack-guide: ELK 日志系统实战指南 — 深入学习 ELK Stack（Elasticsearch、Logstash、Kibana）日志系统，掌握日志收集、处理、存储和可视化的完整流程，构建企业级日志分析平台。
+- https://friday-go.icu/dev/system/github-actions-guide: GitHub Actions 实战指南 — 从零开始学习 GitHub Actions，掌握 CI/CD 自动化工作流的配置与最佳实践，包括工作流触发、矩阵构建、缓存优化、多环境部署等核心技能。
+- https://friday-go.icu/dev/system/grafana-visualization: Grafana 可视化实战指南 — 深入学习 Grafana 可视化平台，掌握数据源配置、Dashboard 设计、告警规则设置、变量模板等核心功能，打造专业的监控可视化系统。
+- https://friday-go.icu/dev/system/loki-logging: Loki 日志系统实战指南 — 深入学习 Grafana Loki 日志聚合系统，掌握与 Prometheus 类似的标签索引机制，实现轻量级、低成本的日志收集和查询。
+- https://friday-go.icu/dev/system/opentelemetry-guide: OpenTelemetry 实战指南 — 深入学习 OpenTelemetry 可观测性框架，掌握分布式追踪、指标收集、日志关联等核心功能，构建现代化的可观测性体系。
+- https://friday-go.icu/dev/system/cicd-best-practices: CI/CD 最佳实践：构建高效的持续集成与交付流水线 — 全面讲解 CI/CD 的核心概念、最佳实践和工具选择，帮助团队构建高效、可靠的持续集成与交付流水线。
+- https://friday-go.icu/dev/system/prometheus-monitoring: Prometheus 监控实战：构建现代化的监控体系 — 深入讲解 Prometheus 监控系统的核心概念、架构设计、指标类型以及实战配置，帮助构建完整的应用监控解决方案。
+- https://friday-go.icu/dev/system/docker-basics: Docker 基础入门 2026：镜像、容器、Dockerfile、Compose 完整实战手册 — 2026 年 Docker 零基础到生产：镜像构建、容器生命周期、网络与数据卷、Docker Compose 编排、多阶段构建优化完整示例。
+- https://friday-go.icu/dev/system/kubernetes-basics: Kubernetes 基础入门：从容器编排到生产实践 — 全面讲解 Kubernetes 核心概念、资源对象、部署策略和实战技巧，帮助开发者快速掌握 K8s 容器编排技术
+- https://friday-go.icu/dev/system/database/PostgreSQL-10个鲜为人知的强大功能: PostgreSQL 10 个鲜为人知功能 2025 - 告别 Elasticsearch 和 MongoDB — 深入探讨 PostgreSQL 10 个鲜为人知但极其强大的功能，从全文搜索到逻辑复制，让你重新认识这个数据库的威力
+- https://friday-go.icu/dev/system/database/MySQL-Configuration-Analysis: MySQL配置文件解析 - 完整使用指南 — 详细介绍MySQL配置文件的解析，包括配置文件的位置、常用配置项、优化建议等，帮助开发者更好地管理和优化MySQL数据库。
+
+## 技术思考系列
+- https://friday-go.icu/thinking/method/GitOps-Practice-Guide: GitOps 实战：从应用部署到全生命周期管理 — 全面讲解 GitOps 核心理念、工具链和实践方法，包括 ArgoCD、Flux 等工具的使用，帮助你实现声明式持续交付。
+- https://friday-go.icu/thinking/method/Go-Concurrency-Patterns-Guide: Go 并发模式实战 2026：Worker Pool + Pipeline + Fan-in/out 等 12 个模式完整指南 — Go 并发模式实战 2026：系统讲解 12 种高并发模式（Worker Pool/Pipeline/Fan-in/Fan-out/Select 超时/errgroup/CSP/Channel 取消），附 benchmark 性能对比 + 
+- https://friday-go.icu/thinking/method/Go-OTel-Pitfalls: 别再盲接 OTel：Go 可观察性接入的 8 个大坑 — 总结 Go 项目接入 OpenTelemetry 时常见的 8 个坑点，包括性能问题、上下文传播、采样策略等，帮助你少走弯路。
+- https://friday-go.icu/thinking/method/Go-Observability-Practice: 从 trace 到洞察：Go 项目的可观测性闭环实践 — 全面讲解 Go 项目可观测性的三大支柱：日志、指标、追踪，以及如何构建完整的可观测性体系。
+- https://friday-go.icu/thinking/method/Go-Web-Framework-2025: 2025 年最佳 Go Web 框架深度解析：资深开发者的选择指南 — 全面评测 2025 年主流 Go Web 框架：Gin、Echo、Fiber、Chi，从性能、功能、生态等维度分析，帮助你选择最适合项目的框架。
+- https://friday-go.icu/thinking/method/High-Performance-Go-Game-API: Go 高性能游戏 API 设计实战：WebSocket + 房间系统 + 万级并发 — Go 游戏后端架构实战：WebSocket 长连接管理、房间状态同步、帧同步 vs 状态同步选型，压测达万级并发，附完整代码
+- https://friday-go.icu/thinking/method/Modern-Go-Backend-Engineering: Go 后端现代工程 7 大原则 2026：从架构到交付的实战指南 — 构建高质量 Go 后端的 7 大工程原则：Clean Architecture + 依赖注入 + 表驱动测试 + CI/CD，附带真实项目代码组织示例
+- https://friday-go.icu/thinking/method/从0到1构建自己的思考体系: 思考 / 方法论：从0到1构建自己的思考体系 — 本文系统性地介绍从0到1构建个人思考体系的完整方法论，涵盖信息输入、思维模型、决策判断、反思迭代四个核心维度，并提供可操作的实践步骤，帮助经验型开发者建立结构化思维框架，提升问题解决能力与决策质量。
+- https://friday-go.icu/thinking/method/nginx-security-gateway-guide: 搭建Nginx安全网关：3步堵住90%的Web漏洞！企业级防护实战指南 — 从0搭建企业级Nginx安全网关实战指南，通过3个核心步骤实现90% Web漏洞防护。涵盖版本隐藏、敏感文件保护、Host头攻击防护、安全响应头配置等关键安全技术，提供完整配置模板和验证方法，符合等保2.0要求。
+- https://friday-go.icu/thinking/method/测试驱动开发 以测试为引擎的软件工程实践: 测试驱动开发 以测试为引擎的软件工程实践 — 深入探讨测试驱动开发（TDD）的理论基础、实践指南和最佳实践，帮助开发者构建高质量、可维护的软件系统。
+- https://friday-go.icu/thinking/method/Golang Socket 通信架构分析与实现-构建高性能游戏服务器: Golang Socket 通信架构分析与实现-构建高性能游戏服务器 — 深入分析Golang Socket通信架构设计与实现，从基础TCP编程到高性能游戏服务器架构，涵盖连接管理、消息编解码、并发模型等核心技术，帮助开发者构建稳定高效的游戏服务器。
+- https://friday-go.icu/thinking/method/PHP 8.x 企业级开发实战指南 从语言特性到生产部署: PHP 8.x 企业级开发实战指南 从语言特性到生产部署 — 深入探讨PHP 8.x在企业级应用开发中的最佳实践，涵盖架构设计、性能优化、工程化部署等核心话题
+- https://friday-go.icu/thinking/method/2025年最佳Go-Web框架深度解析：资深开发者的选择指南: 2025年Go Web框架深度评测 10大主流框架性能对比与选型指南
+- https://friday-go.icu/thinking/method/GitOps实战-从应用部署到全生命周期管理: GitOps 生产实战 2026：ArgoCD + Kustomize 从 Jenkins 迁移到全生命周期管理 — GitOps 生产级实战 2026：Jenkins → ArgoCD 迁移全记录，涵盖 Kustomize 环境分层、多集群 ApplicationSet、Sealed Secrets 密钥管理、PR 预览环境、回滚策略。真实踩坑经验总结，
+- https://friday-go.icu/thinking/method/高质量Golang后端的现代软件工程原则: 高质量 Golang 后端的现代软件工程原则 — 探索构建高质量 Golang 后端的现代软件工程原则，从架构设计到性能优化，从代码质量到团队协作，为你提供实用的技术指南和最佳实践。
+- https://friday-go.icu/thinking/method/Fyne-深度技术解析-面向资深Go开发者的架构设计分析: Fyne 深度技术解析 - Go 实战指南 — 深入分析 Fyne 框架的架构设计、技术实现和设计模式，为资深 Go 开发者提供技术洞察。
+- https://friday-go.icu/thinking/method/Fyne与Wails深度对比-选择最适合你的Go桌面应用框架: Fyne vs Wails 2025 - Go 桌面框架对比 — Fyne vs Wails 2025: 深入对比两大 Go 桌面应用框架的架构设计、性能表现、开发体验，帮助开发者选择最适合的技术方案。
+- https://friday-go.icu/thinking/method/基于golang 的高性能游戏接口设计: 基于 golang 的高性能游戏接口设计
+- https://friday-go.icu/thinking/method/Go语言实现守护进程的技术详解: Go语言实现守护进程的技术详解 — 本文将详细介绍如何使用Go语言实现守护进程,并探讨其中的关键技术点。
+- https://friday-go.icu/thinking/method/Go语言并发模式实战指南: Go Concurrency Patterns 2025 - 7种核心并发模式实战指南 — Go Concurrency Patterns 2025: Master 7 essential Go concurrency patterns with practical examples. Includes worker pools,
+
+## 独立开发系列
+- https://friday-go.icu/indie/从SideProject到月收入10000: 从 Side Project 到月收入 $10000：独立开发商业化完整指南 — 系统讲解如何将 Side Project 转变为可持续的收入来源，涵盖产品选择、定价策略、付费转化、用户增长、客户成功等商业化全链路。结合多个独立开发者真实案例，提供可复用的增长框架与收入里程碑规划。
+- https://friday-go.icu/indie/独立开发者产品定位与市场验证: 独立开发者产品定位与市场验证：从想法到 MVP 的系统方法 — 为独立开发者提供系统的产品定位与市场验证方法，涵盖需求发现、竞品分析、用户访谈、MVP 设计、预注册验证等关键环节。结合 SaaS 工具和 AI 产品案例，讲解如何用最少成本确认产品方向。
+
+## 数据与自动化系列
+- https://friday-go.icu/data/automation/llm-application-development: 大模型应用开发实战 2026：Prompt + RAG + Function Calling + Agent 全链路指南 — 从 Prompt Engineering 到生产级 Agent：LLM 选型、RAG 检索增强、Function Calling、多 Agent 协作与成本优化实战。
+- https://friday-go.icu/data/automation/mcp-server-development: MCP 服务器开发实战 2026：Claude + Cursor 工具定义的 5 步完整接入 — MCP 服务器开发 5 步实战 2026：协议握手、工具定义、资源暴露、Prompt 模板 + Claude/Cursor 集成，附 TypeScript/Python 双语言项目代码
+- https://friday-go.icu/data/automation/prompt-engineering: Prompt Engineering 实战：写出真正有效的 AI 提示词 — 从零系统讲解 Prompt Engineering 核心技巧：角色设定、思维链、少样本学习、结构化输出、防止幻觉，以及与 GPT/Claude/DeepSeek 配合的最佳实践。
+- https://friday-go.icu/data/automation/vector-database-guide: 向量数据库实战 2026：4 种相似度算法 + Milvus/Qdrant RAG 系统构建 — 向量数据库 4 种相似度算法实战 2026：Embedding 技术、HNSW 索引、Milvus/Qdrant/Chroma 选型 + RAG 系统构建 7 步完整指南
+- https://friday-go.icu/data/automation/MCP服务器精选：提升AI编程效率的5大神器: MCP Server Guide 2025 - 5个提升AI编程效率的核心服务器 — MCP Server Guide 2025: 介绍 5 个核心 Model Context Protocol 服务器，帮助开发者在 Cursor、VSCode 等 AI 编辑器中保持高效工作流程。
+- https://friday-go.icu/data/automation/Go 构建远程存储MCP服务器实战: Go 构建远程存储MCP服务器实战 — 结合实战案例，详细介绍如何用 Go 语言构建高效的远程存储 MCP 服务器，涵盖架构设计、关键实现、技术挑战与最佳实践。
+- https://friday-go.icu/data/automation/爬虫常见的加密解密算法: 爬虫加密解密算法 - Python 实战 — 爬虫常见的加密解密算法特征收集
+- https://friday-go.icu/data/automation/爬虫常见的加密解密算法特征收集: 爬虫加密解密算法特征收集 - Python 实战 — 深入分析爬虫中常见的加密解密算法特征，包括 Base64、MD5、AES、RSA 等算法的识别方法与 Python 破解实战，帮助开发者应对反爬虫加密机制
+- https://friday-go.icu/data/automation/爬虫JS逆向Webpack技巧记录: Python爬虫JS逆向实战指南（Webpack加密破解与数据采集） — Python爬虫JS逆向实战指南，深入解析Webpack加密机制和破解方法，提供完整的数据采集解决方案和实战案例，帮助开发者掌握JS逆向核心技术。
+- https://friday-go.icu/data/automation/Python协程: Python 协程 - 使用指南 — Python协程学习
+
+## 技术课程系列
+- https://friday-go.icu/courses/golang-backend/module-1/1-1-go-memory-management: Lesson 1.1: Go 内存管理与分配 — 深入理解 Go 内存模型：栈与堆、逃逸分析、内存分配器，写出高性能 Go 代码
+- https://friday-go.icu/courses/golang-backend/module-1/1-2-concurrency-core: Lesson 1.2: 并发编程核心 — 掌握 Goroutine、Channel、select 和 Context 的核心机制与最佳实践
+- https://friday-go.icu/courses/golang-backend/module-1/1-3-concurrency-patterns: Lesson 1.3: 并发模式实战 — 掌握 Worker Pool、Pipeline、Fan-in/Fan-out 等经典并发模式
+- https://friday-go.icu/courses/golang-backend/module-1/1-4-gc-tuning: Lesson 1.4: Go GC 机制与调优 — 深入理解 Go 垃圾回收机制，掌握 GC 调优技巧与 STW 优化
+- https://friday-go.icu/courses/golang-backend/module-1/1-5-performance-analysis: Lesson 1.5: 性能分析与优化 — 掌握 pprof、trace、benchmark、SIMD 优化等 Go 性能分析工具链
+- https://friday-go.icu/courses/golang-backend/module-1/1-6-go-new-features: Lesson 1.6: Go 1.23+ 新特性 — 掌握 Go 最新版本的核心特性：泛型进阶、标准库更新、性能优化
+- https://friday-go.icu/courses/golang-backend/module-2/2-1-web-framework-selection: Lesson 2.1: Web 框架选型 — Gin vs Echo vs Fiber vs Chi，选择最适合你的 Go Web 框架
+- https://friday-go.icu/courses/golang-backend/module-2/2-2-gin-core: Lesson 2.2: Gin 框架核心 — Gin 框架路由、中间件、参数绑定、验证全面实战
+- https://friday-go.icu/courses/golang-backend/module-2/2-3-restful-api: Lesson 2.3: RESTful API 设计 — 资源命名、HTTP 方法、状态码、版本控制的最佳实践
+- https://friday-go.icu/courses/golang-backend/module-2/2-4-auth-jwt: Lesson 2.4: 认证与授权 — JWT、OAuth2、RBAC 权限模型实战
+- https://friday-go.icu/courses/golang-backend/module-2/2-5-middleware-development: Lesson 2.5: 中间件开发 — 日志、CORS、限流、熔断、链路追踪中间件的实现
+- https://friday-go.icu/courses/golang-backend/module-2/2-6-grpc-intro: Lesson 2.6: gRPC 入门 — Protocol Buffers、服务定义、客户端/服务端实现
+- https://friday-go.icu/courses/golang-backend/module-3/3-1-mysql-deep-dive: Lesson 3.1: MySQL 基础与进阶 — 数据类型、索引、事务、锁机制完整指南
+- https://friday-go.icu/courses/golang-backend/module-3/3-2-postgresql-practice: Lesson 3.2: PostgreSQL 实战 — 高级特性、JSONB、全文检索、性能调优
+- https://friday-go.icu/courses/golang-backend/module-3/3-3-redis-caching: Lesson 3.3: Redis 缓存设计 — 数据结构、持久化、集群、缓存策略实战
+- https://friday-go.icu/courses/golang-backend/module-3/3-4-clickhouse-olap: Lesson 3.4: ClickHouse OLAP — 列式存储、物化视图、查询优化
+- https://friday-go.icu/courses/golang-backend/module-3/3-5-gorm-and-sqlx: Lesson 3.5: GORM 与 sqlx — ORM 选型、性能对比、最佳实践
+- https://friday-go.icu/courses/golang-backend/module-3/3-6-db-optimization: Lesson 3.6: 数据库优化实战 — 慢查询分析、执行计划、索引优化、分库分表
+- https://friday-go.icu/courses/golang-backend/module-4/4-1-microservices-design: Lesson 4.1: 微服务架构设计 — 单体 vs 微服务、拆分原则、DDD 入门
+- https://friday-go.icu/courses/golang-backend/module-4/4-2-service-communication: Lesson 4.2: 服务通信 — gRPC、REST、消息队列的选择与实践
+- https://friday-go.icu/courses/golang-backend/module-4/4-3-service-discovery: Lesson 4.3: 服务发现与注册 — Consul、etcd、Kubernetes Service
+- https://friday-go.icu/courses/golang-backend/module-4/4-4-load-balancing: Lesson 4.4: 负载均衡 — 客户端负载均衡 vs 服务端负载均衡
+- https://friday-go.icu/courses/golang-backend/module-4/4-5-service-governance: Lesson 4.5: 服务治理 — 熔断、降级、限流、重试、超时控制
+- https://friday-go.icu/courses/golang-backend/module-4/4-6-config-center: Lesson 4.6: 配置中心 — 环境变量、ConfigMap、Apollo、Viper 实践
+- https://friday-go.icu/courses/golang-backend/module-4/4-7-api-gateway: Lesson 4.7: API 网关 — Kong、Traefik、自研网关的设计与实践
+- https://friday-go.icu/courses/golang-backend/module-5/5-1-observability-basics: Lesson 5.1: 可观测性基础 — 日志、指标、Trace 三大支柱概述
+- https://friday-go.icu/courses/golang-backend/module-5/5-2-logging-system: Lesson 5.2: 日志系统设计 — 结构化日志、日志收集（Loki/ELK）
+- https://friday-go.icu/courses/golang-backend/module-5/5-3-metrics-monitoring: Lesson 5.3: 指标监控 — Prometheus、Grafana、告警规则
+- https://friday-go.icu/courses/golang-backend/module-5/5-4-distributed-tracing: Lesson 5.4: 分布式追踪 — OpenTelemetry、Jaeger、SkyWalking
+- https://friday-go.icu/courses/golang-backend/module-5/5-5-go-observability: Lesson 5.5: Go 可观测性实战 — 埋点、上下文传播、性能分析
+- https://friday-go.icu/courses/golang-backend/module-5/5-6-alerting-oncall: Lesson 5.6: 告警与值班 — 告警分级、降噪、On-call 流程
+- https://friday-go.icu/courses/golang-backend/project/project-1-setup: Project 1: 项目搭建 — 目录结构、依赖管理、配置加载、Gin 初始化
+- https://friday-go.icu/courses/golang-backend/project/project-2-user-module: Project 2: 用户模块 — 注册、登录、JWT、权限管理
+- https://friday-go.icu/courses/golang-backend/project/project-3-article-module: Project 3: 文章模块 — CRUD、标签分类、全文搜索
+- https://friday-go.icu/courses/golang-backend/project/project-4-interaction-module: Project 4: 互动模块 — 评论、点赞、收藏
+- https://friday-go.icu/courses/golang-backend/project/project-5-statistics: Project 5: 统计模块 — 阅读量、PV/UV、数据可视化
+- https://friday-go.icu/courses/golang-backend/project/project-6-deployment: Project 6: 部署上线 — Docker 镜像、K8s 部署、CI/CD
+- https://friday-go.icu/courses/rxjs/module-1/1-1-why-rxjs: Lesson 1.1: 为什么需要 RxJS — 异步编程演进、回调地狱、Promise 局限
+- https://friday-go.icu/courses/rxjs/module-5/5-3-error-handling: Lesson 5.3: 错误处理 — catchError、retry、retryWhen
+- https://friday-go.icu/courses/rxjs/module-5/5-4-hot-vs-cold: Lesson 5.4: 热 Observable vs 冷 Observable — 区别、转换、应用场景
+- https://friday-go.icu/courses/security-engineer/module-1/1-1-security-baseline: Lesson 1.1: 安全基线 — 最小化安装、用户权限、文件权限
+- https://friday-go.icu/courses/security-engineer/module-1/1-2-ssh-hardening: Lesson 1.2: SSH 安全加固 — 密钥认证、暴力破解防护、fail2ban
+- https://friday-go.icu/courses/security-engineer/module-2/2-1-owasp-top10: Lesson 2.1: OWASP Top 10 — 2025 年十大 Web 安全风险详解
+- https://friday-go.icu/courses/security-engineer/module-3/3-4-secure-random: Lesson 3.4: 安全随机数 — crypto/rand vs math/rand 的正确使用
+- https://friday-go.icu/courses/security-engineer/module-3/3-5-dependency-security: Lesson 3.5: 依赖安全 — 漏洞扫描、版本锁定、SBOM
+- https://friday-go.icu/courses/security-engineer/module-3/3-7-code-audit: Lesson 3.7: 代码审计 — 静态分析、模糊测试、漏洞扫描
+- https://friday-go.icu/courses/security-engineer/module-4/4-1-pentest-methodology: Lesson 4.1: 渗透测试方法论 — 信息收集、漏洞扫描、利用、后渗透
+- https://friday-go.icu/courses/security-engineer/module-5/5-1-incident-response: Lesson 5.1: 应急响应流程 — 准备、检测、遏制、根除、恢复
+- https://friday-go.icu/courses/wails-desktop/module-4/4-1-packaging-distribution: Lesson 4.1: 应用打包与分发 — Windows MSI、macOS DMG、Linux AppImage
+- https://friday-go.icu/courses/wails-desktop/module-4/4-2-performance-optimization: Lesson 4.2: 性能优化 — 启动优化、内存管理、资源压缩
+- https://friday-go.icu/courses/devops-practice/k8s-config: Kubernetes 配置管理：ConfigMap、Secret 与生产最佳实践 — 掌握 Kubernetes 配置管理的完整方案：ConfigMap 管理非敏感配置、Secret 管理密钥，以及 Vault、External Secrets Operator 等生产级密钥管理方案，含 Go 应用实战示例。
+- https://friday-go.icu/courses/devops-practice/k8s-networking: Kubernetes 服务发现与网络：Service、Ingress、DNS 全解析 — 深入理解 Kubernetes 网络模型，掌握 ClusterIP/NodePort/LoadBalancer/ExternalName 四种 Service 类型，以及 Ingress 配置实战、CoreDNS 解析原理，含 Nginx 
+- https://friday-go.icu/courses/devops-practice/k8s-workloads: Kubernetes 工作负载深度解析：Deployment、StatefulSet、DaemonSet — 掌握 Kubernetes 三大核心工作负载：Deployment 滚动更新与回滚、StatefulSet 有状态应用、DaemonSet 守护进程，以及 Job/CronJob 任务调度，含完整 YAML 示例。
+- https://friday-go.icu/courses/devops-practice/k8s-architecture: Kubernetes 入门：架构与核心概念全解析 — 深入理解 Kubernetes 架构设计，掌握 Pod、Node、Namespace、控制平面等核心概念，以及 kubectl 常用命令，从零开始入门 K8s。
+
+## 站点信息
+- https://friday-go.icu/: 博客首页
+- https://friday-go.icu/about: 关于作者
+- https://friday-go.icu/learning-roadmap: 学习路线图
+
+# 总计 403 篇技术文章
