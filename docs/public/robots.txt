@@ -1,10 +1,10 @@
 # robots.txt for friday-go.icu
-# Updated: 2026-06-12
+# Updated: 2026-07-09
 
 User-agent: *
 Allow: /
 
-# Sitemap location
+# Sitemap and llms.txt location
 Sitemap: https://friday-go.icu/sitemap.xml
 
 # Disallow query params for tag/category/type filtering
@@ -37,4 +37,35 @@ User-agent: DuckDuckBot
 Allow: /
 
 User-agent: Yandex
+Allow: /
+
+# Explicitly allow AI crawlers (GEO optimization)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Applebot-Extended
 Allow: /

@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import path from 'path'
 // 导入主题的配置
 import { blogTheme } from './blog-theme'
 
@@ -513,6 +514,152 @@ export default defineConfig({
         { name: 'keywords', content: newKeywords }
       ]);
 
+      // ===== GEO 优化：动态覆盖 og:type 和添加 article:* meta =====
+      // 文章页 og:type 必须是 article（全局默认 website 不适用于文章）
+      pageData.frontmatter.head.push([
+        'meta', { property: 'og:type', content: 'article' }
+      ]);
+      // article:published_time（确保 ISO 8601 格式）
+      const rawPubDate = pageData.frontmatter.date || pageData.lastUpdated || new Date().toISOString();
+      const pubDate = typeof rawPubDate === 'string' ? rawPubDate : new Date(rawPubDate as any).toISOString();
+      pageData.frontmatter.head.push([
+        'meta', { property: 'article:published_time', content: pubDate }
+      ]);
+      // article:modified_time（确保 ISO 8601 格式，lastUpdated 可能是数字 timestamp）
+      const rawModDate = pageData.lastUpdated || pageData.frontmatter.updated || pubDate;
+      let modDate: string;
+      if (typeof rawModDate === 'number') {
+        modDate = new Date(rawModDate).toISOString();
+      } else if (rawModDate instanceof Date) {
+        modDate = rawModDate.toISOString();
+      } else {
+        modDate = String(rawModDate);
+      }
+      pageData.frontmatter.head.push([
+        'meta', { property: 'article:modified_time', content: modDate }
+      ]);
+      // article:author
+      pageData.frontmatter.head.push([
+        'meta', { property: 'article:author', content: pageData.frontmatter.author || 'PFinal南丞' }
+      ]);
+      // article:section (分类，统一使用中文分类名)
+      let articleSection = '';
+      // 从路径推断中文分类名（忽略 frontmatter.category，因为它可能是路径形式）
+      const pathSectionMap: Record<string, string> = {
+        'security/engineering': '安全工程',
+        'security/offensive': '攻防研究',
+        'dev/backend/golang': 'Golang',
+        'dev/backend/php': 'PHP',
+        'dev/backend/python': 'Python',
+        'dev/backend/rust': 'Rust',
+        'dev/system/database': '数据库',
+        'dev/system': '系统运维',
+        'data/automation': '数据与自动化',
+        'thinking/method': '技术方法论',
+        'thinking/notes': '随笔杂谈',
+        'ai': 'AI',
+        'devops': 'DevOps',
+        'indie': '独立开发',
+        'courses/golang-backend': 'Golang 课程',
+        'courses/security-engineer': '安全课程',
+        'courses/devops-practice': 'DevOps 课程',
+        'Tools': '开发工具',
+        'tools': '开发工具',
+      };
+      // 最长前缀匹配
+      const matched = Object.keys(pathSectionMap)
+        .filter(prefix => currentPath.startsWith(prefix))
+        .sort((a, b) => b.length - a.length)[0];
+      if (matched) {
+        articleSection = pathSectionMap[matched];
+      } else {
+        // 如果路径匹配没找到，使用 frontmatter.category（如果有的话）
+        const fmCat = pageData.frontmatter.category;
+        if (fmCat && typeof fmCat === 'string' && fmCat.length > 0) {
+          articleSection = fmCat;
+        }
+      }
+      if (articleSection) {
+        pageData.frontmatter.head.push([
+          'meta', { property: 'article:section', content: articleSection }
+        ]);
+      }
+      // article:tag (每个 tag 一个 meta，确保 content 是字符串)
+      const articleTags = pageData.frontmatter.tags;
+      if (Array.isArray(articleTags)) {
+        for (const tag of articleTags) {
+          const tagStr = typeof tag === 'string' ? tag : String(tag);
+          if (tagStr) {
+            pageData.frontmatter.head.push([
+              'meta', { property: 'article:tag', content: tagStr }
+            ]);
+          }
+        }
+      }
+      // ===== GEO 优化：citation meta 标签（学术可引用性） =====
+      if (pageData.frontmatter.title) {
+        pageData.frontmatter.head.push([
+          'meta', { name: 'citation_title', content: pageData.frontmatter.title }
+        ]);
+        pageData.frontmatter.head.push([
+          'meta', { name: 'citation_author', content: pageData.frontmatter.author || 'PFinal南丞' }
+        ]);
+        pageData.frontmatter.head.push([
+          'meta', { name: 'citation_date', content: String(pubDate).substring(0, 10) }
+        ]);
+        pageData.frontmatter.head.push([
+          'meta', { name: 'citation_online_date', content: String(modDate).substring(0, 10) }
+        ]);
+      }
+
+      // ===== GEO 优化：覆盖 og:title 和 og:description 为文章级 =====
+      const articleTitle = String(pageData.frontmatter.title || 'PFinalClub');
+      const rawDesc = pageData.frontmatter.description || pageData.description || '';
+      const articleDesc = String(rawDesc);
+      const safeArticleDesc = articleDesc === '>-' ? '' : articleDesc;
+      pageData.frontmatter.head.push([
+        'meta', { property: 'og:title', content: articleTitle }
+      ]);
+      pageData.frontmatter.head.push([
+        'meta', { property: 'og:description', content: safeArticleDesc }
+      ]);
+      pageData.frontmatter.head.push([
+        'meta', { property: 'og:url', content: canonicalUrl }
+      ]);
+      pageData.frontmatter.head.push([
+        'meta', { name: 'twitter:title', content: articleTitle }
+      ]);
+      pageData.frontmatter.head.push([
+        'meta', { name: 'twitter:description', content: safeArticleDesc }
+      ]);
+
+      // ===== 计算 wordCount 和 timeRequired（GEO 关键字段） =====
+      // transformPageData 中 pageData.src 不可用，改用文件读取估算字数
+      let wordCount = 0;
+      try {
+        const fsModule = require('fs');
+        const filePath = path.join(process.cwd(), 'docs', pageData.relativePath);
+        if (fsModule.existsSync(filePath)) {
+          const rawContent = fsModule.readFileSync(filePath, 'utf-8');
+          const textOnly = rawContent
+            .replace(/^---[\s\S]*?---/, '')
+            .replace(/```[\s\S]*?```/g, '')
+            .replace(/<[^>]+>/g, '')
+            .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')
+            .replace(/[#*_~`>|]/g, '')
+            .replace(/!\[[^\]]*\]\([^)]*\)/g, '')
+            .replace(/\s+/g, ' ')
+            .trim();
+          wordCount = textOnly.length || Math.floor(rawContent.length / 3);
+        }
+      } catch {
+        // fallback: 从 description 长度粗估（description:字数 ≈ 1:100）
+        const descLen = safeArticleDesc.length;
+        wordCount = descLen > 0 ? descLen * 100 : 2000;
+      }
+      // 阅读时间：中文 300字/分钟
+      const readingTimeMinutes = Math.max(3, Math.ceil(wordCount / 300));
+
       // 为文章页面添加 Schema.org Article 结构化数据
       // 即使没有 date，只要有 title 就添加结构化数据（使用 lastUpdated 或当前时间作为 datePublished）
       if (pageData.frontmatter.title) {
@@ -521,8 +668,11 @@ export default defineConfig({
           "@type": "TechArticle",
           "headline": pageData.frontmatter.title,
           "url": canonicalUrl,
-          "datePublished": pageData.frontmatter.date || pageData.lastUpdated || new Date().toISOString(),
-          "dateModified": pageData.lastUpdated || pageData.frontmatter.date || new Date().toISOString(),
+          "datePublished": pubDate,
+          "dateModified": modDate,
+          "wordCount": wordCount,
+          "timeRequired": `PT${readingTimeMinutes}M`,
+          "proficiencyLevel": "Advanced",
           "author": {
             "@type": "Person",
             "name": pageData.frontmatter.author || "PFinal南丞",
@@ -536,7 +686,7 @@ export default defineConfig({
               "url": `${baseUrl}/logo.png`
             }
           },
-          "description": pageData.frontmatter.description || pageData.description,
+          "description": safeArticleDesc,
           "inLanguage": "zh-CN",
           "mainEntityOfPage": {
             "@type": "WebPage",
@@ -549,21 +699,9 @@ export default defineConfig({
           (article as any).keywords = articleKeywords;
         }
 
-        // 添加文章部分/分类
-        if (pageData.frontmatter.category) {
-          (article as any).articleSection = pageData.frontmatter.category;
-        } else if (currentPath.toLowerCase().includes('/security/engineering/')) {
-          (article as any).articleSection = '安全工程';
-        } else if (currentPath.toLowerCase().includes('/security/offensive/')) {
-          (article as any).articleSection = '攻防研究';
-        } else if (currentPath.toLowerCase().includes('/dev/systems/')) {
-          (article as any).articleSection = '开发系统';
-        } else if (currentPath.toLowerCase().includes('/data/automation/')) {
-          (article as any).articleSection = '数据自动化';
-        } else if (currentPath.toLowerCase().includes('/thinking/method/')) {
-          (article as any).articleSection = '思考方法';
-        } else if (currentPath.toLowerCase().includes('/thinking/notes/')) {
-          (article as any).articleSection = '随笔杂谈';
+        // 添加文章部分/分类（统一使用 articleSection 变量）
+        if (articleSection) {
+          (article as any).articleSection = articleSection;
         }
 
         // 添加图片（单图或多图，便于 AI/富媒体摘要）
@@ -697,5 +835,17 @@ export default defineConfig({
         }
       }
     }
+    // ===== GEO 安全：确保所有 head 标签的属性值都是字符串 =====
+    // VitePress 在渲染 head 标签时会对 content 值调用 str.replace，如果遇到非字符串会崩溃
+    const safeHead = (pageData.frontmatter.head as any[]).map((tag: any[]) => {
+      if (tag.length === 3 && tag[0] === 'script') return tag; // script tags skip
+      const attrs = tag[1] || {};
+      const safeAttrs: Record<string, string> = {};
+      for (const [k, v] of Object.entries(attrs)) {
+        safeAttrs[k] = typeof v === 'string' ? v : String(v || '');
+      }
+      return [tag[0], safeAttrs];
+    });
+    pageData.frontmatter.head = safeHead;
   },
 })
