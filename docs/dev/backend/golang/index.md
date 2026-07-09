@@ -100,12 +100,15 @@ pageClass: golang-hub-page
 - [**Go 1.27 encoding/json/v2 迁移实战**](/dev/backend/golang/go-1-27-encoding-json-v2-migration-2026) - 2026-07-01 标准库四年来最大重写
 - [**Go 1.27 泛型方法生产实战**](/dev/backend/golang/go-1-27-generic-methods-production-2026) - 2026-07-02 类型系统史诗级补完
 - [**TypeScript 7.0 RC 深度解析：微软用 Go 重写编译器，10倍性能提升背后的架构革命**](/Tools/typescript-7-go-compiler-2026) - 2026-07-07 Go 跨界编译器实战
+- [**Go 1.27 GODEBUG 强制净化机制深度解析：四类分级政策与 runtime.SetGODEBUG 实战**](/dev/backend/golang/go-1-27-godebug-forced-cleanup-policy-2026) - 2026-07-10 偿还 13 年技术债
+- [**Go 1.27 尺寸特化 malloc 深度解析：编译器为每个对象定制分配路径**](/dev/backend/golang/go-1-27-size-specialized-malloc-2026) - 2026-07-10 小对象分配提速 30%
 
 ### 安全 & 供应链
 - [**Go SBOM 实战：软件供应链安全**](/dev/backend/golang/go-sbom-supply-chain-security) - SBOM 落地
 - [**Go Fuzzing 实战：CI 集成到生产安全漏洞挖掘**](/dev/backend/golang/go-fuzzing-production-guide-2026) - 模糊测试
 - [**PQC 迁移实战：Go 开发者 PQC 落地指南**](/security/offensive/post-quantum-cryptography-go-migration-2026) - 后量子密码学
 - [**gosentry 实战：Go 模糊测试工具链革命**](/security/offensive/gosentry-go-fuzzing-libafl-toolchain-2026) - 2026-06-23 LibAFL 引擎
+- [**Sapphire Sleet 国家级 npm 供应链攻击深度复盘：Mastra AI 19 分钟投毒 140+ 包**](/security/offensive/sapphire-sleet-mastra-ai-npm-supply-chain-2026) - 2026-07-10 朝鲜 APT 完整技术链
 
 ---
 
