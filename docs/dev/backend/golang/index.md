@@ -140,4 +140,4 @@ pageClass: golang-hub-page
 
 ---
 
-*本页面持续更新，汇集了PFinalClub最优质的Golang技术内容。最后更新：2026年2月*
+*本页面持续更新，汇集了PFinalClub最优质的Golang技术内容。最后更新：2026年7月*

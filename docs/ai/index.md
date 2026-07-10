@@ -41,8 +41,10 @@ cover: /images/covers/ai.svg
 | 20 | 🌐 GPT-5.6 出口管制 | [GPT-5.6 公众开放与出口管制争议：Sol/Terra/Luna 三档模型背后的国家安全博弈](/ai/gpt-5-6-public-release-export-controls-2026) | 2026-07-09 |
 | 21 | 🤖 Grok 4.5 编码 Agent | [Grok 4.5 深度解析：xAI + Cursor 联合训练的编码 Agent 模型与性价比革命](/ai/grok-4-5-cursor-coding-agent-2026) | 2026-07-09 |
 | 22 | 📏 推理漂移评测 | [ACL 2026 推理漂移最佳资源论文深度解读：HSCodeComp 基准揭示 Agent 的结构性缺陷](/ai/acl-2026-hscodecomp-reasoning-drift-agent-benchmark) | 2026-07-09 |
+| 23 | 🧠 Context Engineering | [Context Engineering 上下文工程实战：从 Prompt Engineering 到 AI Agent 信息架构的范式跃迁](/ai/context-engineering-2026-ai-paradigm-shift) | 2026-07-09 |
+| 24 | 🔌 X MCP Server | [X MCP Server 实战：零配置接入 150+ API 端点的托管服务集成](/ai/x-mcp-server-managed-integration-2026) | 2026-07-09 |
 
-**学习路径建议**：从 1→7 顺序阅读，1 是入门基础，3 和 5 是 2026 必备技能，7 是前沿探索。8 打通 Agent 到前端最后一公里，9 是 AI 编程工具链巅峰之作。10-12 是 MCP 协议生态最新实战，从协议设计到生产级集成完整覆盖。13-15 聚焦 AI 编程终端 Agent 的工程化、团队治理与协议规范迁移。18-19 进入 Agent 工程化治理与持久化执行的新阶段：18 用 SDD 治理 Vibe Coding 碎片化（GitHub Spec Kit 实战），19 详解 LangGraph 1.0 Durable Execution + Human-in-the-Loop 生产级架构（PostgresSaver/RedisSaver/HITL 中断恢复）。
+**学习路径建议**：从 1→7 顺序阅读，1 是入门基础，3 和 5 是 2026 必备技能，7 是前沿探索。8 打通 Agent 到前端最后一公里，9 是 AI 编程工具链巅峰之作。10-12 是 MCP 协议生态最新实战，从协议设计到生产级集成完整覆盖。13-15 聚焦 AI 编程终端 Agent 的工程化、团队治理与协议规范迁移。18-19 进入 Agent 工程化治理与持久化执行的新阶段：18 用 SDD 治理 Vibe Coding 碎片化（GitHub Spec Kit 实战），19 详解 LangGraph 1.0 Durable Execution + Human-in-the-Loop 生产级架构（PostgresSaver/RedisSaver/HITL 中断恢复）。23-24 探索 AI Agent 信息架构新范式：23 Context Engineering 揭示从 Prompt Engineering 到全局信息架构的跃迁，24 X MCP Server 实现零配置托管式 150+ API 端点集成。
 
 ---
 
@@ -80,11 +82,11 @@ cover: /images/covers/ai.svg
 
 ## 📊 系列文章统计
 
-- **AI Agent 全栈**：22 篇（2026 年新增 20 篇，含 AG-UI 前端集成、OpenCode 架构、Agent Skills、MCP 路线图、OpenClaw 实战、Harness Engineering、Codex CLI、MCP Spec RC、Safari MCP、AI 漏洞挖掘范式、GitHub Spec Kit、LangGraph 1.0、GPT-5.6 出口管制、Grok 4.5 编码 Agent、ACL 推理漂移评测）
+- **AI Agent 全栈**：24 篇（2026 年新增 22 篇，含 AG-UI 前端集成、OpenCode 架构、Agent Skills、MCP 路线图、OpenClaw 实战、Harness Engineering、Codex CLI、MCP Spec RC、Safari MCP、AI 漏洞挖掘范式、GitHub Spec Kit、LangGraph 1.0、GPT-5.6 出口管制、Grok 4.5 编码 Agent、ACL 推理漂移评测、Context Engineering、X MCP Server）
 - **RAG / LLM 应用**：6 篇
 - **模型接入实战**：2 篇（Claude Sonnet 4.6 + Gemini 3.5 Flash）
 - **LLM 评测与协议演进**：2 篇（RULER/MRCR 长上下文 + HSCodeComp 推理漂移）
-- **累计 31 篇**，更新频率：每周 2-3 篇热点文章同步
+- **累计 33 篇**，更新频率：每周 2-3 篇热点文章同步
 
 ---
 
