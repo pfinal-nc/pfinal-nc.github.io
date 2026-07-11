@@ -103,6 +103,7 @@ pageClass: golang-hub-page
 - [**TypeScript 7.0 RC 深度解析：微软用 Go 重写编译器，10倍性能提升背后的架构革命**](/Tools/typescript-7-go-compiler-2026) - 2026-07-07 Go 跨界编译器实战
 - [**Go 1.27 GODEBUG 强制净化机制深度解析：四类分级政策与 runtime.SetGODEBUG 实战**](/dev/backend/golang/go-1-27-godebug-forced-cleanup-policy-2026) - 2026-07-10 偿还 13 年技术债
 - [**Go 1.27 尺寸特化 malloc 深度解析：编译器为每个对象定制分配路径**](/dev/backend/golang/go-1-27-size-specialized-malloc-2026) - 2026-07-10 小对象分配提速 30%
+- [**Go 1.27 switch 查找表优化深度解析：编译器如何让常见分支快 2 倍**](/dev/backend/golang/go-1-27-switch-lookup-table-optimization-2026) - 2026-07-12 SSA 管线零成本优化
 
 ### 安全 & 供应链
 - [**Go SBOM 实战：软件供应链安全**](/dev/backend/golang/go-sbom-supply-chain-security) - SBOM 落地

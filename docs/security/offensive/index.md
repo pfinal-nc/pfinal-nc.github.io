@@ -58,6 +58,7 @@ recommend: 安全
 - [CVE-2026-45659 SharePoint RCE 实战：CISA KEV 新增在野利用漏洞的反序列化攻击链完整拆解](/security/offensive/cve-2026-45659-sharepoint-rce-cisa-kev-2026) - 2026-07-08
 - [Adobe ColdFusion CVE-2026-48282 深度解析：CVSS 10 路径穿越到 RCE 的完整攻击链](/security/offensive/adobe-coldfusion-cve-2026-48282-path-traversal-rce) - 2026-07-09 CISA KEV
 - [CVE-2026-46242 Bad Epoll 深度分析：Linux 内核 epoll UAF 竞态条件提权从原理到复现](/security/offensive/cve-2026-46242-bad-epoll-linux-kernel-privilege-escalation) - 2026-07-11 99%成功率
+- [CVE-2026-43499 GhostLock 深度分析：Linux 内核 futex rt_mutex 15 年潜伏的本地提权链](/security/offensive/cve-2026-43499-ghostlock-linux-kernel-privilege-escalation-2026) - 2026-07-12 97%成功率 15年历史
 
 ### 🔬 供应链与工具链安全
 - [Miasma 供应链蠕虫攻击深度分析：2026 年开源生态的至暗时刻](/security/offensive/miasma-supply-chain-worm-attack-2026) - 2026-06-15
