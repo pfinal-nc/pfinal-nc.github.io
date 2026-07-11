@@ -86,6 +86,7 @@ pageClass: golang-hub-page
 ### AI × Go 交叉实战
 - [**Go 语言 AI Agent 开发实战**](/ai/ai-agent-development-go) - Function Calling 与多工具编排
 - [**MCP 服务器开发实战：用 Go 构建 AI 工具协议**](/ai/mcp-server-practice) - MCP 协议 Go 实现
+- [**Go Micro v6 Agentic Shift 深度解析：微服务框架转身 AI Agent 运行时**](/dev/backend/golang/go-micro-v6-agentic-shift-ai-agent-runtime-2026) - 2026-07-11 Anthropic赞助 Agent=Service
 - [**Rust vs Go 2026：性能基准、内存安全与后端选型**](/dev/backend/golang/rust-vs-go-2026) - 选型决策
 
 ### 2026 Go 工具链与性能

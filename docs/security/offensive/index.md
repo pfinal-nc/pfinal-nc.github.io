@@ -42,6 +42,7 @@ recommend: 安全
 - [LLM 安全攻防实战：Prompt Injection 防御](/security/offensive/llm-prompt-injection-defense) - Prompt 注入
 - [Post-Quantum Cryptography 迁移实战：Go 开发者 PQC 落地指南](/security/offensive/post-quantum-cryptography-go-migration-2026) - 后量子密码学
 - [AI Multi-Agent Penetration Testing](/security/offensive/AI-Multi-Agent-Penetration-Testing) - 多 Agent 渗透
+- [T3MP3ST 深度解析：AI 编码 Agent 自主红队框架从侦察到漏洞定位的全链路实战](/security/offensive/t3mp3st-ai-agent-automated-red-team-framework-2026) - 2026-07-11 XBEN 90.1%
 - [AI 破解 CTF 2026：Veria Labs 52 题全解 Agent 技术深度拆解](/security/offensive/ai-broke-ctf-2026-veria-labs-agent-analysis) - 2026-06-30
 - [ToolHijacker 深度解析：LLM Agent 工具选择攻击原理与生产防御](/security/offensive/toolhijacker-llm-agent-tool-selection-attack-2026) - 2026-07-02
 
@@ -56,6 +57,7 @@ recommend: 安全
 - [NGINX CVE-2026-42530/42055 双 RCE 深度复现：HTTP/3 UAF 与 HTTP/2 堆溢出的攻防全解析](/security/offensive/nginx-cve-2026-42530-42055-http3-http2-double-rce-deep-dive) - 2026-07-06
 - [CVE-2026-45659 SharePoint RCE 实战：CISA KEV 新增在野利用漏洞的反序列化攻击链完整拆解](/security/offensive/cve-2026-45659-sharepoint-rce-cisa-kev-2026) - 2026-07-08
 - [Adobe ColdFusion CVE-2026-48282 深度解析：CVSS 10 路径穿越到 RCE 的完整攻击链](/security/offensive/adobe-coldfusion-cve-2026-48282-path-traversal-rce) - 2026-07-09 CISA KEV
+- [CVE-2026-46242 Bad Epoll 深度分析：Linux 内核 epoll UAF 竞态条件提权从原理到复现](/security/offensive/cve-2026-46242-bad-epoll-linux-kernel-privilege-escalation) - 2026-07-11 99%成功率
 
 ### 🔬 供应链与工具链安全
 - [Miasma 供应链蠕虫攻击深度分析：2026 年开源生态的至暗时刻](/security/offensive/miasma-supply-chain-worm-attack-2026) - 2026-06-15
