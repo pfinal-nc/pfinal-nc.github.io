@@ -44,8 +44,9 @@ cover: /images/covers/ai.svg
 | 23 | 🧠 Context Engineering | [Context Engineering 上下文工程实战：从 Prompt Engineering 到 AI Agent 信息架构的范式跃迁](/ai/context-engineering-2026-ai-paradigm-shift) | 2026-07-09 |
 | 24 | 🔌 X MCP Server | [X MCP Server 实战：零配置接入 150+ API 端点的托管服务集成](/ai/x-mcp-server-managed-integration-2026) | 2026-07-09 |
 | 25 | 🧠 Sonnet 5 | [Claude Sonnet 5 生产级 Agent 编码实战：从 API 调用到团队治理](/ai/claude-sonnet-5-agentic-coding-production-2026) | 2026-07-12 |
+| 26 | 🔐 MCP 企业授权 | [MCP 企业托管授权（EMA）2026 实战：零点击 OAuth 与 ID-JAG 身份断言链](/ai/mcp-enterprise-managed-authorization-2026) | 2026-07-14 |
 
-**学习路径建议**：从 1→7 顺序阅读，1 是入门基础，3 和 5 是 2026 必备技能，7 是前沿探索。8 打通 Agent 到前端最后一公里，9 是 AI 编程工具链巅峰之作。10-12 是 MCP 协议生态最新实战，从协议设计到生产级集成完整覆盖。13-15 聚焦 AI 编程终端 Agent 的工程化、团队治理与协议规范迁移。18-19 进入 Agent 工程化治理与持久化执行的新阶段：18 用 SDD 治理 Vibe Coding 碎片化（GitHub Spec Kit 实战），19 详解 LangGraph 1.0 Durable Execution + Human-in-the-Loop 生产级架构（PostgresSaver/RedisSaver/HITL 中断恢复）。23-25 探索 AI Agent 信息架构新范式与编码 Agent 落地：23 Context Engineering 揭示从 Prompt Engineering 到全局信息架构的跃迁，24 X MCP Server 实现零配置托管式 150+ API 端点集成，25 是 Claude Sonnet 5 发布后的生产级 Agent 编码落地指南（tokenizer 变化、effort 机制、API 实战与团队治理）。
+**学习路径建议**：从 1→7 顺序阅读，1 是入门基础，3 和 5 是 2026 必备技能，7 是前沿探索。8 打通 Agent 到前端最后一公里，9 是 AI 编程工具链巅峰之作。10-12 是 MCP 协议生态最新实战，从协议设计到生产级集成完整覆盖。13-15 聚焦 AI 编程终端 Agent 的工程化、团队治理与协议规范迁移。18-19 进入 Agent 工程化治理与持久化执行的新阶段：18 用 SDD 治理 Vibe Coding 碎片化（GitHub Spec Kit 实战），19 详解 LangGraph 1.0 Durable Execution + Human-in-the-Loop 生产级架构（PostgresSaver/RedisSaver/HITL 中断恢复）。23-26 探索 AI Agent 信息架构新范式、编码 Agent 落地与企业级授权治理：23 Context Engineering 揭示从 Prompt Engineering 到全局信息架构的跃迁，24 X MCP Server 实现零配置托管式 150+ API 端点集成，25 是 Claude Sonnet 5 发布后的生产级 Agent 编码落地指南（tokenizer 变化、effort 机制、API 实战与团队治理），26 详解 MCP 企业托管授权（EMA）与 ID-JAG 如何终结企业 MCP 部署的逐服务 OAuth 噩梦。
 
 ---
 
