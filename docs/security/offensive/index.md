@@ -31,13 +31,13 @@ recommend: 安全
 - [10个Golang安全陷阱及真正有效的修复方案](/security/engineering/10个Golang安全陷阱及真正有效的修复方案)
 - [Go语言主流安全库使用指南](/security/engineering/Go语言主流安全库使用指南)
 - [golang 中的网络安全 TLS/SSL 实现](/security/engineering/golang 中的网络安全TLS SSL的实现)
-- [代码安全扫描自动化](/Tools/从手动到自动-Go语言助力快速识别代码中的安全隐患) - 自动化安全检测
+- [代码安全扫描自动化](/security/engineering/从手动到自动-Go语言助力快速识别代码中的安全隐患) - 自动化安全检测
 
 ### 🔥 2026 攻防热点系列
 - [2026 H1 漏洞态势报告：供应链与 AI 成主战场](/security/offensive/2026-h1-vulnerability-landscape) - 半年盘点
 - [OWASP API Security Top 10 2026 + Go 防御实战](/security/offensive/owasp-api-security-top10-2026-go) - API 安全
 - [OWASP Agentic AI Top 10 2026 深度解读与防御实战](/security/offensive/owasp-agentic-ai-top10-2026) - AI Agent 安全
-- [CTF 2026 云安全攻防：从容器逃逸到 K8s 渗透实战](/security/offensive/ctf-2026-cloud-security-attack-and-defense) - 云原生 CTF
+- [CTF 2026 云安全攻防：从容器逃逸到 K8s 渗透实战](/security/offensive/ctf-2026-cloud-security-container-k8s) - 云原生 CTF
 - [LLM 红队测试 2026：企业级 AI 安全攻防实战指南](/security/offensive/llm-red-teaming-2026) - LLM 红队
 - [LLM 安全攻防实战：Prompt Injection 防御](/security/offensive/llm-prompt-injection-defense) - Prompt 注入
 - [Post-Quantum Cryptography 迁移实战：Go 开发者 PQC 落地指南](/security/offensive/post-quantum-cryptography-go-migration-2026) - 后量子密码学
