@@ -1,10 +1,10 @@
 ---
-title: "从手动到自动 - Go语言助力快速识别代码中的安全隐患"
+title: "Go 代码安全审计自动化 2026：gosec + semgrep CI 集成 10 分钟搭建安全扫描流水线"
 date: 2024-10-10 09:08:02
 tags:
   - 工具
   - golang
-description: 从手动到自动：Go语言助力快速识别代码中的安全隐患
+description: "告别手动代码审计！详解如何用 Go 安全工具链（gosec、semgrep、govulncheck）搭建自动化安全扫描流水线，在 CI/CD 中拦截 90% 常见漏洞，附完整 GitHub Actions 配置。"
 author: PFinal南丞
 keywords:
   - golang

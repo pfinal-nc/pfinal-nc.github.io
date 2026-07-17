@@ -1,5 +1,5 @@
 ---
-title: Golang Socket 通信架构分析与实现-构建高性能游戏服务器
+title: "Go Socket 高性能游戏服务器实战 2026：TCP 长连接 + 百万并发架构设计"
 date: 2025-10-15 15:00:00
 categories:
   - 后端
@@ -10,7 +10,7 @@ tags:
   - 高性能
   - 并发编程
   - 网络编程
-description: 深入分析Golang Socket通信架构设计与实现，从基础TCP编程到高性能游戏服务器架构，涵盖连接管理、消息编解码、并发模型等核心技术，帮助开发者构建稳定高效的游戏服务器。
+description: "万字详解 Go 语言构建高性能游戏服务器：从 TCP Socket 基础到 epoll 事件驱动、Protobuf 消息协议、Goroutine 并发模型、连接池与心跳机制，附可运行的 MMORPG 服务器骨架代码。"
 author: PFinal南丞
 keywords:
   - Golang Socket

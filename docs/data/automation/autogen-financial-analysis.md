@@ -1,10 +1,9 @@
 ---
-title: AutoGen 在金融数据分析中的自动化流程构建 让AI助手成为你的金融分析师
+title: "AutoGen 多 Agent 金融数据分析实战 2026：用 AI 构建自动化投研流水线"
 date: 2025-07-21 09:49:32
 tags:
   - 工具
-description: >-
-  在金融数据分析的复杂世界中，AutoGen正在重新定义我们处理数据、生成报告和做出决策的方式。本文将深入探讨如何利用AutoGen构建智能化的金融分析工作流。
+description: "使用微软 AutoGen 框架构建金融数据分析自动化流程：多 Agent 协作架构设计、A 股数据获取与清洗、技术指标计算、自动生成投研报告，让 AI 成为你的 24/7 金融分析师。"
 author: PFinal南丞
 keywords:
   - 金融数据分析

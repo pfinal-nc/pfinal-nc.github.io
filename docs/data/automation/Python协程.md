@@ -1,9 +1,9 @@
 ---
-title: "Python 协程 - 使用指南"
+title: "Python 协程完全指南 2026：async/await + asyncio 并发编程从入门到生产实战"
 date: 2023-04-07 09:28:47
 tags:
     - Python
-description: Python协程学习
+description: "从零掌握 Python 异步编程：async/await 语法糖原理、asyncio 事件循环机制、Task 并发调度、异步 HTTP 客户端实战（aiohttp/httpx），附 FastAPI 异步接口性能对比测试。"
 author: PFinal南丞
 keywords:
   - Python协程

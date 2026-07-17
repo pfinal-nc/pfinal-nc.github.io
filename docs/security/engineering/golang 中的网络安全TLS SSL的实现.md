@@ -1,9 +1,9 @@
 ---
-title: Golang 中的网络安全（TLS/SSL）的实现
+title: "Go TLS/SSL 网络安全实战 2026：证书管理 + mTLS + HTTP/3 全链路加密"
 date: 2024-12-09 13:49:59
 tags:
     - golang
-description: 本文将深入探讨如何在 golang 中实现 TLS，帮助开发者构建安全的网络通信。
+description: "从零搭建 Go TLS/SSL 安全通信：涵盖自签证书生成、双向 mTLS 认证、Let's Encrypt 自动续期、HTTP/3 QUIC 加密传输，附生产级配置模板和常见踩坑指南。"
 author: PFinal南丞
 keywords:
   - golang

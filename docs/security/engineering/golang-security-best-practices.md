@@ -1,6 +1,6 @@
 ---
-title: "Golang 安全开发最佳实践 — 从代码审计到自动化防护"
-description: "全面梳理 Go 语言安全开发实践，涵盖 SQL 注入、XSS、CSRF 常见漏洞防护，gosec/semgrep 静态分析工具使用，go mod 依赖安全审计，以及安全编码规范落地，帮助 Go 开发者构建更安全的应用"
+title: "Go 安全开发最佳实践 2026：从代码审计到 CI/CD 自动化防护全流程"
+description: "Go 语言安全开发全指南：SQL 注入/XSS/CSRF 防御、gosec+semgrep 静态分析 CI 集成、go mod 依赖漏洞扫描、供应链安全与 SBOM 生成，附 GitHub Actions 安全流水线模板。"
 date: 2026-04-20 10:00:00
 author: PFinal南丞
 tags:

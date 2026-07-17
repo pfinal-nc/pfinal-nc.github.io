@@ -1,9 +1,9 @@
 ---
-title: 深入Go内存分配
+title: "Go 内存分配深度解析 2026：从 TCMalloc 到逃逸分析的完整指南"
 date: 2024-11-13 09:32:24
 tags:
   - golang
-description: 深入Go内存分配
+description: "深入剖析 Go 语言内存分配机制：TCMalloc 架构、mcache/mcentral/mheap 三级缓存、逃逸分析原理与优化实战，附完整代码示例和性能基准测试。"
 author: PFinal南丞
 keywords:
   - 深入Go内存分配
