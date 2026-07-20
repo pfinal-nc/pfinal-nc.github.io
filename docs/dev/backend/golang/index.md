@@ -106,6 +106,8 @@ pageClass: golang-hub-page
 - [**Go 1.27 switch 查找表优化深度解析：编译器如何让常见分支快 2 倍**](/dev/backend/golang/go-1-27-switch-lookup-table-optimization-2026) - 2026-07-12 SSA 管线零成本优化
 - [**Go 1.27 uuid 标准库包深度解析：等了 8 年终转正，数据库主键怎么选？**](/dev/backend/golang/go-1-27-uuid-standard-library-2026) - 2026-07-14 标准库内建 UUID
 - [**Go Flight Recorder 持续执行追踪：零成本事后取证与性能诊断**](/dev/backend/golang/go-flight-recorder-continuous-execution-tracing-2026) - 2026-07-13 生产环境持续追踪
+- [**Go 1.28 PGO 默认开启生产实战：从数据采集到 CI 全链路优化**](/dev/backend/golang/go-1-28-pgo-default-on-production-2026) - 2026-07-17 Uber -14%、Datadog -7%
+- [**Go 1.28 路线图深度解析：Cgo 抛弃 C 工具链、泛型容器、Green Tea GC 全面接管**](/dev/backend/golang/go-1-28-roadmap-pure-cgo-generic-containers-2026) - 2026-07-20 12 大特性全景
 
 ### 安全 & 供应链
 - [**Go SBOM 实战：软件供应链安全**](/dev/backend/golang/go-sbom-supply-chain-security) - SBOM 落地

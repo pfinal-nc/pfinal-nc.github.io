@@ -20,6 +20,7 @@ cover: /images/covers/devops.svg
 | 1 | 🐳 Docker 最佳实践 | [Docker 最佳实践：从镜像优化到生产部署](/devops/docker-best-practices) | — |
 | 2 | ☸️ K8s 1.36 | [Kubernetes v1.36 Haru 深度实战：70 项增强全解读](/devops/kubernetes-v1-36-haru-deep-dive-2026) | 2026-06-16 |
 | 3 | 🎤 KubeCon 2026 | [KubeCon Europe 2026 深度复盘：82% 采用率 vs 7% AI 部署率](/devops/kubecon-europe-2026-ai-execution-gap-cloud-native-deep-dive) | 2026-07-03 |
+| 4 | 🤖 Docker AI Governance | [Docker AI Governance 实战：让 AI Agent 在沙箱里自由探索](/devops/docker-ai-governance-agent-isolation-2026) | 2026-07-20 |
 
 ## 🔍 可观测性
 
@@ -27,6 +28,7 @@ cover: /images/covers/devops.svg
 |---|------|------|------|
 | 1 | 🔬 eBPF 零侵入监控 | [eBPF + Go：云原生可观测性零侵入监控实战](/devops/ebpf-go-observability) | 2026-06-08 |
 | 2 | 📡 OTel Go 1.32 | [OpenTelemetry Go SDK 1.32 实战：eBPF 自动注入 + Metric 限制](/devops/otel-go-sdk-1-32-ebpf-injection-2026) | 2026-06-20 |
+| 3 | 🏆 OTel CNCF 毕业 | [OpenTelemetry CNCF 毕业 90 天替代 vendor 老栈完整指南](/devops/opentelemetry-cncf-graduation-replace-vendor-stack-2026) | 2026-07-17 |
 
 ## 🌐 WASM 替代容器
 
@@ -52,12 +54,12 @@ cover: /images/covers/devops.svg
 
 ## 📊 系列文章统计
 
-- **容器化与编排**：3 篇（Docker + K8s 1.36 + KubeCon 2026）
-- **可观测性**：2 篇（eBPF + OTel Go 1.32）
+- **容器化与编排**：4 篇（Docker + K8s 1.36 + KubeCon 2026 + Docker AI Governance）
+- **可观测性**：3 篇（eBPF + OTel Go 1.32 + OTel CNCF 毕业）
 - **WASM 演进**：2 篇（服务端 WASI + K8s SpinKube 集成）
 - **FinOps 云成本**：1 篇（Go + OpenCost）
 - **平台工程与网络**：2 篇（Backstage IDP + Tailscale DERP）
-- **累计 10 篇**，更新频率：每周 1-2 篇
+- **累计 12 篇**，更新频率：每周 1-2 篇
 
 ---
 
