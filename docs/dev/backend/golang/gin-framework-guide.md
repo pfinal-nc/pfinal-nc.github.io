@@ -1,6 +1,6 @@
 ---
-title: "Gin 框架实战指南"
-description: "全面讲解 Go 语言最流行的 Web 框架 Gin，包括路由、中间件、参数绑定、验证等核心功能，帮助你快速构建高性能 Web 应用。"
+title: "Gin 框架实战指南 2026：Go HTTP 路由 + 中间件链 + 参数验证完整教程"
+description: "Gin 框架实战指南 2026 完全教程：从路由分组与中间件链设计、请求参数绑定与验证、自定义错误处理、JWT 认证中间件，到构建 RESTful API 的完整 Go Web 开发指南。"
 keywords:
   - Go Gin
   - Gin 框架

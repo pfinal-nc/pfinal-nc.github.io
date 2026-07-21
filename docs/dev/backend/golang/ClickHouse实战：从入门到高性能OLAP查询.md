@@ -1,8 +1,8 @@
 ---
-title: "ClickHouse实战：从入门到高性能OLAP查询"
+title: "ClickHouse 实战 2026：列式 OLAP 从入门到百亿级实时数据分析与 Go 集成"
 date: 2026-03-03 00:45:00
 author: PFinal南丞
-description: "深入探索ClickHouse列式OLAP数据库的核心特性与实战应用，涵盖架构设计、Go语言集成、性能优化策略，助力开发者构建高效数据分析系统"
+description: "ClickHouse 实战 2026 完全指南：从列式存储原理与 MergeTree 引擎详解、Go 语言客户端集成（clickhouse-go v2）、分区键与排序键优化策略，到百亿级数据实时聚合查询的完整实践方案。"
 keywords:
   - ClickHouse
   - OLAP

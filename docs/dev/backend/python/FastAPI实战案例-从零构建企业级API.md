@@ -1,8 +1,8 @@
 ---
-title: "FastAPI 实战案例：从零构建企业级 API"
+title: "FastAPI 企业级 API 实战 2026：异步 ORM + JWT 认证 + Docker 部署全流程指南"
 date: 2026-03-11 00:00:00
 author: PFinal南丞
-description: "通过一个完整的实战案例，学习如何从零开始构建企业级 FastAPI 应用。包括项目架构、数据库设计、认证授权、API 文档、部署上线等完整流程。"
+description: "FastAPI 企业级 API 实战 2026 全流程指南：从项目架构设计、SQLAlchemy 异步 ORM、JWT OAuth2 认证授权、自动生成的 OpenAPI 文档，到 Docker Compose 容器化部署的完整可运行案例。"
 keywords:
   - FastAPI
   - 企业级API

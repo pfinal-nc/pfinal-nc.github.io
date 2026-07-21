@@ -64,6 +64,7 @@ recommend: 安全
 - [CVE-2026-50548 Cursor DuneSlide 零点击 RCE 深度解析：AI 编程助手的沙箱逃逸链](/security/offensive/cve-2026-50548-cursor-duneslide-zero-click-rce-2026) - 2026-07-14 CVSS 9.8 提示注入
 - [2026 年 7 月 Patch Tuesday 深度复盘：5 个 CISA KEV 0-day 联合攻击链与 0-72 小时应急清单](/security/offensive/july-2026-patch-tuesday-5-cisa-kev-zero-day-attack-chains-2026) - 2026-07-17 SonicWall/ADFS/SharePoint/BitLocker/Langflow 622 CVE
 - [CVE-2026-49471 Serena MCP DNS Rebinding RCE 完整复盘：浏览器一行 URL 击穿 IDE](/security/offensive/cve-2026-49471-serena-mcp-dns-rebinding-rce) - 2026-07-20 CVSS 8.1 浏览器→MCP 工具链 8 秒渗透
+- [CVE-2026-48710 BadHost 深度分析：Starlette/FastAPI/MCP 主机头路径注入认证绕过](/security/offensive/cve-2026-48710-starlette-badhost-auth-bypass) - 2026-07-21 影响 FastAPI/vLLM/LiteLLM/MCP Server
 
 ### 🔬 供应链与工具链安全
 - [Miasma 供应链蠕虫攻击深度分析：2026 年开源生态的至暗时刻](/security/offensive/miasma-supply-chain-worm-attack-2026) - 2026-06-15

@@ -40,6 +40,8 @@ pageClass: php-hub-page
 - [**FrankenPHP 1.4 + Laravel 12 Worker 模式生产实战**](/dev/backend/php/frankenphp-1-4-laravel-worker-mode-2026) - 3 倍吞吐、状态隔离、迁移指南（2026-06-26）
 - [**Laravel 13 AI SDK 可中断任务实战**](/dev/backend/php/laravel-13-ai-sdk-interruptible-tasks-2026) - 2026 AI 原生框架
 - [**PHP 8.5 NoDiscard 属性详解**](/dev/backend/php/PHP-8.5-NoDiscard-属性详解) - 错误处理新特性
+- [**Phargo 深度解析：AI 用 Rust 重写 PHP 引擎，跑通 WordPress 的实验与启示**](/dev/backend/php/phargo-ai-rust-php-engine-wordpress-2026) - AI 生成 Rust PHP 运行时，渲染 WordPress（2026-07-21）
+- [**TypePHP 深度解析：Swoole AOT 更名，PHP 静态编译原生二进制能否让 PHP 重获新生？**](/dev/backend/php/typephp-swoole-aot-native-binary-php-2026) - 原生二进制、双引擎架构、性能展望（2026-07-21）
 
 ### 数据库与缓存
 - [**PHP数据库操作最佳实践**](/dev/backend/php/PHP数据库操作) - PDO, ORM, 查询优化

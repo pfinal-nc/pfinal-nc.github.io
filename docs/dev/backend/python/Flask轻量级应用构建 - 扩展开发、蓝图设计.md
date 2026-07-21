@@ -1,8 +1,8 @@
 ---
-title: "Flask轻量级应用构建 - 扩展开发、蓝图设计"
+title: "Flask 模块化开发实战 2026：蓝图设计 + 扩展集成 + 生产部署完整指南"
 date: 2026-03-02 19:00:00
 author: PFinal南丞
-description: "深入探讨Flask轻量级Web框架的模块化开发实践，涵盖蓝图（Blueprint）的核心机制、扩展开发集成、配置管理策略以及生产环境部署优化，为有经验的开发者提供实战指导"
+description: "Flask 模块化开发实战 2026 完全指南：从 Blueprint 蓝图拆分大型应用、Flask 扩展生态集成（SQLAlchemy / Migrate / RESTful）、多环境配置管理，到 Gunicorn + Nginx 生产部署的完整实战教程。"
 keywords:
   - Flask
   - 蓝图

@@ -1,8 +1,8 @@
 ---
-title: "Loki 日志系统实战指南"
+title: "Loki 日志系统实战 2026：Grafana 可观测性栈部署与 LogQL 查询完全指南"
 date: 2026-04-22 00:00:00
 author: PFinal南丞
-description: "深入学习 Grafana Loki 日志聚合系统，掌握与 Prometheus 类似的标签索引机制，实现轻量级、低成本的日志收集和查询。"
+description: "Loki 日志系统实战 2026 完全指南：从 Promtail 日志采集到 Grafana 可视化看板，掌握 LogQL 查询语法、标签索引优化、生产级部署最佳实践，构建轻量级可观测性日志平台。"
 keywords:
   - Loki
   - Grafana

@@ -1,8 +1,8 @@
 ---
-title: "ELK 日志系统实战指南"
+title: "ELK 日志系统实战 2026：Elasticsearch + Logstash + Kibana 企业级日志平台全栈部署"
 date: 2026-04-22 00:00:00
 author: PFinal南丞
-description: "深入学习 ELK Stack（Elasticsearch、Logstash、Kibana）日志系统，掌握日志收集、处理、存储和可视化的完整流程，构建企业级日志分析平台。"
+description: "ELK Stack 实战 2026 全栈指南：Filebeat 日志采集 + Logstash 管道处理 + Elasticsearch 全文检索 + Kibana 可视化看板，从单机部署到集群扩容的完整企业级日志平台方案。"
 keywords:
   - ELK
   - Elasticsearch

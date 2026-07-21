@@ -1,8 +1,8 @@
 ---
-title: "Go Redis 实践指南"
+title: "Go Redis 实战 2026：缓存策略 + 分布式锁 + Pipeline 性能优化完全指南"
 date: 2026-04-22 00:00:00
 author: PFinal南丞
-description: "深入学习 Go 语言操作 Redis，掌握连接池、常用数据结构、分布式锁、缓存模式等核心技能，构建高性能缓存系统。"
+description: "Go Redis 实战 2026 完全指南：go-redis 客户端最佳实践，涵盖连接池调优、Pipeline 批量操作、分布式锁 Redlock、缓存穿透/击穿/雪崩防护策略，附带完整可运行代码与性能基准。"
 keywords:
   - golang
   - Redis
