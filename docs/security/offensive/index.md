@@ -62,6 +62,10 @@ recommend: 安全
 - [YellowKey 与 GreenPlasma：Windows 安全防线组合突破深度分析](/security/offensive/yellowkey-greenplasma-windows-bitlocker-defender-bypass-2026) - 2026-07-13 BitLocker 绕过 + CTFMON 提权
 - [Linux CopyFail CVE-2026-31431 深度剖析：内核加密子系统逻辑缺陷与 732 字节提权脚本](/security/offensive/linux-copyfail-cve-2026-31431-kernel-privilege-escalation-2026) - 2026-07-13 跨子系统逻辑缺陷 100%稳定
 - [CVE-2026-50548 Cursor DuneSlide 零点击 RCE 深度解析：AI 编程助手的沙箱逃逸链](/security/offensive/cve-2026-50548-cursor-duneslide-zero-click-rce-2026) - 2026-07-14 CVSS 9.8 提示注入
+- [CVE-2026-15416 深度分析：Argo CD 默认配置如何让内网攻击者接管整个 Kubernetes 集群](/security/offensive/cve-2026-15416-argo-cd-kubernetes-cluster-takeover) - 2026-07-15 CISA KEV 云原生安全
+- [CVE-2026-20896 深度分析：Gitea Docker 认证绕过——一个 HTTP Header 接管整个 Git 服务器](/security/offensive/cve-2026-20896-gitea-docker-auth-bypass) - 2026-07-15 自托管 Git 服务
+- [AI 驱动漏洞挖掘时代来临：VEGA 5秒发现 15 年 Linux 内核漏洞的技术全景](/security/offensive/vega-ai-automated-vulnerability-discovery-2026) - 2026-07-16 AI 漏洞挖掘范式
+- [CVE-2026-8924 深度分析：curl 超级Cookie 注入 — 一个尾随点让 PSL 防护形同虚设](/security/offensive/curl-cve-2026-8924-super-cookie-psl-bypass) - 2026-07-16 CISA KEV curl Cookie 域绕过
 - [2026 年 7 月 Patch Tuesday 深度复盘：5 个 CISA KEV 0-day 联合攻击链与 0-72 小时应急清单](/security/offensive/july-2026-patch-tuesday-5-cisa-kev-zero-day-attack-chains-2026) - 2026-07-17 SonicWall/ADFS/SharePoint/BitLocker/Langflow 622 CVE
 - [CVE-2026-49471 Serena MCP DNS Rebinding RCE 完整复盘：浏览器一行 URL 击穿 IDE](/security/offensive/cve-2026-49471-serena-mcp-dns-rebinding-rce) - 2026-07-20 CVSS 8.1 浏览器→MCP 工具链 8 秒渗透
 - [CVE-2026-48710 BadHost 深度分析：Starlette/FastAPI/MCP 主机头路径注入认证绕过](/security/offensive/cve-2026-48710-starlette-badhost-auth-bypass) - 2026-07-21 影响 FastAPI/vLLM/LiteLLM/MCP Server
