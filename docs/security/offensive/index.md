@@ -70,6 +70,8 @@ recommend: 安全
 - [CVE-2026-49471 Serena MCP DNS Rebinding RCE 完整复盘：浏览器一行 URL 击穿 IDE](/security/offensive/cve-2026-49471-serena-mcp-dns-rebinding-rce) - 2026-07-20 CVSS 8.1 浏览器→MCP 工具链 8 秒渗透
 - [CVE-2026-48710 BadHost 深度分析：Starlette/FastAPI/MCP 主机头路径注入认证绕过](/security/offensive/cve-2026-48710-starlette-badhost-auth-bypass) - 2026-07-21 影响 FastAPI/vLLM/LiteLLM/MCP Server
 - [SonicWall SMA1000 KNUCKLEBALL 零日攻击链：Volexity UTA0533 从 SSRF 到 root 的完整技术链](/security/offensive/sonicwall-sma1000-knuckleball-zero-day-attack-chain-volexity-2026) - 2026-07-22 CVSS 10+7.2 UTA0533 INC 勒索
+- [NGINX CVE-2026-42533 深度拆解：15 年预认证 RCE，map 指令两遍评估捕获污染攻击链](/security/offensive/nginx-cve-2026-42533-map-regex-heap-overflow-15-year-pre-auth-rce-2026) - 2026-07-24 CVSS 9.2 map 正则堆溢出 ASLR 绕过
+- [SharePoint CVE-2026-50522 攻击浪潮：CVSS 9.8 反序列化 RCE 从 PoC 到 IIS 机器密钥窃取](/security/offensive/sharepoint-cve-2026-50522-deserialization-rce-attack-wave-2026) - 2026-07-24 watchTowr PoC 5 CVE 攻击矩阵
 
 ### 🔬 供应链与工具链安全
 - [Miasma 供应链蠕虫攻击深度分析：2026 年开源生态的至暗时刻](/security/offensive/miasma-supply-chain-worm-attack-2026) - 2026-06-15

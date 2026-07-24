@@ -21,6 +21,7 @@ cover: /images/covers/devops.svg
 | 2 | ☸️ K8s 1.36 | [Kubernetes v1.36 Haru 深度实战：70 项增强全解读](/devops/kubernetes-v1-36-haru-deep-dive-2026) | 2026-06-16 |
 | 3 | 🎤 KubeCon 2026 | [KubeCon Europe 2026 深度复盘：82% 采用率 vs 7% AI 部署率](/devops/kubecon-europe-2026-ai-execution-gap-cloud-native-deep-dive) | 2026-07-03 |
 | 4 | 🤖 Docker AI Governance | [Docker AI Governance 实战：让 AI Agent 在沙箱里自由探索](/devops/docker-ai-governance-agent-isolation-2026) | 2026-07-20 |
+| 5 | ⚡ Rust 异步运行时 | [Rust 异步运行时七年战争：从 Tokio 垄断到 io_uring 破局](/devops/rust-async-runtime-tokio-vs-io-uring-seven-year-war-2026) | 2026-07-24 |
 
 ## 🔍 可观测性
 
