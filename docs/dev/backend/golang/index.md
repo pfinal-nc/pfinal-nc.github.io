@@ -108,6 +108,7 @@ pageClass: golang-hub-page
 - [**Go Flight Recorder 持续执行追踪：零成本事后取证与性能诊断**](/dev/backend/golang/go-flight-recorder-continuous-execution-tracing-2026) - 2026-07-13 生产环境持续追踪
 - [**Go 1.28 PGO 默认开启生产实战：从数据采集到 CI 全链路优化**](/dev/backend/golang/go-1-28-pgo-default-on-production-2026) - 2026-07-17 Uber -14%、Datadog -7%
 - [**Go 1.28 路线图深度解析：Cgo 抛弃 C 工具链、泛型容器、Green Tea GC 全面接管**](/dev/backend/golang/go-1-28-roadmap-pure-cgo-generic-containers-2026) - 2026-07-20 12 大特性全景
+- [**Go 1.28 arena 内存管理生产实战：请求级零 GC 压力的原理、陷阱与基准测试**](/dev/backend/golang/go-1-28-arena-memory-management-production-2026) - 2026-07-25 标准库 arena 包落地
 
 ### 安全 & 供应链
 - [**Go SBOM 实战：软件供应链安全**](/dev/backend/golang/go-sbom-supply-chain-security) - SBOM 落地

@@ -47,6 +47,7 @@ cover: /images/covers/ai.svg
 | 26 | 🔐 MCP 企业授权 | [MCP 企业托管授权（EMA）2026 实战：零点击 OAuth 与 ID-JAG 身份断言链](/ai/mcp-enterprise-managed-authorization-2026) | 2026-07-14 |
 | 27 | 🦀 Bun Rust 重写 | [Bun Rust 重写事件深度解析：64 个 Claude Agent 11 天百万行代码迁移的技术真相与争议](/ai/bun-rust-rewrite-ai-11-days-claude-2026) | 2026-07-15 |
 | 28 | 🌐 Kimi K3 | [Kimi K3 深度解析：2.8T 全球最大开源 MoE 模型如何改写 AI 竞争格局](/ai/kimi-k3-2-8t-open-moe-model-deep-dive-2026) | 2026-07-22 |
+| 29 | 🧠 记忆投毒 | [AI Agent 记忆投毒攻击与防御 2026：OWASP ASI06 详解与生产级内存治理方案](/ai/ai-agent-memory-poisoning-attack-defense-2026) | 2026-07-25 |
 
 **学习路径建议**：从 1→7 顺序阅读，1 是入门基础，3 和 5 是 2026 必备技能，7 是前沿探索。8 打通 Agent 到前端最后一公里，9 是 AI 编程工具链巅峰之作。10-12 是 MCP 协议生态最新实战，从协议设计到生产级集成完整覆盖。13-15 聚焦 AI 编程终端 Agent 的工程化、团队治理与协议规范迁移。18-19 进入 Agent 工程化治理与持久化执行的新阶段：18 用 SDD 治理 Vibe Coding 碎片化（GitHub Spec Kit 实战），19 详解 LangGraph 1.0 Durable Execution + Human-in-the-Loop 生产级架构（PostgresSaver/RedisSaver/HITL 中断恢复）。23-27 探索 AI Agent 信息架构新范式、编码 Agent 落地与企业级授权治理：23 Context Engineering 揭示从 Prompt Engineering 到全局信息架构的跃迁，24 X MCP Server 实现零配置托管式 150+ API 端点集成，25 是 Claude Sonnet 5 发布后的生产级 Agent 编码落地指南，26 详解 MCP 企业托管授权（EMA）与 ID-JAG 如何终结企业 MCP 部署的逐服务 OAuth 噩梦，27 深度解读 Bun 用 64 Claude Agent 从 Zig 迁移到 Rust 的 AI 大规模重写事件。
 
@@ -86,11 +87,11 @@ cover: /images/covers/ai.svg
 
 ## 📊 系列文章统计
 
-- **AI Agent 全栈**：26 篇（2026 年新增 24 篇，含 AG-UI 前端集成、OpenCode 架构、Agent Skills、MCP 路线图、OpenClaw 实战、Harness Engineering、Codex CLI、MCP Spec RC、Safari MCP、AI 漏洞挖掘范式、GitHub Spec Kit、LangGraph 1.0、GPT-5.6 出口管制、Grok 4.5 编码 Agent、ACL 推理漂移评测、Context Engineering、X MCP Server、Claude Sonnet 5、Bun Rust 重写）
+- **AI Agent 全栈**：27 篇（2026 年新增 25 篇，含 AG-UI 前端集成、OpenCode 架构、Agent Skills、MCP 路线图、OpenClaw 实战、Harness Engineering、Codex CLI、MCP Spec RC、Safari MCP、AI 漏洞挖掘范式、GitHub Spec Kit、LangGraph 1.0、GPT-5.6 出口管制、Grok 4.5 编码 Agent、ACL 推理漂移评测、Context Engineering、X MCP Server、Claude Sonnet 5、Bun Rust 重写、Kimi K3、AI Agent 记忆投毒）
 - **RAG / LLM 应用**：6 篇
 - **模型接入实战**：2 篇（Claude Sonnet 4.6 + Gemini 3.5 Flash）
 - **LLM 评测与协议演进**：2 篇（RULER/MRCR 长上下文 + HSCodeComp 推理漂移）
-- **累计 35 篇**，更新频率：每周 2-3 篇热点文章同步
+- **累计 36 篇**，更新频率：每周 2-3 篇热点文章同步
 
 ---
 
