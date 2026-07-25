@@ -78,6 +78,7 @@ recommend: 安全
 - [Miasma 供应链蠕虫攻击深度分析：2026 年开源生态的至暗时刻](/security/offensive/miasma-supply-chain-worm-attack-2026) - 2026-06-15
 - [gosentry 实战：Go 模糊测试工具链革命——LibAFL 引擎与语法 Fuzzing](/security/offensive/gosentry-go-fuzzing-libafl-toolchain-2026) - 2026-06-23
 - [Sapphire Sleet 国家级 npm 供应链攻击深度复盘：Mastra AI 19 分钟投毒 140+ 包的完整技术链](/security/offensive/sapphire-sleet-mastra-ai-npm-supply-chain-2026) - 2026-07-10 朝鲜 APT 攻击
+- [SleeperGem RubyGems 供应链攻击深度拆解：休眠账户、CI 规避与开发者主机持久化](/security/offensive/sleepergem-rubygems-supply-chain-attack-2026) - 2026-07-26 RubyGems 劫持 dormant 账户
 
 ### 🏰 零信任架构
 - [零信任架构实战 2026：从 BeyondCorp 到 SPIFFE/SPIRE 的 Go 实现](/security/offensive/zero-trust-architecture-spiffe-spire-2026) - 2026-06-22
