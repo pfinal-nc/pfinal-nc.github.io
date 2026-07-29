@@ -1,5 +1,5 @@
 ---
-title: "FastAPI 测试与部署：生产环境最佳实践"
+title: "FastAPI 测试与部署实战 2026：从单元测试到 Kubernetes 生产环境完整指南"
 date: 2026-03-11 00:00:00
 author: PFinal南丞
 description: "学习如何测试和部署 FastAPI 应用到生产环境。包括单元测试、集成测试、Docker 部署、Kubernetes 部署、CI/CD 流程等生产环境最佳实践。"
@@ -24,7 +24,7 @@ tags:
 difficulty: 进阶
 ---
 
-# FastAPI 测试与部署：生产环境最佳实践
+# FastAPI 测试与部署实战 2026：从单元测试到 Kubernetes 生产环境完整指南
 
 > 学习如何测试和部署 FastAPI 应用到生产环境。包括单元测试、集成测试、Docker 部署、Kubernetes 部署、CI/CD 流程等生产环境最佳实践。
 

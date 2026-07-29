@@ -31,16 +31,14 @@ keywords:
 summary: >-
   Golang RAG System Tutorial: 深入讲解如何使用 Go 构建完整的 RAG 系统，涵盖 OpenAI API
   集成、向量数据库选型（Qdrant/Pinecone）、Embedding 生成和语义检索。
-description: >-
-  Golang RAG System Tutorial 2025: Build production-ready RAG applications with
-  Go, OpenAI API, and vector databases. Complete guide for AI engineering.
+description: Golang RAG 系统实战 2025：用 Go 构建生产级 RAG 应用，涵盖 OpenAI API 集成、Qdrant 向量数据库、Embedding 生成与语义检索。附完整代码示例和 Docker 部署方案。
 readingTime: 15
 status: published
 toc: true
 recommend: 后端工程
 ---
 
-# Golang 实现 RAG 系统：从 OpenAI API 到向量数据库完整实战
+# Golang RAG 系统实战 2025 - OpenAI 到向量数据库完整指南
 
 ## 📖 引言
 

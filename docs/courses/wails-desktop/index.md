@@ -101,7 +101,7 @@ course:
 
 **相关文章：**
 - [程序员必备神器：PF-password 密码管理器](/Tools/PF-Password-Manager)
-- [使用 Go-systray 构建智能系统托盘应用](/dev/backend/golang/使用-Go-systray-构建智能系统托盘应用-Wails-v2-集成实战)
+- [使用 Go-systray 构建智能系统托盘应用](/dev/backend/golang/wails/使用-Go-systray-构建智能系统托盘应用-Wails-v2-集成实战)
 
 ---
 
@@ -148,7 +148,7 @@ course:
 **推荐文章：**
 - [基于 wails 和 Tailwindcss 的应用开发](/dev/backend/golang/Wails-Tailwind-Development)
 - [基于 Wails 和 Vue.js 打造跨平台桌面应用](/dev/backend/golang/Wails-Vue-Desktop-App)
-- [基于 Wails 的 Mac 桌面应用开发](/dev/backend/golang/Wails-Mac-Development)
+- [基于 Wails 的 Mac 桌面应用开发](/dev/backend/golang/wails/基于Wails的Mac桌面应用开发)
 - [提升 Wails 应用性能：探索 Go-Cache 的高效内存缓存方案](/dev/backend/golang/Wails-Go-Cache-Performance)
 
 </div>

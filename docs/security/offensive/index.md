@@ -74,6 +74,7 @@ recommend: 安全
 - [SharePoint CVE-2026-50522 攻击浪潮：CVSS 9.8 反序列化 RCE 从 PoC 到 IIS 机器密钥窃取](/security/offensive/sharepoint-cve-2026-50522-deserialization-rce-attack-wave-2026) - 2026-07-24 watchTowr PoC 5 CVE 攻击矩阵
 - [CVE-2026-43456 深度分析：Linux 内核 bonding 驱动 19 年类型混淆漏洞与 99% 稳定提权链](/security/offensive/cve-2026-43456-linux-bonding-type-confusion-privilege-escalation-2026) - 2026-07-25 net/bonding 类型混淆 kernelCTF $80K
 - [CVE-2026-6875 深度复盘：ServiceNow AI 平台预认证沙箱逃逸 RCE 在野利用链](/security/offensive/cve-2026-6875-servicenow-pre-auth-rce-in-the-wild-2026) - 2026-07-27 CVSS 9.5 85% 财富 500 / MID Server 横向移动
+- [FortiBleed 深度复盘：CVE-2026-35616 如何收割 1.1 亿凭证、瘫痪 354 个组织](/security/offensive/fortibleed-cve-2026-35616-forticlient-ems-credential-harvest-2026) - 2026-07-28 CVSS 9.1 43万防火墙 / FortigateSniffer / INC+Lynx 勒索
 
 ### 🔬 供应链与工具链安全
 - [Miasma 供应链蠕虫攻击深度分析：2026 年开源生态的至暗时刻](/security/offensive/miasma-supply-chain-worm-attack-2026) - 2026-06-15

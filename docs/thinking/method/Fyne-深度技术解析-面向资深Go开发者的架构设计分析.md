@@ -1,8 +1,8 @@
 ---
-title: "Fyne 深度技术解析 - Go 实战指南"
+title: "Fyne 深度技术解析 2025 - Go 原生 GUI 框架架构与实战指南"
 date: 2025-01-27 00:00:00
 author: PFinal南丞
-description: 深入分析 Fyne 框架的架构设计、技术实现和设计模式，为资深 Go 开发者提供技术洞察。
+description: Fyne 深度技术解析 2025：Go 原生 GUI 框架的架构设计、渲染引擎、Widget 系统完整剖析。含与 Wails 的对比分析、主题定制、跨平台适配实战代码。
 tags:
   - golang
   - GUI
@@ -19,7 +19,7 @@ keywords:
   - 主题系统
 ---
 
-# Fyne 深度技术解析,从 Wails 到 Fyne
+# Fyne 深度技术解析 2025 - Go 原生 GUI 框架架构与实战指南
 
 作为一个经常使用 Wails 来开发小工具的熟练工,看到很多人推荐 Fyne,之前有简单的使用过 Fyne,没有仔细的学习过,于是学习了一下 Fyne 到底好在哪，以及它和 Wails 这种 Web 技术栈的方案有什么不同,做一个记录。
 

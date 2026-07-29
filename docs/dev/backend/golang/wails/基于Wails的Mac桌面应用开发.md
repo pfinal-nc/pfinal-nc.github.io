@@ -1,10 +1,10 @@
 ---
-title: "Wails Mac 桌面应用开发 - 实战指南"
+title: "Wails Mac 桌面应用开发实战 2025"
 date: 2023-10-18 11:06:22
 tags:
   - golang
   - Wails
-description: 基于Wails的Mac桌面应用开发
+description: Wails Mac 桌面应用开发实战 2025：macOS 原生特性集成、系统对话框、窗口控制、App Store 发布完整指南。含代码签名和公证流程。
 author: PFinal南丞
 keywords:
   - Wails
@@ -34,7 +34,7 @@ keywords:
   - wails v3
 recommend: 后端工程
 ---
-# 基于Wails的Mac桌面应用开发
+# Wails Mac 桌面应用开发实战 2025
 
 > 在Go语言生态中，Wails是一个优秀的跨平台桌面应用开发框架。本文将详细介绍如何使用Wails开发Mac桌面应用，包括项目创建、架构设计、前后端通信等核心内容。
 

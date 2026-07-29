@@ -80,7 +80,7 @@ date: 2025-12-19 12:30:00
 - [Qwen Code 30 个使用小技巧](/thinking/notes/Qwen Code 30个使用小技巧)
 
 #### Wails 实践
-- [Wails Gonavi 实践](/dev/backend/golang/wails/wails-gonavi-practice)
+- [Wails 生态巡礼：GoNavi & TinyRDM](/wails-gonavi-practice)
 
 #### 系统对比
 - [现代 Web 系统开发 与 传统 Web 系统开发 的差异](/thinking/method/现代Web系统开发 与 传统Web系统开发 的差异)

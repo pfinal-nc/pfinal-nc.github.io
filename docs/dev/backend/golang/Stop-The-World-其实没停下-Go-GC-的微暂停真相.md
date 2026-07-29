@@ -1,13 +1,11 @@
 ---
-title: Stop-The-World 其实没停下 - Go GC 的微暂停真相
+title: Stop-The-World 其实没停下 - Go GC 微暂停真相深度剖析 2025
 date: 2025-10-29 10:00:00
 tags:
   - golang
   - GC
   - 性能优化
-description: >-
-  深入剖析 Go 垃圾回收的 STW 机制，揭示"并发 GC"背后的微暂停真相。从源码实现到生产实践，带你理解 Go GC 的两次 STW、写屏障开销、以及
-  P99 延迟的真正元凶。
+description: Go GC 微暂停真相深度剖析 2025：深入解析 Stop-The-World 机制、两次 STW 阶段、写屏障开销、三色标记算法。从源码到生产实践，定位 P99 延迟元凶。
 author: PFinal南丞
 keywords:
   - Go GC
@@ -23,7 +21,7 @@ keywords:
 recommend: 后端工程
 ---
 
-# Stop-The-World 其实没停下：Go GC 的微暂停真相
+# Stop-The-World 其实没停下 - Go GC 微暂停真相深度剖析 2025
 
 做支付系统优化时发现一个问题：P99 延迟降不下来，监控上每隔几秒就有规律的尖刺。排查后发现是 GC 的 STW。
 

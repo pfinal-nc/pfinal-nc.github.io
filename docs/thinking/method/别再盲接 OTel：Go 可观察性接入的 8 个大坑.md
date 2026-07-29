@@ -4,9 +4,7 @@ date: 2024-10-23 09:08:02
 tags:
   - golang
   - 可观测性
-description: >-
-  这是一份面向 Go 团队的 OTel 接入避坑指南，覆盖全局 Provider 覆盖、采样与批处理配置、TraceContext
-  统一、指标高基数控制、Exporter 超时与降级、以及版本升级兼容等关键问题，并给出可落地的默认配置与演练清单。
+description: Go 可观察性接入 OTel 的 8 个大坑避坑指南：全局 Provider 覆盖、采样配置、TraceContext 统一、指标高基数、Exporter 超时降级。附可落地默认配置。
 author: PFinal南丞
 keywords:
   - OTel

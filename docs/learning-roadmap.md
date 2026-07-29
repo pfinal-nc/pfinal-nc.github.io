@@ -115,9 +115,9 @@ tags:
 - [Wails 后端开发实战](/dev/backend/golang/wails/05-backend-development) 🟡
 
 #### 4.2 实战项目
-- [使用 Go Systray 构建智能系统托盘应用](/dev/backend/golang/使用-Go-systray-构建智能系统托盘应用-Wails-v2-集成实战) 🔴
-- [基于 Wails 和 Vue.js 打造跨平台桌面应用](/dev/backend/golang/基于Wails和Vue.js打造跨平台桌面应用) 🔴
-- [提升 Wails 应用性能：探索 Go-Cache 的高效内存缓存方案](/dev/backend/golang/提升Wails应用性能：探索Go-Cache的高效内存缓存方案) 🔴
+- [使用 Go Systray 构建智能系统托盘应用](/dev/backend/golang/wails/使用-Go-systray-构建智能系统托盘应用-Wails-v2-集成实战) 🔴
+- [Wails + Vue.js 跨平台桌面应用实战](/dev/backend/golang/Wails-Vue-Desktop-App) 🔴
+- [提升 Wails 应用性能：Go-Cache 内存缓存方案](/dev/backend/golang/Wails-Go-Cache-Performance) 🔴
 
 **📌 阶段目标**：能够使用 Wails 开发跨平台桌面应用
 

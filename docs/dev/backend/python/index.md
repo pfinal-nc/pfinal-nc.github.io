@@ -53,6 +53,7 @@ pageClass: python-hub-page
 
 ### 🚀 2026 语言新特性
 - [**Python 3.15 新特性深度解析**](/dev/backend/python/python-3-15-new-features-2026) 🔴 - 延迟导入、frozendict、Tachyon 采样器（2026-07-07）
+- [**Python JIT 的生死六个月：Steering Council 最后通牒与 PEP 836 的自救之路**](/dev/backend/python/python-jit-steering-council-ultimatum-pep-836-2026) 🔴 - 治理危机 / 6 个月期限 / free-threading 冲突 / PyPy 对比（2026-07-28）
 
 ### 🚀 2026 AI 框架专题
 - [**Pydantic AI：Type-Safe Agent 框架实战**](/dev/backend/python/pydantic-ai-type-safe-agent-framework-2026) 🔴 - 类型安全 Agent 开发（2026-06-26）

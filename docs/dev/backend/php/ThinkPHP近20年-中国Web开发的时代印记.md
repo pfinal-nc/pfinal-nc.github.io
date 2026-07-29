@@ -1,5 +1,5 @@
 ---
-title: ThinkPHP 近 20 年 - 中国 Web 开发的时代印记与实战经验
+title: ThinkPHP 20 年实战经验：从 2006 到 8.1 的升级避坑指南
 date: 2025-07-16 10:00:02
 author: PFinal南丞
 tags:
@@ -26,7 +26,7 @@ keywords:
 recommend: 后端工程
 ---
 
-# ThinkPHP近20年——中国Web开发的时代印记
+# ThinkPHP 20 年实战经验：从 2006 到 8.1 的升级避坑指南
 
 
 ## 目录

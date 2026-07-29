@@ -1,5 +1,6 @@
 ---
-title: LLM 安全攻防实战：Prompt Injection 原理与全面防御体系
+title: "LLM Prompt Injection 攻防 2026：注入原理 + 7 层防御 + 红队评估实战"
+description: "Prompt Injection 攻防全景：直接/间接注入 12 种手法、7 层防御体系（输入过滤→输出检测→沙箱隔离）、AI Agent 红队评估实战。"
 date: 2026-06-05
 tags:
   - security
@@ -16,7 +17,6 @@ keywords:
   - AISPM
   - 零信任
 category: security/offensive
-description: 深入剖析 LLM 提示注入攻击原理与分类，构建从输入过滤到输出验证的三层防御体系，详解零信任 AI 架构和 AISPM 安全态势管理，附 GTG-1002 多代理攻击案例。
 ---
 
 # LLM 安全攻防实战：Prompt Injection 原理与全面防御体系

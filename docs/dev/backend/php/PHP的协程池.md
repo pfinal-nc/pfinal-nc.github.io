@@ -23,9 +23,7 @@ keywords:
   - Workerman实战
   - 高并发优化
   - 协程池监控
-description: >-
-  从Go协程池代码重构到PHP
-  Workerman实现的完整实战。详细讲解协程池原理、Channel通道机制、动态协程池、数据库连接池等高级特性，包含实际生产环境经验和性能优化技巧。
+description: 从 Go 协程池到 PHP 实现：一次代码重构实战，Workerman 协程调度、Channel 通道、数据库连接池的 PHP 高并发解决方案。含完整重构案例。
 recommend: 后端工程
 ---
 

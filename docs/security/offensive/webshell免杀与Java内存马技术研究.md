@@ -1,8 +1,8 @@
 ---
-title: "WebShell 免杀与 Java 内存马技术研究"
+title: "WebShell 免杀与 Java 内存马 2026：蚁剑/冰蝎流量混淆与 Agent 注入检测全解析"
 date: 2026-05-20 08:30:00
 author: PFinal南丞
-description: "深入解析 WebShell 免杀技术与 Java 内存马原理，涵盖蚁剑/冰蝎流量混淆、编码绕过、特征修改、以及 Java Agent 与 Servlet 内存马的实现与检测方法。帮助安全研究人员理解攻防双方在 WebShell 层面的对抗技术。"
+description: "WebShell 攻防双视角深度解析：蚁剑/冰蝎流量混淆 7 种技术、编码绕过 5 层检测、Java Agent 与 Servlet 内存马注入原理及 3 种检测方案。"
 keywords:
   - WebShell
   - 免杀

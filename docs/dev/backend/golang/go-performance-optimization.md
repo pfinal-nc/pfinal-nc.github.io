@@ -7,7 +7,7 @@ tags:
   - 性能优化
   - pprof
   - 内存管理
-description: 全面讲解 Go 程序性能优化方法，包括 pprof 性能分析、内存分配优化、GC 调优等实战技巧。
+description: Go 性能优化实战 2026：从 pprof 内存分析到 GC 调优，7 个生产级优化技巧附完整代码。涵盖 CPU profiling、内存逃逸分析、sync.Pool 复用、字符串优化等核心场景。
 ---
 
 # Go 性能优化实战：从 pprof 到内存管理

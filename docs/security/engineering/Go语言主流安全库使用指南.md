@@ -1,9 +1,9 @@
 ---
-title: Go语言主流安全库使用指南
+title: "Go 安全库选型指南 2026：casbin/rego/coraza 等 8 大库对比与集成实战"
 date: 2024-04-10 11:46:43
 tags:
     - golang
-description: 详细介绍Go语言主流安全库的使用方法，包括crypto、encoding、hash、math、rand、strconv、time等库的使用，帮助开发者更好地保护应用程序的安全性。
+description: "8 大 Go 安全库深度对比：casbin 权限控制、Open Policy Agent/rego 策略引擎、coraza WAF、go-crypt 等，附选型决策树与生产集成代码。"
 author: PFinal南丞
 keywords:
   - Go语言安全库使用指南

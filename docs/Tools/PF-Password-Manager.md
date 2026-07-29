@@ -1,6 +1,6 @@
 ---
-title: "程序员必备神器：PF-password 密码管理器"
-description: "介绍 PF-password 密码管理器的功能特点、技术实现和使用方法，一款专为程序员设计的开源密码管理工具。"
+title: "PF-Password 密码管理器 2026：Go + Alfred Workflow 构建开源密码管理工具"
+description: "用 Go + Alfred Workflow 自建开源密码管理器：AES-256 加密、多设备同步、CLI 快捷检索，告别 1Password 订阅费的完整方案。"
 keywords:
   - 密码管理器
   - PF-password

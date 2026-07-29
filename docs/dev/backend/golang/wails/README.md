@@ -50,31 +50,31 @@ Wails 是一个让 Go 开发者使用 Web 技术构建跨平台桌面应用的�
   - 跨平台打包与分发
 
 ### 🎮 抖音直播工具
-- [基于 Wails 的抖音直播工具](/dev/backend/golang/基于Wails的抖音直播工具)
+- [Wails 抖音直播助手实战](/dev/backend/golang/Wails-Douyin-Live-Tool)
   - 实战项目开发
   - 功能模块设计
   - 部署与发布
 
 ### 📋 Gonavi 实践
-- [Wails Gonavi 实践](/dev/backend/golang/wails/wails-gonavi-practice)
+- [Wails 生态巡礼：GoNavi & TinyRDM](/wails-gonavi-practice)
   - 完整项目案例
   - 开发经验总结
   - 最佳实践分享
 
 ### 🖥️ Mac 桌面应用
-- [基于 Wails 的 Mac 桌面应用开发](/dev/backend/golang/基于Wails的Mac桌面应用开发)
+- [Wails Mac 桌面应用开发实战](/dev/backend/golang/wails/基于Wails的Mac桌面应用开发)
   - macOS 特性集成
   - 原生体验优化
   - App Store 发布
 
 ### 🎨 Vue.js + Wails
-- [基于 Wails 和 Vue.js 打造跨平台桌面应用](/dev/backend/golang/基于Wails和Vue.js打造跨平台桌面应用)
+- [Wails + Vue.js 跨平台桌面应用实战](/dev/backend/golang/Wails-Vue-Desktop-App)
   - Vue 3 深度集成
   - 组件化开发
   - 状态管理实践
 
 ### 🌐 TailwindCSS + Wails
-- [基于 wails 和 TailwindCSS 的应用开发](./基于wails和Tailwindcss的应用开发.md)
+- [Wails + TailwindCSS 应用开发实战](/dev/backend/golang/Wails-Tailwind-Development)
   - 样式系统设计
   - 响应式布局
   - 主题定制
@@ -84,7 +84,7 @@ Wails 是一个让 Go 开发者使用 Web 技术构建跨平台桌面应用的�
 ## ⚡ 性能优化
 
 ### 💾 高效缓存方案
-- [提升 Wails 应用性能：探索 Go-Cache 的高效内存缓存方案](./提升Wails应用性能：探索Go-Cache的高效内存缓存方案.md)
+- [提升 Wails 应用性能：Go-Cache 内存缓存方案](/dev/backend/golang/Wails-Go-Cache-Performance)
   - 内存缓存策略
   - 性能对比分析
   - 实战优化案例

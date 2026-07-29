@@ -108,11 +108,11 @@ author: PFinal南丞
   - [05 - 后端开发](/dev/backend/golang/wails/05-backend-development)
 
 ### Wails 实战项目
-- [基于Wails和Vue.js打造跨平台桌面应用](/dev/backend/golang/基于Wails和Vue.js打造跨平台桌面应用)
-- [基于Wails的Mac桌面应用开发](/dev/backend/golang/基于Wails的Mac桌面应用开发)
-- [基于Wails的抖音直播工具](/dev/backend/golang/基于Wails的抖音直播工具)
-- [基于wails和Tailwindcss的应用开发](/dev/backend/golang/基于wails和Tailwindcss的应用开发)
-- [提升Wails应用性能：探索Go-Cache的高效内存缓存方案](/dev/backend/golang/提升Wails应用性能：探索Go-Cache的高效内存缓存方案)
+- [Wails + Vue.js 跨平台桌面应用实战](/dev/backend/golang/Wails-Vue-Desktop-App)
+- [Wails Mac 桌面应用开发实战](/dev/backend/golang/wails/基于Wails的Mac桌面应用开发)
+- [Wails 抖音直播助手实战](/dev/backend/golang/Wails-Douyin-Live-Tool)
+- [Wails + TailwindCSS 应用开发实战](/dev/backend/golang/Wails-Tailwind-Development)
+- [提升 Wails 应用性能：Go-Cache 内存缓存方案](/dev/backend/golang/Wails-Go-Cache-Performance)
 
 ## 🔧 开发工具与技巧
 

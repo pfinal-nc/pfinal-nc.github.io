@@ -3,7 +3,7 @@ title: PHP Redis 配置详解 - 缓存与会话管理实战
 date: 2020-06-09 11:31:32
 tags:
   - Redis
-description: 学习Redis配置文件
+description: PHP Redis 配置详解 2025：daemonize、port、maxmemory、持久化 RDB/AOF、安全配置等核心参数完整指南。含生产环境推荐配置和性能优化技巧。
 keywords:
   - Redis配置文件详解
   - 数据库
@@ -19,7 +19,7 @@ faq:
     answer: RDB 定时快照、恢复快但可能丢最近数据；AOF 记录每条写命令、可配 fsync 策略，更安全但文件更大。生产常同时开启，或主 RDB 从 AOF。
 ---
 
-# Redis配置文件详解
+# PHP Redis 配置详解 2025：缓存与会话管理完整指南
 
 
 ```

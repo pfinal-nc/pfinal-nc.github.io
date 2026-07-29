@@ -111,6 +111,7 @@ pageClass: golang-hub-page
 - [**Go 1.28 arena 内存管理生产实战：请求级零 GC 压力的原理、陷阱与基准测试**](/dev/backend/golang/go-1-28-arena-memory-management-production-2026) - 2026-07-25 标准库 arena 包落地
 - [**Go 1.28 sync.Sharded 分片计数器实战：从缓存行伪共享到百万 QPS 零竞争计数**](/dev/backend/golang/go-1-28-sharded-counters-cache-line-contention-2026) - 2026-07-26 M-local storage / per-P shard 性能优化
 - [**Go 1.28 开发周期正式启动：从 tree reopen 到首批关键 CL 的工程节奏**](/dev/backend/golang/go-1-28-development-cycle-kicks-off-2026) - 2026-07-27 goversion 28 / doc/next / 首批提案
+- [**Go 官方为函数名吵了两个月：maps.Same 提案正式通过的背后**](/dev/backend/golang/go-maps-same-proposal-identity-comparison-2026) - 2026-07-28 指针比较 / 一条 CMP 指令 / NaN 陷阱 / 泛型签名收缩
 
 ### 安全 & 供应链
 - [**Go SBOM 实战：软件供应链安全**](/dev/backend/golang/go-sbom-supply-chain-security) - SBOM 落地

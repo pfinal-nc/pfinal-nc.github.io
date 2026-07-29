@@ -1,9 +1,9 @@
 ---
-title: Golang Web应用完整安全指南
+title: "Go Web 应用安全指南 2026：从认证授权到 CSRF/XSS 的 12 层防御体系"
 date: 2024-10-10 21:58:33
 tags:
     - golang
-description: 详细介绍golang web应用的安全问题，包括输入验证、输出编码、会话管理、文件上传、跨站脚本攻击、SQL注入、密码存储、身份验证、授权、安全配置、日志记录、错误处理、性能优化、安全审计等方面。
+description: "Go Web 安全 12 层防御体系全解：JWT/OAuth 认证、CSRF Token、XSS 过滤、SQL 注入防护、CORS 策略，附可运行代码与中间件实战。"
 author: PFinal南丞
 keywords:
   - golang

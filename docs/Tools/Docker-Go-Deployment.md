@@ -1,6 +1,6 @@
 ---
-title: "Docker 部署 Go 项目实践指南"
-description: "详细介绍如何使用 Docker 容器化部署 Go 项目，包括多阶段构建、镜像优化、Compose 配置等最佳实践。"
+title: "Docker 部署 Go 项目实战 2026：多阶段构建 + 镜像体积减少 90% + Compose 编排"
+description: "Docker Go 部署全流程实战：多阶段构建将镜像从 800MB 压到 15MB、Docker Compose 编排、健康检查、非 root 运行等 10 项生产最佳实践。"
 keywords:
   - Docker
   - golang

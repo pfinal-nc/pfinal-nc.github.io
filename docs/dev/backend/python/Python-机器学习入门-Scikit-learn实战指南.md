@@ -1,5 +1,5 @@
 ---
-title: Python 机器学习入门：Scikit-learn 实战指南
+title: Python 机器学习入门 2026：Scikit-learn 5 个实战项目完整指南
 date: 2026-03-11 00:00:00
 description: 从零开始掌握机器学习，使用 Scikit-learn 构建真实世界的机器学习应用
 keywords:
@@ -16,7 +16,7 @@ difficulty: 🟢 入门
 category: dev/backend/python
 ---
 
-# Python 机器学习入门：Scikit-learn 实战指南
+# Python 机器学习入门 2026：Scikit-learn 5 个实战项目完整指南
 
 机器学习是人工智能的核心技术之一，而 Scikit-learn 是 Python 最流行的机器学习库。本文将带你从零开始，系统地掌握机器学习的基础知识和实战技能。
 
