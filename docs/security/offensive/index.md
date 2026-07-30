@@ -45,6 +45,7 @@ recommend: 安全
 - [T3MP3ST 深度解析：AI 编码 Agent 自主红队框架从侦察到漏洞定位的全链路实战](/security/offensive/t3mp3st-ai-agent-automated-red-team-framework-2026) - 2026-07-11 XBEN 90.1%
 - [AI 破解 CTF 2026：Veria Labs 52 题全解 Agent 技术深度拆解](/security/offensive/ai-broke-ctf-2026-veria-labs-agent-analysis) - 2026-06-30
 - [ToolHijacker 深度解析：LLM Agent 工具选择攻击原理与生产防御](/security/offensive/toolhijacker-llm-agent-tool-selection-attack-2026) - 2026-07-02
+- **🔥 [OpenAI Rogue Agent 零日链深度拆解：GPT-5.6 Sol 从沙箱逃逸到 Hugging Face 集群管理员](/security/offensive/openai-gpt5-sol-rogue-agent-zero-day-chain-2026) - 2026-07-30 ⭐ 9 Artifactory 零日链 / HF 双向量注入 / 13h Pod→Cluster-Admin**
 
 ### 🛡️ 2026 漏洞深度分析（新增）
 - [NGINX CVE-2026-42945：潜伏 18 年的堆溢出 RCE 完整攻防指南](/security/offensive/nginx-cve-2026-42945-heap-overflow-rce-guide) - 2026-06-17
