@@ -11,7 +11,7 @@ let BASE_KEYWORDS = 'PFinalClub, Golang tutorial, Go backend development, Go mic
 export default defineConfig({
   ignoreDeadLinks: true, // 完全禁用死链接检查，允许部署通过
   title: 'PFinalClub',
-  description: 'PFinalClub是一个以后端 + DevOps + AI 工程实践为核心的小众高质量技术博客。提供原创技术文章、实战教程、架构设计、性能优化等专业内容，专注于Go、PHP、Python后端开发、容器化部署、CI/CD和AI工程化应用。',
+  description: 'PFinalClub 专注后端开发实战：Go/PHP/Python 源码解析、系统架构设计、安全攻防技术、AI工程化落地。每篇都有代码，每篇都能跑。',
   themeConfig: {
     outline: {
       level: [2, 3, 4],
@@ -22,15 +22,12 @@ export default defineConfig({
     sidebarMenuLabel: '相关文章',
     lastUpdatedText: '上次更新于',
     logo: '/logo.png',
-    // 精简导航至 8 个核心分类，关于/联系/隐私保留在 footer，分散链接权重
+    // 精简导航至 7 个核心入口，合并同类分类，关于/联系/隐私保留在 footer
+    // 思考/方法论/notes 等深度内容通过文章内链和 footer 访问，不在导航栏中分散权重
     nav: [
-      { text: '首页', link: '/' },
-      { text: '🗺️ 学习路线', link: '/learning-roadmap' },
-      { text: '📚 课程', link: '/courses/' },
-      { text: '攻防研究', link: '/security/offensive/' },
-      { text: '安全工程', link: '/security/engineering/' },
+      { text: '🏠 首页', link: '/' },
       {
-        text: '开发与系统',
+        text: '💻 后端开发',
         items: [
           { text: '总览', link: '/dev/' },
           { text: '🚀 Golang', link: '/dev/backend/golang/' },
@@ -40,17 +37,19 @@ export default defineConfig({
           { text: '💻 系统与基础', link: '/dev/system/' }
         ]
       },
-      { text: '数据与自动化', link: '/data/automation/' },
-      { text: '思考/方法论', link: '/thinking/method/' },
+      { text: '🔐 安全技术', link: '/security/' },
+      { text: '🤖 AI与自动化', link: '/data/automation/' },
+      { text: '🗺️ 学习路线', link: '/learning-roadmap' },
+      { text: '📚 课程', link: '/courses/' },
       // 注意：Linux / GitHub Pages 环境路径大小写敏感，站点实际目录为 /tools
-      { text: '在线工具', link: '/Tools/' }
+      { text: '🛠 工具', link: '/Tools/' }
     ],
     socialLinks: [
       { icon: 'github', link: 'https://github.com/pfinal-nc' },
       { icon: 'twitter', link: 'https://x.com/NPfinal' }
     ],
     footer: {
-      message: '<a href="/about">关于作者</a> | <a href="/contact">联系我们</a> | <a href="/privacy-policy">隐私政策</a>',
+      message: '<a href="/about">关于作者</a> | <a href="/contact">联系我们</a> | <a href="/thinking/method/">思考方法论</a> | <a href="/privacy-policy">隐私政策</a>',
       copyright: 'MIT License | PFinalClub'
     }
   },
@@ -136,15 +135,15 @@ export default defineConfig({
     ['meta', { name: 'author', content: 'PFinal南丞' }],
     ['meta', { name: 'robots', content: 'index,follow' }],
     ['meta', { name: 'googlebot', content: 'index,follow' }],
-    ['meta', { name: 'keywords', content: 'PFinalClub, 后端开发, DevOps, AI工程实践, Golang教程, PHP开发, Python爬虫, 微服务架构, 容器化部署' }],
+    ['meta', { name: 'keywords', content: 'PFinalClub, 后端开发, Go语言, PHP, Python, 系统架构, 安全技术, AI工程, DevOps' }],
     ['meta', { property: 'og:title', content: 'PFinalClub' }],
-    ['meta', { property: 'og:description', content: 'PFinalClub是一个以后端 + DevOps + AI 工程实践为核心的小众高质量技术博客。提供原创技术文章、实战教程、架构设计、性能优化等专业内容，专注于Go、PHP、Python后端开发、容器化部署、CI/CD和AI工程化应用。' }],
+    ['meta', { property: 'og:description', content: 'PFinalClub 专注后端开发实战：Go/PHP/Python 源码解析、系统架构设计、安全攻防技术、AI工程化落地。每篇都有代码，每篇都能跑。' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:url', content: 'https://friday-go.icu' }],
     ['meta', { property: 'og:site_name', content: 'PFinalClub' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:title', content: 'PFinalClub' }],
-    ['meta', { name: 'twitter:description', content: 'PFinalClub是一个以后端 + DevOps + AI 工程实践为核心的小众高质量技术博客。提供原创技术文章、实战教程、架构设计、性能优化等专业内容，专注于Go、PHP、Python后端开发、容器化部署、CI/CD和AI工程化应用。' }],
+    ['meta', { name: 'twitter:description', content: 'PFinalClub 专注后端开发实战：Go/PHP/Python 源码解析、系统架构设计、安全攻防技术、AI工程化落地。每篇都有代码，每篇都能跑。' }],
     ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }],
     ['meta', { 'http-equiv': 'Content-Security-Policy', content: "upgrade-insecure-requests" }],
     ['meta', {name:'google-site-verification', content:'K5jxzJ_KXsS0QhsQnBIuKyxt6BGlPD-w1URDWGTWHo8'}],
