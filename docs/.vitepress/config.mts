@@ -145,6 +145,9 @@ export default defineConfig({
     ['meta', { name: 'twitter:title', content: 'PFinalClub' }],
     ['meta', { name: 'twitter:description', content: 'PFinalClub 专注后端开发实战：Go/PHP/Python 源码解析、系统架构设计、安全攻防技术、AI工程化落地。每篇都有代码，每篇都能跑。' }],
     ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }],
+    // Favicon（PNG 64KB 降为 2KB，支持现代浏览器）
+    ['link', { rel: 'icon', type: 'image/png', href: '/favicon.png' }],
+    ['link', { rel: 'shortcut icon', href: '/favicon.ico' }], // 保留 .ico 兼容旧浏览器
     ['meta', { 'http-equiv': 'Content-Security-Policy', content: "upgrade-insecure-requests" }],
     ['meta', {name:'google-site-verification', content:'K5jxzJ_KXsS0QhsQnBIuKyxt6BGlPD-w1URDWGTWHo8'}],
     ['meta', {name:'360-site-verification', content:'bafd565a2170482bd9ff0c063ba5a41a'}],
@@ -234,6 +237,21 @@ export default defineConfig({
           "url": "https://friday-go.icu/logo.png"
         }
       }
+    })],
+    // Schema.org 结构化数据 - Person（独立作者描述，GEO 权威信号）
+    ['script', { type: 'application/ld+json' }, JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "PFinal南丞",
+      "alternateName": "PFinal",
+      "url": "https://friday-go.icu/about",
+      "jobTitle": "后端开发工程师",
+      "description": "后端开发工程师，专注 Go/PHP/Python 技术栈、安全攻防研究与 AI 工程化落地",
+      "sameAs": [
+        "https://github.com/pfinal-nc",
+        "https://x.com/NPfinal"
+      ],
+      "knowsAbout": ["Golang", "PHP", "Python", "网络安全", "AI Agent", "系统架构设计"]
     })]
   ],
   
@@ -302,6 +320,44 @@ export default defineConfig({
       pageData.frontmatter.head.push(['meta', { property: 'og:image', content: ogImageUrl }]);
       // 同时设置 twitter:image，确保 Twitter 卡片也有图片
       pageData.frontmatter.head.push(['meta', { name: 'twitter:image', content: ogImageUrl }]);
+    }
+
+    // ===== 首页 ItemList Schema（GEO 优化：AI 搜索引擎可理解文章列表结构） =====
+    if (pageData.frontmatter.layout === 'home') {
+      const itemList = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "PFinalClub 技术博客文章分类",
+        "url": baseUrl,
+        "description": "专注后端开发实战的技术博客，涵盖 Golang、PHP、Python、安全攻防、AI 工程化等领域的实战文章集合",
+        "inLanguage": "zh-CN",
+        "numberOfItems": 15,
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Golang 开发技术专题", "url": "https://friday-go.icu/dev/backend/golang/" },
+          { "@type": "ListItem", "position": 2, "name": "PHP 开发技术专题", "url": "https://friday-go.icu/dev/backend/php/" },
+          { "@type": "ListItem", "position": 3, "name": "Python 开发技术专题", "url": "https://friday-go.icu/dev/backend/python/" },
+          { "@type": "ListItem", "position": 4, "name": "安全攻防研究", "url": "https://friday-go.icu/security/offensive/" },
+          { "@type": "ListItem", "position": 5, "name": "AI Agent 与编程技术", "url": "https://friday-go.icu/ai/" },
+          { "@type": "ListItem", "position": 6, "name": "数据采集与自动化", "url": "https://friday-go.icu/data/automation/" },
+          { "@type": "ListItem", "position": 7, "name": "数据库技术专题", "url": "https://friday-go.icu/dev/system/database/" },
+          { "@type": "ListItem", "position": 8, "name": "DevOps 工程实践", "url": "https://friday-go.icu/devops/" },
+          { "@type": "ListItem", "position": 9, "name": "安全工程实践", "url": "https://friday-go.icu/security/engineering/" },
+          { "@type": "ListItem", "position": 10, "name": "工具与实用程序", "url": "https://friday-go.icu/Tools/" },
+          { "@type": "ListItem", "position": 11, "name": "技术架构与方法论", "url": "https://friday-go.icu/thinking/method/" },
+          { "@type": "ListItem", "position": 12, "name": "Go 后端工程师成长路线", "url": "https://friday-go.icu/courses/golang-backend/" },
+          { "@type": "ListItem", "position": 13, "name": "Wails 跨平台桌面开发实战", "url": "https://friday-go.icu/courses/wails-desktop/" },
+          { "@type": "ListItem", "position": 14, "name": "RxJS 响应式编程实战", "url": "https://friday-go.icu/courses/rxjs/" },
+          { "@type": "ListItem", "position": 15, "name": "DevOps 工程实践课程", "url": "https://friday-go.icu/courses/devops-practice/" }
+        ],
+        "publisher": {
+          "@type": "Organization",
+          "name": "PFinalClub",
+          "logo": { "@type": "ImageObject", "url": `${baseUrl}/logo.png` }
+        }
+      };
+      pageData.frontmatter.head.push([
+        'script', { type: 'application/ld+json' }, JSON.stringify(itemList)
+      ]);
     }
 
     // 判断是否为文章详情页（这里假设详情页没有设置 layout）

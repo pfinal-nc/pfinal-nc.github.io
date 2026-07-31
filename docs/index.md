@@ -1,5 +1,5 @@
 ---
-title: "PFinalClub | 后端开发实战博客 - Go/PHP/Python 源码与架构"
+title: "后端开发实战博客 - Go/PHP/Python 源码与架构"
 description: "PFinalClub：专注后端开发实战的技术博客。Go/PHP/Python 源码级解析、系统架构设计、安全攻防技术、AI工程化落地。每篇文章都有可运行的代码。"
 keywords:
   - 后端开发
