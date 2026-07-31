@@ -84,6 +84,7 @@ cover: /images/covers/ai.svg
 |---|------|------|------|
 | 1 | 📏 长上下文评测 | [LLM 长上下文 2026：RULER/MRCR 评测体系完全解读](/ai/llm-long-context-ruler-mrcr-2026) | 2026-06-25 |
 | 2 | 📏 推理漂移评测 | [ACL 2026 推理漂移 HSCodeComp：Agent 层级规则应用的结构性缺陷](/ai/acl-2026-hscodecomp-reasoning-drift-agent-benchmark) | 2026-07-09 |
+| 3 | 🐹 Agent 评测框架 | [Go 构建轻量级 AI Agent Eval 框架：从零实现 Agent 评测工具](/ai/go-agent-eval-framework-2026) | 2026-07-29 |
 
 ---
 
@@ -92,8 +93,8 @@ cover: /images/covers/ai.svg
 - **AI Agent 全栈**：28 篇（2026 年新增 26 篇，含 AG-UI 前端集成、OpenCode 架构、Agent Skills、MCP 路线图、OpenClaw 实战、Harness Engineering、Codex CLI、MCP Spec RC、Safari MCP、AI 漏洞挖掘范式、GitHub Spec Kit、LangGraph 1.0、GPT-5.6 出口管制、Grok 4.5 编码 Agent、ACL 推理漂移评测、Context Engineering、X MCP Server、Claude Sonnet 5、Bun Rust 重写、Kimi K3、AI Agent 记忆投毒、MCP Apps/Tasks 扩展）
 - **RAG / LLM 应用**：6 篇
 - **模型接入实战**：2 篇（Claude Sonnet 4.6 + Gemini 3.5 Flash）
-- **LLM 评测与协议演进**：2 篇（RULER/MRCR 长上下文 + HSCodeComp 推理漂移）
-- **累计 37 篇**，更新频率：每周 2-3 篇热点文章同步
+- **LLM 评测与协议演进**：3 篇（RULER/MRCR 长上下文 + HSCodeComp 推理漂移 + Go Agent Eval 框架）
+- **累计 38 篇**，更新频率：每周 2-3 篇热点文章同步
 
 ---
 
