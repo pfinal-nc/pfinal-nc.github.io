@@ -50,6 +50,7 @@ cover: /images/covers/ai.svg
 | 29 | 🧠 记忆投毒 | [AI Agent 记忆投毒攻击与防御 2026：OWASP ASI06 详解与生产级内存治理方案](/ai/ai-agent-memory-poisoning-attack-defense-2026) | 2026-07-25 |
 | 30 | 🖥️ MCP Apps/Tasks | [MCP 2026-07-28 Apps 与 Tasks 扩展实战：让 Agent 长出界面与长任务能力](/ai/mcp-apps-tasks-extension-production-2026) | 2026-07-26 |
 | 31 | 🔄 Codex 0.145 | [Codex CLI 0.145 深度解析：/import 迁移战争、Multi-Agent V2 与透明度争议](/ai/codex-cli-0-145-import-migration-multi-agent-transparency-2026) | 2026-07-27 |
+| 32 | 🧪 评估不对称 | [Karpathy Opus 5 一百万 token 渲染指环王：Agent 评估的"生成与验证"不对称性如何重新定义 AI 工作流](/ai/karpathy-opus-5-million-tokens-lotr-verification-asymmetry-2026) | 2026-08-03 |
 
 **学习路径建议**：从 1→7 顺序阅读，1 是入门基础，3 和 5 是 2026 必备技能，7 是前沿探索。8 打通 Agent 到前端最后一公里，9 是 AI 编程工具链巅峰之作。10-12 是 MCP 协议生态最新实战，从协议设计到生产级集成完整覆盖。13-15 聚焦 AI 编程终端 Agent 的工程化、团队治理与协议规范迁移。18-19 进入 Agent 工程化治理与持久化执行的新阶段：18 用 SDD 治理 Vibe Coding 碎片化（GitHub Spec Kit 实战），19 详解 LangGraph 1.0 Durable Execution + Human-in-the-Loop 生产级架构（PostgresSaver/RedisSaver/HITL 中断恢复）。23-27 探索 AI Agent 信息架构新范式、编码 Agent 落地与企业级授权治理：23 Context Engineering 揭示从 Prompt Engineering 到全局信息架构的跃迁，24 X MCP Server 实现零配置托管式 150+ API 端点集成，25 是 Claude Sonnet 5 发布后的生产级 Agent 编码落地指南，26 详解 MCP 企业托管授权（EMA）与 ID-JAG 如何终结企业 MCP 部署的逐服务 OAuth 噩梦，27 深度解读 Bun 用 64 Claude Agent 从 Zig 迁移到 Rust 的 AI 大规模重写事件。30 紧跟 2026-07-28 规范，把 server-rendered UI 和长时任务这两个企业级扩展落地成可运行代码。
 
