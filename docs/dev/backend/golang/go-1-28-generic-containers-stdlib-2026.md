@@ -1,648 +1,409 @@
 ---
-title: "Go 1.28 泛型容器正式进入标准库：container/set、ordered.Map、heap/v2 与 mapset 兼容层的全景解析"
+title: "Go 1.28 泛型容器伞形提案 #80590 深度解读：6 个子提案、binary method problem 与工程取舍"
 date: "2026-08-03"
 tags:
   - golang
   - go-1-28
   - generics
   - stdlib
-  - data-structures
-  - maps
-  - sets
+  - collections
+  - proposal
 keywords:
   - Go 1.28 泛型容器
-  - container/set
-  - ordered.Map
-  - heap/v2
-  - mapset 兼容层
-  - Go 泛型数据结构
   - issue 80590
-  - issue 69230
-  - Go 1.28 路线图
+  - Go Collections working group
+  - container/set
+  - container/hash
+  - container/ordered
+  - container/heap/v2
+  - container/mapset
+  - binary method problem
+  - F-bounded polymorphism
 category: dev/backend/golang
-description: 2026 年 8 月初，Go 1.28 的 7 个泛型容器子提案在 Gerrit 上集体收尾——container/set.Set、ordered.Map、heap/v2、mapset 兼容层、container/queue、container/ring/v2、sync/v2 OrderedMutex 进入标准库。本文逐一拆解每个容器的 API 设计、命名之争、迭代顺序保证、mapset 为何独立成包、容器到容器/容器到算法的迁移路径，以及 Uber/Datadog 等大厂如何在 gotip 阶段试水。
+description: 2026-07-28，Go Collections working group 7 位核心贡献者在 GitHub issue #80590 抛出泛型容器伞形提案，目标 Go 1.28。本文基于 issue 原文与社区解读，逐一拆解 6 个新子提案（hash.Map/hash.Set/set.Set/ordered.Map/heap/v2/mapset）、binary method problem 与 F-bounded polymorphism 抽象接口设计、set.Set 透明表示为 map[T]struct{} 的工程取舍、heap/v2 重命名与索引追踪机制，以及 #80194 insertion-ordered hash map 与 Stack 的 future 计划。所有提案目前均为 Open 状态，尚未接受。
 ---
 
-# Go 1.28 泛型容器正式进入标准库：container/set、ordered.Map、heap/v2 与 mapset 兼容层的全景解析
+# Go 1.28 泛型容器伞形提案 #80590 深度解读：6 个子提案、binary method problem 与工程取舍
 
-## 引言
+## 引言：一份"伞形提案"，不是一份"已发布特性"
 
-过去十年，Go 社区对"集合"这个数据结构的实现方式五花八门：`map[T]bool`、`map[T]struct{}`、第三方库 `deckarep/golang-set`、新近的 `lo.Uniq`。同一个语义"这是一个不重复的字符串集合"，在不同 Go 项目里至少有六种写法。Go 1.21 引入泛型之后，社区 RFC 列表里"标准库泛型集合"这一栏一直是高赞提案。Go 团队也多次在 `golang.org/x/exp` 里放出实验包试探反馈，但始终没有进入主标准库。
+2026 年 7 月 28 日，Alan Donovan（`@adonovan`）在 `golang/go` 仓库打开了 [issue #80590](https://github.com/golang/go/issues/80590)——**proposal: container/...: generic collection types**。这份 issue 不是单一提案，而是一份**伞形提案（umbrella proposal）**：它把一组相互关联的子提案汇总在一个 issue 下讨论，每个子 proposal 仍然各自走标准的 Go 提案评审流程。
 
-2026 年 7 月底到 8 月初，Go 1.28 周期内这一悬而未决的诉求迎来总清算。**7 个泛型容器子提案**在 Gerrit 上集中收尾，预计全部纳入 Go 1.28——按 Go 团队过去四个 release 的规律推算，Go 1.28 的最终 GA 大约在 2027 年 1-2 月。这是 Go 自 1.18 引入泛型以来，标准库数据结构层最大的一次扩展。
+issue 头部列出的 **Go Collections working group** 七位成员（按姓氏字母序）：
 
-本文逐个拆解：
+- Jonathan Amsterdam（`@jba`）
+- Alan Donovan（`@adonovan`，issue 作者）
+- Robert Griesemer（`@griesemer`）
+- Daniel Martí（`@mvdan`）
+- Roger Peppe（`@rogpeppe`）
+- Keith Randall（`@khr`）
+- Ian Lance Taylor（`@ianlancetaylor`）
 
-- `container/set.Set` —— 通用集合
-- `container/mapset` —— 给遗留 `map[T]bool` 的兼容 shim
-- `container/ordered`（或 `ordered.Map`）—— 保序映射
-- `container/heap/v2` —— 泛型重写的堆
-- `container/queue` —— 同步队列
-- `container/ring/v2` —— 泛型环形链表
-- 周边争议：命名、`comparable` 限制、迭代顺序保证
+working group 在 2025 年底成立，目标是"以 Go 一贯的务实与简洁风格，把常见的集合数据结构带进标准库"。经过约 8 个月内部讨论，2026-07-28 把成果公开。
 
-## 一、问题：Go 集合的十国八制
+**关键事实先讲清楚**：
 
-### 1.1 现状的"碎片化税"
+- 这是**提案**，不是**已发布特性**。所有子 proposal 目前**全部 Open，尚未接受**。
+- issue milestone 标的是 **Go 1.28**——这是**目标**，不是承诺。Go 1.28 按半年节奏预计 2027 年初 GA，期间任何子 proposal 都可能在 review 中被修改、推迟或拒绝。
+- 真正已经在稳定 release 里的是 **`hash/maphash.Hasher`**（issue #70471，CL 657296），它随 **Go 1.27** 发布，是后面 1.28 容器家族的基础设施。
+- 1.28 周期内**新增**的子 proposal 共 **6 个**（不是 7 个，也不是 8 个）。
 
-打开 GitHub 上 star 超过 1k 的 Go 项目，搜索 `map[T]bool`，结果往往是几千条。这说明 Go 生态自己已经在用 map 模拟集合了，但这种写法有两个硬伤：
+本文基于 #80590 issue 原文、TonyBai 的两篇深度解读（[2026-07-29 伞形提案](https://tonybai.com/2026/07/29/go-1-28-generic-collections-proposal)、[2026-02-04 heap/v2 解析](https://tonybai.com/2026/02/04/goodbye-container-heap-go-generic-heap-heap-v2-proposal/)）以及 [PeopleAreGeek](https://peoplearegeek.com/articles/go-container-generic-collections-1-28) 的英文分析整理。任何与 issue 原文不一致的描述，以 issue 原文为准。
+
+## 一、问题背景：Go 集合的"十国八制"
+
+Go 标准库历史上几乎不提供集合类型。除了内置的 slice 和 map，正式的容器包只有 `container/heap`、`container/list`、`container/ring` 三个，全部基于 `interface{}`，泛型化迟迟未做。
+
+最典型的痛点是**集合（Set）**。Go 社区写 set 至少有三种主流写法：
 
 ```go
-// 反例 1：内存浪费，每个 bool 仍然占 1 字节
+// 写法 A：map[T]bool
 seen := map[string]bool{}
 seen["friday-go"] = true
 if seen["friday-go"] { /* ... */ }
 
-// 反例 2：struct{} 省内存，但调用方需要学两套
+// 写法 B：map[T]struct{}
 visited := map[string]struct{}{}
 visited["a"] = struct{}{}
 if _, ok := visited["a"]; ok { /* ... */ }
+
+// 写法 C：第三方库
+import "github.com/deckarep/golang-set"
+s := mapset.NewSet[string]()
 ```
 
-调用方写起来啰嗦，更关键的是**两者的零值语义、JSON 序列化、struct tag 行为都不同**。在同一个 service 里混用，几乎注定有 bug。
+A 和 B 的零值语义、JSON 序列化、`struct` tag 行为都不一样，混用必出 bug。A 还有更隐蔽的陷阱：`map[T]bool` 里一个 key 的 value 是 `false` 时，与"key 不存在"在 `if m[k]` 这种 boolean context 下会被误判——这就是 #69230 提案里强调的"avoid ambiguity about potential false values in a `map[T]bool`"。
 
-### 1.2 第三方库的"功能重复税"
+**有序映射（ordered map）** 同样缺位。Go 内置 map 的迭代顺序**故意随机化**（从 Go 1.0 起），目的是防止开发者依赖顺序。但有些场景确实需要按插入顺序或按键排序迭代：LRU 缓存、配置项顺序保留、消息流记录。社区的做法是"先建 `map[K]V`，再 `sort.Slice(keys)`"——这在大多数场景够用，但**范围查询**（如"取 ID 在 1000-2000 之间的所有用户"）必须遍历整个 map，性能退化到 O(n)。
 
-`golang-set` 提供 `mapset.NewSet[string]()`
+**堆（heap）** 的痛点更直接。`container/heap` 要求用户实现 5 个方法的 `heap.Interface`（`Len`、`Less`、`Swap`、`Push`、`Pop`），而且 `Push(any)` / `Pop() any` 强制装箱——向堆里插一个 `int` 都要在堆上分配内存。TonyBai 在 [heap/v2 解析](https://tonybai.com/2026/02/04/goodbye-container-heap-go-generic-heap-heap-v2-proposal/) 里贴的 benchmark 显示，泛型版相比老版**分配次数减少约 99%**。
 
-`lo` 提供 `lo.Uniq[string]([]string{...})`
+Go 1.18 引入泛型、1.23 引入迭代器（`iter.Seq` / `iter.Seq2`）之后，库定义的类型在人体工学上已经可以与内置 slice/map 媲美。working group 的判断是：**基础设施已经就位，可以系统补课了**。
 
-`gods` 提供红黑树、B 树、双向链表、栈、队列、堆、集合的完整套装
+## 二、#80590 的 6 个新子提案 + 1 个已发布基础设施
 
-`exp` 提供 `golang.org/x/exp/slices`、`maps`、`constraints`
+issue 原文列出的"proposed additions"如下表。**只有前 1 个已发布**，后 6 个才是 1.28 周期内新增的 proposal。
 
-每个库都有自己的 API 风格。一个小工具库要"过滤重复元素"这件事，在 `lo` 里是 `lo.Uniq`，在 `gods` 里是 `gods.NewSet().Add()`，在裸 stdlib 里只能手写。**任何公司想要"统一风格"都得自己造轮子**。
+| Issue | CL | 包路径 | 状态 | 说明 |
+| --- | --- | --- | --- | --- |
+| [#70471](https://github.com/golang/go/issues/70471) | CL 657296 | `hash/maphash.Hasher` | **已发布（Go 1.27）** | 自定义哈希与等价关系的标准接口，1.28 容器家族的基础设施 |
+| [#69559](https://github.com/golang/go/issues/69559) | CL 612217 | `container/hash.Map[K,V]` | Open | 用 `Hasher` 的哈希 Map，支持非 comparable key |
+| [#80584](https://github.com/golang/go/issues/80584) | CL 741160 | `container/hash.Set[T]` | Open | 用 `Hasher` 的哈希 Set |
+| [#69230](https://github.com/golang/go/issues/69230) | CL 745441 | `container/set.Set[T]` | Open | canonical set，透明表示为 `map[T]struct{}` |
+| [#77052](https://github.com/golang/go/issues/77052) | CL 724420 | `container/mapset` | Open | 给 legacy `map[T]bool` 的函数式兼容 shim |
+| [#60630](https://github.com/golang/go/issues/60630) | — | `container/ordered.Map[K,V]` | Open | 平衡二叉树实现的有序映射 |
+| [#77397](https://github.com/golang/go/issues/77397) | — | `container/heap/v2.Heap` | Open | 泛型堆，替代老 `container/heap` |
 
-### 1.3 Go 1.18 之后泛型的尴尬
+issue 原文还提到 working group **未来计划**评估的两项（**不在 1.28 这批里**）：
 
-Go 1.18 引入泛型，`slices` 和 `maps` 包先后落地——但这两个包只是"对内置类型的函数式扩展"，并未提供"集合类型"本身。社区多次提交"给 stdlib 加 set"的 RFC，每一次都因为"集合语义和 map 重叠、API 边界难以划定"被搁置。
+- [#80194](https://github.com/golang/go/issues/80194) — **insertion-ordered hash maps**：在 `container/hash` 同一个包上增加一个"按插入顺序迭代"的选项，**不是独立新包**。jba 在 issue 评论里明确说"stdlib 不会变成 Java 那样一坨 map 变体"。
+- **Stack** — 泛型栈，尚未提交 issue。
 
-直到 2025 年底，Go 团队成立一个**泛型容器 working group**（非官方名字，邮件列表里称为 `containers-wg`），把 7 个子提案捆在一起设计，2026 年 7 月底才终于统一发出。
+下面逐个拆 6 个新子提案。
 
-## 二、issue 80590：泛型容器总提案与 7 个子提案
+## 三、`hash/maphash.Hasher`：基础设施（已在 1.27）
 
-主提案 issue 编号 **#80590**（"containers: add generic containers"），由 Go 团队 `ianlancetaylor` 和 `griesemer` 联名发起。子提案按是否进入 1.28 划分如下：
+这一项严格说不属于"1.28 新增"，但它是 1.28 容器家族的地基，必须先讲。
 
-| 提案 | 仓库路径 | 状态 | Milestone |
-| --- | --- | --- | --- |
-| 集合 | `container/set` | 接受 | Go 1.28 |
-| 保序映射 | `container/ordered` 或 `ordered.Map` | 接受（命名争议中） | Go 1.28 |
-| 兼容层 | `container/mapset` | 接受 | Go 1.28 |
-| 堆 v2 | `container/heap/v2` | 接受 | Go 1.28 |
-| 队列 | `container/queue` | 接受 | Go 1.28 |
-| 环形链表 v2 | `container/ring/v2` | 接受 | Go 1.28 |
-| 有序互斥锁 | `sync` 包扩展 | 讨论中 | 评估 |
+`Hasher[T]` 是一个标准接口，让集合类型可以接受**自定义哈希函数和等价关系**——这与 `map[K]V` 编译器内置的哈希不同。两个核心场景：
 
-除了 7 个子提案外，working group 还公布了第 8 个评估项：**保序 HashMap（issue #80194）**——与 `ordered.Map` 区分：前者保 key 插入顺序，后者保 value 任意顺序。
+1. **key 类型不可比较**：比如 key 是 `[]byte` 或 `map[string]int`，无法直接用作 `map[K]V` 的 key。
+2. **默认比较语义不对**：比如 `go/types.Type` 的 `==` 是指针比较，但实际需要的是 `types.Identical` 深比较。
 
-### 2.1 时间线
-
-- **2025-11-12**：`containers-wg` 在 Go 邮件列表成立
-- **2026-01-08**：issue #80590 公开，附带 7 个子提案目录
-- **2026-04-22**：第一轮公开评审，`griesemer` 给出 API 初稿
-- **2026-05-15**：`container/set.Set` 第一个可编译 CL 进入 Gerrit
-- **2026-06-30**：`container/heap/v2` 和 `container/queue` 合并进 master 候选
-- **2026-07-18**：`container/set` 命名争议（`Set` vs `Set` vs `Set[T]`）最终落锤
-- **2026-08-01**：7 个子提案中 6 个完成最终评审，预计 8 月中全部进入 master
-
-## 三、`container/set.Set`：集合的官方落地
-
-### 3.1 核心 API
+接口形状（来自 issue 原文）：
 
 ```go
-package main
+type Hasher[T any] interface {
+    Hash(hash *maphash.Hash, value T)
+    Equal(T, T) bool
+}
 
-import "container/set"
-
-func main() {
-    // 构造
-    s := set.New[string]()           // 构造空集合
-    s2 := set.Of("a", "b", "c")     // 字面量构造
-
-    // CRUD
-    s.Add("x")
-    s.Add("y", "z")                  // 多参数
-    s.Remove("y")
-    hasX := s.Contains("x")          // true
-
-    // 集合代数
-    u := s.Union(s2)                 // 并
-    i := s.Intersection(s2)          // 交
-    d := s.Difference(s2)            // 差
-    sm, lg := s.Split(s2)            // 对称差 (Symmetric Difference)
-
-    // 集合关系
-    s.IsSubset(s2)                    // 真子集
-    s.IsProperSubset(s2)             // 严格真子集
-    s.IsSuperset(s2)
-    s.IsDisjoint(s2)                  // 不相交
-
-    // 容量信息
-    s.Len() == 0
-    s.IsEmpty()
-
-    // 迭代（顺序未指定，但同一集合内一致）
-    s.Each(func(v string) bool {     // 返回 false 中断迭代
-        return true
-    })
-
-    // 不可变快照
-    snap := s.Snapshot()              // 返回只读视图
-    // snap.Add 编译期报错
+type ComparableHasher[T comparable] interface {
+    Hasher[T]
 }
 ```
 
-`Set[T comparable]` 内部用 `map[T]struct{}` 存储——和社区惯例一致——但提供类型安全的 API。
+经典用例：**大小写不敏感的字符串集合**。你的 `Hash` 实现里先把字符串小写化再写入哈希，`Equal` 里两边都小写化再比较——`container/hash` 就能基于这套语义建 set/map，**集合类型本身不需要知道你的语义规则**。
 
-### 3.2 与 `slices.Contains` 的区别
+issue 文档里附了一个 Bloom filter 的示例。Go 1.27 已经可用，`go.mod` 指向 1.27+ 即可直接 `import "hash/maphash"`。**这是整套 1.28 容器提案能现在抛出来的前提**——没有 `Hasher`，`container/hash.Map` 和 `container/hash.Set` 都得各自重新发明哈希约定。
 
-`Set` 不只是给 slice 用的去重工具。它在概念上是一个**有独立语义的类型**：可以为空、可以为 nil、可以参与集合代数。一个常见误用是
+## 四、`container/hash.Map` 与 `container/hash.Set`：自定义哈希的集合
 
-```go
-// 错误：Set 不会和 []T 自动转换
-var s set.Set[int] = []int{1, 2, 3}   // 编译期报错
-```
+[#69559](https://github.com/golang/go/issues/69559) 的 `container/hash.Map[K,V]` 和 [#80584](https://github.com/golang/go/issues/80584) 的 `container/hash.Set[T]` 是一对孪生提案。两者都用 `maphash.Hasher` 替代编译器内置的哈希，从而支持：
 
-`Set` 是独立类型。这种刻意的"不互转"避免了社区`lo.Uniq(set.ToSlice())`反反复复的来回。
+- key 类型为 `[]byte`、`map[string]int` 等非 comparable 类型
+- 自定义等价关系（大小写不敏感、深比较、跨字段 hash 等）
 
-### 3.3 nil 行为
+**关键设计取舍**：`hash.Map` 不是 `map[K]V` 的替代品，而是补充。issue 原文明确："For the purposes of the original proposal, `hash.Map[K, V]` is expected to be used only when `map[K]V` is impossible due to K not being usefully comparable." 通用库函数应该优先用 `map[K]V`，**只有当 key 类型无法比较时才用 `hash.Map`**。这个规则简单清晰，避免社区陷入"两种 map 该用哪个"的纠结。
 
-```go
-var s set.Set[string]   // 零值，可安全使用
-s.Add("x")               // OK，内部自动初始化
-s.Contains("x")          // OK，返回 true
-s.Len()                  // 1
-```
+#80194 的讨论里进一步强化了这个立场：jba 在评论中说"I don't see the stdlib containing a lot of variants of maps—it won't become like Java"。**stdlib 不会变成 Java Collections Framework 那样 50+ 子接口**。
 
-这是 Go 集合类型一贯的"零值可用"风格，与 `sync.Map`、`bytes.Buffer` 一脉相承。`Set` 内部用 atomic 维护一个 lazy 初始化的 map 指针。
+## 五、`container/set.Set[T]`：canonical set
 
-## 四、`container/mapset`：给 `map[T]bool` 的兼容层
+[#69230](https://github.com/golang/go/issues/69230) 是整套提案里最受关注的一个。核心设计有三点：
 
-这是最让人拍案叫绝的一个提案。
+### 5.1 透明表示为 `map[T]struct{}`
 
-### 4.1 解决的问题
-
-很多 Go 老项目的 set 写法是 `map[T]bool` 而不是 `map[T]struct{}`，因为老版本 Go 编译器对 `struct{}` map 的优化没现在好。等到 `container/set.Set` 落地，**老 API 不能改、类型公开的库不能改**，怎么办？
-
-`container/mapset` 提供了**直接接受 `map[T]bool` 的函数**，让你不用改源数据：
+`set.Set[T]` 的底层类型**就是 `map[T]struct{}`**，且这个事实**公开透明**。这意味着：
 
 ```go
-// 老代码
-func ProcessTags(in map[string]bool) {
-    // ...
+var s set.Set[string] = set.Set[string]{"a": {}, "b": {}}
+
+// 直接用内置语法
+len(s)              // 2
+for v := range s {  // 内置 range 迭代
+    fmt.Println(v)
 }
-
-// 1.28 之前
-has := in["foo"]
-
-// 1.28 之后
-has := mapset.Contains(in, "foo")          // 直接操作 map[T]bool
-diff := mapset.Difference(mapA, mapB)      // 返回新的 map[T]bool
+_, ok := s["a"]     // 直接元素访问
 ```
 
-### 4.2 完整 API
+不需要 `s.Len()`、`s.Each()`、`s.Contains()` 这种方法——内置 `len`、`range`、map access 全部可用。这是 working group 刻意的取舍：**透明表示换来了与内置 map 一致的人体工学**，代价是底层实现**永远不能换**（一旦发布，`map[T]struct{}` 就是 ABI 的一部分）。
+
+PeopleAreGeek 的分析说得很到位："A set that is defined as `map[E]struct{}` supports `len(set)`, direct element access and range iteration using the built in syntax, rather than requiring a method for each. That is the ergonomic gap generics alone did not close."
+
+### 5.2 set 操作：functional + mutating 双 API
+
+`set.Set` 同时提供两种风格的集合代数 API：
+
+- **functional**：`Union(other) Set`、`Intersection(other) Set`、`Difference(other) Set` 返回新集合
+- **mutating**：`UnionWith(other)`、`IntersectionWith(other)`、`DifferenceWith(other)` 修改 receiver，无返回值
+
+这个双 API 模式参考了 `math/big.Int`——避免调用方被迫为了一个 union 多分配一次内存。issue 原文："Pure-functional collection operations return new collections, while their in-place variants modify the left operand and return no value. This mirrors the approach taken in `math/big.Int` to prevent accidental misuse."
+
+### 5.3 mutation 方法返回 "是否改变 size"
+
+`Add`、`Delete` 等方法**返回 `bool`**，表示是否真的改变了集合大小。这样调用方可以直接写：
 
 ```go
-// container/mapset/mapset.go
-package mapset
-
-// 集合代数（返回新 map）
-func Union[K comparable](a, b map[K]bool) map[K]bool
-func Intersection[K comparable](a, b map[K]bool) map[K]bool
-func Difference[K comparable](a, b map[K]bool) map[K]bool
-func SymmetricDifference[K comparable](a, b map[K]bool) map[K]bool
-
-// 单操作
-func Contains[K comparable](m map[K]bool, k K) bool
-func Add[K comparable](m map[K]bool, k K)
-func Remove[K comparable](m map[K]bool, k K)
-func Len[K comparable](m map[K]bool) int
-func IsEmpty[K comparable](m map[K]bool) bool
-func IsSubset[K comparable], IsSuperset[K comparable]
-func IsDisjoint[K comparable](a, b map[K]bool) bool
-
-// 转换
-func FromMapKeys[K comparable, V any](m map[K]V) map[K]bool
-func FromSliceKeys[K comparable](s []K) map[K]bool
-func ToSlice[K comparable](m map[K]bool) []K
-
-// 不可变视图
-func Snapshot[K comparable](m map[K]bool) map[K]bool   // 返回 deep copy
+if s.Add(x) {
+    // 第一次插入，做后续逻辑
+}
 ```
 
-`mapset` 与 `set.Set` 是一对：**前者面向遗留的 `map[T]bool`，后者面向新代码**。两者在底层互不依赖，`mapset` 完全由 map 运算组合而成，零额外内存。
+避免"先 `Contains` 再 `Add`"的双查询模式。besthub.dev 的总结："Mutation methods report whether they changed the size of the collection. That is the difference between `s.Add(x)` as a statement and `if s.Add(x) { ... }` as a deduplication check."
 
-### 4.3 迁移路径
+### 5.4 不在核心接口里的操作
 
-`go fix` 自动转换工具已经准备好：
+- **`Subset`** 不在核心 Set 接口里——因为它是 O(n) 操作，没有渐近优势，用户可以用现有原语组合。
+- **`Map.Equal`** 不存在——因为 map 的 value 可能 incomparable。但 `Set.Equal` 存在（set 的元素一定 comparable）。
+- **`DeleteFunc`** 保留给 `ordered.Map`，因为有序 map 的条件删除期望保持 O(log n)。
 
-```bash
-# 1.28 之前
+## 六、`container/mapset`：给 `map[T]bool` 的兼容 shim
+
+[#77052](https://github.com/golang/go/issues/77052) 解决的是**存量代码的迁移问题**。很多老 Go 项目的 set 写法是 `map[T]bool`，公开 API 已经固化、无法改类型。`container/mapset` 提供一组**函数式 helper**，直接操作 `map[T]bool`，语义与 `set.Set` 的方法**完全平行**：
+
+```go
+// 老代码不动
 tags := map[string]bool{"a": true, "b": true}
-if tags["a"] { /* ... */ }
 
-# 1.28 自动转换后
-tags := set.Of("a", "b")
-if tags.Contains("a") { /* ... */ }
+// 用 mapset 操作
+if mapset.Contains(tags, "a") { /* ... */ }
+diff := mapset.Difference(tagsA, tagsB)   // 返回新的 map[T]bool
 ```
 
-`go fix` 工具通过抽象语法树（AST）识别 `map[T]bool` 的 set 模式（赋值永远是 `true`、读取都是 boolean context），自动改写为 `set.Set[T]`。
+issue 原文："a package of helper functions (Union, Intersection, and so on) for conveniently manipulating legacy sets as sets in existing code whose API cannot be changed. These functions are exactly parallel to the methods of `set.Set`."
 
-但**当 map 的 value 有非 true 值或值会被修改**（如 counter 模式）时，`go fix` 不会动它——因为它不是 set。
+**设计哲学**：`set.Set` 面向新代码，`mapset` 面向老代码。两者底层互不依赖，`mapset` 完全由 map 运算组合而成。**没有任何强制迁移路径**——working group 没有提及任何 `go fix` 自动转换工具（网络上流传的"`go fix` 自动改写"说法没有 issue 依据，不要轻信）。
 
-## 五、`ordered.Map`：保序映射的命名之争
+## 七、`container/ordered.Map[K,V]`：平衡二叉树有序映射
 
-### 5.1 命名拉锯
+[#60630](https://github.com/golang/go/issues/60630) 提供**按键排序**的有序映射。issue 原文明确："The current implementation uses a balanced binary tree, but nothing in the design requires that."
 
-`ordered.Map` 这个名字在 Go 社区被讨论了一个月：
+**与"建 map 再 sort keys"的区别**：常见的 Go 模式是 `m := map[K]V{}; keys := slices.Sorted(maps.Keys(m))`，这在大多数场景够用。但**范围查询**（"取 ID 在 [1000, 2000) 之间的所有 entry"）在普通 map 上必须遍历全部，O(n)。`ordered.Map` 基于平衡二叉树，范围查询是 O(log n + k)（k 是结果集大小），这是普通 map 做不到的。
 
-| 候选 | 主张方 | 论据 |
+**与 #80194 insertion-ordered hash map 的区别**：
+
+| 维度 | `ordered.Map`（#60630） | `hash` insertion-ordered（#80194） |
 | --- | --- | --- |
-| `ordered.Map` | 习惯 Python 用户 | 与 Python `collections.OrderedDict` 一致 |
-| `orderedmap.Map` | Gophers 习惯 | 与 `sync.Map` 命名风格一致 |
-| `map.Ordered` | 反传统派 | 与内置 `map[K]V` 形成镜像 |
-| `kv.Ordered` | 抽象派 | "kv" = key-value 暗示容器性质 |
+| 数据结构 | 平衡二叉树 | 哈希表 + 链表 |
+| 排序语义 | 按 key 排序 | 按插入顺序 |
+| 范围查询 | O(log n + k) | 不支持 |
+| 单点查询 | O(log n) | O(1) 平均 |
+| 状态 | 1.28 proposal | 评估中，不在 1.28 这批 |
 
-**最终落锤：`container/ordered` 包，类型名 `Map`**。
+**适用场景**：需要范围查询、按键有序迭代的代码。**不适用**：高频单点查询（用 `map[K]V`）、需要插入顺序（等 #80194 或用第三方 `orderedmap`）。
 
-理由：与 `container/heap`、`container/list`、`container/ring` 这些已有的"容器在子包、类型在包内"风格一致。`Map` 与内置 `map` 在 `container/ordered` 命名空间下不冲突。
+## 八、`container/heap/v2.Heap`：泛型堆的重写
 
-### 5.2 核心 API
+[#77397](https://github.com/golang/go/issues/77397) 是这套提案里**已有独立深度解析**的一个——TonyBai 在 2026-02-04 就写过 [heap/v2 提案解析](https://tonybai.com/2026/02/04/goodbye-container-heap-go-generic-heap-heap-v2-proposal/)，比伞形提案早 5 个月。
 
-```go
-package main
-
-import "container/ordered"
-
-func main() {
-    m := ordered.NewMap[string, int]()
-    m.Set("c", 3)
-    m.Set("a", 1)
-    m.Set("b", 2)
-
-    // 按插入顺序迭代
-    m.Range(func(k string, v int) bool {
-        fmt.Println(k, v)   // c 3, a 1, b 2
-        return true
-    })
-
-    // 按 key 排序迭代
-    m.RangeSorted(func(k string, v int) bool {
-        fmt.Println(k, v)   // a 1, b 2, c 3
-        return true
-    })
-
-    // 标准 map 操作
-    v, ok := m.Get("a")
-    m.Delete("b")
-    m.Len()
-    m.Has("c")
-}
-```
-
-### 5.3 内部实现
-
-`Map` 的实现选择曾有争议：
-
-1. **双数组 + map 索引**（slice + map）—— 插入 O(1)，迭代顺序稳定
-2. **链表 + map** —— 插入 O(1)，但要分配更多对象
-3. **B 树** —— 插入 O(log n)，天然有序但慢
-
-最终采用方案 1，因为 `Set` 也是用 map 存储，`Map` 与 `Set` 共享基础设施可以减少 stdlib 二进制大小。
+### 8.1 核心 API
 
 ```go
-// container/ordered/map.go (简化)
-type Map[K comparable, V any] struct {
-    keys  []K
-    index map[K]int
-    vals  []V
-}
+package heap  // import "container/heap/v2"
 
-func (m *Map[K, V]) Set(k K, v V) {
-    if m.index == nil {
-        m.index = make(map[K]int)
-    }
-    if idx, ok := m.index[k]; ok {
-        m.vals[idx] = v
-        return
-    }
-    m.index[k] = len(m.keys)
-    m.keys = append(m.keys, k)
-    m.vals = append(m.vals, v)
-}
-```
+type Heap[T any] struct { /* ... */ }
 
-### 5.4 适用场景与不适用场景
+func New[T any](compare func(a, b T) int) *Heap[T]
 
-**适用**：
-- LRU 缓存实现（淘汰时按插入顺序）
-- 配置项顺序保留（不同 yaml loader 输出顺序可能影响下游）
-- 消息流记录（按到达顺序展示）
-- 任何需要"按 key 插入顺序迭代"的代码
-
-**不适用**：
-- 需要按 value 排序的 `TopN`（用 `container/heap/v2`）
-- 高并发写多读少场景（用 `sync.Map` 或 `xsync.Map`）
-- key 频繁删除重建（`keys` slice 会"碎片化"——`Set` 同样的问题）
-
-## 六、`container/heap/v2`：泛型重写的堆
-
-### 6.1 1.21 时代的痛
-
-`container/heap` 早在 Go 1 时代就有，但接口设计基于 interface{}，需要自己实现 `Len()`、`Less()`、`Swap()`、`Push()`、`Pop()` 五个方法——非常啰嗦。
-
-```go
-// 1.21 时代：实现 IntHeap 才能用
-type IntHeap []int
-func (h IntHeap) Len() int           { return len(h) }
-func (h IntHeap) Less(i, j int) bool { return h[i] < h[j] }
-func (h IntHeap) Swap(i, j int)      { h[i], h[j] = h[j], h[i] }
-func (h *IntHeap) Push(x interface{}) { *h = append(*h, x.(int)) }
-func (h *IntHeap) Pop() interface{} {
-    old := *h
-    n := len(old)
-    x := old[n-1]
-    *h = old[0 : n-1]
-    return x
-}
-```
-
-### 6.2 1.28 泛型版
-
-```go
-package main
-
-import "container/heap/v2"
-
-func main() {
-    // Less 函数直接传入
-    h := heap.New(func(a, b int) bool { return a < b })
-    h.Push(3, 1, 4, 1, 5, 9, 2, 6)
-
-    for h.Len() > 0 {
-        v, ok := h.Pop()
-        fmt.Println(v)  // 1 1 2 3 4 5 6 9
-    }
-
-    // 或者用有序容器
-    pq := heap.NewOrdered[string]()
-    pq.Push("banana", "apple", "cherry")
-}
-```
-
-### 6.3 函数签名设计
-
-```go
-package heap
-
-type Interface[T any] interface {
-    Len() int
-    Less(i, j int) bool
-    Swap(i, j int)
-    Push(T)
-    Pop() T
-}
-
-type Heap[T any] struct {
-    data       []T
-    less       func(a, b T) bool
-}
-
-func New[T any](less func(a, b T) bool) *Heap[T] { /* ... */ }
-
-func (h *Heap[T]) Push(v T)
-func (h *Heap[T]) Pop() (T, bool)
-func (h *Heap[T]) Peek() (T, bool)
+func (h *Heap[T]) Min() T          // peek 最小值
+func (h *Heap[T]) TakeMin() T      // 取出并删除最小值
+func (h *Heap[T]) Insert(v T)      // 插入元素
 func (h *Heap[T]) Len() int
-func (h *Heap[T]) Fix(i int)            // 修改某元素后重新堆化
-func (h *Heap[T]) Remove(i int) T
+func (h *Heap[T]) Clear()
+func (h *Heap[T]) All() iter.Seq[T]  // Go 1.23+ 迭代器
 ```
 
-注意 `Pop` 返回 `(T, bool)` 而不是裸 `T`——这是 Go 1.28 整个容器家族的统一约定，避免越界时返回零值的歧义。
+### 8.2 命名重写：告别"猜谜游戏"
 
-### 6.4 性能对比
+老 `container/heap` 的 `Push`/`Pop` 既是接口方法又是包函数，新手必糊涂。v2 的重命名：
 
-内部 benchmark 显示，`heap/v2` 相比 `container/heap`：
+| 老名字 | 新名字 | 改进点 |
+| --- | --- | --- |
+| `Push` | `Insert` | 语义明确，不和接口方法冲突 |
+| `Pop` | `TakeMin` | 明确是"取最小值"，不是随便弹一个 |
+| `Fix` | `Changed` | 表达"元素值变了，请重新调整" |
+| `Remove` | `Delete` | 和内置 `delete` 风格一致 |
 
-- 编译期生成代码（泛型特化），无 interface 调用开销
-- Push/Pop 操作快约 18-22%
-- 内存分配次数减少 50%
+### 8.3 索引追踪：解决"动态优先级"难题
 
-## 七、`container/queue`、`container/ring/v2` 与同步原语
-
-### 7.1 queue：标准库的通道竞争者
-
-```go
-package queue
-
-// Container/queue.New
-type Queue[T any] struct { /* ... */ }
-func New[T any]() *Queue[T]
-func (q *Queue[T]) Push(v T)
-func (q *Queue[T]) Pop() (T, bool)
-func (q *Queue[T]) Front() (T, bool)
-func (q *Queue[T]) Len() int
-```
-
-`container/queue` 是**单线程、无锁**的。它和 `channel` 是不冲突的：channel 用于 goroutine 间通信，`queue` 用于单线程内的 BFS/任务队列等场景。
-
-`go vet` 还会自动检测"在 goroutine 间共享 `container/queue`"的反模式，提示用 channel 替代。
-
-### 7.2 ring/v2：泛型环形链表
+任务优先级变了，怎么快速调整它在堆中的位置？老方案要用户自己维护 `index` 字段并在 `Swap` 时同步更新——容易出 bug。v2 提供 `NewIndexed` + `SetIndex` 回调：
 
 ```go
-package ring
-
-type Ring[T any] struct { /* ... */ }
-func New[T any](n int) *Ring[T]
-func (r *Ring[T]) Value() T
-func (r *Ring[T]) Next() *Ring[T]
-func (r *Ring[T]) Prev() *Ring[T]
-func (r *Ring[T]) Do(f func(T))         // 遍历所有节点
-```
-
-旧的 `container/ring` 用 `interface{}`，新版本泛型化但保持完全 API 兼容（通过类型别名）。
-
-## 八、迭代顺序的保证与陷阱
-
-### 8.1 Go map 的顺序不保证
-
-Go 内置 `map` 的迭代顺序是**故意随机的**（Go 1.0 起就是为了防止开发者依赖顺序）。`set.Set` 内部用 map 存储，因此：
-
-- `s.Each()` 顺序未指定
-- 不同 goroutine 中迭代同一 set 可能顺序不同
-- 修改 set 后再迭代，旧迭代器可能看到新元素或漏掉旧元素
-
-### 8.2 `ordered.Map` 的保证
-
-`ordered.Map` 反过来——**显式保证插入顺序**：
-
-- `Range` 按插入顺序（即使后续 Set 同一 key，不改变其位置）
-- `RangeSorted` 按 key 排序（要求 K 是 `cmp.Ordered`）
-- `Delete` 不改变其他元素的相对位置
-- 大量 Delete 后，slice 会"碎片化"——可用 `Compact()` 重建
-
-### 8.3 并发安全
-
-`set.Set` 和 `ordered.Map` **都不是并发安全的**。需要并发的场景：
-
-- `set.Set`：自己加 `sync.Mutex`，或用 `sync/v2.ShardedSet`（提案中）
-- `ordered.Map`：用 `sync.RWMutex` 保护，或用 `xsync.MapOf`（第三方）
-
-Go 团队明确：**容器类型本身不内嵌并发原语**，因为锁的粒度因场景而异。社区有"Go 1.28 sync/v2"提案讨论把 `ShardedSet`、`ShardedMap`、`OrderedMutex` 收进 stdlib，但还在评审阶段。
-
-## 九、生产环境试水案例
-
-### 9.1 Uber：ordered.Map 替换 LRU 缓存
-
-Uber 在 2026 年 6 月完成了 gotip 阶段的 `ordered.Map` 试水，把公司内部 12 个 LRU 缓存实现从手写"map + 双向链表"改为"ordered.Map + 回调"：
-
-```go
-// 之前：50 行代码
-type lru struct {
-    mu    sync.Mutex
-    data  map[string]*list.Element
-    ll    *list.List
-    cap   int
+type Task struct {
+    priority int
+    index    int  // 由堆自动维护
 }
-// ... 50+ 行
 
-// 之后：20 行代码
-type lru struct {
-    mu sync.Mutex
-    om *ordered.Map[string, *entry]
-    cap int
+func (t *Task) SetIndex(i int) { t.index = i }
+
+h := heap.NewIndexed(
+    func(a, b *Task) int { return cmp.Compare(b.priority, a.priority) },
+    (*Task).SetIndex,
+)
+
+// 优先级变化后，一行代码调整位置
+task.priority++
+h.Changed(task.index)  // 自动 sift-up/down
+```
+
+### 8.4 设计取舍：不提供 `Heap[cmp.Ordered]` 特化
+
+working group 调研发现，生产代码中**自定义比较逻辑占绝大多数**，强制 `Ordered` 反而限制灵活性。而且编译器目前无法对泛型比较函数做 monomorphization 优化，"为优化而优化"得不偿失。最终只提供 `New(compare func)` 一种构造方式。
+
+### 8.5 性能：boxing 削减约 99% 分配
+
+老版 `Push(any)` 接受 `interface{}`，每次插入 `int` 都要装箱（在堆上分配小内存块）。泛型版编译期实例化，无装箱开销。TonyBai 引用的 benchmark 显示**分配次数减少约 99%**，对 GC 压力的改善在大规模数据场景非常显著。
+
+## 九、binary method problem 与 F-bounded polymorphism
+
+#80590 最有技术深度的一段是关于**抽象集合接口**的讨论。问题叫 **binary method problem**：
+
+> 如果每个 set 类型 `S` 都有 `func (S) Union(S) S` 方法，那么不同 set 类型的 `Union` 方法签名互不兼容——它们没有共同的普通 interface。
+
+解决方法是 **F-bounded polymorphism**（递归约束接口）。CL 761460 在 `container` 包里加了三个**非导出**的约束接口：
+
+```go
+// _AbstractCollection 模拟元素类型 E 的集合 C
+type _AbstractCollection[E any, C _AbstractCollection[E, C]] interface {
+    Clear()
+    Clone() C
+    Contains(E) bool
+    ContainsAll(iter.Seq[E]) bool
+    Len() int
+    String() string
+}
+
+// _AbstractMap 模拟从 K 到 V 的映射 M
+type _AbstractMap[K, V any, M _AbstractMap[K, V, M]] interface {
+    _AbstractCollection[K, M]
+    All() iter.Seq2[K, V]
+    At(K) V
+    Delete(K) (V, bool)
+    DeleteAll(iter.Seq[K]) bool
+    DeleteFunc(func(K, V) bool) bool
+    Get(K) (V, bool)
+    Keys() iter.Seq[K]
+    Set(K, V) (V, bool)
+    SetAll(iter.Seq2[K, V])
 }
 ```
 
-代码量减少 60%，bug 数从历史 14 个降到试水期间 0 个。
+**为什么是非导出（`_` 前缀）？** working group 的态度是：先在内部用这套接口保证各容器实现的一致性、用测试覆盖，**但不急于公开**。issue 原文："The interfaces are deliberately unexported; they serve to guarantee conformance in tests." 这是非常 Go 风格的克制——**先观察真实使用模式，再决定哪些操作该进标准接口**。
 
-### 9.2 Datadog：mapset 全量替换
-
-Datadog 内部工具链 `dogshell` 有 200+ 处 `map[string]bool` 用作 set。`mapset` 提案发布后，他们用 `mapset.FromMapKeys` + `mapset.Union` 把 180+ 处替换为函数式风格，**无类型修改、零 API break**。
-
-### 9.3 字节跳动：heap/v2 在推荐系统
-
-字节跳动的推荐系统有 150+ 个 TopK 堆用 `container/heap` 实现。`heap/v2` 的内部 benchmark 显示吞吐提升 18%。试点已上线 30% 服务，计划 1.28 正式发布后全量迁移。
-
-## 十、迁移清单与兼容期策略
-
-### 10.1 立即可做（无需等 1.28）
-
-```bash
-# 用 go fix 预览（go1.28 工具链）
-go tool fix -diff ./... | head -50
-```
-
-`go fix` 会列出所有可自动转换的 `map[T]bool` → `set.Set[T]`。
-
-### 10.2 1.28 发布后的 3 阶段迁移
-
-**阶段 1（1.28.0 - 1.28.2，2-4 周）**：
-- 新代码一律用 `set.Set`
-- 老代码不动
-
-**阶段 2（1.28.3 - 1.28.4，3-6 个月）**：
-- 用 `go fix` 批量改写内部代码
-- 公开库的 API 保持兼容
-
-**阶段 3（1.29 之后）**：
-- golangci-lint 加规则禁止新代码用 `map[T]bool` 模拟 set
-- 逐步废弃老模式
-
-### 10.3 命名约定的约定
-
-社区在 7 月底 RFC 投票中通过了一个**风格指南**：
-
-- 公开函数参数：`set.Set[T]`（用类型名）
-- 内部局部变量：`set`（短名）
-- 公开 API 字段：`Tags set.Set[string]`（不用 s、set_）
-- 与 `map[K]V` 在同一函数内：用 `setTags` 和 `tagMap` 区分
-
-## 十一、容器到容器的转换与算法生态
-
-### 11.1 与 `slices`、`maps` 的协同
-
-`set.Set` 与 `slices`、`maps` 互不重叠：
-
-- `slices`：操作 `[]T`
-- `maps`：操作 `map[K]V`
-- `set.Set`：操作集合语义
-
-转换通过 `FromSlice`/`ToSlice` 等显式方法，不自动隐式转换。
-
-### 11.2 即将到来的 `slices/v2`
-
-Go 1.28 同期，`slices` 和 `maps` 包也会出 v2 版本，统一返回 `(T, bool)` 而不是裸 `T`：
+issue 还给了一个"最小接口"示例，展示如何用更小的约束写通用算法：
 
 ```go
-// 1.21 - 1.27
-v, ok := m[k]
-// maps package
-slices.Sort(m[k])   // 旧版直接修改
+type _TakeSet[E any, S _TakeSet[E, S]] interface {
+    All() iter.Seq[E]
+    Delete(E) bool
+}
 
-// 1.28 slices/v2
-v, ok := maps.Get(m, k)
-slices.Sort(m[k])   // 旧版 API 仍在
-slices.SortStable(m[k])
+func Take[S _TakeSet[E, S], E any](set S) (e E, found bool) {
+    for e = range set.All() {
+        found = true
+        set.Delete(e)
+        break
+    }
+    return
+}
 ```
 
-容器家族 + `slices/v2` + `maps/v2` 共同构成 Go 1.28 数据结构层的"大版本"。
+`Take` 函数能从任何满足 `_TakeSet` 约束的集合类型里取出任意一个元素——不管底层是 `set.Set`、`hash.Set` 还是未来的 `Stack`。这种"**操作外置 + 最小约束**"的范式，是 working group 给社区库作者的参考设计。
 
-## 十二、未解的争议与下一步
+## 十、设计取舍背后的工程哲学
 
-### 12.1 `containers-wg` 的待办
+整套提案的取舍有几条主线，值得单独拎出来讲：
 
-- **第 8 个子提案**：保序 HashMap（按 value 排序）—— 评估中
-- **`sync/v2`**：ShardedSet/ShardedMap —— RFC 讨论中
-- **泛型 ring buffer**：尚未提交 RFC
-- **typed sync.Pool**：与 `container` 关系不明
+### 10.1 透明表示 vs 隐藏实现
 
-### 12.2 与 Rust std 集合的对比
+`set.Set` 透明表示为 `map[T]struct{}`，换来内置 `len`/`range`/map-access 的人体工学，代价是底层实现永远不能换。working group 的判断：**可预测、熟悉的行为比"自由换实现"更重要**。这是非常 Go 风格的取舍——`slice`、`map`、`string` 都是透明表示，社区已经习惯。
 
-Rust `std::collections::{HashSet, BTreeSet, HashMap, BTreeMap, VecDeque, LinkedList, BinaryHeap}` 的设计哲学是"提供多种实现、让用户选"。Go 团队明确**只提供一种规范实现**，复杂度可控。这与 Go 一贯的"少即是多"哲学一致。
+### 10.2 functional vs mutating 双 API
 
-### 12.3 与 Java Collections 框架的对比
+不是二选一，而是**两者都提供**。functional 风格（返回新集合）适合链式组合、不可变数据流；mutating 风格（修改 receiver）适合性能敏感场景。参考 `math/big.Int` 的成熟模式。
 
-Java `Collection` 接口有 50+ 子接口，API 学习曲线陡。Go 的 `container/*` 包设计原则是：
+### 10.3 不做"为优化而优化"
 
-- 没有统一接口（避免"接口越多越抽象"的陷阱）
-- 每个包独立，按需引入
-- 类型自身表达语义，不需要 `List` vs `Set` vs `Queue` 分类
+`heap/v2` 不提供 `Heap[cmp.Ordered]` 特化版本，因为编译器无法 monomorphization 优化、收益有限。working group 的原则："satisfy the API and the asymptotic performance expectations as simply as possible first"——**先满足 API 和渐近性能，常数级优化留给后续迭代**。
 
-这是 Go 团队的刻意选择——他们认为 Java Collections 的过度抽象是负担。
+### 10.4 不会变成 Java Collections
 
-## 十三、结论
+jba 在 #80194 评论里明确："I don't see the stdlib containing a lot of variants of maps—it won't become like Java." 1.28 这批只提供**最小可用集**：一个 canonical set、一个哈希 Map/Set 家族、一个有序 Map、一个 heap。insertion-ordered、Stack 等留待观察真实需求。
 
-Go 1.28 的泛型容器不是"惊喜"，而是"迟到"。
+## 十一、对 Go 开发者的实际影响
 
-Go 1.18 引入泛型后，社区等了 4 年才看到官方的 set/map/heap 泛型化。7 个子提案集体进入标准库，标志着 Go 1.21-1.27 的"功能完善期"过渡到 1.28 的"工程化时期"——标准库本身成为最佳实践示范。
+**今天能做的**：
 
-对 Go 团队来说：
+- `hash/maphash.Hasher` 已在 Go 1.27 可用，可以直接 `import "hash/maphash"` 试用。Bloom filter、自定义 key 哈希等场景**现在就能上生产**。
+- 阅读 [issue #80590](https://github.com/golang/go/issues/80590) 和各子 proposal，**趁 review 阶段提反馈**。working group 明确在征求社区意见，一旦发布就无法改 API。
 
-- **`set.Set`**：终结了十国八制的 set 写法
-- **`mapset`**：让老代码无痛升级
-- **`ordered.Map`**：解决了"按插入顺序迭代"的常见需求
-- **`heap/v2`**：用泛型重写释放 18%+ 性能
+**1.28 GA 之前不要做的**：
 
-对开发者来说：
+- 不要基于 gotip 的 API 写生产代码——子 proposal 仍在 review，方法签名、包名都可能变。
+- 不要相信任何"`go fix` 自动迁移 `map[T]bool` 到 `set.Set`"的说法——issue 里没有任何此类工具的承诺。
+- 不要把 `container/queue`、`container/ring/v2`、`sync/v2 OrderedMutex` 写进技术规划——**这些包在 #80590 里根本不存在**，是网络上一些二次解读文章的误传。
 
-- 立即开始熟悉 gotip 的 API
-- 准备 `go fix` 迁移工具的回归测试
-- 关注 1.28 release notes 里的"breaking changes in container/heap"
+**1.28 GA 之后预计能做的**：
 
-8 月中旬 master 即将合入，9 月进入 RC，**2027 年 1-2 月 GA**。这一天会到来。
+- 新代码用 `set.Set[T]` 替代 `map[T]struct{}`，获得类型安全和集合代数 API。
+- 存量代码用 `container/mapset` 的函数式 helper，**无 API break** 地获得 set 操作语义。
+- 范围查询场景用 `container/ordered.Map`，告别"建 map + sort keys"的 workaround。
+- 优先队列、TopK 用 `container/heap/v2`，告别 5 方法样板代码和装箱开销。
+
+## 十二、状态与时间预期
+
+- **所有 6 个新子 proposal 当前 Open，未接受**。
+- milestone Go 1.28 是**目标**，不是承诺。Go 提案的 milestone 意味着"希望在这个版本落地"，但 review 过程中任何子 proposal 都可能被修改、推迟或拒绝。
+- Go 1.28 按半年节奏预计 **2027 年初 GA**。
+- 子 proposal 各自走标准评审流程，最终能否进 1.28 取决于社区反馈和 Go 团队审议。
+
+TonyBai 在 [2026-07-29 文章](https://tonybai.com/2026/07/29/go-1-28-generic-collections-proposal) 结尾的总结很到位："**提案尚未落地，值得持续关注**。" 这八个字是当前最准确的状态描述。
 
 ## 参考资料
 
-- [containers-wg 总提案 #80590](https://go.dev/issue/80590)
-- [container/set 单独提案 #69230](https://go.dev/issue/69230)
-- [Go 周刊 2026 W31：1.28 泛型集合](https://www.cnblogs.com/whincwu/p/22147967)
-- [Go 1.28 stdlib container/set 解析 (Spanish)](https://dev.to/lu1tr0n/go-128-containerset-orderedmap-y-heapv2-llegan-a-la-stdlib-2jm0)
-- [Go 1.28 路线图首度曝光](https://tonybai.com/2026/07/16/go-1-28-roadmap-compiler-and-runtime-features-preview)
-- [container/heap/v2 vs container/heap 性能对比](https://go-review.googlesource.com/c/go/+/654210)
-- [containers-wg 邮件列表存档](https://go.dev/issue/80590#discussion)
-- [Go 1.28 容器命名争议讨论](https://github.com/golang/go/discussions/70850)
-- [Uber LRU 缓存迁移报告 (内部 GopherCon 2026 演讲)](https://www.youtube.com/watch?v=uber-lru-2026)
-- [Datadog mapset 替换实战 (GopherCon EU 2026)](https://www.youtube.com/watch?v=datadog-mapset-2026)
-- [字节跳动 heap/v2 推荐系统压测数据](https://github.com/bytedance/bytevault/blob/main/heap-v2-bench.md)
+- [proposal: container/...: generic collection types · Issue #80590 · golang/go](https://github.com/golang/go/issues/80590) — 伞形提案原文
+- [proposal: container/set: a generic set type · Issue #69230](https://github.com/golang/go/issues/69230) — `set.Set` 子提案
+- [proposal: container/hash.Map · Issue #69559](https://github.com/golang/go/issues/69559) — 哈希 Map 子提案
+- [proposal: container/hash.Set · Issue #80584](https://github.com/golang/go/issues/80584) — 哈希 Set 子提案
+- [proposal: container/mapset · Issue #77052](https://github.com/golang/go/issues/77052) — 兼容 shim 子提案
+- [proposal: container/ordered.Map · Issue #60630](https://github.com/golang/go/issues/60630) — 有序映射子提案
+- [proposal: container/heap/v2 · Issue #77397](https://github.com/golang/go/issues/77397) — 泛型堆子提案
+- [proposal: container/hash: insertion-ordered maps · Issue #80194](https://github.com/golang/go/issues/80194) — 评估中的 future 项
+- [hash/maphash.Hasher · Issue #70471](https://github.com/golang/go/issues/70471) — 已在 Go 1.27 发布的基础设施
+- [Go 1.28 大动作：泛型集合终于要进标准库了 — TonyBai 2026-07-29](https://tonybai.com/2026/07/29/go-1-28-generic-collections-proposal)
+- [再见，丑陋的 container/heap！Go 泛型堆 heap/v2 提案解析 — TonyBai 2026-02-04](https://tonybai.com/2026/02/04/goodbye-container-heap-go-generic-heap-heap-v2-proposal/)
+- [Go Wants Sets and Ordered Maps in the Standard Library — PeopleAreGeek](https://peoplearegeek.com/articles/go-container-generic-collections-1-28)
+- [Go 1.28 Introduces Generic Collections — BestHub](https://www.besthub.dev/articles/go-1-28-introduces-generic-collections-standardized-set-tree-map-and-heap-58dfd96c1851)
+- [Go 1.28: container/set, ordered.Map y heap/v2 llegan a la stdlib — dev.to/lu1tr0n](https://dev.to/lu1tr0n/go-128-containerset-orderedmap-y-heapv2-llegan-a-la-stdlib-2jm0)
+- [Go 1.28 路线图首度曝光 — TonyBai 2026-07-16](https://tonybai.com/2026/07/16/go-1-28-roadmap-compiler-and-runtime-features-preview)
