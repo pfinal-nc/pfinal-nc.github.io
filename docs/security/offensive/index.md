@@ -78,6 +78,9 @@ recommend: 安全
 - [FortiBleed 深度复盘：CVE-2026-35616 如何收割 1.1 亿凭证、瘫痪 354 个组织](/security/offensive/fortibleed-cve-2026-35616-forticlient-ems-credential-harvest-2026) - 2026-07-28 CVSS 9.1 43万防火墙 / FortigateSniffer / INC+Lynx 勒索
 - [CVE-2026-48449 满分核弹：Adobe Campaign Classic 零点击 RCE 让企业营销自动化平台集体裸奔](/security/offensive/cve-2026-48449-adobe-campaign-classic-rce-2026) - 2026-08-01 CVSS 10.0 零交互 / 7.4.3 build 9398 / 14,800 公网实例 / 8 小时在野利用
 - [CVE-2026-66066 Rails Active Storage RCE 深度复现：KindaRails2Shell 攻击链完整拆解](/security/offensive/rails-cve-2026-66066-active-storage-rce-kindarails2shell) - 2026-08-04 CVSS 9.5 / Metasploit 公开利用 / libvips→Marshal RCE
+- [Unit 42 曝光首个 AI 全自动攻击链：knaithe 用 DeepSeek + Hermes Agent 自主打穿 460+ 目标](/security/offensive/unit42-deepseek-hermes-agent-autonomous-attack-2026) - 2026-08-04 CVSS 8 CVE / DeepSeek 自主攻击 / Hermes Agent / 460+ 目标
+- [Coldcard 硬件钱包 RNG 漏洞解剖：Yasmarang 确定性回退如何让 1,367 BTC 无声蒸发](/security/offensive/coldcard-rng-yasmarang-btc-theft-2026) - 2026-08-04 约 1,367 BTC / 8800万美元 / RNG 回退 / Block 根因分析
+- [Fastjson2 ≤2.0.62 AutoType RCE 深度分析：SeeAlso 链如何绕过白名单直达类加载器](/security/offensive/fastjson2-seealso-autotype-rce-2026) - 2026-08-04 CVSS 9.8 / SeeAlso 链 / FNV 碰撞 / 长期受影响 / 修复 2.0.63
 
 ### 🔬 供应链与工具链安全
 - [Miasma 供应链蠕虫攻击深度分析：2026 年开源生态的至暗时刻](/security/offensive/miasma-supply-chain-worm-attack-2026) - 2026-06-15
