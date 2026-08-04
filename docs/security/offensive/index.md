@@ -77,6 +77,7 @@ recommend: 安全
 - [CVE-2026-6875 深度复盘：ServiceNow AI 平台预认证沙箱逃逸 RCE 在野利用链](/security/offensive/cve-2026-6875-servicenow-pre-auth-rce-in-the-wild-2026) - 2026-07-27 CVSS 9.5 85% 财富 500 / MID Server 横向移动
 - [FortiBleed 深度复盘：CVE-2026-35616 如何收割 1.1 亿凭证、瘫痪 354 个组织](/security/offensive/fortibleed-cve-2026-35616-forticlient-ems-credential-harvest-2026) - 2026-07-28 CVSS 9.1 43万防火墙 / FortigateSniffer / INC+Lynx 勒索
 - [CVE-2026-48449 满分核弹：Adobe Campaign Classic 零点击 RCE 让企业营销自动化平台集体裸奔](/security/offensive/cve-2026-48449-adobe-campaign-classic-rce-2026) - 2026-08-01 CVSS 10.0 零交互 / 7.4.3 build 9398 / 14,800 公网实例 / 8 小时在野利用
+- [CVE-2026-66066 Rails Active Storage RCE 深度复现：KindaRails2Shell 攻击链完整拆解](/security/offensive/rails-cve-2026-66066-active-storage-rce-kindarails2shell) - 2026-08-04 CVSS 9.5 / Metasploit 公开利用 / libvips→Marshal RCE
 
 ### 🔬 供应链与工具链安全
 - [Miasma 供应链蠕虫攻击深度分析：2026 年开源生态的至暗时刻](/security/offensive/miasma-supply-chain-worm-attack-2026) - 2026-06-15

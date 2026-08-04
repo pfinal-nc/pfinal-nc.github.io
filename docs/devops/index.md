@@ -23,6 +23,7 @@ cover: /images/covers/devops.svg
 | 4 | 🤖 Docker AI Governance | [Docker AI Governance 实战：让 AI Agent 在沙箱里自由探索](/devops/docker-ai-governance-agent-isolation-2026) | 2026-07-20 |
 | 5 | ⚡ Rust 异步运行时 | [Rust 异步运行时七年战争：从 Tokio 垄断到 io_uring 破局](/devops/rust-async-runtime-tokio-vs-io-uring-seven-year-war-2026) | 2026-07-24 |
 | 6 | 🤖 Agent 编排 | [从容器编排到智能体编排：Kagent CRD 让 Agent 成为云原生一等公民](/devops/container-to-agent-orchestration-kagent-crd-go-2026) | 2026-07-31 |
+| 7 | ☸️ K8s 1.37 预览 | [Kubernetes 1.37 深度预览：HPA 原生缩零、IPVS 退场倒计时、DRA 设备污点毕业](/devops/kubernetes-1-37-deep-preview-hpa-scale-to-zero-ipvs-deprecation-dra-2026) | 2026-08-04 |
 
 ## 🔍 可观测性
 
@@ -56,12 +57,12 @@ cover: /images/covers/devops.svg
 
 ## 📊 系列文章统计
 
-- **容器化与编排**：5 篇（Docker + K8s 1.36 + KubeCon 2026 + Docker AI Governance + Kagent Agent 编排）
+- **容器化与编排**：6 篇（Docker + K8s 1.36 + KubeCon 2026 + Docker AI Governance + Kagent Agent 编排 + K8s 1.37 预览）
 - **可观测性**：3 篇（eBPF + OTel Go 1.32 + OTel CNCF 毕业）
 - **WASM 演进**：2 篇（服务端 WASI + K8s SpinKube 集成）
 - **FinOps 云成本**：1 篇（Go + OpenCost）
 - **平台工程与网络**：2 篇（Backstage IDP + Tailscale DERP）
-- **累计 13 篇**，更新频率：每周 1-2 篇
+- **累计 14 篇**，更新频率：每周 1-2 篇
 
 ---
 
