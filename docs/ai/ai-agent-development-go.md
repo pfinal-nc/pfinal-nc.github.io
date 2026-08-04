@@ -1,6 +1,6 @@
 ---
-title: "Go 语言 AI Agent 开发实战：从 Function Calling 到多工具编排"
-description: "用 Go 构建 AI Agent 系统，实现 Function Calling、工具编排、记忆管理"
+title: "Go 语言 AI Agent 开发实战 2026：Function Calling 到多工具编排（完整代码）"
+description: "用 Go 从零构建 AI Agent 系统：Function Calling 实战、5 种工具编排模式、短期+长期记忆管理，附可运行代码与架构设计图。"
 date: 2026-05-26
 author: PFinal南丞
 category: AI工程

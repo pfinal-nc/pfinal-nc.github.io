@@ -1,6 +1,6 @@
 ---
-title: "Kubernetes 配置管理：ConfigMap、Secret 与生产最佳实践"
-description: "掌握 Kubernetes 配置管理的完整方案：ConfigMap 管理非敏感配置、Secret 管理密钥，以及 Vault、External Secrets Operator 等生产级密钥管理方案，含 Go 应用实战示例。"
+title: "Kubernetes 配置管理 2026：ConfigMap/Secret 到 Vault 生产级密钥管理"
+description: "K8s 配置管理完整方案：ConfigMap 非敏感配置 + Secret 密钥管理 + Vault/External Secrets Operator 生产级方案，含 Go 应用集成示例代码。"
 date: 2026-04-17 12:00:00
 keywords:
   - Kubernetes ConfigMap

@@ -1,6 +1,6 @@
 ---
-title: "Kubernetes 工作负载深度解析：Deployment、StatefulSet、DaemonSet"
-description: "掌握 Kubernetes 三大核心工作负载：Deployment 滚动更新与回滚、StatefulSet 有状态应用、DaemonSet 守护进程，以及 Job/CronJob 任务调度，含完整 YAML 示例。"
+title: "Kubernetes 工作负载深度解析 2026：Deployment/StatefulSet/DaemonSet 实战指南"
+description: "K8s 3 大核心工作负载实战：Deployment 滚动更新与回滚、StatefulSet 有状态应用部署、DaemonSet 节点守护，含完整 YAML 示例与 Job/CronJob 任务调度。"
 date: 2026-04-17 10:00:00
 keywords:
   - Kubernetes Deployment

@@ -1,6 +1,6 @@
 ---
-title: "Kubernetes 入门：架构与核心概念全解析"
-description: "深入理解 Kubernetes 架构设计，掌握 Pod、Node、Namespace、控制平面等核心概念，以及 kubectl 常用命令，从零开始入门 K8s。"
+title: "Kubernetes 入门指南 2026：架构、核心概念与 kubectl 从零到精通"
+description: "K8s 架构设计深度解析：Pod/Node/Namespace/控制平面核心概念，kubectl 常用命令大全，从零开始入门 K8s 的 10 个关键步骤。"
 date: 2026-04-17 09:00:00
 keywords:
   - Kubernetes 入门

@@ -1,9 +1,9 @@
 ---
-title: Go语言实现守护进程的技术详解
+title: Go 实现守护进程实战 2026：信号处理、孤儿进程与 systemd 集成完整指南
 date: 2024-11-15 09:08:58
 tags: 
     - golang
-description: 本文将详细介绍如何使用Go语言实现守护进程,并探讨其中的关键技术点。
+description: Go 守护进程实现 3 大关键技术：fork+setsid 双重 fork 原理、信号处理优雅退出、systemd 集成生产部署，附完整可运行代码与生产环境踩坑经验。
 author: PFinal南丞
 keywords:
   - Go语言实现守护进程

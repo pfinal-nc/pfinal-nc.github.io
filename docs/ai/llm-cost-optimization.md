@@ -1,6 +1,6 @@
 ---
-title: "LLM API 成本优化实战：从 Token 管理到模型分级"
-description: "深入 LLM 成本控制策略：Token 压缩、缓存、模型分级、调用策略优化"
+title: "LLM API 成本优化实战 2026：5 大策略将 Token 费用降低 70%"
+description: "LLM 成本优化 5 大策略：Token 压缩 40%、语义缓存命中率 60%、GPT-4/Claude 模型分级路由、批量调用省 50%、流式降级方案，附 Go 实现代码与成本对比基准。"
 date: 2026-05-26
 author: PFinal南丞
 category: AI工程

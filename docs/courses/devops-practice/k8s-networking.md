@@ -1,6 +1,6 @@
 ---
-title: "Kubernetes 服务发现与网络：Service、Ingress、DNS 全解析"
-description: "深入理解 Kubernetes 网络模型，掌握 ClusterIP/NodePort/LoadBalancer/ExternalName 四种 Service 类型，以及 Ingress 配置实战、CoreDNS 解析原理，含 Nginx Ingress 完整配置示例。"
+title: "Kubernetes 网络与服务发现 2026：Service/Ingress/CoreDNS 实战全解析"
+description: "K8s 网络 4 种 Service 类型 + Ingress 配置实战 + CoreDNS 解析原理，含 Nginx Ingress 完整 YAML 示例，2026 生产环境必备网络指南。"
 date: 2026-04-17 11:00:00
 keywords:
   - Kubernetes Service

@@ -1,8 +1,8 @@
 ---
-title: "Go 单元测试最佳实践：从基础到 Table-Driven 测试"
+title: "Go 单元测试最佳实践 2026：Table-Driven 测试 + Mock + 覆盖率从入门到精通"
 date: 2026-05-11 08:30:00
 author: PFinal南丞
-description: "深入讲解 Go 语言单元测试的最佳实践，涵盖基础测试写法、Table-Driven 测试模式、Mock 接口技巧、覆盖率分析与优化、以及如何在 CI/CD 中集成测试。结合实际项目案例，帮助开发者写出高质量的可测试代码。"
+description: "Go 单元测试实战 5 大技巧：基础测试、Table-Driven 模式、Mock 接口、覆盖率分析优化、CI/CD 集成，结合实际项目案例写出高质量可测试代码。"
 keywords:
   - Go测试
   - 单元测试
