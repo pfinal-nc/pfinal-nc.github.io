@@ -1,5 +1,5 @@
 ---
-title: GitHub Copilot Agent Skills MCP 集中化治理：当代码审查规则从本地配置变成企业基础设施
+title: GitHub Copilot Code Review 支持 Agent Skills 与 MCP：让代码审查拥有团队记忆
 date: 2026-08-04
 tags:
   - AI
@@ -7,387 +7,233 @@ tags:
   - GitHub
   - copilot
 keywords:
-  - GitHub Copilot Agent Skills
-  - MCP 集中化治理
-  - Agent Skills 代码审查
-  - Claude Code 企业治理
-  - AI 编程助手 权限管理
-  - MCP 服务器 技能发现
-  - 联邦 MCP 网络
+  - GitHub Copilot Code Review
+  - Agent Skills
+  - MCP 服务器
+  - 代码审查自动化
+  - SKILL.md
+  - AI 代码审查
+  - Microsoft .NET Agent Framework
 category: AI
-description: 2026年7月29日，GitHub Copilot Code Review 正式将 Agent Skills 迁移到 MCP 服务器进行集中化动态发现，同一周 Microsoft .NET Agent Framework 也宣布支持同一架构。这标志着 AI 编程工具的 Agent Skills 从"个人赋能"走向"企业基础设施"。深度解析架构变化、治理模型与安全边界。
+description: 2026年7月29日，GitHub Copilot Code Review 的 Agent Skills 与 MCP 服务器支持正式 GA。深入解析 SKILL.md 技能文件与 MCP 只读外部上下文如何让 AI 代码审查从"看 diff 盲审"升级为"带有团队标准和实时上下文的有状态审查"，以及这一架构与 Microsoft .NET Agent Framework 的同周收敛释放了什么行业信号。
 ---
 
-# GitHub Copilot Agent Skills MCP 集中化治理：当代码审查规则从本地配置变成企业基础设施
+# GitHub Copilot Code Review 支持 Agent Skills 与 MCP：让代码审查拥有团队记忆
 
-> 2026-07-29 GA | GitHub + Microsoft 同一周收敛于 MCP 技能发现 | 从个人赋能到组织治理
+> 2026-07-29 GA | 所有 Copilot 付费计划可用 | MCP 仅读 · Skills 从 head 分支加载 · 审查注释携带来源标注
 
 ## 引言
 
-2026 年 7 月 29 日，GitHub 悄然发布了一个看似普通的更新：**Copilot Code Review 的 Agent Skills 支持从 MCP 服务器动态发现**。
+2026 年 7 月 29 日，GitHub 将 Copilot Code Review 的两项重要能力——**Agent Skills** 和 **MCP 服务器支持**——从公开预览推进到正式发布 (GA)。Copilot Pro、Pro+、Business 和 Enterprise 全部计划现在都可以使用。
 
-同一天——确切地说，同一周——Microsoft 的 Agent Framework for .NET 也独立宣布了完全相同的架构：**"Discover Agent Skills from MCP servers"**。
+在此之前，Copilot Code Review 只读取 PR 的 diff 和你写在仓库根目录的自定义指令。它对你们团队约定"EF Core 迁移必须提供可回滚的 Down() 方法"一无所知，也不知道这个 PR 关联的 Issue 在上周已经被关闭过一次。**AI 审查的质量天花板，本质上就是它能获取到的上下文的天花板。**
 
-两个独立的工程团队，在不同的代码库上，不约而同地将 Agent Skills 从客户端本地文件推送到了 MCP 服务器远端发现。这不是巧合，这是拐点。
+Agent Skills 和 MCP 分别解决了一个核心问题：**Skills 告诉 AI 审查时应该遵循什么规则**，**MCP 让 AI 在审查时能查询外部系统的最新状态**。两者组合在一起，让审查从一个无状态的 diff 检查升级为有团队记忆的、上下文感知的审查。
 
-对开发者来说，这意味着你写在本地的 `.github/copilot/rules/code-review.md` 将不再是权威——真正决定你 PR 审查标准的那个人，可能是你从未见过的平台团队，他们在一台 MCP 服务器上维护了一套你无法覆盖的规则。
+同一周，Microsoft .NET Agent Framework 也发布了 MCP Skills Discovery 支持——这不是一个巧合，而是一个架构收敛信号。
 
-本文将从架构变化、治理模型和安全边界三个维度，深度分析这一转变的技术本质与影响。
+## Agent Skills：把团队规范编码为可执行文件
 
-## 从本地配置到远程发现：架构对比
+### Skills 是什么
 
-### 旧模型（2024-2026）：本地提示词文件
-
-```
-┌─────────────────────────────────┐
-│        开发者本地                 │
-│                                 │
-│  .github/copilot/rules/         │
-│  ├── security-review.md         │
-│  ├── style-guide.md             │
-│  └── migration-checklist.md     │
-│                                 │
-│  ┌───────────────────────┐      │
-│  │  Copilot Code Review  │      │
-│  │  (读取本地规则文件)     │      │
-│  │  每次 PR → 加载本地    │      │
-│  │  .md → 注入 system     │      │
-│  │  prompt → 审查代码     │      │
-│  └───────────────────────┘      │
-└─────────────────────────────────┘
-```
-
-这套模型的核心假设是：**每个开发者自主配置自己的审查规则**。优点是灵活，缺点是——
-- 40 个仓库需要 40 份相同的规则文件
-- 安全团队更新规则需要 PR 通知所有人手动更新
-- 无法保证开发者真的启用了规则
-- 开发者可以随时删除或禁用任何规则
-
-### 新模型（2026-07-29 起）：MCP 动态技能发现
+Agent Skills 的本质很简单：在 `.github/skills/` 目录下创建一个子目录，放入一个 `SKILL.md` 文件，Copilot Code Review 就会在审查时自动加载它。
 
 ```
-┌──────────────────────────────────────────┐
-│           企业 MCP 服务器                  │
-│                                          │
-│  ┌─────────────────────────────────┐     │
-│  │  Agent Skills Catalog           │     │
-│  │  ├── auth-review-checklist      │     │
-│  │  ├── naming-convention          │     │
-│  │  ├── migration-playbook         │     │
-│  │  ├── owasp-top-10-check         │     │
-│  │  └── data-privacy-validator     │     │
-│  └─────────────────────────────────┘     │
-│                                          │
-│  发布一次 → 所有客户端即时生效             │
-└──────────────┬───────────────────────────┘
-               │ MCP Protocol (JSON-RPC 2.0)
-               │ tools/list → 技能清单
-               │ tools/call → 执行技能
-               │
-    ┌──────────┼──────────┬──────────┐
-    ▼          ▼          ▼          ▼
-┌────────┐ ┌────────┐ ┌────────┐ ┌────────┐
-│ 开发者A │ │ 开发者B │ │ 开发者C │ │ 开发者D │
-│ Claude  │ │ Copilot│ │ Codex  │ │ Cursor │
-│  Code   │ │  Code  │ │  CLI   │ │        │
-└────────┘ └────────┘ └────────┘ └────────┘
+.github/
+└── skills/
+    ├── code-review/
+    │   └── SKILL.md              ← 通用代码审查规则
+    ├── ef-core-migration/
+    │   ├── SKILL.md              ← EF Core 迁移专项规则
+    │   └── references/
+    │       └── backfill-snippet.md
+    └── api-security/
+        └── SKILL.md              ← API 安全规则
 ```
 
-关键变化：
-1. **规则不再在客户端**，而是在中心化的 MCP 服务器上
-2. **技能发现是动态的**——Copilot 在开始审查时查询服务器，获取当前最新的技能清单
-3. **规则发布即生效**——不需要开发者手动更新任何文件
+每个 SKILL.md 是一个 Markdown 文件，使用简单的 YAML frontmatter 声明触发条件：
 
-## 深入：GitHub Copilot Code Review 的 MCP 技能发现机制
+```markdown
+---
+name: "EF Core Migration Review"
+description: >
+  当 diff 涉及 Migrations/ 目录时使用。
+  检查迁移是否可逆、列类型变更是否安全、索引是否有显式名称。
+---
 
-### 协议交互流程
+## 审查要点
 
-当开发者创建一个 PR 并触发 Copilot Code Review 时，实际发生的交互如下：
+### Down() 方法必须可逆
+- **标记**：Down() 方法体为空或只有 `// no-op` 注释
+- **要求**：每个 migration 必须可逆，Down() 应精确还原 Up() 中的变更
 
-```
-Copilot Agent                    MCP Server
-    │                               │
-    │  1. tools/list                │
-    │──────────────────────────────▶│
-    │                               │
-    │  2. 返回技能目录               │
-    │◀──────────────────────────────│
-    │  {                             │
-    │    "tools": [                  │
-    │      {                         │
-    │        "name": "owasp_check", │
-    │        "description": "OWASP  │
-    │          Top 10 ...",         │
-    │        "inputSchema": {       │
-    │          "code": "string",     │
-    │          "language": "string"  │
-    │        }                       │
-    │      },                        │
-    │      ...                       │
-    │    ]                           │
-    │  }                             │
-    │                               │
-    │  3. tools/call                │
-    │  (对每个文件执行相关技能)        │
-    │──────────────────────────────▶│
-    │                               │
-    │  4. 返回审查结果               │
-    │◀──────────────────────────────│
-    │  {                             │
-    │    "findings": [               │
-    │      {                         │
-    │        "skill": "owasp_check", │
-    │        "severity": "HIGH",     │
-    │        "message": "..."       │
-    │      }                         │
-    │    ]                           │
-    │  }                             │
+### DropColumn 需检查数据迁移
+- **标记**：Up() 中存在 DropColumn，但无前置的数据迁移
+- **建议**：在 references/backfill-snippet.md 中注释应使用的数据回填代码
+
+### 索引命名
+- **标记**：CreateIndex 未提供显式 `name:` 参数
+- **要求**：所有索引必须有显式命名，便于后续维护
 ```
 
-### MCP 技能定义的格式
+### 关键设计决策：Skills 从 head 分支加载
 
-每个 Agent Skill 在 MCP 服务器上以一个标准的 JSON Schema 工具定义呈现：
+一个值得注意的设计是：**Copilot Code Review 从 PR 的 head 分支读取 skills**，而不是从 base 分支读取。这意味着你可以在 PR 中修改 skill 文件，同一 PR 就会用新规则进行审查。这使得迭代审查规则成为一个可渐进改进的过程——不需要先合并再验证。
 
-```json
-{
-  "name": "auth-review-checklist",
-  "description": "审查认证相关代码：检查 JWT 签名算法、session 管理、OAuth 流程、密码哈希策略",
-  "inputSchema": {
-    "type": "object",
-    "properties": {
-      "code_diff": {
-        "type": "string",
-        "description": "git diff 输出"
-      },
-      "language": {
-        "type": "string",
-        "enum": ["ruby", "python", "go", "javascript", "typescript", "java"]
-      },
-      "context": {
-        "type": "string",
-        "description": "可选的额外上下文，如涉及的文件路径和模块名"
-      }
-    },
-    "required": ["code_diff", "language"]
-  }
-}
-```
+### Skills 的适用场景
 
-与旧模型的 `.md` 文件相比，这种结构化定义的好处是：
-- **类型安全**：参数有明确的类型约束
-- **可发现性**：`tools/list` 让 Agent 在运行时知道所有可用技能
-- **版本化**：MCP 服务器可以维护多个版本，逐步迁移
-- **跨工具**：同一个 MCP 服务器可以被 Claude Code、Copilot、Codex CLI 同时使用
+Skills 的价值随着规则的具体程度递增：
 
-## 同周收敛：Microsoft .NET Agent Framework 的平行路径
+- **低价值**："请检查代码质量"——太模糊，模型本身已经能做到
+- **中价值**："所有 API 端点需要输入校验"——明确但偏通用
+- **高价值**："当 diff 修改了 `config/deploy.rb` 时，验证 deploy 流程中是否有与新环境变量对应的文档更新"——高度具体、领域相关、依赖项目内部知识
 
-7 月 29 日那一周，Microsoft DevBlogs 发布了一篇技术博客：**"Discover Agent Skills from MCP servers in .NET Agent Framework"**。
+好的 skill 文件应该包含只有你的团队知道的规则。Copilot 的基线审查已经覆盖了常见的代码质量问题——skills 的价值在于填补通用知识和项目特定规范之间的空白。
 
-这意味着两个独立事件在时间上的精确重合：
+## MCP 连接：让审查获取外部实时上下文
 
-| 维度 | GitHub Copilot | Microsoft .NET Agent Framework |
-|------|---------------|-------------------------------|
-| 发布时间 | 2026-07-29 | 2026-07-29 同一周 |
-| 技能存储 | MCP 服务器 | MCP 服务器 |
-| 发现机制 | tools/list 动态查询 | tools/list 动态查询 |
-| 覆盖工具 | Copilot Code Review | .NET Agent 生态 |
-| 治理模型 | 组织级规则，不可本地覆盖 | 企业级技能注册表 |
+### MCP 在审查中的角色
 
-这不是巧合，这是**行业收敛**。当一个架构模式被两个独立的、有竞争力的工程团队在同一时间点选择，它通常意味着这个模式已经通过了"可行性的检验"，正在变成基础设施。
+MCP（Model Context Protocol）连接让 Copilot Code Review 从外部系统拉取实时上下文。官方文档列出的典型目标包括：**Issue 追踪器、文档系统、服务目录**。
 
-## 治理模型：从个人赋能到组织控制
+**关键约束：所有 MCP 工具调用在审查期间是只读的。** Copilot 可以读取 Issue 的状态、查询 API 文档、检查服务依赖关系，但不能在连接的系统中写入任何内容。
 
-这个转变的核心矛盾可以用一句话概括：
+### 配置方式
 
-> 过去两年，AI 编程工具的叙事是"个人赋能"。现在，GitHub 悄悄把钥匙交给了平台团队。
-
-### 权限模型的根本翻转
-
-```diff
-- 旧模型：开发者写了什么规则，Agent 就执行什么规则
-+ 新模型：MCP 服务器发布了什么规则，Agent 就执行什么规则
-
-- 旧模型：开发者可以删除某条规则 = 选择不遵守
-+ 新模型：开发者无法删除服务器上的规则 = 必须遵守
-
-- 旧模型：每个开发者自己维护规则文件
-+ 新模型：平台/安全团队一次性发布，全员生效
-```
-
-### 企业场景下的实际案例
-
-假设一个金融科技公司有 200 个微服务、40 个 Git 仓库、80 名开发者。安全团队制定了三条强制性审查规则：
-
-1. **禁止在日志中输出 PII**（个人可识别信息）
-2. **所有 API 端点必须有速率限制**
-3. **数据库查询必须使用参数化语句**
-
-**旧模型的问题**：安全团队需要确保 80 个开发者每个人的本地 `.github/copilot/rules/` 目录都包含这三条规则。实际情况是——至少 20 个人从来没创建过这个目录。
-
-**新模型的做法**：安全团队维护一个 MCP 服务器：
-
-```yaml
-# 企业 Agent Skills MCP 服务器配置
-skills:
-  - name: pii-logging-check
-    severity: CRITICAL
-    rule: 禁止在日志/错误消息中输出邮箱、手机号、身份证号
-    auto_reject: true  # 违反此规则 → 自动拒绝 PR
-    
-  - name: rate-limit-check
-    severity: HIGH
-    rule: 所有对外 API 端点必须实现速率限制
-    pattern: "@PostMapping|@app.route|router.post" + 无 @RateLimit 注解
-    
-  - name: sql-injection-check
-    severity: CRITICAL
-    rule: 数据库查询必须使用参数化语句，禁止字符串拼接
-    auto_reject: true
-```
-
-Copilot Code Review 在处理每个 PR 时自动从该服务器拉取技能清单，按严重级别执行审查。开发者无法绕过——因为规则不在他们的本地文件系统上。
-
-## 安全边界：新的攻击面
-
-任何能力被集中化的时候，那个集中点就变成了攻击面。MCP 技能服务器的安全需求至少包括：
-
-### 1. 传输层安全
+MCP 服务器在仓库的 Settings → Copilot → MCP servers 下配置：
 
 ```json
 {
   "mcpServers": {
-    "org-review-skills": {
-      "url": "https://skills.internal.example.com/mcp",
-      "transport": "sse",
-      "auth": {
-        "type": "oauth2",
-        "clientId": "copilot-code-review",
-        "scopes": ["skills:read"],
-        "tokenUrl": "https://auth.internal.example.com/oauth/token"
-      }
+    "issue-tracker": {
+      "type": "http",
+      "url": "https://mcp.example.com/mcp",
+      "headers": {
+        "Authorization": "Bearer $COPILOT_MCP_TRACKER_TOKEN"
+      },
+      "tools": ["search_issues", "get_issue"]
+    },
+    "internal-docs": {
+      "type": "http",
+      "url": "https://docs.internal.example.com/mcp",
+      "tools": ["search"]
     }
   }
 }
 ```
 
-这正是 MCP 2026-07-28 Spec 正式引入 OAuth 2.0 + OIDC 支持的原因。一个没有认证的 MCP 技能服务器 = 任何人都可以向你的 Agent 注入规则。
+认证令牌存储在仓库的 Settings → Secrets and variables → Agents 下，通过 `$COPILOT_MCP_<name>` 变量引用。
 
-### 2. 技能签名验证
+**GitHub 和 Playwright MCP 服务器默认启用**。如果你之前已经为 Copilot Cloud Agent 配置过 MCP 服务器，它们会自动应用于 Code Review——无需重复配置。
 
-```typescript
-interface SignedSkill {
-  name: string
-  version: string
-  content: string
-  signature: string  // 用组织私钥签名
-  publicKey: string   // 对应公钥
-}
+### MCP 的一个实际例子
 
-// Copilot 在加载技能前验证签名
-function verifySkill(skill: SignedSkill): boolean {
-  const verifier = crypto.createVerify('SHA256')
-  verifier.update(JSON.stringify({
-    name: skill.name,
-    version: skill.version,
-    content: skill.content
-  }))
-  return verifier.verify(skill.publicKey, skill.signature, 'base64')
-}
+假设一个 PR 标题是 "fix: resolve rate-limiting issue #1234"：
+
+1. Copilot 开始审查，加载 diff
+2. 通过 MCP 连接 issue tracker，查询 #1234 的详细描述和复现条件
+3. 发现该 issue 描述了 "用户在 100 并发时 API 返回 429"，修复方案预期是增加速率限制令牌桶容量
+4. Copilot 检查 diff 中的令牌桶参数是否与 issue 描述的并发量匹配
+5. 如果没有 MCP 上下文，Copilot 只能看到 diff 中的数值变更，无法判断这些数值是否合理
+
+### 注释来源标注：知道为什么被标记
+
+MCP 和 Skills 带来的一个重要变化是**审查注释现在携带来源标注**。当一条审查评论是基于 skill 规则或 MCP 数据产生的，评论会明确标注来自哪个 skill 或 MCP 源。
+
+这对团队采纳 AI 审查至关重要——开发者更可能认真对待一条明确来自"团队安全审查规则"的建议，而非一条来源不明的通用建议。
+
+## 同周收敛：Microsoft .NET Agent Framework 的平行选择
+
+7 月 28 日（GitHub GA 的前一天），Microsoft DevBlogs 发布了一篇技术文章，由 Sergey Menshykh 撰写，宣布 .NET Agent Framework 的 MCP Skills Discovery 能力。这两则公告的时间差仅为一天：
+
+| 维度 | GitHub Copilot Code Review | Microsoft .NET Agent Framework |
+|------|---------------------------|-------------------------------|
+| 发布日期 | 2026-07-29 | 2026-07-28 |
+| Skills 存储 | `.github/skills/<name>/SKILL.md` | MCP 服务器动态发现 |
+| MCP 角色 | 审查时拉取只读外部上下文 | Skills 的运行时发现与分发 |
+| 覆盖工具 | Copilot Code Review | .NET Agent 生态 |
+| 认证 | OAuth / token（仓库级 Secrets） | 框架级认证集成 |
+
+两个独立团队在不同代码库上、覆盖不同语言生态，但选择了同一个协议（MCP）作为技能传输和发现的中间层。
+
+这不是巧合，而是行业收敛。当两个独立决策同时指向同一个架构选择时，这个选择通常不再是"一种方案"，而是正在成为"基础设施"。MCP 从 Claude 的周边协议正在变成连接 AI Agent 与外部工具的通用中间件。
+
+## 对开发团队的实际操作指南
+
+### 1. 编写你的第一个 SKILL.md
+
+从团队最有共识的一条规则开始，放在 `.github/skills/code-review/SKILL.md`：
+
+```markdown
+---
+name: "Team Code Review Standards"
+description: "在每次 PR 审查时应用的团队编码规范"
+---
+
+# 审查规则
+
+## 错误处理
+- 所有 async 函数必须有显式的错误处理
+- 禁止空的 catch 块
+- catch 中禁止仅 `console.error` 不处理
+
+## 日志规范
+- 生产代码中禁止 console.log——使用 logger 工具
+- 日志中禁止输出 PII（邮箱、手机号、身份证号）
+
+## API 验证
+- 所有对外 API 的入参必须校验
+- SQL 查询必须使用参数化——禁止字符串拼接
 ```
 
-如果 MCP 服务器被入侵，攻击者可以注入恶意审查规则——比如"所有 SQL 参数化检查返回通过"，这将直接导致漏洞进入生产代码。
+提交这个文件，在下一个 PR 中观察是否出现了带有技能来源标注的审查意见。
 
-### 3. 最小权限原则
+### 2. 连接你的 Issue Tracker
 
-```yaml
-# MCP 服务器的权限策略
-permissions:
-  copilot-code-review:
-    tools: ["tools/list", "tools/call"]
-    resources: []  # 不需要访问资源
-    prompts: []    # 不需要提示词模板
-    
-  admin-dashboard:
-    tools: ["*"]
-    resources: ["*"]
-    prompts: ["*"]
-```
+如果你使用 GitHub Issues 则无需额外配置——GitHub MCP 已默认启用。如果使用 Jira/Linear/其他，在 Settings → Copilot → MCP servers 中添加对应的 MCP 服务器配置。
 
-Copilot Code Review 只需要读取技能清单和调用技能——不需要访问资源或提示词模板。严格限制权限减少了攻击面。
+只暴露你需要的工具——GitHub 官方建议使用 `tools` 字段显式 allowlist 特定工具，而不是 `["*"]`。这是安全考量：Agent 在没有人工审批步骤的情况下自主调用这些工具，限制工具范围就是限制攻击面。
 
-## 行业信号：Agent Skills 正在变成基础设施
+### 3. 理解 Skills 的迭代方式
 
-这个转变不是孤立的。如果我们拉远镜头，会看到一条清晰的产业链正在形成：
+因为 skills 从 head 分支加载，你可以在同一个 PR 中同时修改代码和审查规则：
 
 ```
-2024 Q4   Anthropic 提出 Agent Skills 格式标准
-2025 Q1   Claude Code 支持本地 .claude/skills/
-2025 Q2   Cursor 和 Windsurf 各自实现 skills 支持
-2025 Q3   Agent Skills 格式实现跨工具互操作
-2026 Q2   MCP 协议成为 skills 传输的标准载体
-2026 Q3   GitHub + Microsoft 同一周将 skills 迁到 MCP 服务器
-2026 Q4?  Skills marketplace / 企业内部 skills 注册表 / 合规审计集成
+PR #567: "添加 Redis 缓存层"
+├── src/cache/redis.ts          ← 代码变更
+└── .github/skills/caching/SKILL.md  ← 新增缓存相关审查规则
 ```
 
-Agent Skills 正在经历一条熟悉的路径——**从个人工具变成团队工具，再变成基础设施**。这和 Git、CI/CD、容器编排走过的路一模一样。
+这个 PR 本身就会用新的缓存审查规则来审查自己的缓存代码变更。不需要先合并规则再等待下一次使用。
 
-## 对开发者的实际影响
+## 不能做什么（重要的限制）
 
-### 你可能需要关心的
+Skills 和 MCP 是**辅助审查**工具，不是门控系统：
 
-1. **你的 Copilot 审查标准可能已经不是你写的那个了。** 检查你的组织是否部署了 MCP 技能服务器，以及它的技能清单中包含了什么。
+- **MCP 只读**——不���在 Issue 中写评论、不能自动关闭/重开 Issue、不能更新文档
+- **Skills 提供建议**——不会自动拒绝 PR、不会阻止合并。审查结果是放在 PR 评论区作为审查意见
+- **跨文件追踪仍受限**——Copilot 审查 diff，不能跨多文件追踪调用链
+- **Skills 有长度限制**——自定义指令上限约 4000 字符
 
-2. **"不同意审查结果"时你找谁？** 在旧模型下，你可以修改本地规则文件。在新模型下，你需要联系 MCP 服务器的管理员——这可能是平台团队，也可能是安全团队。
-
-3. **你的 Claude Code / Codex CLI 也能用同一个 MCP 技能服务器。** 这是 MCP 跨工具互操作性的价值：一次定义，到处使用。
-
-### 配置示例：连接企业 MCP 技能服务器
-
-```json
-// .copilot/config.json
-{
-  "codeReview": {
-    "skills": {
-      "mode": "mcp",
-      "servers": [
-        {
-          "name": "org-security-skills",
-          "url": "https://skills.internal.example.com/mcp",
-          "required": true,
-          "categories": ["security", "compliance"]
-        },
-        {
-          "name": "team-style-skills",
-          "url": "https://skills.team.example.com/mcp",
-          "required": false,
-          "categories": ["style", "best-practices"]
-        }
-      ]
-    },
-    "localOverrides": false
-  }
-}
-```
-
-注意最后一行的 `"localOverrides": false`——这是企业治理的关键开关。当它被设为 `false` 时，你的本地规则文件将不会对审查结果产生任何影响。
+Copilot Code Review 在小 PR（< 50 行变更）上表现最好。Microsoft .NET 团队测得的准确率在 76-80% 范围。大型重构和 200+ 文件的 PR 不仅准确率下降，还会消耗可观的 Actions 计算分钟数。
 
 ## 总结
 
-GitHub Copilot Agent Skills 迁移到 MCP 服务器的意义，远远超出了"又一个功能更新"的范畴。它标志着：
+Agent Skills 和 MCP 被推向 GA，核心价值在于三点：
 
-1. **Agent Skills 的存储和执行位置从客户端迁移到了服务器**，这是从"工具"到"平台"的质变。
-2. **治理模型发生翻转**：平台/安全团队获得了定义和强制执行规则的能力，开发者失去了"选择不遵守"的选项。
-3. **MCP 协议正在成为 Agent 生态的事实标准传输层**——不仅是工具连接，更是治理基础设施。
-4. **攻击面同时扩展**：MCP 技能服务器的可用性、完整性和机密性直接决定了代码审查的质量。谁控制了这个服务器，谁就控制了你代码的质量闸门。
+1. **Skills 让团队规范可执行。** 与其在每个 PR 中人工重复"迁移必须有 Down()"，不如写一次让 AI 每次自动检查。Skills 的 head-branch 加载机制让规则迭代和代码变更可以在同一个 PR 中验证。
 
-对于企业来说，这是个好消息——终于有了一套可以审计、可以版本化、可以集中管理的代码审查标准。对于开发者来说，这是个需要适应的变化——你的 AI 编码助手正在变得不那么"你的"，而更像是组织的。
+2. **MCP 让审查拥有外部上下文。** 一个只看到 diff 的审查者无法判断参数值是否合理——只有当它能查询对应的 Issue 描述和 API 文档时，审查才能从"语法检查"升级为"语义检查"。
 
-这也许是 AI 编程工具走向成熟的必经之路：当工具足够重要时，它就不再是个人的选择，而是组织的基础设施。
+3. **来源标注解决了 AI 审查的信任问题。** 开发者更愿意接受来自"团队安全规范 #3"的标记，而非一个神秘的黑箱建议。标注让审查从"AI 说了什么"变成"团队规则检测到了什么"。
+
+GitHub 和 Microsoft .NET 团队在同一周选择的架构路径表明：Agent Skills 的存储和分发正在以 MCP 为标准载体收敛。这不是一个功能的发布，而是一个生态方向的确认。
 
 ## 参考资料
 
-- [GitHub Changelog - Copilot Code Review Agent Skills MCP (2026-07-29)](https://github.blog/changelog/)
-- [Microsoft DevBlogs - Discover Agent Skills from MCP servers in .NET](https://devblogs.microsoft.com/)
-- [MCP 2026-07-28 Specification (OAuth 2.0 + OIDC)](https://spec.modelcontextprotocol.io/)
-- [Anthropic Agent Skills 格式规范](https://docs.anthropic.com/en/docs/agents-and-tools/agent-skills)
-- [ScienceShot - Copilot Code Review's Agent Skills + MCP Recentralize Control](https://scienceshot.com/post/copilot-code-review-agent-skills-mcp)
+- [GitHub Changelog: Copilot code review Agent skills and MCP GA](https://github.blog/changelog/2026-07-29-copilot-code-review-agent-skills-and-mcp-now-generally-available)
+- [GitHub Agent Skills 官方文档](https://docs.github.com/en/copilot/using-github-copilot/agent-skills)
+- [Microsoft DevBlogs: Discover Agent Skills from MCP servers in .NET](https://devblogs.microsoft.com/dotnet/)
+- [MCP 2026-07-28 Specification Update](https://spec.modelcontextprotocol.io/)
+- [Pondero.ai: GitHub brings MCP connections and agent skills to Copilot code review](https://pondero.ai/news/2026-07-31-github-copilot-mcp-ga)
+- [Start Debugging: Copilot Code Review Now Reads Your .github/skills Folder](https://startdebugging.net/2026/07/copilot-code-review-agent-skills-and-mcp-ga)
