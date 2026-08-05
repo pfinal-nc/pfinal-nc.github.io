@@ -44,6 +44,7 @@ pageClass: php-hub-page
 - [**Phargo 深度解析：AI 用 Rust 重写 PHP 引擎，跑通 WordPress 的实验与启示**](/dev/backend/php/phargo-ai-rust-php-engine-wordpress-2026) - AI 生成 Rust PHP 运行时，渲染 WordPress（2026-07-21）
 - [**TypePHP 深度解析：Swoole AOT 更名，PHP 静态编译原生二进制能否让 PHP 重获新生？**](/dev/backend/php/typephp-swoole-aot-native-binary-php-2026) - 原生二进制、双引擎架构、性能展望（2026-07-21）
 - [**Mago 1.0.0 深度解析：Rust 重写 PHP 工具链，31 倍提速的生产级实战**](/dev/backend/php/mago-1-0-0-rust-php-toolchain-production-2026) - 静态分析/Lint/Format 三合一、Guard 架构约束（2026-07-22）
+- [**Laravel 13.20 第一方图像处理实战：Illuminate\Image 不可变 API 与生产级流水线**](/dev/backend/php/laravel-13-20-first-party-image-processing-2026) - 第一方图像处理 / 不可变管道 / GD vs Imagick / 响应式图片 / 队列处理（2026-08-05）
 
 ### 数据库与缓存
 - [**PHP数据库操作最佳实践**](/dev/backend/php/PHP数据库操作) - PDO, ORM, 查询优化

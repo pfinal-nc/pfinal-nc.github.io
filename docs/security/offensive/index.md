@@ -81,6 +81,10 @@ recommend: 安全
 - [Unit 42 曝光首个 AI 全自动攻击链：knaithe 用 DeepSeek + Hermes Agent 自主打穿 460+ 目标](/security/offensive/unit42-deepseek-hermes-agent-autonomous-attack-2026) - 2026-08-04 CVSS 8 CVE / DeepSeek 自主攻击 / Hermes Agent / 460+ 目标
 - [Coldcard 硬件钱包 RNG 漏洞解剖：Yasmarang 确定性回退如何让 1,367 BTC 无声蒸发](/security/offensive/coldcard-rng-yasmarang-btc-theft-2026) - 2026-08-04 约 1,367 BTC / 8800万美元 / RNG 回退 / Block 根因分析
 - [Fastjson2 ≤2.0.62 AutoType RCE 深度分析：SeeAlso 链如何绕过白名单直达类加载器](/security/offensive/fastjson2-seealso-autotype-rce-2026) - 2026-08-04 CVSS 9.8 / SeeAlso 链 / FNV 碰撞 / 长期受影响 / 修复 2.0.63
+- [OpenSSL HollowByte 深度分析：11 字节 TLS 请求如何冻结服务器内存](/security/offensive/openssl-hollowbyte-dos-11-bytes-memory-freeze-2026) - 2026-07-28 Okta Red Team / ClientHello 11 bytes / glibc 内存碎片 / 内存耗尽 DoS
+- [Apache Traffic Server 34 个安全漏洞深度分析：CVSS 10.0 请求走私如何穿透 CDN 防护](/security/offensive/apache-traffic-server-34-cve-request-smuggling-2026) - 2026-08-05 34 CVE / 2 个 CVSS 10.0 / 请求走私+内存安全+ACL 绕过 / CDN 基础设施
+- [CISA KEV 修复窗口崩溃：N-able CVE-2026-18577 仅给 3 天背后的应急响应范式剧变](/security/offensive/cve-2026-18577-n-able-kev-window-collapse-2026) - 2026-08-05 CVSS 8.2 / KEV 3 天窗口 / 2026 年 69/176 条仅给 3 天 / MSP 横向移动
+- [CVE-2026-9198 IBM Langflow AI 平台零认证 RCE 攻击链全拆解](/security/offensive/cve-2026-9198-langflow-ai-platform-rce-2026) - 2026-08-05 CVSS 9.8 / CISA KEV / auto_login + exec() 链式利用 / AI 基础设施安全
 
 ### 🔬 供应链与工具链安全
 - [Miasma 供应链蠕虫攻击深度分析：2026 年开源生态的至暗时刻](/security/offensive/miasma-supply-chain-worm-attack-2026) - 2026-06-15

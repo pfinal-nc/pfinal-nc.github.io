@@ -52,6 +52,9 @@ cover: /images/covers/ai.svg
 | 31 | 🔄 Codex 0.145 | [Codex CLI 0.145 深度解析：/import 迁移战争、Multi-Agent V2 与透明度争议](/ai/codex-cli-0-145-import-migration-multi-agent-transparency-2026) | 2026-07-27 |
 | 32 | 🧪 评估不对称 | [Karpathy Opus 5 一百万 token 渲染指环王：Agent 评估的"生成与验证"不对称性如何重新定义 AI 工作流](/ai/karpathy-opus-5-million-tokens-lotr-verification-asymmetry-2026) | 2026-08-03 |
 | 33 | 🏢 Copilot MCP 治理 | [GitHub Copilot Agent Skills MCP 集中化治理：当代码审查规则从本地配置变成企业基础设施](/ai/github-copilot-agent-skills-mcp-centralized-governance-2026) | 2026-08-04 |
+| 34 | 🧠 MCP 记忆生态 | [MCP 记忆生态集体爆发：Adaptive Recall + Kote 如何让 AI Agent 拥有长期记忆](/ai/mcp-memory-ecosystem-adaptive-recall-kote-2026) | 2026-07-28 |
+| 35 | 🐍 面向对象 Agent | [Nvidia NOOA 深度解析：一个 Python 类就是一个 AI Agent 的面向对象范式革命](/ai/nvidia-nooa-object-oriented-agents-python-class-2026) | 2026-08-05 |
+| 36 | 🛡️ Agent 身份治理 | [Rubrik Agent Identity 深度解析：Black Hat 2026 的 AI Agent 身份治理范式](/ai/rubrik-agent-identity-black-hat-2026-agent-governance) | 2026-08-05 |
 
 **学习路径建议**：从 1→7 顺序阅读，1 是入门基础，3 和 5 是 2026 必备技能，7 是前沿探索。8 打通 Agent 到前端最后一公里，9 是 AI 编程工具链巅峰之作。10-12 是 MCP 协议生态最新实战，从协议设计到生产级集成完整覆盖。13-15 聚焦 AI 编程终端 Agent 的工程化、团队治理与协议规范迁移。18-19 进入 Agent 工程化治理与持久化执行的新阶段：18 用 SDD 治理 Vibe Coding 碎片化（GitHub Spec Kit 实战），19 详解 LangGraph 1.0 Durable Execution + Human-in-the-Loop 生产级架构（PostgresSaver/RedisSaver/HITL 中断恢复）。23-27 探索 AI Agent 信息架构新范式、编码 Agent 落地与企业级授权治理：23 Context Engineering 揭示从 Prompt Engineering 到全局信息架构的跃迁，24 X MCP Server 实现零配置托管式 150+ API 端点集成，25 是 Claude Sonnet 5 发布后的生产级 Agent 编码落地指南，26 详解 MCP 企业托管授权（EMA）与 ID-JAG 如何终结企业 MCP 部署的逐服务 OAuth 噩梦，27 深度解读 Bun 用 64 Claude Agent 从 Zig 迁移到 Rust 的 AI 大规模重写事件。30 紧跟 2026-07-28 规范，把 server-rendered UI 和长时任务这两个企业级扩展落地成可运行代码。
 
@@ -92,11 +95,11 @@ cover: /images/covers/ai.svg
 
 ## 📊 系列文章统计
 
-- **AI Agent 全栈**：28 篇（2026 年新增 26 篇，含 AG-UI 前端集成、OpenCode 架构、Agent Skills、MCP 路线图、OpenClaw 实战、Harness Engineering、Codex CLI、MCP Spec RC、Safari MCP、AI 漏洞挖掘范式、GitHub Spec Kit、LangGraph 1.0、GPT-5.6 出口管制、Grok 4.5 编码 Agent、ACL 推理漂移评测、Context Engineering、X MCP Server、Claude Sonnet 5、Bun Rust 重写、Kimi K3、AI Agent 记忆投毒、MCP Apps/Tasks 扩展）
+- **AI Agent 全栈**：34 篇（2026 年新增 32 篇，含 AG-UI 前端集成、OpenCode 架构、Agent Skills、MCP 路线图、OpenClaw 实战、Harness Engineering、Codex CLI、MCP Spec RC、Safari MCP、AI 漏洞挖掘范式、GitHub Spec Kit、LangGraph 1.0、GPT-5.6 出口管制、Grok 4.5 编码 Agent、ACL 推理漂移评测、Context Engineering、X MCP Server、Claude Sonnet 5、Bun Rust 重写、Kimi K3、AI Agent 记忆投毒、MCP Apps/Tasks 扩展、Codex 0.145、Karpathy Opus 5、Copilot MCP 治理、MCP 记忆生态）
 - **RAG / LLM 应用**：6 篇
 - **模型接入实战**：2 篇（Claude Sonnet 4.6 + Gemini 3.5 Flash）
 - **LLM 评测与协议演进**：3 篇（RULER/MRCR 长上下文 + HSCodeComp 推理漂移 + Go Agent Eval 框架）
-- **累计 38 篇**，更新频率：每周 2-3 篇热点文章同步
+- **累计 45 篇**，更新频率：每周 2-3 篇热点文章同步
 
 ---
 
