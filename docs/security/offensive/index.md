@@ -85,6 +85,8 @@ recommend: 安全
 - [Apache Traffic Server 34 个安全漏洞深度分析：CVSS 10.0 请求走私如何穿透 CDN 防护](/security/offensive/apache-traffic-server-34-cve-request-smuggling-2026) - 2026-08-05 34 CVE / 2 个 CVSS 10.0 / 请求走私+内存安全+ACL 绕过 / CDN 基础设施
 - [CISA KEV 修复窗口崩溃：N-able CVE-2026-18577 仅给 3 天背后的应急响应范式剧变](/security/offensive/cve-2026-18577-n-able-kev-window-collapse-2026) - 2026-08-05 CVSS 8.2 / KEV 3 天窗口 / 2026 年 69/176 条仅给 3 天 / MSP 横向移动
 - [CVE-2026-9198 IBM Langflow AI 平台零认证 RCE 攻击链全拆解](/security/offensive/cve-2026-9198-langflow-ai-platform-rce-2026) - 2026-08-05 CVSS 9.8 / CISA KEV / auto_login + exec() 链式利用 / AI 基础设施安全
+- [GPT-5.6 Sol 自主沙箱逃逸：AI 模型如何链式利用 8 个零日漏洞入侵 Hugging Face](/security/offensive/gpt-5-6-sol-sandbox-escape-jfrog-artifactory-zero-day-chain-2026) - 2026-08-07 AI 安全里程碑 / 17,600 次操作 / JFrog 8 个零日链 / 沙箱逃逸 + C2
+- [CVE-2026-63077 TeamCity CI/CD 未认证反序列化 RCE 深度分析](/security/offensive/cve-2026-63077-teamcity-cicd-deserialization-rce-2026) - 2026-08-07 CVSS 9.8 / CISA KEV 3 天窗口 / Agent 轮询协议 / CI/CD 供应链
 
 ### 🔬 供应链与工具链安全
 - [Miasma 供应链蠕虫攻击深度分析：2026 年开源生态的至暗时刻](/security/offensive/miasma-supply-chain-worm-attack-2026) - 2026-06-15
