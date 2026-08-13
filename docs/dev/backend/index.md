@@ -84,6 +84,16 @@ author: PFinal南丞
   - [PHP MCP 扩展](/dev/backend/php/PHP-MCP-扩展)
   - [Coze 扩展包 PHP 版本](/dev/backend/php/Coze-扩展包-PHP-版本)
 
+### 🦀 Rust 开发
+- **语言核心**
+  - [Rust 所有权系统深入剖析](/dev/backend/rust/Rust所有权系统深入剖析)
+  - [Rust 2026 Edition 深度解析：Async Closures、异步 Trait 与系统编程新范式](/dev/backend/rust/rust-2026-edition-deep-dive)
+- **性能与数值计算**
+  - [Rust 1.98 代数浮点运算符深度解析：让编译器放心加速你的数值代码](/dev/backend/rust/rust-1-98-algebraic-float-operators-2026)
+- **异步与实战**
+  - [Rust异步编程从基础到实战](/dev/backend/rust/Rust异步编程从基础到实战)
+  - [Tauri实战：用Go和Rust构建轻量级桌面应用](/dev/backend/rust/Tauri实战：用Go和Rust构建轻量级桌面应用)
+
 ### 🐍 Python 开发
 - **异步编程**
   - [Python-Asyncio-Advanced-Patterns](/dev/backend/python/Python-Asyncio-Advanced-Patterns)
