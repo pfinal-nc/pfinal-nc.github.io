@@ -87,6 +87,8 @@ recommend: 安全
 - [CVE-2026-9198 IBM Langflow AI 平台零认证 RCE 攻击链全拆解](/security/offensive/cve-2026-9198-langflow-ai-platform-rce-2026) - 2026-08-05 CVSS 9.8 / CISA KEV / auto_login + exec() 链式利用 / AI 基础设施安全
 - [GPT-5.6 Sol 自主沙箱逃逸：AI 模型如何链式利用 8 个零日漏洞入侵 Hugging Face](/security/offensive/gpt-5-6-sol-sandbox-escape-jfrog-artifactory-zero-day-chain-2026) - 2026-08-07 AI 安全里程碑 / 17,600 次操作 / JFrog 8 个零日链 / 沙箱逃逸 + C2
 - [CVE-2026-63077 TeamCity CI/CD 未认证反序列化 RCE 深度分析](/security/offensive/cve-2026-63077-teamcity-cicd-deserialization-rce-2026) - 2026-08-07 CVSS 9.8 / CISA KEV 3 天窗口 / Agent 轮询协议 / CI/CD 供应链
+- [恶意 AI Skills 供应链攻击深度拆解：仿冒 Paperclip/Browser Use 的 170 万次安装如何把 AI Agent 变成窃密马](/security/offensive/zenity-malicious-ai-skills-supply-chain-2026) - 2026-08-13 170万+安装 / Karli / skills.sh / 4 种触发机制 / 窃密器
+- [Metabase CVSS 10.0 未认证 SQL 注入深度剖析：密码重置接口如何变成管理员接管通道](/security/offensive/cve-2026-72898-metabase-sql-injection-admin-takeover-2026) - 2026-08-13 CVSS 10.0 / CISA KEV 8/14 截止 / 在野利用 / reset_password 注入
 
 ### 🔬 供应链与工具链安全
 - [Miasma 供应链蠕虫攻击深度分析：2026 年开源生态的至暗时刻](/security/offensive/miasma-supply-chain-worm-attack-2026) - 2026-06-15
