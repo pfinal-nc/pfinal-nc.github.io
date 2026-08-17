@@ -89,6 +89,7 @@ author: PFinal南丞
   - [Rust 所有权系统深入剖析](/dev/backend/rust/Rust所有权系统深入剖析)
   - [Rust 2026 Edition 深度解析：Async Closures、异步 Trait 与系统编程新范式](/dev/backend/rust/rust-2026-edition-deep-dive)
   - [Rust Polonius Alpha 深度解析：下一代借用检查器的流敏感革命](/dev/backend/rust/rust-polonius-alpha-borrow-checker-2026)
+  - [Rust RFC 3323 Restrictions 深度解析：impl/mut 限制让 Sealed trait 成为历史](/dev/backend/rust/rust-rfc-3323-restrictions-impl-mut-2026)
 - **性能与数值计算**
   - [Rust 1.98 代数浮点运算符深度解析：让编译器放心加速你的数值代码](/dev/backend/rust/rust-1-98-algebraic-float-operators-2026)
 - **异步与实战**
