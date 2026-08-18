@@ -96,6 +96,10 @@ author: PFinal南丞
   - [Rust异步编程从基础到实战](/dev/backend/rust/Rust异步编程从基础到实战)
   - [Tauri实战：用Go和Rust构建轻量级桌面应用](/dev/backend/rust/Tauri实战：用Go和Rust构建轻量级桌面应用)
 
+### 🔥 Mojo 开发
+- **语言核心**
+  - [Mojo 1.0 正式发布深度解析：LLVM 之父的"AI 时代系统语言"终于迎来稳定地基](/dev/backend/mojo/mojo-1-0-release-2026)
+
 ### 🐍 Python 开发
 - **异步编程**
   - [Python-Asyncio-Advanced-Patterns](/dev/backend/python/Python-Asyncio-Advanced-Patterns)
