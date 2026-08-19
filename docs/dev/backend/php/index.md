@@ -41,6 +41,7 @@ pageClass: php-hub-page
 - [**Laravel 13 AI SDK 可中断任务实战**](/dev/backend/php/laravel-13-ai-sdk-interruptible-tasks-2026) - 2026 AI 原生框架
 - [**PHP 8.5 NoDiscard 属性详解**](/dev/backend/php/PHP-8.5-NoDiscard-属性详解) - 错误处理新特性
 - [**PHP 8.6 Alpha 1 深度解析：PFA 部分函数应用、clamp 范围守护与 Closure 性能爆发**](/dev/backend/php/php-8-6-alpha-pfa-new-features-2026) - PFA/clamp/Closure 性能（2026-07-16）
+- [**PHP 8.6.0 Beta 1 深度解析：Io\Poll 原生轮询、Time\Duration 与升级必读的会话安全默认值**](/dev/backend/php/php-8-6-beta-1-io-poll-duration-2026) - Io\Poll/Duration/会话安全/mbregex 弃用（2026-08-19）
 - [**Phargo 深度解析：AI 用 Rust 重写 PHP 引擎，跑通 WordPress 的实验与启示**](/dev/backend/php/phargo-ai-rust-php-engine-wordpress-2026) - AI 生成 Rust PHP 运行时，渲染 WordPress（2026-07-21）
 - [**TypePHP 深度解析：Swoole AOT 更名，PHP 静态编译原生二进制能否让 PHP 重获新生？**](/dev/backend/php/typephp-swoole-aot-native-binary-php-2026) - 原生二进制、双引擎架构、性能展望（2026-07-21）
 - [**Mago 1.0.0 深度解析：Rust 重写 PHP 工具链，31 倍提速的生产级实战**](/dev/backend/php/mago-1-0-0-rust-php-toolchain-production-2026) - 静态分析/Lint/Format 三合一、Guard 架构约束（2026-07-22）

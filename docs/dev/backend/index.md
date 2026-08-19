@@ -73,6 +73,7 @@ author: PFinal南丞
   - [PHP之异步处理](/dev/backend/php/PHP之异步处理)
   - [PHP的协程池](/dev/backend/php/PHP的协程池)
   - [PHP-8.5-NoDiscard-属性详解](/dev/backend/php/PHP-8.5-NoDiscard-属性详解)
+  - [PHP 8.6.0 Beta 1 深度解析：Io\Poll 原生轮询、Time\Duration 与升级必读的会话安全默认值](/dev/backend/php/php-8-6-beta-1-io-poll-duration-2026)
 
 - **配置与部署**
   - [PHP-FPM配置文件详解](/dev/backend/php/PHP-FPM配置文件详解)
