@@ -1,5 +1,5 @@
 ---
-title: "Wails 桌面应用开发 - Go 跨平台框架完整指南 | PFinalClub"
+title: "Wails 桌面应用开发 - Go 跨平台框架完整指南"
 description: "全面的Wails桌面应用开发指南，涵盖从入门到实战的完整内容，包括教程系列、实战项目、性能优化、系统集成等，帮助Go开发者构建高性能跨平台桌面应用。"
 keywords:
   - Wails

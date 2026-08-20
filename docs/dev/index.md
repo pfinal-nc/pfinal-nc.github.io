@@ -1,5 +1,5 @@
 ---
-title: "后端开发与系统架构 2025 - Go/PHP/Python 实战教程与学习路径 | PFinalClub"
+title: "后端开发与系统架构 2025 - Go/PHP/Python 实战教程与学习路径"
 description: "专业的后端开发与系统架构指南，涵盖Go、PHP、Python实战教程，性能优化，微服务架构设计，容器化部署等工程实践。提供从入门到精通的完整技术栈学习路径。"
 keywords:
   - 后端开发
