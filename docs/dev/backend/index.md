@@ -101,6 +101,7 @@ author: PFinal南丞
 ### 🔥 Mojo 开发
 - **语言核心**
   - [Mojo 1.0 正式发布深度解析：LLVM 之父的"AI 时代系统语言"终于迎来稳定地基](/dev/backend/mojo/mojo-1-0-release-2026)
+  - [Mojo 编译器全面开源深度解析：Apache 2.0 落地、KGEN 源码结构与中国开发者能做什么](/dev/backend/mojo/mojo-open-source-2026)
 
 ### 🐍 Python 开发
 - **异步编程**
