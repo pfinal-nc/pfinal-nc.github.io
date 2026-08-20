@@ -127,10 +127,9 @@ export default defineConfig({
     ['link', { rel: 'alternate', type: 'application/rss+xml', title: 'PFinalClub RSS Feed', href: '/feed.xml' }],
     ['link', { rel: 'alternate', type: 'application/atom+xml', title: 'PFinalClub Atom Feed', href: '/feed.atom' }],
     ['link', { rel: 'alternate', type: 'application/json', title: 'PFinalClub JSON Feed', href: '/feed.json' }],
-    // hreflang: 告诉搜索引擎这是简体中文页面（提升中文搜索排名）
-    ['link', { rel: 'alternate', hreflang: 'zh-CN', href: 'https://friday-go.icu/' }],
-    ['link', { rel: 'alternate', hreflang: 'zh-Hans', href: 'https://friday-go.icu/' }],
-    ['link', { rel: 'alternate', hreflang: 'x-default', href: 'https://friday-go.icu/' }],
+    // 注意：hreflang 已移除。全站为单一 zh-CN 站点，此前全局 hreflang 指向首页，
+    // 导致所有文章页声明"替代语言版本为首页"，造成搜索引擎信号混乱。
+    // 单一语言站点不需要 hreflang。
     // canonical 标签在 transformPageData 中动态添加，不在这里设置全局的
     ['meta', { name: 'author', content: 'PFinal南丞' }],
     ['meta', { name: 'robots', content: 'index,follow' }],
@@ -292,6 +291,7 @@ export default defineConfig({
         'dev/backend/php': '/images/covers/php.svg',
         'dev/backend/python': '/images/covers/python.svg',
         'dev/backend/rxjs': '/images/covers/default.svg',
+        'dev/backend/mojo': '/images/covers/default.svg',
         'dev/backend/rust': '/images/covers/golang.svg',
         'dev/system/database': '/images/covers/database.svg',
         'dev/system': '/images/covers/devops.svg',
