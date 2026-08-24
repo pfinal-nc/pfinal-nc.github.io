@@ -78,6 +78,12 @@ function getFileLastMod(filePath) {
   }
 }
 
+// sitemap 协议要求 <loc> 中的 URL 必须转义（中文/空格/冒号等需 percent-encode）
+// 逐段编码，保留路径分隔符 /
+function encodePath(p) {
+  return p.split('/').map(seg => encodeURIComponent(seg)).join('/')
+}
+
 // 尝试从 git 获取最后修改时间（更准确）
 function getGitLastMod(filePath) {
   try {
@@ -133,7 +139,7 @@ for (const file of allFiles) {
   // 移除可能的 /index 后缀
   urlPath = urlPath.replace(/\/index$/, '') || '/'
   
-  const fullUrl = `${HOSTNAME}${urlPath}`
+  const fullUrl = `${HOSTNAME}${encodePath(urlPath)}`
   
   // 计算 priority
   const pathNorm = urlPath.replace(/^\//, '')
