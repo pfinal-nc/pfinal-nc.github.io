@@ -17,8 +17,8 @@ keywords:
   - 文件浏览器
   - CLI工具
 sticky: true
+recommend: 效率工具
 ---
-
 # Broot：终端里的文件导航神器
 
 ![](https://raw.githubusercontent.com/pfinal-nc/iGallery/master/blog/202510150933205.png)

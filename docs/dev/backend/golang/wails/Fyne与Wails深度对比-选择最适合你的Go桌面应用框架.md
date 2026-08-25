@@ -23,8 +23,8 @@ keywords:
   - golang
   - 跨平台开发
   - PFinalClub
+recommend: 后端工程
 ---
-
 # Fyne与Wails深度对比：选择最适合你的Go桌面应用框架
 
 > 在Go语言生态中，Fyne和Wails都是优秀的桌面应用开发框架，但它们的设计理念和应用场景却大相径庭。本文将深入剖析这两个框架的差异，帮助你做出明智的技术选择。

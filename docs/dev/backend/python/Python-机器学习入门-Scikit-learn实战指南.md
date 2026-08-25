@@ -14,8 +14,8 @@ keywords:
 tags: [Python, 机器学习, Scikit-learn, 数据科学, AI]
 difficulty: 🟢 入门
 category: dev/backend/python
+recommend: 后端工程
 ---
-
 # Python 机器学习入门 2026：Scikit-learn 5 个实战项目完整指南
 
 机器学习是人工智能的核心技术之一，而 Scikit-learn 是 Python 最流行的机器学习库。本文将带你从零开始，系统地掌握机器学习的基础知识和实战技能。

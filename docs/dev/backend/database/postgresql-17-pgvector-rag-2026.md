@@ -4,8 +4,13 @@ description: "pgvector 0.8 新特性：HNSW 索引性能翻倍、混合检索、
 date: 2026-06-23
 category: ai
 tags: [pgvector, postgresql, rag, 向量搜索, ai]
+recommend: 后端工程
+keywords:
+  - database
+  - dev
+  - 技术博客
+  - 开发
 ---
-
 # PostgreSQL 17 + pgvector 0.8 RAG 实战 2026
 
 > TL;DR：pgvector 0.8 在 2026 Q2 发布，HNSW 索引查询性能比 0.7 提升 2 倍，新增 Sparse Vectors 和混合检索（BM25 + 向量）。本文从 schema 设计、索引选型到 Go 集成，给出生产级 RAG 完整方案。

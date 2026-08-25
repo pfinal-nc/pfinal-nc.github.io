@@ -19,8 +19,8 @@ keywords:
   - 量子安全
 category: security
 description: NIST FIPS 203/204/205 后量子密码标准已正式发布，企业需要将 RSA/ECDSA 迁移至 ML-KEM/ML-DSA。本文基于 Go 和 cloudflare/circl 库，提供从密码盘点到混合模式部署的完整迁移实战。
+recommend: 安全工程
 ---
-
 # Post-Quantum Cryptography 迁移实战：Go 开发者的 PQC 落地指南
 
 ## 威胁不是未来，而是现在

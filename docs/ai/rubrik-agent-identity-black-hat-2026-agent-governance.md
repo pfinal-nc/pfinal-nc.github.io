@@ -13,8 +13,8 @@ keywords:
   - AI Agent 安全
 category: ai
 description: Black Hat 2026 上 Rubrik 发布 Agent Identity，通过 per-tool-call JIT Token、MCP Gateway 三重检查和 Agent Rewind 实现 AI Agent 身份治理。本文深度解析其架构设计与生产实践。
+recommend: AI工程
 ---
-
 # Rubrik Agent Identity 深度解析：Black Hat 2026 的 AI Agent 身份治理范式
 
 ## 背景：AI Agent 的身份危机

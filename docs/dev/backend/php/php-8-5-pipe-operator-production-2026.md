@@ -18,8 +18,8 @@ keywords:
   - 代码可读性
 category: dev
 description: PHP 8.5 带来了函数式编程社区期待多年的管道操作符 (|>)。这个看似简单的语法糖，在数据变换场景中可以将嵌套函数调用的可读性提升数倍。本文从语法基础、实战模式、Laravel/Symfony 集成到性能分析，全面解析 Pipe Operator 如何改变你的 PHP 代码风格。
+recommend: 后端工程
 ---
-
 # PHP 8.5 Pipe Operator 生产实战：函数式编程从语法糖到架构变革
 
 ## 引言：PHP 补上函数式编程的最后一块拼图

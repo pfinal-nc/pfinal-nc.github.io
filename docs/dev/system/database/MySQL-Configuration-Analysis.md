@@ -20,9 +20,8 @@ course:
   name: Go 后端工程师成长路线
   module: 3
   lesson: 3.1
+recommend: 后端工程
 ---
-
-
 # Mysql配置文件解析
 
 ```

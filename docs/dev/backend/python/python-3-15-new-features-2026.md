@@ -20,8 +20,8 @@ keywords:
   - 推导式解包
 category: dev/backend/python
 description: Python 3.15 预计 2026 年 10 月正式发布，当前已进入 Beta 2 阶段。这个版本带来了延迟导入 (PEP 810)、frozendict 内置类型 (PEP 814)、Tachyon 百万赫兹采样分析器 (PEP 799)、推导式解包操作 (PEP 798)、延迟注解求值 (PEP 649/749) 等颠覆性特性。本文从实战角度全面解析这些变化如何影响你的 Python 代码。
+recommend: 后端工程
 ---
-
 # Python 3.15 新特性深度解析：延迟导入、frozendict、Tachyon 采样器与 2026 年最大更新
 
 ## 引言：Python 3.15——从"快一点"到"快很多"

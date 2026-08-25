@@ -14,8 +14,8 @@ tags:
   - JavaScript
   - Operators
   - RxJS
+recommend: 后端工程
 ---
-
 # from
 
 `from` 操作符可以从一个数组、类数组对象、Promise、迭代器或 Observable-like 对象创建一个 Observable。

@@ -15,8 +15,8 @@ tags:
   - JavaScript
   - Operators
   - RxJS
+recommend: 后端工程
 ---
-
 # forkJoin
 
 `forkJoin` 操作符组合多个 Observable，类似于 `Promise.all`。它等待所有 Observable 完成后，发出所有 Observable 的最后一个值的组合。

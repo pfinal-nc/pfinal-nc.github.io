@@ -17,8 +17,8 @@ tags:
   - authentication
   - authorization
   - security
+recommend: 后端工程
 ---
-
 # Go JWT 认证与授权实战
 
 JWT（JSON Web Token）是一种开放标准，用于在各方之间安全地传输信息。本文将介绍如何在 Go 项目中实现 JWT 认证和授权。

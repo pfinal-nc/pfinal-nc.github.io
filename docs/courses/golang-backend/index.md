@@ -24,8 +24,8 @@ course:
   lessons: 20+
   status: building
   project: 企业级博客 API 系统
+recommend: 课程
 ---
-
 # 🚀 Go 后端工程师成长路线
 
 > 从语言基础到微服务架构，打造企业级 Go 后端开发能力

@@ -8,8 +8,13 @@ tags:
   - Protocol Buffers
   - 微服务
 description: 2026 版 Go gRPC 微服务实战：从 .proto 定义到拦截器、双向流式通信，附带完整可运行代码与性能调优技巧。
+recommend: 后端工程
+keywords:
+  - golang
+  - dev
+  - 技术博客
+  - 开发
 ---
-
 # gRPC 在 Go 中的实战应用
 
 gRPC 是 Google 开源的高性能 RPC 框架，使用 Protocol Buffers 作为接口描述语言，是微服务间通信的优秀选择。

@@ -5,8 +5,13 @@ date: 2026-06-13 08:00:00
 category: AI系列
 tags: [ai, agent, llm, mcp, rag, 系列]
 cover: /images/covers/ai.svg
+recommend: AI工程
+keywords:
+  - ai
+  - ai
+  - 技术博客
+  - 开发
 ---
-
 # AI 人工智能专栏
 
 聚焦 2026 年 AI 工程化最热方向：**AI Agent 开发、MCP/A2A 协议栈、RAG 系统、LLM 应用架构、可观测性、安全**。本系列按"协议 → 开发 → 部署 → 可观测 → 安全"完整链路组织，覆盖从原型到生产的全流程。

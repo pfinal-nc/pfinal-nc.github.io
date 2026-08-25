@@ -16,8 +16,8 @@ tags:
   - 前端开发
   - JavaScript
   - RxJS
+recommend: 后端工程
 ---
-
 # Observer 观察者
 
 Observer 是一个消费 Observable 发出的值的对象。它是一个包含三个可选方法（`next`、`error` 和 `complete`）的对象。

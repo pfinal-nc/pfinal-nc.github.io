@@ -24,8 +24,8 @@ course:
   lessons: 8
   status: completed
   project: 抖音直播助手、密码管理器
+recommend: 课程
 ---
-
 # 🖥️ Wails 跨平台桌面开发实战
 
 > 用 Go 和前端技术栈，构建高性能跨平台桌面应用

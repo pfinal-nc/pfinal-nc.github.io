@@ -12,8 +12,13 @@ tags:
   - DeepResearch
   - Qwen
 category: ai
+recommend: AI工程
+keywords:
+  - ai
+  - ai
+  - 技术博客
+  - 开发
 ---
-
 # ACL 2026 推理漂移最佳资源论文深度解读：HSCodeComp 基准揭示 Agent 的结构性缺陷
 
 > 2026 年 7 月 8 日，ACL 2026 公布最佳论文奖项。阿里巴巴国际数字商业团队从全球 12,148 篇投稿中脱颖而出，获评最佳资源论文奖。获奖论文 HSCodeComp——一个要求 Agent 像资深关务专家一样精准归类商品的基准测试——揭示了一个令人震惊的事实：**最强 Agent 系统 46.83% vs 人类专家 95%，差距近 50 个百分点。** 更颠覆的是：单纯增加推理时间（inference-time scaling）完全无效，过度思考反而降低性能。

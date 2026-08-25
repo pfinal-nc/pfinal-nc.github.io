@@ -17,8 +17,8 @@ keywords:
   - go1.28
 category: dev/backend/golang
 description: "Go 1.28 计划引入 sync.Sharded（M-local storage）以解决高并发全局计数器的缓存行争用问题。本文从 CPU 缓存一致性原理出发，手写生产级分片计数器，对比 atomic、mutex 与分片方案的性能差距，并给出 pprof 定位热点与迁移建议。"
+recommend: 后端工程
 ---
-
 # Go 1.28 sync.Sharded 分片计数器实战：从缓存行伪共享到百万 QPS 零竞争计数
 
 在微服务网关、埋点 SDK、限流器和指标采集器里，"全局计数器"是最常见的性能陷阱之一。一个看似无害的 `atomic.AddInt64(&total, 1)`，在 64 核机器上高并发写入时，可能因为缓存行伪共享（false sharing）把延迟放大十倍以上。Go 1.28 正在推进的 `sync.Sharded`（亦称 M-local storage / per-P shard）提案，目标就是把这类热点从"共享变量"变成"每核本地聚合"。

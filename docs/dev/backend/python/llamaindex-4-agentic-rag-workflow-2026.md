@@ -15,8 +15,8 @@ keywords:
   - Python AI 框架
 category: dev/backend/python
 description: "深度实战 LlamaIndex 4.0 文档 Agent：从传统 RAG 到 Agentic RAG 的架构升级，Workflow API 构建多步推理流水线，DocumentAgent 实现跨文档查询，含 Python 完整生产级代码。"
+recommend: 后端工程
 ---
-
 # LlamaIndex 4.0 文档 Agent 实战：从 RAG 到 Agentic RAG 的架构跃迁
 
 截至 2026 年 6 月，LlamaIndex 在 GitHub 已积累超过 **40,000 Star**，定位从最初的"GPT Index"进化为**"The leading document agent and RAG platform"**。LlamaIndex 4.0 带来了最重要的架构升级：**Workflow API** —— 一个基于事件驱动的有向无环图（DAG）执行引擎，让你可以构建真正的 Agentic RAG 系统，而不仅仅是简单的"检索 + 生成"管道。

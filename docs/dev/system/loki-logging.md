@@ -15,8 +15,8 @@ tags:
   - logging
   - grafana
   - DevOps
+recommend: 后端工程
 ---
-
 # Loki 日志系统实战指南
 
 Loki 是 Grafana Labs 开发的一款水平可扩展、高可用性的日志聚合系统，专为与 Grafana 配合使用而设计。与 ELK 相比，Loki 更加轻量，成本更低。

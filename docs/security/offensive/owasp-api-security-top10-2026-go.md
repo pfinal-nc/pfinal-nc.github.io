@@ -15,8 +15,8 @@ keywords:
   - API网关
 category: 安全
 description: 深度解读 OWASP API Security Top 10 2026，从 BOLA、Broken Authentication 到 SSRF、影子 API，逐一剖析风险原理并提供 Go 语言实战防御代码。附完整的生产环境 API 安全中间件栈，帮助开发者在代码层面构筑 API 安全防线。
+recommend: 安全工程
 ---
-
 # OWASP API Security Top 10 2026 深度解读与 Go 防御实战
 
 ## 前言

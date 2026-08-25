@@ -4,8 +4,13 @@ description: "Claude Sonnet 4.6 全面替代 4.5 成为默认模型，1M 上下�
 date: 2026-06-21
 category: ai
 tags: [claude, sonnet, anthropic, go, ai-agent]
+recommend: AI工程
+keywords:
+  - ai
+  - ai
+  - 技术博客
+  - 开发
 ---
-
 # Claude Sonnet 4.6 Go 集成实战 2026
 
 > TL;DR：2026 年 2 月 Anthropic 发布 Claude Sonnet 4.6 全面替代 4.5，核心升级：1M 上下文、自适应推理、Agent SDK、Computer Use GA。本文用 Go SDK 演示接入、Tool Use、Prompt Caching 与成本对比。

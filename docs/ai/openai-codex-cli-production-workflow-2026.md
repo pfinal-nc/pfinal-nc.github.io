@@ -19,8 +19,8 @@ keywords:
   - 多代理工作流
 category: ai
 description: "2026 年 OpenAI Codex CLI 从实验性工具进化为团队级 AI 编程入口。本文基于最新版 Codex CLI，详解安装配置、AGENTS.md 规范、Skills Library 复用、多 Agent worktree 工作流、验证闭环与团队治理策略，附带可直接落地的 .codex 配置与 CI 集成方案。"
+recommend: AI工程
 ---
-
 # OpenAI Codex CLI 2026 生产工作流实战：从终端 Agent 到团队级治理
 
 ## 引言：终端正在成为新的 IDE

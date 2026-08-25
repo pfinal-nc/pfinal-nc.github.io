@@ -16,8 +16,8 @@ keywords:
   - AI agent framework
 category: AI
 description: Nvidia Labs 发布开源研究预览 NOOA，将 AI Agent 的能力、状态和提示词统一到一个 Python 类中，方法体为省略号的方法由 LLM 运行时补全，在 SWE-bench Verified 达 82.2%、CyberGym L1 达 86.8% 的同时将 token 消耗减半。
+recommend: AI工程
 ---
-
 # Nvidia NOOA 深度解析：一个 Python 类就是一个 AI Agent 的面向对象范式革命
 
 ## 引言

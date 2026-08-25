@@ -15,8 +15,8 @@ keywords:
   - 消息广播
 category: dev/backend/golang
 description: "深入 Go WebSocket 高并发实时通信架构设计：Hub-Client 模式、连接池管理、消息广播优化、背压控制与生产级监控，支持万级并发连接。"
+recommend: 后端工程
 ---
-
 # Go WebSocket 高并发实时通信实战：从原理到万级连接的生产架构
 
 实时通信是现代 Web 应用的核心能力——即时聊天、实时行情推送、协作编辑、在线游戏，都依赖 WebSocket 构建低延迟的双向数据通道。Go 语言凭借 goroutine 轻量级并发模型和 `net/http` 原生高效网络库，成为构建 WebSocket 服务的天然选择。

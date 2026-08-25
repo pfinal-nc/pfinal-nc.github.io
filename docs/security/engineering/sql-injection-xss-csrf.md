@@ -13,8 +13,8 @@ tags:
   - security
   - web-security
   - Tutorial
+recommend: 安全工程
 ---
-
 # SQL 注入、XSS、CSRF 攻击原理与防护实战
 
 > 这三类漏洞常年霸占 OWASP Top 10 榜单，几乎所有 Web 应用都曾面临它们的威胁。理解攻击原理，才能写出真正安全的代码。

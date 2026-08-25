@@ -13,8 +13,10 @@ keywords:
   - 应急响应
   - 安全评估
 recommend: 安全
+tags:
+  - offensive
+  - security
 ---
-
 # 🔥 攻防研究（Offensive & Defensive）
 
 **定位**：覆盖 Web 安全、内网渗透、红蓝对抗方法论、日志与取证的实战内容，强调"攻防一体"的实践视角。

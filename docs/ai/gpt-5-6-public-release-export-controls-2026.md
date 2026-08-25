@@ -12,8 +12,13 @@ tags:
   - Anthropic
   - 网络安全
 category: ai
+recommend: AI工程
+keywords:
+  - ai
+  - ai
+  - 技术博客
+  - 开发
 ---
-
 # GPT-5.6 公众开放与出口管制争议：Sol/Terra/Luna 三档模型背后的国家安全博弈
 
 > 2026 年 7 月 8 日，美国商务部正式批准 OpenAI 面向公众全面推出 GPT-5.6 系列。这个决定背后，是一场长达两周的国家安全审查——Anthropic 曾因出口管制命令紧急下架 Mythos 5 与 Fable 5，OpenAI 则被限制仅向"可信合作伙伴"开放预览。当 AI 能力触及国家级安全阈值，技术发布不再是纯粹的产品事件，而是政策博弈的延伸。

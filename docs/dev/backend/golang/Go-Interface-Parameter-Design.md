@@ -14,8 +14,8 @@ tags:
   - api-design
   - interface
   - generics
+recommend: 后端工程
 ---
-
 # 接口参数设计 - 多场景复用的优雅之道
 
 > 好的接口设计能让代码更易用、易维护。本文介绍 Go 语言中接口参数设计的最佳实践。

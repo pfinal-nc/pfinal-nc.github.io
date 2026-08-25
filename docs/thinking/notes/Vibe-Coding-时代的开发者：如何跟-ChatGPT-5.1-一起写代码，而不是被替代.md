@@ -24,8 +24,8 @@ course:
   name: AI 编程效率提升
   module: 1
   lesson: 1.2
+recommend: 思维方法
 ---
-
 # Vibe Coding 时代的开发者：如何跟 ChatGPT 5.1 一起写代码，而不是被替代
 
 > 你有没有这种体验：IDE 里一行代码都没敲，任务已经“完成 80%”；  

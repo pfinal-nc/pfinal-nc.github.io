@@ -1,5 +1,4 @@
 ---
-
 title: "安全工程实践 | SSH安全 Golang安全 服务器加固"
 description: "全面的安全工程实践指南，涵盖SSH安全加固、Golang安全开发、服务器防护、WAF配置、DevOps安全集成等工程化落地方案。提供从基础安全到企业级防护的完整解决方案。"
 keywords:
@@ -18,8 +17,10 @@ keywords:
   - 安全审计
   - 渗透测试
 recommend: 安全
+tags:
+  - engineering
+  - security
 ---
-
 # 安全工程（Security Engineering）
 
 > **定位**：从工程化视角建设安全能力，涵盖服务器安全、应用安全、安全平台、自动化脚本、安全基建等落地实践。

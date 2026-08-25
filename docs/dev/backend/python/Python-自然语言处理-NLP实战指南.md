@@ -14,8 +14,8 @@ keywords:
 tags: [Python, NLP, 自然语言处理, Transformers, 深度学习]
 difficulty: 🟡 进阶
 category: dev/backend/python
+recommend: 后端工程
 ---
-
 # Python 自然语言处理（NLP）实战指南
 
 自然语言处理（NLP）是人工智能的重要分支，让计算机能够理解和处理人类语言。本文将带你全面掌握 NLP 的核心技术和实践方法。

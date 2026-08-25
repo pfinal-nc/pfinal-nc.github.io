@@ -15,8 +15,8 @@ keywords:
   - LLM框架
 category: AI
 description: 2026 年两大主流 LLM 应用框架 LangChain 与 LlamaIndex 的深度技术对比，涵盖 RAG 系统构建、Agent 工作流、生产部署等场景，附带完整代码示例帮你做出正确的选型决策。
+recommend: AI工程
 ---
-
 ## 目录
 
 1. [2026 年 LLM 框架格局](#2026-年-llm-框架格局)

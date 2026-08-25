@@ -15,8 +15,8 @@ keywords:
 tags: [Python, 时间序列, 数据分析, Pandas, Prophet, 机器学习]
 difficulty: 🟡 进阶
 category: dev/backend/python
+recommend: 后端工程
 ---
-
 # Python 时间序列分析：从基础到实战
 
 时间序列分析是数据科学中的重要领域，广泛应用于金融、电商、物联网等场景。本文将带你从零开始，系统地掌握时间序列分析的核心方法。

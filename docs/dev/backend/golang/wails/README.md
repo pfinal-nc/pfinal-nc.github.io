@@ -15,8 +15,8 @@ tags:
   - Desktop
   - Git
   - golang
+recommend: 后端工程
 ---
-
 # Wails 桌面应用开发
 
 Wails 是一个让 Go 开发者使用 Web 技术构建跨平台桌面应用的框架。它将 Go 的高性能后端与现代 Web 前端完美结合，比 Electron 更轻量、更快速。

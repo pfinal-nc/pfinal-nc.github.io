@@ -20,8 +20,8 @@ keywords:
   - 零成本优化
 category: dev/backend/golang
 description: "Go 1.27 编译器引入 switch 查找表优化，让密集的整数分支语句在部分场景下性能提升近 2 倍。本文从 switch 的底层实现、1.27 新机制、适用边界、汇编验证、Benchmark 对比到升级建议，做一次系统性的技术拆解。"
+recommend: 后端工程
 ---
-
 # Go 1.27 switch 查找表优化深度解析：编译器如何让常见分支快 2 倍
 
 ## 引子：一条 switch 语句的“暗战”

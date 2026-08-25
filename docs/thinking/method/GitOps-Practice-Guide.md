@@ -14,8 +14,8 @@ tags:
   - DevOps
   - Kubernetes
   - cicd
+recommend: 思维方法
 ---
-
 # GitOps 实战：从应用部署到全生命周期管理
 
 > GitOps 是一种实现云原生应用持续交付的声明式方式。本文带你从理论到实践全面掌握 GitOps。

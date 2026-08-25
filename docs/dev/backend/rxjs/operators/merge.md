@@ -13,8 +13,8 @@ tags:
   - JavaScript
   - Operators
   - RxJS
+recommend: 后端工程
 ---
-
 # merge
 
 `merge` 操作符将多个 Observable 合并为一个，按时间顺序发出所有 Observable 的值。

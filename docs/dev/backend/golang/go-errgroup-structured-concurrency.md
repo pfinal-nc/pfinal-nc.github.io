@@ -17,8 +17,8 @@ tags:
   - errgroup
   - Context
 category: golang
+recommend: 后端工程
 ---
-
 # Go 结构化并发实战：errgroup 从原理到生产最佳实践
 
 ## 概述

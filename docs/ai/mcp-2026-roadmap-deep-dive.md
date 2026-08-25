@@ -17,8 +17,8 @@ keywords:
   - Model Context Protocol
 category: AI
 description: 深度解读 MCP 2026 官方路线图的四大优先方向：传输层可扩展性、Agent 通信标准化、治理成熟度、企业就绪。从 SEP 生态（41 个 Final 提案）到 Working Group 架构，全面剖析 MCP 如何从开发者工具走向企业级基础设施。
+recommend: AI工程
 ---
-
 # MCP 2026 路线图深度解读：传输层演进、治理成熟与企业就绪
 
 ## 引言

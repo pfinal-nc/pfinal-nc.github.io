@@ -5,8 +5,13 @@ date: 2026-05-26
 author: PFinal南丞
 category: 课程
 tags: [course, wails, desktop, packaging, cross-platform, lesson]
+recommend: 课程
+keywords:
+  - module-4
+  - courses
+  - 技术博客
+  - 开发
 ---
-
 # Lesson 4.1: 应用打包与分发
 
 ## 学习目标

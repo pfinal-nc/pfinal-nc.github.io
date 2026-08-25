@@ -15,8 +15,8 @@ tags:
   - distributed-tracing
   - Observability
   - microservices
+recommend: 后端工程
 ---
-
 # Go 分布式追踪实战
 
 分布式追踪是微服务架构中不可或缺的观测工具，它帮助我们理解请求在分布式系统中的完整路径。本文将介绍如何在 Go 应用中实现分布式追踪。

@@ -15,8 +15,8 @@ tags:
   - prometheus
   - monitoring
   - Observability
+recommend: 后端工程
 ---
-
 # Go 集成 Prometheus 监控
 
 Prometheus 是一个开源的系统监控和告警工具包，广泛应用于云原生应用的监控。本文将介绍如何在 Go 应用中集成 Prometheus 监控。

@@ -13,6 +13,7 @@ keywords:
   - Linux工具
   - 开源工具
   - 文字艺术生成器
+recommend: 效率工具
 ---
 # 开源开发者必备 toilet - 让终端"上厕所"的艺术
 

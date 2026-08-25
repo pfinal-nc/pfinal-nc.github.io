@@ -14,8 +14,8 @@ keywords:
 tags: [Python, PyTorch, 深度学习, 神经网络, AI]
 difficulty: 🟡 进阶
 category: dev/backend/python
+recommend: 后端工程
 ---
-
 # Python 深度学习入门：PyTorch 实战指南
 
 PyTorch 是目前最流行的深度学习框架之一，以其动态计算图和简洁的 API 深受开发者喜爱。本文将带你从零开始，系统地掌握 PyTorch 的核心技术。

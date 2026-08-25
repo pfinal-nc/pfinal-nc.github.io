@@ -14,8 +14,11 @@ keywords:
   - 2025 Python指南
 sidebar: false
 pageClass: python-hub-page
+recommend: 后端工程
+tags:
+  - python
+  - dev
 ---
-
 # 🐍 Python 开发技术专题
 
 欢迎来到 Python 开发技术专题页面！这里是您学习和掌握 Python 语言及生态系统的完整资源中心。

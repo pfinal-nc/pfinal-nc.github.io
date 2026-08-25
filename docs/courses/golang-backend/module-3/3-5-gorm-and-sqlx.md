@@ -5,8 +5,13 @@ date: 2026-05-26
 author: PFinal南丞
 category: 课程
 tags: [golang, course, gorm, sqlx, orm, database, lesson]
+recommend: 课程
+keywords:
+  - module-3
+  - courses
+  - 技术博客
+  - 开发
 ---
-
 # Lesson 3.5: GORM 与 sqlx
 
 ## 学习目标

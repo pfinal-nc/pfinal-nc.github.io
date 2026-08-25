@@ -15,8 +15,11 @@ keywords:
   - wails教程
   - golang桌面应用
   - PFinalClub
+recommend: 后端工程
+tags:
+  - wails
+  - dev
 ---
-
 # Wails 教程系列 - 简介
 
 嘿，Go 开发者们！如果你已经玩转了 Go 语言，想要把技能扩展到桌面应用开发，那这个 Wails 教程系列就是为你准备的。

@@ -14,8 +14,8 @@ tags:
   - password-manager
   - security
   - Wails
+recommend: 效率工具
 ---
-
 # 程序员必备神器：PF-password 密码管理器
 
 > PF-password 是一款专为程序员设计的开源密码管理器，使用 Go + Wails 构建，安全、高效、跨平台。

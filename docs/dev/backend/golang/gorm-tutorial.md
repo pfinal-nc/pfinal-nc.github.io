@@ -14,8 +14,8 @@ tags:
   - gorm
   - database
   - Tutorial
+recommend: 后端工程
 ---
-
 # GORM 实战教程：Go 语言 ORM 从入门到高级
 
 > GORM 是 Go 生态中最流行的 ORM 库，星标 38k+。GORM v2 支持 MySQL、PostgreSQL、SQLite、SQL Server，提供了链式 API、关联预加载、软删除等强大特性。

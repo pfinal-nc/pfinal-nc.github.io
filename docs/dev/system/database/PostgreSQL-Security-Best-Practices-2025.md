@@ -37,8 +37,8 @@ course:
   name: Go 后端工程师成长路线
   module: 3
   lesson: 3.2
+recommend: 后端工程
 ---
-
 # PostgreSQL Security Best Practices 2025 - 生产环境安全加固完整指南
 
 ## 前言：一次数据泄露事件的反思

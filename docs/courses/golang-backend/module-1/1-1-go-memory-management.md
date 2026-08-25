@@ -5,8 +5,13 @@ date: 2026-05-26
 author: PFinal南丞
 category: 课程
 tags: [golang, course, memory, performance, lesson]
+recommend: 课程
+keywords:
+  - module-1
+  - courses
+  - 技术博客
+  - 开发
 ---
-
 # Lesson 1.1: Go 内存管理与分配
 
 ## 学习目标

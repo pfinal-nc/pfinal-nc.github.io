@@ -27,8 +27,8 @@ course:
   lessons: 10
   status: planning
   project: 完整 CI/CD 流水线、监控告警体系
+recommend: 课程
 ---
-
 # 🚀 DevOps 工程实践
 
 > 从容器化到监控告警，打造现代化工程能力

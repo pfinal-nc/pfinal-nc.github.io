@@ -12,8 +12,13 @@ tags:
   - Wasm
 category: golang
 outline: deep
+recommend: 后端工程
+keywords:
+  - golang
+  - dev
+  - 技术博客
+  - 开发
 ---
-
 # Go 1.28 路线图深度解析：Cgo 抛弃 C 工具链、泛型容器、Green Tea GC 全面接管
 
 ## 背景：Go 1.28 是什么级别的发布？

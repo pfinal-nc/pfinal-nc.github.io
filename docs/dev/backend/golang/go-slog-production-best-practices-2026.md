@@ -14,8 +14,8 @@ keywords:
   - 可观测性
 category: Go
 description: 深入解析 Go 标准库 log/slog 的架构设计、核心组件（Logger/Handler/Record）、生产环境日志 Schema 设计、OpenTelemetry Trace 关联、敏感信息脱敏与性能优化策略。从基础用法到企业级可观测性落地，完整覆盖 slog 生产实践全链路。
+recommend: 后端工程
 ---
-
 # Go slog 结构化日志：从入门到生产最佳实践（2026）
 
 ## 前言

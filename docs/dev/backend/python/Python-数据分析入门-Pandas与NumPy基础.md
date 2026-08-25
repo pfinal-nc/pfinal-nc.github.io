@@ -14,8 +14,8 @@ keywords:
 tags: [Python, Pandas, NumPy, 数据分析, 数据科学]
 difficulty: 🟢 入门
 category: dev/backend/python
+recommend: 后端工程
 ---
-
 # Python 数据分析入门：Pandas 与 NumPy 基础
 
 数据分析是 Python 最重要的应用领域之一，而 Pandas 和 NumPy 是数据分析的两大基石。本文将带你从零开始，系统地掌握这两大核心库的使用方法。

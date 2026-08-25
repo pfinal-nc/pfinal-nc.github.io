@@ -16,8 +16,8 @@ tags:
   - HTTP
   - JavaScript
   - RxJS
+recommend: 后端工程
 ---
-
 # HTTP 请求处理实战
 
 RxJS 的 `ajax` 模块可以让你以 Observable 的方式处理 HTTP 请求。这使得处理复杂的请求场景（如取消请求、重试）变得非常简单。

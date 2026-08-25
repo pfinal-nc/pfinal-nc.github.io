@@ -12,8 +12,13 @@ tags:
   - LLM
   - MoE
 category: ai
+recommend: AI工程
+keywords:
+  - ai
+  - ai
+  - 技术博客
+  - 开发
 ---
-
 # Grok 4.5 深度解析：xAI + Cursor 联合训练的编码 Agent 模型与性价比革命
 
 > 2026 年 7 月 8 日，xAI 发布 Grok 4.5——不是又一个大模型刷榜，而是第一个**专为编码 Agent 场景联合训练**的模型。与 Cursor 在数万 NVIDIA GB300 GPU 上合作开发，以 $2/$6 的百万 token 定价和 4.2× 的 token 效率优势，Grok 4.5 正在重新定义"AI 编码模型的价值公式"：不是峰值得分，而是得分/代币/美元。

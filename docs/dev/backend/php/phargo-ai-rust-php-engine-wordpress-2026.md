@@ -20,8 +20,8 @@ keywords:
   - PHP-src 测试套件
 category: php
 description: "Phargo 是一位不懂 Rust 的开发者用 AI 代理在 Rust 中从头写出的 PHP 引擎，已能渲染 WordPress 并通过 17% 的 PHP-src 测试。本文拆解其工程方法、架构选择、局限与启示。"
+recommend: 后端工程
 ---
-
 # Phargo 深度解析：AI 用 Rust 重写 PHP 引擎，跑通 WordPress 的实验与启示
 
 ## 导语

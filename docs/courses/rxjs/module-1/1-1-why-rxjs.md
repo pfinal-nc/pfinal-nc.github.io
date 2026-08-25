@@ -5,8 +5,13 @@ date: 2026-05-26
 author: PFinal南丞
 category: 课程
 tags: [course, rxjs, reactive-programming, async, lesson]
+recommend: 课程
+keywords:
+  - module-1
+  - courses
+  - 技术博客
+  - 开发
 ---
-
 # Lesson 1.1: 为什么需要 RxJS
 
 ## 学习目标

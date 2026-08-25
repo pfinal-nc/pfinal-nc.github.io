@@ -5,8 +5,13 @@ date: 2026-05-26
 author: PFinal南丞
 category: 课程
 tags: [golang, course, gin, web, middleware, routing, lesson]
+recommend: 课程
+keywords:
+  - module-2
+  - courses
+  - 技术博客
+  - 开发
 ---
-
 # Lesson 2.2: Gin 框架核心
 
 ## 学习目标

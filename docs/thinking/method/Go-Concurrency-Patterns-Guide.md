@@ -14,8 +14,8 @@ tags:
   - golang
   - concurrency
   - patterns
+recommend: 思维方法
 ---
-
 # Go 语言并发模式实战指南
 
 > 并发编程是 Go 语言的核心优势之一。掌握并发模式，能让你的程序性能提升数倍。

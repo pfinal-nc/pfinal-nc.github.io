@@ -14,8 +14,8 @@ keywords:
   - Go 1.24
 category: 后端开发
 description: 深入讲解 Go 语言模糊测试（Fuzzing）的完整体系，从经典 go-fuzz 工具到 Go 1.18+ 原生 fuzzing 再到 1.24 最新增强，覆盖 JSON 解析器、URL 路由、协议解析等实战场景，附带完整可运行代码示例。
+recommend: 后端工程
 ---
-
 ## 目录
 
 1. [模糊测试是什么](#模糊测试是什么)

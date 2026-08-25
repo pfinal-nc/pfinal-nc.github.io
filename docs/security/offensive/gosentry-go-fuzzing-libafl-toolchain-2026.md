@@ -18,8 +18,8 @@ keywords:
   - goroutine 泄漏
 category: security/offensive
 description: "Trail of Bits 于 2026 年 5 月发布 gosentry——一个 Go 工具链的 fuzz 分叉，底层换成 LibAFL 引擎，引入结构感知和语法模糊测试、数据竞争与 goroutine 泄漏检测。本篇从原理到实战完整拆解，附带代码示例、覆盖报告生成与已有漏洞发现案例。"
+recommend: 安全工程
 ---
-
 # gosentry 实战：Go 模糊测试工具链分叉的革命性突破
 
 2026 年 5 月 12 日，知名安全公司 Trail of Bits 发布了 **gosentry**——一个面向安全测试的 Go 工具链分叉。这不是一个新库或新工具，而是**整个 Go 编译器工具链的 fork**，底层模糊测试引擎从 Go 原生的 `testing.F` 替换为 Rust 生态中广泛使用的 **LibAFL**。

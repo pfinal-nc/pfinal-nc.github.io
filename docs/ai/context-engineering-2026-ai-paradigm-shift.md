@@ -18,8 +18,8 @@ keywords:
   - 信息架构
 category: ai
 description: 深度解析 Context Engineering（上下文工程）——2026 年 AI Agent 领域的重大范式跃迁，从 Prompt Engineering 的"写好指令"到上下文工程的"设计信息架构"，包含 Write/Select/Compress/Isolate 四大核心策略与生产实战。
+recommend: AI工程
 ---
-
 # Context Engineering 上下文工程实战：从 Prompt Engineering 到 AI Agent 信息架构的范式跃迁
 
 > 当你的 AI Agent 在第 15 步开始"忘事"、调用无关工具、输出质量骤降——问题不在模型能力，而在于**模型看到了什么**。Context Engineering（上下文工程）正是 2026 年 AI Agent 领域最重要的范式跃迁：从"写好指令"到"设计信息架构"。

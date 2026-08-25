@@ -19,8 +19,8 @@ keywords:
   - circular buffer
 category: dev/backend/golang
 description: "Go Flight Recorder 是受 Java JFR 和 Linux perf 启发的持续执行追踪机制，通过内存环形缓冲区实现低开销生产环境追踪。本文深入解析其工作原理、API 使用方式、事后取证完整工作流，以及与传统 runtime/trace 的对比。"
+recommend: 后端工程
 ---
-
 # Go Flight Recorder 持续执行追踪：零成本事后取证与性能诊断
 
 2026 年，Go 语言在生产环境的可观测性领域迎来了一项重要基础设施：**Flight Recorder（飞行记录器）**。灵感源自 Java 的 JDK Flight Recorder (JFR) 和 Linux 的 `perf` 环形缓冲区概念，这一机制让 Go 程序首次具备了**在生产环境持续采集执行追踪数据**的能力——而无需承担传统 `runtime/trace` 的高昂开销。

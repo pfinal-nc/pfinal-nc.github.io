@@ -5,8 +5,13 @@ date: 2026-05-26
 author: PFinal南丞
 category: 课程
 tags: [golang, course, restful, api-design, lesson]
+recommend: 课程
+keywords:
+  - module-2
+  - courses
+  - 技术博客
+  - 开发
 ---
-
 # Lesson 2.3: RESTful API 设计
 
 ## 学习目标

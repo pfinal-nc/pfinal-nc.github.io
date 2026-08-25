@@ -14,8 +14,8 @@ keywords:
 tags: [Python, TensorFlow, Keras, 深度学习, 神经网络]
 difficulty: 🟡 进阶
 category: dev/backend/python
+recommend: 后端工程
 ---
-
 # Python TensorFlow 实战：Keras 入门到精通
 
 TensorFlow 是 Google 开发的开源深度学习框架，Keras 是其高级 API，使深度学习变得简单直观。本文将带你全面掌握 TensorFlow/Keras 的核心技术和实践方法。

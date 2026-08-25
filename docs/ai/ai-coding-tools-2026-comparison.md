@@ -17,8 +17,8 @@ keywords:
   - swerve-bench
 category: ai
 description: 2026 年 AI 编程工具进入 Agent 时代，从代码补全、Agent 能力、安全管控、定价等七大维度深度对比 Cursor、Claude Code、Windsurf 和 GitHub Copilot 四款主流工具，附实测数据和选型建议。
+recommend: AI工程
 ---
-
 # 2026 AI 编程工具 Agent 时代横评：Cursor vs Claude Code vs Windsurf vs Copilot
 
 2026 年，"AI 编程工具"的定义已经发生了根本性变化。它们不再是简单的代码补全器——而是具备**自主规划、多文件编辑、测试运行**能力的 Agent。本文基于 2026 年 4-6 月的实测数据，从七个维度深度对比四款主流工具。

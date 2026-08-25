@@ -12,6 +12,7 @@ keywords:
   - 公众号
   - AI
   - ai
+recommend: 思维方法
 ---
 # 使用扣子AI打造公众号机器人
 

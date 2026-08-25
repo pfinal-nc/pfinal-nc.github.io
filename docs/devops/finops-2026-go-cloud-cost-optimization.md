@@ -17,8 +17,8 @@ keywords:
   - 资源优化
 category: DevOps
 description: 从 FinOps 核心理念到 Go 实战落地，全面覆盖 FOCUS 1.0 标准、OpenCost 集成、pprof 内存优化、资源自动伸缩。用 Go 语言构建云成本监控与优化系统，帮你每月节省 30-50% 的云开支。
+recommend: DevOps
 ---
-
 # FinOps 2026 实战：用 Go 语言实现云成本优化全链路
 
 ## 引言

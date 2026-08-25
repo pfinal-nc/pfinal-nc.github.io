@@ -20,8 +20,8 @@ keywords:
   - 2026
 category: ai
 description: "2026 年 7 月 13 日，两个 MCP 记忆项目同时登上 Hacker News 首页。Adaptive Recall 在 24 小时内积累 400+ 星标，社区热度超过当周所有 AI 模型发布。本文从 MCP 记忆层标准化、Adaptive Recall 语义检索架构、Kote Git 工程决策挖掘、三层记忆生态格局到隐私治理，完整解析 AI Agent 从'金鱼脑'到'长期记忆'的范式跃迁。"
+recommend: AI工程
 ---
-
 # MCP 记忆生态集体爆发：Adaptive Recall + Kote 如何让 AI Agent 拥有长期记忆
 
 ## 引言：第三次回答同一个问题

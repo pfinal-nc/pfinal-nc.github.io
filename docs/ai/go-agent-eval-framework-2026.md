@@ -11,8 +11,13 @@ tags:
   - Agent Eval
   - 基准测试
 category: ai
+recommend: AI工程
+keywords:
+  - ai
+  - ai
+  - 技术博客
+  - 开发
 ---
-
 # Go 构建轻量级 AI Agent Eval 框架：从零实现 Agent 评测工具
 
 > 你的 Agent 通过了所有 Eval，上线却一败涂地？你不是一个人。

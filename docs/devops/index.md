@@ -5,8 +5,13 @@ date: 2026-06-13 08:00:00
 category: DevOps系列
 tags: [devops, cloud-native, docker, wasm, ebpf, observability, 系列]
 cover: /images/covers/devops.svg
+recommend: DevOps
+keywords:
+  - devops
+  - devops
+  - 技术博客
+  - 开发
 ---
-
 # 云原生与 DevOps 专栏
 
 聚焦 2026 年云原生与 DevOps 实战：**容器化、CI/CD、可观测性、WASM 替代方案、eBPF 零侵入监控**。本系列按"构建 → 部署 → 监控 → 演进"组织，覆盖从 Docker 入门到前沿 WASM 替代容器的完整技术栈。

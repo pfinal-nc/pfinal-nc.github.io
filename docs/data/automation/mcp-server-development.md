@@ -16,8 +16,8 @@ tags:
   - llm
   - claude
   - tools
+recommend: 数据工程
 ---
-
 # MCP 服务器开发实战：构建 AI 编程助手扩展
 
 Model Context Protocol (MCP) 是 Anthropic 推出的开放协议，旨在标准化 AI 助手与外部工具、数据源的集成方式。通过 MCP，开发者可以为 Claude 等 AI 助手扩展无限能力。

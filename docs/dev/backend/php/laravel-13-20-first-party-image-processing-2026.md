@@ -13,8 +13,8 @@ keywords:
   - WebP 转换
 category: dev/backend/php
 description: Laravel 13.20 引入第一方图像处理组件 Illuminate\Image，提供不可变、驱动式的图像变换 API。本文从安装配置到生产级流水线实战，覆盖头像上传、响应式图片生成、队列处理等场景。
+recommend: 后端工程
 ---
-
 # Laravel 13.20 第一方图像处理实战：Illuminate\Image 不可变 API 与生产级流水线
 
 ## 背景：等待多年的框架级图像处理

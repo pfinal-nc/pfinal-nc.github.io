@@ -16,8 +16,8 @@ tags:
   - microservices
   - Observability
   - DevOps
+recommend: 后端工程
 ---
-
 # 分布式链路追踪最佳实践
 
 在微服务架构中，一个请求可能经过数十个服务，分布式链路追踪帮助我们理解请求在系统中的完整路径，快速定位性能瓶颈和故障点。

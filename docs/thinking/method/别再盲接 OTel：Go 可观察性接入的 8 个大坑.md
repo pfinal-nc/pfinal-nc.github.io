@@ -22,6 +22,7 @@ course:
   name: Go 后端工程师成长路线
   module: 5
   lesson: 5.5
+recommend: 思维方法
 ---
 # 别再盲接 OTel：Go 可观察性接入的 8 个大坑
 

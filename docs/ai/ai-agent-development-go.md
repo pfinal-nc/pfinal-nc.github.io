@@ -11,8 +11,8 @@ keywords:
   - AI 工具编排
   - Go LLM 应用
   - Agent 框架
+recommend: AI工程
 ---
-
 # Go 语言 AI Agent 开发实战
 
 ## 为什么要用 Go 写 Agent？

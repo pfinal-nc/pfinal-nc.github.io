@@ -3,8 +3,13 @@ title: Go database/sql 实战 2026：5 个连接池参数 + 8 条生产级最佳
 date: 2026-04-27
 tags: [Golang, 数据库, SQL, 连接池]
 description: Go database/sql 5 个连接池参数调优 + 8 条生产级最佳实践：CRUD、事务、预处理、防注入、MySQL 集成，附压测数据与常见坑点排查
+recommend: 后端工程
+keywords:
+  - golang
+  - dev
+  - 技术博客
+  - 开发
 ---
-
 # Go database/sql 实战：连接池、事务与最佳实践
 
 `database/sql` 是 Go 标准库提供的数据库访问接口层，所有 Go 数据库驱动都基于此实现。本文以 MySQL 为例，系统讲解其正确使用方式。

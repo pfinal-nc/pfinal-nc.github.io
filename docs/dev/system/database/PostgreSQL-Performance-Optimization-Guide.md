@@ -60,8 +60,8 @@ course:
   name: Go 后端工程师成长路线
   module: 3
   lesson: 3.2
+recommend: 后端工程
 ---
-
 # PostgreSQL性能优化实战 - 从配置到SQL调优的完整指南
 
 ## 1. PostgreSQL性能优化概述

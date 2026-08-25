@@ -4,8 +4,13 @@ description: "零信任核心三要素：身份、设备、上下文。BeyondCor
 date: 2026-06-22
 category: security
 tags: [零信任, zero-trust, beyondcorp, spiffe, spire]
+recommend: 安全工程
+keywords:
+  - offensive
+  - security
+  - 技术博客
+  - 开发
 ---
-
 # 零信任架构实战 2026
 
 > TL;DR：零信任不再是大厂专利。SPIFFE/SPIRE 已成云原生身份标准，本文从 SPIFFE Workload ID → SVID 签发 → mTLS 通信 → 策略决策（OPA），构建完整的 Go 零信任网络。

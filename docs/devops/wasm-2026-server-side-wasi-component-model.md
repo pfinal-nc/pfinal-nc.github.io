@@ -20,8 +20,8 @@ keywords:
   - 边缘计算
 category: DevOps/工具
 description: "WebAssembly 2026 服务端实战全指南。覆盖 WASI Preview 2 核心接口（CLI/Filesystem/HTTP/Sockets）、Component Model 1.0 与 WIT 接口定义、Spin 3.0/Wasmtime/wasmCloud v2 运行时对比、WASM vs 容器性能基准（冷启动快 680x）、Go+Rust 构建 WASM 组件实战、K8s 混合部署策略。"
+recommend: DevOps
 ---
-
 # WASM 2026 服务端实战：WASI Preview 2、Component Model 与容器替代方案
 
 ## 一、WASM 已不再只是浏览器的玩具

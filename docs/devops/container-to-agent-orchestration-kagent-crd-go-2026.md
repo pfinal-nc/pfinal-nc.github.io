@@ -5,8 +5,8 @@ tags: ["devops", "kubernetes", "ai", "agent", "cloudnative", "golang"]
 keywords: ["Agent编排", "Kagent", "CRD", "Kubernetes Operator", "A2A", "MCP", "AI Agent", "云原生", "Go Operator", "智能体"]
 category: "devops"
 description: "2026 年云原生最深刻的范式迁移：从编排容器到编排智能体。本文从 Go 开发者视角深度解析 Kagent——通过 CRD 让 Agent 成为 Kubernetes 一等公民的云原生智能体编排框架，覆盖 Agent CRD 声明式管理、Go Controller 实现、MCP ToolServer 工具层、A2A 跨智能体互操作与 OpenTelemetry AI Tracing 可观测性，并给出完整的落地路径。"
+recommend: DevOps
 ---
-
 # 从容器编排到智能体编排：Kagent CRD 让 Agent 成为云原生一等公民
 
 2026 年，云原生领域最深刻的范式迁移正在发生：**编排的对象从容器变成了智能体**。

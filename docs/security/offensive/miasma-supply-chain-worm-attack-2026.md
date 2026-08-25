@@ -16,8 +16,8 @@ keywords:
   - 开源安全
 category: security/offensive
 description: "深度分析 2026 年 6 月 Miasma 供应链蠕虫攻击事件，从 Red Hat npm 到 Azure 再到 PyPI 的完整攻击链，涵盖技术原理、影响范围与开发者防护实战。"
+recommend: 安全工程
 ---
-
 # Miasma 供应链蠕虫攻击深度分析：2026 年开源生态的至暗时刻
 
 ## 引言

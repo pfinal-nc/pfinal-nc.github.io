@@ -18,8 +18,8 @@ keywords:
   - 后端开发
   - 微服务
   - 性能优化
+recommend: 思维方法
 ---
-
 <div align="center">
 
 # 高质量 Golang 后端的 10 个核心工程原则（2025 实战指南）

@@ -13,8 +13,8 @@ tags:
   - JavaScript
   - React
   - RxJS
+recommend: 后端工程
 ---
-
 # 状态管理实战
 
 使用 RxJS 可以实现简洁的状态管理。

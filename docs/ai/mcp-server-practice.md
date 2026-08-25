@@ -11,8 +11,8 @@ keywords:
   - Go MCP 服务器
   - AI 工具协议
   - LLM 工具集成
+recommend: AI工程
 ---
-
 # MCP 服务器开发实战
 
 ## 什么是 MCP？

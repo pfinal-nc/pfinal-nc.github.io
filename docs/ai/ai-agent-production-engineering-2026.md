@@ -18,8 +18,8 @@ tags:
   - LLM
   - 工程化
 category: ai
+recommend: AI工程
 ---
-
 # 2026 AI Agent 工程化：从原型到生产的 10 个关键决策
 
 ## 概述

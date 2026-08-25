@@ -18,8 +18,8 @@ keywords:
   - Workflow编排
 category: ai
 description: "2026 年 6 月 OpenCode 登顶 LogRocket AI 开发工具实力榜，172K+ GitHub Stars、750 万月活。本篇深度解析其模型无关架构、Custom Tool 系统、Workflow 编排机制，并与 Claude Code / Codex CLI 对比，附带完整安装配置与踩坑实战记录。"
+recommend: AI工程
 ---
-
 # OpenCode 架构实战：开源 AI 编程 Agent 如何靠模型无关设计登顶排行榜
 
 2026 年 6 月 17 日，LogRocket 发布了 6 月版《AI 开发工具实力榜》（AI Dev Tool Power Rankings）。结果出乎所有人意料——**OpenCode，一个开源终端 AI 编程 Agent，超越了 Cursor、Claude Code、Codex CLI 等所有闭源对手，登顶第一**。

@@ -15,8 +15,8 @@ keywords:
   - 函数式迭代
 category: dev/backend/golang
 description: "Go 1.24 正式稳定 range over func 与 iter 包，本文通过 7 种生产级迭代器模式，展示如何构建零分配、可组合的数据管道，彻底终结手写 for 循环的历史。"
+recommend: 后端工程
 ---
-
 # Go 1.24 range over func 迭代器：7 种生产级模式完全指南
 
 Go 1.24 将 `range over func` 与 `iter` 包正式稳定（GA），这是 Go 语言十年来最重要的语法演进之一。它不是语法糖，而是重新定义了 Go 中的数据处理范式——零分配、可组合、与 `range` 关键字深度集成。

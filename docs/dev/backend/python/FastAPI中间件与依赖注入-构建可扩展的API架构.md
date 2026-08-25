@@ -20,8 +20,8 @@ tags:
   - architecture
   - advanced
 difficulty: 进阶
+recommend: 后端工程
 ---
-
 # FastAPI 中间件与依赖注入：构建可扩展的 API 架构
 
 > 深入理解 FastAPI 的中间件和依赖注入机制，学习如何构建可扩展、可维护的 API 架构。包括自定义中间件、依赖注入、数据库连接、认证授权等高级主题。

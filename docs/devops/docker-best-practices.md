@@ -8,8 +8,13 @@ tags:
   - DevOps
   - 最佳实践
 description: 全面讲解 Docker 容器化最佳实践，涵盖镜像构建优化、多阶段构建、安全加固、编排部署等生产级应用场景。
+recommend: DevOps
+keywords:
+  - devops
+  - devops
+  - 技术博客
+  - 开发
 ---
-
 # Docker 容器化最佳实践：从开发到生产
 
 Docker 已经成为现代软件部署的标准。本文从实际工程出发，讲解如何正确使用 Docker 构建生产级容器。

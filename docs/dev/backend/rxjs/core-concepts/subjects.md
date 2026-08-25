@@ -21,8 +21,8 @@ tags:
   - Performance
   - Reactive
   - RxJS
+recommend: 后端工程
 ---
-
 # Subject 主体
 
 Subject 是一种特殊的 Observable，它可以向多个 Observer 多播值。从技术上讲，**Subject 是一个同时实现了 Observer 和 Observable 接口的对象**。

@@ -21,8 +21,8 @@ keywords:
   - AI编程
 category: "AI 工具"
 description: "2026 年 MCP 协议已成为 AI Agent 工具集成的事实标准。本文从协议四层架构、四大核心抽象、MCP vs Function Calling 对比，到 OpenClaw 编排引擎的生产落地，再到 5 大高频踩坑与解决方案，提供一份完整的 MCP 协议实战指南。"
+recommend: AI工程
 ---
-
 # MCP 协议 2026 完全指南：从协议设计到 OpenClaw 生产级 Agent 工具集成
 
 ## 引言：Agent 时代的"USB-C 接口"

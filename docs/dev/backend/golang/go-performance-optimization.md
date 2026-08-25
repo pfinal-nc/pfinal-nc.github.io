@@ -8,8 +8,13 @@ tags:
   - pprof
   - 内存管理
 description: Go 性能优化实战 2026：从 pprof 内存分析到 GC 调优，7 个生产级优化技巧附完整代码。涵盖 CPU profiling、内存逃逸分析、sync.Pool 复用、字符串优化等核心场景。
+recommend: 后端工程
+keywords:
+  - golang
+  - dev
+  - 技术博客
+  - 开发
 ---
-
 # Go 性能优化实战：从 pprof 到内存管理
 
 性能优化是后端开发的核心技能之一。本文从实际工程出发，讲解 Go 程序的系统化性能优化方法。

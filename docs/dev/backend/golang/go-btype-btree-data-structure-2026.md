@@ -13,8 +13,8 @@ keywords:
   - Go 高性能集合
 category: Golang
 description: 深入解析 tidwall/btype 库，这个 2026 年爆火的 Go B 树集合库在多项基准测试中超越 Rust BTreeMap 和 C++ std::map。从核心原理到生产落地，完整覆盖 Table、Set、Map 三大集合类型的设计与使用。
+recommend: 后端工程
 ---
-
 # Go btype 数据结构实战：比 Rust/C++ 更快的 B 树集合
 
 ## 引言

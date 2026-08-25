@@ -5,8 +5,8 @@ tags: ["ai", "mcp", "oauth", "security", "agent"]
 keywords: ["MCP", "Model Context Protocol", "2026-07-28", "无状态架构", "OAuth 2.1", "Breaking Changes", "MCP迁移", "AI Agent"]
 category: "ai"
 description: "MCP 2026-07-28 Spec RC 是自发布以来最大规模的修订：会话移除、初始化握手消失、OAuth 2.1 强制接入。本文深度解析七大破坏性变更，提供从有状态到无状态的完整迁移代码示例与检查清单。"
+recommend: AI工程
 ---
-
 # MCP 2026-07-28 Spec RC 迁移实战：无状态架构、OAuth 2.1 与七大 Breaking Changes 全解析
 
 2026 年 5 月 21 日，Model Context Protocol（MCP）核心维护团队锁定了 `2026-07-28` 规范的 Release Candidate。官方称这是"自 MCP 发布以来最大规模的修订"——这不是营销话术。协议层会话被彻底移除，初始化握手消失，三个核心功能被废弃，OAuth 要求显著收紧。

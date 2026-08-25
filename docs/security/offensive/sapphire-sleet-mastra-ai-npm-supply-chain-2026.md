@@ -21,8 +21,8 @@ keywords:
   - 防御纵深
 category: security/offensive
 description: "2026 年 6 月 17 日，朝鲜国家级黑客组织 Sapphire Sleet 接管 Mastra AI 维护者账户，在 19 分钟内重新发布 140+ 个 @mastra 作用域包并植入 easy-day-js 投毒依赖。本文完整复盘事件时间线、攻击链技术细节、4.5KB 投放器与 41KB 第二阶段植入物的反分析技术、166 个加密钱包扩展枚举清单，并给出开发者层、CI/CD 层、组织层的纵深防御实战指南。"
+recommend: 安全工程
 ---
-
 # Sapphire Sleet 国家级 npm 供应链攻击深度复盘：Mastra AI 19 分钟投毒 140+ 包的完整技术链
 
 ## 引子：2026 年开源生态的第二次"至暗时刻"

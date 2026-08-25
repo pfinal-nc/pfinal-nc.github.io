@@ -16,8 +16,8 @@ keywords:
   - Microsoft .NET Agent Framework
 category: AI
 description: 2026年7月29日，GitHub Copilot Code Review 的 Agent Skills 与 MCP 服务器支持正式 GA。深入解析 SKILL.md 技能文件与 MCP 只读外部上下文如何让 AI 代码审查从"看 diff 盲审"升级为"带有团队标准和实时上下文的有状态审查"，以及这一架构与 Microsoft .NET Agent Framework 的同周收敛释放了什么行业信号。
+recommend: AI工程
 ---
-
 # GitHub Copilot Code Review 支持 Agent Skills 与 MCP：让代码审查拥有团队记忆
 
 > 2026-07-29 GA | 所有 Copilot 付费计划可用 | MCP 仅读 · Skills 从 head 分支加载 · 审查注释携带来源标注

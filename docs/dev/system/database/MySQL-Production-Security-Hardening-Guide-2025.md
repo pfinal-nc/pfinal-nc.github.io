@@ -75,8 +75,8 @@ course:
   name: Go 后端工程师成长路线
   module: 3
   lesson: 3.1
+recommend: 后端工程
 ---
-
 # MySQL生产环境安全配置：企业级安全加固完整指南
 
 ## 1. 认证安全：第一道防线

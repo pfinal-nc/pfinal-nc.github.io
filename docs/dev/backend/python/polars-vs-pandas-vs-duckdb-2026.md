@@ -19,8 +19,8 @@ tags:
   - DuckDB
   - 性能优化
 category: Python
+recommend: 后端工程
 ---
-
 # Polars vs Pandas vs DuckDB：2026 Python 数据处理引擎终极横评
 
 ## 概述

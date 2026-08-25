@@ -14,8 +14,8 @@ tags:
   - prompt
   - llm
   - Tutorial
+recommend: 数据工程
 ---
-
 # Prompt Engineering 实战：写出真正有效的 AI 提示词
 
 > 同样的 AI 模型，不同的提示词可以产生天壤之别的结果。Prompt Engineering 不是玄学，而是有迹可循的工程学。

@@ -4,8 +4,13 @@ description: "OTel Go 1.32 重大更新详解：eBPF 自动注入、metric SDK �
 date: 2026-06-20
 category: devops
 tags: [opentelemetry, observability, go, ebpf, 监控]
+recommend: DevOps
+keywords:
+  - devops
+  - devops
+  - 技术博客
+  - 开发
 ---
-
 # OpenTelemetry Go SDK 1.32 实战 2026
 
 > TL;DR：OTel Go SDK 在 2026 Q2 连续发布 1.31/1.32，metric cardinality 默认限制 2000 是 breaking change，配合 Alibaba Cloud + Datadog 联合发布的 eBPF 自动注入方案，可让 Go 服务零代码接入分布式追踪。

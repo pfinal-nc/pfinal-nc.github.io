@@ -18,8 +18,8 @@ keywords:
   - 3.14t
 category: 编程语言
 description: '深度解析 Python 3.14 Free-Threading 官方支持（PEP 779）：GIL 正式成为可选项，3.14t 构建安装与使用、性能数据、C 扩展兼容性、与 JIT 的协同。'
+recommend: 后端工程
 ---
-
 # Python 3.14 Free-Threading 正式支持深度解析：PEP 779 之后 GIL 时代的终结
 
 ## 导语

@@ -14,8 +14,8 @@ tags:
   - Wails
   - tailwindcss
   - ui
+recommend: 后端工程
 ---
-
 # 基于 wails 和 Tailwindcss 的应用开发
 
 > Tailwind CSS 是原子化 CSS 框架的代表，与 Wails 结合可以快速构建美观的桌面应用界面。

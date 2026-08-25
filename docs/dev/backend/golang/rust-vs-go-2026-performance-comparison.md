@@ -17,8 +17,8 @@ keywords:
   - 系统编程
 category: dev
 description: 全面对比 Rust 和 Go 在 2026 年的性能基准、内存效率、并发模型、开发者体验和生态系统，附带真实基准测试数据、Discord/Cloudflare 案例和清晰选型决策指南。
+recommend: 后端工程
 ---
-
 # Rust vs Go 2026：性能基准、内存安全与后端选型实战
 
 ## 前言

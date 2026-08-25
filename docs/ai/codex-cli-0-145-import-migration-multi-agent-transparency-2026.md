@@ -20,8 +20,8 @@ keywords:
   - 透明度争议
 category: ai
 description: "2026 年 7 月 21 日，OpenAI 发布 Codex CLI 0.145。/import 一键迁移 Cursor 和 Claude Code 全部配置，Multi-Agent V2 转正，但父子 Agent 间加密指令传输引发透明度争议。本文从工程、商业、安全三个维度，拆解这次更新的真实含义。"
+recommend: AI工程
 ---
-
 # Codex CLI 0.145 深度解析：/import 迁移战争、Multi-Agent V2 与透明度争议
 
 2026 年 7 月 21 日，OpenAI 推送了 Codex CLI 0.145 版本。这次更新日志很长，但有三条真正改变了 AI 编程工具的竞争格局：

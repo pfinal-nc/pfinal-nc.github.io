@@ -16,8 +16,8 @@ keywords:
   - Rust性能优化
 category: 编程语言
 description: '深度解析 Rust 1.98 新特性：algebraic_add/algebraic_mul 等代数浮点运算符如何解锁 SIMD 向量化与运算重排，实测 4 倍求和加速、2 倍 SSD 加速，附完整代码示例与精度权衡指南。'
+recommend: 后端工程
 ---
-
 # Rust 1.98 代数浮点运算符深度解析：让编译器放心加速你的数值代码
 
 ## 导语

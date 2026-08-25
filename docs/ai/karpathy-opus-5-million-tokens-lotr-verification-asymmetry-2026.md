@@ -23,8 +23,8 @@ keywords:
   - Harness Engineering
 category: ai
 description: 2026 年 8 月 3 日，Andrej Karpathy 公开实验：给 Claude Opus 5 投喂指环王开篇段落 + 一百万 token 预算 + Three.js 渲染任务。结果——2 小时生成 5500 行代码、可工作的 3D 世界，代价 $10；但模型无法自我验证输出（不能看视频、不能玩游戏），回退到截图后暴露多个错误。本文深度复盘该实验，论证"生成能力随预算缩放，验证能力不缩放"这一核心不对称性，结合 Harness Engineering 框架、Context Engineering 演进，给独立开发者与企业 AI 团队提出可操作的"任务 + 评判器"工作流。
+recommend: AI工程
 ---
-
 # Karpathy Opus 5 一百万 token 渲染指环王：Agent 评估的"生成与验证"不对称性如何重新定义 AI 工作流
 
 ## 引言

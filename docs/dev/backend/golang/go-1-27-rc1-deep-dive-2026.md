@@ -19,8 +19,8 @@ keywords:
   - Go运行时优化
 category: dev/backend/golang
 description: "Go 1.27 RC1 于 2026 年 6 月第二周正式发布，本篇深度解析泛型方法（Generic Methods）、encoding/json/v2、uuid 标准库包、simd 实验包、crypto/mldsa 后量子签名、运行时小对象分配 30% 加速等核心特性，附带完整代码示例与迁移指南。"
+recommend: 后端工程
 ---
-
 # Go 1.27 RC1 深度解析：泛型方法落地、json/v2 正式入库与运行时性能跃升
 
 2026 年 6 月第二周，Go 1.27 RC1 正式发布，Go 核心团队喊出了那句熟悉的口号："Run it in dev! Run it in prod! File bugs!"。

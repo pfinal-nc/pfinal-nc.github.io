@@ -5,8 +5,8 @@ tags: [AI, MCP, Agent, Anthropic, Claude, Skills, 工具]
 keywords: [AI Agent, MCP, Anthropic, Skills, SKILL.md, Claude, Agent 工具]
 category: ai
 description: "Anthropic 官方开源的 Agent Skills 仓库 138k stars 爆红,本文从 SKILL.md 规范、17 个示例 skill 的设计模式、到自建专业 Skill 全流程实战,系统拆解 2026 年 AI Agent 技能标准化的工程化路径。"
+recommend: AI工程
 ---
-
 # Anthropic Agent Skills 实战：让 AI Agent 掌握专业技能的标准化方案
 
 2026 年 5 月,Anthropic 在 GitHub 开源了官方 Agent Skills 仓库 `anthropics/skills`,短短 3 天斩获 **138k Star**,成为 GitHub 趋势榜冠军。一时间,"Agent Skills"成为 AI 工程领域最火热的概念——它是 MCP 协议的下一块拼图,是 Agent 从"工具调用"走向"专业能力"的关键基础设施。

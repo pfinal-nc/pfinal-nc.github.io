@@ -18,8 +18,8 @@ keywords:
   - Electron 替代品
   - Redis 客户端
   - 数据库工具
+recommend: 后端工程
 ---
-
 # Wails 生态巡礼：两款让我惊艳的桌面应用（GoNavi & TinyRDM）
 
 > 作为 Wails 的忠实粉丝，今天想和大家分享两款让我眼前一亮的开源项目。

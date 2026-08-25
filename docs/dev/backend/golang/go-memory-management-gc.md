@@ -14,8 +14,8 @@ tags:
   - Memory
   - GC
   - Performance
+recommend: 后端工程
 ---
-
 # Go 内存管理与垃圾回收：深入理解 GC 机制
 
 ## Go 内存管理概述

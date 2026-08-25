@@ -18,8 +18,8 @@ keywords:
   - Web安全
 category: security
 description: 深入解析 2026 年 CTF 云安全攻防趋势，从容器逃逸到 K8s 渗透，涵盖 SSRF 云服务攻击、WAF 绕过、跨模块融合、实战解题框架和分阶段备考策略。
+recommend: 安全工程
 ---
-
 # CTF 2026 云安全攻防：从容器逃逸到 K8s 渗透实战
 
 ## 前言

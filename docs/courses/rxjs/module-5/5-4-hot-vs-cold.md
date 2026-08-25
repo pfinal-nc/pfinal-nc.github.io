@@ -5,8 +5,13 @@ date: 2026-05-26
 author: PFinal南丞
 category: 课程
 tags: [course, rxjs, observable, hot-cold, lesson]
+recommend: 课程
+keywords:
+  - module-5
+  - courses
+  - 技术博客
+  - 开发
 ---
-
 # Lesson 5.4: 热 Observable vs 冷 Observable
 
 ## 学习目标

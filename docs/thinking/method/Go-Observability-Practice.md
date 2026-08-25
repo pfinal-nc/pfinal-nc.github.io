@@ -15,8 +15,8 @@ tags:
   - opentelemetry
   - tracing
   - monitoring
+recommend: 思维方法
 ---
-
 # 从 trace 到洞察：Go 项目的可观测性闭环实践
 
 > 可观测性是现代应用的核心能力。本文带你构建完整的 Go 项目可观测性体系。

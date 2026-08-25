@@ -15,8 +15,8 @@ tags:
   - JavaScript
   - Operators
   - Performance
+recommend: 后端工程
 ---
-
 # exhaustMap
 
 `exhaustMap` 是这四个高阶映射操作符中比较特殊的一个。它将源 Observable 发出的每个值映射成一个新的内部 Observable，但**只有当上一个内部 Observable 完成后，它才会处理下一个源值**。如果在一个内部 Observable 正在执行时，源 Observable 发出了新的值，这些新值将被**忽略**。

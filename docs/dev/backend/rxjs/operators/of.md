@@ -14,8 +14,8 @@ tags:
   - Operators
   - RxJS
   - Testing
+recommend: 后端工程
 ---
-
 # of
 
 `of` 操作符创建一个 Observable，它会依次发出你提供的任意数量的值，然后完成。

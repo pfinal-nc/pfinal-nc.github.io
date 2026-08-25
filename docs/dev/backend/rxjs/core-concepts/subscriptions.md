@@ -16,8 +16,8 @@ tags:
   - React
   - RxJS
   - Tools
+recommend: 后端工程
 ---
-
 # Subscription 订阅与内存管理
 
 `Subscription` 对象代表一个正在执行的 Observable。它最核心的功能就是通过 `unsubscribe()` 方法来清理资源和停止 Observable 的执行。在任何一个严肃的应用中，**妥善地管理订阅是防止内存泄漏的关键**。

@@ -14,8 +14,8 @@ keywords:
   - protocol migration
 category: ai
 description: 2026 年 7 月 28 日，MCP 发布自诞生以来最大规模的架构重构：移除协议层 Session，改为无状态请求/响应模型。本文从协议变更、Header 路由、MRTR、Extensions 框架等维度深度解析这次重构的技术细节与工程影响。
+recommend: AI工程
 ---
-
 # MCP 2.0 无状态重构：移除 Session 后 Agent 协议层发生了什么
 
 ## MCP 协议的 "Kubernetes 时刻"

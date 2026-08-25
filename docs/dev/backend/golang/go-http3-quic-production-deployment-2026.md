@@ -4,8 +4,13 @@ description: "Go 1.24+ http3 标准库 + quic-go 双方案对比：CDN 接入、
 date: 2026-06-21
 category: devops
 tags: [http3, quic, go, 网络, 性能]
+recommend: 后端工程
+keywords:
+  - golang
+  - dev
+  - 技术博客
+  - 开发
 ---
-
 # Go HTTP/3 + QUIC 生产部署实战 2026
 
 > TL;DR：Go 1.24+ 将 net/http 的 http3 实现标记为生产可用（GA），quic-go 库同步支持 RFC 9000 完整特性。本文从协议、库选型、CDN 接入、防火墙、0-RTT 优化到移动弱网，给出完整生产部署指南。

@@ -20,8 +20,8 @@ keywords:
   - 标准库稳定
 category: 编程语言
 description: '深度解析 Mojo 1.0 正式发布：Python 语法 + Rust 性能的系统语言迎来稳定地基，var/lambda/指针统一与 interior origins 内存安全革命，编译器 2026 年开源承诺不变。'
+recommend: 后端工程
 ---
-
 # Mojo 1.0 正式发布深度解析：LLVM 之父的"AI 时代系统语言"终于迎来稳定地基
 
 ## 导语

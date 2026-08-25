@@ -14,8 +14,8 @@ tags:
   - simd
   - Performance
   - optimization
+recommend: 后端工程
 ---
-
 # Go 1.26 SIMD 编程实战：从入门到高性能优化
 
 > SIMD（Single Instruction Multiple Data）是提升计算密集型应用性能的利器。Go 1.26 开始提供更好的 SIMD 支持。

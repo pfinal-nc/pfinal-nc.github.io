@@ -25,8 +25,8 @@ course:
   lessons: 15
   status: building
   project: 安全加固实战、渗透测试报告
+recommend: 课程
 ---
-
 # 🛡️ 安全工程师成长路线
 
 > 从防御加固到攻防研究，打造攻防一体的安全工程能力

@@ -5,8 +5,13 @@ date: 2026-05-26
 author: PFinal南丞
 category: 课程
 tags: [course, security, incident-response, lesson]
+recommend: 课程
+keywords:
+  - module-5
+  - courses
+  - 技术博客
+  - 开发
 ---
-
 # Lesson 5.1: 应急响应流程
 
 ## 学习目标

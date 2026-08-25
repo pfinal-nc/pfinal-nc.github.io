@@ -14,8 +14,8 @@ tags:
   - logging
   - devslog
   - structured-logging
+recommend: 效率工具
 ---
-
 # 使用 Devslog 结构化日志处理
 
 > Devslog 是一个高性能的 Go 结构化日志库，提供丰富的日志格式化和处理功能。

@@ -21,8 +21,8 @@ tags:
   - full-stack
   - production
 difficulty: 高级
+recommend: 后端工程
 ---
-
 # FastAPI 实战案例：从零构建企业级 API
 
 > 通过一个完整的实战案例，学习如何从零开始构建企业级 FastAPI 应用。包括项目架构、数据库设计、认证授权、API 文档、部署上线等完整流程。

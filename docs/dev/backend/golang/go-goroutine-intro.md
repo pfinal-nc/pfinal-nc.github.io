@@ -16,8 +16,8 @@ tags:
   - concurrency
   - beginner
 readingTime: 12
+recommend: 后端工程
 ---
-
 # Go 协程（Goroutine）入门
 
 > 掌握 Go 语言最核心的并发特性，轻松编写高性能并发程序

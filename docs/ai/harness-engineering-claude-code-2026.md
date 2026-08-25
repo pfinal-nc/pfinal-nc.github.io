@@ -18,8 +18,8 @@ keywords:
   - 2026 AI 编程
 category: ai
 description: 2026 年 3 月 Claude Code 源码因 npm source map 意外泄露，社区基于 clean-room 重构的复刻项目让 Harness Engineering 这个概念从黑话变成显学。Vibe Coding 在 92% 美国开发者中普及但生产事故频发，Spec-Driven Development 接棒成为新范式。本文从 Claude Code 真实架构出发，构建可落地的 Harness 体系，包含完整 Go/Python 双语言代码示例。
+recommend: AI工程
 ---
-
 # Harness Engineering 2026 实战：Claude Code 源码泄露后的 AI Agent 工程范式革命
 
 ## 引言：从 "Vibe Coding" 到 "Harness Engineering" 的必然跃迁

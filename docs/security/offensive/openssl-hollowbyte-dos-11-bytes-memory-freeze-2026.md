@@ -21,8 +21,8 @@ keywords:
   - 2026
 category: 安全渗透
 description: "2026 年 7 月 17 日，Okta 红队披露 OpenSSL HollowByte 漏洞：攻击者仅用 11 字节 TLS 请求就能让服务器分配 131KB 内存，glibc 内存碎片化导致 RSS 持续攀升，1GB 服务器被 OOM Kill。OpenSSL 在 6 月静默修复但未分配 CVE。本文从 TLS 握手缓冲区原理、glibc 分配器碎片化机制、攻击链复现到修复方案完整解析。"
+recommend: 安全工程
 ---
-
 # OpenSSL HollowByte 深度分析：11 字节 TLS 请求如何冻结服务器内存
 
 ## 引言：基础设施的沉默修复

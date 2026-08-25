@@ -14,8 +14,8 @@ tags:
   - gc
   - memory
   - Performance
+recommend: 后端工程
 ---
-
 # runtime.free 打破 Go GC 性能瓶颈的秘密武器
 
 > Go 的垃圾回收器虽然强大，但在某些场景下会成为性能瓶颈。了解 runtime.free 能让你更好地控制内存。

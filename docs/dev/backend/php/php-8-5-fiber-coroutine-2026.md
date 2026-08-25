@@ -4,8 +4,13 @@ description: "PHP 8.5 Fiber 稳定化 + Swoole 6.0 + FrankenPHP 1.4 协程对比
 date: 2026-06-21
 category: dev
 tags: [php, fiber, swoole, frankenphp, 高并发]
+recommend: 后端工程
+keywords:
+  - php
+  - dev
+  - 技术博客
+  - 开发
 ---
-
 # PHP 8.5 Fiber 协程实战 2026
 
 > TL;DR：PHP 8.5 在 2025 年 11 月发布，Fiber 进入 stable，Swoole 6.0 与 FrankenPHP 1.4 同期发力。本文从原生 Fiber / OpenSwoole / Swoole 6 / FrankenPHP 四方案对比，落地电商秒杀 10 万 QPS 场景。

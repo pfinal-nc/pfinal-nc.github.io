@@ -5,8 +5,13 @@ date: 2026-05-26
 author: PFinal南丞
 category: 课程
 tags: [golang, course, project, article, crud, lesson]
+recommend: 课程
+keywords:
+  - project
+  - courses
+  - 技术博客
+  - 开发
 ---
-
 # Project 3: 文章模块
 
 ## 学习目标

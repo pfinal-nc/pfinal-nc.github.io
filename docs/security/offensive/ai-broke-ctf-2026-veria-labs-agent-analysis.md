@@ -19,8 +19,8 @@ keywords:
   - 红队自动化
 category: "安全攻防"
 description: "2026 年 BSidesSF CTF，Veria Labs 用 AI Agent 在周末内构建的系统解出全部 52 道题夺冠。本文深度拆解其开源 CTF Agent 架构、多模型并行竞速策略、Docker 沙箱隔离方案，并分析这对 CTF 竞赛和网络安全人才选拔的深远影响。"
+recommend: 安全工程
 ---
-
 # AI 破解 CTF 2026：Veria Labs 52 题全解 Agent 技术深度拆解
 
 ## 引言：一场改变游戏规则的 CTF

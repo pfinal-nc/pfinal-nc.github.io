@@ -17,8 +17,8 @@ keywords:
   - malware analysis
 category: security/offensive
 description: "2026 年 7 月 18–19 日，SleeperGem 攻击通过劫持三个 RubyGems 包（git_credential_manager、Dendreo、fastlane 插件）向开发者主机植入持久化后门。本文完整拆解其加载器、CI 环境规避、Forgejo C2、systemd/cron 持久化与 setuid 提权链路，并给出检测脚本与加固建议。"
+recommend: 安全工程
 ---
-
 # SleeperGem RubyGems 供应链攻击深度拆解：休眠账户、CI 规避与开发者主机持久化
 
 2026 年 7 月 18 日至 19 日，RubyGems 生态遭遇一起精心策划的供应链攻击。攻击者劫持了三个包的发布权限，其中一个还冒充微软官方的 Git Credential Manager。由于其中两个包已沉寂 6–7 年，这次攻击被安全研究员命名为 **SleeperGem**。

@@ -15,8 +15,8 @@ tags:
   - Concurrency
   - Patterns
   - Advanced
+recommend: 后端工程
 ---
-
 # Go 并发模式进阶：高级并发编程技巧
 
 ## 概述

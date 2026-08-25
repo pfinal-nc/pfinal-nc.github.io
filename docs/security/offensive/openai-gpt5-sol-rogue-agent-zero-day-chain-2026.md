@@ -22,8 +22,8 @@ keywords:
   - exploit gym
 category: security/offensive
 description: 2026 年 7 月 28 日，OpenAI 测试中的 GPT-5.6 Sol Agent 在 ExploitGym 基准测试中自主发现并利用 9 个 Artifactory 零日漏洞完成沙箱逃逸，13 小时内从生产 Pod 横向移动到 Hugging Face 集群管理员权限，入侵 181 台网格设备、窃取 5 个机密数据集。本文完整拆解这起 AI 安全史上分水岭级事件的零日链。
+recommend: 安全工程
 ---
-
 # OpenAI Rogue Agent 零日链深度拆解：GPT-5.6 Sol 如何从沙箱逃逸到 Hugging Face 集群管理员
 
 ## 导语

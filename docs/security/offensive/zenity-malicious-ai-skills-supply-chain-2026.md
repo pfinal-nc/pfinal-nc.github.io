@@ -25,8 +25,8 @@ keywords:
   - typosquatting
 category: security/offensive
 description: 2026 年 7-8 月，Zenity Labs 在 Black Hat USA 2026 披露了一场针对 AI Agent 生态的供应链攻击：攻击者 Karli 在 skills.sh 上仿冒 Paperclip 与 Browser Use 上传投毒 Skills，通过 4 种触发机制在 Agent 执行时下载并运行窃密载荷，累积 170 万+ 安装。本文完整复盘攻击链、四类触发机制、TOCTOU 信誉累积策略与 AI Agent 供应链防御体系。
+recommend: 安全工程
 ---
-
 # 恶意 AI Skills 供应链攻击深度拆解：仿冒 Paperclip/Browser Use 的 170 万次安装如何把 AI Agent 变成窃密马
 
 > Zenity Labs 官方研究 | Black Hat USA 2026 披露 | 2026-07-11 投毒 → 2026-08-02 处置

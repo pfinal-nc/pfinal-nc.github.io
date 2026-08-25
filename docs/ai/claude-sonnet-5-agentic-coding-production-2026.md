@@ -20,8 +20,8 @@ keywords:
   - API 集成
 category: ai
 description: "Anthropic 于 2026 年 6 月 30 日发布 Claude Sonnet 5，被称为最具 Agent 能力的 Sonnet 模型。本文从基准分析、tokenizer 变化、effort 机制、Python API 实战、Claude Code 迁移、成本模型到团队治理，给出一份完整的生产级落地指南。"
+recommend: AI工程
 ---
-
 # Claude Sonnet 5 生产级 Agent 编码实战：从 API 调用到团队治理
 
 ## 引子：Sonnet 系列的“自主化”跃迁

@@ -13,8 +13,8 @@ tags:
   - JavaScript
   - Operators
   - RxJS
+recommend: 后端工程
 ---
-
 # zip
 
 `zip` 操作符将多个 Observable 的值按顺序配对组合。它会等待所有 Observable 都发出一个值后，将这些值作为一个数组发出。

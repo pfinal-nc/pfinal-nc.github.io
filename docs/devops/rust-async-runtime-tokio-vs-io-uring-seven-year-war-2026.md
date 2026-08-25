@@ -20,8 +20,8 @@ keywords:
   - Async Working Group
 category: DevOps
 description: Rust 异步生态七年来被 Tokio 事实垄断，但 io_uring 的崛起、Apache Iggy 从 Tokio 迁移到 thread-per-core 架构的实战、以及 Async Working Group 的回归正在改写格局。本文从 epoll vs io_uring、work-stealing vs thread-per-core、三个运行时评估到迁移成本全面解析。
+recommend: DevOps
 ---
-
 # Rust 异步运行时七年战争：从 Tokio 垄断到 io_uring 破局，Apache Iggy 迁移实战与生态分裂深度解析
 
 ## 引言：极强语言 + 极强社区 + 极弱的标准化决心

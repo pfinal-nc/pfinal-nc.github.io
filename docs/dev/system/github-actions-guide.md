@@ -14,8 +14,8 @@ tags:
   - cicd
   - DevOps
   - automation
+recommend: 后端工程
 ---
-
 # GitHub Actions 实战指南
 
 GitHub Actions 是 GitHub 提供的 CI/CD 平台，允许你自动化构建、测试和部署流程。本文将带你从零开始掌握 GitHub Actions 的核心概念和实战技巧。

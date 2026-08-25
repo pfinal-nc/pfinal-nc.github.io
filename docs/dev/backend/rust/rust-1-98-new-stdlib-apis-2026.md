@@ -18,8 +18,8 @@ keywords:
   - 无分配格式化
 category: 编程语言
 description: '深度解析 Rust 1.98.0 新稳定标准库 API：Atomic::from_mut 家族消除无锁并发的 unsafe 样板、strip_circumfix 对称去包裹、format_into + NumBuffer 无分配整数格式化，附源码级签名核验与完整代码示例。'
+recommend: 后端工程
 ---
-
 # Rust 1.98 新标准库 API 深度解析：Atomic::from_mut、strip_circumfix 与无分配格式化
 
 ## 导语

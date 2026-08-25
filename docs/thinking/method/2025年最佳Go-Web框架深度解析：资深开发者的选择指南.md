@@ -31,8 +31,8 @@ keywords:
   - 高性能Go框架
   - API开发框架
 description: 2025年最新Go Web框架深度评测：Gin、Fiber、Echo、Hertz、Beego、Go-Chi、FastHTTP、Gorilla等10大主流框架性能对比。从请求处理速度、内存占用、学习曲线、社区活跃度等维度，提供详细的项目选型指南和性能优化建议。
+recommend: 思维方法
 ---
-
 ::: tip 结论先行
 *   **追求综合生态与社区支持**：选择 **Gin**
 *   **追求极致性能与低内存**：选择 **Hertz** 或 **FastHTTP**

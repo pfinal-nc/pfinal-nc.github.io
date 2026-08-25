@@ -15,8 +15,8 @@ tags:
   - active-directory
   - lateral-movement
   - red-team
+recommend: 安全工程
 ---
-
 # 内网渗透实战指南
 
 内网渗透是渗透测试的高级阶段，攻击者已经进入目标网络内部，需要进一步扩展权限、横向移动并获取敏感数据。

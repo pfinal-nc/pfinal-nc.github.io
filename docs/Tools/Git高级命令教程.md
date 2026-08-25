@@ -46,8 +46,8 @@ howTo:
     - git clean 清理未跟踪文件
     - git rerere 复用冲突解决
     - git notes 提交注释
+recommend: 效率工具
 ---
-
 # Git 高级命令教程：12 个提升开发效率的实用命令
 
 ## 前言

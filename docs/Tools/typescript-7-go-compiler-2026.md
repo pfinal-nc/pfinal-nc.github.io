@@ -18,8 +18,8 @@ keywords:
   - TypeScript 迁移
 category: Tools
 description: 2026 年 6 月 18 日，微软发布 TypeScript 7.0 RC，代号 Project Corsa。TypeScript 编译器——过去十年一直用自身语言（自托管）编写——被完整移植到了 Go 语言。VS Code 150 万行代码构建从 78 秒降至 7.5 秒，语言服务器失败率降低 20 倍以上。本文从架构决策、性能原理、迁移路径三个维度深度拆解这一 2026 年最震撼的前端基础设施变革。
+recommend: 效率工具
 ---
-
 # TypeScript 7.0 RC 深度解析：微软用 Go 重写编译器，10倍性能提升背后的架构革命
 
 ## 引言：编译器抛弃了自己的语言

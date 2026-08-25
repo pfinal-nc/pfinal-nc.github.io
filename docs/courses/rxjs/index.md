@@ -24,8 +24,8 @@ course:
   lessons: 12
   status: planning
   project: 搜索建议、拖放交互、状态管理
+recommend: 课程
 ---
-
 # 🔄 RxJS 响应式编程实战手册
 
 > 掌握异步编程利器，构建优雅的响应式应用

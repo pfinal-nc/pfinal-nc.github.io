@@ -13,8 +13,8 @@ tags:
   - golang
   - Tutorial
   - backend
+recommend: 后端工程
 ---
-
 # Go 基础语法速通：从零开始掌握 Go 语言
 
 > Go（Golang）是 Google 开发的静态强类型、编译型语言。它语法简洁、并发能力强、编译速度快，是现代后端开发的热门选择。

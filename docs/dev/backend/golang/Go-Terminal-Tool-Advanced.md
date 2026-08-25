@@ -14,8 +14,8 @@ tags:
   - cli
   - terminal
   - tools
+recommend: 后端工程
 ---
-
 # GO 语言开发终端小工具后续
 
 > 在基础 CLI 工具之上，添加更多实用功能，打造全能终端助手。

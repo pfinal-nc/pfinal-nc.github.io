@@ -14,8 +14,8 @@ tags:
   - channel
   - concurrency
   - Performance
+recommend: 后端工程
 ---
-
 # 深入理解 Go Channel 批量读取与实际应用
 
 > Channel 是 Go 语言并发编程的核心，掌握批量读取技巧能显著提升程序性能。

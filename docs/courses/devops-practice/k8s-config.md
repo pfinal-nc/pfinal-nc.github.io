@@ -21,8 +21,8 @@ tags:
   - secret
   - 配置管理
   - 安全
+recommend: 课程
 ---
-
 # Kubernetes 配置管理：ConfigMap、Secret 与生产最佳实践
 
 > 把配置硬编码进镜像是 K8s 使用的大忌，正确的做法是用 ConfigMap 管非敏感配置，用 Secret 管密钥，再配上生产级密钥管理工具。本文一步步讲清楚。

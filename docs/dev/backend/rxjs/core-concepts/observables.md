@@ -20,8 +20,8 @@ tags:
   - Performance
   - RxJS
   - Tools
+recommend: 后端工程
 ---
-
 # Observable 可观察对象
 
 Observable 是 RxJS 的基石。它代表了一个可被调用的未来值或事件的集合。对于资深开发者，可以将其理解为一个**惰性（lazy）的、可取消的、可以发出零个或多个值的异步数据流**。

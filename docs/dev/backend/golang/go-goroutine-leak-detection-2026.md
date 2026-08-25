@@ -17,8 +17,8 @@ keywords:
   - Go 1.26
 category: golang
 description: Go 1.26 引入了实验性的 goroutine 泄漏检测功能。本文从泄漏根因分析出发，结合 pprof、runtime/trace、go leak 检测器，提供从开发到生产的完整 goroutine 管理方案。
+recommend: 后端工程
 ---
-
 # Go goroutine 泄漏检测：从 pprof 到生产级并发调试
 
 ## 问题的严重性

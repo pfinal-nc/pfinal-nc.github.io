@@ -16,8 +16,8 @@ keywords:
   - XBEN
 category: security/offensive
 description: 深度解析 T3MP3ST 开源 AI 红队框架——将 Claude Code/Codex/Hermes 等编码 Agent 转化为自主渗透平台，XBEN 90.1%、真实 CVE 定位 8/10，从架构设计、工具矩阵到防御策略全方位拆解。
+recommend: 安全工程
 ---
-
 # T3MP3ST 深度解析：AI 编码 Agent 自主红队框架从侦察到漏洞定位的全链路实战
 
 ## 导语

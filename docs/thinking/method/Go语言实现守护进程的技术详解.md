@@ -12,8 +12,8 @@ keywords:
   - golang
   - 进程管理
   - 关键技术点
+recommend: 思维方法
 ---
-
 # Go语言实现守护进程的技术详解
 
 ## 引言

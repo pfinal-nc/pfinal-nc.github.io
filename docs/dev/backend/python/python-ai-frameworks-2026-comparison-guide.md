@@ -20,8 +20,8 @@ keywords:
   - 机器学习框架
 category: "Python 后端"
 description: "2026 年 Python AI 框架生态已高度成熟。本文基于 JetBrains 最新调查数据，深度对比 7 大核心框架：TensorFlow、PyTorch、Keras、scikit-learn、LangChain、Hugging Face、XGBoost，覆盖深度学习、经典 ML、LLM Agent 三大类别，提供选型决策树和实际代码示例。"
+recommend: 后端工程
 ---
-
 # Python AI 框架 2026 全景对比与选型指南
 
 ## 引言：从"能用"到"好用"的 AI 框架生态

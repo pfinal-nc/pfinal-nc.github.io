@@ -14,8 +14,8 @@ keywords:
   - MacOS包管理
   - 自动化发布
   - 命令行工具
----  
-
+recommend: 效率工具
+---
 # 使用Homebrew Tap发布个人工具
 
 ## 背景

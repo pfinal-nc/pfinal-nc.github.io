@@ -14,8 +14,8 @@ tags:
   - Wails
   - cache
   - Performance
+recommend: 后端工程
 ---
-
 # 提升 Wails 应用性能：探索 Go-Cache 的高效内存缓存方案
 
 > 在 Wails 桌面应用中合理使用缓存，能显著提升应用性能和响应速度。

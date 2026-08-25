@@ -24,8 +24,8 @@ keywords:
   - Agentic AI Top 10
 category: ai
 description: "2026 年 OWASP Agentic Applications Top 10 将 Memory & Context Poisoning（ASI06）列为独立风险。本文解析记忆投毒的三阶段生命周期、RAG/向量库/摘要记忆三大攻击面，并提供带可运行代码的生产级防御：来源校验、置信度衰减、记忆隔离与回滚。"
+recommend: AI工程
 ---
-
 # AI Agent 记忆投毒攻击与防御 2026：OWASP ASI06 详解与生产级内存治理方案
 
 ## 引子：一次注入，持续影响三个月

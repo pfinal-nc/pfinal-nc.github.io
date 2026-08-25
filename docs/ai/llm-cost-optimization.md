@@ -11,8 +11,8 @@ keywords:
   - AI API 费用优化
   - 模型分级策略
   - 语义缓存
+recommend: AI工程
 ---
-
 # LLM API 成本优化实战
 
 ## 为什么成本很重要？

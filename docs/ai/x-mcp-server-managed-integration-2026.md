@@ -18,8 +18,8 @@ keywords:
   - Grok
 category: ai
 description: "X（Twitter）推出官方托管 MCP Server，支持 150+ API 端点零配置接入 AI Agent。本文从实战角度详解 SDK 配置、认证流程、端点分类、Python/TypeScript 代码示例及生产部署注意事项。"
+recommend: AI工程
 ---
-
 # X MCP Server 实战：零配置接入 150+ API 端点的托管服务集成
 
 ## 引言

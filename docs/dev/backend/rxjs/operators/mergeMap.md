@@ -17,8 +17,8 @@ tags:
   - Operators
   - Performance
   - RxJS
+recommend: 后端工程
 ---
-
 # mergeMap (又名 flatMap)
 
 `mergeMap` 是一个高阶映射操作符，它将源 Observable 发出的每个值映射成一个新的 Observable（所谓的"内部 Observable"），然后将所有这些内部 Observable **并发地**合并到输出 Observable 中。

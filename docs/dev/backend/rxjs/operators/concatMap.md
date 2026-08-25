@@ -16,8 +16,8 @@ tags:
   - JavaScript
   - Operators
   - Performance
+recommend: 后端工程
 ---
-
 # concatMap
 
 `concatMap` 是另一个高阶映射操作符。它将源 Observable 发出的每个值映射成一个新的内部 Observable，然后按顺序**连接**（concat）这些内部 Observable。它会等待前一个内部 Observable **完成**后，才订阅并执行下一个。

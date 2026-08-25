@@ -22,8 +22,8 @@ keywords:
   - Okta
 category: ai
 description: "2026 年 7 月 13 日，MCP 企业托管授权扩展（EMA）进入稳定版。本文详解企业场景下 MCP 的授权痛点、ID-JAG 身份断言 JWT 授权授予机制、完整协议流程，以及生产落地的安全建议。"
+recommend: AI工程
 ---
-
 # MCP 企业托管授权（EMA）2026 实战：零点击 OAuth 与 ID-JAG 身份断言链
 
 ## 引子：企业部署 MCP 的最大堵点

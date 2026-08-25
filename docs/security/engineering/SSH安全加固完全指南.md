@@ -19,8 +19,8 @@ keywords:
   - SSH 端口安全
   - 双因素认证
   - Linux 安全
+recommend: 安全工程
 ---
-
 # SSH 安全加固完全指南
 
 > 从基础配置到企业级防护，构建完整的 SSH 安全体系

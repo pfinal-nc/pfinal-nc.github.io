@@ -18,8 +18,8 @@ keywords:
   - bpftrace
 category: devops
 description: "深入讲解 eBPF 技术原理与 Go 语言生态结合，从内核态 Hook 机制到用户态数据处理，实战构建零侵入云原生可观测性方案。覆盖 Cilium、Tetragon、Pixie 等核心工具链，附带可运行 Go 代码示例。"
+recommend: DevOps
 ---
-
 # eBPF + Go：云原生可观测性零侵入监控实战
 
 ## 为什么 eBPF 是 2026 年云原生可观测性的基石

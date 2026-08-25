@@ -14,8 +14,8 @@ tags:
   - JavaScript
   - Operators
   - RxJS
+recommend: 后端工程
 ---
-
 # tap
 
 `tap` 操作符用于执行副作用，例如打印日志或在不影响流的情况下执行其他操作。`tap` 不会修改流中的值。

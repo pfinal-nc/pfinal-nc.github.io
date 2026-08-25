@@ -18,8 +18,8 @@ keywords:
   - 漏洞扫描
 category: dev/backend/golang
 description: "从 SBOM 标准解读到 Go 项目实战，覆盖软件物料清单生成、漏洞扫描、签名验证、SLSA 证明完整流水线。结合 Syft/Grype/cosign 工具链，构建 Go 项目的软件供应链安全体系。"
+recommend: 后端工程
 ---
-
 # Go SBOM 实战：软件供应链安全从合规到落地
 
 ## SBOM 为什么在 2026 年成为刚需

@@ -23,8 +23,8 @@ keywords:
   - 2.0.63 修复
 category: security/offensive
 description: 2026 年 8 月初，国内 Java 生态核心组件 Fastjson2（≤2.0.62）曝出严重 AutoType 反序列化漏洞：SeeAlso 利用链在多态反序列化场景下无需 FNV-1a 哈希碰撞即可强制开启 SupportAutoType，绕过白名单直达类加载器实现远程类加载。本文基于官方 issue #7702 与维护方确认信息，拆解两条利用路径（FNV 碰撞与 SeeAlso）、JDK 版本差异、修复版本 2.0.63 的加固措施与 SafeMode 缓解方案。
+recommend: 安全工程
 ---
-
 # Fastjson2 ≤2.0.62 AutoType RCE 深度分析：SeeAlso 链如何绕过白名单直达类加载器
 
 > 官方维护方已确认（issue #7702）| 修复版本 2.0.63 已发布 | CVSS 9.8 | 暂无正式 CVE 编号

@@ -19,8 +19,8 @@ tags:
   - mutex
   - intermediate
 readingTime: 12
+recommend: 后端工程
 ---
-
 # Go 并发模式：WaitGroup 与 Mutex
 
 > 掌握 Go 语言同步原语，编写线程安全的并发程序

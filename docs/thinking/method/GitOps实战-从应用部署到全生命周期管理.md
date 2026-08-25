@@ -23,8 +23,8 @@ keywords:
   - GitOps工作流
   - K8s应用管理
   - PFinalClub
+recommend: 思维方法
 ---
-
 # GitOps实战：从应用部署到全生命周期管理
 
 > 去年我们团队从传统的Jenkins + kubectl apply模式迁移到GitOps，踩了不少坑，也收获了很多。这篇文章分享我们在生产环境摸爬滚打一年的经验，包括ArgoCD的各种坑、Flux的选型纠结，以及那些官方文档不会告诉你的实战技巧。

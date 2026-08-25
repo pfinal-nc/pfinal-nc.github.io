@@ -9,8 +9,13 @@ tags:
   - XSS
   - CSRF
 description: Web 安全实战 2026：系统讲解 OWASP Top 10 漏洞原理与防御（SQL 注入/XSS/CSRF/越权/SSRF），附 12 个真实攻击案例 + 15 段可运行防护代码，2026 年最新威胁情报全覆盖。
+recommend: 安全工程
+keywords:
+  - security
+  - security
+  - 技术博客
+  - 开发
 ---
-
 # Web 安全实战：常见漏洞防御指南
 
 Web 安全是每个后端开发者必须掌握的知识。本文系统讲解 OWASP Top 10 中的常见漏洞及其防御方案。

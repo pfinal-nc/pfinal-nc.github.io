@@ -21,8 +21,8 @@ keywords:
   - PHP 原生二进制
 category: php
 description: "Swoole 团队将 AOT 编译器正式更名为 TypePHP，承诺 PHP 语法兼容、原生二进制、数十倍性能提升，并计划 2026 年国庆全面开源。本文解析其双引擎架构、技术取舍、适用场景与生态风险。"
+recommend: 后端工程
 ---
-
 # TypePHP 深度解析：Swoole AOT 更名，PHP 静态编译原生二进制能否让 PHP 重获新生？
 
 ## 导语

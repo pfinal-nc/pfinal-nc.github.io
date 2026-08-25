@@ -22,8 +22,8 @@ keywords:
   - Go 1.28 路线图
 category: dev/backend/golang
 description: "Go 1.28 将 arena 包从实验阶段推进为生产可用的请求级内存分配器。本文从 bump allocator 原理、memory/arena API、请求级使用模式、与 sync.Pool 和 GC 的对比，到生产落地的生命周期隔离与 ASAN 调试，提供完整可运行代码与基准测试。"
+recommend: 后端工程
 ---
-
 # Go 1.28 arena 内存管理生产实战：请求级零 GC 压力的原理、陷阱与基准测试
 
 ## 引子：当 GC 成为延迟瓶颈时，Go 还能给你什么选项？

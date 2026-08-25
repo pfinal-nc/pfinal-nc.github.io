@@ -15,8 +15,8 @@ tags:
   - Observability
   - tracing
   - DevOps
+recommend: 后端工程
 ---
-
 # OpenTelemetry 实战指南
 
 OpenTelemetry 是一个开源的可观测性框架，提供标准化的 API、库和工具来收集分布式追踪、指标和日志数据。本文将带你深入了解 OpenTelemetry 的核心概念和实战应用。

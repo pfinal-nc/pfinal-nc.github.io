@@ -15,8 +15,8 @@ tags:
   - redis
   - caching
   - distributed-lock
+recommend: 后端工程
 ---
-
 # Go Redis 实践指南
 
 Redis 是一个高性能的键值存储系统，常用于缓存、消息队列、实时统计等场景。本文将介绍如何在 Go 项目中高效使用 Redis。

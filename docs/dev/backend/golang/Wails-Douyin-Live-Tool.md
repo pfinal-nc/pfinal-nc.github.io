@@ -14,8 +14,8 @@ tags:
   - Wails
   - live-streaming
   - douyin
+recommend: 后端工程
 ---
-
 # 基于 Wails 的抖音直播工具
 
 > 使用 Wails + Go 开发跨平台抖音直播助手，支持弹幕获取、礼物统计、自动回复等功能。

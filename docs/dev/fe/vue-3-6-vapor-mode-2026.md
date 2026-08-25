@@ -4,8 +4,13 @@ description: "Vue 3.6 引入 Vapor Mode（无虚拟 DOM）+ Alien Signals 响应
 date: 2026-06-22
 category: dev
 tags: [vue, vapor, 前端, 性能]
+recommend: 后端工程
+keywords:
+  - fe
+  - dev
+  - 技术博客
+  - 开发
 ---
-
 # Vue 3.6 Vapor Mode 实战 2026
 
 > TL;DR：Vue 3.6-beta 在 2025-12 发布，Vapor Mode 不再是实验特性：通过编译时优化跳过虚拟 DOM，运行时直接操作 DOM，性能比传统 Vue 3 提升 50%，且**100% 可选启用**。Alien Signals 同步重构响应式系统，内存占用 -25%。

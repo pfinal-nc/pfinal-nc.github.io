@@ -5,8 +5,13 @@ date: 2026-05-26
 author: PFinal南丞
 category: 课程
 tags: [golang, course, project, statistics, analytics, lesson]
+recommend: 课程
+keywords:
+  - project
+  - courses
+  - 技术博客
+  - 开发
 ---
-
 # Project 5: 统计模块
 
 ## 学习目标

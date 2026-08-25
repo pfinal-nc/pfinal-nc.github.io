@@ -20,8 +20,8 @@ tags:
   - Tutorial
   - async
 difficulty: 入门
+recommend: 后端工程
 ---
-
 # FastAPI 从零开始构建高性能 API：快速入门指南
 
 > FastAPI 是现代、快速（高性能）的 Web 框架，用于基于标准 Python 类型提示使用 Python 3.8+ 构建 API。本文将从零开始，带你快速上手 FastAPI，构建第一个高性能 RESTful API。

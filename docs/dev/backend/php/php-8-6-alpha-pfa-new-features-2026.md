@@ -17,8 +17,8 @@ keywords:
   - Closure 优化
 category: PHP
 description: PHP 8.6 Alpha 1 已于 2026 年 7 月 2 日发布，带来了十年来最大的函数式编程升级——PFA（Partial Function Application）、原生 clamp() 范围守护、Closure 性能 80% 提升、JSON 错误精确定位等重磅特性。本文逐一拆解每个特性的语法、原理和实战用法。
+recommend: 后端工程
 ---
-
 # PHP 8.6 Alpha 1 深度解析：PFA 部分函数应用、clamp 范围守护与 Closure 性能爆发
 
 ## 引言

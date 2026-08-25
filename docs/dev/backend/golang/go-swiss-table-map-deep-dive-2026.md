@@ -5,8 +5,8 @@ tags: [Golang, 性能优化, 数据结构, 源码分析, 工具]
 keywords: [Go, Swiss Table, map, hash, SwissMap, 性能, runtime]
 category: golang
 description: "Go 1.24 引入 Swiss Table 作为 map 底层实现,本文从控制字并行匹配、开放寻址探测、可扩展哈希三大核心机制讲起,结合 sync.Map 的 HashTrieMap 对比,给出生产级调优实战指南。"
+recommend: 后端工程
 ---
-
 # Go Swiss Table Map 深度解析：从原理到生产调优实战
 
 Go 1.24 引入 Swiss Table 作为 map 底层实现(取代旧的 bucket+overflow 设计),性能提升最高 50%。本文从**控制字并行匹配、开放寻址探测、可扩展哈希**三大核心机制讲起,结合 sync.Map 的 HashTrieMap 对比,给出生产级调优实战指南。

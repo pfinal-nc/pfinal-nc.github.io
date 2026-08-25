@@ -25,8 +25,8 @@ keywords:
   - Claude Code 漏洞发现
 category: security/offensive
 description: 2026 年 7 月末，比特币硬件钱包 Coldcard 曝出历史上规模最大的 RNG 漏洞：固件集成错误导致 ngu.random 调用了 MicroPython 的确定性 Yasmarang 软件生成器，而非 STM32 硬件随机数，攻击者离线枚举即可还原私钥，约 1,367 BTC（价值超 8800 万美元）被盗。本文完整复盘 Block 工程团队的根因分析、受影响设备范围、熵退化估算与防护方案，并探讨 Claude Code 8 分钟复现漏洞的 AI 审计意义。
+recommend: 安全工程
 ---
-
 # Coldcard 硬件钱包 RNG 漏洞解剖：Yasmarang 确定性回退如何让 1,367 BTC 无声蒸发
 
 > Block 工程团队根因分析 | 2026-07-30 披露 | 硬件钱包史上最大规模 RNG 漏洞

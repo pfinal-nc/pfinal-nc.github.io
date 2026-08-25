@@ -5,8 +5,13 @@ date: 2026-05-26
 author: PFinal南丞
 category: 课程
 tags: [golang, course, go1.23, go1.24, go1.25, go1.26, lesson]
+recommend: 课程
+keywords:
+  - module-1
+  - courses
+  - 技术博客
+  - 开发
 ---
-
 # Lesson 1.6: Go 1.23+ 新特性
 
 ## 学习目标

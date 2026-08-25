@@ -14,8 +14,8 @@ tags:
   - game-development
   - websocket
   - Performance
+recommend: 思维方法
 ---
-
 # 基于 golang 的高性能游戏接口设计
 
 > 游戏后端对性能要求极高。本文介绍使用 Go 语言构建高性能游戏接口的核心技术。

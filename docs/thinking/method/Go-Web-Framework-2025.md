@@ -14,8 +14,8 @@ tags:
   - golang
   - web-framework
   - comparison
+recommend: 思维方法
 ---
-
 # 2025 年最佳 Go Web 框架深度解析：资深开发者的选择指南
 
 > 2025 年，Go Web 框架生态更加成熟。本文从实战角度对比主流框架，帮你做出正确选择。

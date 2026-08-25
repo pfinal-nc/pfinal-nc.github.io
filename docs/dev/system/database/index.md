@@ -9,8 +9,11 @@ keywords:
   - mysql 设置指南
   - 数据库管理
   - postgresql 功能
+recommend: 后端工程
+tags:
+  - database
+  - dev
 ---
-
 # 数据库中文技术专题导航
 
 这是 **PFinalClub 数据库中文技术专题 Hub**。  

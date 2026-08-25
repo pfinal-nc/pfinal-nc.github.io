@@ -14,8 +14,8 @@ tags:
   - Wails
   - vue
   - desktop
+recommend: 后端工程
 ---
-
 # 基于 Wails 和 Vue.js 打造跨平台桌面应用
 
 > Wails 让你可以使用 Go + Vue.js 构建轻量级、高性能的桌面应用。

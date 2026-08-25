@@ -14,8 +14,8 @@ tags:
   - Operators
   - Performance
   - RxJS
+recommend: 后端工程
 ---
-
 # map
 
 `map` 操作符对源 Observable 发出的每个值应用一个投射函数，并发出转换后的值。

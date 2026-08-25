@@ -22,8 +22,8 @@ keywords:
 
 sticky: true
 
+recommend: 数据工程
 ---
-
 # 在 Go 中构建远程存储 MCP 服务器：从零到一的实战与思考
 
 > “用 Go 写服务，像搭积木一样简单。”  

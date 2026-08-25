@@ -15,8 +15,8 @@ keywords:
 category:
   - AI
 description: "深入解析 2026 年多 Agent 系统的三大核心协议：MCP（工具集成）、A2A（Agent 间通信）、A2UI（用户界面）。从原理到实战代码，掌握构建生产级 Agent 应用的完整架构。"
+recommend: AI工程
 ---
-
 # MCP + A2A + A2UI：2026 多 Agent 系统完整协议栈实战
 
 > 2026 年，AI Agent 从单点工具演化为多 Agent 协作系统。如何让不同厂商、不同框架构建的 Agent 互相发现、通信和协调？本文深入解析 MCP、A2A、A2UI 三大协议，带你构建完整的多 Agent 应用架构。

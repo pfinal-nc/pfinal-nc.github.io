@@ -15,8 +15,8 @@ tags:
   - go-1.24
   - Performance
   - memory-management
+recommend: 后端工程
 ---
-
 # Go 1.24 新特性深度解析：weak 包、iter 改进与性能提升实战
 
 > Go 1.24 于 2025 年 2 月正式发布，带来了多项令人期待的新特性。本文将深入解析 `weak` 包、`iter` 包改进、map 优化等核心更新，并通过实际案例展示如何在项目中应用这些特性。

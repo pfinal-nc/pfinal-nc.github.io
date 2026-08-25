@@ -17,8 +17,8 @@ keywords:
   - PHPStan 替代
 category: dev/backend/php
 description: "深度解析 Mago 1.0.0：Rust 重写的 PHP 静态分析/lint/format 三合一工具链，3.88s 分析 WordPress 全库（比 PHPStan 快 31 倍），135 条 lint 规则、50+ 格式化选项、Guard 架构约束，生产级实战指南。"
+recommend: 后端工程
 ---
-
 # Mago 1.0.0 深度解析：Rust 重写 PHP 工具链，31 倍提速背后的生产级实战
 
 2026 年，Rust 正在以不可逆转的势头改写各语言的工具链生态：uv 替代 pip、ruff 替代 flake8、Polars 替代 Pandas。现在，这股浪潮终于涌到了 PHP。

@@ -5,8 +5,13 @@ date: 2026-05-26
 author: PFinal南丞
 category: 课程
 tags: [course, security, golang, cryptography, random, lesson]
+recommend: 课程
+keywords:
+  - module-3
+  - courses
+  - 技术博客
+  - 开发
 ---
-
 # Lesson 3.4: 安全随机数
 
 ## 学习目标

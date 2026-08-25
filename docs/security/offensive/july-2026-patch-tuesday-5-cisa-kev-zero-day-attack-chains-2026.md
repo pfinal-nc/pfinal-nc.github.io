@@ -30,8 +30,8 @@ keywords:
   - Patch Tuesday
 category: security/offensive
 description: "2026 年 7 月 Patch Tuesday 共修复 622 个 CVE，5 个被 CISA 加入 KEV 目录并标记在野利用：SonicWall SMA1000 双 0-day 链（CVSS 10.0+7.2）、ADFS EoP（CVE-2026-56155）、SharePoint EoP（CVE-2026-56164）、BitLocker 绕过（CVE-2026-50661）、Langflow IDOR+RCE 双联（CVE-2026-55255+33017）。本文从攻击链复盘到企业级应急清单完整拆解。"
+recommend: 安全工程
 ---
-
 # 2026 年 7 月 Patch Tuesday 5 个 CISA KEV 0-day 全景：SonicWall SMA1000 / ADFS / SharePoint / BitLocker / Langflow 攻击链复盘与企业应急手册
 
 2026 年 7 月 14 日，微软发布了史上最大规模的 Patch Tuesday：622 个 CVE，分布在 Windows 内核、Active Directory、SharePoint、Exchange、Office、Azure OpenAI、Minecraft Bedrock 等 60+ 产品线。其中 3 个 zero-day 已经被确认在野利用：

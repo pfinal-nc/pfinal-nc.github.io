@@ -13,8 +13,8 @@ keywords:
   - 版本控制
   - PSR规范
   - Packagist
+recommend: 效率工具
 ---
-
 # Composer配置文件说明
 
 ### 安装

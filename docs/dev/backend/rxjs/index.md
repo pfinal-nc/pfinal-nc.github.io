@@ -10,8 +10,11 @@ keywords:
   - 操作符
   - TypeScript
   - 前端开发
+recommend: 后端工程
+tags:
+  - rxjs
+  - dev
 ---
-
 # RxJS 实战手册
 
 欢迎来到 RxJS 实战手册！

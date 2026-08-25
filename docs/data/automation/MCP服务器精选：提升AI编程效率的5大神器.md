@@ -20,8 +20,8 @@ keywords:
   - AI编程工具
   - 开发效率
   - PFinalClub
+recommend: 数据工程
 ---
-
 # 5个MCP服务器：让你在AI编辑器切换中保持高效
 
 现在AI编辑器更新得特别快，从VSCode的AI插件到Cursor、CodeBuddy、Qwen等等，各种工具层出不穷。但是不管怎么变，这5个MCP服务器始终是提升开发效率的核心，今天就来聊聊它们。

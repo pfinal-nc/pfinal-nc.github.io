@@ -18,8 +18,8 @@ keywords:
   - generic signature
 category: dev/backend/golang
 description: Go 提案 #78456 正式通过：maps.Same 函数用一条 CMP 指令实现 map 引用同一性判断。从 Identical 到 Same 的两个月命名拉锯、nil 语义陷阱、NaN 边界警告、泛型签名三次收缩、slices.Same 为何被拒——一个三行函数背后的 Go 设计哲学。
+recommend: 后端工程
 ---
-
 # Go 官方为函数名吵了两个月：maps.Same 提案正式通过的背后
 
 ## 一个"不该存在的"限制

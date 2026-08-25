@@ -4,8 +4,13 @@ description: "Tailscale 国内自建 DERP 中继服务器完整部署，1 核 1G
 date: 2026-06-23
 category: devops
 tags: [tailscale, derp, wireguard, vpn, 自建]
+recommend: DevOps
+keywords:
+  - devops
+  - devops
+  - 技术博客
+  - 开发
 ---
-
 # Tailscale 自建 DERP 中继服务器实战 2026
 
 > TL;DR：Tailscale 默认 DERP 服务器在境外，国内访问延迟 200-300ms。自建国内 DERP 后延迟降至 20ms。本文给出 1 核 1G 云主机 + Docker 完整部署方案，附 Headscale 对比。

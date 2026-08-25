@@ -21,8 +21,8 @@ keywords:
   - 2026
 category: DevOps
 description: "2026 年 7 月 22 日，Tokio 团队发布 Topcoat——一个模块化、电池齐全的 Rust 全栈响应式 Web 框架。它完全服务端渲染，通过将 Rust 表达式交叉编译为 JavaScript 实现响应式，无需 WebAssembly。本文从架构设计、响应式原理、与 Leptos/Dioxus 对比、Toasty ORM 集成到生产实践，完整解析这一 Rust Web 生态的新基建。"
+recommend: DevOps
 ---
-
 # Topcoat 深度解析：Tokio 团队的 Rust 全栈响应式 Web 框架，服务端渲染 + 无 WASM 响应式
 
 ## 引言：Rust 何时能写 Web 应用？

@@ -20,8 +20,8 @@ keywords:
   - VPN 0-day
 category: security/offensive
 description: "深度拆解 SonicWall SMA1000 零日攻击链：Volexity 披露 UTA0533 利用 CVE-2026-15409（CVSS 10.0 SSRF）+ CVE-2026-15410（命令注入）从零认证接管 VPN 设备，部署 KNUCKLEBALL/ORANGETAIL/Suo5 恶意软件，窃取 LDAP 凭证横移内网。"
+recommend: 安全工程
 ---
-
 # SonicWall SMA1000 KNUCKLEBALL 零日攻击链深度拆解：Volexity UTA0533 从 SSRF 到 root 的完整技术链
 
 2026 年 7 月 17 日，安全公司 Volexity 发布了一篇改变行业认知的报告：一个此前未知的威胁行为者 **UTA0533**，自 6 月 22 日起就利用两个零日漏洞完全接管了 SonicWall SMA1000 系列 VPN 设备——比 SonicWall 7 月 14 日发布补丁早了整整 3 周。攻击者不仅获取了 root 权限，还部署了定制恶意软件 KNUCKLEBALL，注入了两个 Java 载荷（Suo5 代理 + ORANGETAIL Webshell），并通过 tcpdump 窃取了未加密的 LDAP 凭证。

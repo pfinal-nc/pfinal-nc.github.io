@@ -15,8 +15,8 @@ tags:
   - honeypot
   - defense
   - threat-intelligence
+recommend: 安全工程
 ---
-
 # 蜜罐部署实战：构建主动防御体系
 
 > 传统的安全防御是被动的，等待攻击发生后再响应。蜜罐（Honeypot）技术改变了这一模式，通过部署诱饵系统主动吸引攻击者，从而发现威胁、收集情报、延缓攻击。

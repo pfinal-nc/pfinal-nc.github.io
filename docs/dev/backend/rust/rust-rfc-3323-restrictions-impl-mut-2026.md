@@ -17,8 +17,8 @@ keywords:
   - 语言特性
 category: 编程语言
 description: '深度解析 Rust RFC 3323 Restrictions：impl(crate) 让 Sealed trait 模式成为历史，mut(crate) 为 Rust 带来真正的只读字段，nightly 已可测试。'
+recommend: 后端工程
 ---
-
 # Rust RFC 3323 Restrictions 深度解析：impl/mut 限制让 Sealed trait 成为历史
 
 ## 导语

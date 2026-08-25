@@ -20,8 +20,8 @@ tags:
   - optimization
   - high-concurrency
 difficulty: 高级
+recommend: 后端工程
 ---
-
 # FastAPI 异步编程与性能优化：打造高并发 API
 
 > 深入理解 FastAPI 的异步编程机制和性能优化技巧，学习如何打造高并发的 API。包括异步 I/O、数据库优化、缓存策略、并发控制等高级主题。

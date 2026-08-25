@@ -82,8 +82,8 @@ author: PFinal南丞
 
 - **实用工具**
   - [构建可维护的正则表达式系统-pfinal-regex-center设计与实现](/dev/backend/php/构建可维护的正则表达式系统-pfinal-regex-center设计与实现)
-  - [PHP MCP 扩展](/dev/backend/php/PHP-MCP-扩展)
-  - [Coze 扩展包 PHP 版本](/dev/backend/php/Coze-扩展包-PHP-版本)
+  - [PHP MCP 扩展](/dev/backend/php/PHP MCP 扩展)
+  - [Coze 扩展包 PHP 版本](/dev/backend/php/Coze 扩展包 PHP 版本)
 
 ### 🦀 Rust 开发
 - **语言核心**

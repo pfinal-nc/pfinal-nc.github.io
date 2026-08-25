@@ -16,8 +16,8 @@ tags:
   - elasticsearch
   - logging
   - DevOps
+recommend: 后端工程
 ---
-
 # ELK 日志系统实战指南
 
 ELK Stack 是一套开源的日志分析解决方案，由 Elasticsearch、Logstash 和 Kibana 三个核心组件组成，帮助企业实现日志的集中收集、处理和可视化。

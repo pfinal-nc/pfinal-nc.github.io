@@ -19,8 +19,8 @@ tags:
   - DevOps
   - 容器编排
   - 入门教程
+recommend: 课程
 ---
-
 # Kubernetes 入门：架构与核心概念全解析
 
 > Kubernetes 是目前最主流的容器编排平台，掌握它是每一个后端工程师进阶 DevOps 的必经之路。本文从架构设计讲起，带你彻底搞懂 K8s 的核心概念。

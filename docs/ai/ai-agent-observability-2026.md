@@ -17,8 +17,8 @@ keywords:
   - 生产环境 AI
 category: AI/工具
 description: "2026 年生产级 AI Agent 可观测性全景指南。涵盖 OpenTelemetry GenAI 规范、多框架 Tracing 实现（LangGraph/AutoGen/CrewAI）、Langfuse/Datadog/Braintrust 工具选型、Agent 特有的上下文漂移与工具级联失败调试方法、成本归因与审计日志实战。"
+recommend: AI工程
 ---
-
 # AI Agent 可观测性 2026：从 Tracing 到生产调试的完整技术栈
 
 ## 一、问题的起点：为什么传统可观测性不够用？

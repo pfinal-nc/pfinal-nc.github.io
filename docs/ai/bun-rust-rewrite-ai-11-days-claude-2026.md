@@ -17,8 +17,8 @@ keywords:
   - Fable 5
 category: ai
 description: "Bun 被 Anthropic 收购后，创始人 Jarred Sumner 用 64 个 Claude Fable 5 Agent 在 11 天内将 53.5 万行 Zig 代码迁移为 Rust，耗资 16.5 万美元。本文深度解析这一 AI 驱动工程的技术细节、架构决策、Zig 创始人 Andrew Kelley 的激烈反驳，以及 AI 编程的工程伦理争议。"
+recommend: AI工程
 ---
-
 # Bun Rust 重写事件深度解析：64 个 Claude Agent 11 天百万行代码迁移的技术真相与争议
 
 ## 引言：一场引爆社区的 AI 编程史诗

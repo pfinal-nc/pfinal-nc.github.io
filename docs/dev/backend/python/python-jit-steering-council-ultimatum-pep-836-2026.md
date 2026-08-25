@@ -19,8 +19,8 @@ keywords:
   - Ken Jin
 category: dev/backend/python
 description: Python Steering Council 给 JIT 编译器项目下达 6 个月最后通牒：提交 Standards Track PEP 或从主干移除。PEP 836 "JIT Go Brrr" 如何回应？当前 8-9% 提速是否足够？与 PyPy 的差距、free-threading 冲突、Mark Shannon 的担忧、以及 Python 性能治理的深层博弈。
+recommend: 后端工程
 ---
-
 # Python JIT 的生死六个月：Steering Council 最后通牒与 PEP 836 的自救之路
 
 ## 一场不太常见的"内部刹车"

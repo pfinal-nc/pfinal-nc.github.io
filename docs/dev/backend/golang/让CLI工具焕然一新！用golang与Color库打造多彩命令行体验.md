@@ -16,6 +16,7 @@ keywords:
   - 开发工具
   - 终端体验优化
 sticky: true
+recommend: 后端工程
 ---
 # 让CLI工具焕然一新！用golang与Color库打造多彩命令行体验
 

@@ -17,8 +17,8 @@ keywords:
   - 流敏感分析
 category: 编程语言
 description: '深度解析 Rust 下一代借用检查器 Polonius Alpha：流敏感借用检查如何让 get_mut_or_default 模式通过编译，nightly 启用细节、性能数据与 opt-out 方式。'
+recommend: 后端工程
 ---
-
 # Rust Polonius Alpha 深度解析：下一代借用检查器的流敏感革命
 
 ## 导语

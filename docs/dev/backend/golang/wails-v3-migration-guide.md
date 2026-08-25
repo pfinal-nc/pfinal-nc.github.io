@@ -15,8 +15,8 @@ keywords:
 category:
   - Golang
 description: "Wails v3 正式发布，带来全新 API 设计、ESM 模块、Linux WebKit 升级等重大变化。本文从架构差异、迁移步骤、新特性实战到常见坑点，带你从 v2 平滑过渡到 v3。"
+recommend: 后端工程
 ---
-
 # Go Wails v3 迁移实战 2026：从 v2 到 v3 的 7 个关键变更
 
 > Wails v3 于 2026 年 3 月正式发布，API 已趋于稳定。相比 v2，v3 带来了全新的项目结构、ESM 原生支持、改进的窗口管理和通知系统。本文帮你从 v2 平滑迁移到 v3。

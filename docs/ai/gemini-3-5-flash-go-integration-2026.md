@@ -16,8 +16,8 @@ keywords:
   - Gemini API
 category: ai
 description: "Google I/O 2026 发布的 Gemini 3.5 Flash 速度提升 4 倍，价格降低 50%。本文用 Go 语言从零集成 Gemini API：流式响应、Function Calling、多模态输入、生产级并发控制，附完整代码。"
+recommend: AI工程
 ---
-
 # Gemini 3.5 Flash + Go 集成实战：构建高性价比 AI 应用的完整指南
 
 Google I/O 2026 发布的 Gemini 3.5 Flash 是目前**最具性价比的前沿 LLM**：相比 Gemini 2.5 Flash，推理速度提升 4 倍，价格降低 50%，同时在 MMLU、HumanEval 等基准上全面超越。本文展示如何用 Go 语言完整集成 Gemini 3.5 Flash，构建生产级 AI 应用。

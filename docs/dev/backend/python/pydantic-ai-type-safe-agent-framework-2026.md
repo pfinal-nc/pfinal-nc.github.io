@@ -5,8 +5,8 @@ tags: [AI, Python, pydantic, agent, mcp, LLM, observability, durable-execution]
 keywords: [Pydantic AI, Type-Safe, AI Agent, Logfire, MCP 集成, durable execution, structured outputs, AG-UI, model agnostic]
 category: ai
 description: "Pydantic 团队 2026 年主推的 AI Agent 框架 Pydantic AI 凭 type-safety、Logfire 可观测、model-agnostic、MCP 原生集成、Temporal/DBOS durable execution,成为 Python 生产级 LLM 应用的新默认。本文从核心抽象到 Temporal 集成的完整实战,补全博客 Python AI 框架视角。"
+recommend: 后端工程
 ---
-
 # Pydantic AI Type-Safe Agent 框架 2026 实战：用 Python 写生产级 LLM 应用的正确姿势
 
 > TL;DR：Pydantic 团队（Pydantic Logfire 同款）2024 年底开源的 **Pydantic AI** 在 2026 年成为 Python 写生产 LLM 应用的新默认——靠 **type-safe**（Pydantic 验证 + JSON Schema）、**model-agnostic**（OpenAI/Anthropic/Google/Gateway 即插即用）、**Logfire 一键观测**、**MCP 原生集成**、**Temporal/DBOS durable execution** 五大特性。本文从最小可运行示例到生产级 streaming + 持久化完整实战，把官方文档没串起来的能力一次讲清。

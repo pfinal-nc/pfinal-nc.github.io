@@ -14,8 +14,8 @@ tags:
   - RxJS
   - Testing
   - Tools
+recommend: 后端工程
 ---
-
 # RxJS 测试
 
 RxJS 提供了强大的测试工具来验证 Observable 的行为。

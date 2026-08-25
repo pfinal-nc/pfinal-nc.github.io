@@ -21,8 +21,8 @@ course:
   name: Go 后端工程师成长路线
   module: 5
   lesson: 5.5
+recommend: 思维方法
 ---
-
 # Go 可观测性闭环实战：从 Trace 到洞察的 7 步落地指南
 
 ——别做"看得见,一点也不懂"的工程师

@@ -14,8 +14,8 @@ tags:
   - olap
   - database
   - analytics
+recommend: 后端工程
 ---
-
 # ClickHouse 实战：从入门到高性能 OLAP 查询
 
 > ClickHouse 是俄罗斯 Yandex 开源的列式数据库，专为 OLAP 场景设计，查询性能比传统数据库快 100 倍以上。

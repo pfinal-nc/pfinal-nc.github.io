@@ -18,8 +18,8 @@ keywords:
   - 开发者体验
 category: DevOps
 description: '2026年Platform Engineering完全指南：基于Backstage构建内部开发者平台，涵盖Golden Paths设计、Crawl-Walk-Run实施策略、AI集成与避坑指南，附完整架构设计与Go工具链实践。'
+recommend: DevOps
 ---
-
 # Platform Engineering 2026：用 Backstage 构建内部开发者平台实战指南
 
 ## 导语

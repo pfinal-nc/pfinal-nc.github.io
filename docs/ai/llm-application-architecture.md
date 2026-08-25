@@ -11,8 +11,8 @@ keywords:
   - AI Agent
   - Go AI 开发
   - 大模型应用
+recommend: AI工程
 ---
-
 # LLM 应用架构设计：从 RAG 到 Agent 的实战指南
 
 ## 为什么需要分层架构

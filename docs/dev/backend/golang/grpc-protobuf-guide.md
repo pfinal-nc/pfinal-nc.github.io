@@ -15,8 +15,8 @@ tags:
   - microservices
   - grpc
   - protobuf
+recommend: 后端工程
 ---
-
 # gRPC 与 Protobuf 实战：Go 微服务通信最佳实践
 
 在微服务架构中，服务间通信是核心问题。gRPC 作为 Google 开源的高性能 RPC 框架，结合 Protocol Buffers 序列化协议，已成为 Go 微服务开发的首选方案。

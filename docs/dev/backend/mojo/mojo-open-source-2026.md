@@ -21,8 +21,8 @@ keywords:
   - 开源编译器
 category: 编程语言
 description: 2026 年 8 月 18 日 ModCon 大会，Modular 兑现承诺：Mojo 编译器与全部工具链以 Apache 2.0（含 LLVM 例外）全面开源。本文深度解析许可证细节、KGEN 编译器源码结构、Bazel 构建体系、治理边界，以及 Qualcomm 收购背景下的开源战略。
+recommend: 后端工程
 ---
-
 # Mojo 编译器全面开源深度解析：Apache 2.0 落地、KGEN 源码结构与中国开发者能做什么
 
 ## 导语

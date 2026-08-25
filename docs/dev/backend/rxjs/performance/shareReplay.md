@@ -16,8 +16,8 @@ tags:
   - Performance
   - RxJS
   - security
+recommend: 后端工程
 ---
-
 # 性能优化：使用 shareReplay 避免重复工作
 
 在 RxJS 中，一个常见的性能陷阱是多次订阅一个"冷"的 Observable，导致其背后的工作（如 HTTP 请求）被重复执行。`shareReplay` 是解决这个问题的关键操作符。

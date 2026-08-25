@@ -3,8 +3,13 @@ title: Go Context 实战 2026：4 种派生模式 + 10 个场景从 HTTP 到 gRP
 date: 2026-04-27
 tags: [Golang, Context, 并发]
 description: Go Context 4 种派生模式实战 2026：WithCancel/Timeout/Deadline/Value + 10 个真实场景（HTTP/gRPC/DB/MQ），避免 goroutine 泄漏的完整检查清单
+recommend: 后端工程
+keywords:
+  - golang
+  - dev
+  - 技术博客
+  - 开发
 ---
-
 # Go Context 深度解析：超时、取消与值传递
 
 `context` 包是 Go 并发编程的核心基础设施。它解决了一个关键问题：**如何在 goroutine 树中传播取消信号、超时和请求级别的元数据**。

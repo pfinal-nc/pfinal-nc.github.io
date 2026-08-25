@@ -20,8 +20,8 @@ keywords:
   - 性能优化
 category: dev/backend/golang
 description: "2026 年 7 月 16 日，Go 仓库正式 reopen tree 进入 Go 1.28 开发周期。本文从 issue #79581 的关闭出发，解读 internal/goversion 28、doc/next 初始化、首批 AutoSubmit CL 的工程含义，并梳理 1.28 最值得关注的 8 个特性方向与落地节奏。"
+recommend: 后端工程
 ---
-
 # Go 1.28 开发周期正式启动：从 tree reopen 到首批关键 CL 的工程节奏
 
 2026 年 7 月 16 日，Go 仓库的 issue #79581 被关闭，标题只有一句话：

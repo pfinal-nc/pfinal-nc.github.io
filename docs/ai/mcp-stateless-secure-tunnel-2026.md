@@ -15,8 +15,8 @@ keywords:
   - Secure Tunnel
 category: AI/ML
 description: 深度解析 MCP 2026 无状态协议升级的核心变革，包括六大 SEP 驱动的无状态化、MCP Apps 交互界面、Tasks 长任务扩展，以及 OpenAI Secure Tunnel 企业级部署实战指南。从协议原理到生产环境落地，提供完整代码示例和 Kubernetes Sidecar 部署方案。
+recommend: AI工程
 ---
-
 # MCP 2026 无状态协议革命与 OpenAI Secure Tunnel 实战
 
 ## 前言

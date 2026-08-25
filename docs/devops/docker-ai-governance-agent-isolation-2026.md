@@ -12,8 +12,13 @@ tags:
   - 沙箱
 category: devops
 outline: deep
+recommend: DevOps
+keywords:
+  - devops
+  - devops
+  - 技术博客
+  - 开发
 ---
-
 # Docker AI Governance 生产实战：让 AI Agent 在沙箱里"翻箱倒柜"，而你的笔记本毫发无伤
 
 ## 背景：笔记本成为新生产环境

@@ -3,8 +3,13 @@ title: Go 单元测试实战 2026：6 种测试模式 + Fuzz 模糊测试完整�
 date: 2026-04-27
 tags: [Golang, 测试, 单元测试, TDD]
 description: Go 测试 6 种模式实战 2026：表驱动、testify Mock、httptest、Benchmark、Fuzz 模糊测试、子测试，覆盖率从 0 到 90% 的完整路径 + CI 集成
+recommend: 后端工程
+keywords:
+  - golang
+  - dev
+  - 技术博客
+  - 开发
 ---
-
 # Go 单元测试实战：表驱动测试、Mock 与基准测试
 
 良好的测试是工程质量的保证。Go 内置了完善的测试工具链，本文带你系统掌握 Go 测试最佳实践。

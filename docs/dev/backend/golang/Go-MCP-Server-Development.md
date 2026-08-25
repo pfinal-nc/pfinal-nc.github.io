@@ -3,8 +3,13 @@ title: 用 Go 开发 MCP Server：让你的工具成为 AI Agent 的能力
 date: 2026-06-05
 tags: [golang, AI, MCP, Agent]
 description: 手把手教你用 Go 语言（mcp-go 库）开发一个生产级 MCP Server，涵盖 Tools、Resources、Prompts 三大原语，stdio 与 SSE 双传输模式，并接入 Claude Desktop 实战演示。
+recommend: 后端工程
+keywords:
+  - golang
+  - dev
+  - 技术博客
+  - 开发
 ---
-
 # 用 Go 开发 MCP Server：让你的工具成为 AI Agent 的能力
 
 2026 年，MCP（Model Context Protocol，模型上下文协议）已成为 AI Agent 生态的事实标准。Anthropic 将其捐赠给 Linux Foundation 旗下的 **Agentic AI Foundation** 后，Claude、GPT、Gemini 等主流模型客户端均已原生支持 MCP。

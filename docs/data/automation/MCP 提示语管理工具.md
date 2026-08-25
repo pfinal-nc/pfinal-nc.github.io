@@ -27,8 +27,8 @@ course:
   name: AI 工程与自动化
   module: 1
   lesson: 1.3
+recommend: 数据工程
 ---
-
 # 【重磅工具】一键管理AI提示词，让效率翻倍！
 
 在逛 Github 的时候 发现了一个 好玩的项目 **mcp-prompt-server** 一个 基于 MCP 协议的 提示语管理工具.

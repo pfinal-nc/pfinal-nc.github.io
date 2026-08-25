@@ -10,8 +10,11 @@ keywords:
   - ai 编程助手
   - homebrew tap
   - composer 配置
+recommend: 效率工具
+tags:
+  - tools
+  - tools
 ---
-
 # 工具与实用程序中文专题导航
 
 这是 **PFinalClub 工具与实用程序中文技术专题 Hub**。  

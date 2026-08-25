@@ -3,8 +3,13 @@ title: Go 生产级工程实践：slog 结构化日志与 health check 全解
 date: 2026-05-06
 tags: [Golang, 工程实践, 可观测性, slog, health check]
 description: 深入讲解 Go 生产服务必备的两个基础组件：用 slog 实现带 TraceID 的结构化日志，以及实现 Kubernetes 就绪/存活探针标准的 health check 端点，附完整可运行代码。
+recommend: 后端工程
+keywords:
+  - golang
+  - dev
+  - 技术博客
+  - 开发
 ---
-
 # Go 生产级工程实践：slog 结构化日志与 health check 全解
 
 一个服务能不能放心部署到生产，很大程度上取决于两件事：**出了问题能不能查到**，以及**平台知不知道服务是否健康**。

@@ -8,8 +8,13 @@ tags:
   - 数据处理
   - 任务调度
 description: "Python 自动化脚本 10 大实战场景 2026：批量文件重命名、CSV/JSON 数据清洗、requests 爬虫、crontab/APScheduler 定时调度、logging 日志系统、Click 命令行工具。每个场景附带可运行代码和常见坑点。"
+recommend: 后端工程
+keywords:
+  - python
+  - dev
+  - 技术博客
+  - 开发
 ---
-
 # Python 自动化脚本实战：从数据处理到任务调度
 
 Python 是自动化脚本的首选语言。本文从真实场景出发，讲解如何用 Python 高效解决自动化问题。

@@ -14,8 +14,8 @@ keywords:
   - 类型系统
 category: dev/backend/golang
 description: "深度解析 Go 泛型方法提案 #77273，从语法设计到代码实战，涵盖接口约束、类型参数方法、性能影响与迁移指南，帮助 Go 开发者拥抱 2026 年最重要的语言特性。"
+recommend: 后端工程
 ---
-
 # Go 泛型方法实战：Proposal #77273 从提案到生产落地
 
 ## 引言

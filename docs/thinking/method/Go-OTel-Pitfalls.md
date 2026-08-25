@@ -14,8 +14,8 @@ tags:
   - opentelemetry
   - Observability
   - pitfalls
+recommend: 思维方法
 ---
-
 # 别再盲接 OTel：Go 可观察性接入的 8 个大坑
 
 > OpenTelemetry 很强大，但使用不当会带来性能问题。本文总结了 8 个常见坑点，帮你避开这些陷阱。

@@ -5,8 +5,13 @@ date: 2026-05-26
 author: PFinal南丞
 category: 课程
 tags: [golang, course, logging, loki, elk, lesson]
+recommend: 课程
+keywords:
+  - module-5
+  - courses
+  - 技术博客
+  - 开发
 ---
-
 # Lesson 5.2: 日志系统设计
 
 ## 学习目标

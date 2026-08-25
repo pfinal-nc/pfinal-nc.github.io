@@ -13,8 +13,11 @@ keywords:
   - 2025 PHP指南
 sidebar: false
 pageClass: php-hub-page
+recommend: 后端工程
+tags:
+  - php
+  - dev
 ---
-
 # 🐘 PHP 开发技术专题
 
 欢迎来到 PHP 开发技术专题页面！这里是您学习和掌握 PHP 语言及生态系统的完整资源中心。

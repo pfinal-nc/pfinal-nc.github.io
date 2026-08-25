@@ -19,8 +19,8 @@ keywords:
   - 分布式ID
 category: dev/backend/golang
 description: "Go 1.27 终于在标准库中内建 uuid 包。本文从 UUID 版本演进、Go 的 API 设计哲学、v4/v7 选型、数据库主键场景、与 github.com/google/uuid 迁移对比，到性能与安全考量，提供完整可运行代码与生产建议。"
+recommend: 后端工程
 ---
-
 # Go 1.27 uuid 标准库包深度解析：等了 8 年终转正，数据库主键怎么选？
 
 ## 引子：那个被 11 万+项目偷偷依赖的包

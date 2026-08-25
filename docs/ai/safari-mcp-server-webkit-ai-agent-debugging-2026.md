@@ -17,8 +17,8 @@ keywords:
   - 前端 AI 调试
 category: ai
 description: "苹果 Safari Technology Preview 247 引入 MCP 服务器，AI Agent 可直接检查网页、获取 console 日志、网络请求、截图与 DOM 交互——从浏览器调试范式革命到 Go 后端开发者实战"
+recommend: AI工程
 ---
-
 # Safari MCP Server 实战：苹果 WebKit 的 AI Agent 调试新范式深度解析
 
 ## 事件背景：浏览器进入 Agent 时代

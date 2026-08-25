@@ -22,8 +22,8 @@ keywords:
   - 迁移
 category: devops
 description: "2026 年 5 月 21 日，OpenTelemetry 在 CNCF Observability Summit 正式毕业，成为继 Kubernetes、Prometheus、Envoy 之后第 7 个顶级 CNCF 项目。本文从'为什么退休老 vendor agent'到'90 天迁移清单'，完整拆解可观测性栈替换实操。"
+recommend: DevOps
 ---
-
 # OpenTelemetry CNCF 毕业 90 天替代 Datadog / NewRelic / Splunk 老栈：可观测性实操指南
 
 2026 年 5 月 21 日，在明尼阿波利斯的 Observability Summit 上，CNCF CTO Chris Aniszczyk 宣布 **OpenTelemetry 正式毕业**。过去 7 年，OpenTelemetry 整合了 OpenTracing 和 OpenCensus 两条路线，成为云原生可观测性事实标准。毕业当天的关键数据是：12,000 名贡献者、2,800 家公司、CNCF 项目速度排名第二（仅次于 Kubernetes）、OpenTelemetry-JS npm 包过去 12 个月下载 13.6 亿次、OpenTelemetry-Python PyPI 包下载 13 亿次。

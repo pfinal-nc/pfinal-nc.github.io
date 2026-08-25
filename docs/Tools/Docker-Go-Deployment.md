@@ -14,8 +14,8 @@ tags:
   - golang
   - deployment
   - container
+recommend: 效率工具
 ---
-
 # Docker 部署 Go 项目实践指南
 
 > Docker 让 Go 应用部署变得简单可靠。本文介绍容器化部署的完整流程。

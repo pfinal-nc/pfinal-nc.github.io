@@ -20,8 +20,8 @@ tags:
   - deployment
   - statefulset
   - 容器编排
+recommend: 课程
 ---
-
 # Kubernetes 工作负载深度解析：Deployment、StatefulSet、DaemonSet
 
 > 工作负载（Workload）是 K8s 中管理 Pod 的高层抽象，实际生产中几乎不直接操作 Pod，而是通过工作负载来管理。本文深入讲解三大核心工作负载，以及日常最常遇到的坑。

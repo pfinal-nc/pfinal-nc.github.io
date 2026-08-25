@@ -15,8 +15,8 @@ tags:
   - visualization
   - monitoring
   - DevOps
+recommend: 后端工程
 ---
-
 # Grafana 可视化实战指南
 
 Grafana 是一个开源的数据可视化和监控平台，支持多种数据源，提供丰富的可视化选项。本文将带你深入了解 Grafana 的核心功能和实战技巧。

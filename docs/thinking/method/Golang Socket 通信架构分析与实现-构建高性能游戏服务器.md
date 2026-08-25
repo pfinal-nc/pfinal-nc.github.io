@@ -21,8 +21,8 @@ keywords:
   - 连接管理
   - 高性能服务器
   - Go网络编程
+recommend: 思维方法
 ---
-
 # Golang Socket 通信架构分析与实现：构建高性能游戏服务器
 
 ## 引言

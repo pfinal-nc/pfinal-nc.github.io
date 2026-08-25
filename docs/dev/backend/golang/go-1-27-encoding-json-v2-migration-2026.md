@@ -18,8 +18,8 @@ keywords:
   - json.Unmarshal
 category: dev/backend/golang
 description: 2026 年 8 月 Go 1.27 正式版将冻结 encoding/json/v2 引入标准库。这是 Go 自 1.0 以来最激进的标准库重写之一：双层架构（jsontext 语法层 + json/v2 语义层）、默认严格化、2-5 倍性能提升、完整的 MarshalJSON/UnmarshalJSON 重构。本文从 RC1 实战角度拆解迁移路径、性能对比、breaking change 与生产级避坑清单。
+recommend: 后端工程
 ---
-
 # Go 1.27 encoding/json/v2 迁移实战：标准库四年来最大重写的生产级指南
 
 ## 引言：四年的等待终于落地

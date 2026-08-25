@@ -17,8 +17,8 @@ tags:
   - JavaScript
   - Operators
   - Performance
+recommend: 后端工程
 ---
-
 # switchMap
 
 `switchMap` 是另一个高阶映射操作符。它将源 Observable 发出的每个值映射成一个新的内部 Observable，但它只关心**最新**的那个。当源发出一个新值时，`switchMap` 会立即**取消**前一个内部 Observable 的订阅，并订阅新的内部 Observable。

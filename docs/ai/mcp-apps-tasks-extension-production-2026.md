@@ -17,8 +17,8 @@ keywords:
   - server-rendered UI
 category: ai
 description: "MCP 2026-07-28 规范把 server-rendered UI（MCP Apps）和长时异步任务（Tasks）拆分为独立扩展。本文用 TypeScript 示例演示如何为 MCP Server 返回可交互组件、如何启动一个可轮询的长任务，以及这两个扩展对企业级 Agent 架构的影响。"
+recommend: AI工程
 ---
-
 # MCP 2026-07-28 Apps 与 Tasks 扩展实战：让 Agent 长出界面与长任务能力
 
 MCP（Model Context Protocol）正在从"工具调用协议"升级为"Agent 运行时协议"。2026-07-28 修订版的最大变化之一，是把两大高阶能力从核心规范里拆出来，变成独立扩展：

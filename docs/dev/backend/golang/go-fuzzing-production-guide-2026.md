@@ -17,8 +17,8 @@ keywords:
   - 漏洞挖掘
 category: Golang
 description: "Go 原生 Fuzzing 深度实战指南。涵盖 fuzz test 编写规范、seed corpus 设计、命令行高级用法、CI 集成策略（GitHub Actions + OSS-Fuzz）、语料库缓存优化、失败最小化与回归测试、并发 fuzzing 性能调优、安全漏洞挖掘案例。"
+recommend: 后端工程
 ---
-
 # Go Fuzzing 实战：从 CI 集成到生产安全漏洞挖掘
 
 ## 一、为什么 Go 开发者必须学会 Fuzzing？

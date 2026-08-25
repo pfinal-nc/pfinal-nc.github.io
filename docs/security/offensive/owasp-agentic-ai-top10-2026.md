@@ -17,8 +17,8 @@ keywords:
   - LLM 安全
 category: security
 description: OWASP 2026 年发布的 Agentic AI Top 10 是全球首个针对自主 AI Agent 的安全风险框架。本文逐项解读 10 大风险、攻击场景与防御方案，附带 Go/Python 实战代码，帮助开发者构建安全的 AI Agent 系统。
+recommend: 安全工程
 ---
-
 # OWASP Agentic AI Top 10 2026 深度解读与防御实战
 
 ## 为什么需要新的 Top 10？

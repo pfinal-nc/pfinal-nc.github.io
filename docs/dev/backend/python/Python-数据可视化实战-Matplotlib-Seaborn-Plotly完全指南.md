@@ -15,8 +15,8 @@ keywords:
 tags: [Python, Matplotlib, Seaborn, Plotly, 数据可视化, 数据分析]
 difficulty: 🟡 进阶
 category: dev/backend/python
+recommend: 后端工程
 ---
-
 # Python 数据可视化实战：Matplotlib、Seaborn 与 Plotly 完全指南
 
 数据可视化是数据分析中最直观、最有力的工具。本文将带你深入掌握 Python 三大主流可视化库：Matplotlib、Seaborn 和 Plotly，从基础图表到高级交互式可视化。

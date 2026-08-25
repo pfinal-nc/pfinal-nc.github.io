@@ -15,8 +15,8 @@ tags:
   - Docker
   - DevOps
   - cloud-native
+recommend: 后端工程
 ---
-
 # Kubernetes 基础入门：从容器编排到生产实践
 
 Kubernetes（简称 K8s）已成为云原生时代的操作系统，它自动化了容器的部署、扩展和管理，让开发者可以专注于业务逻辑而非基础设施。

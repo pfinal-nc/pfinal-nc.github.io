@@ -4,8 +4,13 @@ description: "Svelte 5 Runes API 完整迁移指南：$state / $derived / $effec
 date: 2026-06-23
 category: dev
 tags: [svelte, runes, 前端, 迁移]
+recommend: 后端工程
+keywords:
+  - fe
+  - dev
+  - 技术博客
+  - 开发
 ---
-
 # Svelte 5 Runes 迁移实战 2026
 
 > TL;DR：Svelte 5 在 2024-10 正式发布，引入 Runes 响应式系统，编译时显式控制 reactivity。Svelte 5 完全兼容 Svelte 4 语法，可逐文件渐进式迁移。本文给出 7 步迁移法。

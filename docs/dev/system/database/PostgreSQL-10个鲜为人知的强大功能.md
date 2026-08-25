@@ -25,8 +25,8 @@ keywords:
   - PostgreSQL替代Elasticsearch
   - PostgreSQL替代MongoDB
   - PostgreSQL最佳实践
+recommend: 后端工程
 ---
-
 # PostgreSQL 10个鲜为人知的强大功能 - 让你告别Elasticsearch和MongoDB
 
 ## 前言：一个资深程序员的觉醒

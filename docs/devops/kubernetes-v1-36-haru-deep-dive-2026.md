@@ -15,8 +15,8 @@ keywords:
   - AI工作负载
 category: devops
 description: "深度解读 Kubernetes v1.36 Haru 的 70 项增强：User Namespaces GA 安全隔离、MutatingAdmissionPolicy GA 声明式变更、DRA 增强、AI/ML 工作负载支持，含完整实战配置。"
+recommend: DevOps
 ---
-
 # Kubernetes v1.36 Haru 深度实战：从安全隔离到 AI 工作负载的 70 项增强
 
 2026 年 4 月 22 日，Kubernetes v1.36（代号 **Haru / 春**）正式发布。这是 2026 年的首个重要版本，包含 **70 项增强功能**：18 项进入 Stable（GA）、25 项进入 Beta、25 项进入 Alpha。重点聚焦三大方向——**安全加固、AI/ML 工作负载支持、大规模集群可扩展性**。

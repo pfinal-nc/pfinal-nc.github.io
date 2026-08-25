@@ -5,8 +5,13 @@ date: 2026-05-26
 author: PFinal南丞
 category: 课程
 tags: [course, security, owasp, web-security, lesson]
+recommend: 课程
+keywords:
+  - module-2
+  - courses
+  - 技术博客
+  - 开发
 ---
-
 # Lesson 2.1: OWASP Top 10
 
 ## 学习目标

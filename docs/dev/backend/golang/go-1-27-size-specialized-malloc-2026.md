@@ -19,8 +19,8 @@ keywords:
   - GOEXPERIMENT
 category: dev/backend/golang
 description: "Go 1.27 编译器为小于 80 字节的小对象生成尺寸特化的分配代码，将分配延迟降低 30%。本文深度解析通用 mallocgc 路径的隐藏成本、尺寸特化机制的工作原理、bin/micro 微基准测试对比、-gcflags=-m 逃逸分析验证方法、sync.Pool 价值重构、二进制体积 60KB 权衡，并给出从 1.26 升级到 1.27 的实战指南与 pprof 分析模板。"
+recommend: 后端工程
 ---
-
 # Go 1.27 尺寸特化 malloc 深度解析：编译器为每个对象定制分配路径背后的工程哲学
 
 ## 引子：性能优化的"下一站"

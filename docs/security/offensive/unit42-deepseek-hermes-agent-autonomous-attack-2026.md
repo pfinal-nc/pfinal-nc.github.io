@@ -26,8 +26,8 @@ keywords:
   - 自主漏洞利用
 category: security/offensive
 description: Palo Alto Unit 42 于 2026 年 7 月 30 日发布报告，曝光代号 knaithe/KnYuan 的中国籍威胁行为者，通过 Telegram 指挥 DeepSeek（以 Hermes Agent 框架为载体）对互联网发起全自动攻击：自主枚举 460+ 目标、检索 GitHub PoC、评估 CVSS、切换攻击方向，全程无人工干预。本文深度拆解该 AI 攻击链的技术细节、涉及的 8 个 CVE、防御启示与 AI 安全护栏缺失问题。
+recommend: 安全工程
 ---
-
 # Unit 42 曝光首个 AI 全自动攻击链：knaithe 用 DeepSeek + Hermes Agent 自主打穿 460+ 目标
 
 > Palo Alto Unit 42 官方报告 | 2026-07-30 | 首个确认的端到端 AI 自主攻击工作流

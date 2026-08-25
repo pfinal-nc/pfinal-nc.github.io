@@ -21,8 +21,8 @@ keywords:
   - 漏洞分析
 category: security/offensive
 description: "2026年5月12日，匿名研究员 ChaoticEclipse 公开两枚 Windows 零日漏洞：YellowKey 物理接触绕过 BitLocker 加密，GreenPlasma 利用 CTFMON 实现本地提权至 SYSTEM。本文深度分析技术路径、攻击链组合与防御策略。"
+recommend: 安全工程
 ---
-
 # YellowKey 与 GreenPlasma：Windows 安全防线组合突破深度分析
 
 2026 年 5 月 12 日，一个被微软「补丁星期二」逼到墙角的匿名研究员 **ChaoticEclipse**（亦用名 Nightmare-Eclipse）在 GitHub 上公开了第四、第五枚 Windows 零日漏洞利用代码：**YellowKey** 与 **GreenPlasma**。这是自 2026 年 3 月底以来，该研究员对微软发起的**第三轮报复性公开披露**。

@@ -26,6 +26,7 @@ summary: "详细讲解Python爬虫中的JS逆向技术，重点分析Webpack加�
 readingTime: 12
 status: "published"
 toc: true
+recommend: 数据工程
 ---
 # 爬虫 JS 逆向 Webpack 技巧记录
 

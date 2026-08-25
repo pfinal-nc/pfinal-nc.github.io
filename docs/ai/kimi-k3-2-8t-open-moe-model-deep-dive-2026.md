@@ -17,8 +17,8 @@ keywords:
   - 1M 上下文
 category: ai
 description: "深度解析 Kimi K3：2.8 万亿参数全球最大开源 MoE 模型，896 专家 16 激活、KDA Delta Attention + AttnRes 新架构、1M 上下文、编码能力超 Opus 4.8，7 月 27 日开源权重发布。"
+recommend: AI工程
 ---
-
 # Kimi K3 深度解析：2.8T 全球最大开源 MoE 模型如何改写 AI 竞争格局
 
 2026 年 7 月 16 日，月之暗面（Moonshot AI）发布了 Kimi K3——一个 2.8 万亿参数的混合专家（MoE）模型。这是迄今为止全球最大的开源权重模型，7 月 27 日完整权重将在 Hugging Face 上以 Modified MIT 许可发布。K3 不仅在参数规模上创下纪录，更在编码和智能体基准上超越了 Claude Opus 4.8，将中国开源大模型的竞争力推到了新的前沿。

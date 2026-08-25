@@ -17,8 +17,8 @@ keywords:
   - 安全测试
 category: security
 description: "全面解析 2026 年 LLM 红队测试方法论，从攻击分类体系到防御框架，覆盖越狱、Prompt Injection、数据投毒、Agent 安全等核心场景，附带自动化红队工具链和可运行代码示例。"
+recommend: 安全工程
 ---
-
 # LLM 红队测试 2026：企业级 AI 安全攻防实战指南
 
 ## 为什么 LLM 红队测试在 2026 年成为刚需

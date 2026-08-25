@@ -13,8 +13,8 @@ tags:
   - JavaScript
   - Operators
   - RxJS
+recommend: 后端工程
 ---
-
 # concat
 
 `concat` 操作符按顺序依次执行多个 Observable，前一个 Observable 完成后才执行下一个。

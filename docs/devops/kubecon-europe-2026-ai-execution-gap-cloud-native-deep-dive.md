@@ -5,8 +5,8 @@ tags: ["devops", "kubernetes", "ai", "cloudnative", "kubecon"]
 keywords: ["KubeCon 2026", "Kubernetes", "AI工作负载", "云原生", "DRA", "User Namespaces", "推理优化", "Kubernetes 1.36"]
 category: "devops"
 description: "KubeCon Europe 2026 阿姆斯特丹核心数据：Kubernetes 采用率 82% vs AI 日部署率仅 7%，2/3 生成式 AI 已跑在 K8s 上。本文深度复盘云原生与 AI 的执行差距、K8s 成为 AI 操作系统的路径、K8s 1.36 安全+AI 双焦点增强，以及 Go 开发者如何利用云原生 AI 生态。"
+recommend: DevOps
 ---
-
 # KubeCon Europe 2026 深度复盘：82% 采用率 vs 7% AI 部署率——云原生的第二次创始时刻
 
 2026 年 6 月，阿姆斯特丹。KubeCon Europe 2026 不再是关于 Kubernetes 采用的问题——那场战争已经结束了。这是关于在其上运行什么，以及云原生生态能否在 AI 时代真正执行。

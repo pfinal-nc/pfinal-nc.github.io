@@ -17,8 +17,8 @@ keywords:
   - prompt injection
 category: 安全渗透
 description: '深度解析2026年MCP生态安全危机：60天内爆出30+ CVE，涵盖工具投毒、提示注入、供应链攻击等五大攻击模式，附完整Go实战防护方案。'
+recommend: 安全工程
 ---
-
 # MCP 安全危机 2026：30 个 CVE、系统性缺陷与实战防护
 
 ## 导语

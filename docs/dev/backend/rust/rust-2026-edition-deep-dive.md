@@ -16,8 +16,8 @@ keywords:
   - 系统编程
 category: 编程语言
 description: '深度解析Rust 2026 Edition五大核心特性：Async Closures稳定、原生异步Trait、Field Projection、SIMD标准库与生命周期省略优化，附完整代码示例与迁移指南。'
+recommend: 后端工程
 ---
-
 # Rust 2026 Edition 深度解析：Async Closures、异步 Trait 与系统编程新范式
 
 ## 导语

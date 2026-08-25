@@ -14,8 +14,8 @@ tags:
   - gc
   - stw
   - Performance
+recommend: 后端工程
 ---
-
 # Stop-The-World 其实没停下：Go GC 的微暂停真相
 
 > Go 1.8 之后，GC 暂停时间已经降到亚毫秒级别。但 STW 真的消失了吗？让我们揭开真相。

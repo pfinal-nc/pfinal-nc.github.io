@@ -14,8 +14,8 @@ tags:
   - software-engineering
   - architecture
   - best-practices
+recommend: 思维方法
 ---
-
 # 高质量 Golang 后端的现代软件工程原则
 
 > 写出能运行的代码很容易，写出高质量的代码需要遵循工程原则。

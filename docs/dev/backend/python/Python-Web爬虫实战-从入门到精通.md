@@ -14,8 +14,8 @@ keywords:
 tags: [Python, Web爬虫, Scrapy, BeautifulSoup, 数据采集]
 difficulty: 🟡 进阶
 category: dev/backend/python
+recommend: 后端工程
 ---
-
 # Python Web 爬虫实战：从入门到精通
 
 > Web 爬虫是自动获取互联网数据的重要技术。本文将带你从零开始，系统地掌握 Python Web 爬虫的核心技术，从简单的页面抓取到复杂的分布式爬虫系统。

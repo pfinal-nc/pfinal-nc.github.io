@@ -14,8 +14,8 @@ keywords:
 tags: [Python, 推荐系统, 机器学习, 深度学习, 协同过滤]
 difficulty: 🟡 进阶
 category: dev/backend/python
+recommend: 后端工程
 ---
-
 # Python 推荐系统实战：从算法到应用
 
 推荐系统是现代互联网应用的核心技术，为用户提供个性化内容推荐。本文将带你从零开始，系统地掌握推荐系统的核心技术和实践方法。

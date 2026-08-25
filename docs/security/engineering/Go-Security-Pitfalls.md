@@ -14,8 +14,8 @@ tags:
   - security
   - vulnerabilities
   - best-practices
+recommend: 安全工程
 ---
-
 # 10 个 Golang 安全陷阱及真正有效的修复方案
 
 > 安全漏洞往往源于看似无害的代码。本文揭示 Go 开发中最常见的 10 个安全陷阱。

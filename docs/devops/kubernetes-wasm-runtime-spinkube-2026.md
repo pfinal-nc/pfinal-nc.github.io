@@ -5,8 +5,8 @@ tags: [devops, kubernetes, WASM, WebAssembly, SpinKube, containerd, cloud-native
 keywords: [K8s WASM 2026, SpinKube, containerd shim, RuntimeClass, KWASM Operator, WASI Preview 2, Component Model, 边缘计算]
 category: DevOps
 description: "2026 年 WebAssembly 正式成为 K8s 一等公民。本文从 RuntimeClass 选型、containerd WASM shim 工作机制、SpinKube Operator CRD 实战、KWASM 节点标注、SpinApp 部署 YAML,到 WASM vs 容器性能对比与适用边界,系统拆解 K8s 上跑 WASM 工作负载的全部细节。"
+recommend: DevOps
 ---
-
 # K8s + WebAssembly 2026 集成实战：SpinKube、containerd Shim 与 RuntimeClass 让 WASM 成为 K8s 一等公民
 
 > TL;DR：2026 年，WASM 不再是 K8s 的"实验性 guest"——`RuntimeClass` + `containerd-wasm-shims` 让 WASM 模块复用 Pod/Deployment/Service 抽象，SpinKube Operator 引入 `SpinApp` CRD 把 Fermyon Spin 生态彻底云原生化，KWASM Operator 解决托管 K8s（EKS/GKE/AKS）上无法手动配置 runtime 的痛点。本文从架构到 YAML 完整实战，附 WASM vs 容器选型决策表。

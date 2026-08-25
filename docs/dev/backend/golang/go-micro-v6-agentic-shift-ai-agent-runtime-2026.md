@@ -16,8 +16,8 @@ keywords:
   - Go微服务
 category: dev/backend/golang
 description: 深度解析 Go Micro v6——Anthropic 赞助下从微服务框架转型为 AI Agent 运行时，服务方法自动暴露为 MCP/A2A 工具，内置 plan/delegate 多步规划，从 0→Hero 完整实战路径。
+recommend: 后端工程
 ---
-
 # Go Micro v6 Agentic Shift 深度解析：微服务框架转身 AI Agent 运行时的架构革命与实战
 
 ## 导语

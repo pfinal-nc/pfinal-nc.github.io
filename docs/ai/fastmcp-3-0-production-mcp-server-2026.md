@@ -16,8 +16,8 @@ keywords:
   - 工具开发
 category: ai
 description: 从零开始掌握 FastMCP 3.0，使用 Python 构建生产级 MCP Server。涵盖 Streamable HTTP、组件版本控制、细粒度授权、资源管理、性能优化和生产部署完整指南。
+recommend: AI工程
 ---
-
 # FastMCP 3.0 实战：用 Python 构建生产级 MCP Server
 
 ## 前言

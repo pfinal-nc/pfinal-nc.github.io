@@ -12,8 +12,11 @@ keywords:
   - 系统化学习
   - 实战教程
   - 2026 技术课程
+recommend: 课程
+tags:
+  - courses
+  - courses
 ---
-
 # 📚 PFinalClub 技术课程体系
 
 > 从碎片化学习到系统化成长，为工程师打造的完整学习路径

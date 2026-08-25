@@ -4,8 +4,13 @@ description: "Go 1.25（2025-08 发布）三大新特性实战：GOMAXPROCS 容�
 date: 2026-06-22
 category: dev
 tags: [go, golang, 1.25, json, dwtarf]
+recommend: 后端工程
+keywords:
+  - golang
+  - dev
+  - 技术博客
+  - 开发
 ---
-
 # Go 1.25 实战 2026：三大生产级特性
 
 > TL;DR：Go 1.25 在 2025-08 发布，三大生产相关升级：1) GOMAXPROCS 默认跟随容器 CPU 限制（无需手动设置），2) DWARF5 调试信息压缩 25-30%，3) encoding/json/v2 性能比 v1 翻倍。本文给出迁移实战。

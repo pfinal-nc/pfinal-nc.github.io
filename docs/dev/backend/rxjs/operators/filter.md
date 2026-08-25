@@ -13,8 +13,8 @@ tags:
   - JavaScript
   - Operators
   - RxJS
+recommend: 后端工程
 ---
-
 # filter
 
 `filter` 操作符只发出源 Observable 中满足指定谓词函数的值。

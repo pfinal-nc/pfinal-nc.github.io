@@ -5,8 +5,13 @@ date: 2026-05-26
 author: PFinal南丞
 category: 课程
 tags: [course, security, dependencies, snyk, sbom, lesson]
+recommend: 课程
+keywords:
+  - module-3
+  - courses
+  - 技术博客
+  - 开发
 ---
-
 # Lesson 3.5: 依赖安全
 
 ## 学习目标

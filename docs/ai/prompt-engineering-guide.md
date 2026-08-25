@@ -8,8 +8,13 @@ tags:
   - LLM
   - ChatGPT
 description: 2026 版 AI 提示词工程实战：掌握零样本、少样本、CoT 思维链、角色设定等技巧，显著提升 LLM 输出质量。
+recommend: AI工程
+keywords:
+  - ai
+  - ai
+  - 技术博客
+  - 开发
 ---
-
 # AI 提示词工程实战：从入门到精通
 
 提示词工程（Prompt Engineering）是高效使用大语言模型的核心技能。好的提示词能让 AI 输出质量提升数倍。

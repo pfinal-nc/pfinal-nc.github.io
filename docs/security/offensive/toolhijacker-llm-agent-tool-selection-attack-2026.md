@@ -19,8 +19,8 @@ keywords:
   - 多智能体安全
 category: security/offensive
 description: "ToolHijacker 是 2026 年 NDSS 收录的首个针对 LLM Agent 工具选择阶段的提示注入攻击。本文从检索-选择双阶段架构出发，拆解 no-box 攻击模型、恶意工具文档生成算法与端到端利用链路，并提供 Go/Python 防御代码与生产级缓解方案。"
+recommend: 安全工程
 ---
-
 # ToolHijacker 深度解析：LLM Agent 工具选择攻击原理与生产防御
 
 ## 引言：当 Agent 的「工具箱」被投毒

@@ -5,8 +5,8 @@ tags: [php, frankenphp, laravel, octane, 高并发, worker-mode, cloud-native]
 keywords: [FrankenPHP 1.4, Laravel 12, Worker 模式, Caddy 2.8, Octane 协议, 状态隔离, PHP-FPM 替代, 生产迁移]
 category: dev
 description: "FrankenPHP 1.4 在 2026 年正式成为 Laravel 团队生产首选——单二进制 3 倍 PHP-FPM 吞吐、内置 HTTPS/HTTP3、Caddy 2.8 运维闭环。本文从性能基准、Octane 协议、worker 模式状态隔离陷阱、迁移清单到自托管 Dockerfile,系统拆解 690 req/s 背后的一切。"
+recommend: 后端工程
 ---
-
 # FrankenPHP 1.4 + Laravel 12 Worker 模式生产实战：3 倍吞吐背后的状态隔离与迁移指南
 
 > TL;DR：FrankenPHP 1.4（2026 Q1 发布）通过 **Caddy 2.8 + 嵌入 PHP + Octane 兼容 worker 协议**，在四核盒子上把 Laravel 12 仪表盘端点从 PHP-FPM 的 220 req/s 提到 **690 req/s**——三台机器做一台的活儿，月费从 $740 砍到 $310。但 3 倍吞吐的代价是**应用代码必须 worker-safe**：静态属性、singleton、容器单例都会跨请求残留。本文从架构、基准、踩坑到完整迁移清单一次性讲透。

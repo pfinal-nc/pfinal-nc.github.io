@@ -21,8 +21,8 @@ keywords:
   - F-bounded polymorphism
 category: dev/backend/golang
 description: 2026-07-28，Go Collections working group 7 位核心贡献者在 GitHub issue #80590 抛出泛型容器伞形提案，目标 Go 1.28。本文基于 issue 原文与社区解读，逐一拆解 6 个新子提案（hash.Map/hash.Set/set.Set/ordered.Map/heap/v2/mapset）、binary method problem 与 F-bounded polymorphism 抽象接口设计、set.Set 透明表示为 map[T]struct{} 的工程取舍、heap/v2 重命名与索引追踪机制，以及 #80194 insertion-ordered hash map 与 Stack 的 future 计划。所有提案目前均为 Open 状态，尚未接受。
+recommend: 后端工程
 ---
-
 # Go 1.28 泛型容器伞形提案 #80590 深度解读：6 个子提案、binary method problem 与工程取舍
 
 ## 引言：一份"伞形提案"，不是一份"已发布特性"

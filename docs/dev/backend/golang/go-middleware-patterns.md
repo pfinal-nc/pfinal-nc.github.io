@@ -16,8 +16,8 @@ tags:
   - middleware
   - design-pattern
   - web-development
+recommend: 后端工程
 ---
-
 # Go 中间件设计模式
 
 中间件是 Web 开发中的重要概念，它允许我们在请求处理流程中插入可复用的功能模块。本文将介绍 Go 语言中常用的中间件设计模式。

@@ -20,8 +20,8 @@ keywords:
   - 特性冻结
 category: PHP
 description: 2026 年 8 月 13 日 PHP 8.6.0 Beta 1 发布，宣告 8.6 特性冻结。本文深度解析相对 Alpha 系列的新增重磅特性：Io\Poll 原生 I/O 轮询 API（epoll/kqueue 支持，替代 stream_select）、Time\Duration 纳秒级时间间隔类，以及升级必读的会话安全默认值变更与 mbregex 弃用。
+recommend: 后端工程
 ---
-
 # PHP 8.6.0 Beta 1 深度解析：Io\Poll 原生轮询、Time\Duration 与升级必读的会话安全默认值
 
 ## 引言

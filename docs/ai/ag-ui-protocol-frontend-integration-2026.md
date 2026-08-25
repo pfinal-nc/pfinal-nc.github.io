@@ -16,8 +16,8 @@ keywords:
   - 流式事件
 category: ai
 description: "从零到一实战 AG-UI 协议，打通 AI Agent 与前端的最后一公里。涵盖协议原理、事件类型、React/Vue 集成、与 MCP/A2A 协作，以及生产级架构设计。"
+recommend: AI工程
 ---
-
 # AG-UI 协议实战：让 AI Agent 与前端无缝对话的完整指南
 
 ## 引言

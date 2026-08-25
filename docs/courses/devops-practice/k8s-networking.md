@@ -22,8 +22,8 @@ tags:
   - ingress
   - 网络
   - 服务发现
+recommend: 课程
 ---
-
 # Kubernetes 服务发现与网络：Service、Ingress、DNS 全解析
 
 > K8s 网络是大多数初学者的噩梦，本文把 Service 的四种类型、Ingress 配置、DNS 解析原理一次说清楚，从原理到实战。

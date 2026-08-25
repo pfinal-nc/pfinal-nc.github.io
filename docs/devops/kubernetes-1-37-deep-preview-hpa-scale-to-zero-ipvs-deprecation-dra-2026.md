@@ -17,8 +17,8 @@ keywords:
   - K8s 2026年8月
 category: devops
 description: Kubernetes 1.37 计划于 2026 年 8 月 26 日 GA，包含 86 项增强。本文聚焦四个最具实操影响力的变化：HPA Scale-to-Zero 原生支持（无需 KEDA）、kube-proxy IPVS 三年退场路线图、DRA 设备污点与动态资源分配毕业、cgroup v1 强制迁移。提供迁移检查清单和实战配置。
+recommend: DevOps
 ---
-
 # Kubernetes 1.37 深度预览：HPA 原生缩零、IPVS 退场倒计时、DRA 设备污点毕业
 
 > 计划 2026-08-26 GA | 86 项增强 | 16 项毕业至 Stable | 22 项首次 Alpha

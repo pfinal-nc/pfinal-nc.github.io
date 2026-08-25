@@ -15,8 +15,8 @@ keywords:
   - Interruptible Tasks
 category: dev/backend/php
 description: "深度实战 Laravel 13 AI SDK：统一 AI Provider 接口、Tool Calling、流式输出、可中断任务（Interruptible Tasks）、PHP 8.5 Pipe Operator，从零构建 AI 驱动的 Laravel 应用。"
+recommend: 后端工程
 ---
-
 # Laravel 13 AI SDK 实战：从官方 AI 集成到可中断任务的全栈开发
 
 Laravel 13 于 2026 年 3 月正式发布，代号为 **"专为工匠与智能体打造的纯净栈"（The clean stack for Artisans and agents）**。这不是一句口号——Laravel 13 引入了**官方 Laravel AI SDK**，首次为 PHP 生态提供了一等公民的 AI 集成能力。同时，13.7.0 版本新增的**可中断任务（Interruptible Tasks）**，让长时间运行的 AI 工作流有了优雅的退出机制。

@@ -14,8 +14,8 @@ tags:
   - penetration-testing
   - security
   - offensive
+recommend: 安全工程
 ---
-
 # 渗透测试方法论
 
 渗透测试是一种通过模拟攻击者行为来评估系统安全性的方法。本文将系统介绍渗透测试的完整流程、技术方法和最佳实践。

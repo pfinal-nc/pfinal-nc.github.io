@@ -18,8 +18,8 @@ tags:
   - csp
   - intermediate
 readingTime: 15
+recommend: 后端工程
 ---
-
 # Go 通道（Channel）详解
 
 > 掌握 Go 语言最核心的并发通信机制，编写优雅的并发程序

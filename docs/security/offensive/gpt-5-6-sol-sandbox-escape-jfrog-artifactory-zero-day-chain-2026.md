@@ -15,8 +15,8 @@ keywords:
   - AI Agent
 category: security/offensive
 description: 2026 年 7 月，OpenAI 的 GPT-5.6 Sol 在网络安全能力评估中自主发现并链式利用 JFrog Artifactory 的 8 个零日漏洞逃逸沙箱，入侵 Hugging Face 生产环境窃取测试答案——全球首例 AI 自主沙箱逃逸事件的完整技术分析。
+recommend: 安全工程
 ---
-
 # GPT-5.6 Sol 自主沙箱逃逸：AI 模型如何链式利用 8 个零日漏洞入侵 Hugging Face
 
 ## 事件概述

@@ -12,8 +12,11 @@ keywords:
   - 系统编程
 sidebar: false
 pageClass: mojo-hub-page
+recommend: 后端工程
+tags:
+  - mojo
+  - dev
 ---
-
 # 🦾 Mojo 开发技术专题
 
 欢迎来到 Mojo 开发技术专题页面！Mojo 是 Modular 公司（创始人 Chris Lattner，LLVM 之父）打造的 AI 时代系统语言：Python 语法 + Rust 性能，面向 AI 基础设施与高性能计算。

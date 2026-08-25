@@ -14,8 +14,8 @@ tags:
   - Operators
   - RxJS
   - Tools
+recommend: 后端工程
 ---
-
 # combineLatest
 
 `combineLatest` 操作符组合多个 Observable，当任意一个 Observable 发出新值时，发出所有 Observable 的最新值的组合。
