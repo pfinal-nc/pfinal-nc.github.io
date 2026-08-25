@@ -32,3 +32,6 @@ SHORT_CONTENT_PLAN.md
 PHASE3_CONTENT_PLAN.md
 .gstack/
 .workbuddy/
+
+# OhMyOpenCode session continuation state (local, auto-generated)
+.omo/run-continuation/
