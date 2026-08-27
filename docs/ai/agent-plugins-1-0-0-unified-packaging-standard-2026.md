@@ -232,8 +232,8 @@ Agent Plugins 不重新定义 Skills 或 MCP。它**打包**两个已有广泛�
 | GitHub Copilot | 发布即支持 | GitHub/Microsoft |
 | VS Code | 发布即支持 | Microsoft |
 | Kiro | 发布即支持 | AWS |
-| Google Agents CLI | 发布即支持 | Google |
-| Google Data Agent Kit | 发布即支持 | Google |
+| Google Agents CLI | 发布日宣布支持 | Google |
+| Google Data Agent Kit | 发布日宣布支持 | Google |
 
 ### 4.3 Anthropic 的缺席
 
@@ -244,7 +244,7 @@ Anthropic 的情况：
 - 创建了 Agent Skills 格式
 - 不在 Agent Plugins 核心维护者名单中
 - Claude Code 不在兼容客户端列表中
-- Claude Code 有自己的插件系统（截至 2026 年 7 月中旬有 256 个插件）
+- Claude Code 有自己的插件系统（官方 marketplace 收录 561 个插件，2026-07-24 快照）
 
 ```
 生态分裂示意:
@@ -255,7 +255,7 @@ Anthropic 的情况：
   │  Microsoft         │               │  Claude Code        │
   │  AWS               │               │  Cowork Desktop     │
   │  Cursor            │               │  自有插件系统        │
-  │  Vercel            │               │  (256+ 插件)        │
+  │  Vercel            │               │  (官方市场 561+ 插件) │
   │  Google            │               │                     │
   │                    │               │                     │
   │  plugin.json 格式   │    vs        │  自有目录格式         │
