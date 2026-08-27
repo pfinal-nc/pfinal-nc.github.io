@@ -91,6 +91,8 @@ tags:
 - [CVE-2026-63077 TeamCity CI/CD 未认证反序列化 RCE 深度分析](/security/offensive/cve-2026-63077-teamcity-cicd-deserialization-rce-2026) - 2026-08-07 CVSS 9.8 / CISA KEV 3 天窗口 / Agent 轮询协议 / CI/CD 供应链
 - [恶意 AI Skills 供应链攻击深度拆解：仿冒 Paperclip/Browser Use 的 170 万次安装如何把 AI Agent 变成窃密马](/security/offensive/zenity-malicious-ai-skills-supply-chain-2026) - 2026-08-13 170万+安装 / Karli / skills.sh / 4 种触发机制 / 窃密器
 - [Metabase CVSS 10.0 未认证 SQL 注入深度剖析：密码重置接口如何变成管理员接管通道](/security/offensive/cve-2026-72898-metabase-sql-injection-admin-takeover-2026) - 2026-08-13 CVSS 10.0 / CISA KEV 8/14 截止 / 在野利用 / reset_password 注入
+- [CVE-2026-68820 深度分析：Lazarus 利用 WinSock afd.sys 零日完成内核提权](/security/offensive/cve-2026-68820-lazarus-winsock-afd-sys-zero-day-privilege-escalation-2026) - 2026-08-27 421 CVE / afd.sys UAF / Operation Dream Job / FudModule rootkit / 5 周在野利用
+- [CVE-2026-61539 深度分析：Xinference eval() 注入让 Llama 3 工具调用变成未认证 RCE](/security/offensive/cve-2026-61539-xinference-eval-rce-llama3-tool-call-2026) - 2026-08-27 CVSS 10.0 / eval() 注入 / prompt → RCE / 腾讯玄武实验室发现
 
 ### 🔬 供应链与工具链安全
 - [Miasma 供应链蠕虫攻击深度分析：2026 年开源生态的至暗时刻](/security/offensive/miasma-supply-chain-worm-attack-2026) - 2026-06-15
