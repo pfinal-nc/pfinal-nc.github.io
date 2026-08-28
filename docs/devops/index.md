@@ -30,6 +30,7 @@ keywords:
 | 6 | 🤖 Agent 编排 | [从容器编排到智能体编排：Kagent CRD 让 Agent 成为云原生一等公民](/devops/container-to-agent-orchestration-kagent-crd-go-2026) | 2026-07-31 |
 | 7 | ☸️ K8s 1.37 预览 | [Kubernetes 1.37 深度预览：HPA 原生缩零、IPVS 退场倒计时、DRA 设备污点毕业](/devops/kubernetes-1-37-deep-preview-hpa-scale-to-zero-ipvs-deprecation-dra-2026) | 2026-08-04 |
 | 8 | ☸️ K8s 1.37 GA | [Kubernetes 1.37 正式发布：静态 Pod 禁引 Secret、SELinuxMount 默认开启、IPVS 退场](/devops/kubernetes-1-37-release-highlights-2026) | 2026-08-26 |
+| 9 | 🐛 ChainDrop npm 蠕虫 | [ChainDrop npm 蠕虫复盘：keyv 投毒、20 亿月下载量沦陷，而所有「供应链安全」控件都失灵了](/devops/chaindrop-npm-supply-chain-worm-2026) | 2026-08-28 |
 
 ## 🔍 可观测性
 
@@ -64,12 +65,12 @@ keywords:
 
 ## 📊 系列文章统计
 
-- **容器化与编排**：7 篇（Docker + K8s 1.36 + KubeCon 2026 + Docker AI Governance + Kagent Agent 编排 + K8s 1.37 预览 + K8s 1.37 GA）
+- **容器化与编排**：9 篇（Docker + K8s 1.36 + KubeCon 2026 + Docker AI Governance + Rust 异步运行时 + Kagent Agent 编排 + K8s 1.37 预览 + K8s 1.37 GA + ChainDrop npm 蠕虫）
 - **可观测性**：3 篇（eBPF + OTel Go 1.32 + OTel CNCF 毕业）
 - **WASM 演进**：2 篇（服务端 WASI + K8s SpinKube 集成）
 - **FinOps 云成本**：1 篇（Go + OpenCost）
 - **平台工程与网络**：3 篇（Backstage IDP + Tailscale DERP + Topcoat Rust 全栈框架）
-- **累计 17 篇**，更新频率：每周 1-2 篇
+- **累计 18 篇**，更新频率：每周 1-2 篇
 
 ---
 

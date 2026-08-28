@@ -1,5 +1,5 @@
 ---
-title: GitHub Copilot Code Review 支持 Agent Skills 与 MCP：让代码审查拥有团队记忆
+title: "GitHub Copilot Code Review 实战 2026：Agent Skills + MCP 让 AI 代码审查拥有团队记忆（SKILL.md 完全指南）"
 date: 2026-08-04
 tags:
   - AI

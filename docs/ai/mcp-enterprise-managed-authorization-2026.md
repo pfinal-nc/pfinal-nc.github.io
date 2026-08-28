@@ -1,5 +1,5 @@
 ---
-title: "MCP 企业托管授权（EMA）2026 实战：零点击 OAuth 与 ID-JAG 身份断言链"
+title: "MCP 企业托管授权 EMA 实战 2026：零点击 OAuth + ID-JAG 身份断言链企业部署完全指南"
 date: 2026-07-14
 tags:
   - ai

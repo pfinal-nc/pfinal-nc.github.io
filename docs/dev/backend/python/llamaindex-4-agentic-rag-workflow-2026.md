@@ -1,5 +1,5 @@
 ---
-title: "LlamaIndex 4.0 文档 Agent 实战：从 RAG 到 Agentic RAG 的架构跃迁"
+title: "LlamaIndex 4.0 实战 2026：文档 Agent 从 RAG 到 Agentic RAG 的 Workflow API 架构跃迁"
 date: 2026-06-18
 tags:
   - python
@@ -14,7 +14,7 @@ keywords:
   - LlamaIndex 工作流
   - Python AI 框架
 category: dev/backend/python
-description: "深度实战 LlamaIndex 4.0 文档 Agent：从传统 RAG 到 Agentic RAG 的架构升级，Workflow API 构建多步推理流水线，DocumentAgent 实现跨文档查询，含 Python 完整生产级代码。"
+description: "LlamaIndex 4.0 实战 2026 完全指南：从传统 RAG 到 Agentic RAG 架构升级，深度解析 Workflow API 事件驱动 DAG 执行、DocumentAgent 跨文档查询、Python 生产级完整代码与 4 万 Star 社区生态。"
 recommend: 后端工程
 ---
 # LlamaIndex 4.0 文档 Agent 实战：从 RAG 到 Agentic RAG 的架构跃迁

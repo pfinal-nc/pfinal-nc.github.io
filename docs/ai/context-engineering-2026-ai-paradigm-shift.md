@@ -1,5 +1,5 @@
 ---
-title: Context Engineering 上下文工程实战：从 Prompt Engineering 到 AI Agent 信息架构的范式跃迁
+title: "Context Engineering 上下文工程实战 2026：从 Prompt Engineering 到 AI Agent 信息架构的范式跃迁（4 大策略完整指南）"
 date: 2026-07-09
 tags:
   - ai

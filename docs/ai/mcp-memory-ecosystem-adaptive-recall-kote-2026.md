@@ -1,5 +1,5 @@
 ---
-title: "MCP 记忆生态集体爆发：Adaptive Recall + Kote 如何让 AI Agent 拥有长期记忆"
+title: "MCP 记忆生态实战 2026：Adaptive Recall + Kote 让 AI Agent 拥有长期记忆（4 层架构完全指南）"
 date: 2026-07-28
 tags:
   - ai
@@ -19,7 +19,7 @@ keywords:
   - Mem0
   - 2026
 category: ai
-description: "2026 年 7 月 13 日，两个 MCP 记忆项目同时登上 Hacker News 首页。Adaptive Recall 在 24 小时内积累 400+ 星标，社区热度超过当周所有 AI 模型发布。本文从 MCP 记忆层标准化、Adaptive Recall 语义检索架构、Kote Git 工程决策挖掘、三层记忆生态格局到隐私治理，完整解析 AI Agent 从'金鱼脑'到'长期记忆'的范式跃迁。"
+description: "MCP 记忆生态实战 2026 完全指南：从 MCP 记忆层标准化、Adaptive Recall 语义检索架构到 Kote Git 工程决策挖掘、Mem0 三层记忆生态格局，深度解读 AI Agent 从「金鱼脑」到「长期记忆」的范式跃迁与隐私治理生产实践。"
 recommend: AI工程
 ---
 # MCP 记忆生态集体爆发：Adaptive Recall + Kote 如何让 AI Agent 拥有长期记忆
