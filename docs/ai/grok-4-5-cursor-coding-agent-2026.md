@@ -2,7 +2,7 @@
 title: "Grok 4.5 深度解析 2026：xAI + Cursor 联合训练的编码 Agent 模型 + 4.2× 性价比优势全解"
 date: 2026-07-09
 author: PFinal南丞
-description: 2026年7月8日，xAI 发布 Grok 4.5——首个专为编码与 Agent 场景设计的模型，与 Cursor 联合训练于数万 NVIDIA GB300 GPU 之上。$2/$6 百万 token 定价、80 TPS 推理速度、4.2× 更少输出 token、Terminal-Bench 83.3%、DeepSWE 62%、MoE 架构与异步 Agent 演进训练。本文深度解析 Grok 4.5 的架构、训练、基准、API 实战与性价比策略。
+description: "Grok 4.5 编码 Agent 实战 2026 完全指南：xAI + Cursor 联合训练的 MoE 架构模型，$2/$6 百万 token 定价 + 80 TPS 推理速度 + 4.2× 更少输出 token，Terminal-Bench 83.3% 与 DeepSWE 62% 基准，附 API 实战与性价比策略。"
 tags:
   - Grok4.5
   - xAI
