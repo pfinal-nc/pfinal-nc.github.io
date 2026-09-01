@@ -94,6 +94,8 @@ tags:
 - [CVE-2026-68820 深度分析：Lazarus 利用 WinSock afd.sys 零日完成内核提权](/security/offensive/cve-2026-68820-lazarus-winsock-afd-sys-zero-day-privilege-escalation-2026) - 2026-08-27 421 CVE / afd.sys UAF / Operation Dream Job / FudModule rootkit / 5 周在野利用
 - [CVE-2026-61539 深度分析：Xinference eval() 注入让 Llama 3 工具调用变成未认证 RCE](/security/offensive/cve-2026-61539-xinference-eval-rce-llama3-tool-call-2026) - 2026-08-27 CVSS 10.0 / eval() 注入 / prompt → RCE / 腾讯玄武实验室发现
 - [CVE-2026-69414 ShieldBreak 深度分析：Windows Defender 本身变成 SYSTEM 提权通道](/security/offensive/cve-2026-69414-shieldbreak-windows-defender-zero-day-privilege-escalation-2026) - 2026-08-28 CVSS 7.8 / 无补丁 / RoguePlanet 补丁绕过 / NT Object Manager 竞争条件 / Nightmare Eclipse 第 10 次攻击
+- [TrueConf CVE-2026-72529/72530 深度拆解：从预认证沙箱进入到木马化客户端的完整攻击链](/security/offensive/trueconf-cve-2026-72529-72530-pre-auth-rce-supply-chain-2026) - 2026-09-01 CVSS 9.8/9.0 / CISA KEV 9/3 截止 / Head Mare APT / PhantomCore 后门 / 客户端安装器替换供应链
+- [CVE-2026-53362 深度拆解：当 OpenAI 的 AI Agent 自主利用 Linux 内核漏洞实现容器逃逸](/security/offensive/cve-2026-53362-linux-kernel-ipv6-container-escape-openai-agent-2026) - 2026-09-01 CVSS 7.8 / CISA KEV 8/30 截止 / IPv6 分片越界写 / OpenAI Agent 自主利用 / 容器逃逸
 - [AI/ML 基础设施攻击面：MLflow CVE-2026-64849 SSRF 与 rclone CVE-2026-79782 S3 凭证泄露深度分析](/security/offensive/ai-ml-infrastructure-attack-mlflow-rclone-cve-2026) - 2026-08-28 TOCTOU SSRF / S3 重定向泄露 X-Amz-Security-Token / CISA KEV 收录
 
 ### 🔬 供应链与工具链安全

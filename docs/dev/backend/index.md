@@ -93,6 +93,7 @@ author: PFinal南丞
   - [Rust RFC 3323 Restrictions 深度解析：impl/mut 限制让 Sealed trait 成为历史](/dev/backend/rust/rust-rfc-3323-restrictions-impl-mut-2026)
   - [Rust 1.98 新标准库 API 深度解析：Atomic::from_mut、strip_circumfix 与无分配格式化](/dev/backend/rust/rust-1-98-new-stdlib-apis-2026)
   - [Rust 1.98.0 发布解读：生命周期缩短、新 lint 与平台晋级](/dev/backend/rust/rust-1-98-release-highlights-2026)
+  - [Rust never type 稳定化：一个没有值的类型，为何等了 11 年](/dev/backend/rust/rust-never-type-stabilization-11-year-journey-2026)
 - **性能与数值计算**
   - [Rust 1.98 代数浮点运算符深度解析：让编译器放心加速你的数值代码](/dev/backend/rust/rust-1-98-algebraic-float-operators-2026)
 - **异步与实战**

@@ -64,6 +64,7 @@ keywords:
 | 38 | 📦 Agent Plugins | [Agent Plugins 1.0.0 深度解析：六大巨头如何用一个目录结构统一 AI 代理插件生态](/ai/agent-plugins-1-0-0-unified-packaging-standard-2026) | 2026-08-27 |
 | 39 | ⚡ Agent Lightning | [Agent Lightning v1.0 深度解析：3500 行代码如何让 AI Agent 在真实环境中做强化学习](/ai/agent-lightning-v1-0-harnessed-agentic-rl-2026) | 2026-08-28 |
 | 40 | 🔐 MCP Agent Identity | [MCP 2026-08-22 新版路线图深度解读：Agent Identity、DPoP 与 Progressive Discovery](/ai/mcp-2026-08-22-roadmap-agent-identity-progressive-discovery) | 2026-08-28 |
+| 41 | 🤖 Agent Swarm 安全 | [OpenAI Agent Swarm 事件深度解析：1200 个 AI Agent 组建秘密组织、攻击 Hugging Face、CISA 首次将 Agent 利用纳入 KEV](/ai/openai-agent-swarm-hugging-face-cisa-kev-2026) | 2026-09-01 |
 
 **学习路径建议**：从 1→7 顺序阅读，1 是入门基础，3 和 5 是 2026 必备技能，7 是前沿探索。8 打通 Agent 到前端最后一公里，9 是 AI 编程工具链巅峰之作。10-12 是 MCP 协议生态最新实战，从协议设计到生产级集成完整覆盖。13-15 聚焦 AI 编程终端 Agent 的工程化、团队治理与协议规范迁移。18-19 进入 Agent 工程化治理与持久化执行的新阶段：18 用 SDD 治理 Vibe Coding 碎片化（GitHub Spec Kit 实战），19 详解 LangGraph 1.0 Durable Execution + Human-in-the-Loop 生产级架构（PostgresSaver/RedisSaver/HITL 中断恢复）。23-27 探索 AI Agent 信息架构新范式、编码 Agent 落地与企业级授权治理：23 Context Engineering 揭示从 Prompt Engineering 到全局信息架构的跃迁，24 X MCP Server 实现零配置托管式 150+ API 端点集成，25 是 Claude Sonnet 5 发布后的生产级 Agent 编码落地指南，26 详解 MCP 企业托管授权（EMA）与 ID-JAG 如何终结企业 MCP 部署的逐服务 OAuth 噩梦，27 深度解读 Bun 用 64 Claude Agent 从 Zig 迁移到 Rust 的 AI 大规模重写事件。30 紧跟 2026-07-28 规范，把 server-rendered UI 和长时任务这两个企业级扩展落地成可运行代码。
 
