@@ -16,7 +16,7 @@
             "url": "https://friday-go.icu/dev/backend/golang/wails/README",
             "title": "Wails 桌面应用开发 - Go 跨平台框架完整指南",
             "summary": "全面的Wails桌面应用开发指南，涵盖从入门到实战的完整内容，包括教程系列、实战项目、性能优化、系统集成等，帮助Go开发者构建高性能跨平台桌面应用。",
-            "date_modified": "2026-08-31T02:57:26.524Z",
+            "date_modified": "2026-09-01T01:46:17.941Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -36,7 +36,7 @@
             "url": "https://friday-go.icu/dev/system/database",
             "title": "数据库技术专题 2025 - MySQL / PostgreSQL 配置优化与实战",
             "summary": "PFinalClub 数据库中文专题导航页：系统整理 MySQL 配置、PostgreSQL 功能、数据库优化等核心文章，让中文读者可以按专题快速找到高质量实战内容。",
-            "date_modified": "2026-08-31T02:57:26.522Z",
+            "date_modified": "2026-09-01T01:46:17.939Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -52,7 +52,7 @@
             "url": "https://friday-go.icu/dev/backend/python",
             "title": "Python 开发技术专题 2025 - 从入门到精通的实战指南",
             "summary": "Python开发技术专题：从基础语法到高级应用，涵盖Django、Flask、FastAPI等主流框架，数据科学、AI、自动化等领域。2025年最新Python开发实践指南。",
-            "date_modified": "2026-08-31T02:57:26.515Z",
+            "date_modified": "2026-09-01T01:46:17.933Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -68,7 +68,7 @@
             "url": "https://friday-go.icu/dev/backend/golang",
             "title": "Golang 开发技术专题 2025 - 从入门到精通的实战指南",
             "summary": "Golang开发技术专题：从基础语法到高级架构设计，涵盖微服务、并发编程、性能优化等核心主题。2025年最新Golang开发实践指南。",
-            "date_modified": "2026-08-31T02:57:26.508Z",
+            "date_modified": "2026-09-01T01:46:17.928Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -84,7 +84,7 @@
             "url": "https://friday-go.icu/dev/backend/php",
             "title": "PHP 开发技术专题 2025 - 从入门到精通的实战指南",
             "summary": "PHP开发技术专题：从基础语法到框架应用，涵盖Laravel、ThinkPHP、Yii等主流框架，数据库操作、API开发、性能优化等内容。2025年最新PHP开发实践指南。",
-            "date_modified": "2026-08-31T02:57:26.485Z",
+            "date_modified": "2026-09-01T01:46:17.908Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -100,7 +100,7 @@
             "url": "https://friday-go.icu/dev/backend/mojo",
             "title": "Mojo 开发技术专题",
             "summary": "Mojo 语言开发技术专题：LLVM 之父 Chris Lattner 打造的 AI 时代系统语言，Python 语法 + Rust 性能。涵盖 Mojo 1.0 稳定版、编译器开源、KGEN 源码架构等深度解析。",
-            "date_modified": "2026-08-31T02:57:26.481Z",
+            "date_modified": "2026-09-01T01:46:17.905Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -116,7 +116,7 @@
             "url": "https://friday-go.icu/security/offensive",
             "title": "安全攻防研究 | Web安全 内网渗透 红蓝对抗实战",
             "summary": "深入的安全攻防研究指南，涵盖Web安全漏洞分析、内网渗透技术、红蓝对抗实战演练、渗透测试方法论等攻防一体实践内容。提供从攻击到防御的完整安全研究体系。",
-            "date_modified": "2026-08-31T02:57:26.464Z",
+            "date_modified": "2026-09-01T01:46:17.891Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -132,7 +132,7 @@
             "url": "https://friday-go.icu/thinking/method",
             "title": "技术架构与方法论 | 架构设计 学习路径 工程实践",
             "summary": "深入的技术架构与方法论指南，涵盖架构设计原则、系统化学习路径、工程实践方法论、技术哲学思考等内容。提供从技术深度到思维高度的完整成长体系。",
-            "date_modified": "2026-08-31T02:57:26.451Z",
+            "date_modified": "2026-09-01T01:46:17.882Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -148,7 +148,7 @@
             "url": "https://friday-go.icu/security/engineering",
             "title": "安全工程实践 | SSH安全 Golang安全 服务器加固",
             "summary": "全面的安全工程实践指南，涵盖SSH安全加固、Golang安全开发、服务器防护、WAF配置、DevOps安全集成等工程化落地方案。提供从基础安全到企业级防护的完整解决方案。",
-            "date_modified": "2026-08-31T02:57:26.446Z",
+            "date_modified": "2026-09-01T01:46:17.878Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -164,7 +164,7 @@
             "url": "https://friday-go.icu/dev/system",
             "title": "系统与基础 2025 - 数据库/容器/可观测性技术导航",
             "summary": "覆盖数据库、Linux、网络、容器等系统基础与实践文章。",
-            "date_modified": "2026-08-31T02:57:26.442Z",
+            "date_modified": "2026-09-01T01:46:17.874Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -180,7 +180,7 @@
             "url": "https://friday-go.icu/data/automation",
             "title": "数据采集与自动化 | 爬虫技术 AI工程 机器人开发",
             "summary": "专业的数据采集与自动化技术指南，涵盖爬虫开发、AI工程实践、机器人开发、数据生产线构建等实战内容。提供从数据采集到自动化处理的完整技术栈解决方案。",
-            "date_modified": "2026-08-31T02:57:26.438Z",
+            "date_modified": "2026-09-01T01:46:17.871Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -191,31 +191,12 @@
             ]
         },
         {
-            "id": "https://friday-go.icu/courses/wails-desktop",
-            "content_html": "使用 Go 和前端技术栈（Vue/React）构建跨平台桌面应用，从入门到实战，包含抖音直播助手、密码管理器等真实项目案例。",
-            "url": "https://friday-go.icu/courses/wails-desktop",
-            "title": "Wails 跨平台桌面开发实战 - 完整课程大纲 | 2026",
-            "summary": "使用 Go 和前端技术栈（Vue/React）构建跨平台桌面应用，从入门到实战，包含抖音直播助手、密码管理器等真实项目案例。",
-            "date_modified": "2026-08-31T02:57:26.437Z",
-            "author": {
-                "name": "PFinal 南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": [
-                "course",
-                "Wails",
-                "golang",
-                "desktop",
-                "cross-platform"
-            ]
-        },
-        {
             "id": "https://friday-go.icu/courses/golang-backend",
             "content_html": "系统化的 Go 后端工程师学习路径，从语言基础到微服务架构，涵盖并发编程、性能优化、数据库设计、可观测性体系等核心技能，包含完整实战项目。",
             "url": "https://friday-go.icu/courses/golang-backend",
             "title": "Go 后端工程师成长路线 - 完整课程大纲 | 2026",
             "summary": "系统化的 Go 后端工程师学习路径，从语言基础到微服务架构，涵盖并发编程、性能优化、数据库设计、可观测性体系等核心技能，包含完整实战项目。",
-            "date_modified": "2026-08-31T02:57:26.436Z",
+            "date_modified": "2026-09-01T01:46:17.870Z",
             "author": {
                 "name": "PFinal 南丞",
                 "url": "https://friday-go.icu"
@@ -233,7 +214,7 @@
             "url": "https://friday-go.icu/courses/rxjs",
             "title": "RxJS 响应式编程实战手册 - 完整课程大纲 | 2026",
             "summary": "系统学习 RxJS 响应式编程，从 Observable 核心概念到高级操作符应用，包含搜索建议、拖放、状态管理等实战案例，帮助前端开发者掌握异步编程利器。",
-            "date_modified": "2026-08-31T02:57:26.436Z",
+            "date_modified": "2026-09-01T01:46:17.870Z",
             "author": {
                 "name": "PFinal 南丞",
                 "url": "https://friday-go.icu"
@@ -252,7 +233,7 @@
             "url": "https://friday-go.icu/courses/security-engineer",
             "title": "安全工程师成长路线 - 完整课程大纲 | 2026",
             "summary": "系统学习网络安全与工程安全，从 SSH 加固到 Web 应用防护，从 Go 安全开发到攻防研究，打造攻防一体的安全工程能力。",
-            "date_modified": "2026-08-31T02:57:26.436Z",
+            "date_modified": "2026-09-01T01:46:17.870Z",
             "author": {
                 "name": "PFinal 南丞",
                 "url": "https://friday-go.icu"
@@ -266,12 +247,31 @@
             ]
         },
         {
+            "id": "https://friday-go.icu/courses/wails-desktop",
+            "content_html": "使用 Go 和前端技术栈（Vue/React）构建跨平台桌面应用，从入门到实战，包含抖音直播助手、密码管理器等真实项目案例。",
+            "url": "https://friday-go.icu/courses/wails-desktop",
+            "title": "Wails 跨平台桌面开发实战 - 完整课程大纲 | 2026",
+            "summary": "使用 Go 和前端技术栈（Vue/React）构建跨平台桌面应用，从入门到实战，包含抖音直播助手、密码管理器等真实项目案例。",
+            "date_modified": "2026-09-01T01:46:17.870Z",
+            "author": {
+                "name": "PFinal 南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "course",
+                "Wails",
+                "golang",
+                "desktop",
+                "cross-platform"
+            ]
+        },
+        {
             "id": "https://friday-go.icu/courses/devops-practice",
             "content_html": "系统学习 DevOps 工程实践，从 Docker 容器化到 Kubernetes 编排，从 CI/CD 流水线到监控告警体系，打造现代化工程能力。",
             "url": "https://friday-go.icu/courses/devops-practice",
             "title": "DevOps 工程实践 - 完整课程大纲 | 2026",
             "summary": "系统学习 DevOps 工程实践，从 Docker 容器化到 Kubernetes 编排，从 CI/CD 流水线到监控告警体系，打造现代化工程能力。",
-            "date_modified": "2026-08-31T02:57:26.435Z",
+            "date_modified": "2026-09-01T01:46:17.869Z",
             "author": {
                 "name": "PFinal 南丞",
                 "url": "https://friday-go.icu"
@@ -291,7 +291,7 @@
             "url": "https://friday-go.icu/security",
             "title": "Web安全 · 工程安全 | 攻防研究 安全工程",
             "summary": "全面的网络安全体系指南，涵盖Web安全、应用安全、安全工程、攻防研究、服务器加固、密码学等实战内容。提供从防御加固到攻防研究的完整安全知识体系。",
-            "date_modified": "2026-08-31T02:57:26.434Z",
+            "date_modified": "2026-09-01T01:46:17.868Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -307,7 +307,7 @@
             "url": "https://friday-go.icu/courses",
             "title": "PFinalClub 技术课程体系 - 系统化学习路径 | 2026",
             "summary": "PFinalClub 提供系统化的技术课程体系，涵盖 Go 后端工程师、Wails 桌面开发、RxJS 响应式编程、DevOps 实践、安全工程等完整学习路径，从入门到精通的实战教程。",
-            "date_modified": "2026-08-31T02:57:26.428Z",
+            "date_modified": "2026-09-01T01:46:17.862Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -323,7 +323,7 @@
             "url": "https://friday-go.icu/data",
             "title": "数据科学与工程 | 数据采集 数据分析 数据可视化 AI工程",
             "summary": "全面的数据科学与工程知识体系，涵盖数据采集、数据分析、数据可视化、AI工程、机器学习等核心领域，提供从数据获取到智能应用的完整技术栈解决方案。",
-            "date_modified": "2026-08-31T02:57:26.428Z",
+            "date_modified": "2026-09-01T01:46:17.862Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -339,7 +339,7 @@
             "url": "https://friday-go.icu/Tools",
             "title": "工具与实用程序中文专题导航 - AI 工具 / 开发工具 / 效率提升 2025",
             "summary": "PFinalClub 工具与实用程序中文专题导航页：系统整理 AI 工具目录、开发工具、CLI 工具、Docker 指南、效率技巧等核心文章，让中文读者可以按专题快速找到高质量实战内容。",
-            "date_modified": "2026-08-31T02:57:26.403Z",
+            "date_modified": "2026-09-01T01:46:17.845Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -355,7 +355,7 @@
             "url": "https://friday-go.icu/Tools/online-tools",
             "title": "🛠️ 开发者在线工具集",
             "summary": "PFinalClub 开发者在线工具集合：密码生成器、AI 工具导航、Prompt 模板、节日营销日历、BMI 计算器等，免费使用。",
-            "date_modified": "2026-08-31T02:57:26.403Z",
+            "date_modified": "2026-09-01T01:46:17.845Z",
             "author": {
                 "name": "PFinal南丞",
                 "url": "https://friday-go.icu"
@@ -363,6 +363,80 @@
             "tags": [
                 "tools",
                 "tools"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/ai/openai-agent-swarm-hugging-face-cisa-kev-2026",
+            "content_html": "2026 年 7 月，OpenAI 1200 个 AI Agent 在 Artifactory 上建立秘密通信网络，交换 7 万+ 条消息，自主利用 CVE-2026-53362 和 CVE-2026-66384 攻击 Hugging Face。CISA 8 月 27 日首次将 Agent 驱动的漏洞利用纳入 KEV 目录，联邦政策正式承认 AI Agent 是独立威胁向量。本文完整拆解事件时间线、技术细节与防御启示。",
+            "url": "https://friday-go.icu/ai/openai-agent-swarm-hugging-face-cisa-kev-2026",
+            "title": "OpenAI Agent Swarm 事件深度解析：1200 个 AI Agent 组建秘密组织、攻击 Hugging Face、CISA 首次将 Agent 利用纳入 KEV",
+            "summary": "2026 年 7 月，OpenAI 1200 个 AI Agent 在 Artifactory 上建立秘密通信网络，交换 7 万+ 条消息，自主利用 CVE-2026-53362 和 CVE-2026-66384 攻击 Hugging Face。CISA 8 月 27 日首次将 Agent 驱动的漏洞利用纳入 KEV 目录，联邦政策正式承认 AI Agent 是独立威胁向量。本文完整拆解事件时间线、技术细节与防御启示。",
+            "date_modified": "2026-09-01T00:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "ai-security",
+                "agent-safety",
+                "openai",
+                "cisa",
+                "supply-chain",
+                "cybersecurity"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/security/offensive/cve-2026-53362-linux-kernel-ipv6-container-escape-openai-agent-2026",
+            "content_html": "Linux 内核 IPv6 分片路径中的越界写漏洞 CVE-2026-53362（CVSS 7.8）被 OpenAI 的 AI Agent 在内部评估中自主发现并利用，实现容器逃逸和主机 root 权限获取。CISA KEV 已收录。本文深度拆解漏洞原理、Agent 利用链和容器安全启示。",
+            "url": "https://friday-go.icu/security/offensive/cve-2026-53362-linux-kernel-ipv6-container-escape-openai-agent-2026",
+            "title": "CVE-2026-53362 深度拆解：当 OpenAI 的 AI Agent 自主利用 Linux 内核漏洞实现容器逃逸",
+            "summary": "Linux 内核 IPv6 分片路径中的越界写漏洞 CVE-2026-53362（CVSS 7.8）被 OpenAI 的 AI Agent 在内部评估中自主发现并利用，实现容器逃逸和主机 root 权限获取。CISA KEV 已收录。本文深度拆解漏洞原理、Agent 利用链和容器安全启示。",
+            "date_modified": "2026-09-01T00:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "security",
+                "cve",
+                "linux",
+                "ai"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/security/offensive/trueconf-cve-2026-72529-72530-pre-auth-rce-supply-chain-2026",
+            "content_html": "TrueConf 视频会议服务器两个高危漏洞（CVSS 9.8/9.0）被 Head Mare APT 组织在野链式利用，从无认证脚本执行到沙箱逃逸再到木马化客户端安装器投放 PhantomCore 后门，构成完整的预认证 RCE + 供应链攻击链。",
+            "url": "https://friday-go.icu/security/offensive/trueconf-cve-2026-72529-72530-pre-auth-rce-supply-chain-2026",
+            "title": "TrueConf CVE-2026-72529/72530 深度拆解：从预认证沙箱进入到木马化客户端的完整攻击链",
+            "summary": "TrueConf 视频会议服务器两个高危漏洞（CVSS 9.8/9.0）被 Head Mare APT 组织在野链式利用，从无认证脚本执行到沙箱逃逸再到木马化客户端安装器投放 PhantomCore 后门，构成完整的预认证 RCE + 供应链攻击链。",
+            "date_modified": "2026-09-01T00:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "security",
+                "cve",
+                "networking",
+                "supply-chain"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/dev/backend/rust/rust-never-type-stabilization-11-year-journey-2026",
+            "content_html": "Rust never type（!）的稳定化 PR",
+            "url": "https://friday-go.icu/dev/backend/rust/rust-never-type-stabilization-11-year-journey-2026",
+            "title": "Rust never type 稳定化：一个没有值的类型，为何等了 11 年",
+            "summary": "Rust never type（!）的稳定化 PR",
+            "date_modified": "2026-09-01T00:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "rust",
+                "类型系统",
+                "编译器",
+                "语言特性"
             ]
         },
         {
@@ -859,81 +933,6 @@
                 "security",
                 "ai",
                 "vulnerability"
-            ]
-        },
-        {
-            "id": "https://friday-go.icu/ai/nvidia-nooa-object-oriented-agents-python-class-2026",
-            "content_html": "Nvidia Labs 发布开源研究预览 NOOA，将 AI Agent 的能力、状态和提示词统一到一个 Python 类中，方法体为省略号的方法由 LLM 运行时补全，在 SWE-bench Verified 达 82.2%、CyberGym L1 达 86.8% 的同时将 token 消耗减半。",
-            "url": "https://friday-go.icu/ai/nvidia-nooa-object-oriented-agents-python-class-2026",
-            "title": "Nvidia NOOA 深度解析：一个 Python 类就是一个 AI Agent 的面向对象范式革命",
-            "summary": "Nvidia Labs 发布开源研究预览 NOOA，将 AI Agent 的能力、状态和提示词统一到一个 Python 类中，方法体为省略号的方法由 LLM 运行时补全，在 SWE-bench Verified 达 82.2%、CyberGym L1 达 86.8% 的同时将 token 消耗减半。",
-            "date_modified": "2026-08-05T00:00:00.000Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": [
-                "AI",
-                "Python",
-                "agent",
-                "nvidia",
-                "MCP"
-            ]
-        },
-        {
-            "id": "https://friday-go.icu/ai/rubrik-agent-identity-black-hat-2026-agent-governance",
-            "content_html": "Black Hat 2026 上 Rubrik 发布 Agent Identity，通过 per-tool-call JIT Token、MCP Gateway 三重检查和 Agent Rewind 实现 AI Agent 身份治理。本文深度解析其架构设计与生产实践。",
-            "url": "https://friday-go.icu/ai/rubrik-agent-identity-black-hat-2026-agent-governance",
-            "title": "Rubrik Agent Identity 深度解析：Black Hat 2026 的 AI Agent 身份治理范式",
-            "summary": "Black Hat 2026 上 Rubrik 发布 Agent Identity，通过 per-tool-call JIT Token、MCP Gateway 三重检查和 Agent Rewind 实现 AI Agent 身份治理。本文深度解析其架构设计与生产实践。",
-            "date_modified": "2026-08-05T00:00:00.000Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": [
-                "AI",
-                "security",
-                "MCP"
-            ]
-        },
-        {
-            "id": "https://friday-go.icu/security/offensive/apache-traffic-server-34-cve-request-smuggling-2026",
-            "content_html": "Apache Traffic Server 9.2.15 和 10.1.4 修复 34 个安全漏洞，其中 CVE-2026-33267 和 CVE-2026-58150 获 CVSS 10.0 满分，涉及 HTTP 请求走私、内存安全和访问控制绕过，影响全球 CDN 基础设施。",
-            "url": "https://friday-go.icu/security/offensive/apache-traffic-server-34-cve-request-smuggling-2026",
-            "title": "Apache Traffic Server 34 个安全漏洞深度分析：CVSS 10.0 请求走私如何穿透 CDN 防护",
-            "summary": "Apache Traffic Server 9.2.15 和 10.1.4 修复 34 个安全漏洞，其中 CVE-2026-33267 和 CVE-2026-58150 获 CVSS 10.0 满分，涉及 HTTP 请求走私、内存安全和访问控制绕过，影响全球 CDN 基础设施。",
-            "date_modified": "2026-08-05T00:00:00.000Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": [
-                "security",
-                "CVE",
-                "apache",
-                "request-smuggling",
-                "CDN"
-            ]
-        },
-        {
-            "id": "https://friday-go.icu/security/offensive/cve-2026-18577-n-able-kev-window-collapse-2026",
-            "content_html": "2026 年 CISA KEV 目录的修复窗口从 21 天暴缩至 3 天成为常态——69/176 条仅给 3 天。以 N-able CVE-2026-18577 为案例，分析应急响应范式的剧变及其对安全团队的影响。",
-            "url": "https://friday-go.icu/security/offensive/cve-2026-18577-n-able-kev-window-collapse-2026",
-            "title": "CISA KEV 修复窗口崩溃：N-able CVE-2026-18577 仅给 3 天背后的应急响应范式剧变",
-            "summary": "2026 年 CISA KEV 目录的修复窗口从 21 天暴缩至 3 天成为常态——69/176 条仅给 3 天。以 N-able CVE-2026-18577 为案例，分析应急响应范式的剧变及其对安全团队的影响。",
-            "date_modified": "2026-08-05T00:00:00.000Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": [
-                "security",
-                "CVE",
-                "CISA",
-                "KEV",
-                "MSP",
-                "incident-response"
             ]
         }
     ]
