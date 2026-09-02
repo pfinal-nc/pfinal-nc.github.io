@@ -96,7 +96,12 @@ tags:
 - [CVE-2026-69414 ShieldBreak 深度分析：Windows Defender 本身变成 SYSTEM 提权通道](/security/offensive/cve-2026-69414-shieldbreak-windows-defender-zero-day-privilege-escalation-2026) - 2026-08-28 CVSS 7.8 / 无补丁 / RoguePlanet 补丁绕过 / NT Object Manager 竞争条件 / Nightmare Eclipse 第 10 次攻击
 - [TrueConf CVE-2026-72529/72530 深度拆解：从预认证沙箱进入到木马化客户端的完整攻击链](/security/offensive/trueconf-cve-2026-72529-72530-pre-auth-rce-supply-chain-2026) - 2026-09-01 CVSS 9.8/9.0 / CISA KEV 9/3 截止 / Head Mare APT / PhantomCore 后门 / 客户端安装器替换供应链
 - [CVE-2026-53362 深度拆解：当 OpenAI 的 AI Agent 自主利用 Linux 内核漏洞实现容器逃逸](/security/offensive/cve-2026-53362-linux-kernel-ipv6-container-escape-openai-agent-2026) - 2026-09-01 CVSS 7.8 / CISA KEV 8/30 截止 / IPv6 分片越界写 / OpenAI Agent 自主利用 / 容器逃逸
+- [CVE-2026-58138 深度复盘：Netflix Conductor 的 GraalVM 沙箱逃逸与 9.8 评分 RCE 链](/security/offensive/cve-2026-58138-orkes-conductor-graalvm-sandbox-escape-rce-2026) - 2026-09-02 CVSS 9.8 / 9 月 Empirical CVE of the Month / CWE-94 代码注入 / GraalVM HostAccess.ALL / 0day 真空 27 天 / 4 天内在野利用
+- [CVE-2026-82329 完整复盘：JFrog Artifactory 的 Phantom Join Key 与 4 天内首例供应链在野利用](/security/offensive/cve-2026-82329-jfrog-artifactory-phantom-join-key-auth-bypass-2026) - 2026-09-02 CVSS 9.8 / CWE-287 认证绕过 / Phantom Join Key 默认配置 / WatchTowr 在野利用 / 8 个 LTS 分支补丁
+- [ServiceNow AI Platform 三个 CVSS 10.0 漏洞深度复盘：GraphQL 代码注入、SQL 注入与配置上传越权](/security/offensive/servicenow-ai-platform-three-cvss-10-vulnerabilities-graphql-sql-injection-2026) - 2026-09-02 CVSS 10.0 ×3 / GraphQL Composite Data API / ORDER BY SQL 注入 / 图像上传越权 / 85% Fortune 500 / Assetnote Adam Kues 发现
+- [GitSpawn 深度拆解：7 个 AI 编码 Agent 如何被一个 git 配置劫持——从原理到修复的完整攻防指南](/security/offensive/manifold-gitspawn-ai-coding-agent-git-hijack-2026) - 2026-09-02 Manifold Security / core.fsmonitor / Claude Code + Cursor + Codex + Goose + Hermes + Qwen-Code + Grok Build / 7 Agent 中招
 - [AI/ML 基础设施攻击面：MLflow CVE-2026-64849 SSRF 与 rclone CVE-2026-79782 S3 凭证泄露深度分析](/security/offensive/ai-ml-infrastructure-attack-mlflow-rclone-cve-2026) - 2026-08-28 TOCTOU SSRF / S3 重定向泄露 X-Amz-Security-Token / CISA KEV 收录
+- [GitSpawn 深度拆解：7 个 AI 编码 Agent 如何被一个 git 配置劫持](/security/offensive/manifold-gitspawn-ai-coding-agent-git-hijack-2026) - 2026-09-02 CVE-2026-72718 / CVE-2026-71963 / core.fsmonitor / 7 Agent 受影响 / 4 未修复
 
 ### 🔬 供应链与工具链安全
 - [Miasma 供应链蠕虫攻击深度分析：2026 年开源生态的至暗时刻](/security/offensive/miasma-supply-chain-worm-attack-2026) - 2026-06-15
