@@ -3,7 +3,7 @@ title: Harness Engineering 2026 实战：Claude Code 源码泄露后的 AI Agent
 date: 2026-07-01
 tags:
   - ai
-  - AI Agent
+  - agent
   - Claude Code
   - 工程化
   - 开发工具

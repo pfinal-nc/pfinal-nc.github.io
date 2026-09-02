@@ -8,7 +8,7 @@ tags:
   - xAI
   - Cursor
   - AI编码
-  - Agent
+  - agent
   - LLM
   - MoE
 category: ai

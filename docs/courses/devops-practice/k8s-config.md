@@ -15,8 +15,7 @@ author: PFinal 南丞
 category: DevOps
 tags:
   - Kubernetes
-  - k8s
-  - DevOps
+  - devops
   - configmap
   - secret
   - 配置管理

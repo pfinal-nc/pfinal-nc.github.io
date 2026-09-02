@@ -10,7 +10,7 @@ keywords:
   - retry
   - 请求处理
 tags:
-  - AI
+  - ai
   - 前端开发
   - Git
   - HTTP

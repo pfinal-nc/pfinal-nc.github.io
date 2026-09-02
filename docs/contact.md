@@ -13,7 +13,7 @@ keywords:
   - 研讨会
   - PFinalClub
 tags:
-  - AI
+  - ai
   - Architecture
   - Database
   - Docker

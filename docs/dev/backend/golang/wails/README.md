@@ -9,7 +9,7 @@ keywords:
   - 桌面应用开发
   - Wails性能优化
 tags:
-  - AI
+  - ai
   - Architecture
   - 后端开发
   - Desktop

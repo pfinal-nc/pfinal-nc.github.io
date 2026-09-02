@@ -10,7 +10,7 @@ keywords:
   - Docker Compose
   - 容器化技术
 tags:
-  - DevOps
+  - devops
   - Docker
   - Tutorial
 recommend: 后端工程

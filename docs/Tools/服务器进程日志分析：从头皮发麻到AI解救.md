@@ -6,7 +6,7 @@ tags:
   - Shell
   - Linux
   - 服务器监控
-  - AI
+  - ai
 description: 维护Web服务器时，面对密密麻麻的进程信息头皮发麻？这篇文章教你用Shell脚本记录服务器状态，配合AI分析，轻松搞定进程分析、性能监控、卡顿排查等问题。
 author: PFinal南丞
 keywords:

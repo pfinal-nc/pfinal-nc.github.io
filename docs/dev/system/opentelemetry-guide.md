@@ -14,7 +14,7 @@ tags:
   - opentelemetry
   - Observability
   - tracing
-  - DevOps
+  - devops
 recommend: 后端工程
 ---
 # OpenTelemetry 实战指南

@@ -3,7 +3,7 @@ title: AI 提示词工程实战 2026：零样本 / 少样本 / 思维链 / CoT �
 date: 2026-04-24
 category: ai
 tags:
-  - AI
+  - ai
   - 提示词工程
   - LLM
   - ChatGPT

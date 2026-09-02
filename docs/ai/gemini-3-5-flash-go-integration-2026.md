@@ -2,7 +2,7 @@
 title: "Gemini 3.5 Flash + Go 集成实战：构建高性价比 AI 应用的完整指南"
 date: 2026-06-19
 tags:
-  - AI
+  - ai
   - golang
   - gemini
   - LLM

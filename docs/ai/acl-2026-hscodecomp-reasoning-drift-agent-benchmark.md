@@ -5,7 +5,7 @@ author: PFinal南丞
 description: 2026年7月8日，阿里巴巴团队斩获 ACL 2026 最佳资源论文奖——HSCodeComp 基准首次系统揭示 Agent 在真实世界复杂规则推理中的巨大缺陷：最佳 Agent 仅 46.83% 准确率 vs 人类专家 95%。推理时扩展（inference-time scaling）完全无效，过度思考反而降低性能，六大失败模式暴露 Agent 架构的结构性瓶颈。
 tags:
   - ACL2026
-  - Agent
+  - agent
   - 推理漂移
   - HSCodeComp
   - AI评测

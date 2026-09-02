@@ -4,9 +4,9 @@ description: '2026 年 7 月 Docker 发布的 AI Governance 能力深度实战�
 date: 2026-07-20
 tags:
   - Docker
-  - AI
-  - DevOps
-  - AI Agent
+  - ai
+  - devops
+  - agent
   - MCP
   - 安全
   - 沙箱

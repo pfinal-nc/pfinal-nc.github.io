@@ -8,7 +8,6 @@ tags:
   - WASM
   - WebAssembly
   - containers
-  - cloud-native
 keywords:
   - WebAssembly 2026
   - WASI Preview 2

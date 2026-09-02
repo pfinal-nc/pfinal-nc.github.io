@@ -12,9 +12,8 @@ keywords:
   - DevOps
   - Kubernetes
 tags:
-  - GitOps
+  - devops
   - 云原生
-  - DevOps
   - 持续部署
   - Kubernetes
 recommend: 后端工程

@@ -4,7 +4,6 @@ date: 2026-08-04
 tags:
   - kubernetes
   - devops
-  - cloud-native
   - container
 keywords:
   - Kubernetes 1.37

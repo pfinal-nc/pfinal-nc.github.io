@@ -13,7 +13,7 @@ keywords:
   - 手工
 recommend: 后端工程
 tags:
-  - AI
+  - ai
   - 后端开发
   - Git
   - golang

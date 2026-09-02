@@ -5,7 +5,7 @@ tags:
   - 工具
   - Qwen Code
   - 阿里云
-  - AI编程
+  - agent
 description: 掌握Qwen Code的20个实战技巧，从基础使用到高级应用，全面提升你的AI编程体验。专为中国开发者优化的AI编程助手实战指南。
 author: PFinal南丞
 keywords:

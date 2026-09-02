@@ -5,7 +5,6 @@ tags:
   - golang
   - devops
   - ebpf
-  - cloud-native
   - observability
 keywords:
   - eBPF

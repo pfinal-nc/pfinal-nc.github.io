@@ -4,9 +4,8 @@ date: 2026-06-16
 tags:
   - kubernetes
   - devops
-  - cloud-native
   - security
-  - AI
+  - ai
 keywords:
   - Kubernetes v1.36
   - K8s 1.36 Haru

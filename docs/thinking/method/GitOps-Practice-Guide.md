@@ -11,7 +11,7 @@ author: PFinal南丞
 date: 2026-04-22
 tags:
   - gitops
-  - DevOps
+  - devops
   - Kubernetes
   - cicd
 recommend: 思维方法

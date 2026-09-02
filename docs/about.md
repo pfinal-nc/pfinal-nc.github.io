@@ -19,7 +19,7 @@ keywords:
   - AI工程
 original: true
 tags:
-  - AI
+  - ai
   - Algorithm
   - Architecture
   - Crawler

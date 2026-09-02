@@ -2,7 +2,7 @@
 title: Rubrik Agent Identity 深度解析：Black Hat 2026 的 AI Agent 身份治理范式
 date: 2026-08-05
 tags:
-  - AI
+  - ai
   - security
   - MCP
 keywords:

@@ -7,7 +7,7 @@ tags:
   - llm
   - zero-day
   - supply-chain
-  - k8s
+  - devops
   - pentest
 keywords:
   - GPT-5.6

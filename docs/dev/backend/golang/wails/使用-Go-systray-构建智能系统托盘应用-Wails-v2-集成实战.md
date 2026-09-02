@@ -25,7 +25,7 @@ course:
   module: 3
   lesson: 3.1
 tags:
-  - AI
+  - ai
   - 后端开发
   - Desktop
   - Git

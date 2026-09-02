@@ -4,7 +4,6 @@ date: 2026-08-26
 tags:
   - kubernetes
   - devops
-  - cloud-native
   - k8s-1.37
   - upgrade
   - selinux

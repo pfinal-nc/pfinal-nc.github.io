@@ -4,7 +4,7 @@ date: 2025-11-28 00:00:00
 author: PFinal南丞
 category: 工具
 tags:
-  - AI编程
+  - agent
   - ChatGPT
   - 开发效率
 description: >-

@@ -3,7 +3,7 @@ title: "MCP 2026 路线图深度解读：传输层可扩展性 + 治理成熟 + 
 date: 2026-06-24
 tags:
   - mcp
-  - ai-agent
+  - agent
   - protocol
   - governance
 keywords:

@@ -20,7 +20,7 @@ keywords:
   - 性能优化
 recommend: 后端工程
 tags:
-  - AI
+  - ai
   - Architecture
   - 后端开发
   - golang

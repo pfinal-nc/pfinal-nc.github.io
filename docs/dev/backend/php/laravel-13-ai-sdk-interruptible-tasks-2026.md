@@ -4,7 +4,7 @@ date: 2026-06-16
 tags:
   - php
   - laravel
-  - AI
+  - ai
   - framework
   - backend
 keywords:

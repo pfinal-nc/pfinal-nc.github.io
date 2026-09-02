@@ -2,7 +2,7 @@
 title: Nvidia NOOA 深度解析：一个 Python 类就是一个 AI Agent 的面向对象范式革命
 date: 2026-08-05
 tags:
-  - AI
+  - ai
   - Python
   - agent
   - nvidia

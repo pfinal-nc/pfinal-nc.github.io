@@ -15,7 +15,6 @@ keywords:
 recommend: 课程
 tags:
   - courses
-  - courses
 ---
 # 📚 PFinalClub 技术课程体系
 

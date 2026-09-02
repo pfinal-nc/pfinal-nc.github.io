@@ -9,7 +9,7 @@ keywords:
   - drag-and-drop
   - 实战
 tags:
-  - AI
+  - ai
   - 前端开发
   - JavaScript
   - RxJS

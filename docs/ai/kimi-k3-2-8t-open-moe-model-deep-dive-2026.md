@@ -2,7 +2,7 @@
 title: "Kimi K3 深度解析：2.8T 全球最大开源 MoE 模型如何改写 AI 竞争格局"
 date: 2026-07-22
 tags:
-  - AI
+  - ai
   - LLM
   - MoE
   - open-source

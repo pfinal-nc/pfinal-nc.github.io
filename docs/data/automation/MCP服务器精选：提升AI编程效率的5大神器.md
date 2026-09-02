@@ -4,7 +4,7 @@ date: 2025-09-11 10:14:02
 tags:
   - 工具
   - MCP
-  - AI编程
+  - agent
   - AI Tools
 description: "MCP Server Guide 2025: 介绍 5 个核心 Model Context Protocol 服务器，帮助开发者在 Cursor、VSCode 等 AI 编辑器中保持高效工作流程。"
 author: PFinal南丞

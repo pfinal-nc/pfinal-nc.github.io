@@ -15,7 +15,7 @@ course:
   module: 1
   lesson: 1.1
 tags:
-  - AI
+  - ai
   - 前端开发
   - HTTP
   - JavaScript

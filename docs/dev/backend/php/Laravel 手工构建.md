@@ -17,7 +17,7 @@ keywords:
   - 依赖注入容器
 recommend: 后端工程
 tags:
-  - AI
+  - ai
   - Architecture
   - 后端开发
   - Database

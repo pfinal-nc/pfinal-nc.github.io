@@ -3,7 +3,7 @@ title: "OWASP Agentic AI Top 10 2026 深度解读与防御实战"
 date: "2026-06-13"
 tags:
   - security
-  - AI
+  - ai
   - owasp
   - prompt-injection
   - agent-security

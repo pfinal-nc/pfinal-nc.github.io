@@ -17,7 +17,7 @@ course:
   module: 2
   lesson: 2.1
 tags:
-  - AI
+  - ai
   - Architecture
   - 后端开发
   - Desktop

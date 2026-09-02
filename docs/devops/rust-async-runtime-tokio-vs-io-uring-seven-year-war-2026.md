@@ -6,7 +6,7 @@ tags:
   - async
   - io_uring
   - Tokio
-  - DevOps
+  - devops
   - performance
 keywords:
   - Rust async

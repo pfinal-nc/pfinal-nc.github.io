@@ -16,8 +16,7 @@ author: PFinal 南丞
 category: DevOps
 tags:
   - Kubernetes
-  - k8s
-  - DevOps
+  - devops
   - service
   - ingress
   - 网络

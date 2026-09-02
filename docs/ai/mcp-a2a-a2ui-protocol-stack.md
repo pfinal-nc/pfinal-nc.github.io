@@ -2,7 +2,7 @@
 title: "MCP + A2A + A2UI：2026 多 Agent 系统完整协议栈实战"
 date: "2026-06-07"
 tags:
-  - AI
+  - ai
   - golang
 keywords:
   - MCP

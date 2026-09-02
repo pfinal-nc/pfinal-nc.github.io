@@ -17,7 +17,7 @@ course:
   module: 2
   lesson: 2.3
 tags:
-  - AI
+  - ai
   - 后端开发
   - Desktop
   - golang

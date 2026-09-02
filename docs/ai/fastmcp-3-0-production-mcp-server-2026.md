@@ -4,7 +4,7 @@ date: "2026-06-11"
 tags:
   - mcp
   - Python
-  - ai-agent
+  - agent
   - FastMCP
   - llm
 keywords:

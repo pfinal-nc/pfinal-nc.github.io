@@ -3,7 +3,7 @@ title: "OpenAI Codex CLI 2026 生产工作流实战：从终端 Agent 到团队�
 date: "2026-07-02"
 tags:
   - ai
-  - AI Agent
+  - agent
   - 开发工具
   - OpenAI
   - Codex

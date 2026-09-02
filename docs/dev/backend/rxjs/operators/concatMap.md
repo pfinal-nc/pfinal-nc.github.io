@@ -10,7 +10,7 @@ keywords:
   - 顺序执行
   - HTTP请求
 tags:
-  - AI
+  - ai
   - 前端开发
   - HTTP
   - JavaScript

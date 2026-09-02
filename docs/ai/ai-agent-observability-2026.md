@@ -2,7 +2,7 @@
 title: "AI Agent 可观测性实战 2026：OpenTelemetry GenAI + Langfuse 生产调试完整技术栈"
 date: 2026-06-12
 tags:
-  - AI
+  - ai
   - golang
   - devops
   - MCP

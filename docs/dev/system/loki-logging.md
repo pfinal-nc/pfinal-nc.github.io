@@ -14,7 +14,7 @@ tags:
   - loki
   - logging
   - grafana
-  - DevOps
+  - devops
 recommend: 后端工程
 ---
 # Loki 日志系统实战指南

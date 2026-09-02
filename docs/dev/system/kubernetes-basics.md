@@ -13,8 +13,7 @@ keywords:
 tags:
   - Kubernetes
   - Docker
-  - DevOps
-  - cloud-native
+  - devops
 recommend: 后端工程
 ---
 # Kubernetes 基础入门：从容器编排到生产实践

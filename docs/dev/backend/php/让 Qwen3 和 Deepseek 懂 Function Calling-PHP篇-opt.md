@@ -4,7 +4,7 @@ date: 2025-11-19 15:30:00
 author: PFinal南丞
 tags:
   - php
-  - AI
+  - ai
   - Function Calling
   - 异步编程
   - 大语言模型

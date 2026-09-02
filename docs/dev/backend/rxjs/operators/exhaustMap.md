@@ -9,7 +9,7 @@ keywords:
   - 操作符
   - 防止重复提交
 tags:
-  - AI
+  - ai
   - 前端开发
   - HTTP
   - JavaScript

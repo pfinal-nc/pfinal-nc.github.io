@@ -12,8 +12,8 @@ keywords:
   - 生产部署
   - A2A
 tags:
-  - AI
-  - Agent
+  - ai
+  - agent
   - MCP
   - LLM
   - 工程化
