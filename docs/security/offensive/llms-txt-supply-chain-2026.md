@@ -7,10 +7,8 @@ tags:
   - supply-chain
   - llms-txt
   - agent
-  - prompt-injection
   - package-registry
   - mal-2026-11069
-  - pixelsquatting
   - data-integrity
   - agentic-browsing-audits
 keywords:
@@ -39,7 +37,7 @@ recommend: 安全工程
 
 攻击者没有利用任何 CVE，没有钓鱼任何员工，也没有触碰任何网络边界——他们只是注册了几个**厂商自己发布在 HTTPS 官方域名的 llms.txt 文件里、指向却从未被认领的软件包名和域名**。当 Fortune 500 公司的 AI Agent 读到这些官方指令、老老实实地执行 `pip install company-sdk` 时，装上的其实是攻击者的包。
 
-**攻击链一句话**：AI Agent 读取厂商官方 llms.txt → 按指令安装 "company-sdk" → 该包名被攻击者抢先注册 → 攻击者代码在 Agent 执行环境内运行 → 主机数据、云凭据、环境变量沦陷。
+**攻击链一句话**：AI Agent 读取厂商官方 llms.txt → 按指令安装 "company-sdk" → 该包名被攻击者抢先注册 → 攻击者代码在 Agent 执行环境内、以 Agent 的权限运行。需要强调：Pandex 的评估实验只证明了"代码执行"这个节点（内嵌只上报安装事实的信标），**未做任何数据外泄**（原文披露 "No persistence deployed, no data exfiltrated"）。但一旦攻击者掌控安装这一步，**攻击者代码就与 Agent 同权限运行**——主机数据、云凭据、环境变量是否沦陷，只取决于载荷本身，而非有没有这种能力。
 
 > **核心论断**：这不是某家厂商的 bug，而是一个渗透进整个 AI 供应链的结构性缺陷。当 AI Agent 成为最早一批"阅读并执行"内容的消费者时，**数据与代码的边界已经崩塌**——你网站上的一行文字，不再只是给人看的内容，而是跑进别人环境里的代码。
 
