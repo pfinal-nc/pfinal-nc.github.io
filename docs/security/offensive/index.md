@@ -100,6 +100,7 @@ tags:
 - [CVE-2026-82329 完整复盘：JFrog Artifactory 的 Phantom Join Key 与 4 天内首例供应链在野利用](/security/offensive/cve-2026-82329-jfrog-artifactory-phantom-join-key-auth-bypass-2026) - 2026-09-02 CVSS 9.8 / CWE-287 认证绕过 / Phantom Join Key 默认配置 / WatchTowr 在野利用 / 8 个 LTS 分支补丁
 - [ServiceNow AI Platform 三个 CVSS 10.0 漏洞深度复盘：GraphQL 代码注入、SQL 注入与配置上传越权](/security/offensive/servicenow-ai-platform-three-cvss-10-vulnerabilities-graphql-sql-injection-2026) - 2026-09-02 CVSS 10.0 ×3 / GraphQL Composite Data API / ORDER BY SQL 注入 / 图像上传越权 / 85% Fortune 500 / Assetnote Adam Kues 发现
 - [GitSpawn 深度拆解：7 个 AI 编码 Agent 如何被一个 git 配置劫持——从原理到修复的完整攻防指南](/security/offensive/manifold-gitspawn-ai-coding-agent-git-hijack-2026) - 2026-09-02 Manifold Security / core.fsmonitor / Claude Code + Cursor + Codex + Goose + Hermes + Qwen-Code + Grok Build / 7 Agent 中招
+- [llms.txt 供应链攻击深度拆解：Pandex 如何用厂商自发布的 AI 指令文件在 Fortune 500 内执行代码](/security/offensive/llms-txt-supply-chain-2026) - 2026-09-03 Pandex / Alon Hertz / 8,565 llms.txt / 237+ 未认领工件 / 首个回调 4 分钟内 / Clerk MAL-2026-11069 / 数据已变成代码
 - [AI/ML 基础设施攻击面：MLflow CVE-2026-64849 SSRF 与 rclone CVE-2026-79782 S3 凭证泄露深度分析](/security/offensive/ai-ml-infrastructure-attack-mlflow-rclone-cve-2026) - 2026-08-28 TOCTOU SSRF / S3 重定向泄露 X-Amz-Security-Token / CISA KEV 收录
 - [GitSpawn 深度拆解：7 个 AI 编码 Agent 如何被一个 git 配置劫持](/security/offensive/manifold-gitspawn-ai-coding-agent-git-hijack-2026) - 2026-09-02 CVE-2026-72718 / CVE-2026-71963 / core.fsmonitor / 7 Agent 受影响 / 4 未修复
 
