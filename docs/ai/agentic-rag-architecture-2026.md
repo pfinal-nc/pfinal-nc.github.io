@@ -54,7 +54,7 @@ if review.faithful and review.confidence >= CONF_TARGET:
 - 检索质量好 → 直接用
 - 检索质量差 → **重写查询再检索**，或升级到 web 搜索等外部源
 
-### 3. Adaptive RAG：按查询难度自适应（2026 的 SOTA）
+### 3. Adaptive RAG：按查询难度自适应（2026 最实用的路由范式）
 
 **在检索器前放一个小分类器**（T5-Large），预测查询难度：无需检索 / 单步检索 / 多步检索。
 
@@ -138,7 +138,7 @@ def agentic_rag(query, max_hops=4, conf_target=0.8):
 
 选型一句话：**检索是你的核心，选 LlamaIndex；编排是你的核心，选 LangGraph。** 两者组合是 2026 最普遍的进阶 Agentic RAG 生产栈。
 
-工具协议也在标准化——从各家自定义 tool wrapper 走向 **MCP**（2025 年 12 月捐给 Linux Foundation），让 agent 的工具调用有了统一协议。
+工具协议也在标准化——从各家自定义 tool wrapper 走向 **MCP**（2025 年 12 月 9 日，Anthropic 将其捐给 Linux Foundation 旗下的 Agentic AI Foundation，由 AAIF 托管治理），让 agent 的工具调用有了统一协议。
 
 ## 关键落地护栏：别让循环失控
 
@@ -165,12 +165,14 @@ Agentic RAG 买到了质量，也买到了一类**新故障**。没有护栏，�
 
 Agentic RAG 的失败点比静态 RAG 多得多。四个锚定指标（Ragas 定义）是评估程序的底线：
 
-| 指标 | 定义 | 生产目标 | 抓什么 |
+| 指标 | 定义 | 推荐目标 | 抓什么 |
 |---|---|---|---|
-| **Faithfulness** | 回答的每个声称都被检索上下文支持 | ≥0.9 | 幻觉 |
-| **Answer relevancy** | 回答是否对题 | ≥0.85 | 跑题生成 |
-| **Context precision** | 检索的 chunk 是否相关且排名对 | ≥0.8 | 烂检索 |
-| **Context recall** | 检索有没有漏掉必要段落 | ≥0.85 | 缺 chunk |
+| **Faithfulness** | 回答的每个声称都被检索上下文支持 | ≥0.85 | 幻觉 |
+| **Answer relevancy** | 回答是否对题 | ≥0.80 | 跑题生成 |
+| **Context precision** | 检索的 chunk 是否相关且排名对 | ≥0.70 | 烂检索 |
+| **Context recall** | 检索有没有漏掉必要段落 | ≥0.80 | 缺 chunk |
+
+> 注：上方是 Ragas 社区给出的**健康基线**（来源：Ragas 评估实践指南），非硬性标准。医疗/法务等高风险域要更严，常见通用 FAQ 可放宽。**目标应基于你自己主分支的基线上下浮动**，而不是抄一个绝对数——正确做法是：先在当前 main 分支跑一遍得出基线，再把 CI 门槛设在基线略下方，这样真实回归会触发、而 judge 的正常噪声不会误报。
 
 前两个诊断**生成器**，后两个诊断**检索器**——把它们分开，才能知道该修哪一半。忠实但低 recall 的回答 = 自信地不完整；高 recall 但低忠实 = 生成器没在听证据。
 
