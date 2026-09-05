@@ -3,13 +3,11 @@ title: "Go Wails v3 迁移实战 2026：从 v2 到 v3 的 7 个关键变更与�
 date: "2026-06-07"
 tags:
   - golang
-  - Go
   - Wails
 keywords:
   - Wails v3
   - Wails
-  - Go桌面应用
-  - Go GUI
+  - golang
   - Electron替代
   - 跨平台桌面
 category:

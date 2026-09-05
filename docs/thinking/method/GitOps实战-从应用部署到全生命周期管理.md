@@ -2,7 +2,7 @@
 title: "GitOps 生产实战 2026：ArgoCD + Kustomize 从 Jenkins 迁移到全生命周期管理"
 date: 2025-02-09 09:30:00
 tags:
-  - devops
+  - DevOps
   - Kubernetes
   - CI/CD
   - 云原生

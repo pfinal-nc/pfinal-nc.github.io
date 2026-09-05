@@ -5,7 +5,7 @@ tags:
   - golang
   - testing
   - security
-  - devops
+  - DevOps
 keywords:
   - golang
   - fuzzing

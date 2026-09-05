@@ -5,7 +5,7 @@ author: PFinal南丞
 description: "2026 年 50% 组织出货的 Agent 在生产中失败——你的 Eval 体系可能在说谎。本文带你用 Go 从零构建一个生产级 Agent 评测框架，涵盖 Agent Runner、多范式 Evaluator（ExactMatch/F1/LLM-Judge/CodeExec）、报告生成，并对比 AlphaEval/AgencyBench/AgentLens 的设计哲学。"
 tags:
   - agent
-  - Go
+  - golang
   - 评测框架
   - AI工程化
   - Agent Eval
@@ -13,7 +13,6 @@ tags:
 category: ai
 recommend: AI工程
 keywords:
-  - ai
   - ai
   - 技术博客
   - 开发

@@ -6,7 +6,7 @@ tags:
   - go-1-28
   - compiler
   - runtime
-  - performance
+  - Performance
 keywords:
   - Go 1.28
   - tree reopen

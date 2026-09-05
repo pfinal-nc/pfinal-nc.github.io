@@ -3,7 +3,6 @@ title: "Go 1.27 前瞻：泛型方法、后量子密码学与性能跃升"
 date: "2026-06-07"
 tags:
   - golang
-  - Go
 keywords:
   - Go 1.27
   - golang

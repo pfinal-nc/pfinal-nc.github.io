@@ -15,7 +15,7 @@ author: PFinal 南丞
 category: DevOps
 tags:
   - Kubernetes
-  - devops
+  - DevOps
   - deployment
   - statefulset
   - 容器编排

@@ -5,7 +5,7 @@ tags:
   - npm
   - supply-chain
   - security
-  - devops
+  - DevOps
   - chaindrop
   - shai-hulud
   - keyv

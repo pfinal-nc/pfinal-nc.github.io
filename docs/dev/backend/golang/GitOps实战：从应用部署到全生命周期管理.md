@@ -12,7 +12,7 @@ keywords:
   - DevOps
   - Kubernetes
 tags:
-  - devops
+  - DevOps
   - 云原生
   - 持续部署
   - Kubernetes

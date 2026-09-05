@@ -2,7 +2,7 @@
 title: "Python AI 框架 2026 全景对比与选型指南"
 date: "2026-06-30"
 tags:
-  - python
+  - Python
   - ai
   - machine-learning
   - deep-learning

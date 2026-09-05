@@ -5,7 +5,7 @@ tags:
   - ctf
   - security
   - container
-  - kubernetes
+  - Kubernetes
   - cloud
   - 渗透测试
 keywords:

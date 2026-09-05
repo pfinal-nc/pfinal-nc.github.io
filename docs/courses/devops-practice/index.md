@@ -15,7 +15,7 @@ author: PFinal 南丞
 category: 课程
 tags:
   - course
-  - devops
+  - DevOps
   - Docker
   - Kubernetes
   - ci-cd

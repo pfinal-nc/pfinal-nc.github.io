@@ -4,9 +4,9 @@ date: 2026-06-12
 tags:
   - ai
   - golang
-  - devops
+  - DevOps
   - MCP
-  - observability
+  - Observability
   - opentelemetry
 keywords:
   - AI Agent 可观测性

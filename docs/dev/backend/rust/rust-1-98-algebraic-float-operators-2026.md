@@ -3,7 +3,7 @@ title: Rust 1.98 代数浮点运算符深度解析：让编译器放心加速你
 date: 2026-08-13 00:00:00
 tags:
   - rust
-  - performance
+  - Performance
   - floating-point
   - simd
 keywords:

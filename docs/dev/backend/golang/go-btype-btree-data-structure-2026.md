@@ -4,7 +4,7 @@ date: 2026-06-24
 tags:
   - golang
   - data-structure
-  - performance
+  - Performance
 keywords:
   - Go btype
   - B-tree Go

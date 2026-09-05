@@ -3,11 +3,11 @@ title: "Go 1.28 PGO 默认开启实战：从 0 到 14% CPU 节省的生产级流
 date: 2026-07-17
 tags:
   - golang
-  - performance
+  - Performance
   - pgo
   - pprof
   - optimization
-  - observability
+  - Observability
 keywords:
   - Go 1.28
   - Profile-Guided Optimization

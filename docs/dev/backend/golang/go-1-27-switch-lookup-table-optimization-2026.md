@@ -4,7 +4,7 @@ date: 2026-07-12
 tags:
   - golang
   - go-1.27
-  - performance
+  - Performance
   - compiler
   - optimization
 keywords:

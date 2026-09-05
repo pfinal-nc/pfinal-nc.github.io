@@ -12,7 +12,7 @@ keywords:
   - 最佳实践
 tags:
   - CI/CD
-  - devops
+  - DevOps
   - Best Practices
   - Automation
 recommend: 后端工程

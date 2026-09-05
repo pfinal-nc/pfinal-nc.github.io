@@ -3,7 +3,7 @@ title: 'Go 1.28 路线图深度解析：Cgo 抛弃 C 工具链、泛型容器、
 description: 'Go 1.28 计划于 2026 年 8 月发布，是 Go 历史上特性最密集的一次。本文从 Go GitHub 仓库 200+ 个 Proposal 中梳理出 12 个影响最大的特性：无需 C 工具链的 Cgo、泛型 stdlib 容器、Wasm 栈切换、Green Tea GC 默认开启、SIMD 库、encoding/json/v2、Typed Struct Tags、Sharded Counters、Runtime.Free、Export Data 重构、PGO 2.0、loopvar 语义统一。'
 date: 2026-07-20
 tags:
-  - Golang
+  - golang
   - Go 1.28
   - 路线图
   - Cgo

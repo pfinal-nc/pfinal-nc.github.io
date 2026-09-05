@@ -17,7 +17,7 @@ keywords:
   - PFinalClub
 recommend: 后端工程
 tags:
-  - wails
+  - Wails
   - dev
 ---
 # Wails 教程系列 - 简介

@@ -10,7 +10,7 @@ tags:
 keywords:
   - Laravel 13
   - Laravel AI SDK
-  - PHP AI
+  - php
   - 可中断任务
   - Interruptible Tasks
 category: dev/backend/php

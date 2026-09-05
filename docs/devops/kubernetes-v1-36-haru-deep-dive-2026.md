@@ -2,8 +2,8 @@
 title: "Kubernetes v1.36 Haru 深度实战：从安全隔离到 AI 工作负载的 70 项增强"
 date: 2026-06-16
 tags:
-  - kubernetes
-  - devops
+  - Kubernetes
+  - DevOps
   - security
   - ai
 keywords:

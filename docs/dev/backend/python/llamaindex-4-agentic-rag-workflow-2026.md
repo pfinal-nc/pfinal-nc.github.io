@@ -2,7 +2,7 @@
 title: "LlamaIndex 4.0 实战 2026：文档 Agent 从 RAG 到 Agentic RAG 的 Workflow API 架构跃迁"
 date: 2026-06-18
 tags:
-  - python
+  - Python
   - ai
   - RAG
   - LlamaIndex

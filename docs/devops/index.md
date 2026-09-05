@@ -7,8 +7,7 @@ tags: [devops, cloud-native, docker, wasm, ebpf, observability, 系列]
 cover: /images/covers/devops.svg
 recommend: DevOps
 keywords:
-  - devops
-  - devops
+  - DevOps
   - 技术博客
   - 开发
 ---

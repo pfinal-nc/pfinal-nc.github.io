@@ -6,8 +6,7 @@ category: devops
 tags: [tailscale, derp, wireguard, vpn, 自建]
 recommend: DevOps
 keywords:
-  - devops
-  - devops
+  - DevOps
   - 技术博客
   - 开发
 ---

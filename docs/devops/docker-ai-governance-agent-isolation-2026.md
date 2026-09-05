@@ -5,7 +5,7 @@ date: 2026-07-20
 tags:
   - Docker
   - ai
-  - devops
+  - DevOps
   - agent
   - MCP
   - 安全
@@ -14,8 +14,7 @@ category: devops
 outline: deep
 recommend: DevOps
 keywords:
-  - devops
-  - devops
+  - DevOps
   - 技术博客
   - 开发
 ---

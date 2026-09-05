@@ -2,7 +2,7 @@
 title: Python 3.15 新特性深度解析：延迟导入、frozendict、Tachyon 采样器与 2026 年最大更新
 date: 2026-07-07
 tags:
-  - python
+  - Python
   - python3.15
   - 性能优化
   - 新特性

@@ -5,7 +5,7 @@ tags:
   - golang
   - generics
   - iterator
-  - performance
+  - Performance
 keywords:
   - Go 1.24 range over func
   - Go 迭代器模式

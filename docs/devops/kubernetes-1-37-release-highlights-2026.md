@@ -2,8 +2,8 @@
 title: "Kubernetes 1.37 正式发布：静态 Pod 禁引 Secret、SELinuxMount 默认开启、IPVS 退场——升级前必做 4 项检查"
 date: 2026-08-26
 tags:
-  - kubernetes
-  - devops
+  - Kubernetes
+  - DevOps
   - k8s-1.37
   - upgrade
   - selinux

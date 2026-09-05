@@ -3,9 +3,9 @@ title: "OpenTelemetry CNCF 毕业 90 天替代 Datadog / NewRelic / Splunk 老�
 date: 2026-07-17
 tags:
   - opentelemetry
-  - observability
+  - Observability
   - cncf
-  - devops
+  - DevOps
   - monitoring
   - otel-collector
   - datadog

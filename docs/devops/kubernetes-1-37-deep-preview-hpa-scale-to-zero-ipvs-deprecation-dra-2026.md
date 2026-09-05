@@ -2,8 +2,8 @@
 title: Kubernetes 1.37 深度预览：HPA 原生缩零、IPVS 退场倒计时、DRA 设备污点毕业
 date: 2026-08-04
 tags:
-  - kubernetes
-  - devops
+  - Kubernetes
+  - DevOps
   - container
 keywords:
   - Kubernetes 1.37

@@ -3,7 +3,7 @@ title: "Go 1.28 sync.Sharded 分片计数器实战：从缓存行伪共享到百
 date: 2026-07-26
 tags:
   - golang
-  - performance
+  - Performance
   - concurrency
   - go1-28
 keywords:
@@ -13,7 +13,7 @@ keywords:
   - false sharing
   - atomic
   - concurrency
-  - performance
+  - Performance
   - go1.28
 category: dev/backend/golang
 description: "Go 1.28 计划引入 sync.Sharded（M-local storage）以解决高并发全局计数器的缓存行争用问题。本文从 CPU 缓存一致性原理出发，手写生产级分片计数器，对比 atomic、mutex 与分片方案的性能差距，并给出 pprof 定位热点与迁移建议。"

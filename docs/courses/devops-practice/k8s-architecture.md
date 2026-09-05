@@ -15,7 +15,7 @@ author: PFinal 南丞
 category: DevOps
 tags:
   - Kubernetes
-  - devops
+  - DevOps
   - 容器编排
   - 入门教程
 recommend: 课程

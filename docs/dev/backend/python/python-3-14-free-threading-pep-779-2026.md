@@ -2,7 +2,7 @@
 title: Python 3.14 Free-Threading 正式支持深度解析：PEP 779 之后 GIL 时代的终结
 date: 2026-08-14 00:00:00
 tags:
-  - python
+  - Python
   - free-threading
   - gil
   - concurrency

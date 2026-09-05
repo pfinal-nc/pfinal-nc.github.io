@@ -6,8 +6,7 @@ category: devops
 tags: [opentelemetry, observability, go, ebpf, 监控]
 recommend: DevOps
 keywords:
-  - devops
-  - devops
+  - DevOps
   - 技术博客
   - 开发
 ---

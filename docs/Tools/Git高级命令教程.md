@@ -20,7 +20,7 @@ tags:
   - Git
   - 版本控制
   - 开发工具
-  - devops
+  - DevOps
 faq:
   - question: Git 如何找回误删或丢失的提交？
     answer: 使用 git reflog 查看所有 HEAD 变动记录，找到目标 commit hash 后用 git reset --hard 或 git cherry-pick 恢复。

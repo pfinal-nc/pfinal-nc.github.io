@@ -8,7 +8,7 @@ tags:
   - 代码质量
   - 语法糖
 keywords:
-  - PHP 8.5
+  - PHP8
   - Pipe Operator
   - 管道操作符
   - 函数组合
