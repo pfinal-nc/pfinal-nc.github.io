@@ -2381,8 +2381,6 @@ jobs:
 *   B. PSR 规范速查表
 *   C. 常用设计模式代码示例
 
-```
-
 ## 相关阅读
 
 - [PHP 8.4 新特性详解：属性钩子、非对称可见性与更多](/dev/backend/php/php-8-4-new-features)

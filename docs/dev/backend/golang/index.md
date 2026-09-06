@@ -117,6 +117,8 @@ tags:
 - [**Go 官方为函数名吵了两个月：maps.Same 提案正式通过的背后**](/dev/backend/golang/go-maps-same-proposal-identity-comparison-2026) - 2026-07-28 指针比较 / 一条 CMP 指令 / NaN 陷阱 / 泛型签名收缩
 - [**Go 1.28 泛型容器伞形提案 #80590 深度解读：6 个子提案、binary method problem 与工程取舍**](/dev/backend/golang/go-1-28-generic-containers-stdlib-2026) - 2026-08-03 issue #80590 Open / set.Set 透明 map[T]struct{} / heap/v2 重命名 / F-bounded polymorphism
 - [**Go 1.28 泛型容器实战：Set、Map、Heap 选型与性能对比**](/dev/backend/golang/go-1-28-generic-containers-practical-guide-2026) - 2026-08-28 stdlib 落地 / set.Set vs map[T]struct{} / ordered.Map vs sync.Map / heap/v2 基准 / 选型决策树
+- [**Go 1.27 SIMD 加速 ChaCha20 加密实战：7.5 倍性能提升的密码学革命**](/dev/backend/golang/go-1-27-simd-chacha20-encryption-acceleration-2026) - 2026-09-06 AVX512 / archsimd 包 / 7.5x vs stdlib / 略快于 Rust
+- [**Go SSH CVE-2026-56855/78662 深度分析：x/crypto/ssh 拒绝服务漏洞修复实践**](/dev/backend/golang/go-ssh-cve-2026-56855-78662-dos-vulnerability-2026) - 2026-09-06 CVSS 7.5 ×2 / 通道缓冲死锁 / 原子 established 状态修复
 
 ### 安全 & 供应链
 - [**Go SBOM 实战：软件供应链安全**](/dev/backend/golang/go-sbom-supply-chain-security) - SBOM 落地

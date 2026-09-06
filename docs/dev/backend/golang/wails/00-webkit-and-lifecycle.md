@@ -546,7 +546,6 @@ func (a *App) shutdown(ctx context.Context) {
     
     log.Println("Application shutdown complete")
 }
-```
 
 ## 总结
 

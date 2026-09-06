@@ -103,6 +103,7 @@ tags:
 - [llms.txt 供应链攻击深度拆解：Pandex 如何用厂商自发布的 AI 指令文件在 Fortune 500 内执行代码](/security/offensive/llms-txt-supply-chain-2026) - 2026-09-03 Pandex / Alon Hertz / 8,565 llms.txt / 237+ 未认领工件 / 首个回调 4 分钟内 / Clerk MAL-2026-11069 / 数据已变成代码
 - [CVE-2026-62911 深度分析：Exchange MRSProxy 认证绕过——Orange Tsai Pwn2Own 三链之一如何让 2.2 万台服务器邮箱沦陷](/security/offensive/cve-2026-62911-exchange-mrsproxy-ntlm-relay-mailbox-hijack-2026) - 2026-09-04 CVSS 8.0 / CWE-294 capture-replay / NTLM relay / MRSProxy 缺 EPA / Pwn2Own Berlin $200K / 21,899 台暴露 / ESU 付费墙
 - [CVE-2026-49869 深度分析：一个 endsWith() 让 Kestra 工作流引擎裸奔——CVSS 10.0 未认证 RCE 与 CISA KEV 紧急清单](/security/offensive/cve-2026-49869-kestra-endsWith-auth-bypass-rce-2026) - 2026-09-04 CVSS 10.0 / configs 后缀绕过认证 / 默认脚本插件 RCE / CISA KEV 9-05 截止 / XMRig 在野利用
+- [Januscape CVE-2026-53359 深度分析：KVM Shadow MMU Use-After-Free 虚拟机逃逸](/security/offensive/cve-2026-53359-januscape-kvm-shadow-mmu-vm-escape-2026) - 2026-09-06 Google kvmCTF / Shadow Page Table 竞态 / 92% 逃逸率 / ~5 年潜伏
 - [AI/ML 基础设施攻击面：MLflow CVE-2026-64849 SSRF 与 rclone CVE-2026-79782 S3 凭证泄露深度分析](/security/offensive/ai-ml-infrastructure-attack-mlflow-rclone-cve-2026) - 2026-08-28 TOCTOU SSRF / S3 重定向泄露 X-Amz-Security-Token / CISA KEV 收录
 - [GitSpawn 深度拆解：7 个 AI 编码 Agent 如何被一个 git 配置劫持](/security/offensive/manifold-gitspawn-ai-coding-agent-git-hijack-2026) - 2026-09-02 CVE-2026-72718 / CVE-2026-71963 / core.fsmonitor / 7 Agent 受影响 / 4 未修复
 
