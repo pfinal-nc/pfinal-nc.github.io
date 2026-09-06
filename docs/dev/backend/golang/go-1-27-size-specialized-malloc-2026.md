@@ -464,7 +464,7 @@ Go 1.27 的尺寸特化小对象分配，是 Go 编译器从"生成通用代码"
 
 ## 参考资料
 
-- [Go 1.27 Release Notes (WIP) - go.dev](https://go.dev/doc/go1.27)
+- [Go 1.27 Release Notes (正式版) - go.dev](https://go.dev/doc/go1.27)
 - [程序员茄子：Go 1.27 的小对象分配革命](https://chenxutan.com/d/4382.html)
 - [Go 1.27 GODEBUG 大清理与平台支持调整 - Go 语言中文网](https://studygolang.com/topics/18948)
 - [Tony Bai: 偿还十年技术债：Go 1.27 GODEBUG 清理](https://tonybai.com/2026/06/26/policy-for-removing-godebug-flags/)

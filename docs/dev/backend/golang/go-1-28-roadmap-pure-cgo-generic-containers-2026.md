@@ -1,6 +1,6 @@
 ---
 title: 'Go 1.28 路线图深度解析：Cgo 抛弃 C 工具链、泛型容器、Green Tea GC 全面接管'
-description: 'Go 1.28 计划于 2026 年 8 月发布，是 Go 历史上特性最密集的一次。本文从 Go GitHub 仓库 200+ 个 Proposal 中梳理出 12 个影响最大的特性：无需 C 工具链的 Cgo、泛型 stdlib 容器、Wasm 栈切换、Green Tea GC 默认开启、SIMD 库、encoding/json/v2、Typed Struct Tags、Sharded Counters、Runtime.Free、Export Data 重构、PGO 2.0、loopvar 语义统一。'
+description: 'Go 1.28 计划于 2027 年初发布，是 Go 历史上特性最密集的一次。本文从 Go GitHub 仓库 200+ 个 Proposal 中梳理出 12 个影响最大的特性：无需 C 工具链的 Cgo、泛型 stdlib 容器、Wasm 栈切换、Green Tea GC 默认开启、SIMD 库、encoding/json/v2、Typed Struct Tags、Sharded Counters、Runtime.Free、Export Data 重构、PGO 2.0、loopvar 语义统一。'
 date: 2026-07-20
 tags:
   - golang
@@ -25,7 +25,7 @@ keywords:
 
 Go 团队 2026 年 6 月在 GitHub Discussions 公布 Go 1.28 完整路线图。**这是 Go 语言历史上特性最密集的版本**——12 个核心特性横跨编译器、运行时、标准库、工具链、生态五大维度。
 
-Go 1.28 计划 2026 年 8 月发布（与 1.27 发布约 6 个月间隔）。本文从 GitHub 仓库 `golang/go` 的 200+ 个 Open Proposal 中，按"对生产环境的影响"筛选出 12 个最值得关注的核心特性。
+Go 1.28 计划 2027 年初发布（与 1.27 发布约 6 个月间隔）。本文从 GitHub 仓库 `golang/go` 的 200+ 个 Open Proposal 中，按"对生产环境的影响"筛选出 12 个最值得关注的核心特性。
 
 ## 特性总览
 

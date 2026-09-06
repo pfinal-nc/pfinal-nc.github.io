@@ -13,12 +13,12 @@ keywords:
   - GODEBUG
 category:
   - Golang
-description: "Go 1.27 预计2026年8月发布，带来泛型方法、内置uuid包、后量子密码学ML-DSA、内存分配优化30%、GODEBUG大清理等重磅更新。本文全面解析语言变化、运行时优化、标准库新增与平台支持调整。"
+description: "Go 1.27 已于 2026 年 8 月正式发布，带来泛型方法、内置uuid包、后量子密码学ML-DSA、内存分配优化30%、GODEBUG大清理等重磅更新。本文全面解析语言变化、运行时优化、标准库新增与平台支持调整。"
 recommend: 后端工程
 ---
 # Go 1.27 前瞻：泛型方法、后量子密码学与性能跃升
 
-> Go 1.27 预计于 2026 年 8 月正式发布，这是继 Go 1.26（Green Tea GC、SIMD 编程）之后的又一次重大版本更新。本文基于官方草稿发布说明，全面梳理即将到来的核心变化。
+> Go 1.27 已于 2026 年 8 月正式发布。本文写于发布前瞻阶段（基于官方草稿发布说明），全面梳理 1.27 核心变化；文中细节请以官方正式发布说明为准。
 
 ## 目录
 
@@ -651,7 +651,7 @@ Go 1.24 → 1.25 → 1.26（GC + SIMD）→ 1.27（泛型方法 + PQ）→ 1.28�
 - [Go 内存管理与垃圾回收：深入理解 GC 机制](/dev/backend/golang/go-memory-management-gc)
 ## 参考资料
 
-- [Go 1.27 Release Notes（官方草稿）](https://go.dev/doc/go1.27)
+- [Go 1.27 Release Notes（官方正式版）](https://go.dev/doc/go1.27)
 - [Go 1.27 GODEBUG 大清理详解](https://studygolang.com/topics/18948)
 - [FIPS 204: Module-Lattice-Based Digital Signature Standard](https://csrc.nist.gov/pubs/fips/204/final)
 - [Go 2026 Roadmap](https://tonybai.com/2025/11/28/go-2026-roadmap-revealed/)

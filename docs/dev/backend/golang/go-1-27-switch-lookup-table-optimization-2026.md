@@ -223,13 +223,13 @@ func BenchmarkDispatch(b *testing.B) {
 
 ### 4.2 测试结果（典型环境）
 
-在 macOS / AMD64 环境下，使用 `go1.27rc1` 与 `go1.26.5` 对比：
+在 macOS / AMD64 环境下，使用 `go1.27` 与 `go1.26.5` 对比：
 
 ```bash
 $ go1.26.5 test -bench=BenchmarkDispatch -benchmem
 BenchmarkDispatch-8    234567890    5.12 ns/op
 
-$ go1.27rc1 test -bench=BenchmarkDispatch -benchmem
+$ go1.27 test -bench=BenchmarkDispatch -benchmem
 BenchmarkDispatch-8    456789012    2.63 ns/op
 ```
 
@@ -243,12 +243,12 @@ BenchmarkDispatch-8    456789012    2.63 ns/op
 
 ```bash
 # 切换 Go 版本
-$ go install golang.org/dl/go1.27rc1@latest
-$ go1.27rc1 download
+$ go install golang.org/dl/go1.27@latest
+$ go1.27 download
 
 # 用 benchstat 对比两个版本
 $ go1.26.5 test -bench=. -count=10 > old.txt
-$ go1.27rc1 test -bench=. -count=10 > new.txt
+$ go1.27 test -bench=. -count=10 > new.txt
 $ benchstat old.txt new.txt
 ```
 

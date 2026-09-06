@@ -17,7 +17,7 @@ keywords:
   - json.Marshal
   - json.Unmarshal
 category: dev/backend/golang
-description: 2026 年 8 月 Go 1.27 正式版将冻结 encoding/json/v2 引入标准库。这是 Go 自 1.0 以来最激进的标准库重写之一：双层架构（jsontext 语法层 + json/v2 语义层）、默认严格化、2-5 倍性能提升、完整的 MarshalJSON/UnmarshalJSON 重构。本文从 RC1 实战角度拆解迁移路径、性能对比、breaking change 与生产级避坑清单。
+description: Go 1.27 正式版已于 2026 年 8 月将 encoding/json/v2 冻结进标准库。这是 Go 自 1.0 以来最激进的标准库重写之一：双层架构（jsontext 语法层 + json/v2 语义层）、默认严格化、2-5 倍性能提升、完整的 MarshalJSON/UnmarshalJSON 重构。本文从实战角度拆解迁移路径、性能对比、breaking change 与生产级避坑清单。
 recommend: 后端工程
 ---
 # Go 1.27 encoding/json/v2 迁移实战：标准库四年来最大重写的生产级指南
@@ -108,15 +108,15 @@ json.Unmarshal([]byte(`{"port":"8080"}`), &c)
 
 ## 四、迁移实战：从 v1 到 v2 的 5 步路径
 
-### 4.1 步骤 1：安装 Go 1.27 RC1 并开启 `GOEXPERIMENT=jsonv2`
+### 4.1 步骤 1：升级到 Go 1.27 正式版并开启 `GOEXPERIMENT=jsonv2`
 
 ```bash
-# 安装 RC1
-go install golang.org/dl/go1.27rc1@latest
-go1.27rc1 download
+# 安装 Go 1.27
+go install golang.org/dl/go1.27@latest
+go1.27 download
 
 # 临时启用 v2（生产前可灰度）
-GOEXPERIMENT=jsonv2 go1.27rc1 build ./...
+GOEXPERIMENT=jsonv2 go1.27 build ./...
 ```
 
 启用 `GOEXPERIMENT=jsonv2` 后，`encoding/json` 的所有方法会内部走 `v2` 实现，**但保留 v1 API 签名**。这是零风险的第一步。
@@ -219,7 +219,7 @@ type Marshaler interface {
 
 ## 五、性能基准测试对比
 
-下面是 `go1.27rc1` 实测的基准测试（Intel i7-13700H，Linux 6.1，Go 1.27rc1）：
+下面是 Go 1.27（RC1 阶段）实测的基准测试（Intel i7-13700H，Linux 6.1，Go 1.27）：
 
 ```go
 // bench_test.go

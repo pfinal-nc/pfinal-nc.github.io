@@ -301,11 +301,11 @@ GODEBUG 强制净化政策为何在这个时间点通过？背后有几个深层
 
 通过正式批准 #76163 提案，Go 语言向全球开发者展示了其还清技术债的铁腕决心，更为大模型时代的语言基建树立了一个极高标准的工程典范：**一个健康、高效、安全的分布式系统底座，必须学会在最关键的时刻，对历史包袱说不**。
 
-Go 1.27 计划于 2026 年 8 月正式发布。届时，每个 Go 开发者都将亲身经历这场"强制净化"。本文提供的不只是一份技术解析，更是一份实战迁移指南——愿它能帮助你平稳度过这场 Go 历史上最大规模的一次"技术债务清算"。
+Go 1.27 已于 2026 年 8 月正式发布，每个 Go 开发者都已亲身经历这场"强制净化"。本文提供的不只是一份技术解析，更是一份实战迁移指南——愿它能帮助你平稳度过这场 Go 历史上最大规模的一次"技术债务清算"。
 
 ## 参考资料
 
-- [Go 1.27 Release Notes (WIP) - go.dev](https://go.dev/doc/go1.27)
+- [Go 1.27 Release Notes (正式版) - go.dev](https://go.dev/doc/go1.27)
 - [Proposal #76163: GODEBUG removal policy](https://github.com/golang/go/issues/76163)
 - [Tony Bai: 偿还十年技术债：深度拆解 Go 1.27 的 GODEBUG 强力清理计划](https://tonybai.com/2026/06/26/policy-for-removing-godebug-flags/)
 - [Go 1 Compatibility Guarantee](https://go.dev/doc/go1compat)

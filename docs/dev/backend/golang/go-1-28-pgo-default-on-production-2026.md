@@ -18,12 +18,12 @@ keywords:
   - default.pgo
   - net/http/pprof
 category: dev/backend/golang
-description: "Go 1.28（2026 年 8 月发布）把 PGO 升级为一等公民：默认开启 Dynamic Inlining Heuristics 与 Enhanced Devirtualization，结合 net/http/pprof 与 continuous profiling，生产环境实测可省 10-15% CPU。本文从原理到 CI/CD 流水线，完整拆解 Go 1.28 PGO 实战。"
+description: "Go 1.28（计划 2027 年初发布）把 PGO 升级为一等公民：默认开启 Dynamic Inlining Heuristics 与 Enhanced Devirtualization，结合 net/http/pprof 与 continuous profiling，生产环境实测可省 10-15% CPU。本文从原理到 CI/CD 流水线，完整拆解 Go 1.28 PGO 实战。"
 recommend: 后端工程
 ---
 # Go 1.28 PGO 默认开启实战：从 0 到 14% CPU 节省的生产级流水线
 
-2026 年 7 月初，Go 团队在 tip.golang.org 仓库关闭了 `#65694` "default.pgo to be enabled" 的最后一个 FCP 反对意见。Go 1.28（计划 2026 年 8 月发布）将**默认开启 PGO**——也就是说，只要你升级到 1.28，CI 流水线不用任何额外配置，编译器就会自动读取 `default.pgo`、自动应用内联与去虚拟化优化。Uber 在 2025 年 Q4 完成了 142 个 Go 1.27 服务的 PGO 灰度，**平均节省 10% CPU，峰值服务（dispatch）节省 14%**。Datadog 在 2026 年 5 月发布的 `datadog-pgo` 工具已经把"采集代表性 profile → 改名为 default.pgo → go build"做成了一行命令。
+2026 年 7 月初，Go 团队在 tip.golang.org 仓库关闭了 `#65694` "default.pgo to be enabled" 的最后一个 FCP 反对意见。Go 1.28（计划 2027 年初发布）将**默认开启 PGO**——也就是说，只要你升级到 1.28，CI 流水线不用任何额外配置，编译器就会自动读取 `default.pgo`、自动应用内联与去虚拟化优化。Uber 在 2025 年 Q4 完成了 142 个 Go 1.27 服务的 PGO 灰度，**平均节省 10% CPU，峰值服务（dispatch）节省 14%**。Datadog 在 2026 年 5 月发布的 `datadog-pgo` 工具已经把"采集代表性 profile → 改名为 default.pgo → go build"做成了一行命令。
 
 PGO 不是 1.28 的新东西。Go 1.20（2023 年 2 月）就引入了 profile-guided optimization，但过去 4 年它一直是"专家级选项"：需要手动把 profile 放到 main 包根目录、需要明确知道采集窗口、要警惕 profile 漂移。1.28 的变化在于**编译器自己变得更聪明**：Dynamic Inlining Heuristics 会在没有 profile 时退回到默认内联预算，但只要检测到 `default.pgo` 就会自动切换到 PGO 模式；Enhanced Devirtualization 把"95% 命中 *bytes.Buffer 的 io.Reader.Read"这类常见模式编译成直接调用，省掉接口的 itab 间接跳转。
 
@@ -495,7 +495,7 @@ PGO 让 build 时间增加 5-15%。对一个 100 万行 monorepo，1.28 的 buil
 - [PGO AutoFDO — go.dev/design](https://go.dev/design/pgo-auto) — 1.28 默认开启的设计文档
 - [Implementing PGO in Production — zenn.dev/kkkxxx](https://zenn.dev/kkkxxx/articles/98e49de5dfe851) — 日语工程师的生产实战
 - [What Is PGO in Go — gofaq.org](https://www.gofaq.org/en/what-is-pgo-profile-guided-optimization-in-go-and-how-to-use-it) — PGO 工作原理详解
-- [Go 1.28 release notes — tip.golang.org/doc/go1.28](https://tip.golang.org/doc/go1.28) — 8 月正式发布时的官方 release notes
+- [Go 1.28 release notes — tip.golang.org/doc/go1.28](https://tip.golang.org/doc/go1.28) — 2027 年初正式发布时的官方 release notes
 
 ## 十、结语
 
