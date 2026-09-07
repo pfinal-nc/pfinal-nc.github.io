@@ -26,14 +26,14 @@ tags:
 ## 📚 精选教程系列
 
 ### 入门到精通
-- [**Go语言零基础入门教程**](/dev/backend/golang/Go语言零基础入门) - 适合初学者的完整学习路径
-- [**Go语言进阶实战**](/dev/backend/golang/Go语言进阶实战) - 从基础到高级特性全面讲解
-- [**Go并发编程深度解析**](/dev/backend/golang/Go并发编程深度解析) - goroutine、channel、select 详解
+- [**Go 基础语法速通：从零开始掌握 Go 语言**](/dev/backend/golang/go-basic-syntax) - 适合初学者的完整入门路径
+- [**Go 泛型实战：类型参数 + 约束 + 容器设计**](/dev/backend/golang/go-generics-guide) - 从基础到高级特性全面讲解
+- [**Go 并发模式进阶：Pipeline、Fan-out/Fan-in 与错误处理**](/dev/backend/golang/go-concurrency-patterns-advanced) - goroutine、channel、select 详解
 
 ### 框架与生态
-- [**2025年最佳Go Web框架深度解析**](/dev/backend/golang/2025年最佳Go-Web框架深度解析) - Gin, Echo, Fiber 等框架对比
-- [**Go微服务架构设计**](/dev/backend/golang/Go微服务架构设计) - 服务拆分、治理、通信最佳实践
-- [**Go数据库操作指南**](/dev/backend/golang/Go数据库操作) - GORM, SQLx, 连接池配置
+- [**2025年最佳Go Web框架深度解析**](/thinking/method/2025年最佳Go-Web框架深度解析：资深开发者的选择指南) - Gin, Echo, Fiber 等框架对比
+- [**Go 微服务架构实战指南：服务拆分 + gRPC + 服务发现**](/dev/backend/golang/microservices-architecture) - 服务拆分、治理、通信最佳实践
+- [**Go database/sql 实战：连接池与生产级最佳实践**](/dev/backend/golang/go-database-sql) - GORM, SQLx, 连接池配置
 
 ### 💻 桌面应用开发 (Wails)
 - [**Wails 桌面应用开发完整指南**](/dev/backend/golang/wails/) - Go 跨平台桌面应用框架
@@ -44,45 +44,45 @@ tags:
 
 ### 高级主题
 - [**Golang实现RAG系统-从OpenAI到向量数据库**](/dev/backend/golang/Golang实现RAG系统-从OpenAI到向量数据库) - AI工程实践
-- [**Go性能优化实战**](/dev/backend/golang/Go性能优化实战) - pprof, 内存优化, CPU优化
-- [**Go测试驱动开发**](/dev/backend/golang/Go测试驱动开发) - 单元测试、集成测试、性能测试
+- [**Go 性能优化实战：从 pprof 到内存管理**](/dev/backend/golang/go-performance-optimization) - pprof, 内存优化, CPU优化
+- [**Go 单元测试实战：6 种测试模式 + Fuzz 接入**](/dev/backend/golang/go-testing-guide) - 单元测试、集成测试、性能测试
 
 ## 🛠️ 实用工具与技巧
 
 ### 开发工具
-- [**Go开发环境搭建**](/dev/backend/golang/Go开发环境搭建) - IDE配置、工具链安装
+- [**Go Modules + Workspace 多模块管理实战**](/dev/backend/golang/go-workspace-modules) - 工具链安装与工程化管理
 - [**Go CLI工具开发实践**](/dev/backend/golang/Create Go App CLI 一款快速创建golang项目的工具) - 命令行工具开发
-- [**Go调试技巧大全**](/dev/backend/golang/Go调试技巧) - Delve调试器使用指南
+- [**Go goroutine 泄漏检测：从 pprof 到生产级并发调试**](/dev/backend/golang/go-goroutine-leak-detection-2026) - pprof + Delve 调试器使用指南
 
 ### 最佳实践
-- [**Go代码规范与最佳实践**](/dev/backend/golang/Go代码规范) - 代码风格、命名规范、设计模式
-- [**Go错误处理最佳实践**](/dev/backend/golang/Go错误处理最佳实践) - 错误包装、错误恢复策略
-- [**Go内存管理与GC优化**](/dev/backend/golang/Go内存管理) - 内存分配、垃圾回收调优
+- [**Go 生产级工程实践：slog 结构化日志与 health check**](/dev/backend/golang/go-production-logging-healthcheck) - 日志规范、服务健康检查
+- [**Go 错误处理实战：7 种模式从 errors.Is 到生产级 Wrapping**](/dev/backend/golang/go-error-handling) - 错误包装、错误恢复策略
+- [**Go 内存管理与 GC 深度解析：逃逸分析 + 三色标记 + 调优**](/dev/backend/golang/go-memory-management-gc) - 内存分配、垃圾回收调优
 
 ## 🚀 实战项目
 
-### 微服务项目
-- [**基于Go的电商平台微服务**](/dev/backend/golang/Go电商微服务实战) - 订单、支付、库存服务
-- [**Go实现分布式任务调度系统**](/dev/backend/golang/Go分布式任务调度) - Cron, 任务队列, 分布式锁
-- [**Go实时消息推送系统**](/dev/backend/golang/Go实时消息推送) - WebSocket, IM系统实现
+### 微服务与实时通信项目
+- [**Go gRPC 微服务实战：Proto 定义、拦截器、流式通信**](/dev/backend/golang/grpc-in-go) - 服务间通信与治理
+- [**Go WebSocket 高并发实时通信实战**](/dev/backend/golang/go-websocket-high-concurrency-2026) - WebSocket, IM系统实现
+- [**Go SSE 服务端推送实战：替代 WebSocket 的轻量方案**](/dev/backend/golang/使用Go实现服务端事件推送SSE) - Server-Sent Events 实现
 
 ### AI与数据处理
-- [**Go处理大数据流**](/dev/backend/golang/Go大数据处理) - 流式处理、批处理、ETL
-- [**Go与机器学习集成**](/dev/backend/golang/Go机器学习集成) - TensorFlow Go, ONNX, 模型推理
+- [**大模型边缘部署实战：基于 Go 的轻量级推理引擎**](/dev/backend/golang/大模型边缘部署实战：基于Go语言的轻量级推理引擎) - 模型推理、边缘计算
+- [**Go语言开发AI智能体：从 Function Calling 到 Agent 框架**](/dev/backend/golang/Go语言开发AI智能体：从Function Calling到Agent框架) - Function Calling / Agent 工程
 
 ## 📈 学习路径推荐
 
 ### 初学者路径
-1. Go基础语法 → [Go语言零基础入门教程](/dev/backend/golang/Go语言零基础入门)
-2. 标准库使用 → [Go标准库详解](/dev/backend/golang/Go标准库使用)
-3. Web开发入门 → [Go Web开发基础](/dev/backend/golang/Go Web开发基础)
-4. 项目实战 → [Go小型项目实战](/dev/backend/golang/Go小型项目实战)
+1. Go基础语法 → [Go 基础语法速通](/dev/backend/golang/go-basic-syntax)
+2. Slice/Map 与标准库 → [Go Slice 与 Map 深度解析](/dev/backend/golang/go-slice-map)
+3. Web开发入门 → [Gin 框架实战指南](/dev/backend/golang/gin-framework-guide)
+4. 项目实战 → [Go 终端小工具开发](/dev/backend/golang/Go 开发终端小工具)
 
 ### 进阶者路径
-1. 并发编程 → [Go并发编程深度解析](/dev/backend/golang/Go并发编程深度解析)
-2. 微服务架构 → [Go微服务架构设计](/dev/backend/golang/Go微服务架构设计)
-3. 性能优化 → [Go性能优化实战](/dev/backend/golang/Go性能优化实战)
-4. 高级项目 → [Go大型项目实战](/dev/backend/golang/Go大型项目实战)
+1. 并发编程 → [Go Channel 通道详解：15 个并发模式](/dev/backend/golang/go-channel-guide)
+2. 微服务架构 → [Go 微服务架构实战指南](/dev/backend/golang/microservices-architecture)
+3. 性能优化 → [Go 性能优化实战](/dev/backend/golang/go-performance-optimization)
+4. 高级主题 → [Go 内存分配深度解析：从 TCMalloc 到逃逸分析](/dev/backend/golang/Deep-Dive-Go-Memory-Allocation)
 
 ## 🔥 2026 热点系列（持续更新）
 
@@ -90,12 +90,12 @@ tags:
 - [**Go 语言 AI Agent 开发实战**](/ai/ai-agent-development-go) - Function Calling 与多工具编排
 - [**MCP 服务器开发实战：用 Go 构建 AI 工具协议**](/ai/mcp-server-practice) - MCP 协议 Go 实现
 - [**Go Micro v6 Agentic Shift 深度解析：微服务框架转身 AI Agent 运行时**](/dev/backend/golang/go-micro-v6-agentic-shift-ai-agent-runtime-2026) - 2026-07-11 Anthropic赞助 Agent=Service
-- [**Rust vs Go 2026：性能基准、内存安全与后端选型**](/dev/backend/golang/rust-vs-go-2026) - 选型决策
+- [**Rust vs Go 2026：性能基准、内存安全与后端选型**](/dev/backend/golang/rust-vs-go-2026-performance-comparison) - 选型决策
 
 ### 2026 Go 工具链与性能
-- [**Go 1.26 SIMD 编程实战**](/dev/backend/golang/Go-1-26-SIMD编程实战) - SIMD 加速
-- [**Go 1.26 工具链与语法新特性深度解析**](/dev/backend/golang/Go-1-26-工具链与语法新特性) - 最新特性
-- [**Go errgroup 结构化并发：从原理到生产最佳实践**](/dev/backend/golang/go-errgroup-structured-concurrency-2026) - 并发模式
+- [**Go 1.26 SIMD 编程实战**](/dev/backend/golang/Go 1.26 SIMD编程实战：从入门到高性能优化) - SIMD 加速
+- [**Go 1.26 工具链深度实战：new(expr) + 泛型约束 + cgo**](/dev/backend/golang/go-1-26-toolchain-new-expr-generics-cgo-2026) - 最新特性
+- [**Go errgroup 结构化并发：从原理到生产最佳实践**](/dev/backend/golang/go-errgroup-structured-concurrency) - 并发模式
 - [**Go slog 结构化日志生产最佳实践**](/dev/backend/golang/go-slog-production-best-practices-2026) - 日志规范
 - [**Go 2026 Roadmap 深度解读**](/dev/backend/golang/Go-2026-Roadmap-Deep-Dive) - 路线图
 - [**Go goroutine 泄漏检测：从 pprof 到生产级并发调试**](/dev/backend/golang/go-goroutine-leak-detection-2026) - 调试实战
@@ -134,20 +134,20 @@ tags:
 ## 📖 最新文章
 
 <div class="latest-articles-grid">
-  <a href="/dev/backend/golang/Golang实现RAG系统-从OpenAI到向量数据库" class="latest-article-card">
-    <h3>🐹 Go实现RAG系统</h3>
-    <p>从OpenAI到向量数据库的完整实现指南</p>
-    <span class="article-date">2025-12</span>
+  <a href="/dev/backend/golang/go-1-28-collections-proposal-80590-2026" class="latest-article-card">
+    <h3>🧩 Go 1.28 集合类型</h3>
+    <p>提案 #80590 深度解读：十六年终迎 Set/Hash</p>
+    <span class="article-date">2026-09</span>
   </a>
-  <a href="/dev/backend/golang/2025年最佳Go-Web框架深度解析" class="latest-article-card">
-    <h3>Framework Comparison</h3>
-    <p>2025年主流Go Web框架对比分析</p>
-    <span class="article-date">2025-11</span>
+  <a href="/dev/backend/golang/go-ssh-cve-2026-56855-78662-dos-vulnerability-2026" class="latest-article-card">
+    <h3>🔐 Go SSH CVE</h3>
+    <p>x/crypto/ssh 拒绝服务漏洞深度分析与修复实践</p>
+    <span class="article-date">2026-09</span>
   </a>
-  <a href="/dev/backend/golang/Go性能优化实战" class="latest-article-card">
-    <h3>⚡ 性能优化</h3>
-    <p>Go应用性能调优实战指南</p>
-    <span class="article-date">2025-10</span>
+  <a href="/dev/backend/golang/go-1-27-simd-chacha20-encryption-acceleration-2026" class="latest-article-card">
+    <h3>⚡ SIMD 加密加速</h3>
+    <p>Go 1.27 SIMD 加速 ChaCha20：7.5 倍性能提升</p>
+    <span class="article-date">2026-09</span>
   </a>
 </div>
 
@@ -159,4 +159,4 @@ tags:
 
 ---
 
-*本页面持续更新，汇集了PFinalClub最优质的Golang技术内容。最后更新：2026年7月*
+*本页面持续更新，汇集了PFinalClub最优质的Golang技术内容。最后更新：2026年9月*

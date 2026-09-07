@@ -24,19 +24,18 @@ tags:
 
 ## 📚 精选教程系列
 
-### 框架深度解析
+### 框架与生态
 - [**ThinkPHP近20年-中国Web开发的时代印记**](/dev/backend/php/ThinkPHP近20年-中国Web开发的时代印记) - ThinkPHP发展史与最佳实践
-- [**Laravel框架完整指南**](/dev/backend/php/Laravel完整指南) - 从安装到部署的完整学习路径
-- [**Symfony组件化开发**](/dev/backend/php/Symfony组件化开发) - 使用Symfony组件构建应用
-- [**Yii框架高性能实践**](/dev/backend/php/Yii高性能实践) - Yii框架性能优化指南
+- [**Laravel-admin 特殊路由实战**](/dev/backend/php/Laravel-Admin-Special-Routes) - Laravel 生态路由管理
+- [**Laravel Carbon 类使用指南**](/dev/backend/php/Laravel-Carbon-Class-Usage) - 时间处理与日期操作
+- [**PHP 旧项目重构实战：5 步从单体到微服务**](/dev/backend/php/PHP旧项目重构实战：从单体到微服务) - 架构演进迁移指南
 
-### 核心技术主题
-- [**PHP 8.x新特性详解**](/dev/backend/php/PHP8新特性详解) - Union Types, Attributes, Match等新功能
+### 语言特性
 - [**PHP 8.4 新特性深度解析 2026：property hooks 与 asymmetric visibility 实战**](/dev/backend/php/php-8-4-new-features) - PHP 8.4 五大新特性
 - [**PHP 8.5 Fiber 协程实战 2026**](/dev/backend/php/php-8-5-fiber-coroutine-2026) - Fiber 稳定化 + Swoole 6.0 + FrankenPHP 1.4
-- [**PHP并发与异步编程**](/dev/backend/php/PHP并发编程) - Swoole, ReactPHP, 并发处理
-- [**PHP性能优化实战**](/dev/backend/php/PHP性能优化) - OPcache, 内存管理, 查询优化
-- [**PHP安全开发指南**](/dev/backend/php/PHP安全开发) - XSS, CSRF, SQL注入防护
+- [**PHP 8.x 高阶实战：架构、性能与工程化**](/dev/backend/php/现代PHP开发实战) - 从语言特性到生产部署
+- [**PHP 生成器完整指南：从入门到协程底层原理**](/dev/backend/php/PHP 大杀器之生成器) - 生成器、yield 与内存优化
+- [**PHP 进程与线程模型分析：FPM / Swoole / Fiber**](/dev/backend/php/PHP-Process-Thread-Analysis) - 三种并发模型对比
 
 ### 🚀 2026 现代化与高并发
 - [**PHP 8.5 Pipe Operator 生产实战**](/dev/backend/php/php-8-5-pipe-operator-production-2026) - 函数式管道操作符从语法糖到架构变革（2026-07-07）
@@ -51,65 +50,66 @@ tags:
 - [**Laravel 13.20 第一方图像处理实战：Illuminate\Image 不可变 API 与生产级流水线**](/dev/backend/php/laravel-13-20-first-party-image-processing-2026) - 第一方图像处理 / 不可变管道 / GD vs Imagick / 响应式图片 / 队列处理（2026-08-05）
 
 ### 数据库与缓存
-- [**PHP数据库操作最佳实践**](/dev/backend/php/PHP数据库操作) - PDO, ORM, 查询优化
-- [**Redis在PHP中的应用**](/dev/backend/php/PHP Redis应用) - 缓存策略, 会话管理, 消息队列
-- [**MySQL与PHP深度结合**](/dev/backend/php/MySQL PHP结合) - 索引优化, 连接池, 分库分表
+- [**PHP Redis 配置详解：缓存与会话管理实战**](/dev/backend/php/Redis-Configuration-Guide) - 缓存策略, 会话管理
+- [**Redis 基础知识总结**](/dev/backend/php/Redis基本知识总结) - Redis 数据结构与命令速查
+- [**PHP 配置文件详解**](/dev/backend/php/PHP配置文件详解) - php.ini 核心配置
 
 ## 🛠️ 实用工具与技巧
 
 ### 开发工具
-- [**PHP开发环境搭建**](/dev/backend/php/PHP开发环境搭建) - Docker, Xdebug, IDE配置
+- [**PHP-FPM 配置详解：30 个核心参数与生产级调优模板**](/dev/backend/php/PHP-FPM配置文件详解) - FPM 进程池与调优
 - [**Composer依赖管理**](/Tools/Composer配置文件说明) - 依赖管理, 自定义包开发
-- [**PHP单元测试实践**](/dev/backend/php/PHP单元测试) - PHPUnit, 测试驱动开发
+- [**PHP MCP 扩展：开源实践与使用指南**](/dev/backend/php/PHP MCP 扩展) - AI 协议 PHP 集成
+- [**Coze 扩展包 PHP 版本使用指南**](/dev/backend/php/Coze 扩展包 PHP 版本) - Coze 平台 PHP 接入
 
 ### 最佳实践
-- [**PHP代码规范与PSR标准**](/dev/backend/php/PHP代码规范) - PSR-1, PSR-4, PSR-12详解
-- [**PHP设计模式应用**](/dev/backend/php/PHP设计模式) - 工厂模式, 观察者模式, 依赖注入
-- [**PHP微服务架构**](/dev/backend/php/PHP微服务) - 服务拆分, API网关, 服务通信
+- [**PHP 错误与异常处理实战：8 种错误类型与生产级模式**](/dev/backend/php/PHP 错误与异常处理) - 错误处理与异常捕获
+- [**PHP 钩子应用指南**](/dev/backend/php/PHP钩子的应用) - 钩子机制与扩展点设计
+- [**PHP $_SERVER 完全指南：超全局变量详解与实战**](/dev/backend/php/PHP $_SERVER详解) - 服务端信息与请求处理
+- [**PHP $_SESSION 引发的 Bug 深度分析与解决方案**](/dev/backend/php/PHP $_SESSION 引发的Bug) - Session 会话踩坑实录
 
 ## 🚀 实战项目
 
-### 电商系统
-- [**基于Laravel的电商平台**](/dev/backend/php/Laravel电商平台) - 订单、支付、会员系统
-- [**ThinkPHP企业站开发**](/dev/backend/php/ThinkPHP企业站) - CMS系统完整实现
-- [**PHP多商户系统**](/dev/backend/php/PHP多商户系统) - 多租户架构设计
+### 并发与异步
+- [**PHP 异步处理实战：6 种方案对比 + Swoole 协程最佳实践**](/dev/backend/php/PHP之异步处理) - Swoole / ReactPHP / 协程
+- [**Go 协程 vs PHP Fibers 并发编程对比**](/dev/backend/php/Go协程与PHP-Fibers并发编程对比) - 两种并发模型横向评测
+- [**PHP 协程池实现：从 Go 协程池到 PHP 的一次代码重构**](/dev/backend/php/PHP的协程池) - Worker Pool 模式迁移
 
-### API与微服务
-- [**PHP RESTful API开发**](/dev/backend/php/PHP RESTful API) - 认证、限流、文档生成
-- [**GraphQL with PHP**](/dev/backend/php/PHP GraphQL) - GraphQL在PHP中的应用
-- [**PHP消息队列实践**](/dev/backend/php/PHP消息队列) - RabbitMQ, Beanstalkd应用
+### AI 集成实战
+- [**PHP Function Calling 实战：让 Qwen3 和 Deepseek 兼容 OpenAI 接口**](/dev/backend/php/让 Qwen3 和 Deepseek 懂 Function Calling-PHP篇-opt) - 本地大模型函数调用
+- [**PHP 生成器完整指南：从入门到协程底层原理**](/dev/backend/php/PHP 大杀器之生成器) - 生成器实战
 
 ## 📈 学习路径推荐
 
 ### 初学者路径
-1. PHP基础语法 → [PHP基础教程](/dev/backend/php/PHP基础入门)
-2. 框架选择 → [Laravel vs ThinkPHP对比](/dev/backend/php/Laravel ThinkPHP对比)
-3. 数据库操作 → [PHP数据库操作最佳实践](/dev/backend/php/PHP数据库操作)
-4. 项目实战 → [PHP简单项目实战](/dev/backend/php/PHP项目实战)
+1. 环境搭建 → [PHP-FPM 配置详解](/dev/backend/php/PHP-FPM配置文件详解)
+2. 语言基础 → [PHP 8.4 新特性深度解析](/dev/backend/php/php-8-4-new-features)
+3. 框架入门 → [ThinkPHP 20 年实战经验](/dev/backend/php/ThinkPHP近20年-中国Web开发的时代印记)
+4. 项目实战 → [PHP Function Calling 实战](/dev/backend/php/让 Qwen3 和 Deepseek 懂 Function Calling-PHP篇-opt)
 
 ### 进阶者路径
-1. 性能优化 → [PHP性能优化实战](/dev/backend/php/PHP性能优化)
-2. 架构设计 → [PHP微服务架构](/dev/backend/php/PHP微服务)
-3. 安全加固 → [PHP安全开发指南](/dev/backend/php/PHP安全开发)
-4. 高级项目 → [PHP大型系统架构](/dev/backend/php/PHP大型架构)
+1. 并发与异步 → [PHP 异步处理实战：6 种方案](/dev/backend/php/PHP之异步处理)
+2. 性能优化 → [FrankenPHP 1.4 + Laravel Worker 模式](/dev/backend/php/frankenphp-1-4-laravel-worker-mode-2026)
+3. 架构演进 → [PHP 旧项目重构：从单体到微服务](/dev/backend/php/PHP旧项目重构实战：从单体到微服务)
+4. 错误处理 → [PHP 错误与异常处理实战](/dev/backend/php/PHP 错误与异常处理)
 
 ## 📖 最新文章
 
 <div class="latest-articles-grid">
-  <a href="/dev/backend/php/ThinkPHP近20年-中国Web开发的时代印记" class="latest-article-card">
-    <h3>🐘 ThinkPHP发展史</h3>
-    <p>近20年PHP开发在中国的发展历程</p>
-    <span class="article-date">2025-12</span>
+  <a href="/dev/backend/php/php-8-6-beta-1-io-poll-duration-2026" class="latest-article-card">
+    <h3>🚀 PHP 8.6 Beta</h3>
+    <p>Io\Poll 原生轮询、Time\Duration 与会话安全默认值</p>
+    <span class="article-date">2026-08</span>
   </a>
-  <a href="/dev/backend/php/PHP性能优化" class="latest-article-card">
-    <h3>⚡ 性能优化</h3>
-    <p>PHP应用性能调优实战指南</p>
-    <span class="article-date">2025-11</span>
+  <a href="/dev/backend/php/laravel-13-20-first-party-image-processing-2026" class="latest-article-card">
+    <h3>🖼️ Laravel 图像处理</h3>
+    <p>Illuminate\Image 不可变 API 与生产级流水线</p>
+    <span class="article-date">2026-08</span>
   </a>
-  <a href="/dev/backend/php/PHP安全开发" class="latest-article-card">
-    <h3>🔒 安全开发</h3>
-    <p>PHP应用安全防护最佳实践</p>
-    <span class="article-date">2025-10</span>
+  <a href="/dev/backend/php/php-8-6-alpha-pfa-new-features-2026" class="latest-article-card">
+    <h3>✨ PHP 8.6 Alpha</h3>
+    <p>PFA 部分函数应用与 Closure 性能爆发</p>
+    <span class="article-date">2026-07</span>
   </a>
 </div>
 
@@ -121,4 +121,4 @@ tags:
 
 ---
 
-*本页面持续更新，汇集了PFinalClub最优质的PHP技术内容。最后更新：2026年2月*
+*本页面持续更新，汇集了PFinalClub最优质的PHP技术内容。最后更新：2026年9月*

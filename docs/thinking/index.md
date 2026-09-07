@@ -83,7 +83,7 @@ recommend: 思维方法
 - [Wails 生态巡礼：GoNavi & TinyRDM](/wails-gonavi-practice)
 
 #### 系统对比
-- [现代 Web 系统开发 与 传统 Web 系统开发 的差异](/thinking/method/现代Web系统开发 与 传统Web系统开发 的差异)
+- [现代 Web 系统开发 与 传统 Web 系统开发 的差异](/thinking/现代Web系统开发 与 传统Web系统开发 的差异)
 
 #### AI 工具应用
 - [使用扣子 AI 打造公众号机器人](/thinking/notes/使用扣子AI打造公众号机器人)
