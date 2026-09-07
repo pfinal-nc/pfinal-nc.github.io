@@ -68,7 +68,7 @@ recommend: 后端工程
 - [Redis 基本知识总结](../backend/php/Redis基本知识总结.md)
 
 ### 系统架构
-- [从 0 搭建 Nginx 安全网关：3 步堵住 90% 的 Web 漏洞!](../thinking/method/nginx-security-gateway-guide.md)
+- [从 0 搭建 Nginx 安全网关：3 步堵住 90% 的 Web 漏洞!](/thinking/method/nginx-security-gateway-guide)
 
 ## 🎯 推荐阅读顺序
 

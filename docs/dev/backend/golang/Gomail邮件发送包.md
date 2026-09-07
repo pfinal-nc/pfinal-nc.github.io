@@ -793,8 +793,8 @@ Gomail 是一个功能强大且易于使用的 Go 语言邮件发送包。通过
 ---
 
 **相关阅读**：
-- [10个提升Golang开发效率的实用工具](/zh/golang/golang提升效率的小工具)
-- [Golang系统库之gopsutil](/zh/golang/golang系统库之gopsutil)
-- [Go语言主流安全库使用指南](/zh/golang/Go语言主流安全库使用指南)
+- [10个提升Golang开发效率的实用工具](/dev/backend/golang/golang提升效率的小工具)
+- [Golang系统库之gopsutil](/dev/backend/golang/golang系统库之gopsutil)
+- [Go语言主流安全库使用指南](/security/engineering/Go语言主流安全库使用指南)
 
 

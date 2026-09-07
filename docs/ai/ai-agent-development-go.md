@@ -215,5 +215,5 @@ func main() {
 ## 推荐阅读
 
 - [LLM 应用架构设计：从 RAG 到 Agent](/ai/llm-application-architecture)
-- [Go 语言开发 AI 智能体](/dev/backend/golang/Go语言开发AI智能体：从Function-Calling到Agent框架)
+- [Go 语言开发 AI 智能体](/dev/backend/golang/Go语言开发AI智能体：从Function%20Calling到Agent框架)
 - [RAG 系统架构设计与实现](/ai/rag-system-architecture)

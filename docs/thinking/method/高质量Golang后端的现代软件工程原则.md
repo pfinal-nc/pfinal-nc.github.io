@@ -2920,7 +2920,7 @@ func (bc *BlockchainClient) ListenToEvents(contractAddress string, eventName str
 
 </div>
 - [Go 语言并发模式实战指南](./Go语言并发模式实战指南.md)
-- [基于 Wails 和 Vue.js 打造跨平台桌面应用](./基于Wails和Vue.js打造跨平台桌面应用.md)
+- [基于 Wails 和 Vue.js 打造跨平台桌面应用](/dev/backend/golang/Wails-Vue-Desktop-App)
 - [Go 语言实现守护进程的技术详解](./Go语言实现守护进程的技术详解.md)
 
 ## 相关阅读

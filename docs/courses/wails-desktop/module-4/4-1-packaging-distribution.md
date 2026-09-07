@@ -45,4 +45,4 @@ wails build -platform linux/amd64
 
 ## 推荐阅读
 
-- [基于 Wails 的 Mac 桌面应用开发](/dev/backend/golang/Wails-Mac-Development)
+- [基于 Wails 的 Mac 桌面应用开发](/dev/backend/golang/wails/基于Wails的Mac桌面应用开发)

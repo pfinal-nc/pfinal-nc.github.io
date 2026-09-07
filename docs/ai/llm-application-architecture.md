@@ -171,5 +171,5 @@ func (c *SemanticCache) Get(ctx context.Context, query string) (string, bool) {
 ## 推荐阅读
 
 - [RAG 系统架构设计与实现](/ai/rag-system-architecture)
-- [Go 语言开发 AI 智能体：从 Function Calling 到 Agent 框架](/dev/backend/golang/Go语言开发AI智能体：从Function-Calling到Agent框架)
+- [Go 语言开发 AI 智能体：从 Function Calling 到 Agent 框架](/dev/backend/golang/Go语言开发AI智能体：从Function%20Calling到Agent框架)
 - [Golang 实现 RAG 系统 - 从 OpenAI 到向量数据库](/dev/backend/golang/Golang实现RAG系统-从OpenAI到向量数据库)

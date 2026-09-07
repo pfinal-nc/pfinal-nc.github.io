@@ -87,9 +87,9 @@ tags:
 - 掌握 Git 版本控制和基本 Linux 命令
 
 **推荐学习**：
-- [Golang 学习路线](../backend/golang/)
-- [PHP 现代开发实践](../backend/php/)
-- [Python 后端开发](../backend/python/)
+- [Golang 学习路线](/dev/backend/golang/)
+- [PHP 现代开发实践](/dev/backend/php/)
+- [Python 后端开发](/dev/backend/python/)
 
 #### 🚀 中级工程师（2-5 年）
 **目标**：能够独立负责子系统设计
@@ -102,7 +102,7 @@ tags:
 
 **推荐学习**：
 - [微服务架构设计](../../dev/)
-- [数据库优化](../system/database/)
+- [数据库优化](/dev/system/database/)
 - [DevOps 实践](../../dev/)
 
 #### 🎯 高级工程师（5-8 年）
@@ -202,9 +202,9 @@ tags:
 
 > 技术白皮书和系统化学习指南持续更新中...
 
-- [Golang 从入门到精通学习路线](../backend/golang/)
-- [PHP 现代开发最佳实践](../backend/php/)
-- [Python 后端开发指南](../backend/python/)
+- [Golang 从入门到精通学习路线](/dev/backend/golang/)
+- [PHP 现代开发最佳实践](/dev/backend/php/)
+- [Python 后端开发指南](/dev/backend/python/)
 
 ### 个人认知
 
@@ -238,8 +238,8 @@ tags:
 
 ## 🔗 相关专题
 
-- [后端开发](../backend/) - Golang、PHP、Python 技术栈
-- [系统与基础](../system/) - 数据库、Linux、网络基础
+- [后端开发](/dev/backend/) - Golang、PHP、Python 技术栈
+- [系统与基础](/dev/system/) - 数据库、Linux、网络基础
 - [安全工程](../../security/engineering/) - 安全架构与工程实践
 - [DevOps 实践](../../dev/) - 持续集成与部署
 

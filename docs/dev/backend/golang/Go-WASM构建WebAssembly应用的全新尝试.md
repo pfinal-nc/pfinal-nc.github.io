@@ -2620,9 +2620,9 @@ Go + WASM 技术栈代表了 Web 开发的一个重要演进方向，它将系�
 - [Go WASM 最佳实践](https://github.com/golang/go/wiki/WebAssembly)
 
 **相关文章：**
-- [Go 语言并发模式实战指南](./Go语言并发模式实战指南.md)
-- [基于 Wails 和 Vue.js 打造跨平台桌面应用](./基于Wails和Vue.js打造跨平台桌面应用.md)
-- [Go 语言实现守护进程的技术详解](./Go语言实现守护进程的技术详解.md)
+- [Go 语言并发模式实战指南](/thinking/method/Go语言并发模式实战指南)
+- [基于 Wails 和 Vue.js 打造跨平台桌面应用](/dev/backend/golang/Wails-Vue-Desktop-App)
+- [Go 语言实现守护进程的技术详解](/thinking/method/Go语言实现守护进程的技术详解)
 
 ## 相关阅读
 

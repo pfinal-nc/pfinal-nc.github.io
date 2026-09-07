@@ -153,7 +153,7 @@ author: PFinal南丞
 ## 🎯 测试与质量
 
 - [Go-testing-synctest-深度解析与实战指南](golang/Go-testing-synctest-深度解析与实战指南.md)
-- [PHP 错误与异常处理](php/PHP-错误与异常处理.md)
+- [PHP 错误与异常处理](/dev/backend/php/PHP%20错误与异常处理)
 
 ---
 

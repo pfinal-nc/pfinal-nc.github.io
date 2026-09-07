@@ -144,7 +144,7 @@ recommend: 后端工程
 
 #### 1.2 现代 PHP 实践
 - [PHP 类型系统深入](/dev/backend/php/PHP-Process-Thread-Analysis) 🟡
-- [PHP 异常处理最佳实践](/dev/backend/php/php-exception-best-practices) 🟡
+- [PHP 异常处理最佳实践](/dev/backend/php/PHP%20错误与异常处理) 🟡
 
 **📌 阶段目标**：掌握 PHP 8.x 新特性和现代 PHP 开发实践
 
@@ -310,7 +310,7 @@ recommend: 后端工程
 - [向量数据库实战](/data/automation/vector-database-guide) 🔴
 
 #### 2.2 Function Calling
-- [Function Calling 工程化实战](/dev/backend/golang/go-function-calling-agent) 🔴
+- [Go 语言开发 AI 智能体：Function Calling 到 Agent 框架](/dev/backend/golang/Go语言开发AI智能体：从Function%20Calling到Agent框架) 🔴
 
 **📌 阶段目标**：能够搭建 RAG 系统，掌握 Function Calling
 

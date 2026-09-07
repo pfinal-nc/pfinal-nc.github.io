@@ -115,7 +115,7 @@ Go 语言因其高性能和简洁语法在后端开发中广受欢迎，但安�
 
 ### 数据库安全
 
-- **[PostgreSQL Security Best Practices 2025](../system/database/PostgreSQL-Security-Best-Practices-2025.md)** - 数据库安全加固最佳实践
+- **[PostgreSQL Security Best Practices 2025](/dev/system/database/PostgreSQL-Security-Best-Practices-2025)** - 数据库安全加固最佳实践
 
 ### 数据保护要点
 
@@ -158,7 +158,7 @@ Go 语言因其高性能和简洁语法在后端开发中广受欢迎，但安�
 ### 🚀 进阶阶段（1 个月）
 3. **Web 应用安全**：学习 [Golang Web应用完整安全指南](./golang Web应用完整安全指南.md)
 4. **网络安全**：理解 [TLS/SSL 加密原理和实现](./golang 中的网络安全TLS SSL的实现.md)
-5. **数据库安全**：掌握 [PostgreSQL 安全加固](../system/database/PostgreSQL-Security-Best-Practices-2025.md)
+5. **数据库安全**：掌握 [PostgreSQL 安全加固](/dev/system/database/PostgreSQL-Security-Best-Practices-2025)
 
 ### 🎯 专家阶段（持续）
 6. **安全架构设计**：学习企业级安全架构设计方法
@@ -169,9 +169,9 @@ Go 语言因其高性能和简洁语法在后端开发中广受欢迎，但安�
 
 ## 🔗 相关专题
 
-- [PostgreSQL Security Best Practices 2025](../system/database/PostgreSQL-Security-Best-Practices-2025.md) - 数据库安全加固
+- [PostgreSQL Security Best Practices 2025](/dev/system/database/PostgreSQL-Security-Best-Practices-2025) - 数据库安全加固
 - [攻防研究](../offensive/) - 渗透测试与攻防实战
-- [DevOps 实践](../dev/) - 安全与 DevOps 的融合（DevSecOps）
+- [DevOps 实践](/dev/) - 安全与 DevOps 的融合（DevSecOps）
 
 ---
 

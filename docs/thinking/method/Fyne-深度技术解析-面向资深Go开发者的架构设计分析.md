@@ -1125,8 +1125,8 @@ func (eh *ErrorHandler) HandlePanic() {
 - [Fyne 架构设计文档](https://developer.fyne.io/architecture/)
 
 **相关文章：**
-- [Fyne vs Wails：深度对比分析](/zh/golang/Fyne与Wails深度对比-选择最适合你的Go桌面应用框架)
-- [基于Wails的Mac桌面应用开发](/zh/golang/基于Wails的Mac桌面应用开发)
+- [Fyne vs Wails：深度对比分析](/dev/backend/golang/wails/Fyne与Wails深度对比-选择最适合你的Go桌面应用框架)
+- [基于Wails的Mac桌面应用开发](/dev/backend/golang/wails/基于Wails的Mac桌面应用开发)
 - [Wails 教程系列：核心概念详解](/dev/backend/golang/wails/03-core-concepts)
 
 **实用工具：**

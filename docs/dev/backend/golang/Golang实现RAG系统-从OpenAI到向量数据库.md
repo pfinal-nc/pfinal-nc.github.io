@@ -1376,7 +1376,7 @@ func hashQuestion(q string) string {
 **关键词**：#Golang #RAG #AI #LLM #VectorDatabase #OpenAI #Qdrant #SemanticSearch #Embedding #智能问答
 
 **相关文章推荐**：
-- [Golang Socket 通信架构分析](/zh/golang/Golang%20Socket%20%E9%80%9A%E4%BF%A1%E6%9E%B6%E6%9E%84%E5%88%86%E6%9E%90%E4%B8%8E%E5%AE%9E%E7%8E%B0-%E6%9E%84%E5%BB%BA%E9%AB%98%E6%80%A7%E8%83%BD%E6%B8%B8%E6%88%8F%E6%9C%8D%E5%8A%A1%E5%99%A8)
-- [基于Golang的高性能游戏接口设计](/zh/golang/%E5%9F%BA%E4%BA%8Egolang%20%E7%9A%84%E9%AB%98%E6%80%A7%E8%83%BD%E6%B8%B8%E6%88%8F%E6%8E%A5%E5%8F%A3%E8%AE%BE%E8%AE%A1)
-- [Go开发终端小工具](/zh/golang/Go%20%E5%BC%80%E5%8F%91%E7%BB%88%E7%AB%AF%E5%B0%8F%E5%B7%A5%E5%85%B7)
+- [Golang Socket 通信架构分析](/thinking/method/Golang%20Socket%20通信架构分析与实现-构建高性能游戏服务器)
+- [基于Golang的高性能游戏接口设计](/thinking/method/基于golang%20的高性能游戏接口设计)
+- [Go开发终端小工具](/dev/backend/golang/Go%20开发终端小工具)
 

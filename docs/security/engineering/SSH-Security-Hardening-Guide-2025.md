@@ -1968,6 +1968,6 @@ PFinal南丞 - 10+ 年服务器运维与安全经验，管理过数百台服务�
 
 **相关阅读**
 
-- [PostgreSQL Security Best Practices 2025](../database/PostgreSQL-Security-Best-Practices-2025.md)
+- [PostgreSQL Security Best Practices 2025](/dev/system/database/PostgreSQL-Security-Best-Practices-2025)
 - [10个Golang安全陷阱及真正有效的修复方案](./10个Golang安全陷阱及真正有效的修复方案.md)
 - [Golang Web应用完整安全指南](./golang Web应用完整安全指南.md)

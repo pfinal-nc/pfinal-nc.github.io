@@ -27,7 +27,7 @@ recommend: 数据工程
 **AI 开发相关文章：**
 - [Golang 实现 RAG 系统：从 OpenAI 到向量数据库](/dev/backend/golang/Golang实现RAG系统-从OpenAI到向量数据库) - RAG 系统完整实战
 - [MCP 服务器开发实战](/data/automation/mcp-server-development) - AI 编程助手扩展开发
-- [Prompt Engineering 实战技巧](/security/engineering/prompt-engineering) - 提示工程技巧
+- [Prompt Engineering 实战技巧](/data/automation/prompt-engineering) - 提示工程技巧
 - [Go 1.22 新特性实战指南](/dev/backend/golang/Go-1.22新特性实战指南-路由升级与循环变量修复) - Go 语言新特性
 
 ## 为什么需要向量数据库？

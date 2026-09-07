@@ -674,6 +674,6 @@ AutoCorrect 是一个简单而实用的工具，专注于解决技术文档中�
 ---
 
 **相关阅读**：
-- [10个提升Golang开发效率的实用工具](/zh/golang/golang提升效率的小工具)
-- [Go语言开发终端小工具](/zh/golang/Go 开发终端小工具)
-- [Create Go App CLI工具使用指南](/zh/golang/Create Go App CLI 一款快速创建golang项目的工具)
+- [10个提升Golang开发效率的实用工具](/dev/backend/golang/golang提升效率的小工具)
+- [Go语言开发终端小工具](/dev/backend/golang/Go%20开发终端小工具)
+- [Create Go App CLI工具使用指南](/dev/backend/golang/Create%20Go%20App%20CLI%20一款快速创建golang项目的工具)
