@@ -148,6 +148,8 @@ PFinalClub（https://friday-go.icu）是一个由 PFinal 南丞 维护的后端 
 - [Wails 桌面应用开发 - Go 跨平台框架完整指南 | PFinalClub](https://friday-go.icu/dev/backend/golang/wails/README) — 全面的Wails桌面应用开发指南，涵盖从入门到实战的完整内容，包括教程系列、实战项目、性能优化、系统集成等，帮助Go开发者构建高性能跨平台桌面应用。
 
 ### AI Agent 系列
+- [GPT-6 Astra 深度解读：99.9% 与 62.7% 的 ARC-AGI-3 之争，"AGI 时代"宣言背后的模型真相](https://friday-go.icu/ai/gpt-6-astra-release-arc-agi-report-2026) — 2026-09-03 OpenAI 发布旗舰模型 GPT-6 Astra，ARC-AGI-3 双分数解析：Provider Adapter harness 99.9% vs Standard harness 62.7%；1.05M 上下文 + 128K 输出；OSWorld 2.0 72.6% 耗时减半；ExploitBench 100% Cyber 评级 Critical；recurrent depth 架构引发安全专家担忧；ARC Prize 明确"不宣称 AGI"
+- [NVIDIA 以 129.3 亿美元收购 Hugging Face 深度解读：开放 AI 生态的终局博弈](https://friday-go.icu/ai/nvidia-acquires-hugging-face-12-9-billion-2026) — 2026-09-03 NVIDIA 宣布以 $12,930,300,000 收购 Hugging Face，NVIDIA 史上第二大收购；平台 18M 开发者 / 3M 模型 / 500K 数据集；从拒绝 $500M 到 12.93B 成交的定价逻辑；FTC/欧盟/英国 CMA 三大洲反垄断审查；垂直封锁争议
 - [Bun Rust 重写事件深度解析：64 个 Claude Agent 11 天百万行代码迁移的技术真相与争议](https://friday-go.icu/ai/bun-rust-rewrite-ai-11-days-claude-2026)
 - [MCP 企业托管授权（EMA）2026 实战：零点击 OAuth 与 ID-JAG 身份断言链](https://friday-go.icu/ai/mcp-enterprise-managed-authorization-2026)
 - [Claude Sonnet 5 生产级 Agent 编码实战：从 API 调用到团队治理](https://friday-go.icu/ai/claude-sonnet-5-agentic-coding-production-2026)
@@ -186,6 +188,7 @@ PFinalClub（https://friday-go.icu）是一个由 PFinal 南丞 维护的后端 
 - [RAG 系统架构实战 2026：从原理到生产落地的完整指南（Python 代码 + 向量库选型）](https://friday-go.icu/ai/rag-system-architecture) — RAG 系统架构实战 2026：深入解析检索增强生成 5 大核心模块（文档处理/向量化/混合检索/重排序/评估），附 4 套生产级 Python 实现 + 6 个向量库横向对比，附 Qdrant/Milvus 性能基准。
 
 ### 安全渗透系列
+- [CVE-2026-85046 深度分析：Chrome V8 类型混淆零日，2026 年第六个在野利用的浏览器漏洞](https://friday-go.icu/security/offensive/cve-2026-85046-chrome-v8-type-confusion-zero-day-2026) — 2026-09-03 修复，CVSS 8.8；V8 PACKED_ELEMENTS 数据挂上 PACKED_SMI_ELEMENTS map 类型混淆（CWE-843）→ JavaScript 堆任意读写；Maglev + TurboFan 双编译路径受影响；CISA KEV 9-04 收录，BOD 26-04 联邦截止 9-18；同批次修复 12 个漏洞
 - [CVE-2026-49471 Serena MCP DNS Rebinding RCE：浏览器一行 URL 击穿 IDE 的完整复盘](https://friday-go.icu/security/offensive/cve-2026-49471-serena-mcp-dns-rebinding-rce) — 2026 年 7 月披露的 Serena MCP 服务器 DNS Rebinding 远程代码执行漏洞深度分析。从 CVSS 8.1 评分到 OSCP 级别的浏览器到本地服务穿透链，含复现环境搭建、攻击时间线、Solidity 智能合约级合
 - [2026 年 7 月 Patch Tuesday 5 个 CISA KEV 0-day 全景：SonicWall SMA1000 / ADFS / SharePoint / BitLocker / Langflow 攻击链复盘与企业应急手册](https://friday-go.icu/security/offensive/july-2026-patch-tuesday-5-cisa-kev-zero-day-attack-chains-2026)
 - [CVE-2026-8924 深度分析：curl 超级Cookie 注入 — 一个尾随点让 PSL 防护形同虚设](https://friday-go.icu/security/offensive/curl-cve-2026-8924-super-cookie-psl-bypass)
