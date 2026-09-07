@@ -120,6 +120,7 @@ tags:
 - [**Go 1.27 泛型方法为什么纠结了五年？Release Party 直播实录：Go 团队自曝决策内幕**](/dev/backend/golang/go-1-27-generic-methods-release-party-2026) - 2026-09-06 五人同屏 / 五年博弈 / 泛型接口方法坦承做不到
 - [**Go 1.27 SIMD 加速 ChaCha20 加密实战：7.5 倍性能提升的密码学革命**](/dev/backend/golang/go-1-27-simd-chacha20-encryption-acceleration-2026) - 2026-09-06 AVX512 / archsimd 包 / 7.5x vs stdlib / 略快于 Rust
 - [**Go SSH CVE-2026-56855/78662 深度分析：x/crypto/ssh 拒绝服务漏洞修复实践**](/dev/backend/golang/go-ssh-cve-2026-56855-78662-dos-vulnerability-2026) - 2026-09-06 CVSS 7.5 ×2 / 通道缓冲死锁 / 原子 established 状态修复
+- [**Go 1.28 集合类型提案 #80590 深度解读：十六年终迎 Set/Hash，原生 API 设计与代码实战**](/dev/backend/golang/go-1-28-collections-proposal-80590-2026) - 2026-09-07 GopherUK 2026 / Luciano Ramalho / maphash.Hasher / F-bounded polymorphism / set 代数
 
 ### 安全 & 供应链
 - [**Go SBOM 实战：软件供应链安全**](/dev/backend/golang/go-sbom-supply-chain-security) - SBOM 落地
