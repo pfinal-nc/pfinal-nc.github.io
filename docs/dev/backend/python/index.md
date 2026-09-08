@@ -59,6 +59,7 @@ tags:
 - [**Python AI 框架 2026 全景对比与选型指南**](/dev/backend/python/python-ai-frameworks-2026-comparison-guide) 🔴 - LangChain/LlamaIndex/AutoGen/CrewAI 横评（2026-06-30）
 - [**LlamaIndex 4 Agentic RAG 工作流实战**](/dev/backend/python/llamaindex-4-agentic-rag-workflow-2026) 🟡 - 2026 智能体 RAG
 - [**Polars vs Pandas vs DuckDB 2026 数据处理框架对比**](/dev/backend/python/polars-vs-pandas-vs-duckdb-2026) 🟡 - 2026 数据分析新选择
+- [**PyTorch 2.14 深度解析：nccl2 落地、容错成为 c10d 一等公民**](/dev/backend/python/pytorch-2-14-nccl2-nvgemm-fault-tolerance-2026) 🔴 - NVGEMM / Flight Recorder / Apple Silicon 8.5× 解码修复（2026-09-08）
 
 ## 🛠️ 实用工具与技巧
 
@@ -102,6 +103,11 @@ tags:
     <h3>🔥 Python JIT</h3>
     <p>Steering Council 最后通牒与 PEP 836 自救之路</p>
     <span class="article-date">2026-07</span>
+  </a>
+  <a href="/dev/backend/python/pytorch-2-14-nccl2-nvgemm-fault-tolerance-2026" class="latest-article-card">
+    <h3>⚡ PyTorch 2.14</h3>
+    <p>nccl2 落地、容错进 c10d、NVGEMM 与 Mac 8.5× 修复</p>
+    <span class="article-date">2026-09</span>
   </a>
 </div>
 
