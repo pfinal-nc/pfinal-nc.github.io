@@ -108,6 +108,7 @@ tags:
 - [AI/ML 基础设施攻击面：MLflow CVE-2026-64849 SSRF 与 rclone CVE-2026-79782 S3 凭证泄露深度分析](/security/offensive/ai-ml-infrastructure-attack-mlflow-rclone-cve-2026) - 2026-08-28 TOCTOU SSRF / S3 重定向泄露 X-Amz-Security-Token / CISA KEV 收录
 - [GitSpawn 深度拆解：7 个 AI 编码 Agent 如何被一个 git 配置劫持](/security/offensive/manifold-gitspawn-ai-coding-agent-git-hijack-2026) - 2026-09-02 CVE-2026-72718 / CVE-2026-71963 / core.fsmonitor / 7 Agent 受影响 / 4 未修复
 - [NVIDIA NemoClaw Ollama 模板投毒漏洞 CVE-2026-65105 深度分析：DNS Rebinding 击穿 0.0.0.0 绑定，攻击者通过浏览器接管本地 LLM](/security/offensive/nvidia-nemoclaw-ollama-template-poisoning-cve-2026-65105-2026) - 2026-09-07 CVSS 8.1 / OpenShell sandbox / /api/create 模型级别持久化投毒 / OLLAMA_ORIGINS 防御
+- [微软 UFO 框架 CVE-2026-73296 深度分析：Mobile MCP 无认证暴露 8020/8021 端口，Android 设备被远程接管](/security/offensive/microsoft-ufo-mobile-mcp-unauthenticated-android-takeover-cve-2026-73296-2026) - 2026-09-09 CVSS 9.4 / CWE-306+862 / 0.0.0.0 绑定触发 / 截屏+OTP 泄露 / 3.0.8 Bearer Token 修复
 - [Hermes Agent MCP 内存放大 DoS CVE-2026-84289：一份 1628 倍的 schema 如何打瘫整个 Agent](/security/offensive/nousresearch-hermes-agent-mcp-memory-amplification-dos-cve-2026-84289-2026) - 2026-09-08 CVSS 5.3 / list_tools 无边界信任 / 6.4KB→10.5MB / 429 并发槽耗尽 / 0.20.5 三层修复
 - [Deadbugz 恶意 MCP Server 供应链投毒拆解：23 个 PR、74 分钟、3 次调用后的静默叛变](/security/offensive/deadbugz-malicious-mcp-server-supply-chain-attack-2026) - 2026-09-08 延迟触发 / 元数据重写窃取 SSH key / 一次性审查结构性失效 / 工具漂移监控
 
