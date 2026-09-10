@@ -4,15 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>正在跳转…</title>
-    <meta http-equiv="refresh" content="0; url=/tools/online-tools" />
-    <link rel="canonical" href="/tools/online-tools" />
+    <!--
+      说明：/Tools/online-tools/ 带斜杠访问的兜底跳转。
+      真实文章由 docs/Tools/online-tools.md 生成，clean URL 为 /Tools/online-tools（无斜杠）。
+      注意：此处不能加 noindex —— Google 会优先 noindex 并忽略 meta refresh 重定向，
+            导致 GSC 报「被 noindex 标记排除」且跳转信号丢失。
+    -->
+    <meta http-equiv="refresh" content="0; url=/Tools/online-tools" />
+    <link rel="canonical" href="/Tools/online-tools" />
   </head>
   <body>
-    <p>正在跳转到 <a href="/tools/online-tools">/tools/online-tools</a> …</p>
+    <p>正在跳转到 <a href="/Tools/online-tools">/Tools/online-tools</a> …</p>
     <script>
-      // 说明：GitHub Pages 环境路径大小写敏感，这里做 /Tools/online-tools → /tools/online-tools 的兜底跳转
-      window.location.replace('/tools/online-tools');
+      window.location.replace('/Tools/online-tools');
     </script>
   </body>
 </html>
-
