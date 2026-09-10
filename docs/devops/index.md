@@ -30,6 +30,7 @@ keywords:
 | 7 | ☸️ K8s 1.37 预览 | [Kubernetes 1.37 深度预览：HPA 原生缩零、IPVS 退场倒计时、DRA 设备污点毕业](/devops/kubernetes-1-37-deep-preview-hpa-scale-to-zero-ipvs-deprecation-dra-2026) | 2026-08-04 |
 | 8 | ☸️ K8s 1.37 GA | [Kubernetes 1.37 正式发布：静态 Pod 禁引 Secret、SELinuxMount 默认开启、IPVS 退场](/devops/kubernetes-1-37-release-highlights-2026) | 2026-08-26 |
 | 9 | 🐛 ChainDrop npm 蠕虫 | [ChainDrop npm 蠕虫复盘：keyv 投毒、20 亿月下载量沦陷，而所有「供应链安全」控件都失灵了](/devops/chaindrop-npm-supply-chain-worm-2026) | 2026-08-28 |
+| 10 | 🧪 Agent Sandbox | [Kubernetes Agent Sandbox 深度实战：用 Sandbox CRD 给 AI Agent 造一个「轻量单容器虚拟机」](/devops/kubernetes-agent-sandbox-crd-2026) | 2026-09-10 |
 
 ## 🔍 可观测性
 
