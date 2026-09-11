@@ -113,6 +113,8 @@ tags:
 - [Deadbugz 恶意 MCP Server 供应链投毒拆解：23 个 PR、74 分钟、3 次调用后的静默叛变](/security/offensive/deadbugz-malicious-mcp-server-supply-chain-attack-2026) - 2026-09-08 延迟触发 / 元数据重写窃取 SSH key / 一次性审查结构性失效 / 工具漂移监控
 - [Postgres MCP Pro CVE-2026-85620 深度分析：一个 FROM 子句绕过只读白名单，从数据库读到宿主机任意文件](/security/offensive/postgres-mcp-pro-restricted-mode-bypass-cve-2026-85620-2026) - 2026-09-10 CVSS 9.2 Critical / CWE-863 / FuncCall vs RangeFunction AST 错配 / pg_read_file / 应用层白名单≠数据库 RBAC
 - [CVE-2026-46331 Pedit COW 深度拆解：Linux 内核 net/sched 页缓存污染提权](/security/offensive/cve-2026-46331-pedit-cow-page-cache-pollution-lpe-2026) - 2026-09-11 CVSS 7.8 / act_pedit COW 绕过 / page cache 污染 / ELF 入口点覆盖 / 容器逃逸
+- [CVE-2026-73653 Vitest Browser Mode 深度拆解：provider commands 绕过 allowWrite 的文件读写漏洞](/security/offensive/cve-2026-73653-vitest-browser-mode-allowwrite-bypass-2026) - 2026-09-11 CVSS 9.4 Critical / 6 provider commands 未检查权限 / CWE-22/552/862 / @vitest/browser ≤4.1.9 ≤3.2.6
+- [CISA KEV 修复窗口崩溃：Cisco FMC 满分 10.0 + Citrix NetScaler 9.3 + Fortinet PivotC2 三厂商边缘设备攻击浪潮深度拆解](/security/offensive/cve-2026-20079-19490-25249-cisa-kev-edge-devices-2026) - 2026-09-11 CISA KEV 9-09 更新 / 72 小时修复窗口 / UAT-12197/11823/11988 / CrimsonRAT + PivotC2 RAT
 
 ### 🔬 供应链与工具链安全
 - [Miasma 供应链蠕虫攻击深度分析：2026 年开源生态的至暗时刻](/security/offensive/miasma-supply-chain-worm-attack-2026) - 2026-06-15
