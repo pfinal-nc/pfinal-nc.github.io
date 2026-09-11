@@ -1,8 +1,8 @@
 ---
-title: "Wails 教程 2025 - Go 跨平台桌面应用开发完整指南"
+title: "Wails 教程 2026 - Go 跨平台桌面应用开发完整指南"
 date: 2025-08-22 00:00:00
 author: PFinalClub
-description: "Wails Tutorial 2025: Complete guide for building desktop apps with Go. Covers architecture design, performance optimization, and system integration for advanced Golang developers."
+description: "Wails Tutorial 2026: Complete guide for building desktop apps with Go. Covers architecture design, performance optimization, and system integration for advanced Golang developers."
 keywords:
   - wails tutorial
   - wails golang

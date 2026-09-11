@@ -1,11 +1,11 @@
 ---
-title: Stop-The-World 其实没停下 - Go GC 微暂停真相深度剖析 2025
+title: Stop-The-World 其实没停下 - Go GC 微暂停真相深度剖析 2026
 date: 2025-10-29 10:00:00
 tags:
   - golang
   - GC
   - 性能优化
-description: Go GC 微暂停真相深度剖析 2025：深入解析 Stop-The-World 机制、两次 STW 阶段、写屏障开销、三色标记算法。从源码到生产实践，定位 P99 延迟元凶。
+description: Go GC 微暂停真相深度剖析 2026：深入解析 Stop-The-World 机制、两次 STW 阶段、写屏障开销、三色标记算法。从源码到生产实践，定位 P99 延迟元凶。
 author: PFinal南丞
 keywords:
   - Go GC

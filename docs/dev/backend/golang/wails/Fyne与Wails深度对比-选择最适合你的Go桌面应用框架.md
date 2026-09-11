@@ -1,5 +1,5 @@
 ---
-title: "Fyne vs Wails 2025 - Go 桌面框架对比"
+title: "Fyne vs Wails 2026：Go 桌面框架选型对比（性能 / 架构 / 开发体验）"
 date: 2024-12-19 10:30:00
 tags:
   - golang
@@ -7,7 +7,7 @@ tags:
   - GUI框架
   - 跨平台开发
   - desktop development
-description: "Fyne vs Wails 2025: 深入对比两大 Go 桌面应用框架的架构设计、性能表现、开发体验，帮助开发者选择最适合的技术方案。"
+description: "Fyne vs Wails 2026: 深入对比两大 Go 桌面应用框架的架构设计、性能表现、开发体验，帮助开发者选择最适合的技术方案。"
 author: PFinal南丞
 keywords:
   - fyne vs wails
