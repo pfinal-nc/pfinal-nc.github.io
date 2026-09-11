@@ -112,6 +112,7 @@ tags:
 - [Hermes Agent MCP 内存放大 DoS CVE-2026-84289：一份 1628 倍的 schema 如何打瘫整个 Agent](/security/offensive/nousresearch-hermes-agent-mcp-memory-amplification-dos-cve-2026-84289-2026) - 2026-09-08 CVSS 5.3 / list_tools 无边界信任 / 6.4KB→10.5MB / 429 并发槽耗尽 / 0.20.5 三层修复
 - [Deadbugz 恶意 MCP Server 供应链投毒拆解：23 个 PR、74 分钟、3 次调用后的静默叛变](/security/offensive/deadbugz-malicious-mcp-server-supply-chain-attack-2026) - 2026-09-08 延迟触发 / 元数据重写窃取 SSH key / 一次性审查结构性失效 / 工具漂移监控
 - [Postgres MCP Pro CVE-2026-85620 深度分析：一个 FROM 子句绕过只读白名单，从数据库读到宿主机任意文件](/security/offensive/postgres-mcp-pro-restricted-mode-bypass-cve-2026-85620-2026) - 2026-09-10 CVSS 9.2 Critical / CWE-863 / FuncCall vs RangeFunction AST 错配 / pg_read_file / 应用层白名单≠数据库 RBAC
+- [CVE-2026-46331 Pedit COW 深度拆解：Linux 内核 net/sched 页缓存污染提权](/security/offensive/cve-2026-46331-pedit-cow-page-cache-pollution-lpe-2026) - 2026-09-11 CVSS 7.8 / act_pedit COW 绕过 / page cache 污染 / ELF 入口点覆盖 / 容器逃逸
 
 ### 🔬 供应链与工具链安全
 - [Miasma 供应链蠕虫攻击深度分析：2026 年开源生态的至暗时刻](/security/offensive/miasma-supply-chain-worm-attack-2026) - 2026-06-15

@@ -123,6 +123,7 @@ tags:
 - [**Go 与 HTTP QUERY 方法深度解析：RFC 10008 补齐 GET 与 POST 之间三十年的空档**](/dev/backend/golang/go-http-query-method-rfc-10008-2026) - 2026-09-10 RFC 10008 / safe+idempotent+body / Accept-Query 与 Content-Location / net/http MethodQuery / 缓存键与 CORS 陷阱
 - [**Go HTTP/2 正式迁入标准库深度解析：x/net/http2 弃用后，你的服务要改什么**](/dev/backend/golang/go-http2-stdlib-migration-2026) - 2026-09-09 issue #67810 完成 / vendored 困境终结 / h2c 与 ConfigureServer 迁移 / 升级检查清单
 - [**Go 1.28 集合类型提案 #80590 深度解读：十六年终迎 Set/Hash，原生 API 设计与代码实战**](/dev/backend/golang/go-1-28-collections-proposal-80590-2026) - 2026-09-07 GopherUK 2026 / Luciano Ramalho / maphash.Hasher / F-bounded polymorphism / set 代数
+- [**Go 1.27 后量子密码学全面落地：从 crypto/mldsa 到 TLS 集成的迁移实战**](/dev/backend/golang/go-1-27-post-quantum-cryptography-mldsa-tls-2026) - 2026-09-11 FIPS 204 ML-DSA / 混合密钥交换 X25519+ML-KEM / ML-DSA 证书链 / 三阶段迁移路径
 
 ### 安全 & 供应链
 - [**Go SBOM 实战：软件供应链安全**](/dev/backend/golang/go-sbom-supply-chain-security) - SBOM 落地
@@ -136,6 +137,11 @@ tags:
 ## 📖 最新文章
 
 <div class="latest-articles-grid">
+  <a href="/dev/backend/golang/go-1-27-post-quantum-cryptography-mldsa-tls-2026" class="latest-article-card">
+    <h3>🔐 后量子密码学</h3>
+    <p>Go 1.27 crypto/mldsa 与 TLS 混合密钥交换迁移实战</p>
+    <span class="article-date">2026-09</span>
+  </a>
   <a href="/dev/backend/golang/go-http-query-method-rfc-10008-2026" class="latest-article-card">
     <h3>🔎 HTTP QUERY 方法</h3>
     <p>RFC 10008 补齐 GET 与 POST 之间的空档</p>
@@ -149,11 +155,6 @@ tags:
   <a href="/dev/backend/golang/go-1-28-collections-proposal-80590-2026" class="latest-article-card">
     <h3>🧩 Go 1.28 集合类型</h3>
     <p>提案 #80590 深度解读：十六年终迎 Set/Hash</p>
-    <span class="article-date">2026-09</span>
-  </a>
-  <a href="/dev/backend/golang/go-ssh-cve-2026-56855-78662-dos-vulnerability-2026" class="latest-article-card">
-    <h3>🔐 Go SSH CVE</h3>
-    <p>x/crypto/ssh 拒绝服务漏洞深度分析与修复实践</p>
     <span class="article-date">2026-09</span>
   </a>
 </div>
