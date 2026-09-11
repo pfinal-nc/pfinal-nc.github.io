@@ -59,6 +59,20 @@ const redirectPages = [
   { from: 'dev/backend/php/PHP设计模式', to: '/dev/backend/php/' },
   { from: 'dev/backend/php/PHP性能优化', to: '/dev/backend/php/' },
   { from: 'dev/backend/golang/Go微服务架构设计', to: '/dev/backend/golang/' },
+
+  // 7. 2026-09-11 新增：GSC 报告的 4 个新 404（已验证全部真实 404，目标全部线上 200）
+  // 旧 /golang/ 顶层路径 → 真实文章在 /dev/backend/golang/（目录重构前外链）
+  { from: 'golang/Golang实现RAG系统-从OpenAI到向量数据库', to: '/dev/backend/golang/Golang实现RAG系统-从OpenAI到向量数据库' },
+  { from: 'golang/Golang实现RAG系统-从OpenAI到向量数据库/index', to: '/dev/backend/golang/Golang实现RAG系统-从OpenAI到向量数据库' },
+  // PHP微服务（无精确同源文章）→ 最相关的单体到微服务重构长文
+  { from: 'dev/backend/php/PHP微服务', to: '/dev/backend/php/PHP旧项目重构实战：从单体到微服务' },
+  { from: 'dev/backend/php/PHP微服务/index', to: '/dev/backend/php/PHP旧项目重构实战：从单体到微服务' },
+  // Go小型项目实战（无精确同源文章）→ Go 分类 hub
+  { from: 'dev/backend/golang/Go小型项目实战', to: '/dev/backend/golang/' },
+  { from: 'dev/backend/golang/Go小型项目实战/index', to: '/dev/backend/golang/' },
+  // 中文目录名「工具」下的 Qwen → 真实文章在 thinking/notes（空格必须写 %20）
+  { from: '工具/Qwen', to: '/thinking/notes/Qwen%20Code%2030个使用小技巧' },
+  { from: '工具/Qwen/index', to: '/thinking/notes/Qwen%20Code%2030个使用小技巧' },
 ]
 
 function createRedirect(fromPath, toPath) {
