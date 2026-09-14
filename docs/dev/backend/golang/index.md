@@ -124,6 +124,7 @@ tags:
 - [**Go HTTP/2 正式迁入标准库深度解析：x/net/http2 弃用后，你的服务要改什么**](/dev/backend/golang/go-http2-stdlib-migration-2026) - 2026-09-09 issue #67810 完成 / vendored 困境终结 / h2c 与 ConfigureServer 迁移 / 升级检查清单
 - [**Go 1.28 集合类型提案 #80590 深度解读：十六年终迎 Set/Hash，原生 API 设计与代码实战**](/dev/backend/golang/go-1-28-collections-proposal-80590-2026) - 2026-09-07 GopherUK 2026 / Luciano Ramalho / maphash.Hasher / F-bounded polymorphism / set 代数
 - [**Go 1.27 后量子密码学全面落地：从 crypto/mldsa 到 TLS 集成的迁移实战**](/dev/backend/golang/go-1-27-post-quantum-cryptography-mldsa-tls-2026) - 2026-09-11 FIPS 204 ML-DSA / 混合密钥交换 X25519+ML-KEM / ML-DSA 证书链 / 三阶段迁移路径
+- [**Go 1.27 go fix 现代化器实战：四个新 modernizer 一次跑通代码升级**](/dev/backend/golang/go-1-27-go-fix-modernizers-2026) - 2026-09-14 atomictypes / embedlit / slicesbackward / unsafefuncs / go mod tidy 两段式合并
 
 ### 安全 & 供应链
 - [**Go SBOM 实战：软件供应链安全**](/dev/backend/golang/go-sbom-supply-chain-security) - SBOM 落地
@@ -137,6 +138,11 @@ tags:
 ## 📖 最新文章
 
 <div class="latest-articles-grid">
+  <a href="/dev/backend/golang/go-1-27-go-fix-modernizers-2026" class="latest-article-card">
+    <h3>🛠️ go fix 现代化器</h3>
+    <p>Go 1.27 四个新 modernizer 一次跑通代码升级</p>
+    <span class="article-date">2026-09</span>
+  </a>
   <a href="/dev/backend/golang/go-1-27-post-quantum-cryptography-mldsa-tls-2026" class="latest-article-card">
     <h3>🔐 后量子密码学</h3>
     <p>Go 1.27 crypto/mldsa 与 TLS 混合密钥交换迁移实战</p>

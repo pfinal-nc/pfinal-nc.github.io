@@ -115,6 +115,7 @@ tags:
 - [CVE-2026-46331 Pedit COW 深度拆解：Linux 内核 net/sched 页缓存污染提权](/security/offensive/cve-2026-46331-pedit-cow-page-cache-pollution-lpe-2026) - 2026-09-11 CVSS 7.8 / act_pedit COW 绕过 / page cache 污染 / ELF 入口点覆盖 / 容器逃逸
 - [CVE-2026-73653 Vitest Browser Mode 深度拆解：provider commands 绕过 allowWrite 的文件读写漏洞](/security/offensive/cve-2026-73653-vitest-browser-mode-allowwrite-bypass-2026) - 2026-09-11 CVSS 9.4 Critical / 6 provider commands 未检查权限 / CWE-22/552/862 / @vitest/browser ≤4.1.9 ≤3.2.6
 - [CISA KEV 修复窗口崩溃：Cisco FMC 满分 10.0 + Citrix NetScaler 9.3 + Fortinet PivotC2 三厂商边缘设备攻击浪潮深度拆解](/security/offensive/cve-2026-20079-19490-25249-cisa-kev-edge-devices-2026) - 2026-09-11 CISA KEV 9-09 更新 / 72 小时修复窗口 / UAT-12197/11823/11988 / CrimsonRAT + PivotC2 RAT
+- [Wiz 90 天 AI 蜜罐报告：攻击者如何把 LiteLLM 与 MCP 服务器变成提款机](/security/offensive/wiz-ai-infrastructure-honeypot-90days-2026) - 2026-09-14 单字符 Bearer 绕过 / 内存提取 master key / Qilin 勒索关联 / .claude/unicorn 伪装 / XMRig
 
 ### 🔬 供应链与工具链安全
 - [Miasma 供应链蠕虫攻击深度分析：2026 年开源生态的至暗时刻](/security/offensive/miasma-supply-chain-worm-attack-2026) - 2026-06-15

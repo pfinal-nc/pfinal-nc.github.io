@@ -31,6 +31,7 @@ keywords:
 | 8 | ☸️ K8s 1.37 GA | [Kubernetes 1.37 正式发布：静态 Pod 禁引 Secret、SELinuxMount 默认开启、IPVS 退场](/devops/kubernetes-1-37-release-highlights-2026) | 2026-08-26 |
 | 9 | 🐛 ChainDrop npm 蠕虫 | [ChainDrop npm 蠕虫复盘：keyv 投毒、20 亿月下载量沦陷，而所有「供应链安全」控件都失灵了](/devops/chaindrop-npm-supply-chain-worm-2026) | 2026-08-28 |
 | 10 | 🧪 Agent Sandbox | [Kubernetes Agent Sandbox 深度实战：用 Sandbox CRD 给 AI Agent 造一个「轻量单容器虚拟机」](/devops/kubernetes-agent-sandbox-crd-2026) | 2026-09-10 |
+| 11 | 📐 KYAML 配置方言 | [KYAML 实战：Kubernetes 终于受不了 YAML 了，KEP-5295 新配置方言全解析](/devops/kyaml-kubernetes-yaml-dialect-kep-5295-2026) | 2026-09-14 |
 
 ## 🔍 可观测性
 
@@ -65,7 +66,7 @@ keywords:
 
 ## 📊 系列文章统计
 
-- **容器化与编排**：9 篇（Docker + K8s 1.36 + KubeCon 2026 + Docker AI Governance + Rust 异步运行时 + Kagent Agent 编排 + K8s 1.37 预览 + K8s 1.37 GA + ChainDrop npm 蠕虫）
+- **容器化与编排**：11 篇（Docker + K8s 1.36 + KubeCon 2026 + Docker AI Governance + Rust 异步运行时 + Kagent Agent 编排 + K8s 1.37 预览 + K8s 1.37 GA + ChainDrop npm 蠕虫 + Agent Sandbox + KYAML）
 - **可观测性**：3 篇（eBPF + OTel Go 1.32 + OTel CNCF 毕业）
 - **WASM 演进**：2 篇（服务端 WASI + K8s SpinKube 集成）
 - **FinOps 云成本**：1 篇（Go + OpenCost）
