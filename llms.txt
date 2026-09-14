@@ -16,6 +16,7 @@ PFinalClub（https://friday-go.icu）是一个由 PFinal 南丞 维护的后端 
 ## PFinalClub 主要内容分类
 
 ### Golang 系列（110+篇）
+- [Go 1.27 go fix 现代化器实战：四个新 modernizer 一次跑通代码升级](https://friday-go.icu/dev/backend/golang/go-1-27-go-fix-modernizers-2026) — Go 1.27 go fix 四大 modernizer 实战：atomictypes/embedlit/slicesbackward/unsafefuncs，go mod tidy 两段式合并流程
 - [Go 1.28 路线图深度解析：Cgo 抛弃 C 工具链、泛型容器、Green Tea GC 全面接管](https://friday-go.icu/dev/backend/golang/go-1-28-roadmap-pure-cgo-generic-containers-2026) — Go 1.28 计划于 2027 年初发布，是 Go 历史上特性最密集的一次。本文从 Go GitHub 仓库 200+ 个 Proposal 中梳理出 12 个影响最大的特性：无需 C 工具链的 Cgo、泛型 stdlib 容器、W
 - [Go 1.28 PGO 默认开启实战：从 0 到 14% CPU 节省的生产级流水线](https://friday-go.icu/dev/backend/golang/go-1-28-pgo-default-on-production-2026)
 - [Go 1.27 uuid 标准库包深度解析：等了 8 年终转正，数据库主键怎么选？](https://friday-go.icu/dev/backend/golang/go-1-27-uuid-standard-library-2026)
@@ -188,6 +189,10 @@ PFinalClub（https://friday-go.icu）是一个由 PFinal 南丞 维护的后端 
 - [RAG 系统架构实战 2026：从原理到生产落地的完整指南（Python 代码 + 向量库选型）](https://friday-go.icu/ai/rag-system-architecture) — RAG 系统架构实战 2026：深入解析检索增强生成 5 大核心模块（文档处理/向量化/混合检索/重排序/评估），附 4 套生产级 Python 实现 + 6 个向量库横向对比，附 Qdrant/Milvus 性能基准。
 
 ### 安全渗透系列
+- [MikroTrick 深度拆解：CERT Polska 曝光 MikroTik RouterOS 六漏洞，两条链无认证完全接管路由器](https://friday-go.icu/security/offensive/mikrotrick-routeros-ssh-auth-bypass-chain-2026) — CERT Polska 2026-09-05 披露；CVE-2026-67276 SSH e=1 认证绕过 9.2 + CVE-2026-86060 参数注入 9.2 组成无认证完全接管链；CVE-2026-67277 btest 内存泄露/崩溃 8.8；9-02 起在野利用创建 ops 账号；IP 82.192.72.4；全网 12.25 万台 SSH 暴露；修复 6.49.21/7.23.4/7.24.2；CISA KEV 双收录
+- [GitLab CVE-2026-85706 深度分析：CVSS 10.0 路径穿越漏洞，未认证读取任意文件并在披露当日即遭在野探测](https://friday-go.icu/security/offensive/cve-2026-85706-gitlab-path-traversal-arbitrary-file-read-2026) — 2026-09-11 修复，CVSS 10.0；repository commits API 路径穿越 CWE-22 + 认证执行缺失；未认证任意文件读（gitlab.rb/secrets/日志）；HackerOne s3ntago 上报；18.7-19.1.7/19.2-19.2.5/19.3-19.3.1 受影响，修复 19.1.8/19.2.6/19.3.2；watchTowr 披露当日 06:00 UTC 起在野探测；CISA KEV 9-11 收录联邦 9-14 截止；同批 CVE-2026-87719 GraphQL 反序列化
+- [CISA KEV 9/12 五漏洞批量入目录：JFrog Artifactory 链式管理员接管、ConnectWise ScreenConnect 9.9 与 MikroTik RouterOS 在野利用全景](https://friday-go.icu/security/offensive/cisa-kev-artifactory-screenconnect-routeros-2026) — CISA KEV 9-12 更新；Artifactory CVE-2026-42016 8.1 + CVE-2026-42018 7.5 链 CVE-2026-82329 9.8 管理员接管+恶意 Groovy/Rust 后门（8-15~9-08）；ScreenConnect CVE-2026-84869 9.9 活动会话未授权文件传输+执行；RouterOS 67277/86060；FCEB 截止 RouterOS 9-13/ScreenConnect 9-14/Artifactory 9-25
+- [Wiz 90 天 AI 蜜罐报告：攻击者如何把 LiteLLM 与 MCP 服务器变成提款机](https://friday-go.icu/security/offensive/wiz-ai-infrastructure-honeypot-90days-2026) — Wiz 90 天蜜罐实测；单字符 Bearer 绕过；内存提取 OpenAI/Anthropic master key；Qilin 勒索关联；.claude/unicorn 伪装；XMRig 挖矿；LiteLLM 配置接管
 - [CVE-2026-73653 Vitest Browser Mode 深度拆解：provider commands 绕过 allowWrite 的文件读写漏洞](https://friday-go.icu/security/offensive/cve-2026-73653-vitest-browser-mode-allowwrite-bypass-2026) — 2026-09-09 公开，CVSS 9.4 Critical；6 个内置 provider commands 未检查 allowWrite 权限；CWE-22/552/862；@vitest/browser ≤4.1.9/≤3.2.6/≤5.0.0-beta.5 受影响；修复 4.1.10/3.2.7/5.0.0-beta.6
 - [CISA KEV 修复窗口崩溃：Cisco FMC 满分 10.0 + Citrix NetScaler 9.3 + Fortinet PivotC2 三厂商边缘设备攻击浪潮深度拆解](https://friday-go.icu/security/offensive/cve-2026-20079-19490-25249-cisa-kev-edge-devices-2026) — CISA KEV 9-09 更新；联邦 9-12 截止；CVE-2026-20079 Cisco FMC CVSS 10.0 预认证 root；CVE-2026-19490 Citrix NetScaler 9.3 蜜罐 56 次利用尝试；CVE-2025-25249 Fortinet PivotC2 RAT 3000+ 目标
 - [CVE-2026-85046 深度分析：Chrome V8 类型混淆零日，2026 年第六个在野利用的浏览器漏洞](https://friday-go.icu/security/offensive/cve-2026-85046-chrome-v8-type-confusion-zero-day-2026) — 2026-09-03 修复，CVSS 8.8；V8 PACKED_ELEMENTS 数据挂上 PACKED_SMI_ELEMENTS map 类型混淆（CWE-843）→ JavaScript 堆任意读写；Maglev + TurboFan 双编译路径受影响；CISA KEV 9-04 收录，BOD 26-04 联邦截止 9-18；同批次修复 12 个漏洞
@@ -249,6 +254,7 @@ PFinalClub（https://friday-go.icu）是一个由 PFinal 南丞 维护的后端 
 - [Go语言主流安全库使用指南](https://friday-go.icu/security/engineering/Go语言主流安全库使用指南) — 详细介绍Go语言主流安全库的使用方法，包括crypto、encoding、hash、math、rand、strconv、time等库的使用，帮助开发者更好地保护应用程序的安全性。
 
 ### DevOps / 云原生系列
+- [KYAML 实战：Kubernetes 终于受不了 YAML 了，KEP-5295 新配置方言全解析](https://friday-go.icu/devops/kyaml-kubernetes-yaml-dialect-kep-5295-2026) — KEP-5295 YAML 严格子集：1.34 Alpha→1.35 Beta→1.37 GA；Norway Bug 歧义消除；kubectl -o kyaml 输出
 - [Docker AI Governance 生产实战：让 AI Agent 在沙箱里"翻箱倒柜"，而你的笔记本毫发无伤](https://friday-go.icu/devops/docker-ai-governance-agent-isolation-2026) — 2026 年 7 月 Docker 发布的 AI Governance 能力深度实战。从默认沙箱（Default Sandbox）到 Hub 治理（Governance in Hub）、MCP 工具级权限、Secret Mount 体系、审
 - [OpenTelemetry CNCF 毕业 90 天替代 Datadog / NewRelic / Splunk 老栈：可观测性实操指南](https://friday-go.icu/devops/opentelemetry-cncf-graduation-replace-vendor-stack-2026)
 - [KubeCon Europe 2026 深度复盘：82% 采用率 vs 7% AI 部署率——云原生的第二次创始时刻](https://friday-go.icu/devops/kubecon-europe-2026-ai-execution-gap-cloud-native-deep-dive)
