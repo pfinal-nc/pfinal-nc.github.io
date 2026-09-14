@@ -115,6 +115,9 @@ tags:
 - [CVE-2026-46331 Pedit COW 深度拆解：Linux 内核 net/sched 页缓存污染提权](/security/offensive/cve-2026-46331-pedit-cow-page-cache-pollution-lpe-2026) - 2026-09-11 CVSS 7.8 / act_pedit COW 绕过 / page cache 污染 / ELF 入口点覆盖 / 容器逃逸
 - [CVE-2026-73653 Vitest Browser Mode 深度拆解：provider commands 绕过 allowWrite 的文件读写漏洞](/security/offensive/cve-2026-73653-vitest-browser-mode-allowwrite-bypass-2026) - 2026-09-11 CVSS 9.4 Critical / 6 provider commands 未检查权限 / CWE-22/552/862 / @vitest/browser ≤4.1.9 ≤3.2.6
 - [CISA KEV 修复窗口崩溃：Cisco FMC 满分 10.0 + Citrix NetScaler 9.3 + Fortinet PivotC2 三厂商边缘设备攻击浪潮深度拆解](/security/offensive/cve-2026-20079-19490-25249-cisa-kev-edge-devices-2026) - 2026-09-11 CISA KEV 9-09 更新 / 72 小时修复窗口 / UAT-12197/11823/11988 / CrimsonRAT + PivotC2 RAT
+- [GitLab CVE-2026-85706 深度分析：CVSS 10.0 路径穿越漏洞，未认证读取任意文件并在披露当日即遭在野探测](/security/offensive/cve-2026-85706-gitlab-path-traversal-arbitrary-file-read-2026) - 2026-09-14 CVSS 10.0 / commits API CWE-22 / 未认证任意文件读取 / watchTowr 在野探测 / 19.1.8+19.2.6+19.3.2 / KEV 9-14 截止
+- [CISA KEV 9/12 五漏洞批量入目录：JFrog Artifactory 链式管理员接管、ConnectWise ScreenConnect 9.9 与 MikroTik RouterOS 在野利用全景](/security/offensive/cisa-kev-artifactory-screenconnect-routeros-2026) - 2026-09-14 KEV 五漏洞 / Artifactory 42016+42018+82329 链式接管 / ScreenConnect 84869 CVSS 9.9 / RouterOS MikroTrick / FCEB 9-13/9-14/9-25
+- [MikroTrick 深度拆解：CERT Polska 曝光 MikroTik RouterOS 六漏洞，两条链无认证完全接管路由器](/security/offensive/mikrotrick-routeros-ssh-auth-bypass-chain-2026) - 2026-09-14 CERT Polska / CVE-2026-67276 SSH e=1 认证绕过 9.2 / CVE-2026-86060 参数注入 9.2 / btest 内存泄露 8.8 / ops 账号 / 82.192.72.4 / 122,500 台暴露
 - [Wiz 90 天 AI 蜜罐报告：攻击者如何把 LiteLLM 与 MCP 服务器变成提款机](/security/offensive/wiz-ai-infrastructure-honeypot-90days-2026) - 2026-09-14 单字符 Bearer 绕过 / 内存提取 master key / Qilin 勒索关联 / .claude/unicorn 伪装 / XMRig
 
 ### 🔬 供应链与工具链安全
