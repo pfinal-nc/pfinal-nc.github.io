@@ -1,5 +1,5 @@
 ---
-title: "Go Security Best Practices 2025 - 10个安全陷阱及修复方案"
+title: "Go Security Best Practices 2026 - 10个安全陷阱及修复方案"
 date: 2025-08-20 14:30:00
 tags:
   - golang
@@ -20,7 +20,7 @@ keywords:
   - 安全编码
   - PFinalClub
 recommend: 安全
-description: "Go Security Best Practices 2025: 发现 Go 开发中的 10 个关键安全陷阱，包括 SQL 注入、XSS、CSRF 防护，学习真正有效的修复方案。"
+description: "Go Security Best Practices 2026: 发现 Go 开发中的 10 个关键安全陷阱，包括 SQL 注入、XSS、CSRF 防护，学习真正有效的修复方案。"
 ---
 
 ## 引言：Go安全，你真的了解吗？

@@ -119,6 +119,7 @@ tags:
 - [CISA KEV 9/12 五漏洞批量入目录：JFrog Artifactory 链式管理员接管、ConnectWise ScreenConnect 9.9 与 MikroTik RouterOS 在野利用全景](/security/offensive/cisa-kev-artifactory-screenconnect-routeros-2026) - 2026-09-14 KEV 五漏洞 / Artifactory 42016+42018+82329 链式接管 / ScreenConnect 84869 CVSS 9.9 / RouterOS MikroTrick / FCEB 9-13/9-14/9-25
 - [MikroTrick 深度拆解：CERT Polska 曝光 MikroTik RouterOS 六漏洞，两条链无认证完全接管路由器](/security/offensive/mikrotrick-routeros-ssh-auth-bypass-chain-2026) - 2026-09-14 CERT Polska / CVE-2026-67276 SSH e=1 认证绕过 9.2 / CVE-2026-86060 参数注入 9.2 / btest 内存泄露 8.8 / ops 账号 / 82.192.72.4 / 122,500 台暴露
 - [Wiz 90 天 AI 蜜罐报告：攻击者如何把 LiteLLM 与 MCP 服务器变成提款机](/security/offensive/wiz-ai-infrastructure-honeypot-90days-2026) - 2026-09-14 单字符 Bearer 绕过 / 内存提取 master key / Qilin 勒索关联 / .claude/unicorn 伪装 / XMRig
+- [PaperCut AI Agent 蜂群事件复盘：一个攻击者、数百个 Agent、26 秒攻破 11 家组织](/security/offensive/greynoise-papercut-ai-agent-swarm-395-orgs-2026) - 2026-09-15 GreyNoise / Codex+DeepSeek 编排 / CVE-2026-81578+82078 链 / 48 国 395 组织 440 台 / 7 分钟域管 / agents gone wild
 
 ### 🔬 供应链与工具链安全
 - [Miasma 供应链蠕虫攻击深度分析：2026 年开源生态的至暗时刻](/security/offensive/miasma-supply-chain-worm-attack-2026) - 2026-06-15

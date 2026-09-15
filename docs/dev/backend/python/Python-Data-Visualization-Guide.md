@@ -1,5 +1,5 @@
 ---
-title: Python 数据可视化实战 2025 - Matplotlib 与 Seaborn 从入门到精通
+title: Python 数据可视化实战 2026 - Matplotlib 与 Seaborn 从入门到精通
 date: 2025-12-16 00:00:00
 updated: 2025-12-16T00:00:00.000Z
 authors:

@@ -1,5 +1,5 @@
 ---
-title: "2025 年最佳 Go Web 框架深度解析：资深开发者的选择指南"
+title: "2026 年最佳 Go Web 框架深度解析：资深开发者的选择指南"
 description: "全面评测 2025 年主流 Go Web 框架：Gin、Echo、Fiber、Chi，从性能、功能、生态等维度分析，帮助你选择最适合项目的框架。"
 keywords:
   - Go Web 框架

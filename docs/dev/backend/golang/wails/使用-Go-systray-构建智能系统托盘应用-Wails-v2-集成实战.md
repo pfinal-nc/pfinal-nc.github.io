@@ -1,5 +1,5 @@
 ---
-title: Go systray 构建系统托盘应用实战 2025 - Wails v2 集成完整指南
+title: Go systray 构建系统托盘应用实战 2026 - Wails v2 集成完整指南
 date: 2025-01-28 10:00:02
 author: PFinal南丞
 tag:

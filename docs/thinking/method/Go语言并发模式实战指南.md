@@ -1,5 +1,5 @@
 ---
-title: "Go Concurrency Patterns 2025 - 7种核心并发模式实战指南"
+title: "Go Concurrency Patterns 2026 - 7种核心并发模式实战指南"
 slug: "go-concurrency-patterns-guide"
 date: 2024-11-08 00:00:00
 updated: 2024-11-08
@@ -28,7 +28,7 @@ keywords:
   - goroutine最佳实践
   - PFinalClub
 summary: "Go Concurrency Patterns Guide: 深入解析 7 种核心并发模式（Worker Pool、Fan-Out/Fan-In、Pipeline 等），包含实际应用场景和性能对比。"
-description: "Go Concurrency Patterns 2025: Master 7 essential Go concurrency patterns with practical examples. Includes worker pools, fan-out/fan-in, pipelines, and performance optimization."
+description: "Go Concurrency Patterns 2026: Master 7 essential Go concurrency patterns with practical examples. Includes worker pools, fan-out/fan-in, pipelines, and performance optimization."
 readingTime: 18
 status: "published"
 toc: true

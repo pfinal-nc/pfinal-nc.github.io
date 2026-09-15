@@ -1,8 +1,8 @@
 ---
-title: "Fyne 深度技术解析 2025 - Go 原生 GUI 框架架构与实战指南"
+title: "Fyne 深度技术解析 2026 - Go 原生 GUI 框架架构与实战指南"
 date: 2025-01-27 00:00:00
 author: PFinal南丞
-description: Fyne 深度技术解析 2025：Go 原生 GUI 框架的架构设计、渲染引擎、Widget 系统完整剖析。含与 Wails 的对比分析、主题定制、跨平台适配实战代码。
+description: Fyne 深度技术解析 2026：Go 原生 GUI 框架的架构设计、渲染引擎、Widget 系统完整剖析。含与 Wails 的对比分析、主题定制、跨平台适配实战代码。
 tags:
   - golang
   - GUI

@@ -1,5 +1,5 @@
 ---
-title: "Python 3.13/3.14 No-GIL 实战 2025：免 GIL 并发性能测试与迁移指南"
+title: "Python 3.13/3.14 No-GIL 实战 2026：免 GIL 并发性能测试与迁移指南"
 description: "深入测试 Python 3.13 实验性与 3.14 正式支持的 free-threading 模式，包含无 GIL 并发基准测试、C 扩展兼容性验证、生产环境迁移可行性评估，附完整代码示例"
 date: 2025-12-15
 tags: [Python, No-GIL, PEP-703, 并发编程, Python313, 性能测试]

@@ -1,6 +1,6 @@
 ---
-title: PHP 8.x 高阶实战 2025 - 架构、性能与工程化完整指南
-description: PHP 8.x 高阶实战 2025：Attributes、Enums、Fibers 等新特性深度解析，Laravel 框架、API 设计、并发编程、DevOps 工程化完整指南。
+title: PHP 8.x 高阶实战 2026 - 架构、性能与工程化完整指南
+description: PHP 8.x 高阶实战 2026：Attributes、Enums、Fibers 等新特性深度解析，Laravel 框架、API 设计、并发编程、DevOps 工程化完整指南。
 keywords:
   - PHP8
   - Laravel

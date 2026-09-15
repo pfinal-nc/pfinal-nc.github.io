@@ -1,5 +1,5 @@
 ---
-title: PostgreSQL 10 个鲜为人知功能 2025 - 告别 Elasticsearch 和 MongoDB
+title: PostgreSQL 10 个鲜为人知功能 2026 - 告别 Elasticsearch 和 MongoDB
 date: 2025-01-20 00:00:00
 tags:
     - PostgreSQL

@@ -25,10 +25,12 @@ const EXCLUDE_PREFIXES = [
   '/.vitepress/',
 ]
 
-// 需要排除的文件名
-const EXCLUDE_FILES = [
-  'index.md', // 根 index 会变成首页 URL，单独处理
-]
+// 仅排除根 index.md（其 URL 由下方首页条目单独处理）。
+// 注意：绝不能用 endsWith('index.md') —— 那会把所有目录级 index.md（分类 hub 页，
+// 如 /dev/backend/golang/、/ai/、/Tools/）全部排除，导致 27 个高权重导航页从 sitemap 消失。
+function isRootIndex(relPath) {
+  return relPath === 'index.md'
+}
 
 function findAllMarkdownFiles(dir, baseDir = dir) {
   let results = []
@@ -51,7 +53,7 @@ function findAllMarkdownFiles(dir, baseDir = dir) {
         // 检查是否应该排除
         const urlPath = '/' + relPath.replace(/\.md$/, '').replace(/\\/g, '/')
         const shouldExclude = EXCLUDE_PREFIXES.some(p => urlPath.startsWith(p)) ||
-                             EXCLUDE_FILES.some(f => relPath.endsWith(f))
+                             isRootIndex(relPath)
         
         if (!shouldExclude) {
           results.push({
@@ -135,14 +137,22 @@ const indexPaths = [
 for (const file of allFiles) {
   // 清理 URL 路径
   let urlPath = file.urlPath
-  
+
+  // 目录级 index.md（如 dev/backend/golang/index.md）→ 分类 hub 页。
+  // URL 需带尾斜杠，与 VitePress 生成的 canonical URL（如 /dev/backend/golang/）保持一致。
+  const isDirIndex = /\/index$/.test(urlPath)
+
   // 移除可能的 /index 后缀
   urlPath = urlPath.replace(/\/index$/, '') || '/'
-  
+
+  if (isDirIndex && urlPath !== '/') {
+    urlPath = urlPath + '/'
+  }
+
   const fullUrl = `${HOSTNAME}${encodePath(urlPath)}`
-  
-  // 计算 priority
-  const pathNorm = urlPath.replace(/^\//, '')
+
+  // 计算 priority（去尾斜杠后与 indexPaths 匹配）
+  const pathNorm = urlPath.replace(/^\//, '').replace(/\/$/, '')
   let priority = '0.7'  // 默认文章优先级
   let changefreq = 'monthly'
   
