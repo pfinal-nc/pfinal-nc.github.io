@@ -36,6 +36,7 @@ tags:
 - [代码安全扫描自动化](/security/engineering/从手动到自动-Go语言助力快速识别代码中的安全隐患) - 自动化安全检测
 
 ### 🔥 2026 攻防热点系列
+- **🔥 [PaperCut AI Agent 蜂群事件复盘：一个攻击者、数百个 Agent、26 秒攻破 11 家组织](/security/offensive/greynoise-papercut-ai-agent-swarm-395-orgs-2026) - 2026-09-15 ⭐ GreyNoise 实录 / AI 编排攻击首例大规模实证**
 - [2026 H1 漏洞态势报告：供应链与 AI 成主战场](/security/offensive/2026-h1-vulnerability-landscape) - 半年盘点
 - [OWASP API Security Top 10 2026 + Go 防御实战](/security/offensive/owasp-api-security-top10-2026-go) - API 安全
 - [OWASP Agentic AI Top 10 2026 深度解读与防御实战](/security/offensive/owasp-agentic-ai-top10-2026) - AI Agent 安全
