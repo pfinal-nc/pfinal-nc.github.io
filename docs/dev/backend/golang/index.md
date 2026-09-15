@@ -1,6 +1,6 @@
 ---
-title: "Golang 开发技术专题 2025 - 从入门到精通的实战指南"
-description: "Golang开发技术专题：从基础语法到高级架构设计，涵盖微服务、并发编程、性能优化等核心主题。2025年最新Golang开发实践指南。"
+title: "Golang 开发技术专题 2026 - 从入门到精通的实战指南"
+description: "Golang开发技术专题：从基础语法到高级架构设计，涵盖微服务、并发编程、性能优化等核心主题。2026年最新Golang开发实践指南。"
 keywords:
   - Golang教程
   - Go语言实战
@@ -125,6 +125,7 @@ tags:
 - [**Go 1.28 集合类型提案 #80590 深度解读：十六年终迎 Set/Hash，原生 API 设计与代码实战**](/dev/backend/golang/go-1-28-collections-proposal-80590-2026) - 2026-09-07 GopherUK 2026 / Luciano Ramalho / maphash.Hasher / F-bounded polymorphism / set 代数
 - [**Go 1.27 后量子密码学全面落地：从 crypto/mldsa 到 TLS 集成的迁移实战**](/dev/backend/golang/go-1-27-post-quantum-cryptography-mldsa-tls-2026) - 2026-09-11 FIPS 204 ML-DSA / 混合密钥交换 X25519+ML-KEM / ML-DSA 证书链 / 三阶段迁移路径
 - [**Go 1.27 go fix 现代化器实战：四个新 modernizer 一次跑通代码升级**](/dev/backend/golang/go-1-27-go-fix-modernizers-2026) - 2026-09-14 atomictypes / embedlit / slicesbackward / unsafefuncs / go mod tidy 两段式合并
+- [**Ebitengine 2.10 纯 Go 化：桌面平台告别 cgo，AI Agent 有了官方调试入口**](/dev/backend/golang/ebitengine-2-10-pure-go-desktop-2026) - 2026-09-15 PureGo 方案 / 交叉编译一条命令 / Application Virtualization / AI Agent headless 调试
 
 ### 安全 & 供应链
 - [**Go SBOM 实战：软件供应链安全**](/dev/backend/golang/go-sbom-supply-chain-security) - SBOM 落地
@@ -138,6 +139,11 @@ tags:
 ## 📖 最新文章
 
 <div class="latest-articles-grid">
+  <a href="/dev/backend/golang/ebitengine-2-10-pure-go-desktop-2026" class="latest-article-card">
+    <h3>🎮 Ebitengine 2.10</h3>
+    <p>桌面平台纯 Go 化，AI Agent 官方调试入口</p>
+    <span class="article-date">2026-09</span>
+  </a>
   <a href="/dev/backend/golang/go-1-27-go-fix-modernizers-2026" class="latest-article-card">
     <h3>🛠️ go fix 现代化器</h3>
     <p>Go 1.27 四个新 modernizer 一次跑通代码升级</p>
