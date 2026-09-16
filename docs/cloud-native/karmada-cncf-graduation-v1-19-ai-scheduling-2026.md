@@ -54,7 +54,7 @@ Karmada（Kubernetes Armada）解决的是 Kubernetes 从单集群扩展到多�
 
 ## 三、v1.19：为 AI 训练而生的调度能力
 
-毕业 coincides with v1.19，两个核心特性都指向同一个场景——**GPU 受限环境下的分布式 AI 训练**：
+毕业与 v1.19 同步发布，两个核心特性都指向同一个场景——**GPU 受限环境下的分布式 AI 训练**：
 
 ### 3.1 多组件调度（Multi-component Scheduling）
 

@@ -304,6 +304,7 @@ export default defineConfig({
         'ai': '/images/covers/ai.svg',
         'courses': '/images/courses/courses.svg',
         'devops': '/images/covers/devops.svg',
+        'cloud-native': '/images/covers/devops.svg',
       };
 
       // 查找最长的匹配路径前缀（更具体的路径优先）
