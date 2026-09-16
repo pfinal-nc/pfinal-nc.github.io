@@ -126,6 +126,7 @@ tags:
 - [**Go 1.27 后量子密码学全面落地：从 crypto/mldsa 到 TLS 集成的迁移实战**](/dev/backend/golang/go-1-27-post-quantum-cryptography-mldsa-tls-2026) - 2026-09-11 FIPS 204 ML-DSA / 混合密钥交换 X25519+ML-KEM / ML-DSA 证书链 / 三阶段迁移路径
 - [**Go 1.27 go fix 现代化器实战：四个新 modernizer 一次跑通代码升级**](/dev/backend/golang/go-1-27-go-fix-modernizers-2026) - 2026-09-14 atomictypes / embedlit / slicesbackward / unsafefuncs / go mod tidy 两段式合并
 - [**Ebitengine 2.10 纯 Go 化：桌面平台告别 cgo，AI Agent 有了官方调试入口**](/dev/backend/golang/ebitengine-2-10-pure-go-desktop-2026) - 2026-09-15 PureGo 方案 / 交叉编译一条命令 / Application Virtualization / AI Agent headless 调试
+- [**libvirt-go 开发者预览：用 purego 干掉 cgo，CGO_ENABLED=0 也能管虚拟机了**](/dev/backend/golang/libvirt-go-purego-cgo-free-2026) - 2026-09-16 purego 动态加载 / 568 函数 + 1093 枚举生成 / 运行时逐符号发现 / 所有权感知包装层
 
 ### 安全 & 供应链
 - [**Go SBOM 实战：软件供应链安全**](/dev/backend/golang/go-sbom-supply-chain-security) - SBOM 落地
@@ -139,6 +140,11 @@ tags:
 ## 📖 最新文章
 
 <div class="latest-articles-grid">
+  <a href="/dev/backend/golang/libvirt-go-purego-cgo-free-2026" class="latest-article-card">
+    <h3>🖥️ libvirt-go</h3>
+    <p>purego 无 cgo 绑定，CGO_ENABLED=0 管虚拟机</p>
+    <span class="article-date">2026-09</span>
+  </a>
   <a href="/dev/backend/golang/ebitengine-2-10-pure-go-desktop-2026" class="latest-article-card">
     <h3>🎮 Ebitengine 2.10</h3>
     <p>桌面平台纯 Go 化，AI Agent 官方调试入口</p>

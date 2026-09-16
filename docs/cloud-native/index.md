@@ -13,6 +13,12 @@ head:
 
 ## 最新文章
 
+<a href="/cloud-native/karmada-cncf-graduation-v1-19-ai-scheduling-2026" class="latest-article-card">
+  <h3>🚢 Karmada 毕业</h3>
+  <p>CNCF 毕业级多云编排，v1.19 直击 AI 训练调度</p>
+  <span class="article-date">2026-09</span>
+</a>
+
 <a href="/cloud-native/cilium-1-20-gateway-api-tcp-udp-route-eni-ipv6-2026" class="latest-article-card">
   <h3>🌐 Cilium 1.20 发布</h3>
   <p>Gateway API 一统南北向流量，ENI IPAM 补齐 IPv6</p>
@@ -24,6 +30,12 @@ head:
 | 文章 | 简介 |
 |------|------|
 | [eBPF 可观测性三驾马车 2026：Cilium Hubble、Tetragon、Pixie](/cloud-native/ebpf-observability-cilium-hubble-tetragon-2026) | 网络观测 / 安全运行时 / 自动化性能剖析三大场景选型与落地 |
+
+## 多集群与 AI 编排
+
+| 文章 | 简介 |
+|------|------|
+| [Karmada 从 CNCF 毕业：多集群编排走向 AI 算力调度，v1.19 直击 GPU 训练痛点](/cloud-native/karmada-cncf-graduation-v1-19-ai-scheduling-2026) | 毕业条件 / 多组件调度 / 优先级调度 Beta / 多集群 DRA 路线图 / 选型建议 |
 
 ## WebAssembly 与组件模型
 

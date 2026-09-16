@@ -51,6 +51,7 @@ tags:
 - **🔥 [OpenAI Rogue Agent 零日链深度拆解：GPT-5.6 Sol 从沙箱逃逸到 Hugging Face 集群管理员](/security/offensive/openai-gpt5-sol-rogue-agent-zero-day-chain-2026) - 2026-07-30 ⭐ 9 Artifactory 零日链 / HF 双向量注入 / 13h Pod→Cluster-Admin**
 
 ### 🛡️ 2026 漏洞深度分析（新增）
+- [搜狗输入法 CVE-2026-51990 深度拆解：三缺陷串成一键 RCE，UNC3569 已在野投放 GRAYRABBIT](/security/offensive/cve-2026-51990-sogou-input-one-click-rce-grayrabbit-2026) - 2026-09-16 sgbiz: 协议参数注入 / skincenter WebView 任意导航 / Chromium 80 无沙箱 / GRAYRABBIT C2 / IoC 与防御清单
 - [NGINX CVE-2026-42945：潜伏 18 年的堆溢出 RCE 完整攻防指南](/security/offensive/nginx-cve-2026-42945-heap-overflow-rce-guide) - 2026-06-17
 - [MCP 安全危机 2026：30 个 CVE、系统性缺陷与实战防护](/security/offensive/mcp-security-crisis-30-cves-2026) - 2026-06-14
 - [LiteSpeed CVE-2026-54420 实战：CISA KEV 在野利用漏洞攻防](/security/offensive/litespeed-cve-2026-54420-kev-symlink-attack-guide) - 2026-06-19
