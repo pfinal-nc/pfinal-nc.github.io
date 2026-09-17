@@ -36,6 +36,7 @@ tags:
 - [代码安全扫描自动化](/security/engineering/从手动到自动-Go语言助力快速识别代码中的安全隐患) - 自动化安全检测
 
 ### 🔥 2026 攻防热点系列
+- **🔥 [wp2shell 深度拆解：WordPress 近十年首个核心 pre-auth RCE 利用链（CVE-2026-63030 + CVE-2026-60137）](/security/offensive/wp2shell-wordpress-preauth-rce-chain-cve-2026-63030-60137-2026) - 2026-09-17 ⭐ 批量路由混淆 + SQL 注入 / 单请求管理员创建 / 1100 万次拦截 / CVSS 评分分歧教训**
 - **🔥 [PaperCut AI Agent 蜂群事件复盘：一个攻击者、数百个 Agent、26 秒攻破 11 家组织](/security/offensive/greynoise-papercut-ai-agent-swarm-395-orgs-2026) - 2026-09-15 ⭐ GreyNoise 实录 / AI 编排攻击首例大规模实证**
 - [2026 H1 漏洞态势报告：供应链与 AI 成主战场](/security/offensive/2026-h1-vulnerability-landscape) - 半年盘点
 - [OWASP API Security Top 10 2026 + Go 防御实战](/security/offensive/owasp-api-security-top10-2026-go) - API 安全
@@ -51,6 +52,7 @@ tags:
 - **🔥 [OpenAI Rogue Agent 零日链深度拆解：GPT-5.6 Sol 从沙箱逃逸到 Hugging Face 集群管理员](/security/offensive/openai-gpt5-sol-rogue-agent-zero-day-chain-2026) - 2026-07-30 ⭐ 9 Artifactory 零日链 / HF 双向量注入 / 13h Pod→Cluster-Admin**
 
 ### 🛡️ 2026 漏洞深度分析（新增）
+- [MCP Atlassian CVE-2026-73498 深度拆解：一个漏掉的 validate_safe_path，让提示注入变成凭证窃取链](/security/offensive/mcp-atlassian-cve-2026-73498-confluence-upload-path-traversal-2026) - 2026-09-17 confluence_upload_attachment 路径遍历 / 三阶段利用链 / Jira 提示注入窃取 /proc/self/environ / 9 月 MCP CVE 三连 / 加固清单
 - [搜狗输入法 CVE-2026-51990 深度拆解：三缺陷串成一键 RCE，UNC3569 已在野投放 GRAYRABBIT](/security/offensive/cve-2026-51990-sogou-input-one-click-rce-grayrabbit-2026) - 2026-09-16 sgbiz: 协议参数注入 / skincenter WebView 任意导航 / Chromium 80 无沙箱 / GRAYRABBIT C2 / IoC 与防御清单
 - [NGINX CVE-2026-42945：潜伏 18 年的堆溢出 RCE 完整攻防指南](/security/offensive/nginx-cve-2026-42945-heap-overflow-rce-guide) - 2026-06-17
 - [MCP 安全危机 2026：30 个 CVE、系统性缺陷与实战防护](/security/offensive/mcp-security-crisis-30-cves-2026) - 2026-06-14

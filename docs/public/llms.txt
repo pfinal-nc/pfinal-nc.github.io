@@ -16,6 +16,7 @@ PFinalClub（https://friday-go.icu）是一个由 PFinal 南丞 维护的后端 
 ## PFinalClub 主要内容分类
 
 ### Golang 系列（110+篇）
+- [Go 1.28 database/sql 快路径深拆：int64→int 不再"格式化成字符串再解析回来"](https://friday-go.icu/dev/backend/golang/go-1-28-database-sql-scan-fast-path-2026) — convertAssignRows 新增 int64/float64 精确类型快路径（issue #80671 / CL 808780）；Int64ToInt 从 52.99ns/1alloc 到 2.27ns/0alloc（-95.7%）；旧路径十进制字符串往返原理；命名类型与 Scanner 不受影响；32 位溢出回退设计
 - [libvirt-go 开发者预览：用 purego 干掉 cgo，CGO_ENABLED=0 也能管虚拟机了](https://friday-go.icu/dev/backend/golang/libvirt-go-purego-cgo-free-2026) — purego 动态加载 libvirt 共享库；构建期零 C 工具链依赖；568 函数 + 1093 枚举（libvirt 12.6.0 XML 生成）；运行时逐符号发现；所有权感知包装层；Linux amd64 验证
 - [Ebitengine 2.10 纯 Go 化：桌面平台告别 cgo，AI Agent 有了官方调试入口](https://friday-go.icu/dev/backend/golang/ebitengine-2-10-pure-go-desktop-2026) — macOS/Linux/BSD 移除 cgo（PureGo 方案），桌面应用一条 go build 交叉编译；实验性 Application Virtualization 让 AI Agent 无头控制游戏调试；Go 1.25+ 要求
 - [Go 1.27 go fix 现代化器实战：四个新 modernizer 一次跑通代码升级](https://friday-go.icu/dev/backend/golang/go-1-27-go-fix-modernizers-2026) — Go 1.27 go fix 四大 modernizer 实战：atomictypes/embedlit/slicesbackward/unsafefuncs，go mod tidy 两段式合并流程
@@ -191,6 +192,8 @@ PFinalClub（https://friday-go.icu）是一个由 PFinal 南丞 维护的后端 
 - [RAG 系统架构实战 2026：从原理到生产落地的完整指南（Python 代码 + 向量库选型）](https://friday-go.icu/ai/rag-system-architecture) — RAG 系统架构实战 2026：深入解析检索增强生成 5 大核心模块（文档处理/向量化/混合检索/重排序/评估），附 4 套生产级 Python 实现 + 6 个向量库横向对比，附 Qdrant/Milvus 性能基准。
 
 ### 安全渗透系列
+- [MCP Atlassian CVE-2026-73498 深度拆解：一个漏掉的 validate_safe_path，让提示注入变成凭证窃取链](https://friday-go.icu/security/offensive/mcp-atlassian-cve-2026-73498-confluence-upload-path-traversal-2026) — confluence_upload_attachment 缺失路径校验 CWE-22；CVSS 7.7 S:C；三阶段利用链（直接 API → MCP 客户端 → Jira 提示注入零凭证）；/proc/self/environ 窃取 CONFLUENCE_API_TOKEN；修复 0.22.0 一行 validate_safe_path；9 月 MCP CVE 三连与 640 服务器审计数据；MCP 加固清单
+- [wp2shell 深度拆解：WordPress 近十年首个核心 pre-auth RCE 利用链（CVE-2026-63030 + CVE-2026-60137）](https://friday-go.icu/security/offensive/wp2shell-wordpress-preauth-rce-chain-cve-2026-63030-60137-2026) — REST batch 路由混淆（validation/matches 数组下标错位）+ WP_Query author__not_in 字符串绕过 SQL 注入；UNION 伪造 wp_posts 行借 Customizer changeset 冒用管理员；单请求 pre-auth RCE；Wordfence 1100 万拦截；CVSS 5.9 vs 9.1 评分分歧；GPT-5.6 Sol 10 小时 25 美元发现
 - [搜狗输入法 CVE-2026-51990 深度拆解：三缺陷串成一键 RCE，UNC3569 已在野投放 GRAYRABBIT](https://friday-go.icu/security/offensive/cve-2026-51990-sogou-input-one-click-rce-grayrabbit-2026) — sgbiz: 协议 param 零校验注入 + skincenter WebView 任意导航 + Chromium 80 无沙箱引擎；UNC3569 在野利用 CVE-2021-38003；GRAYRABBIT RC4 C2；修复版 16.3.0.3498；IoC 与防御清单
 - [PaperCut AI Agent 蜂群事件复盘：一个攻击者、数百个 Agent、26 秒攻破 11 家组织](https://friday-go.icu/security/offensive/greynoise-papercut-ai-agent-swarm-395-orgs-2026) — GreyNoise 2026-09-09 报告；Codex harness + DeepSeek 编排数百 Agent；CVE-2026-81578 8.8 + CVE-2026-82078 9.4 链式 SYSTEM RCE；48 国 395 组织 440 台服务器；4 小时内空工作区到真实 RCE；教育行业 204 家；agents gone wild 现象
 - [MikroTrick 深度拆解：CERT Polska 曝光 MikroTik RouterOS 六漏洞，两条链无认证完全接管路由器](https://friday-go.icu/security/offensive/mikrotrick-routeros-ssh-auth-bypass-chain-2026) — CERT Polska 2026-09-05 披露；CVE-2026-67276 SSH e=1 认证绕过 9.2 + CVE-2026-86060 参数注入 9.2 组成无认证完全接管链；CVE-2026-67277 btest 内存泄露/崩溃 8.8；9-02 起在野利用创建 ops 账号；IP 82.192.72.4；全网 12.25 万台 SSH 暴露；修复 6.49.21/7.23.4/7.24.2；CISA KEV 双收录

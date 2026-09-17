@@ -93,6 +93,7 @@ tags:
 - [**Rust vs Go 2026：性能基准、内存安全与后端选型**](/dev/backend/golang/rust-vs-go-2026-performance-comparison) - 选型决策
 
 ### 2026 Go 工具链与性能
+- [**Go 1.28 database/sql 快路径深拆：int64→int 不再"格式化成字符串再解析回来"**](/dev/backend/golang/go-1-28-database-sql-scan-fast-path-2026) - 2026-09-17 convertAssignRows 精确类型快路径 / Int64ToInt -95.7% 零分配 / 标准库热路径打磨
 - [**Go 1.26 SIMD 编程实战**](/dev/backend/golang/Go 1.26 SIMD编程实战：从入门到高性能优化) - SIMD 加速
 - [**Go 1.26 工具链深度实战：new(expr) + 泛型约束 + cgo**](/dev/backend/golang/go-1-26-toolchain-new-expr-generics-cgo-2026) - 最新特性
 - [**Go errgroup 结构化并发：从原理到生产最佳实践**](/dev/backend/golang/go-errgroup-structured-concurrency) - 并发模式
@@ -140,6 +141,11 @@ tags:
 ## 📖 最新文章
 
 <div class="latest-articles-grid">
+  <a href="/dev/backend/golang/go-1-28-database-sql-scan-fast-path-2026" class="latest-article-card">
+    <h3>⚡ database/sql 快路径</h3>
+    <p>Go 1.28 convertAssignRows 精确类型匹配，Int64ToInt -95.7% 零分配</p>
+    <span class="article-date">2026-09</span>
+  </a>
   <a href="/dev/backend/golang/libvirt-go-purego-cgo-free-2026" class="latest-article-card">
     <h3>🖥️ libvirt-go</h3>
     <p>purego 无 cgo 绑定，CGO_ENABLED=0 管虚拟机</p>
