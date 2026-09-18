@@ -25,6 +25,7 @@ tags:
 ## 📚 精选教程系列
 
 ### 框架与生态
+- [**Laravel 13.32 Mercure 广播驱动上线：SSE 取代 WebSocket 的实时推送方案，FrankenPHP 下零配置**](/dev/backend/php/laravel-13-32-mercure-broadcast-driver-2026) - 2026-09-18 Mercure 驱动实战 / presence 与 E2E 加密频道 / copyToDisk / 选型决策
 - [**ThinkPHP近20年-中国Web开发的时代印记**](/dev/backend/php/ThinkPHP近20年-中国Web开发的时代印记) - ThinkPHP发展史与最佳实践
 - [**Laravel-admin 特殊路由实战**](/dev/backend/php/Laravel-Admin-Special-Routes) - Laravel 生态路由管理
 - [**Laravel Carbon 类使用指南**](/dev/backend/php/Laravel-Carbon-Class-Usage) - 时间处理与日期操作
