@@ -16,6 +16,7 @@ PFinalClub（https://friday-go.icu）是一个由 PFinal 南丞 维护的后端 
 ## PFinalClub 主要内容分类
 
 ### Golang 系列（110+篇）
+- [encoding/json/v2 到底是快了还是慢了：Lemire 基准、issue #81315 与 52% 序列化回退的完整复盘](https://friday-go.icu/dev/backend/golang/go-json-v2-marshal-regression-issue-81315-2026) — Go 1.27 json/v2 解析 1.5-2.3× 快但 10k 结构体切片 Marshal 慢 1.5×（Linux 最高 +107%）；根因 jsontext 逐 token 状态机常数开销（重复键/UTF-8/深度校验的运行时税）；GOEXPERIMENT=nojsonv2 逃生舱；负载形状选型决策树；json-iterator 归档后的库选型
 - [Go 1.28 database/sql 快路径深拆：int64→int 不再"格式化成字符串再解析回来"](https://friday-go.icu/dev/backend/golang/go-1-28-database-sql-scan-fast-path-2026) — convertAssignRows 新增 int64/float64 精确类型快路径（issue #80671 / CL 808780）；Int64ToInt 从 52.99ns/1alloc 到 2.27ns/0alloc（-95.7%）；旧路径十进制字符串往返原理；命名类型与 Scanner 不受影响；32 位溢出回退设计
 - [libvirt-go 开发者预览：用 purego 干掉 cgo，CGO_ENABLED=0 也能管虚拟机了](https://friday-go.icu/dev/backend/golang/libvirt-go-purego-cgo-free-2026) — purego 动态加载 libvirt 共享库；构建期零 C 工具链依赖；568 函数 + 1093 枚举（libvirt 12.6.0 XML 生成）；运行时逐符号发现；所有权感知包装层；Linux amd64 验证
 - [Ebitengine 2.10 纯 Go 化：桌面平台告别 cgo，AI Agent 有了官方调试入口](https://friday-go.icu/dev/backend/golang/ebitengine-2-10-pure-go-desktop-2026) — macOS/Linux/BSD 移除 cgo（PureGo 方案），桌面应用一条 go build 交叉编译；实验性 Application Virtualization 让 AI Agent 无头控制游戏调试；Go 1.25+ 要求
@@ -192,6 +193,7 @@ PFinalClub（https://friday-go.icu）是一个由 PFinal 南丞 维护的后端 
 - [RAG 系统架构实战 2026：从原理到生产落地的完整指南（Python 代码 + 向量库选型）](https://friday-go.icu/ai/rag-system-architecture) — RAG 系统架构实战 2026：深入解析检索增强生成 5 大核心模块（文档处理/向量化/混合检索/重排序/评估），附 4 套生产级 Python 实现 + 6 个向量库横向对比，附 Qdrant/Milvus 性能基准。
 
 ### 安全渗透系列
+- [AWS 官方 MCP 服务器连爆两个 CVE：read-only 模式被 COPY TO PROGRAM 打穿，OS 命令注入 CVSS 9.6](https://friday-go.icu/security/offensive/aws-official-mcp-servers-command-injection-cve-2026-87911-2026) — awslabs postgres-mcp-server CVE-2026-87911（CWE-78，COPY ... TO PROGRAM 不在 mutating 黑名单，未认证 OS 命令执行，修复 1.1.7）+ mysql-mcp-server CVE-2026-85788（SQL 内联注释绕过正则检测，修复 1.0.23）；黑名单先天缺陷分析；数据库权限下沉（REVOKE pg_execute_server_program）；AI finder 挖出 AI 基础设施
 - [MCP Atlassian CVE-2026-73498 深度拆解：一个漏掉的 validate_safe_path，让提示注入变成凭证窃取链](https://friday-go.icu/security/offensive/mcp-atlassian-cve-2026-73498-confluence-upload-path-traversal-2026) — confluence_upload_attachment 缺失路径校验 CWE-22；CVSS 7.7 S:C；三阶段利用链（直接 API → MCP 客户端 → Jira 提示注入零凭证）；/proc/self/environ 窃取 CONFLUENCE_API_TOKEN；修复 0.22.0 一行 validate_safe_path；9 月 MCP CVE 三连与 640 服务器审计数据；MCP 加固清单
 - [wp2shell 深度拆解：WordPress 近十年首个核心 pre-auth RCE 利用链（CVE-2026-63030 + CVE-2026-60137）](https://friday-go.icu/security/offensive/wp2shell-wordpress-preauth-rce-chain-cve-2026-63030-60137-2026) — REST batch 路由混淆（validation/matches 数组下标错位）+ WP_Query author__not_in 字符串绕过 SQL 注入；UNION 伪造 wp_posts 行借 Customizer changeset 冒用管理员；单请求 pre-auth RCE；Wordfence 1100 万拦截；CVSS 5.9 vs 9.1 评分分歧；GPT-5.6 Sol 10 小时 25 美元发现
 - [搜狗输入法 CVE-2026-51990 深度拆解：三缺陷串成一键 RCE，UNC3569 已在野投放 GRAYRABBIT](https://friday-go.icu/security/offensive/cve-2026-51990-sogou-input-one-click-rce-grayrabbit-2026) — sgbiz: 协议 param 零校验注入 + skincenter WebView 任意导航 + Chromium 80 无沙箱引擎；UNC3569 在野利用 CVE-2021-38003；GRAYRABBIT RC4 C2；修复版 16.3.0.3498；IoC 与防御清单
@@ -308,6 +310,7 @@ PFinalClub（https://friday-go.icu）是一个由 PFinal 南丞 维护的后端 
 - [Python 常用网站搜集 - 使用指南](https://friday-go.icu/dev/backend/python/Python常用网站搜集) — 搜集python常用的网站资源
 
 ### PHP 系列
+- [Laravel 13.32 Mercure 广播驱动上线：SSE 取代 WebSocket 的实时推送方案，FrankenPHP 下零配置](https://friday-go.icu/dev/backend/php/laravel-13-32-mercure-broadcast-driver-2026) — Kévin Dunglas 贡献原生 Mercure 驱动（SSE 而非 WebSocket）；FrankenPHP 内置 hub 零配置；presence channels 与 private-encrypted-* 端到端加密；copyToDisk/moveToDisk；队列 pause/resume 枚举支持；WebSocket vs SSE 选型决策
 - [PHP 8.6 Alpha 1 深度解析：PFA 部分函数应用、clamp 范围守护与 Closure 性能爆发](https://friday-go.icu/dev/backend/php/php-8-6-alpha-pfa-new-features-2026)
 - [PHP 8.5 Pipe Operator 生产实战：函数式编程从语法糖到架构变革](https://friday-go.icu/dev/backend/php/php-8-5-pipe-operator-production-2026)
 - [FrankenPHP 1.4 + Laravel 12 Worker 模式生产实战：3 倍吞吐背后的状态隔离与迁移指南](https://friday-go.icu/dev/backend/php/frankenphp-1-4-laravel-worker-mode-2026)
