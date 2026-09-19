@@ -50,6 +50,7 @@ tags:
 - [**Python 自动化脚本实战：10 个场景从文件处理到定时任务**](/dev/backend/python/python-automation-scripts) 🟡 - 文件处理、定时任务调度
 
 ### 🚀 2026 语言新特性
+- [**Python 3.13/3.14 No-GIL 实战 2026：免 GIL 并发性能测试与迁移指南**](/dev/backend/python/python-no-gil-pep703-2025) 🔴 - free-threading 基准测试 / C 扩展兼容性 / 生产迁移评估（2025-12-15）
 - [**Python 3.14 Free-Threading 正式支持深度解析：PEP 779 之后 GIL 时代的终结**](/dev/backend/python/python-3-14-free-threading-pep-779-2026) 🔴 - GIL 成为可选项 / 3.14t 构建 / 真并行（2026-08-14）
 - [**Python 3.15 新特性深度解析**](/dev/backend/python/python-3-15-new-features-2026) 🔴 - 延迟导入、frozendict、Tachyon 采样器（2026-07-07）
 - [**Python JIT 的生死六个月：Steering Council 最后通牒与 PEP 836 的自救之路**](/dev/backend/python/python-jit-steering-council-ultimatum-pep-836-2026) 🔴 - 治理危机 / 6 个月期限 / free-threading 冲突 / PyPy 对比（2026-07-28）

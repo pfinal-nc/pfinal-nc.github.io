@@ -129,6 +129,12 @@ tags:
 - [**Go 1.27 go fix 现代化器实战：四个新 modernizer 一次跑通代码升级**](/dev/backend/golang/go-1-27-go-fix-modernizers-2026) - 2026-09-14 atomictypes / embedlit / slicesbackward / unsafefuncs / go mod tidy 两段式合并
 - [**Ebitengine 2.10 纯 Go 化：桌面平台告别 cgo，AI Agent 有了官方调试入口**](/dev/backend/golang/ebitengine-2-10-pure-go-desktop-2026) - 2026-09-15 PureGo 方案 / 交叉编译一条命令 / Application Virtualization / AI Agent headless 调试
 - [**libvirt-go 开发者预览：用 purego 干掉 cgo，CGO_ENABLED=0 也能管虚拟机了**](/dev/backend/golang/libvirt-go-purego-cgo-free-2026) - 2026-09-16 purego 动态加载 / 568 函数 + 1093 枚举生成 / 运行时逐符号发现 / 所有权感知包装层
+- [**Go 1.24 range over func 迭代器：7 种生产级模式完全指南**](/dev/backend/golang/go-1-24-range-over-func-7-patterns-2026) - 2026-06-19 迭代器模式 / seq 函数 / 生产级用法
+- [**Go HTTP/3 + QUIC 生产部署实战 2026**](/dev/backend/golang/go-http3-quic-production-deployment-2026) - 2026-06-21 HTTP/3 部署 / QUIC 调优
+- [**Go 1.25 实战 2026：容器感知调度 + DWARF5 + JSON v2 完整迁移指南**](/dev/backend/golang/go-1-25-container-aware-gomaxprocs-2026) - 2026-06-22 GOMAXPROCS 容器感知 / DWARF5 / JSON v2
+- [**Go 1.27 RC1 深度解析：泛型方法落地、json/v2 正式入库与运行时性能跃升**](/dev/backend/golang/go-1-27-rc1-deep-dive-2026) - 2026-06-23 RC1 特性全景 / 运行时性能
+- [**Go 1.27 发布解读：泛型方法、JSON v2 与性能跃升**](/dev/backend/golang/go-1-27-release-highlights-2026) - 2026-08-24 正式版发布 / 版本要点速览
+- [**sync.Map 换引擎了：从双 Map 到哈希树，Go 1.26 底层实现全解析**](/dev/backend/golang/sync-map-hash-trie-implementation-go126-2026) - 2026-09-05 HashTrie Map / 双 Map 退役 / 并发性能
 
 ### 安全 & 供应链
 - [**Go SBOM 实战：软件供应链安全**](/dev/backend/golang/go-sbom-supply-chain-security) - SBOM 落地

@@ -87,6 +87,8 @@ keywords:
 | 4 | 💰 成本优化 | [LLM 成本优化实战：让 AI 应用降低 10 倍成本](/ai/llm-cost-optimization) | 2026 |
 | 5 | ✍️ Prompt 基础 | [Prompt 工程完全指南：从入门到精通](/ai/prompt-engineering-guide) | 2026 |
 | 6 | 🛠️ 工具横评 | [2026 AI 编程工具横评：Agent 时代的新工作流](/ai/ai-coding-tools-2026-comparison) | 2026 |
+| 7 | 🔄 Agentic RAG | [Agentic RAG 架构 2026：从 Naive RAG 到自我纠错检索循环的自适应演进](/ai/agentic-rag-architecture-2026) | 2026-07-01 |
+| 8 | 🗄️ 向量库选型 | [Vector Database 选型 2026：Qdrant vs Milvus vs Weaviate vs pgvector 实测对比](/ai/vector-database-selection-2026) | 2025-12-25 |
 
 ---
 ## 🔌 模型接入实战
@@ -107,16 +109,17 @@ keywords:
 | 1 | 📏 长上下文评测 | [LLM 长上下文 2026：RULER/MRCR 评测体系完全解读](/ai/llm-long-context-ruler-mrcr-2026) | 2026-06-25 |
 | 2 | 📏 推理漂移评测 | [ACL 2026 推理漂移 HSCodeComp：Agent 层级规则应用的结构性缺陷](/ai/acl-2026-hscodecomp-reasoning-drift-agent-benchmark) | 2026-07-09 |
 | 3 | 🐹 Agent 评测框架 | [Go 构建轻量级 AI Agent Eval 框架：从零实现 Agent 评测工具](/ai/go-agent-eval-framework-2026) | 2026-07-29 |
+| 4 | 🛡️ 安全红队评测 | [LLM 安全红队 2026：OWASP LLM Top 10 实战演练与自动化工具链](/ai/llm-security-red-team-2026) | 2026-01-15 |
 
 ---
 
 ## 📊 系列文章统计
 
 - **AI Agent 全栈**：34 篇（2026 年新增 32 篇，含 AG-UI 前端集成、OpenCode 架构、Agent Skills、MCP 路线图、OpenClaw 实战、Harness Engineering、Codex CLI、MCP Spec RC、Safari MCP、AI 漏洞挖掘范式、GitHub Spec Kit、LangGraph 1.0、GPT-5.6 出口管制、Grok 4.5 编码 Agent、ACL 推理漂移评测、Context Engineering、X MCP Server、Claude Sonnet 5、Bun Rust 重写、Kimi K3、AI Agent 记忆投毒、MCP Apps/Tasks 扩展、Codex 0.145、Karpathy Opus 5、Copilot MCP 治理、MCP 记忆生态）
-- **RAG / LLM 应用**：6 篇
+- **RAG / LLM 应用**：8 篇
 - **模型接入实战**：2 篇（Claude Sonnet 4.6 + Gemini 3.5 Flash）
-- **LLM 评测与协议演进**：3 篇（RULER/MRCR 长上下文 + HSCodeComp 推理漂移 + Go Agent Eval 框架）
-- **累计 48 篇**，更新频率：每周 2-3 篇热点文章同步
+- **LLM 评测与协议演进**：4 篇（RULER/MRCR 长上下文 + HSCodeComp 推理漂移 + Go Agent Eval 框架 + OWASP LLM 安全红队）
+- **累计 51 篇**，更新频率：每周 2-3 篇热点文章同步
 
 ---
 
