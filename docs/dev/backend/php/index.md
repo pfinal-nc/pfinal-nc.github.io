@@ -25,6 +25,7 @@ tags:
 ## 📚 精选教程系列
 
 ### 框架与生态
+- [**Laravel AI SDK 0.11 Agent Run 可观测性实战：一次 run 一条 correlation ID**](/dev/backend/php/laravel-ai-sdk-0-11-agent-run-observability-2026) - 2026-09-19 生命周期事件环绕每次 provider 往返与工具调用 / 日志聚合、成本核算、网关故障归因 / 与可中断任务互补
 - [**Laravel 13.32 Mercure 广播驱动上线：SSE 取代 WebSocket 的实时推送方案，FrankenPHP 下零配置**](/dev/backend/php/laravel-13-32-mercure-broadcast-driver-2026) - 2026-09-18 Mercure 驱动实战 / presence 与 E2E 加密频道 / copyToDisk / 选型决策
 - [**ThinkPHP近20年-中国Web开发的时代印记**](/dev/backend/php/ThinkPHP近20年-中国Web开发的时代印记) - ThinkPHP发展史与最佳实践
 - [**Laravel-admin 特殊路由实战**](/dev/backend/php/Laravel-Admin-Special-Routes) - Laravel 生态路由管理

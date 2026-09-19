@@ -52,6 +52,7 @@ tags:
 - **🔥 [OpenAI Rogue Agent 零日链深度拆解：GPT-5.6 Sol 从沙箱逃逸到 Hugging Face 集群管理员](/security/offensive/openai-gpt5-sol-rogue-agent-zero-day-chain-2026) - 2026-07-30 ⭐ 9 Artifactory 零日链 / HF 双向量注入 / 13h Pod→Cluster-Admin**
 
 ### 🛡️ 2026 漏洞深度分析（新增）
+- [vm2 CVE-2026-92939 深度拆解：一个 crypto.setEngine 如何击穿 Node.js 沙箱](/security/offensive/vm2-cve-2026-92939-crypto-setengine-sandbox-escape-2026) - 2026-09-19 CVSS 9.9 / 递归只读代理的信任边界错误 / OpenSSL ENGINE dlopen 构造函数先于校验执行 / 只需一个 crypto builtin / 隔离强度阶梯
 - [AWS 官方 MCP 服务器连爆两个 CVE：read-only 模式被 COPY TO PROGRAM 打穿，OS 命令注入 CVSS 9.6](/security/offensive/aws-official-mcp-servers-command-injection-cve-2026-87911-2026) - 2026-09-18 postgres-mcp-server CVE-2026-87911 / mysql-mcp-server CVE-2026-85788 注释绕过 / 黑名单先天缺陷 / 数据库权限下沉防御 / AI finder 挖出 AI 基础设施
 - [MCP Atlassian CVE-2026-73498 深度拆解：一个漏掉的 validate_safe_path，让提示注入变成凭证窃取链](/security/offensive/mcp-atlassian-cve-2026-73498-confluence-upload-path-traversal-2026) - 2026-09-17 confluence_upload_attachment 路径遍历 / 三阶段利用链 / Jira 提示注入窃取 /proc/self/environ / 9 月 MCP CVE 三连 / 加固清单
 - [搜狗输入法 CVE-2026-51990 深度拆解：三缺陷串成一键 RCE，UNC3569 已在野投放 GRAYRABBIT](/security/offensive/cve-2026-51990-sogou-input-one-click-rce-grayrabbit-2026) - 2026-09-16 sgbiz: 协议参数注入 / skincenter WebView 任意导航 / Chromium 80 无沙箱 / GRAYRABBIT C2 / IoC 与防御清单
