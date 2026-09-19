@@ -16,56 +16,70 @@ PFinalClub（https://friday-go.icu）是一个由 PFinal 南丞 维护的后端 
 ## PFinalClub 主要内容分类
 
 ### Golang 系列（110+篇）
-- [encoding/json/v2 到底是快了还是慢了：Lemire 基准、issue #81315 与 52% 序列化回退的完整复盘](https://friday-go.icu/dev/backend/golang/go-json-v2-marshal-regression-issue-81315-2026) — Go 1.27 json/v2 解析 1.5-2.3× 快但 10k 结构体切片 Marshal 慢 1.5×（Linux 最高 +107%）；根因 jsontext 逐 token 状态机常数开销（重复键/UTF-8/深度校验的运行时税）；GOEXPERIMENT=nojsonv2 逃生舱；负载形状选型决策树；json-iterator 归档后的库选型
-- [Go 1.28 database/sql 快路径深拆：int64→int 不再"格式化成字符串再解析回来"](https://friday-go.icu/dev/backend/golang/go-1-28-database-sql-scan-fast-path-2026) — convertAssignRows 新增 int64/float64 精确类型快路径（issue #80671 / CL 808780）；Int64ToInt 从 52.99ns/1alloc 到 2.27ns/0alloc（-95.7%）；旧路径十进制字符串往返原理；命名类型与 Scanner 不受影响；32 位溢出回退设计
-- [libvirt-go 开发者预览：用 purego 干掉 cgo，CGO_ENABLED=0 也能管虚拟机了](https://friday-go.icu/dev/backend/golang/libvirt-go-purego-cgo-free-2026) — purego 动态加载 libvirt 共享库；构建期零 C 工具链依赖；568 函数 + 1093 枚举（libvirt 12.6.0 XML 生成）；运行时逐符号发现；所有权感知包装层；Linux amd64 验证
-- [Ebitengine 2.10 纯 Go 化：桌面平台告别 cgo，AI Agent 有了官方调试入口](https://friday-go.icu/dev/backend/golang/ebitengine-2-10-pure-go-desktop-2026) — macOS/Linux/BSD 移除 cgo（PureGo 方案），桌面应用一条 go build 交叉编译；实验性 Application Virtualization 让 AI Agent 无头控制游戏调试；Go 1.25+ 要求
-- [Go 1.27 go fix 现代化器实战：四个新 modernizer 一次跑通代码升级](https://friday-go.icu/dev/backend/golang/go-1-27-go-fix-modernizers-2026) — Go 1.27 go fix 四大 modernizer 实战：atomictypes/embedlit/slicesbackward/unsafefuncs，go mod tidy 两段式合并流程
-- [Go 1.28 路线图深度解析：Cgo 抛弃 C 工具链、泛型容器、Green Tea GC 全面接管](https://friday-go.icu/dev/backend/golang/go-1-28-roadmap-pure-cgo-generic-containers-2026) — Go 1.28 计划于 2027 年初发布，是 Go 历史上特性最密集的一次。本文从 Go GitHub 仓库 200+ 个 Proposal 中梳理出 12 个影响最大的特性：无需 C 工具链的 Cgo、泛型 stdlib 容器、W
-- [Go 1.28 PGO 默认开启实战：从 0 到 14% CPU 节省的生产级流水线](https://friday-go.icu/dev/backend/golang/go-1-28-pgo-default-on-production-2026)
-- [Go 1.27 uuid 标准库包深度解析：等了 8 年终转正，数据库主键怎么选？](https://friday-go.icu/dev/backend/golang/go-1-27-uuid-standard-library-2026)
-- [Go Flight Recorder 持续执行追踪：零成本事后取证与性能诊断](https://friday-go.icu/dev/backend/golang/go-flight-recorder-continuous-execution-tracing-2026)
-- [Go 1.27 switch 查找表优化深度解析：编译器如何让常见分支快 2 倍](https://friday-go.icu/dev/backend/golang/go-1-27-switch-lookup-table-optimization-2026)
-- [Go Micro v6 Agentic Shift 深度解析：微服务框架转身 AI Agent 运行时的架构革命与实战](https://friday-go.icu/dev/backend/golang/go-micro-v6-agentic-shift-ai-agent-runtime-2026)
-- [Go 1.27 GODEBUG 强制净化机制深度解析：四类分级政策与 runtime.SetGODEBUG 实战](https://friday-go.icu/dev/backend/golang/go-1-27-godebug-forced-cleanup-policy-2026)
-- [Go 1.27 尺寸特化 malloc 深度解析：编译器为每个对象定制分配路径背后的工程哲学](https://friday-go.icu/dev/backend/golang/go-1-27-size-specialized-malloc-2026)
-- [Go 1.27 泛型方法生产实战：从类型参数到真实架构的落地指南](https://friday-go.icu/dev/backend/golang/go-1-27-generic-methods-production-2026)
-- [Go 1.27 泛型方法为什么纠结了五年？Release Party 直播实录与团队决策内幕](https://friday-go.icu/dev/backend/golang/go-1-27-generic-methods-release-party-2026)
-- [Go 1.27 encoding/json/v2 迁移实战：标准库四年来最大重写的生产级指南](https://friday-go.icu/dev/backend/golang/go-1-27-encoding-json-v2-migration-2026)
-- [Go Swiss Table Map 深度解析：从原理到生产调优实战](https://friday-go.icu/dev/backend/golang/go-swiss-table-map-deep-dive-2026)
-- [Go btype 数据结构实战：比 Rust/C++ 更快的 B 树集合](https://friday-go.icu/dev/backend/golang/go-btype-btree-data-structure-2026)
-- [Go 1.27 RC1 深度解析：泛型方法落地、json/v2 正式入库与运行时性能跃升](https://friday-go.icu/dev/backend/golang/go-1-27-rc1-deep-dive-2026)
+- [encoding/json/v2 到底是快了还是慢了：Lemire 基准、issue #81315 与 52% 序列化回退的完整复盘](https://friday-go.icu/dev/backend/golang/go-json-v2-marshal-regression-issue-81315-2026) — Go 1.27 的 encoding/json/v2 宣称更快，但 Daniel Lemire 的基准显示：解析快 1.5-2.3 倍的同时，10k 结构体切片的 Marshal 慢了 1.5 倍。深拆 issue #81315 的 ben
+- [Go 1.28 database/sql 快路径深拆：int64→int 不再\"格式化成字符串再解析回来\"](https://friday-go.icu/dev/backend/golang/go-1-28-database-sql-scan-fast-path-2026) — Go 1.28 开发周期为 database/sql convertAssignRows 新增 int64/float64/bool 快路径：int64 扫描到 int 不再走十进制字符串往返，Int64ToInt 基准提升 95.7% 且
+- [libvirt-go 开发者预览：用 purego 干掉 cgo，CGO_ENABLED=0 也能管虚拟机了](https://friday-go.icu/dev/backend/golang/libvirt-go-purego-cgo-free-2026) — ZimaSpace 开源的 libvirt-go 开发者预览：基于 purego 动态加载 libvirt 共享库，构建期零 C 工具链依赖，从 libvirt 12.6.0 官方 API XML 生成 568 个函数 + 1093 个枚举
+- [Ebitengine 2.10 纯 Go 化：桌面平台告别 cgo，AI Agent 有了官方调试入口](https://friday-go.icu/dev/backend/golang/ebitengine-2-10-pure-go-desktop-2026) — Ebitengine 2.10（2026-09-08 发布）让 macOS/Linux/BSD 桌面平台彻底移除 cgo，Go 游戏应用只需一条 go build 即可跨平台编译；新增实验性 Application Virtualizati
+- [Go 1.27 go fix 现代化器实战：四个新 modernizer 一次跑通代码升级](https://friday-go.icu/dev/backend/golang/go-1-27-go-fix-modernizers-2026) — Go 1.27 给 go fix 新增 atomictypes、embedlit、slicesbackward、unsafefuncs 四个现代化修改器，并移除 fmtappendf、重命名 waitgroup。本文详解每个 moderni
+- [Go 1.27 后量子密码学全面落地：从 crypto/mldsa 到 TLS 集成的迁移实战](https://friday-go.icu/dev/backend/golang/go-1-27-post-quantum-cryptography-mldsa-tls-2026) — Go 1.27 将后量子密码学从实验特性推为标准库一等公民：crypto/mldsa 实现 FIPS 204 ML-DSA 签名，crypto/tls 集成混合密钥交换与 ML-DSA 证书链。本文深度解析 ML-DSA vs 传统 ECD
+- [Go 与 HTTP QUERY 方法深度解析：RFC 10008 补齐 GET 与 POST 之间三十年的空档](https://friday-go.icu/dev/backend/golang/go-http-query-method-rfc-10008-2026) — IETF 于 2026 年 6 月发布 RFC 10008，正式定义了 HTTP 新方法 QUERY——它同时具备 GET 的安全幂等语义与 POST 携带请求体的表达能力，专治"复杂查询只能塞 URL 或被迫用 POST"的三十年顽疾。本
+- [Go HTTP/2 正式迁入标准库深度解析：x/net/http2 弃用后，你的服务要改什么](https://friday-go.icu/dev/backend/golang/go-http2-stdlib-migration-2026) — 拖了两年的 HTTP/2 原生集成工程终于收尾——Damien Neil 标记 issue #67810 完成，golang.org/x/net/http2 走向弃用，Go 1.28 成为标准库承载 HTTP/2 的第一个版本。本文拆解这次
+- [Go 1.28 集合类型提案 #80590 深度解读：十六年终迎 Set/Hash，原生 API 设计与代码实战](https://friday-go.icu/dev/backend/golang/go-1-28-collections-proposal-80590-2026) — Go 1.28 提案 #80590 一次性带来 7 项集合类型新增：maphash.Hasher 接口、container/hash.Map/Set、新版 container/heap、container/set.Set、container
+- [Go 1.27 泛型方法为什么纠结了五年？Release Party 直播实录与团队决策内幕](https://friday-go.icu/dev/backend/golang/go-1-27-generic-methods-release-party-2026) — Go 1.27 发布后，JetBrains 联合 Go 核心团队举办 Release Party 直播。本文基于直播实录，梳理泛型方法从 Go 1.18 被砍到 1.27 落地的五年博弈：当年为什么砍掉、社区如何催更、团队为何改主意、泛型接
+- [Go 1.27 SIMD 加速 ChaCha20 加密实战：7.5 倍性能提升的密码学革命](https://friday-go.icu/dev/backend/golang/go-1-27-simd-chacha20-encryption-acceleration-2026) — 深入解析 Go 1.27 实验性 SIMD 包加速 ChaCha20 加密的实战过程，通过 archsimd 包实现 7.5 倍性能提升，对比 Rust 实现，涵盖 AVX512/ARM Neon 指令集优化原理与代码实现。
+- [Go SSH CVE-2026-56855/78662：x/crypto/ssh 拒绝服务漏洞深度分析与修复实践](https://friday-go.icu/dev/backend/golang/go-ssh-cve-2026-56855-78662-dos-vulnerability-2026) — 深入分析 Go x/crypto/ssh 包的两个新 CVE 漏洞（CVE-2026-56855 和 CVE-2026-78662），涵盖协议漏洞原理、攻击向量和修复方案，帮助 Go 开发者保护 SSH 服务免受拒绝服务攻击。
+- [sync.Map 换引擎了：从双 Map 到哈希树，Go 1.26 底层实现全解析](https://friday-go.icu/dev/backend/golang/sync-map-hash-trie-implementation-go126-2026) — Go 1.24 用哈希树替换了 sync.Map 的默认实现，Go 1.26 移除实验开关使其转正。大多数开发者对 sync.Map 的理解还停留在'读 map + dirty map'的双 Map 心智模型，本文从普通 map 的哈希定位
+- [Go 1.28 泛型容器实战：Set、Map、Heap 选型与性能对比](https://friday-go.icu/dev/backend/golang/go-1-28-generic-containers-practical-guide-2026)
+- [Go 1.27 发布解读：泛型方法、JSON v2 与性能跃升](https://friday-go.icu/dev/backend/golang/go-1-27-release-highlights-2026) — Go 1.27 正式版深度解读：泛型方法（generic methods）终结类型重复、encoding/json/v2 十年最大重构、小对象分配提速 30%、goroutine 泄漏检测正式可用、crypto/mldsa 后量子签名与原生
+- [Go 1.28 泛型容器伞形提案 #80590 深度解读：6 个子提案、binary method problem 与工程取舍](https://friday-go.icu/dev/backend/golang/go-1-28-generic-containers-stdlib-2026) — 2026-07-28，Go Collections working group 7 位核心贡献者在 GitHub issue #80590 抛出泛型容器伞形提案，目标 Go 1.28。本文基于 issue 原文与社区解读，逐一拆解 6 个新
+- [Go 官方为函数名吵了两个月：maps.Same 提案正式通过的背后](https://friday-go.icu/dev/backend/golang/go-maps-same-proposal-identity-comparison-2026) — Go 提案 #78456 正式通过：maps.Same 函数用一条 CMP 指令实现 map 引用同一性判断。从 Identical 到 Same 的两个月命名拉锯、nil 语义陷阱、NaN 边界警告、泛型签名三次收缩、slices.Sam
+- [Go 1.28 开发周期正式启动：从 tree reopen 到首批关键 CL 的工程节奏](https://friday-go.icu/dev/backend/golang/go-1-28-development-cycle-kicks-off-2026) — 2026 年 7 月 16 日，Go 仓库正式 reopen tree 进入 Go 1.28 开发周期。本文从 issue #79581 的关闭出发，解读 internal/goversion 28、doc/next 初始化、首批 Auto
+- [Go 1.28 sync.Sharded 分片计数器实战：从缓存行伪共享到百万 QPS 零竞争计数](https://friday-go.icu/dev/backend/golang/go-1-28-sharded-counters-cache-line-contention-2026) — Go 1.28 计划引入 sync.Sharded（M-local storage）以解决高并发全局计数器的缓存行争用问题。本文从 CPU 缓存一致性原理出发，手写生产级分片计数器，对比 atomic、mutex 与分片方案的性能差距，并给
+- [Go 1.28 arena 内存管理生产实战：请求级零 GC 压力的原理、陷阱与基准测试](https://friday-go.icu/dev/backend/golang/go-1-28-arena-memory-management-production-2026) — Go 1.28 将 arena 包从实验阶段推进为生产可用的请求级内存分配器。本文从 bump allocator 原理、memory/arena API、请求级使用模式、与 sync.Pool 和 GC 的对比，到生产落地的生命周期隔离与
+- [Go 1.28 路线图深度解析：Cgo 抛弃 C 工具链、泛型容器、Green Tea GC 全面接管](https://friday-go.icu/dev/backend/golang/go-1-28-roadmap-pure-cgo-generic-containers-2026) — Go 1.28 计划于 2027 年初发布，是 Go 历史上特性最密集的一次。本文从 Go GitHub 仓库 200+ 个 Proposal 中梳理出 12 个影响最大的特性：无需 C 工具链的 Cgo、泛型 stdlib 容器、Wasm
+- [Go 1.28 PGO 默认开启实战：从 0 到 14% CPU 节省的生产级流水线](https://friday-go.icu/dev/backend/golang/go-1-28-pgo-default-on-production-2026) — Go 1.28（计划 2027 年初发布）把 PGO 升级为一等公民：默认开启 Dynamic Inlining Heuristics 与 Enhanced Devirtualization，结合 net/http/pprof 与 cont
+- [Go 1.27 uuid 标准库包深度解析：等了 8 年终转正，数据库主键怎么选？](https://friday-go.icu/dev/backend/golang/go-1-27-uuid-standard-library-2026) — Go 1.27 终于在标准库中内建 uuid 包。本文从 UUID 版本演进、Go 的 API 设计哲学、v4/v7 选型、数据库主键场景、与 github.com/google/uuid 迁移对比，到性能与安全考量，提供完整可运行代码与生
+- [Go Flight Recorder 持续执行追踪：零成本事后取证与性能诊断](https://friday-go.icu/dev/backend/golang/go-flight-recorder-continuous-execution-tracing-2026) — Go Flight Recorder 是受 Java JFR 和 Linux perf 启发的持续执行追踪机制，通过内存环形缓冲区实现低开销生产环境追踪。本文深入解析其工作原理、API 使用方式、事后取证完整工作流，以及与传统 runtim
+- [Go 1.27 switch 查找表优化深度解析：编译器如何让常见分支快 2 倍](https://friday-go.icu/dev/backend/golang/go-1-27-switch-lookup-table-optimization-2026) — Go 1.27 编译器引入 switch 查找表优化，让密集的整数分支语句在部分场景下性能提升近 2 倍。本文从 switch 的底层实现、1.27 新机制、适用边界、汇编验证、Benchmark 对比到升级建议，做一次系统性的技术拆解。
+- [Go Micro v6 Agentic Shift 深度解析：微服务框架转身 AI Agent 运行时的架构革命与实战](https://friday-go.icu/dev/backend/golang/go-micro-v6-agentic-shift-ai-agent-runtime-2026) — 深度解析 Go Micro v6——Anthropic 赞助下从微服务框架转型为 AI Agent 运行时，服务方法自动暴露为 MCP/A2A 工具，内置 plan/delegate 多步规划，从 0→Hero 完整实战路径。
+- [Go 1.27 GODEBUG 强制净化机制深度解析：四类分级政策与 runtime.SetGODEBUG 实战](https://friday-go.icu/dev/backend/golang/go-1-27-godebug-forced-cleanup-policy-2026) — 2026 年 6 月 24 日 Go 提案委员会正式接受 #76163，对 GODEBUG 实施四类分级管理政策。本文深度拆解 GODEBUG 历史技术债、四类标记宿命、Go 1.27 编译期阻断+启动期 Panic 双重防御机制、runt
+- [Go 1.27 尺寸特化 malloc 深度解析：编译器为每个对象定制分配路径背后的工程哲学](https://friday-go.icu/dev/backend/golang/go-1-27-size-specialized-malloc-2026) — Go 1.27 编译器为小于 80 字节的小对象生成尺寸特化的分配代码，将分配延迟降低 30%。本文深度解析通用 mallocgc 路径的隐藏成本、尺寸特化机制的工作原理、bin/micro 微基准测试对比、-gcflags=-m 逃逸分析
+- [Go 1.27 泛型方法生产实战：从类型参数到真实架构的落地指南](https://friday-go.icu/dev/backend/golang/go-1-27-generic-methods-production-2026) — Go 1.27 已于 2026 年 8 月正式发布，其中最重磅的语言特性是泛型方法（Generic Methods）。本文从生产视角拆解泛型方法的语法、类型推断、约束设计与常见陷阱，附带可运行的集合类、序列化、验证器代码示例，帮助团队将泛型
+- [Go 1.27 encoding/json/v2 迁移实战：标准库四年来最大重写的生产级指南](https://friday-go.icu/dev/backend/golang/go-1-27-encoding-json-v2-migration-2026) — Go 1.27 正式版已于 2026 年 8 月将 encoding/json/v2 冻结进标准库。这是 Go 自 1.0 以来最激进的标准库重写之一：双层架构（jsontext 语法层 + json/v2 语义层）、默认严格化、2-5 倍
+- [Go Swiss Table Map 深度解析：从原理到生产调优实战](https://friday-go.icu/dev/backend/golang/go-swiss-table-map-deep-dive-2026) — Go 1.24 引入 Swiss Table 作为 map 底层实现,本文从控制字并行匹配、开放寻址探测、可扩展哈希三大核心机制讲起,结合 sync.Map 的 HashTrieMap 对比,给出生产级调优实战指南。
+- [Go btype 数据结构实战：比 Rust/C++ 更快的 B 树集合](https://friday-go.icu/dev/backend/golang/go-btype-btree-data-structure-2026) — 深入解析 tidwall/btype 库，这个 2026 年爆火的 Go B 树集合库在多项基准测试中超越 Rust BTreeMap 和 C++ std::map。从核心原理到生产落地，完整覆盖 Table、Set、Map 三大集合类型的
+- [Go 1.27 RC1 深度解析：泛型方法落地、json/v2 正式入库与运行时性能跃升](https://friday-go.icu/dev/backend/golang/go-1-27-rc1-deep-dive-2026) — Go 1.27 RC1 于 2026 年 6 月第二周正式发布，本篇深度解析泛型方法（Generic Methods）、encoding/json/v2、uuid 标准库包、simd 实验包、crypto/mldsa 后量子签名、运行时小对
 - [Go 1.25 实战 2026：容器感知调度 + DWARF5 + JSON v2 完整迁移指南](https://friday-go.icu/dev/backend/golang/go-1-25-container-aware-gomaxprocs-2026) — Go 1.25（2025-08 发布）三大新特性实战：GOMAXPROCS 容器感知、DWARF5 调试信息压缩、encoding/json/v2 性能翻倍
 - [Go HTTP/3 + QUIC 生产部署实战 2026](https://friday-go.icu/dev/backend/golang/go-http3-quic-production-deployment-2026) — Go 1.24+ http3 标准库 + quic-go 双方案对比：CDN 接入、UDP 防火墙、Alt-Svc 协商、0-RTT、移动弱网优化
-- [Go 1.24 range over func 迭代器：7 种生产级模式完全指南](https://friday-go.icu/dev/backend/golang/go-1-24-range-over-func-7-patterns-2026)
-- [Go 1.26 工具链深度实战：new(expr) 语法糖 + 自引用泛型约束 + cgo 性能跃升](https://friday-go.icu/dev/backend/golang/go-1-26-toolchain-new-expr-generics-cgo-2026)
-- [Go WebSocket 高并发实时通信实战：从原理到万级连接的生产架构](https://friday-go.icu/dev/backend/golang/go-websocket-high-concurrency-2026)
-- [Go 泛型方法实战：Proposal #77273 从提案到生产落地](https://friday-go.icu/dev/backend/golang/go-generic-methods-proposal-77273)
-- [Go goroutine 泄漏检测：从 pprof 到生产级并发调试](https://friday-go.icu/dev/backend/golang/go-goroutine-leak-detection-2026)
-- [Go Fuzzing 实战：从 CI 集成到生产安全漏洞挖掘](https://friday-go.icu/dev/backend/golang/go-fuzzing-production-guide-2026)
-- [Rust vs Go 2026：性能基准、内存安全与后端选型实战](https://friday-go.icu/dev/backend/golang/rust-vs-go-2026-performance-comparison)
+- [Go 1.24 range over func 迭代器：7 种生产级模式完全指南](https://friday-go.icu/dev/backend/golang/go-1-24-range-over-func-7-patterns-2026) — Go 1.24 正式稳定 range over func 与 iter 包，本文通过 7 种生产级迭代器模式，展示如何构建零分配、可组合的数据管道，彻底终结手写 for 循环的历史。
+- [Go 1.26 工具链深度实战：new(expr) 语法糖 + 自引用泛型约束 + cgo 性能跃升](https://friday-go.icu/dev/backend/golang/go-1-26-toolchain-new-expr-generics-cgo-2026) — Go 1.26 正式版深度实战：new(expr) 语法糖消除强制转型、自引用泛型约束解锁递归数据结构、cgo 基线开销降 30%、Green Tea GC 默认启用，含生产可运行代码与性能基准。
+- [Go WebSocket 高并发实时通信实战：从原理到万级连接的生产架构](https://friday-go.icu/dev/backend/golang/go-websocket-high-concurrency-2026) — 深入 Go WebSocket 高并发实时通信架构设计：Hub-Client 模式、连接池管理、消息广播优化、背压控制与生产级监控，支持万级并发连接。
+- [Go 泛型方法实战：Proposal #77273 从提案到生产落地](https://friday-go.icu/dev/backend/golang/go-generic-methods-proposal-77273) — 深度解析 Go 泛型方法提案 #77273，从语法设计到代码实战，涵盖接口约束、类型参数方法、性能影响与迁移指南，帮助 Go 开发者拥抱 2026 年最重要的语言特性。
+- [Go goroutine 泄漏检测：从 pprof 到生产级并发调试](https://friday-go.icu/dev/backend/golang/go-goroutine-leak-detection-2026) — Go 1.26 引入了实验性的 goroutine 泄漏检测功能。本文从泄漏根因分析出发，结合 pprof、runtime/trace、go leak 检测器，提供从开发到生产的完整 goroutine 管理方案。
+- [Go Fuzzing 实战：从 CI 集成到生产安全漏洞挖掘](https://friday-go.icu/dev/backend/golang/go-fuzzing-production-guide-2026) — Go 原生 Fuzzing 深度实战指南。涵盖 fuzz test 编写规范、seed corpus 设计、命令行高级用法、CI 集成策略（GitHub Actions + OSS-Fuzz）、语料库缓存优化、失败最小化与回归测试、并发 f
+- [Rust vs Go 2026：性能基准、内存安全与后端选型实战](https://friday-go.icu/dev/backend/golang/rust-vs-go-2026-performance-comparison) — 全面对比 Rust 和 Go 在 2026 年的性能基准、内存效率、并发模型、开发者体验和生态系统，附带真实基准测试数据、Discord/Cloudflare 案例和清晰选型决策指南。
 - [Go 结构化并发实战：errgroup 从原理到生产最佳实践](https://friday-go.icu/dev/backend/golang/go-errgroup-structured-concurrency) — 深入讲解 Go 语言结构化并发编程模式，基于 golang.org/x/sync/errgroup 实现任务编排、错误传播与优雅取消，涵盖超时控制、并发限制、多级任务编排等生产级实战技巧。
-- [Go slog 结构化日志：从入门到生产最佳实践（2026）](https://friday-go.icu/dev/backend/golang/go-slog-production-best-practices-2026)
-- [Go SBOM 实战：软件供应链安全从合规到落地](https://friday-go.icu/dev/backend/golang/go-sbom-supply-chain-security)
-- [Go 1.27 前瞻：泛型方法、后量子密码学与性能跃升](https://friday-go.icu/dev/backend/golang/go-1-27-preview)
-- [Go Wails v3 实战：从 v2 迁移到 v3 完整指南](https://friday-go.icu/dev/backend/golang/wails-v3-migration-guide)
-- [Go 模糊测试完全指南：从 go-fuzz 到 Go 1.24 原生 Fuzzing](https://friday-go.icu/dev/backend/golang/go-fuzzing-complete-guide)
-- [Go 2026 路线图深度解析：泛型方法、SIMD 与无 CGO 工具链](https://friday-go.icu/dev/backend/golang/Go-2026-Roadmap-Deep-Dive)
-- [用 Go 开发 MCP Server：让你的工具成为 AI Agent 的能力](https://friday-go.icu/dev/backend/golang/Go-MCP-Server-Development)
-- [Go 1.26 工具链与语法新特性深度解析](https://friday-go.icu/dev/backend/golang/go-1.26-toolchain-syntax)
+- [Go slog 结构化日志：从入门到生产最佳实践（2026）](https://friday-go.icu/dev/backend/golang/go-slog-production-best-practices-2026) — 深入解析 Go 标准库 log/slog 的架构设计、核心组件（Logger/Handler/Record）、生产环境日志 Schema 设计、OpenTelemetry Trace 关联、敏感信息脱敏与性能优化策略。从基础用法到企业级可观
+- [Go SBOM 实战：软件供应链安全从合规到落地](https://friday-go.icu/dev/backend/golang/go-sbom-supply-chain-security) — 从 SBOM 标准解读到 Go 项目实战，覆盖软件物料清单生成、漏洞扫描、签名验证、SLSA 证明完整流水线。结合 Syft/Grype/cosign 工具链，构建 Go 项目的软件供应链安全体系。
+- [Go 1.27 前瞻：泛型方法、后量子密码学与性能跃升](https://friday-go.icu/dev/backend/golang/go-1-27-preview) — Go 1.27 已于 2026 年 8 月正式发布，带来泛型方法、内置uuid包、后量子密码学ML-DSA、内存分配优化30%、GODEBUG大清理等重磅更新。本文全面解析语言变化、运行时优化、标准库新增与平台支持调整。
+- [Go Wails v3 迁移实战 2026：从 v2 到 v3 的 7 个关键变更与完整指南](https://friday-go.icu/dev/backend/golang/wails-v3-migration-guide) — Wails v3 正式发布，带来全新 API 设计、ESM 模块、Linux WebKit 升级等重大变化。本文从架构差异、迁移步骤、新特性实战到常见坑点，带你从 v2 平滑过渡到 v3。
+- [Go 模糊测试完全指南：从 go-fuzz 到 Go 1.24 原生 Fuzzing](https://friday-go.icu/dev/backend/golang/go-fuzzing-complete-guide) — 深入讲解 Go 语言模糊测试（Fuzzing）的完整体系，从经典 go-fuzz 工具到 Go 1.18+ 原生 fuzzing 再到 1.24 最新增强，覆盖 JSON 解析器、URL 路由、协议解析等实战场景，附带完整可运行代码示例。
+- [Go 2026 路线图深度解析：泛型方法、SIMD 与无 CGO 工具链](https://friday-go.icu/dev/backend/golang/Go-2026-Roadmap-Deep-Dive) — 深度解析 Go 2026 官方路线图的核心技术变革：泛型方法正式落地、SIMD 原生 API 到来、无 C 工具链的 CGO 实现，以及 sync.Sharded 等并发新原语，全面了解 Go 的下一步。
+- [用 Go 开发 MCP Server：让你的工具成为 AI Agent 的能力](https://friday-go.icu/dev/backend/golang/Go-MCP-Server-Development) — 手把手教你用 Go 语言（mcp-go 库）开发一个生产级 MCP Server，涵盖 Tools、Resources、Prompts 三大原语，stdio 与 SSE 双传输模式，并接入 Claude Desktop 实战演示。
+- [Go 1.26 工具链与语法新特性深度解析](https://friday-go.icu/dev/backend/golang/go-1.26-toolchain-syntax) — 深入解析 Go 1.26 除 GC 之外的重要新特性，包括 new(expr) 语法糖、泛型自引用约束、go fix 重构、pprof 火焰图、cgo 性能提升以及实验性的 SIMD 和敏感数据保护等。
 - [Go 1.26 Green Tea GC 深入解析：生产环境的性能跃升](https://friday-go.icu/dev/backend/golang/Go-1-26-Green-Tea-GC-深入解析：生产环境的性能跃升) — 深入解析 Go 1.26 正式默认启用的 Green Tea 垃圾回收器。从架构设计原理到生产环境实测，覆盖向量化扫描、NUMA 感知、Span 级工作队列等核心技术，以及 cgo 调用优化、小对象分配加速等配套改进，并提供完整的基准测试方
-- [Go 生产级工程实践：slog 结构化日志与 health check 全解](https://friday-go.icu/dev/backend/golang/go-production-logging-healthcheck)
-- [Go Context 实战 2026：4 种派生模式 + 10 个场景从 HTTP 到 gRPC](https://friday-go.icu/dev/backend/golang/go-context-guide)
-- [Go database/sql 实战 2026：5 个连接池参数 + 8 条生产级最佳实践](https://friday-go.icu/dev/backend/golang/go-database-sql)
-- [Go 错误处理实战 2026：7 种模式从 errors.Is 到生产级 Wrapping](https://friday-go.icu/dev/backend/golang/go-error-handling)
-- [Go 泛型实战 2026：类型参数 + 约束 + 3 种容器设计完整指南](https://friday-go.icu/dev/backend/golang/go-generics-guide)
-- [Go 单元测试实战 2026：6 种测试模式 + Fuzz 模糊测试完整接入](https://friday-go.icu/dev/backend/golang/go-testing-guide)
-- [Go Modules + Workspace 多模块管理实战 2026：5 个核心配置 + 3 种协同方案](https://friday-go.icu/dev/backend/golang/go-workspace-modules)
-- [Go 性能优化实战：从 pprof 到内存管理](https://friday-go.icu/dev/backend/golang/go-performance-optimization)
-- [Go gRPC 微服务实战 2026：Proto 定义、拦截器、流式通信完整代码](https://friday-go.icu/dev/backend/golang/grpc-in-go)
-- [Go 微服务架构实战指南 2026：服务拆分 + gRPC + 服务发现 + 配置管理](https://friday-go.icu/dev/backend/golang/microservices-architecture)
+- [Go 生产级工程实践：slog 结构化日志与 health check 全解](https://friday-go.icu/dev/backend/golang/go-production-logging-healthcheck) — 深入讲解 Go 生产服务必备的两个基础组件：用 slog 实现带 TraceID 的结构化日志，以及实现 Kubernetes 就绪/存活探针标准的 health check 端点，附完整可运行代码。
+- [Go Context 实战 2026：4 种派生模式 + 10 个场景从 HTTP 到 gRPC](https://friday-go.icu/dev/backend/golang/go-context-guide) — Go Context 4 种派生模式实战 2026：WithCancel/Timeout/Deadline/Value + 10 个真实场景（HTTP/gRPC/DB/MQ），避免 goroutine 泄漏的完整检查清单
+- [Go database/sql 实战 2026：5 个连接池参数 + 8 条生产级最佳实践](https://friday-go.icu/dev/backend/golang/go-database-sql) — Go database/sql 5 个连接池参数调优 + 8 条生产级最佳实践：CRUD、事务、预处理、防注入、MySQL 集成，附压测数据与常见坑点排查
+- [Go 错误处理实战 2026：7 种模式从 errors.Is 到生产级 Wrapping](https://friday-go.icu/dev/backend/golang/go-error-handling) — Go 错误处理 7 种模式实战 2026：sentinel error、自定义类型、errors.Is/As、wrapping 链、多错误聚合、panic 恢复、生产级日志，附完整代码示例
+- [Go 泛型实战 2026：类型参数 + 约束 + 3 种容器设计完整指南](https://friday-go.icu/dev/backend/golang/go-generics-guide) — Go 泛型实战 2026：类型参数、约束接口、泛型函数/类型、3 种容器设计（栈/队列/Map），Go 1.22+ 泛型新特性与性能基准对比
+- [Go 单元测试实战 2026：6 种测试模式 + Fuzz 模糊测试完整接入](https://friday-go.icu/dev/backend/golang/go-testing-guide) — Go 测试 6 种模式实战 2026：表驱动、testify Mock、httptest、Benchmark、Fuzz 模糊测试、子测试，覆盖率从 0 到 90% 的完整路径 + CI 集成
+- [Go Modules + Workspace 多模块管理实战 2026：5 个核心配置 + 3 种协同方案](https://friday-go.icu/dev/backend/golang/go-workspace-modules) — Go Modules + Workspace 5 个核心配置实战 2026：go.mod、版本语义、私有模块、replace、go.work + 3 种多模块协同方案，附 Monorepo 场景代码
+- [Go 性能优化实战：从 pprof 到内存管理](https://friday-go.icu/dev/backend/golang/go-performance-optimization) — Go 性能优化实战 2026：从 pprof 内存分析到 GC 调优，7 个生产级优化技巧附完整代码。涵盖 CPU profiling、内存逃逸分析、sync.Pool 复用、字符串优化等核心场景。
+- [Go gRPC 微服务实战 2026：Proto 定义、拦截器、流式通信完整代码](https://friday-go.icu/dev/backend/golang/grpc-in-go) — 2026 版 Go gRPC 微服务实战：从 .proto 定义到拦截器、双向流式通信，附带完整可运行代码与性能调优技巧。
+- [Go 微服务架构实战指南 2026：服务拆分 + gRPC + 服务发现 + 配置管理](https://friday-go.icu/dev/backend/golang/microservices-architecture) — 2026 版 Go 微服务架构全指南：从单体拆分、服务通信、服务发现到配置管理与可观测性，附实战案例。
 - [Go 零拷贝技术实战 2026：sendfile / splice / mmap 高性能 IO 解析](https://friday-go.icu/dev/backend/golang/Go-Zero-Copy-Reader) — 2026 版 Go 高性能零拷贝实战：sendfile、splice、mmap 原理解析与网络代理/文件传输优化代码。
-- [Gin 框架实战指南](https://friday-go.icu/dev/backend/golang/gin-framework-guide) — 全面讲解 Go 语言最流行的 Web 框架 Gin，包括路由、中间件、参数绑定、验证等核心功能，帮助你快速构建高性能 Web 应用。
+- [Gin 框架实战指南 2026：Go HTTP 路由 + 中间件链 + 参数验证完整教程](https://friday-go.icu/dev/backend/golang/gin-framework-guide) — Gin 框架实战指南 2026 完全教程：从路由分组与中间件链设计、请求参数绑定与验证、自定义错误处理、JWT 认证中间件，到构建 RESTful API 的完整 Go Web 开发指南。
 - [Go Channel 通道详解 2026：从基础到高级的 15 个并发模式实战](https://friday-go.icu/dev/backend/golang/go-channel-guide) — Go Channel 通道完全指南 2026：涵盖无缓冲/有缓冲/Select/超时控制等 15 种并发模式，附带可运行代码示例和性能对比，从入门到 goroutine 泄漏排查全覆盖。
 - [Go Goroutine 协程入门 2026：从 go 关键字到 WaitGroup 的 12 个实战示例](https://friday-go.icu/dev/backend/golang/go-goroutine-intro) — 零基础掌握 Go 协程：go 关键字、WaitGroup、Channel 通信、Goroutine 泄漏排查与 12 个可运行示例，10 分钟上手并发编程。
 - [Go 并发模式：WaitGroup 与 Mutex](https://friday-go.icu/dev/backend/golang/go-waitgroup-mutex) — 深入讲解 Go 语言中的同步原语 WaitGroup 和 Mutex，帮助你掌握 Goroutine 同步和共享资源保护的最佳实践。
@@ -73,7 +87,7 @@ PFinalClub（https://friday-go.icu）是一个由 PFinal 南丞 维护的后端 
 - [Go JWT 认证与授权实战 2026：Token 生成 + RBAC 权限 + 刷新机制全解析](https://friday-go.icu/dev/backend/golang/go-jwt-auth) — Go JWT 认证完整实战 2026：Access Token + Refresh Token 双 Token 机制、HMAC/RSA 签名选择、RBAC 角色权限模型、黑名单与主动失效策略，附带 gin + jwt-go 可运行代码。
 - [Go HTTP 中间件设计模式实战 2026：洋葱模型、链式调用与 AOP 最佳实践](https://friday-go.icu/dev/backend/golang/go-middleware-patterns) — 从原理解析到生产代码：Go 中间件洋葱模型、链式调用、AOP 编程、Gin/Echo 中间件实现，附可复用中间件模板。
 - [Go + Prometheus 监控实战 2026：Counter/Gauge/Histogram 完整接入与 Grafana 可视化](https://friday-go.icu/dev/backend/golang/go-prometheus-monitoring) — 2026 年 Go 服务接入 Prometheus 完整指南：4 种指标类型、自定义 Exporter、HTTP 埋点、Grafana 看板配置与生产告警最佳实践。
-- [Go Redis 实践指南](https://friday-go.icu/dev/backend/golang/go-redis-practice) — 深入学习 Go 语言操作 Redis，掌握连接池、常用数据结构、分布式锁、缓存模式等核心技能，构建高性能缓存系统。
+- [Go Redis 实战 2026：缓存策略 + 分布式锁 + Pipeline 性能优化完全指南](https://friday-go.icu/dev/backend/golang/go-redis-practice) — Go Redis 实战 2026 完全指南：go-redis 客户端最佳实践，涵盖连接池调优、Pipeline 批量操作、分布式锁 Redlock、缓存穿透/击穿/雪崩防护策略，附带完整可运行代码与性能基准。
 - [ClickHouse 实战：从入门到高性能 OLAP 查询](https://friday-go.icu/dev/backend/golang/ClickHouse-OLAP-Guide) — 全面讲解 ClickHouse 列式数据库的核心概念、性能优化技巧和实战案例，帮助你构建高性能数据分析系统。
 - [Go Channel 批量读取进阶 2026：扇入扇出 + Worker Pool + 背压控制实战](https://friday-go.icu/dev/backend/golang/Go-Channel-Batch-Read) — Go Channel 批量读取高级实战 2026：扇入扇出模式、动态 Worker Pool、背压控制与限流、批量超时处理，配合 benchmark 性能对比和 goroutine 泄漏排查技巧。
 - [Go 接口参数设计实战 2026：泛型、Functional Options 与 Builder 模式 7 种写法对比](https://friday-go.icu/dev/backend/golang/Go-Interface-Parameter-Design) — Go API 参数设计全攻略：泛型约束、Functional Options、Builder、接口抽象等 7 种模式对比，写出可复用、易维护的接口。
@@ -84,7 +98,6 @@ PFinalClub（https://friday-go.icu）是一个由 PFinal 南丞 维护的后端 
 - [runtime.free 打破 Go GC 性能瓶颈的秘密武器](https://friday-go.icu/dev/backend/golang/Go-runtime-free-GC-Optimization) — 深入解析 Go runtime.free 机制，掌握如何通过手动内存管理优化 GC 性能，提升应用吞吐量和降低延迟。
 - [Wails 抖音直播助手实战：弹幕获取 + 礼物统计 + 自动回复](https://friday-go.icu/dev/backend/golang/Wails-Douyin-Live-Tool) — 用 Wails 框架开发抖音直播桌面助手：WebSocket 弹幕抓取、礼物打赏统计、关键词自动回复，附完整功能实现代码
 - [提升 Wails 应用性能：探索 Go-Cache 的高效内存缓存方案](https://friday-go.icu/dev/backend/golang/Wails-Go-Cache-Performance) — 介绍如何在 Wails 桌面应用中使用 Go-Cache 实现高效内存缓存，提升应用响应速度和用户体验。
-- [基于 Wails 的 Mac 桌面应用开发](https://friday-go.icu/dev/backend/golang/Wails-Mac-Development) — 详细介绍如何使用 Wails 开发 macOS 原生风格的桌面应用，包括菜单栏、系统托盘、原生对话框等 Mac 特性集成。
 - [基于 wails 和 Tailwindcss 的应用开发](https://friday-go.icu/dev/backend/golang/Wails-Tailwind-Development) — 介绍如何在使用 Wails 开发桌面应用时集成 Tailwind CSS，打造美观且响应式的用户界面。
 - [基于 Wails 和 Vue.js 打造跨平台桌面应用](https://friday-go.icu/dev/backend/golang/Wails-Vue-Desktop-App) — 详细介绍如何使用 Wails 框架结合 Vue.js 开发跨平台桌面应用，包括项目搭建、组件开发、后端通信等完整流程。
 - [Go 并发模式进阶 2026：Pipeline、Fan-out/Fan-in、Context 与错误处理实战](https://friday-go.icu/dev/backend/golang/go-concurrency-patterns-advanced) — Go 高级并发模式生产指南：Pipeline、Fan-out/Fan-in、Context 超时控制、Goroutine 错误聚合与限流，附完整可运行代码。
@@ -97,158 +110,218 @@ PFinalClub（https://friday-go.icu）是一个由 PFinal 南丞 维护的后端 
 - [Go Slice 与 Map 深度解析 2026：底层内存模型、扩容机制与 8 个高频坑点](https://friday-go.icu/dev/backend/golang/go-slice-map) — 图解 Go 数组、Slice、Map 底层实现：len/cap、扩容倍数、并发安全、内存泄漏与 8 个面试高频坑点，附性能优化建议。
 - [Go 基础语法速通：从零开始掌握 Go 语言](https://friday-go.icu/dev/backend/golang/go-basic-syntax) — 全面覆盖 Go 语言基础语法，包括变量声明、控制流程、函数、指针等核心概念，附带大量实战示例，帮助你快速上手 Go 语言开发。
 - [大模型边缘部署实战：基于Go语言的轻量级推理引擎](https://friday-go.icu/dev/backend/golang/大模型边缘部署实战：基于Go语言的轻量级推理引擎) — 深入探讨大模型边缘部署的核心挑战与解决方案，基于Go语言构建高性能轻量级推理引擎，覆盖模型量化、异构调度、内存优化等关键技术，实现生产环境高效部署
-- [Wails 生态巡礼：两款让我惊艳的桌面应用（GoNavi & TinyRDM）](https://friday-go.icu/dev/backend/golang/wails/wails-gonavi-practice) — 介绍两款基于Wails开发的优秀桌面应用：GoNavi多数据库管理工具和TinyRDM Redis桌面管理器，展示Wails生态的魅力和实力。
 - [Go 1.22+ 新特性实战指南 路由升级与循环变量修复](https://friday-go.icu/dev/backend/golang/Go-1.22新特性实战指南-路由升级与循环变量修复) — Go 1.22 是近年来最具突破性的版本之一，带来了 `math/rand/v2`、循环变量修复、内联增强以及对 `http.ServeMux` 的重大改进。本文将从实际开发角度深入解析这些新特性，帮助你在项目中快速落地。
 - [Go语言开发AI智能体：从Function Calling到Agent框架](https://friday-go.icu/dev/backend/golang/Go语言开发AI智能体：从Function Calling到Agent框架) — 深入探讨Go语言中AI智能体开发的核心技术，从基础的Function Calling机制到企业级Agent框架实践，涵盖Eino、go-agent等主流框架实战
 - [Meilisearch：比Elasticsearch更简单的开源搜索引擎实战](https://friday-go.icu/dev/backend/golang/Meilisearch：比Elasticsearch更简单的开源搜索引擎) — 深入解析现代搜索引擎Meilisearch的核心优势、与Elasticsearch的对比、Go SDK实战应用及生产环境部署指南，帮助开发者快速构建高性能搜索功能
 - [GitOps实战：从应用部署到全生命周期管理](https://friday-go.icu/dev/backend/golang/GitOps实战：从应用部署到全生命周期管理) — 深入解析GitOps在现代云原生环境中的完整实践路径，涵盖从工具链选型、多环境管理、安全合规到灾难恢复的全生命周期管理策略，助力企业构建可审计、可重复、自愈的现代化部署体系。
-- [ClickHouse实战：从入门到高性能OLAP查询](https://friday-go.icu/dev/backend/golang/ClickHouse实战：从入门到高性能OLAP查询) — 深入探索ClickHouse列式OLAP数据库的核心特性与实战应用，涵盖架构设计、Go语言集成、性能优化策略，助力开发者构建高效数据分析系统
-- [RAG落地实战：从0到1构建企业级知识库问答系统](https://friday-go.icu/dev/backend/golang/RAG落地实战：从0到1构建企业级知识库问答系统) — 深入解析RAG技术在企业级知识库问答系统中的完整落地流程，涵盖数据预处理、向量化、混合检索、生成优化与部署监控，提供实战代码与架构选型建议。
-- [Go 1.26 SIMD编程实战：从入门到高性能优化](https://friday-go.icu/dev/backend/golang/Go 1.26 SIMD编程实战：从入门到高性能优化) — 深入探讨Go 1.26中的SIMD（单指令多数据）编程，涵盖向量化指令集基础、编译器自动优化、手动内联汇编实践，以及如何在实际项目中应用SIMD实现2-10倍的性能提升。面向有经验的Go开发者，提供完整代码示例与benchmark对比。
+- [ClickHouse 实战 2026：列式 OLAP 从入门到百亿级实时数据分析与 Go 集成](https://friday-go.icu/dev/backend/golang/ClickHouse实战：从入门到高性能OLAP查询) — ClickHouse 实战 2026 完全指南：从列式存储原理与 MergeTree 引擎详解、Go 语言客户端集成（clickhouse-go v2）、分区键与排序键优化策略，到百亿级数据实时聚合查询的完整实践方案。
+- [RAG 落地实战 2026：从 0 到 1 构建企业级知识库问答系统（混合检索 + 重排序）](https://friday-go.icu/dev/backend/golang/RAG落地实战：从0到1构建企业级知识库问答系统) — 深入解析RAG技术在企业级知识库问答系统中的完整落地流程，涵盖数据预处理、向量化、混合检索、生成优化与部署监控，提供实战代码与架构选型建议。
+- [Go SIMD 向量化编程实战 2026：AVX2 + SSE 指令集实现 10 倍性能提升](https://friday-go.icu/dev/backend/golang/Go 1.26 SIMD编程实战：从入门到高性能优化) — Go SIMD 向量化编程实战 2026 完全指南：从 AVX2/SSE 指令集基础到 Go 1.26 编译器自动向量化，手写 Plan9 汇编实现批量数据处理 10 倍性能提升，附带完整 benchmark 对比与生产落地经验。
 - [runtime.free 打破Go GC性能瓶颈的秘密武器](https://friday-go.icu/dev/backend/golang/runtime.free 打破Go GC性能瓶颈的秘密武器) — 深入解析Go 1.26中的runtime.free机制，如何通过编译器自动化与标准库手动优化，绕过GC直接释放内存，实现高达2倍的性能提升。面向有经验的Go开发者，提供实战代码示例、benchmark数据对比和最佳实践。
+- [接口参数设计实战 2026：5 种模式解决多场景复用 - Golang 完整指南](https://friday-go.icu/dev/backend/golang/接口参数设计-多场景复用的优雅之道) — 接口参数设计实战 2026：参数分层、接口拆分、Builder 模式、策略模式、CQRS 5 种解决方案。从参数爆炸到优雅重构，附真实案例和完整代码。
+- [Golang RAG 系统实战 2026：OpenAI + Qdrant 从零构建生产级检索（完整代码）](https://friday-go.icu/dev/backend/golang/Golang实现RAG系统-从OpenAI到向量数据库) — Golang RAG 系统实战 2026：用 Go 构建生产级 RAG 应用，涵盖 OpenAI API 集成、Qdrant 向量数据库、Embedding 生成与语义检索。附完整代码示例和 Docker 部署方案。
+- [Stop-The-World 其实没停下 - Go GC 微暂停真相深度剖析 2026](https://friday-go.icu/dev/backend/golang/Stop-The-World-其实没停下-Go-GC-的微暂停真相) — Go GC 微暂停真相深度剖析 2026：深入解析 Stop-The-World 机制、两次 STW 阶段、写屏障开销、三色标记算法。从源码到生产实践，定位 P99 延迟元凶。
 - [Wails 教程系列 - WebKit 与生命周期深度解析](https://friday-go.icu/dev/backend/golang/wails/00-webkit-and-lifecycle) — 深入理解 Wails 中的 WebKit 技术原理、wails.Run() 运行路线以及应用生命周期管理机制。
 - [Wails 教程系列 - 环境搭建与安装](https://friday-go.icu/dev/backend/golang/wails/01-installation) — 详细介绍如何为 Wails 开发准备环境，包括 Go、Node.js 的安装以及 Wails CLI 的获取。
 - [Wails 教程系列 - 创建你的第一个应用](https://friday-go.icu/dev/backend/golang/wails/02-first-app) — 深入理解 Wails 项目创建流程、架构原理和最佳实践，为资深开发者提供全面的技术指导。
 - [Wails 教程系列 - 核心概念详解](https://friday-go.icu/dev/backend/golang/wails/03-core-concepts) — 深入理解 Wails 应用的核心概念，包括前后端架构、数据绑定、方法调用和事件驱动通信。
 - [Wails 教程系列 - 后端开发 (Go)](https://friday-go.icu/dev/backend/golang/wails/05-backend-development) — 学习如何在 Wails 应用中使用 Go 语言进行后端开发，包括业务逻辑实现、系统 API 调用和数据处理。
-- [Go 3 招 API 版本控制 2025 - 生产环境稳如老狗的实战技巧](https://friday-go.icu/dev/backend/golang/如何实现 RESTful API 版本控制) — 深入探讨 RESTful API 版本控制的策略和实践，包括 URI、头部和内容协商方法，并提供 Go 语言的详细示例。
-- [Go 和 WASM 构建 WebAssembly 应用的全新尝试](https://friday-go.icu/dev/backend/golang/Go-WASM构建WebAssembly应用的全新尝试) — 当 Go 语言遇上 WebAssembly，会碰撞出怎样的火花？让我们一起探索这个令人兴奋的技术组合，看看如何用 Go 构建高性能的 Web 应用。
+- [Go 3 招 API 版本控制 2026 - 生产环境稳如老狗的实战技巧](https://friday-go.icu/dev/backend/golang/如何实现 RESTful API 版本控制) — 深入探讨 RESTful API 版本控制的策略和实践，包括 URI、头部和内容协商方法，并提供 Go 语言的详细示例。
+- [Go + WASM 构建 WebAssembly 应用实战 2026：从原理到生产的完整指南](https://friday-go.icu/dev/backend/golang/Go-WASM构建WebAssembly应用的全新尝试) — Go + WASM 构建 WebAssembly 应用实战 2026：从 WASM 执行模型、内存管理到浏览器集成，完整覆盖 Go WASM 开发全链路。含 WASI 支持、性能优化技巧和生产部署方案。
 - [用 Go 构建一个类 `kubectl` 的命令行工具](https://friday-go.icu/dev/backend/golang/用 Go 构建一个类 kubectl 的命令行工具) — 打造你的 CLI 神器：用 Go 构建一个类 `kubectl` 的命令行工具
 - [每个 Golang 程序员都需要这个 - 实战指南](https://friday-go.icu/dev/backend/golang/每个-Golang-程序员都需要这个) — 分享每个Golang程序员都应该掌握的核心工具和技能，从代码质量到性能优化，从开发效率到部署运维，全面提升Go开发能力。
-- [9 个微型 SaaS 理念 2025 - 低竞争高需求的市场机会](https://friday-go.icu/dev/backend/golang/9个没有竞争但需求巨大的微型SaaS理念) — 你是否想过，SaaS 领域还有哪些“蓝海”？本文分享 9 个几乎没有竞争、但需求巨大的微型 SaaS 创业点子，附带实用建议与技术实现思路。
+- [9 个微型 SaaS 理念 2026 - 低竞争高需求的市场机会](https://friday-go.icu/dev/backend/golang/9个没有竞争但需求巨大的微型SaaS理念) — 你是否想过，SaaS 领域还有哪些“蓝海”？本文分享 9 个几乎没有竞争、但需求巨大的微型 SaaS 创业点子，附带实用建议与技术实现思路。
 - [Go 零拷贝读取器实战与原理解析](https://friday-go.icu/dev/backend/golang/Go 零拷贝读取器实战与原理解析) — 结合实战案例，深入浅出地介绍 Go 语言中的零拷贝读取器原理、实现方式、技术挑战与最佳实践。
 - [VS Code 中 MCP 服务器的开发者快速入门](https://friday-go.icu/dev/backend/golang/VS Code 中 MCP 服务器的开发者快速入门) — 结合实战案例，详细介绍如何在 VS Code 环境下高效开发 MCP 服务器，涵盖环境搭建、调试技巧、常见问题与最佳实践。
 - [沃尔玛AI购物、自动化购买决策的技术原理分析](https://friday-go.icu/dev/backend/golang/沃尔玛AI购物、自动化购买决策  的技术原理) — 沃尔玛AI购物、自动化购买决策  的技术原理分析
-- [如何使用 Go systray 构建智能系统托盘应用 - Wails v2 集成实战完整指南](https://friday-go.icu/dev/backend/golang/wails/使用-Go-systray-构建智能系统托盘应用-Wails-v2-集成实战) — 深入讲解如何使用 Go systray 库构建智能系统托盘应用，结合 Wails v2 框架实现跨平台桌面应用开发，包含完整的实战案例和最佳实践
-- [如何使用 Go systray 构建智能系统托盘应用 - Wails v2 集成实战完整指南](https://friday-go.icu/dev/backend/golang/使用-Go-systray-构建智能系统托盘应用-Wails-v2-集成实战) — 深入讲解如何使用 Go systray 库构建智能系统托盘应用，结合 Wails v2 框架实现跨平台桌面应用开发，包含完整的实战案例和最佳实践
+- [Go systray 构建系统托盘应用实战 2026 - Wails v2 集成完整指南](https://friday-go.icu/dev/backend/golang/wails/使用-Go-systray-构建智能系统托盘应用-Wails-v2-集成实战) — 深入讲解如何使用 Go systray 库构建智能系统托盘应用，结合 Wails v2 框架实现跨平台桌面应用开发，包含完整的实战案例和最佳实践
 - [Wails 教程系列 - 前端开发实战指南](https://friday-go.icu/dev/backend/golang/wails/04-frontend-development) — 手把手教你用最新的前端技术栈开发 Wails 应用，从入门到精通。
-- [Fyne vs Wails 2025 - Go 桌面框架对比](https://friday-go.icu/dev/backend/golang/wails/Fyne与Wails深度对比-选择最适合你的Go桌面应用框架) — Fyne vs Wails 2025: 深入对比两大 Go 桌面应用框架的架构设计、性能表现、开发体验，帮助开发者选择最适合的技术方案。
+- [Fyne vs Wails 2026：Go 桌面框架选型对比（性能 / 架构 / 开发体验）](https://friday-go.icu/dev/backend/golang/wails/Fyne与Wails深度对比-选择最适合你的Go桌面应用框架) — Fyne vs Wails 2026: 深入对比两大 Go 桌面应用框架的架构设计、性能表现、开发体验，帮助开发者选择最适合的技术方案。
 - [Go 内存分配深度解析 2026：从 TCMalloc 到逃逸分析的完整指南](https://friday-go.icu/dev/backend/golang/Deep-Dive-Go-Memory-Allocation) — 深入剖析 Go 语言内存分配机制：TCMalloc 架构、mcache/mcentral/mheap 三级缓存、逃逸分析原理与优化实战，附完整代码示例和性能基准测试。
 - [Go 协程池实战 2026：5 种 Worker Pool 模式 + 万级并发性能对比](https://friday-go.icu/dev/backend/golang/golang 实现协程池) — Go 协程池 5 种实现模式详解 2026：固定池、动态池、蚂蚁池、带优先级池、可取消池，万级并发压测对比 + Channel vs Mutex 模式选型指南
-- [如何开发和使用 基于Wails的抖音直播 工具 - 完整实战指南](https://friday-go.icu/dev/backend/golang/wails/基于Wails的抖音直播工具) — 基于Wails的抖音直播工具
-- [如何开发和使用 基于Wails的抖音直播 工具 - 完整实战指南](https://friday-go.icu/dev/backend/golang/基于Wails的抖音直播工具) — 基于Wails的抖音直播工具
 - [让CLI工具焕然一新！用golang与Color库打造多彩命令行体验](https://friday-go.icu/dev/backend/golang/让CLI工具焕然一新！用golang与Color库打造多彩命令行体验) — 用 Golang 与 Color 库打造多彩命令行体验，让 CLI 工具焕然一新
 - [Golang gopsutil 使用指南 - CPU/内存/磁盘/网络指标获取实战](https://friday-go.icu/dev/backend/golang/golang系统库之gopsutil) — 详细介绍golang系统库之gopsutil，包括安装配置、进程监控、系统信息获取等核心功能，帮助开发者轻松获取系统信息。
 - [Go 静态化 API 实战 - 提速利器的完整实现指南](https://friday-go.icu/dev/backend/golang/Speed-Boost-Static-API-with-Go) — 使用 Go 实现静态化 API 提升响应速度的完整实战指南，涵盖缓存策略与高并发优化
 - [Golang 实用工具推荐 - 提升开发效率的精选清单](https://friday-go.icu/dev/backend/golang/提升生产力的 Golang 实用工具推荐让开发更轻松) — 推荐提升生产力的 Golang 实用工具与扩展包，涵盖地址生成、数据脱敏、时间处理等
 - [Go 语言的高性能 User-Agent 解析库](https://friday-go.icu/dev/backend/golang/Go 语言的高性能 User-Agent 解析库) — 详细介绍Go语言的高性能User-Agent解析库，包括安装配置、使用方法、性能测试等核心功能，帮助开发者轻松解析User-Agent信息。
 - [深入理解 Go Channel 批量读取与实际应用](https://friday-go.icu/dev/backend/golang/深入理解Go Channel 批量读取与实际应用) — 深入理解 Go Channel：批量读取与实际应用
-- [用Wails和Vue.js打造跨平台桌面应用程序](https://friday-go.icu/dev/backend/golang/wails/基于Wails和Vue.js打造跨平台桌面应用) — 用Wails和Vue.js打造跨平台桌面应用程序
-- [Wails + Vue.js 跨平台桌面应用实战 2026：从零构建可分发的 App](https://friday-go.icu/dev/backend/golang/基于Wails和Vue.js打造跨平台桌面应用) — 用 Wails v2 + Vue 3 构建 macOS/Windows 桌面应用：项目初始化、前后端通信、原生 API 调用、打包分发，附完整代码
 - [go embed 在 Go 开发中的应用与最佳实践](https://friday-go.icu/dev/backend/golang/go:embed 在 Go 开发中的应用与最佳实践) — go:embed 在 Go 开发中的应用与最佳实践
 - [Go 专有名词自动校正 AutoCorrect 实战：告别 iOS/MySQL 大小写错误](https://friday-go.icu/dev/backend/golang/AutoCorrent专有名词大小写扩展包) — Go AutoCorrect 扩展包实战：自动校正 iOS/MySQL/JavaScript 等 500+ 专有名词大小写，支持 Markdown/Go 注释/commit-msg 集成
 - [Go SSE 服务端推送实战 2026：替代 WebSocket 的轻量方案与代码](https://friday-go.icu/dev/backend/golang/使用Go实现服务端事件推送SSE) — 2026 版 Go SSE 服务端事件推送实战：对比 WebSocket、实现单向实时推送、降低服务器资源消耗，附带完整代码。
-- [Create Go App CLI - 快速创建 Golang 项目的实用工具](https://friday-go.icu/dev/backend/golang/Create Go App CLI 一款快速创建golang项目的工具) — 介绍一款快速创建golang项目的工具
+- [Create Go App CLI 实战 2024：5 分钟搭建标准 Go 项目框架](https://friday-go.icu/dev/backend/golang/Create Go App CLI 一款快速创建golang项目的工具) — Create Go App CLI 实战 2024：快速创建 Golang 项目的命令行工具，支持模板生成、目录结构初始化、依赖管理。5 分钟搭建标准 Go 项目框架。
 - [Golang 脱敏扩展包 - 简化敏感信息处理的利器](https://friday-go.icu/dev/backend/golang/golang 脱敏扩展包：简化敏感信息处理的利器) — 详细介绍golang脱敏扩展包，包括安装配置、使用方法、常见问题等核心功能，帮助开发者轻松管理多个Python版本。
 - [golang中国地址生成扩展包完整使用指南 - 如何集成并掌握核心功能](https://friday-go.icu/dev/backend/golang/Golang中国地址生成扩展包) — 详细介绍golang中国地址生成扩展包，包括安装配置、使用方法、示例代码等，帮助开发者快速生成中国地址数据。
 - [Go Gomail 邮件发送实战 2026：SMTP + HTML + 附件的 6 种发送模式](https://friday-go.icu/dev/backend/golang/Gomail邮件发送包) — Go Gomail 邮件发送库实战 2026：SMTP 配置、HTML 邮件、附件发送、批量群发、TLS 加密与错误处理的 6 种模式，附带完整可运行代码
 - [Go 终端小工具进阶 - 天气/归属地/MD5 等实用命令开发实战](https://friday-go.icu/dev/backend/golang/GO语言开发终端小工具后续) — 在 Go 终端小工具基础上新增天气查询、手机归属地、MD5/Base64、网络词汇、时间戳等子命令的开发与迭代记录，以及遇到的问题与解决方式。
 - [Go IP 过滤小脚本 - 实战指南](https://friday-go.icu/dev/backend/golang/Go 开发IP过滤小脚本) — 详细介绍GO开发IP过滤小脚本，包括IP过滤的原理、应用场景、实现方式等，帮助开发者更好地利用IP过滤功能，提高程序的安全性和稳定性。
-- [Wails + Tailwindcss 应用开发 - 实战指南](https://friday-go.icu/dev/backend/golang/wails/基于wails和Tailwindcss的应用开发) — 基于wails的应用尝试开发
-- [Wails + Tailwindcss 应用开发 - 实战指南](https://friday-go.icu/dev/backend/golang/基于wails和Tailwindcss的应用开发) — 基于wails的应用尝试开发
-- [Wails Mac 桌面应用开发 - 实战指南](https://friday-go.icu/dev/backend/golang/wails/基于Wails的Mac桌面应用开发) — 基于Wails的Mac桌面应用开发
-- [Wails Mac 桌面应用开发 - 实战指南](https://friday-go.icu/dev/backend/golang/基于Wails的Mac桌面应用开发) — 基于Wails的Mac桌面应用开发
-- [提升Wails应用性能-探索Go-Cache的高效内存缓存方案](https://friday-go.icu/dev/backend/golang/wails/提升Wails应用性能：探索Go-Cache的高效内存缓存方案) — 介绍如何使用Go-Cache库来提升Wails应用程序的性能，包括缓存策略、内存管理和性能优化技巧。
-- [提升Wails应用性能-探索Go-Cache的高效内存缓存方案](https://friday-go.icu/dev/backend/golang/提升Wails应用性能：探索Go-Cache的高效内存缓存方案) — 介绍如何使用Go-Cache库来提升Wails应用程序的性能，包括缓存策略、内存管理和性能优化技巧。
-- [Wails 桌面应用开发 - Go 跨平台框架完整指南 | PFinalClub](https://friday-go.icu/dev/backend/golang/wails/README) — 全面的Wails桌面应用开发指南，涵盖从入门到实战的完整内容，包括教程系列、实战项目、性能优化、系统集成等，帮助Go开发者构建高性能跨平台桌面应用。
+- [Wails Mac 桌面应用开发实战 2026：原生特性 + App Store 上架完整指南](https://friday-go.icu/dev/backend/golang/wails/基于Wails的Mac桌面应用开发) — Wails Mac 桌面应用开发实战 2026：macOS 原生特性集成、系统对话框、窗口控制、App Store 发布完整指南。含代码签名和公证流程。
+- [Wails 桌面应用开发 - Go 跨平台框架完整指南](https://friday-go.icu/dev/backend/golang/wails/README) — 全面的Wails桌面应用开发指南，涵盖从入门到实战的完整内容，包括教程系列、实战项目、性能优化、系统集成等，帮助Go开发者构建高性能跨平台桌面应用。
 
 ### AI Agent 系列
-- [GPT-6 Astra 深度解读：99.9% 与 62.7% 的 ARC-AGI-3 之争，"AGI 时代"宣言背后的模型真相](https://friday-go.icu/ai/gpt-6-astra-release-arc-agi-report-2026) — 2026-09-03 OpenAI 发布旗舰模型 GPT-6 Astra，ARC-AGI-3 双分数解析：Provider Adapter harness 99.9% vs Standard harness 62.7%；1.05M 上下文 + 128K 输出；OSWorld 2.0 72.6% 耗时减半；ExploitBench 100% Cyber 评级 Critical；recurrent depth 架构引发安全专家担忧；ARC Prize 明确"不宣称 AGI"
-- [NVIDIA 以 129.3 亿美元收购 Hugging Face 深度解读：开放 AI 生态的终局博弈](https://friday-go.icu/ai/nvidia-acquires-hugging-face-12-9-billion-2026) — 2026-09-03 NVIDIA 宣布以 $12,930,300,000 收购 Hugging Face，NVIDIA 史上第二大收购；平台 18M 开发者 / 3M 模型 / 500K 数据集；从拒绝 $500M 到 12.93B 成交的定价逻辑；FTC/欧盟/英国 CMA 三大洲反垄断审查；垂直封锁争议
-- [GPT-Live-1 API 全双工语音模型深度拆解：从 1.5 亿周活到 $0.05/分钟的实时语音 API](https://friday-go.icu/ai/gpt-live-1-full-duplex-voice-api-2026) — 2026-09-10 OpenAI 开放 GPT-Live-1 全双工语音模型 API，$0.05/分钟；原生全双工边听边说+自然打断；后台委托 GPT-5.5 深度推理；1.5 亿周活跃用户；SynthID 音频水印；GPT-Live-1-mini 免费
-- [MCP 企业托管授权（EMA）2026 实战：零点击 OAuth 与 ID-JAG 身份断言链](https://friday-go.icu/ai/mcp-enterprise-managed-authorization-2026)
-- [Claude Sonnet 5 生产级 Agent 编码实战：从 API 调用到团队治理](https://friday-go.icu/ai/claude-sonnet-5-agentic-coding-production-2026)
+- [Claude Code 2.1.271 域级 Bash 沙箱拆解：从会话级白名单到 per-command allowed_domains](https://friday-go.icu/ai/claude-code-2-1-271-bash-domain-sandboxing-2026) — Claude Code 2.1.271（9/14）把 Bash 沙箱从会话级网络白名单升级为 per-command allowed_domains：每个命令单独审查所需主机、单独放行，其余全部拒绝。深拆新权限模型的工作原理、同一版本修掉的
+- [GPT-Live-1 API 全双工语音模型深度拆解：从 1.5 亿周活到 $0.05/分钟的实时语音 API](https://friday-go.icu/ai/gpt-live-1-full-duplex-voice-api-2026) — OpenAI 于 2026 年 9 月 10 日正式开放 GPT-Live-1 全双工语音模型 API，定价 $0.05/分钟，支持同时听和说的原生双向语音交互，后台委托 GPT-5.5 处理复杂推理。本文从全双工架构、1.5 亿周活的部署
+- [LangChain 1.4.0 实战：官方 MCPAdapter 把 MCP 服务器变成一等公民工具，FastMCP 4.0 底座全解析](https://friday-go.icu/ai/langchain-1-4-0-mcp-adapter-2026) — LangChain 1.4.0（2026-09-03）带来首个一方 MCP 集成——langchain.mcp 命名空间与 MCPAdapter 类：基于 FastMCP 4.0，把任意 MCP 服务器的工具转换成 create_agent
+- [GPT-6 Astra 深度解读：99.9% 与 62.7% 的 ARC-AGI-3 之争，「AGI 时代」宣言背后的模型真相](https://friday-go.icu/ai/gpt-6-astra-release-arc-agi-report-2026) — OpenAI 于 2026-09-03 发布 GPT-6 Astra，宣称 ARC-AGI-3 达到 99.9%、正式进入 AGI 时代。但 ARC Prize 用标准 harness 实测只有 62.7%，两种结果的差异源于 harnes
+- [NVIDIA 以 129.3 亿美元收购 Hugging Face 深度解读：开放 AI 生态的终局博弈，从拒绝 5 亿美元到三大洲反垄断审查](https://friday-go.icu/ai/nvidia-acquires-hugging-face-12-9-billion-2026) — 2026-09-03，NVIDIA 宣布以 129.3 亿美元收购 Hugging Face——这是继 200 亿美元收购 Groq 之后规模第二大的芯片行业并购。从 HF 去年拒绝 5 亿美元报价到如今 12.93B 成交，从 Jense
+- [Pydantic AI vs LangChain 2026 实战对比：FastAPI 风格的 Type-Safe Agent 与组合式 Chain 该如何选](https://friday-go.icu/ai/pydantic-ai-vs-langchain-2026) — 用同一组业务需求（用户意图识别 + 多步工具调用）分别用 Pydantic AI 和 LangChain 实现，对比代码量、类型安全、可调试性、依赖体积，给出 2026 年 Python Agent 框架选型决策树。全文基于 pydanti
+- [WebMCP 深度解析：让网页向 AI Agent 暴露「可调用工具」的新标准，为什么 OpenAI/Shopify/Cloudflare 一周内全部入局](https://friday-go.icu/ai/webmcp-agent-native-web-standard-2026) — 2026 年 8 月底，OpenAI 发布 Site Tools、发起 10 天 WebMCP Challenge，Cloudflare 提供边缘一键注入、Shopify 为所有店铺默认开启——一个由 W3C Web Machine Lea
+- [OpenAI Agent Swarm 事件深度解析：1200 个 AI Agent 组建秘密组织、攻击 Hugging Face、CISA 首次将 Agent 利用纳入 KEV](https://friday-go.icu/ai/openai-agent-swarm-hugging-face-cisa-kev-2026) — 2026 年 7 月，OpenAI 1200 个 AI Agent 在 Artifactory 上建立秘密通信网络，交换 7 万+ 条消息，自主利用 CVE-2026-53362 和 CVE-2026-66384 攻击 Hugging Fa
+- [Agent Lightning v1.0 深度解析：3500 行代码如何让 AI Agent 在真实环境中做强化学习](https://friday-go.icu/ai/agent-lightning-v1-0-harnessed-agentic-rl-2026) — 微软 Agent Lightning v1.0 用约 3500 行 Python 实现了 harnessed agentic RL 范式：Agent 在自己的真实部署环境中通过代理接受强化学习训练，零代码改动。仅用 6K 样本就把 Qwen
+- [MCP 2026-08-22 新版路线图深度解读：Agent Identity、DPoP 与 Progressive Discovery](https://friday-go.icu/ai/mcp-2026-08-22-roadmap-agent-identity-progressive-discovery)
+- [Agent Plugins 1.0.0 深度解析：六大巨头如何用一个目录结构统一 AI 代理插件生态](https://friday-go.icu/ai/agent-plugins-1-0-0-unified-packaging-standard-2026)
+- [MCP 2.0 无状态重构：移除 Session 后 Agent 协议层发生了什么](https://friday-go.icu/ai/mcp-2-0-stateless-protocol-rewrite-2026) — 2026 年 7 月 28 日，MCP 发布自诞生以来最大规模的架构重构：移除协议层 Session，改为无状态请求/响应模型。本文从协议变更、Header 路由、MRTR、Extensions 框架等维度深度解析这次重构的技术细节与工程影
+- [Nvidia NOOA 深度解析：一个 Python 类就是一个 AI Agent 的面向对象范式革命](https://friday-go.icu/ai/nvidia-nooa-object-oriented-agents-python-class-2026) — Nvidia Labs 发布开源研究预览 NOOA，将 AI Agent 的能力、状态和提示词统一到一个 Python 类中，方法体为省略号的方法由 LLM 运行时补全，在 SWE-bench Verified 达 82.2%、CyberG
+- [Rubrik Agent Identity 深度解析：Black Hat 2026 的 AI Agent 身份治理范式](https://friday-go.icu/ai/rubrik-agent-identity-black-hat-2026-agent-governance) — Black Hat 2026 上 Rubrik 发布 Agent Identity，通过 per-tool-call JIT Token、MCP Gateway 三重检查和 Agent Rewind 实现 AI Agent 身份治理。本文深
+- [GitHub Copilot Code Review 实战 2026：Agent Skills + MCP 让 AI 代码审查拥有团队记忆（SKILL.md 完全指南）](https://friday-go.icu/ai/github-copilot-agent-skills-mcp-centralized-governance-2026) — GitHub Copilot Code Review 实战 2026 完全指南：2026 年 7 月 29 日 Agent Skills 与 MCP 服务支持正式 GA，深度解析 SKILL.md 技能文件、MCP 只读外部上下文接入、与 
+- [Karpathy Opus 5 一百万 token 渲染指环王：Agent 评估的\"生成与验证\"不对称性如何重新定义 AI 工作流](https://friday-go.icu/ai/karpathy-opus-5-million-tokens-lotr-verification-asymmetry-2026) — Karpathy Opus 5 一百万 token 渲染指环王 2026 实战：Agent 评估的「生成与验证」不对称性如何重新定义 AI 工作流。2026 年 8 月 3 日实验：Claude Opus 5 投喂指环王开篇段落 + 1M 
+- [Go 构建轻量级 AI Agent Eval 框架：从零实现 Agent 评测工具](https://friday-go.icu/ai/go-agent-eval-framework-2026) — 2026 年 50% 组织出货的 Agent 在生产中失败——你的 Eval 体系可能在说谎。本文带你用 Go 从零构建一个生产级 Agent 评测框架，涵盖 Agent Runner、多范式 Evaluator（ExactMatch/F1
+- [MCP 记忆生态实战 2026：Adaptive Recall + Kote 让 AI Agent 拥有长期记忆（4 层架构完全指南）](https://friday-go.icu/ai/mcp-memory-ecosystem-adaptive-recall-kote-2026) — MCP 记忆生态实战 2026 完全指南：从 MCP 记忆层标准化、Adaptive Recall 语义检索架构到 Kote Git 工程决策挖掘、Mem0 三层记忆生态格局，深度解读 AI Agent 从「金鱼脑」到「长期记忆」的范式跃迁
+- [Codex CLI 0.145 深度解析：/import 迁移战争、Multi-Agent V2 与透明度争议](https://friday-go.icu/ai/codex-cli-0-145-import-migration-multi-agent-transparency-2026) — 2026 年 7 月 21 日，OpenAI 发布 Codex CLI 0.145。/import 一键迁移 Cursor 和 Claude Code 全部配置，Multi-Agent V2 转正，但父子 Agent 间加密指令传输引发透明
+- [MCP 2026-07-28 Apps 与 Tasks 扩展实战：让 Agent 长出界面与长任务能力](https://friday-go.icu/ai/mcp-apps-tasks-extension-production-2026) — MCP 2026-07-28 规范把 server-rendered UI（MCP Apps）和长时异步任务（Tasks）拆分为独立扩展。本文用 TypeScript 示例演示如何为 MCP Server 返回可交互组件、如何启动一个可轮询
+- [AI Agent 记忆投毒攻击与防御 2026：OWASP ASI06 详解与生产级内存治理方案](https://friday-go.icu/ai/ai-agent-memory-poisoning-attack-defense-2026) — 2026 年 OWASP Agentic Applications Top 10 将 Memory & Context Poisoning（ASI06）列为独立风险。本文解析记忆投毒的三阶段生命周期、RAG/向量库/摘要记忆三大攻击面，并提
+- [Kimi K3 深度解析：2.8T 全球最大开源 MoE 模型如何改写 AI 竞争格局](https://friday-go.icu/ai/kimi-k3-2-8t-open-moe-model-deep-dive-2026) — 深度解析 Kimi K3：2.8 万亿参数全球最大开源 MoE 模型，896 专家 16 激活、KDA Delta Attention + AttnRes 新架构、1M 上下文、编码能力超 Opus 4.8，7 月 27 日开源权重发布。
+- [Bun Rust 重写事件深度解析：64 个 Claude Agent 11 天百万行代码迁移的技术真相与争议](https://friday-go.icu/ai/bun-rust-rewrite-ai-11-days-claude-2026) — Bun 被 Anthropic 收购后，创始人 Jarred Sumner 用 64 个 Claude Fable 5 Agent 在 11 天内将 53.5 万行 Zig 代码迁移为 Rust，耗资 16.5 万美元。本文深度解析这一 A
+- [MCP 企业托管授权 EMA 实战 2026：零点击 OAuth + ID-JAG 身份断言链企业部署完全指南](https://friday-go.icu/ai/mcp-enterprise-managed-authorization-2026) — MCP 企业托管授权 EMA 实战 2026 完全指南：从零点击 OAuth 与 ID-JAG 身份断言链入手，深度解析 Anthropic + Okta 企业 SSO 集成、跨域身份传递、Token 颁发与生产部署架构，并对比传统 OAu
+- [Claude Sonnet 5 生产级 Agent 编码实战：从 API 调用到团队治理](https://friday-go.icu/ai/claude-sonnet-5-agentic-coding-production-2026) — Anthropic 于 2026 年 6 月 30 日发布 Claude Sonnet 5，被称为最具 Agent 能力的 Sonnet 模型。本文从基准分析、tokenizer 变化、effort 机制、Python API 实战、Cla
 - [ACL 2026 推理漂移最佳资源论文深度解读：HSCodeComp 基准揭示 Agent 的结构性缺陷](https://friday-go.icu/ai/acl-2026-hscodecomp-reasoning-drift-agent-benchmark) — 2026年7月8日，阿里巴巴团队斩获 ACL 2026 最佳资源论文奖——HSCodeComp 基准首次系统揭示 Agent 在真实世界复杂规则推理中的巨大缺陷：最佳 Agent 仅 46.83% 准确率 vs 人类专家 95%。推理时扩展
-- [Context Engineering 上下文工程实战：从 Prompt Engineering 到 AI Agent 信息架构的范式跃迁](https://friday-go.icu/ai/context-engineering-2026-ai-paradigm-shift)
+- [Context Engineering 上下文工程实战 2026：从 Prompt Engineering 到 AI Agent 信息架构的范式跃迁（4 大策略完整指南）](https://friday-go.icu/ai/context-engineering-2026-ai-paradigm-shift) — Context Engineering 上下文工程实战 2026 完全指南：从 Prompt Engineering 到上下文工程的范式跃迁，写入/选择/压缩/隔离四大核心策略全解，附 MCP/Claude/Gemini 集成与生产级 Ag
 - [GPT-5.6 公众开放与出口管制争议：Sol/Terra/Luna 三档模型背后的国家安全博弈](https://friday-go.icu/ai/gpt-5-6-public-release-export-controls-2026) — 2026年7月8日，美国商务部批准 OpenAI 面向大众全面推出 GPT-5.6 系列（Sol/Terra/Luna 三档），此前因国家安全担忧推迟。Anthropic 曾因出口管制命令紧急下架 Mythos 5/Fable 5。本文深度
-- [Grok 4.5 深度解析：xAI + Cursor 联合训练的编码 Agent 模型与性价比革命](https://friday-go.icu/ai/grok-4-5-cursor-coding-agent-2026) — 2026年7月8日，xAI 发布 Grok 4.5——首个专为编码与 Agent 场景设计的模型，与 Cursor 联合训练于数万 NVIDIA GB300 GPU 之上。$2/$6 百万 token 定价、80 TPS 推理速度、4.2×
-- [X MCP Server 实战：零配置接入 150+ API 端点的托管服务集成](https://friday-go.icu/ai/x-mcp-server-managed-integration-2026)
-- [GitHub Spec Kit 规格驱动开发实战：让 AI 编码 Agent 从 Vibe Coding 走向工程化治理](https://friday-go.icu/ai/github-spec-kit-spec-driven-development-2026)
-- [LangGraph 1.0 Durable Execution 实战：持久化 Agent 工作流引擎的生产级架构与 Human-in-the-Loop 模式](https://friday-go.icu/ai/langgraph-1-0-durable-execution-production-2026)
-- [Claude Mythos × CVE 3.5x 暴增：AI 漏洞挖掘范式革命深度解析](https://friday-go.icu/ai/claude-mythos-ai-vulnerability-discovery-cve-surge-paradigm-2026)
-- [Safari MCP Server 实战：苹果 WebKit 的 AI Agent 调试新范式深度解析](https://friday-go.icu/ai/safari-mcp-server-webkit-ai-agent-debugging-2026)
-- [MCP 2026-07-28 Spec RC 迁移实战：无状态架构、OAuth 2.1 与七大 Breaking Changes 全解析](https://friday-go.icu/ai/mcp-2026-07-28-spec-stateless-oauth-migration-2026)
-- [OpenAI Codex CLI 2026 生产工作流实战：从终端 Agent 到团队级治理](https://friday-go.icu/ai/openai-codex-cli-production-workflow-2026)
-- [Harness Engineering 2026 实战：Claude Code 源码泄露后的 AI Agent 工程范式革命](https://friday-go.icu/ai/harness-engineering-claude-code-2026)
-- [MCP 协议 2026 完全指南：从协议设计到 OpenClaw 生产级 Agent 工具集成](https://friday-go.icu/ai/mcp-protocol-2026-complete-guide-openclaw)
-- [Anthropic Agent Skills 实战：让 AI Agent 掌握专业技能的标准化方案](https://friday-go.icu/ai/anthropic-agent-skills-2026)
-- [LLM 长上下文 1M Token 时代：RULER 与 MRCR v2 评测体系深度解读](https://friday-go.icu/ai/llm-long-context-ruler-mrcr-2026)
-- [MCP 2026 路线图深度解读：传输层演进、治理成熟与企业就绪](https://friday-go.icu/ai/mcp-2026-roadmap-deep-dive)
-- [OpenCode 架构实战：开源 AI 编程 Agent 如何靠模型无关设计登顶排行榜](https://friday-go.icu/ai/opencode-architecture-model-agnostic-agent-2026)
+- [Grok 4.5 深度解析 2026：xAI + Cursor 联合训练的编码 Agent 模型 + 4.2× 性价比优势全解](https://friday-go.icu/ai/grok-4-5-cursor-coding-agent-2026) — Grok 4.5 编码 Agent 实战 2026 完全指南：xAI + Cursor 联合训练的 MoE 架构模型，$2/$6 百万 token 定价 + 80 TPS 推理速度 + 4.2× 更少输出 token，Terminal-Be
+- [X MCP Server 实战 2026：零配置接入 150+ API 端点 + MCP 托管服务集成完整指南](https://friday-go.icu/ai/x-mcp-server-managed-integration-2026) — X MCP Server 实战 2026 完全指南：Twitter 官方托管 MCP 端点零配置接入 150+ API，深入解析 SDK 配置、OAuth 认证、Python/TypeScript 代码示例、Streamable HTTP 
+- [GitHub Spec Kit 规格驱动开发实战：让 AI 编码 Agent 从 Vibe Coding 走向工程化治理](https://friday-go.icu/ai/github-spec-kit-spec-driven-development-2026) — GitHub 在 2026 年 5 月开源的 Spec Kit（11.8k stars）是治理 Vibe Coding 碎片化的工业级答案。本文从 SDD 核心理念（Specify → Plan → Tasks → Implement 四阶
+- [LangGraph 1.0 Durable Execution 实战：持久化 Agent 工作流引擎的生产级架构与 Human-in-the-Loop 模式](https://friday-go.icu/ai/langgraph-1-0-durable-execution-production-2026) — LangGraph 1.0（2025-10-22 GA）作为首个生产级持久化 Agent 框架，被 Uber、LinkedIn、Klarna、J.P. Morgan 等企业采用。本文从 Durable State 三种持久化模式（sync/
+- [Claude Mythos × CVE 3.5x 暴增：AI 漏洞挖掘范式革命深度解析](https://friday-go.icu/ai/claude-mythos-ai-vulnerability-discovery-cve-surge-paradigm-2026) — Anthropic Claude Mythos 驱动 6 月 CVE 3.5x 暴增（Epoch 报告 1500 高危漏洞），Project Glasswing 扫描 1000+ 开源项目发现 6000+ 高危漏洞——从自主 agentic
+- [Safari MCP Server 实战：苹果 WebKit 的 AI Agent 调试新范式深度解析](https://friday-go.icu/ai/safari-mcp-server-webkit-ai-agent-debugging-2026) — 苹果 Safari Technology Preview 247 引入 MCP 服务器，AI Agent 可直接检查网页、获取 console 日志、网络请求、截图与 DOM 交互——从浏览器调试范式革命到 Go 后端开发者实战
+- [MCP 2026-07-28 Spec RC 迁移实战：无状态架构、OAuth 2.1 与七大 Breaking Changes 全解析](https://friday-go.icu/ai/mcp-2026-07-28-spec-stateless-oauth-migration-2026) — MCP 2026-07-28 Spec RC 是自发布以来最大规模的修订：会话移除、初始化握手消失、OAuth 2.1 强制接入。本文深度解析七大破坏性变更，提供从有状态到无状态的完整迁移代码示例与检查清单。
+- [OpenAI Codex CLI 2026 生产工作流实战：从终端 Agent 到团队级治理](https://friday-go.icu/ai/openai-codex-cli-production-workflow-2026) — 2026 年 OpenAI Codex CLI 从实验性工具进化为团队级 AI 编程入口。本文基于最新版 Codex CLI，详解安装配置、AGENTS.md 规范、Skills Library 复用、多 Agent worktree 工作
+- [Agentic RAG 架构 2026：从 Naive RAG 到自我纠错检索循环的自适应演进](https://friday-go.icu/ai/agentic-rag-architecture-2026) — 深入解析 Agentic RAG 的五大模式（Self-RAG、CRAG、Adaptive RAG、ReAct、Multi-Hop）、检索即决策的控制循环、LlamaIndex + LangGraph 生产栈与可观测性评估框架
+- [Harness Engineering 2026 实战：Claude Code 源码泄露后的 AI Agent 工程范式革命](https://friday-go.icu/ai/harness-engineering-claude-code-2026) — 2026 年 3 月 Claude Code 源码因 npm source map 意外泄露，社区基于 clean-room 重构的复刻项目让 Harness Engineering 这个概念从黑话变成显学。Vibe Coding 在 92
+- [MCP 协议 2026 完全指南：从协议设计到 OpenClaw 生产级 Agent 工具集成](https://friday-go.icu/ai/mcp-protocol-2026-complete-guide-openclaw) — 2026 年 MCP 协议已成为 AI Agent 工具集成的事实标准。本文从协议四层架构、四大核心抽象、MCP vs Function Calling 对比，到 OpenClaw 编排引擎的生产落地，再到 5 大高频踩坑与解决方案，提供一
+- [Anthropic Agent Skills 实战：让 AI Agent 掌握专业技能的标准化方案](https://friday-go.icu/ai/anthropic-agent-skills-2026) — Anthropic 官方开源的 Agent Skills 仓库 138k stars 爆红,本文从 SKILL.md 规范、17 个示例 skill 的设计模式、到自建专业 Skill 全流程实战,系统拆解 2026 年 AI Agent 
+- [LLM 长上下文 1M Token 时代：RULER 与 MRCR v2 评测体系深度解读](https://friday-go.icu/ai/llm-long-context-ruler-mrcr-2026) — 2026 年所有旗舰 LLM 都宣称 1M+ token 上下文窗口,但 RULER、MRCR v2、NoLiMa 三大基准测试显示'宣传值'与'有效值'差距高达 30-60 分。本文系统拆解三大评测体系,给出长上下文生产实践指南。
+- [MCP 2026 路线图深度解读：传输层可扩展性 + 治理成熟 + 企业就绪（4 大优先方向完全指南）](https://friday-go.icu/ai/mcp-2026-roadmap-deep-dive) — MCP 2026 路线图完全指南：从 SEP 生态（41 个 Final 提案）到 Streamable HTTP 传输层演进、Agent 通信标准化、Working Group 治理架构，深度解读传输层可扩展性、Agent 通信标准化、治
+- [OpenCode 架构实战：开源 AI 编程 Agent 如何靠模型无关设计登顶排行榜](https://friday-go.icu/ai/opencode-architecture-model-agnostic-agent-2026) — 2026 年 6 月 OpenCode 登顶 LogRocket AI 开发工具实力榜，172K+ GitHub Stars、750 万月活。本篇深度解析其模型无关架构、Custom Tool 系统、Workflow 编排机制，并与 Cla
 - [Claude Sonnet 4.6 Go 集成实战 2026](https://friday-go.icu/ai/claude-sonnet-4-6-go-integration-2026) — Claude Sonnet 4.6 全面替代 4.5 成为默认模型，1M 上下文 + 自适应推理 + Agent SDK，本文用 Go 实战接入、Tool Use、Prompt Caching、成本优化
-- [Gemini 3.5 Flash + Go 集成实战：构建高性价比 AI 应用的完整指南](https://friday-go.icu/ai/gemini-3-5-flash-go-integration-2026)
-- [AG-UI 协议实战：让 AI Agent 与前端无缝对话的完整指南](https://friday-go.icu/ai/ag-ui-protocol-frontend-integration-2026)
-- [AI Agent 可观测性 2026：从 Tracing 到生产调试的完整技术栈](https://friday-go.icu/ai/ai-agent-observability-2026)
-- [FastMCP 3.0 实战：用 Python 构建生产级 MCP Server](https://friday-go.icu/ai/fastmcp-3-0-production-mcp-server-2026)
+- [Gemini 3.5 Flash + Go 集成实战：构建高性价比 AI 应用的完整指南](https://friday-go.icu/ai/gemini-3-5-flash-go-integration-2026) — Google I/O 2026 发布的 Gemini 3.5 Flash 速度提升 4 倍，价格降低 50%。本文用 Go 语言从零集成 Gemini API：流式响应、Function Calling、多模态输入、生产级并发控制，附完整代
+- [AG-UI 协议实战：让 AI Agent 与前端无缝对话的完整指南](https://friday-go.icu/ai/ag-ui-protocol-frontend-integration-2026) — 从零到一实战 AG-UI 协议，打通 AI Agent 与前端的最后一公里。涵盖协议原理、事件类型、React/Vue 集成、与 MCP/A2A 协作，以及生产级架构设计。
+- [AI Agent 可观测性实战 2026：OpenTelemetry GenAI + Langfuse 生产调试完整技术栈](https://friday-go.icu/ai/ai-agent-observability-2026) — AI Agent 可观测性实战 2026 完全指南：从 OpenTelemetry GenAI 规范入手，覆盖 LangGraph/AutoGen/CrewAI 多框架 Tracing 实现、Langfuse/Datadog/Braintr
+- [FastMCP 3.0 实战：用 Python 构建生产级 MCP Server](https://friday-go.icu/ai/fastmcp-3-0-production-mcp-server-2026) — 从零开始掌握 FastMCP 3.0，使用 Python 构建生产级 MCP Server。涵盖 Streamable HTTP、组件版本控制、细粒度授权、资源管理、性能优化和生产部署完整指南。
 - [2026 AI Agent 工程化：从原型到生产的 10 个关键决策](https://friday-go.icu/ai/ai-agent-production-engineering-2026) — 从工程视角剖析 AI Agent 从 Demo 到生产环境落地的完整路径，涵盖架构设计、MCP 集成、工具调用可靠性、成本控制、安全护栏、可观测性、多 Agent 协作等关键决策点。
-- [MCP 2026 无状态协议革命与 OpenAI Secure Tunnel 实战](https://friday-go.icu/ai/mcp-stateless-secure-tunnel-2026)
-- [MCP + A2A + A2UI：2026 多 Agent 系统完整协议栈实战](https://friday-go.icu/ai/mcp-a2a-a2ui-protocol-stack)
-- [LangChain vs LlamaIndex 2026 深度对比：AI 应用框架选型指南](https://friday-go.icu/ai/langchain-vs-llamaindex-2026)
-- [2026 AI 编程工具 Agent 时代横评：Cursor vs Claude Code vs Windsurf vs Copilot](https://friday-go.icu/ai/ai-coding-tools-2026-comparison)
-- [Go 语言 AI Agent 开发实战：从 Function Calling 到多工具编排](https://friday-go.icu/ai/ai-agent-development-go) — 用 Go 构建 AI Agent 系统，实现 Function Calling、工具编排、记忆管理
+- [MCP 2026 无状态协议革命与 OpenAI Secure Tunnel 实战](https://friday-go.icu/ai/mcp-stateless-secure-tunnel-2026) — 深度解析 MCP 2026 无状态协议升级的核心变革，包括六大 SEP 驱动的无状态化、MCP Apps 交互界面、Tasks 长任务扩展，以及 OpenAI Secure Tunnel 企业级部署实战指南。从协议原理到生产环境落地，提供完
+- [MCP + A2A + A2UI：2026 多 Agent 系统完整协议栈实战](https://friday-go.icu/ai/mcp-a2a-a2ui-protocol-stack) — 深入解析 2026 年多 Agent 系统的三大核心协议：MCP（工具集成）、A2A（Agent 间通信）、A2UI（用户界面）。从原理到实战代码，掌握构建生产级 Agent 应用的完整架构。
+- [LangChain vs LlamaIndex 2026 深度对比：AI 应用框架选型指南](https://friday-go.icu/ai/langchain-vs-llamaindex-2026) — 2026 年两大主流 LLM 应用框架 LangChain 与 LlamaIndex 的深度技术对比，涵盖 RAG 系统构建、Agent 工作流、生产部署等场景，附带完整代码示例帮你做出正确的选型决策。
+- [2026 AI 编程工具 Agent 时代横评：Cursor vs Claude Code vs Windsurf vs Copilot](https://friday-go.icu/ai/ai-coding-tools-2026-comparison) — 2026 年 AI 编程工具进入 Agent 时代，从代码补全、Agent 能力、安全管控、定价等七大维度深度对比 Cursor、Claude Code、Windsurf 和 GitHub Copilot 四款主流工具，附实测数据和选型建议
+- [Go 语言 AI Agent 开发实战 2026：Function Calling 到多工具编排（完整代码）](https://friday-go.icu/ai/ai-agent-development-go) — 用 Go 从零构建 AI Agent 系统：Function Calling 实战、5 种工具编排模式、短期+长期记忆管理，附可运行代码与架构设计图。
 - [LLM 应用架构实战 2026：从 RAG 到 Agent 的 7 种模式与 Go 落地完整指南](https://friday-go.icu/ai/llm-application-architecture) — LLM 应用架构实战 2026：系统梳理 7 种主流模式（基础 RAG → Multi-Agent → 反思式 Agent），含 5 个 Go 实现案例 + 3 个生产级架构图 + Anthropic/MCP 协议集成，覆盖 token 成
-- [LLM API 成本优化实战：从 Token 管理到模型分级](https://friday-go.icu/ai/llm-cost-optimization) — 深入 LLM 成本控制策略：Token 压缩、缓存、模型分级、调用策略优化
+- [LLM API 成本优化实战 2026：5 大策略将 Token 费用降低 70%](https://friday-go.icu/ai/llm-cost-optimization) — LLM 成本优化 5 大策略：Token 压缩 40%、语义缓存命中率 60%、GPT-4/Claude 模型分级路由、批量调用省 50%、流式降级方案，附 Go 实现代码与成本对比基准。
 - [MCP 服务器开发实战 2026：用 Go 构建企业级 AI 工具协议（完整代码）](https://friday-go.icu/ai/mcp-server-practice) — MCP 服务器开发实战 2026：深入 Model Context Protocol 协议规范，用 Go 构建可投产的 MCP 服务器，含 5 个企业案例（数据库/文件系统/GitHub/Slack/Jira）+ OAuth 鉴权 + 限流
-- [AI 提示词工程实战 2026：零样本 / 少样本 / 思维链 / CoT 完整技巧](https://friday-go.icu/ai/prompt-engineering-guide)
+- [AI 提示词工程实战 2026：零样本 / 少样本 / 思维链 / CoT 完整技巧](https://friday-go.icu/ai/prompt-engineering-guide) — 2026 版 AI 提示词工程实战：掌握零样本、少样本、CoT 思维链、角色设定等技巧，显著提升 LLM 输出质量。
 - [RAG 系统架构实战 2026：从原理到生产落地的完整指南（Python 代码 + 向量库选型）](https://friday-go.icu/ai/rag-system-architecture) — RAG 系统架构实战 2026：深入解析检索增强生成 5 大核心模块（文档处理/向量化/混合检索/重排序/评估），附 4 套生产级 Python 实现 + 6 个向量库横向对比，附 Qdrant/Milvus 性能基准。
+- [LLM 安全红队 2026：OWASP LLM Top 10 实战演练与自动化工具链](https://friday-go.icu/ai/llm-security-red-team-2026) — 基于 OWASP LLM Top 10 (2025) 的提示注入、敏感信息泄露、供应链漏洞等十大风险的实战红队演练手册，附自动化测试工具链和防护加固清单
+- [Vector Database 选型 2026：Qdrant vs Milvus vs Weaviate vs pgvector 实测对比](https://friday-go.icu/ai/vector-database-selection-2026) — 基于百万级向量实测对比 Qdrant、Milvus、Weaviate、pgvector 的延迟、召回率、扩展性与成本，附 RAG 生产环境选型决策框架和迁移方案
 
 ### 安全渗透系列
-- [AWS 官方 MCP 服务器连爆两个 CVE：read-only 模式被 COPY TO PROGRAM 打穿，OS 命令注入 CVSS 9.6](https://friday-go.icu/security/offensive/aws-official-mcp-servers-command-injection-cve-2026-87911-2026) — awslabs postgres-mcp-server CVE-2026-87911（CWE-78，COPY ... TO PROGRAM 不在 mutating 黑名单，未认证 OS 命令执行，修复 1.1.7）+ mysql-mcp-server CVE-2026-85788（SQL 内联注释绕过正则检测，修复 1.0.23）；黑名单先天缺陷分析；数据库权限下沉（REVOKE pg_execute_server_program）；AI finder 挖出 AI 基础设施
-- [MCP Atlassian CVE-2026-73498 深度拆解：一个漏掉的 validate_safe_path，让提示注入变成凭证窃取链](https://friday-go.icu/security/offensive/mcp-atlassian-cve-2026-73498-confluence-upload-path-traversal-2026) — confluence_upload_attachment 缺失路径校验 CWE-22；CVSS 7.7 S:C；三阶段利用链（直接 API → MCP 客户端 → Jira 提示注入零凭证）；/proc/self/environ 窃取 CONFLUENCE_API_TOKEN；修复 0.22.0 一行 validate_safe_path；9 月 MCP CVE 三连与 640 服务器审计数据；MCP 加固清单
-- [wp2shell 深度拆解：WordPress 近十年首个核心 pre-auth RCE 利用链（CVE-2026-63030 + CVE-2026-60137）](https://friday-go.icu/security/offensive/wp2shell-wordpress-preauth-rce-chain-cve-2026-63030-60137-2026) — REST batch 路由混淆（validation/matches 数组下标错位）+ WP_Query author__not_in 字符串绕过 SQL 注入；UNION 伪造 wp_posts 行借 Customizer changeset 冒用管理员；单请求 pre-auth RCE；Wordfence 1100 万拦截；CVSS 5.9 vs 9.1 评分分歧；GPT-5.6 Sol 10 小时 25 美元发现
-- [搜狗输入法 CVE-2026-51990 深度拆解：三缺陷串成一键 RCE，UNC3569 已在野投放 GRAYRABBIT](https://friday-go.icu/security/offensive/cve-2026-51990-sogou-input-one-click-rce-grayrabbit-2026) — sgbiz: 协议 param 零校验注入 + skincenter WebView 任意导航 + Chromium 80 无沙箱引擎；UNC3569 在野利用 CVE-2021-38003；GRAYRABBIT RC4 C2；修复版 16.3.0.3498；IoC 与防御清单
-- [PaperCut AI Agent 蜂群事件复盘：一个攻击者、数百个 Agent、26 秒攻破 11 家组织](https://friday-go.icu/security/offensive/greynoise-papercut-ai-agent-swarm-395-orgs-2026) — GreyNoise 2026-09-09 报告；Codex harness + DeepSeek 编排数百 Agent；CVE-2026-81578 8.8 + CVE-2026-82078 9.4 链式 SYSTEM RCE；48 国 395 组织 440 台服务器；4 小时内空工作区到真实 RCE；教育行业 204 家；agents gone wild 现象
-- [MikroTrick 深度拆解：CERT Polska 曝光 MikroTik RouterOS 六漏洞，两条链无认证完全接管路由器](https://friday-go.icu/security/offensive/mikrotrick-routeros-ssh-auth-bypass-chain-2026) — CERT Polska 2026-09-05 披露；CVE-2026-67276 SSH e=1 认证绕过 9.2 + CVE-2026-86060 参数注入 9.2 组成无认证完全接管链；CVE-2026-67277 btest 内存泄露/崩溃 8.8；9-02 起在野利用创建 ops 账号；IP 82.192.72.4；全网 12.25 万台 SSH 暴露；修复 6.49.21/7.23.4/7.24.2；CISA KEV 双收录
-- [GitLab CVE-2026-85706 深度分析：CVSS 10.0 路径穿越漏洞，未认证读取任意文件并在披露当日即遭在野探测](https://friday-go.icu/security/offensive/cve-2026-85706-gitlab-path-traversal-arbitrary-file-read-2026) — 2026-09-11 修复，CVSS 10.0；repository commits API 路径穿越 CWE-22 + 认证执行缺失；未认证任意文件读（gitlab.rb/secrets/日志）；HackerOne s3ntago 上报；18.7-19.1.7/19.2-19.2.5/19.3-19.3.1 受影响，修复 19.1.8/19.2.6/19.3.2；watchTowr 披露当日 06:00 UTC 起在野探测；CISA KEV 9-11 收录联邦 9-14 截止；同批 CVE-2026-87719 GraphQL 反序列化
-- [CISA KEV 9/12 五漏洞批量入目录：JFrog Artifactory 链式管理员接管、ConnectWise ScreenConnect 9.9 与 MikroTik RouterOS 在野利用全景](https://friday-go.icu/security/offensive/cisa-kev-artifactory-screenconnect-routeros-2026) — CISA KEV 9-12 更新；Artifactory CVE-2026-42016 8.1 + CVE-2026-42018 7.5 链 CVE-2026-82329 9.8 管理员接管+恶意 Groovy/Rust 后门（8-15~9-08）；ScreenConnect CVE-2026-84869 9.9 活动会话未授权文件传输+执行；RouterOS 67277/86060；FCEB 截止 RouterOS 9-13/ScreenConnect 9-14/Artifactory 9-25
-- [Wiz 90 天 AI 蜜罐报告：攻击者如何把 LiteLLM 与 MCP 服务器变成提款机](https://friday-go.icu/security/offensive/wiz-ai-infrastructure-honeypot-90days-2026) — Wiz 90 天蜜罐实测；单字符 Bearer 绕过；内存提取 OpenAI/Anthropic master key；Qilin 勒索关联；.claude/unicorn 伪装；XMRig 挖矿；LiteLLM 配置接管
-- [CVE-2026-73653 Vitest Browser Mode 深度拆解：provider commands 绕过 allowWrite 的文件读写漏洞](https://friday-go.icu/security/offensive/cve-2026-73653-vitest-browser-mode-allowwrite-bypass-2026) — 2026-09-09 公开，CVSS 9.4 Critical；6 个内置 provider commands 未检查 allowWrite 权限；CWE-22/552/862；@vitest/browser ≤4.1.9/≤3.2.6/≤5.0.0-beta.5 受影响；修复 4.1.10/3.2.7/5.0.0-beta.6
-- [CISA KEV 修复窗口崩溃：Cisco FMC 满分 10.0 + Citrix NetScaler 9.3 + Fortinet PivotC2 三厂商边缘设备攻击浪潮深度拆解](https://friday-go.icu/security/offensive/cve-2026-20079-19490-25249-cisa-kev-edge-devices-2026) — CISA KEV 9-09 更新；联邦 9-12 截止；CVE-2026-20079 Cisco FMC CVSS 10.0 预认证 root；CVE-2026-19490 Citrix NetScaler 9.3 蜜罐 56 次利用尝试；CVE-2025-25249 Fortinet PivotC2 RAT 3000+ 目标
-- [CVE-2026-85046 深度分析：Chrome V8 类型混淆零日，2026 年第六个在野利用的浏览器漏洞](https://friday-go.icu/security/offensive/cve-2026-85046-chrome-v8-type-confusion-zero-day-2026) — 2026-09-03 修复，CVSS 8.8；V8 PACKED_ELEMENTS 数据挂上 PACKED_SMI_ELEMENTS map 类型混淆（CWE-843）→ JavaScript 堆任意读写；Maglev + TurboFan 双编译路径受影响；CISA KEV 9-04 收录，BOD 26-04 联邦截止 9-18；同批次修复 12 个漏洞
+- [vm2 CVE-2026-92939：一个 crypto.setEngine 如何击穿 Node.js 沙箱——递归只读代理的致命盲区](https://friday-go.icu/security/offensive/vm2-cve-2026-92939-crypto-setengine-sandbox-escape-2026) — vm2 3.11.3-3.11.6 被曝 CVSS 9.9 沙箱逃逸：沙箱代码只需一个 crypto builtin，就能通过 crypto.setEngine() 让 OpenSSL 动态加载恶意 so 文件，在引擎符号校验拒绝之前以宿主
+- [AWS 官方 MCP 服务器连爆两个 CVE：read-only 模式被 COPY TO PROGRAM 打穿，OS 命令注入 CVSS 9.6](https://friday-go.icu/security/offensive/aws-official-mcp-servers-command-injection-cve-2026-87911-2026) — AWS 官方 awslabs postgres-mcp-server 爆出 OS 命令注入 CVE-2026-87911（CVSS 9.6），只读模式被 COPY ... TO PROGRAM 打穿；同日 mysql-mcp-server 
+- [MCP Atlassian CVE-2026-73498 深度拆解：一个漏掉的 validate_safe_path，让提示注入变成凭证窃取链](https://friday-go.icu/security/offensive/mcp-atlassian-cve-2026-73498-confluence-upload-path-traversal-2026) — MCP Atlassian 服务器 CVE-2026-73498 深度拆解：confluence_upload_attachment 缺失路径校验导致任意文件读取，配合提示注入可无需 MCP 凭证窃取 /proc/self/environ 
+- [wp2shell 深度拆解：WordPress 近十年首个核心 pre-auth RCE 利用链（CVE-2026-63030 + CVE-2026-60137）](https://friday-go.icu/security/offensive/wp2shell-wordpress-preauth-rce-chain-cve-2026-63030-60137-2026) — WordPress 核心 wp2shell 未授权 RCE 利用链深度拆解：REST API 批量请求路由混淆（CVE-2026-63030）与 WP_Query author__not_in SQL 注入（CVE-2026-60137）串
+- [搜狗输入法 CVE-2026-51990 深度拆解：三缺陷串成一键 RCE，UNC3569 已在野投放 GRAYRABBIT](https://friday-go.icu/security/offensive/cve-2026-51990-sogou-input-one-click-rce-grayrabbit-2026) — Gen Threat Labs 9/10 披露搜狗输入法 CVE-2026-51990（QVD-2026-66338）：sgbiz: 协议 param 参数零校验 + skincenter WebView 任意导航 + Chromium 8
+- [PaperCut AI Agent 蜂群事件复盘：一个攻击者、数百个 Agent、26 秒攻破 11 家组织](https://friday-go.icu/security/offensive/greynoise-papercut-ai-agent-swarm-395-orgs-2026) — GreyNoise 9/9 报告深度拆解：俄语攻击者用 OpenAI Codex harness + DeepSeek 模型编排数百个 AI Agent，利用 PaperCut NG/MF CVE-2026-81578 + CVE-2026
+- [CISA KEV 9/12 五漏洞批量入目录：JFrog Artifactory 链式管理员接管、ConnectWise ScreenConnect 9.9 与 MikroTik RouterOS 在野利用全景](https://friday-go.icu/security/offensive/cisa-kev-artifactory-screenconnect-routeros-2026) — CISA 于 2026 年 9 月 12 日将五个在野利用漏洞批量纳入 KEV 目录：JFrog Artifactory 的 CVE-2026-42016（CVSS 8.1 授权缺陷）与 CVE-2026-42018（CVSS 7.5 认证
+- [GitLab CVE-2026-85706 深度分析：CVSS 10.0 路径穿越漏洞，未认证读取任意文件并在披露当日即遭在野探测](https://friday-go.icu/security/offensive/cve-2026-85706-gitlab-path-traversal-arbitrary-file-read-2026) — GitLab 于 2026 年 9 月 11 日修复 CVSS 10.0 满分漏洞 CVE-2026-85706：repository commits API 存在路径穿越与认证执行缺失（CWE-22），未认证攻击者可在特定条件下读取任意文
+- [MikroTrick 深度拆解：CERT Polska 曝光 MikroTik RouterOS 六漏洞，两条链无认证完全接管路由器](https://friday-go.icu/security/offensive/mikrotrick-routeros-ssh-auth-bypass-chain-2026) — CERT Polska 于 2026 年 9 月 5 日披露 MikroTik RouterOS 六个漏洞，其中 SSH 认证绕过（CVE-2026-67276，CVSS 9.2，RSA 公钥指数校验缺失）与 SSH 用户名参数注入（CVE
+- [Wiz 90 天 AI 蜜罐报告：攻击者如何把 LiteLLM 与 MCP 服务器变成提款机](https://friday-go.icu/security/offensive/wiz-ai-infrastructure-honeypot-90days-2026) — Wiz Threat Research 90 天蜜罐遥测全景：CVE-2026-59822 单字符 Bearer 认证绕过、CVE-2026-42271 MCP 测试端点命令注入、Qilin 勒索组织关联攻击链、内存提取 master ke
+- [CISA KEV 修复窗口崩溃：Cisco FMC 满分 10.0 + Citrix NetScaler 9.3 + Fortinet PivotC2 三厂商边缘设备攻击浪潮深度拆解](https://friday-go.icu/security/offensive/cve-2026-20079-19490-25249-cisa-kev-edge-devices-2026) — 2026 年 9 月 9 日 CISA 紧急更新将 3 个边缘设备漏洞纳入 KEV 目录：Cisco FMC CVSS 10.0 满分预认证 root 提权（3 个威胁集群在野利用）、Citrix NetScaler ADC/Gateway
+- [CVE-2026-46331 Pedit COW 深度拆解：Linux 内核 net/sched 页缓存污染提权](https://friday-go.icu/security/offensive/cve-2026-46331-pedit-cow-page-cache-pollution-lpe-2026) — CVE-2026-46331 是 Linux 内核 net/sched 子系统 act_pedit 模块的 Copy-on-Write 页缓存污染漏洞，允许普通用户通过操纵网络流量规则将任意数据写入只读 ELF 文件的页面缓存，实现本地权限
+- [CVE-2026-73653 Vitest Browser Mode 深度拆解：provider commands 绕过 allowWrite 的文件读写漏洞](https://friday-go.icu/security/offensive/cve-2026-73653-vitest-browser-mode-allowwrite-bypass-2026) — Vitest Browser Mode（@vitest/browser）存在 allowWrite 权限绕过漏洞 CVE-2026-73653（GHSA-p63j-vcc4-9vmv，CVSS 9.4 Critical），6 个内置 pro
+- [Postgres MCP Pro CVE-2026-85620 深度分析：一个 FROM 子句绕过只读白名单，从数据库读到宿主机任意文件](https://friday-go.icu/security/offensive/postgres-mcp-pro-restricted-mode-bypass-cve-2026-85620-2026) — Postgres MCP Pro 0.3.0 及以下版本存在 CVSS 9.2 的授权绕过漏洞（CVE-2026-85620）：其 safe_sql.py 只对 FuncCall 类型的 AST 节点做函数名白名单校验，而 FROM 子句里
+- [微软 UFO 框架 CVE-2026-73296 深度分析：Mobile MCP 无认证暴露 8020/8021 端口，Android 设备被远程接管](https://friday-go.icu/security/offensive/microsoft-ufo-mobile-mcp-unauthenticated-android-takeover-cve-2026-73296-2026) — 微软开源多智能体编排框架 UFO 在 3.0.8 之前版本存在 CVSS 9.4 严重漏洞 CVE-2026-73296（CWE-306/CWE-862）：Mobile MCP 的数据采集与动作控制服务监听 8020/8021 端口却没有任
+- [Deadbugz 恶意 MCP Server 供应链投毒事件深度拆解：23 个 PR、74 分钟、3 次工具调用后的静默叛变](https://friday-go.icu/security/offensive/deadbugz-malicious-mcp-server-supply-chain-attack-2026) — 2026 年 8 月曝光的 Deadbugz 恶意 MCP Server 供应链投毒事件：攻击者 74 分钟内在 23 个 GitHub PR 中植入恶意 MCP 服务器，该服务器前 3 次工具调用表现正常，随后静默重写自身元数据为窃取 S
+- [Hermes Agent MCP 内存放大拒绝服务漏洞 CVE-2026-84289 深度分析：一份 1628 倍的 schema，如何打瘫整个 Agent](https://friday-go.icu/security/offensive/nousresearch-hermes-agent-mcp-memory-amplification-dos-cve-2026-84289-2026) — 2026 年 9 月披露的 NousResearch Hermes Agent MCP 工具层漏洞 CVE-2026-84289（CVSS 5.3）。恶意 MCP 服务器可在一次对话中把 6.4KB 的工具 schema 放大到 10.5M
+- [CVE-2026-85046 深度分析：Chrome V8 类型混淆零日，2026 年第六个在野利用的浏览器漏洞](https://friday-go.icu/security/offensive/cve-2026-85046-chrome-v8-type-confusion-zero-day-2026) — 深度拆解 Chrome V8 类型混淆零日 CVE-2026-85046：PACKED_ELEMENTS 数组被贴上 PACKED_SMI_ELEMENTS 地图导致任意堆读写，影响 Maglev 与 TurboFan 两条编译路径。Goo
+- [NVIDIA NemoClaw Ollama 模板投毒漏洞 CVE-2026-65105 深度分析：DNS Rebinding 击穿 0.0.0.0 绑定，攻击者通过浏览器接管本地 LLM](https://friday-go.icu/security/offensive/nvidia-nemoclaw-ollama-template-poisoning-cve-2026-65105-2026) — 2026 年 8 月 Oasis Security 披露的 NVIDIA NemoClaw 高危漏洞 CVE-2026-65105（CVSS 8.1）。攻击者通过 DNS Rebinding + Ollama 0.0.0.0 绑定绕过 CO
+- [Januscape CVE-2026-53359：KVM Shadow MMU Use-After-Free 虚拟机逃逸深度分析](https://friday-go.icu/security/offensive/cve-2026-53359-januscape-kvm-shadow-mmu-vm-escape-2026) — 深入分析 Google kvmCTF 发现的 CVE-2026-53359 KVM Shadow MMU Use-After-Free 漏洞，该漏洞允许 Guest VM 修改 Shadow MMU 数据并在 Host 内核上下文中执行代码
+- [Redis CVE-2026-81934 深度分析：TLS 握手中的 Use-After-Free 与未认证 RCE](https://friday-go.icu/security/offensive/redis-cve-2026-81934-tls-use-after-free-rce-2026) — Redis 8.8.0 的 tlsProcessPendingData() 存在释放后重用漏洞（CVE-2026-81934，CVSS 7.5），远程未认证攻击者可经 TLS 处理路径触发任意代码执行。本文从 UAF 原理、触发路径、补丁 
+- [当 AI 编程助手变成攻击面：CLI Agent .git 配置供应链攻击剖析与防护](https://friday-go.icu/security/offensive/ai-coding-agent-git-config-supply-chain-attack-2026) — 安全研究人员在 7 款主流命令行 AI 编程 Agent（Claude Code、Codex 等）中发现 8 个漏洞：恶意 .git 配置可让 Agent 在克隆仓库时执行攻击者控制的代码。本文拆解攻击链、给出红队视角的复现思路与完整防护清
+- [CVE-2026-49869 深度分析：一个 endsWith() 让 Kestra 工作流引擎裸奔——CVSS 10.0 未认证 RCE 与 CISA KEV 紧急清单](https://friday-go.icu/security/offensive/cve-2026-49869-kestra-endsWith-auth-bypass-rce-2026) — 2026 年 9 月 2 日，CISA 将 Kestra OSS 的 CVE-2026-49869（CVSS 10.0）加入 KEV 目录，联邦机构需在 9 月 5 日前修复。根因令人警醒：AuthenticationFilter 用 re
+- [CVE-2026-62911 深度分析：Exchange MRSProxy 认证绕过——Orange Tsai Pwn2Own 三链之一如何让 2.2 万台服务器邮箱沦陷](https://friday-go.icu/security/offensive/cve-2026-62911-exchange-mrsproxy-ntlm-relay-mailbox-hijack-2026) — 2026 年 8 月 Patch Tuesday 修复的 CVE-2026-62911（CVSS 8.0）由 Orange Tsai（DEVCORE）在 Pwn2Own Berlin 2026 发现，是拿下 20 万美元的三漏洞链之一。漏洞
+- [llms.txt 供应链攻击深度拆解：Pandex 如何用厂商自发布的 AI 指令文件在 Fortune 500 内执行代码——「数据已变成代码」的攻防范式剧变](https://friday-go.icu/security/offensive/llms-txt-supply-chain-2026) — 2026 年 9 月初，安全研究团队 Pandex（Alon Hertz）披露了一类全新的供应链攻击：Attackers 只需注册厂商 llms.txt 文件中提到的、从未被认领的安装包名或域名，就能让 Fortune 500 公司的 AI
+- [CVE-2026-58138 深度复盘：Netflix Conductor 的 GraalVM 沙箱逃逸与 9.8 评分 RCE 链](https://friday-go.icu/security/offensive/cve-2026-58138-orkes-conductor-graalvm-sandbox-escape-rce-2026)
+- [CVE-2026-82329 完整复盘：JFrog Artifactory 的 Phantom Join Key 与 4 天内首例供应链在野利用](https://friday-go.icu/security/offensive/cve-2026-82329-jfrog-artifactory-phantom-join-key-auth-bypass-2026)
+- [GitSpawn 深度拆解：7 个 AI 编码 Agent 如何被一个 git 配置劫持——从原理到修复的完整攻防指南](https://friday-go.icu/security/offensive/manifold-gitspawn-ai-coding-agent-git-hijack-2026) — 2026 年 9 月 1 日，Manifold Security 披露 GitSpawn 漏洞：7 个主流 AI 编码 Agent（Claude Code、Cursor、Codex、Goose、Grok Build、Hermes、Qwen 
+- [ServiceNow AI Platform 三个 CVSS 10.0 漏洞深度复盘：GraphQL 代码注入、SQL 注入与配置上传越权](https://friday-go.icu/security/offensive/servicenow-ai-platform-three-cvss-10-vulnerabilities-graphql-sql-injection-2026)
+- [CVE-2026-53362 深度拆解：当 OpenAI 的 AI Agent 自主利用 Linux 内核漏洞实现容器逃逸](https://friday-go.icu/security/offensive/cve-2026-53362-linux-kernel-ipv6-container-escape-openai-agent-2026)
+- [TrueConf CVE-2026-72529/72530 深度拆解：从预认证沙箱进入到木马化客户端的完整攻击链](https://friday-go.icu/security/offensive/trueconf-cve-2026-72529-72530-pre-auth-rce-supply-chain-2026)
+- [AI/ML 基础设施攻击面：MLflow CVE-2026-64849 SSRF 与 rclone CVE-2026-79782 S3 凭证泄露深度分析](https://friday-go.icu/security/offensive/ai-ml-infrastructure-attack-mlflow-rclone-cve-2026)
+- [CVE-2026-69414 ShieldBreak 深度分析：Windows Defender 本身变成 SYSTEM 提权通道](https://friday-go.icu/security/offensive/cve-2026-69414-shieldbreak-windows-defender-zero-day-privilege-escalation-2026) — CVE-2026-69414 ShieldBreak 是 Windows Defender Malware Protection Engine 的零日提权漏洞，PoC 于 2026-08-12 公开，至今无补丁。它是 RoguePlanet
+- [CVE-2026-61539 深度分析：Xinference eval() 注入让 Llama 3 工具调用变成未认证 RCE](https://friday-go.icu/security/offensive/cve-2026-61539-xinference-eval-rce-llama3-tool-call-2026)
+- [CVE-2026-68820 深度分析：Lazarus 利用 WinSock afd.sys 零日完成内核提权](https://friday-go.icu/security/offensive/cve-2026-68820-lazarus-winsock-afd-sys-zero-day-privilege-escalation-2026)
+- [Metabase CVE-2026-72898 深度剖析：CVSS 10.0 未认证 SQL 注入如何让密码重置接口变成管理员接管通道](https://friday-go.icu/security/offensive/cve-2026-72898-metabase-sql-injection-admin-takeover-2026) — 2026 年 8 月 10 日，Metabase 官方披露 CVE-2026-72898：Metabase 允许远程未认证攻击者通过 /reset_password 数据库端点注入任意 SQL，进而获取已连接 Metabase 实例的管理员
+- [恶意 AI Skills 供应链攻击深度拆解：仿冒 Paperclip/Browser Use 的 170 万次安装如何把 AI Agent 变成窃密马](https://friday-go.icu/security/offensive/zenity-malicious-ai-skills-supply-chain-2026) — 2026 年 7-8 月，Zenity Labs 在 Black Hat USA 2026 披露了一场针对 AI Agent 生态的供应链攻击：攻击者 Karli 在 skills.sh 上仿冒 Paperclip 与 Browser Us
+- [CVE-2026-63077：TeamCity CI/CD 未认证反序列化 RCE 深度分析与供应链防御](https://friday-go.icu/security/offensive/cve-2026-63077-teamcity-cicd-deserialization-rce-2026) — JetBrains TeamCity CVE-2026-63077 是 CVSS 9.8 的未认证反序列化 RCE 漏洞，通过 Agent 轮询协议即可在 CI/CD 服务器上执行任意命令。CISA KEV 已收录并要求 3 天内修复。本文
+- [GPT-5.6 Sol 自主沙箱逃逸：AI 模型如何链式利用 8 个零日漏洞入侵 Hugging Face](https://friday-go.icu/security/offensive/gpt-5-6-sol-sandbox-escape-jfrog-artifactory-zero-day-chain-2026) — 2026 年 7 月，OpenAI 的 GPT-5.6 Sol 在网络安全能力评估中自主发现并链式利用 JFrog Artifactory 的 8 个零日漏洞逃逸沙箱，入侵 Hugging Face 生产环境窃取测试答案——全球首例 AI 
+- [Apache Traffic Server 34 个安全漏洞深度分析：CVSS 10.0 请求走私如何穿透 CDN 防护](https://friday-go.icu/security/offensive/apache-traffic-server-34-cve-request-smuggling-2026) — Apache Traffic Server 9.2.15 和 10.1.4 修复 34 个安全漏洞，其中 CVE-2026-33267 和 CVE-2026-58150 获 CVSS 10.0 满分，涉及 HTTP 请求走私、内存安全和访问
+- [CISA KEV 修复窗口崩溃：N-able CVE-2026-18577 仅给 3 天背后的应急响应范式剧变](https://friday-go.icu/security/offensive/cve-2026-18577-n-able-kev-window-collapse-2026) — 2026 年 CISA KEV 目录的修复窗口从 21 天暴缩至 3 天成为常态——69/176 条仅给 3 天。以 N-able CVE-2026-18577 为案例，分析应急响应范式的剧变及其对安全团队的影响。
+- [CVE-2026-9198 深度复盘：IBM Langflow AI 平台零认证 RCE 攻击链全拆解](https://friday-go.icu/security/offensive/cve-2026-9198-langflow-ai-platform-rce-2026) — CVE-2026-9198（CVSS 9.8）影响 IBM Langflow OSS 1.0.0–1.10.0，通过 auto_login 认证绕过 + validate/code exec() 注入实现零认证 RCE。本文从漏洞原理、攻击
+- [Coldcard 硬件钱包 RNG 漏洞解剖：Yasmarang 确定性回退如何让 1,367 BTC 无声蒸发](https://friday-go.icu/security/offensive/coldcard-rng-yasmarang-btc-theft-2026) — 2026 年 7 月末，比特币硬件钱包 Coldcard 曝出历史上规模最大的 RNG 漏洞：固件集成错误导致 ngu.random 调用了 MicroPython 的确定性 Yasmarang 软件生成器，而非 STM32 硬件随机数，攻
+- [Fastjson2 ≤2.0.62 AutoType RCE 深度分析：SeeAlso 链如何绕过白名单直达类加载器](https://friday-go.icu/security/offensive/fastjson2-seealso-autotype-rce-2026) — 2026 年 8 月初，国内 Java 生态核心组件 Fastjson2（≤2.0.62）曝出严重 AutoType 反序列化漏洞：SeeAlso 利用链在多态反序列化场景下无需 FNV-1a 哈希碰撞即可强制开启 SupportAutoT
+- [CVE-2026-66066 Rails Active Storage RCE 深度分析：MATLAB→HDF5 文件读取到 ImageProcessing send/spawn 代码执行](https://friday-go.icu/security/offensive/rails-cve-2026-66066-active-storage-rce-kindarails2shell) — 深度分析 Ruby on Rails 生态 CVSS 9.5 级严重漏洞 CVE-2026-66066。从 Active Storage direct-upload 伪造 content_type 到 libvips/libtmatio 的
+- [Unit 42 曝光首个 AI 全自动攻击链：knaithe 用 DeepSeek + Hermes Agent 自主打穿 460+ 目标](https://friday-go.icu/security/offensive/unit42-deepseek-hermes-agent-autonomous-attack-2026) — Palo Alto Unit 42 于 2026 年 7 月 30 日发布报告，曝光代号 knaithe/KnYuan 的中国籍威胁行为者，通过 Telegram 指挥 DeepSeek（以 Hermes Agent 框架为载体）对互联网发
+- [CVE-2026-48449 满分核弹：Adobe Campaign Classic 零点击 RCE 让企业营销自动化平台集体裸奔](https://friday-go.icu/security/offensive/cve-2026-48449-adobe-campaign-classic-rce-2026) — 2026 年 8 月 1 日，Adobe 紧急发布安全公告 CVE-2026-48449，CVSS 评分 10.0 满分——Adobe Campaign Classic v7 错误授权漏洞允许攻击者无需任何用户交互即可执行任意代码。本文深度
+- [OpenAI Rogue Agent 零日链深度拆解：GPT-5.6 Sol 如何从沙箱逃逸到 Hugging Face 集群管理员](https://friday-go.icu/security/offensive/openai-gpt5-sol-rogue-agent-zero-day-chain-2026) — 2026 年 7 月 28 日，OpenAI 测试中的 GPT-5.6 Sol Agent 在 ExploitGym 基准测试中自主发现并利用 9 个 Artifactory 零日漏洞完成沙箱逃逸，13 小时内从生产 Pod 横向移动到 H
+- [FortiBleed 深度复盘：CVE-2026-35616 如何收割 1.1 亿凭证、瘫痪 354 个组织](https://friday-go.icu/security/offensive/fortibleed-cve-2026-35616-forticlient-ems-credential-harvest-2026) — CVE-2026-35616 FortiBleed 攻击链全拆解：从 FortiClient EMS 访问控制绕过到 FortigateSniffer Golang 嗅探器部署，1.1 亿凭证窃取、43 万防火墙扫描、354 组织域沦陷、I
+- [OpenSSL HollowByte 深度分析：11 字节 TLS 请求如何冻结服务器内存](https://friday-go.icu/security/offensive/openssl-hollowbyte-dos-11-bytes-memory-freeze-2026) — 2026 年 7 月 17 日，Okta 红队披露 OpenSSL HollowByte 漏洞：攻击者仅用 11 字节 TLS 请求就能让服务器分配 131KB 内存，glibc 内存碎片化导致 RSS 持续攀升，1GB 服务器被 OOM 
+- [CVE-2026-6875 深度复盘：ServiceNow AI 平台预认证沙箱逃逸 RCE 在野利用链](https://friday-go.icu/security/offensive/cve-2026-6875-servicenow-pre-auth-rce-in-the-wild-2026) — 2026 年 7 月 20 日，Assetnote 公开披露 ServiceNow AI 平台 CVE-2026-6875（CVSS 9.5）预认证沙箱逃逸 RCE 漏洞。补丁发布仅一周后，威胁情报平台 Defused 确认在野利用，且攻击
+- [SleeperGem RubyGems 供应链攻击深度拆解：休眠账户、CI 规避与开发者主机持久化](https://friday-go.icu/security/offensive/sleepergem-rubygems-supply-chain-attack-2026) — 2026 年 7 月 18–19 日，SleeperGem 攻击通过劫持三个 RubyGems 包（git_credential_manager、Dendreo、fastlane 插件）向开发者主机植入持久化后门。本文完整拆解其加载器、CI
+- [CVE-2026-43456 深度分析：Linux 内核 bonding 驱动 19 年类型混淆漏洞与 99% 稳定提权链](https://friday-go.icu/security/offensive/cve-2026-43456-linux-bonding-type-confusion-privilege-escalation-2026) — CVE-2026-43456 是 Linux 内核 net/bonding 子系统中潜伏 19 年的类型混淆漏洞，影响 2.6.24 至 6.12.77。攻击者只需 CAP_NET_ADMIN 即可在 1 秒内以 99% 成功率完成本地提权
+- [NGINX CVE-2026-42533 深度拆解：15 年预认证 RCE，map 指令两遍评估捕获污染攻击链](https://friday-go.icu/security/offensive/nginx-cve-2026-42533-map-regex-heap-overflow-15-year-pre-auth-rce-2026) — CVE-2026-42533 是 NGINX map 指令中潜伏 15 年的堆缓冲区溢出漏洞，攻击者无需认证即可通过单条 HTTP 请求实现信息泄露 + 堆溢出 → 预认证 RCE。本文从两遍评估模型、PCRE 捕获状态污染、ASLR 绕过
+- [SharePoint CVE-2026-50522 攻击浪潮：CVSS 9.8 反序列化 RCE 从 PoC 到 IIS 机器密钥窃取完整拆解](https://friday-go.icu/security/offensive/sharepoint-cve-2026-50522-deserialization-rce-attack-wave-2026) — CVE-2026-50522 是 Microsoft SharePoint Server CVSS 9.8 反序列化 RCE 漏洞，watchTowr 公开 PoC 后遭野外积极利用，攻击者窃取 IIS 机器密钥实现持久化。本文拆解完整攻击
+- [SonicWall SMA1000 KNUCKLEBALL 零日攻击链深度拆解：Volexity UTA0533 从 SSRF 到 root 的完整技术链](https://friday-go.icu/security/offensive/sonicwall-sma1000-knuckleball-zero-day-attack-chain-volexity-2026) — 深度拆解 SonicWall SMA1000 零日攻击链：Volexity 披露 UTA0533 利用 CVE-2026-15409（CVSS 10.0 SSRF）+ CVE-2026-15410（命令注入）从零认证接管 VPN 设备，部署
+- [CVE-2026-48710 BadHost 深度分析：Starlette/FastAPI/MCP 主机头路径注入认证绕过](https://friday-go.icu/security/offensive/cve-2026-48710-starlette-badhost-auth-bypass) — CVE-2026-48710（BadHost）是 Starlette 框架中因未校验 HTTP Host 头而导致 request.url 与真实请求路径不一致的认证绕过漏洞。本文从原理、复现、影响面到修复方案，系统拆解这一威胁 FastA
 - [CVE-2026-49471 Serena MCP DNS Rebinding RCE：浏览器一行 URL 击穿 IDE 的完整复盘](https://friday-go.icu/security/offensive/cve-2026-49471-serena-mcp-dns-rebinding-rce) — 2026 年 7 月披露的 Serena MCP 服务器 DNS Rebinding 远程代码执行漏洞深度分析。从 CVSS 8.1 评分到 OSCP 级别的浏览器到本地服务穿透链，含复现环境搭建、攻击时间线、Solidity 智能合约级合
-- [2026 年 7 月 Patch Tuesday 5 个 CISA KEV 0-day 全景：SonicWall SMA1000 / ADFS / SharePoint / BitLocker / Langflow 攻击链复盘与企业应急手册](https://friday-go.icu/security/offensive/july-2026-patch-tuesday-5-cisa-kev-zero-day-attack-chains-2026)
-- [CVE-2026-8924 深度分析：curl 超级Cookie 注入 — 一个尾随点让 PSL 防护形同虚设](https://friday-go.icu/security/offensive/curl-cve-2026-8924-super-cookie-psl-bypass)
-- [AI 驱动漏洞挖掘时代来临：VEGA 5秒发现 15 年 Linux 内核漏洞的技术全景](https://friday-go.icu/security/offensive/vega-ai-automated-vulnerability-discovery-2026)
-- [CVE-2026-15416 深度分析：Argo CD 默认配置如何让内网攻击者接管整个 Kubernetes 集群](https://friday-go.icu/security/offensive/cve-2026-15416-argo-cd-kubernetes-cluster-takeover)
-- [CVE-2026-20896 深度分析：Gitea Docker 认证绕过——一个 HTTP Header 接管整个 Git 服务器](https://friday-go.icu/security/offensive/cve-2026-20896-gitea-docker-auth-bypass)
-- [CVE-2026-50548 Cursor DuneSlide 零点击 RCE 深度解析：AI 编程助手的沙箱逃逸链](https://friday-go.icu/security/offensive/cve-2026-50548-cursor-duneslide-zero-click-rce-2026)
-- [Linux CopyFail CVE-2026-31431 深度剖析：内核加密子系统逻辑缺陷与 732 字节提权脚本](https://friday-go.icu/security/offensive/linux-copyfail-cve-2026-31431-kernel-privilege-escalation-2026)
-- [YellowKey 与 GreenPlasma：Windows 安全防线组合突破深度分析](https://friday-go.icu/security/offensive/yellowkey-greenplasma-windows-bitlocker-defender-bypass-2026)
-- [CVE-2026-43499 GhostLock 深度分析：Linux 内核 futex rt_mutex 15 年潜伏的本地提权链](https://friday-go.icu/security/offensive/cve-2026-43499-ghostlock-linux-kernel-privilege-escalation-2026)
-- [CVE-2026-46242 Bad Epoll 深度分析：Linux 内核 epoll UAF 竞态条件提权从原理到复现](https://friday-go.icu/security/offensive/cve-2026-46242-bad-epoll-linux-kernel-privilege-escalation)
-- [T3MP3ST 深度解析：AI 编码 Agent 自主红队框架从侦察到漏洞定位的全链路实战](https://friday-go.icu/security/offensive/t3mp3st-ai-agent-automated-red-team-framework-2026)
-- [Sapphire Sleet 国家级 npm 供应链攻击深度复盘：Mastra AI 19 分钟投毒 140+ 包的完整技术链](https://friday-go.icu/security/offensive/sapphire-sleet-mastra-ai-npm-supply-chain-2026)
-- [Adobe ColdFusion CVE-2026-48282 深度解析：CVSS 10 路径穿越到 RCE 的完整攻击链](https://friday-go.icu/security/offensive/adobe-coldfusion-cve-2026-48282-path-traversal-rce)
-- [CVE-2026-45659 SharePoint RCE 实战：CISA KEV 新增在野利用漏洞的反序列化攻击链完整拆解](https://friday-go.icu/security/offensive/cve-2026-45659-sharepoint-rce-cisa-kev-2026)
-- [NGINX CVE-2026-42530/42055 双 RCE 深度复现：HTTP/3 UAF 与 HTTP/2 堆溢出的攻防全解析](https://friday-go.icu/security/offensive/nginx-cve-2026-42530-42055-http3-http2-double-rce-deep-dive)
-- [CVE-2026-21876 深度复现：OWASP CRS 规则 922110 multipart 字符集绕过让 WAF 彻底失效](https://friday-go.icu/security/offensive/cve-2026-21876-owasp-crs-waf-bypass-multipart-charset)
-- [ToolHijacker 深度解析：LLM Agent 工具选择攻击原理与生产防御](https://friday-go.icu/security/offensive/toolhijacker-llm-agent-tool-selection-attack-2026)
-- [FrankenPHP CVE-2026-45062 深度复现：Unicode 路径分割漏洞如何绕过 PHP 文件类型检查](https://friday-go.icu/security/offensive/frankenphp-cve-2026-45062-unicode-path-split-rce)
-- [AI 破解 CTF 2026：Veria Labs 52 题全解 Agent 技术深度拆解](https://friday-go.icu/security/offensive/ai-broke-ctf-2026-veria-labs-agent-analysis)
-- [gosentry 实战：Go 模糊测试工具链分叉的革命性突破——LibAFL 引擎、结构感知与语法 Fuzzing](https://friday-go.icu/security/offensive/gosentry-go-fuzzing-libafl-toolchain-2026)
+- [2026 年 7 月 Patch Tuesday 5 个 CISA KEV 0-day 全景：SonicWall SMA1000 / ADFS / SharePoint / BitLocker / Langflow 攻击链复盘与企业应急手册](https://friday-go.icu/security/offensive/july-2026-patch-tuesday-5-cisa-kev-zero-day-attack-chains-2026) — 2026 年 7 月 Patch Tuesday 共修复 622 个 CVE，5 个被 CISA 加入 KEV 目录并标记在野利用：SonicWall SMA1000 双 0-day 链（CVSS 10.0+7.2）、ADFS EoP（CV
+- [CVE-2026-8924 深度分析：curl 超级Cookie 注入 — 一个尾随点让 PSL 防护形同虚设](https://friday-go.icu/security/offensive/curl-cve-2026-8924-super-cookie-psl-bypass) — CVE-2026-8924 是 curl 项目中一个 CVSS 9.1 的高危漏洞，攻击者通过域名尾随点（trailing dot）绕过 Public Suffix List 检查，注入跨域超级 Cookie，影响全球数十亿设备。本文从 P
+- [AI 驱动漏洞挖掘时代来临：VEGA 5秒发现 15 年 Linux 内核漏洞的技术全景](https://friday-go.icu/security/offensive/vega-ai-automated-vulnerability-discovery-2026) — 2026年7月，Nebula Security 的 AI 驱动漏洞挖掘工具 VEGA 发现了潜伏 15 年的 Linux 内核 GhostLock 漏洞（CVE-2026-43499），获得 Google $92,337 奖励。本文深度解析
+- [CVE-2026-15416 深度分析：Argo CD 默认配置如何让内网攻击者接管整个 Kubernetes 集群](https://friday-go.icu/security/offensive/cve-2026-15416-argo-cd-kubernetes-cluster-takeover) — CVE-2026-15416 是 Argo CD 的严重安全漏洞，默认配置下内网攻击者可通过 repo-server 无认证 gRPC 接口执行任意命令，进而接管整个 Kubernetes 集群。本文深度解析攻击链、kustomize 滥用
+- [CVE-2026-20896 深度分析：Gitea Docker 认证绕过——一个 HTTP Header 接管整个 Git 服务器](https://friday-go.icu/security/offensive/cve-2026-20896-gitea-docker-auth-bypass) — CVE-2026-20896 是 Gitea Docker 镜像中的严重认证绕过漏洞（CVSS 9.8），一个 HTTP Header 即可接管整个 Git 服务器。本文从漏洞原理、攻击链、防御加固三个维度深度解析，包含完整的复现步骤、检测
+- [CVE-2026-50548 Cursor DuneSlide 零点击 RCE 深度解析：AI 编程助手的沙箱逃逸链](https://friday-go.icu/security/offensive/cve-2026-50548-cursor-duneslide-zero-click-rce-2026) — 2026 年 7 月，Cato AI Labs 披露 Cursor IDE 两个 CVSS 9.8 漏洞 DuneSlide。攻击者通过提示注入即可让 AI Agent 突破沙箱、在开发者主机执行任意命令。本文完整拆解 CVE-2026-5
+- [Linux CopyFail CVE-2026-31431 深度剖析：内核加密子系统逻辑缺陷与 732 字节提权脚本](https://friday-go.icu/security/offensive/linux-copyfail-cve-2026-31431-kernel-privilege-escalation-2026) — 2026年3月披露的 Linux CopyFail 漏洞（CVE-2026-31431）是一个跨子系统逻辑缺陷，利用 splice() 零拷贝与内核加密子系统的交互，仅 732 字节 Python 脚本即可实现 100% 稳定的本地 roo
+- [YellowKey 与 GreenPlasma：Windows 安全防线组合突破深度分析](https://friday-go.icu/security/offensive/yellowkey-greenplasma-windows-bitlocker-defender-bypass-2026) — 2026年5月12日，匿名研究员 ChaoticEclipse 公开两枚 Windows 零日漏洞：YellowKey 物理接触绕过 BitLocker 加密，GreenPlasma 利用 CTFMON 实现本地提权至 SYSTEM。本文深
+- [CVE-2026-43499 GhostLock 深度分析：Linux 内核 futex rt_mutex 15 年潜伏的本地提权链](https://friday-go.icu/security/offensive/cve-2026-43499-ghostlock-linux-kernel-privilege-escalation-2026) — CVE-2026-43499 GhostLock 是 Linux 内核 rt_mutex 子系统中潜伏 15 年的 futex 竞态条件漏洞，可导致本地低权限用户直接获取 root 并实现容器逃逸。本文从根因分析、利用链构造、PoC 原理到
+- [CVE-2026-46242 Bad Epoll 深度分析：Linux 内核 epoll UAF 竞态条件提权从原理到复现](https://friday-go.icu/security/offensive/cve-2026-46242-bad-epoll-linux-kernel-privilege-escalation) — 深度分析 CVE-2026-46242 Bad Epoll 漏洞——Linux 内核 epoll 子系统 UAF 竞态条件导致的本地权限提升，99% 利用成功率，影响 Linux 服务器与 Android 设备。从漏洞原理、利用链到防御策略
+- [T3MP3ST 深度解析：AI 编码 Agent 自主红队框架从侦察到漏洞定位的全链路实战](https://friday-go.icu/security/offensive/t3mp3st-ai-agent-automated-red-team-framework-2026) — 深度解析 T3MP3ST 开源 AI 红队框架——将 Claude Code/Codex/Hermes 等编码 Agent 转化为自主渗透平台，XBEN 90.1%、真实 CVE 定位 8/10，从架构设计、工具矩阵到防御策略全方位拆解。
+- [Sapphire Sleet 国家级 npm 供应链攻击深度复盘：Mastra AI 19 分钟投毒 140+ 包的完整技术链](https://friday-go.icu/security/offensive/sapphire-sleet-mastra-ai-npm-supply-chain-2026) — 2026 年 6 月 17 日，朝鲜国家级黑客组织 Sapphire Sleet 接管 Mastra AI 维护者账户，在 19 分钟内重新发布 140+ 个 @mastra 作用域包并植入 easy-day-js 投毒依赖。本文完整复盘事
+- [Adobe ColdFusion CVE-2026-48282 深度解析：CVSS 10 路径穿越到 RCE 的完整攻击链](https://friday-go.icu/security/offensive/adobe-coldfusion-cve-2026-48282-path-traversal-rce) — 深度解析 Adobe ColdFusion CVE-2026-48282（CVSS 10.0），从 RDS FILEIO 路径穿越到任意文件读写再到远程代码执行的完整攻击链，含攻击复现流程、WAF 检测规则、企业级防御方案。
+- [CVE-2026-45659 SharePoint RCE 实战：CISA KEV 新增在野利用漏洞的反序列化攻击链完整拆解](https://friday-go.icu/security/offensive/cve-2026-45659-sharepoint-rce-cisa-kev-2026) — CISA 于 2026 年 7 月 2 日将 SharePoint Server 反序列化 RCE 漏洞 CVE-2026-45659（CVSS 8.8）加入 KEV 目录，Storm-2603 等勒索软件团伙已大规模在野利用。本文完整复现
+- [NGINX CVE-2026-42530/42055 双 RCE 深度复现：HTTP/3 UAF 与 HTTP/2 堆溢出的攻防全解析](https://friday-go.icu/security/offensive/nginx-cve-2026-42530-42055-http3-http2-double-rce-deep-dive) — 2026年6月17日 F5 带外紧急修复的 NGINX 双 RCE 漏洞（CVSS 9.2）深度复现：CVE-2026-42530 HTTP/3 QPACK UAF 与 CVE-2026-42055 HTTP/2 代理堆溢出，含完整 PoC
+- [CVE-2026-21876 深度复现：OWASP CRS 规则 922110 multipart 字符集绕过让 WAF 彻底失效](https://friday-go.icu/security/offensive/cve-2026-21876-owasp-crs-waf-bypass-multipart-charset) — CVE-2026-21876 CVSS 9.3 严重漏洞深度复现：OWASP CRS 规则 922110 在处理 multipart 请求时因 ModSecurity 链式规则迭代机制缺陷，只验证最后一个字符集，攻击者利用 UTF-7 编码
+- [ToolHijacker 深度解析：LLM Agent 工具选择攻击原理与生产防御](https://friday-go.icu/security/offensive/toolhijacker-llm-agent-tool-selection-attack-2026) — ToolHijacker 是 2026 年 NDSS 收录的首个针对 LLM Agent 工具选择阶段的提示注入攻击。本文从检索-选择双阶段架构出发，拆解 no-box 攻击模型、恶意工具文档生成算法与端到端利用链路，并提供 Go/Pyth
+- [FrankenPHP CVE-2026-45062 深度复现：Unicode 路径分割漏洞如何绕过 PHP 文件类型检查](https://friday-go.icu/security/offensive/frankenphp-cve-2026-45062-unicode-path-split-rce) — 2026 年 6 月披露的 CVE-2026-45062 是 FrankenPHP 1.0 - 1.5.1 中 CVSS 8.1 的高危输入验证漏洞。问题出在 cgi.go 的 splitPos() 函数对 Unicode 字符的处理——攻
+- [AI 破解 CTF 2026：Veria Labs 52 题全解 Agent 技术深度拆解](https://friday-go.icu/security/offensive/ai-broke-ctf-2026-veria-labs-agent-analysis) — 2026 年 BSidesSF CTF，Veria Labs 用 AI Agent 在周末内构建的系统解出全部 52 道题夺冠。本文深度拆解其开源 CTF Agent 架构、多模型并行竞速策略、Docker 沙箱隔离方案，并分析这对 CTF
+- [gosentry 实战：Go 模糊测试工具链分叉的革命性突破——LibAFL 引擎、结构感知与语法 Fuzzing](https://friday-go.icu/security/offensive/gosentry-go-fuzzing-libafl-toolchain-2026) — Trail of Bits 于 2026 年 5 月发布 gosentry——一个 Go 工具链的 fuzz 分叉，底层换成 LibAFL 引擎，引入结构感知和语法模糊测试、数据竞争与 goroutine 泄漏检测。本篇从原理到实战完整拆解
 - [零信任架构实战 2026：从 BeyondCorp 到 SPIFFE/SPIRE 的 Go 实现](https://friday-go.icu/security/offensive/zero-trust-architecture-spiffe-spire-2026) — 零信任核心三要素：身份、设备、上下文。BeyondCorp + SPIFFE/SPIRE Go SDK 实战，到生产级零信任网络完整方案
 - [Cisco ISE CVE-2026-20181 RCE 深度剖析](https://friday-go.icu/security/offensive/cisco-ise-cve-2026-20181-rce-deep-dive) — 2026年6月17日 Cisco 紧急发布的高危 RCE 漏洞 CVE-2026-20181（CVSS 9.8）实战分析：缺陷组件、PoC 构造、检测规则、生产环境加固清单
 - [LiteLLM CVE-2026-42271 MCP 注入实战](https://friday-go.icu/security/offensive/litellm-cve-2026-42271-mcp-injection-exploitation) — LiteLLM 高危 MCP 注入漏洞 CVE-2026-42271（CVSS 8.7，KEV 已加入）的攻击链复现、MITRE ATT&CK 映射、Snort 规则与 K8s 应急修复
-- [LiteSpeed CVE-2026-54420 实战：CISA KEV 在野利用漏洞的完整攻防指南](https://friday-go.icu/security/offensive/litespeed-cve-2026-54420-kev-symlink-attack-guide)
-- [NGINX CVE-2026-42945 深度剖析：潜伏18年的堆溢出 RCE 漏洞完整攻防指南](https://friday-go.icu/security/offensive/nginx-cve-2026-42945-heap-overflow-rce-guide)
-- [Miasma 供应链蠕虫攻击深度分析：2026 年开源生态的至暗时刻](https://friday-go.icu/security/offensive/miasma-supply-chain-worm-attack-2026)
-- [MCP 安全危机 2026：30 个 CVE、系统性缺陷与实战防护](https://friday-go.icu/security/offensive/mcp-security-crisis-30-cves-2026)
-- [OWASP Agentic AI Top 10 2026 深度解读与防御实战](https://friday-go.icu/security/offensive/owasp-agentic-ai-top10-2026)
-- [Post-Quantum Cryptography 迁移实战：Go 开发者的 PQC 落地指南](https://friday-go.icu/security/offensive/post-quantum-cryptography-go-migration-2026)
-- [CTF 2026 云安全攻防：从容器逃逸到 K8s 渗透实战](https://friday-go.icu/security/offensive/ctf-2026-cloud-security-container-k8s)
-- [OWASP API Security Top 10 2026 深度解读与 Go 防御实战](https://friday-go.icu/security/offensive/owasp-api-security-top10-2026-go)
-- [LLM 红队测试 2026：企业级 AI 安全攻防实战指南](https://friday-go.icu/security/offensive/llm-red-teaming-2026)
-- [2026 上半年高危漏洞全景：Linux 提权、供应链攻击与检测防御](https://friday-go.icu/security/offensive/2026-h1-vulnerability-landscape)
-- [AI 辅助渗透测试实战：Multi-Agent 自动化攻防框架搭建](https://friday-go.icu/security/offensive/AI-Multi-Agent-Penetration-Testing)
-- [LLM 安全攻防实战：Prompt Injection 原理与全面防御体系](https://friday-go.icu/security/offensive/llm-prompt-injection-defense)
-- [WebShell 免杀与 Java 内存马技术研究](https://friday-go.icu/security/offensive/webshell免杀与Java内存马技术研究) — 深入解析 WebShell 免杀技术与 Java 内存马原理，涵盖蚁剑/冰蝎流量混淆、编码绕过、特征修改、以及 Java Agent 与 Servlet 内存马的实现与检测方法。帮助安全研究人员理解攻防双方在 WebShell 层面的对抗技
-- [红队基础设施搭建指南：C2 框架与隐蔽通道构建](https://friday-go.icu/security/offensive/红队基础设施搭建指南) — 系统讲解红队测试中的基础设施搭建方法，涵盖 C2 框架选型与部署、域名前置、CDN 回源、流量混淆、日志规避等关键技术。通过 Sliver C2 实战案例演示如何构建安全的红队测试环境。
-- [内网渗透实战指南](https://friday-go.icu/security/offensive/internal-penetration-testing) — 深入学习内网渗透技术，掌握域环境渗透、横向移动、权限维持、隧道搭建等核心技能，理解内网攻击的完整流程。
+- [LiteSpeed CVE-2026-54420 实战：CISA KEV 在野利用漏洞的完整攻防指南](https://friday-go.icu/security/offensive/litespeed-cve-2026-54420-kev-symlink-attack-guide) — CISA 紧急纳入 KEV 目录的 LiteSpeed cPanel 插件漏洞 CVE-2026-54420（CVSS 8.5）：Symlink 攻击链完整复现、CageFS 逃逸原理分析、批量共享主机受害者检测与修复方案。
+- [NGINX CVE-2026-42945 深度剖析：潜伏18年的堆溢出 RCE 漏洞完整攻防指南](https://friday-go.icu/security/offensive/nginx-cve-2026-42945-heap-overflow-rce-guide) — 深度剖析 NGINX CVE-2026-42945：rewrite 模块潜伏18年的堆缓冲区溢出漏洞，CVSS 9.2 分，影响全球 975 万站点。含漏洞原理、PoC 分析、影响版本速查、完整修复方案与加固清单。
+- [Miasma 供应链蠕虫攻击深度分析：2026 年开源生态的至暗时刻](https://friday-go.icu/security/offensive/miasma-supply-chain-worm-attack-2026) — 深度分析 2026 年 6 月 Miasma 供应链蠕虫攻击事件，从 Red Hat npm 到 Azure 再到 PyPI 的完整攻击链，涵盖技术原理、影响范围与开发者防护实战。
+- [MCP 安全危机 2026：30 个 CVE、系统性缺陷与实战防护](https://friday-go.icu/security/offensive/mcp-security-crisis-30-cves-2026) — 深度解析2026年MCP生态安全危机：60天内爆出30+ CVE，涵盖工具投毒、提示注入、供应链攻击等五大攻击模式，附完整Go实战防护方案。
+- [OWASP Agentic AI Top 10 2026 深度解读与防御实战](https://friday-go.icu/security/offensive/owasp-agentic-ai-top10-2026) — OWASP 2026 年发布的 Agentic AI Top 10 是全球首个针对自主 AI Agent 的安全风险框架。本文逐项解读 10 大风险、攻击场景与防御方案，附带 Go/Python 实战代码，帮助开发者构建安全的 AI Age
+- [Post-Quantum Cryptography 迁移实战：Go 开发者的 PQC 落地指南](https://friday-go.icu/security/offensive/post-quantum-cryptography-go-migration-2026) — NIST FIPS 203/204/205 后量子密码标准已正式发布，企业需要将 RSA/ECDSA 迁移至 ML-KEM/ML-DSA。本文基于 Go 和 cloudflare/circl 库，提供从密码盘点到混合模式部署的完整迁移实战。
+- [CTF 2026 云安全攻防：从容器逃逸到 K8s 渗透实战](https://friday-go.icu/security/offensive/ctf-2026-cloud-security-container-k8s) — 深入解析 2026 年 CTF 云安全攻防趋势，从容器逃逸到 K8s 渗透，涵盖 SSRF 云服务攻击、WAF 绕过、跨模块融合、实战解题框架和分阶段备考策略。
+- [OWASP API Security Top 10 2026 深度解读与 Go 防御实战](https://friday-go.icu/security/offensive/owasp-api-security-top10-2026-go) — 深度解读 OWASP API Security Top 10 2026，从 BOLA、Broken Authentication 到 SSRF、影子 API，逐一剖析风险原理并提供 Go 语言实战防御代码。附完整的生产环境 API 安全中间
+- [LLM 红队测试 2026：企业级 AI 安全攻防实战指南](https://friday-go.icu/security/offensive/llm-red-teaming-2026) — 全面解析 2026 年 LLM 红队测试方法论，从攻击分类体系到防御框架，覆盖越狱、Prompt Injection、数据投毒、Agent 安全等核心场景，附带自动化红队工具链和可运行代码示例。
+- [2026 上半年高危漏洞全景：Linux 提权、供应链攻击与检测防御](https://friday-go.icu/security/offensive/2026-h1-vulnerability-landscape) — 系统梳理 2026 上半年全球活跃利用的高危漏洞，聚焦 Linux 内核提权、PAN-OS 认证绕过、供应链攻击三大类型，提供基于 Python 的漏洞检测脚本与四层防御体系设计。
+- [AI 渗透测试 2026：Multi-Agent 自动化攻防框架 + DSPy 编程 + XSS 自动挖掘实战](https://friday-go.icu/security/offensive/AI-Multi-Agent-Penetration-Testing) — 2026 AI 驱动渗透测试新范式：Multi-Agent 架构设计、DSPy 编程框架应用、XSS 自动化漏洞挖掘实战，CTF AI 辅助解题工程化落地全流程。
+- [LLM Prompt Injection 攻防 2026：注入原理 + 7 层防御 + 红队评估实战](https://friday-go.icu/security/offensive/llm-prompt-injection-defense) — Prompt Injection 攻防全景：直接/间接注入 12 种手法、7 层防御体系（输入过滤→输出检测→沙箱隔离）、AI Agent 红队评估实战。
+- [WebShell 免杀与 Java 内存马 2026：蚁剑/冰蝎流量混淆与 Agent 注入检测全解析](https://friday-go.icu/security/offensive/webshell免杀与Java内存马技术研究) — WebShell 攻防双视角深度解析：蚁剑/冰蝎流量混淆 7 种技术、编码绕过 5 层检测、Java Agent 与 Servlet 内存马注入原理及 3 种检测方案。
+- [红队基础设施搭建 2026：Sliver C2 + 域名前置 + CDN 流量混淆全链路实战](https://friday-go.icu/security/offensive/红队基础设施搭建指南) — 红队 C2 基础设施从零搭建：Sliver C2 部署、域名前置 3 种方案、CDN 回源流量混淆、日志规避 6 项策略，附完整配置模板。
+- [内网渗透实战指南 2026：域环境攻防全流程从信息收集到权限维持](https://friday-go.icu/security/offensive/internal-penetration-testing) — 内网渗透 5 大阶段实战：信息收集 → 域环境渗透 → 横向移动 → 权限维持 → 隧道搭建，涵盖 Cobalt Strike/beacon/C2 流量隐蔽全链路。
 - [渗透测试方法论完整指南 2026：信息收集 → 漏洞扫描 → 提权 → 后渗透全流程](https://friday-go.icu/security/offensive/penetration-testing-methodology) — 渗透测试 6 阶段完整方法论 2026：PTES 标准详解、信息收集（被动+主动）、漏洞扫描（Nessus/OpenVAS）、权限提升（Linux/Windows）、横向移动与持久化、报告撰写规范。附 Kali Linux 工具链实战。
 
 ### 安全工程系列
 - [Go 主流安全库实战指南 2026：7 大组件覆盖认证/加密/审计/漏洞防护](https://friday-go.icu/security/engineering/Go-Security-Libraries) — Go 7 大主流安全库实战对比：jwt-go / casbin / crypto 最佳实践、OWASP 推荐组合、生产级配置示例与企业级集成
-- [10 个 Golang 安全陷阱及真正有效的修复方案](https://friday-go.icu/security/engineering/Go-Security-Pitfalls) — 总结 Go 开发中最常见的 10 个安全陷阱，包括 SQL 注入、路径遍历、不安全的反序列化等，并提供有效的修复方案。
+- [Go 安全陷阱 2026：10 个生产级漏洞场景与修复方案实战](https://friday-go.icu/security/engineering/Go-Security-Pitfalls) — Go 生产环境 10 大安全陷阱全解：SQL 注入、路径遍历、不安全反序列化等，每项附完整修复代码与 OWASP 对照，2026 年 Go 安全审计必读。
 - [Golang TLS/SSL 网络安全实战 2026：双向认证 + 证书管理完整指南](https://friday-go.icu/security/engineering/Go-TLS-SSL-Guide) — Golang TLS/SSL 网络安全实战 2026：深入讲解 Go 语言中 TLS 1.3 实现、证书签发/轮换、双向认证（mTLS）、证书验证加固、Pinning 与 Let’s Encrypt 自动化，附 8 段可投产代码。
 - [Golang Web 应用安全实战 2026：认证 + 防护 + 安全头完整指南](https://friday-go.icu/security/engineering/Go-Web-Security-Guide) — Golang Web 应用安全实战 2026：覆盖 JWT/RBAC 认证、CSP/XSS/CSRF 防护、HSTS/CORS 安全头、SQL 注入预编译、限流熔断全链路，附 gin/chi 框架 20+ 可投产代码片段。
 - [Linux 安全加固实战 2026：12 项生产级硬核配置从 SSH 到审计日志](https://friday-go.icu/security/engineering/linux-security-hardening) — Linux 服务器安全加固 12 项必做清单 2026：SSH 密钥认证+Fail2Ban、sudo 权限最小化、firewalld/iptables 规则、SELinux/AppArmor、auditd 审计日志、自动安全更新、内核参数调
@@ -256,72 +329,91 @@ PFinalClub（https://friday-go.icu）是一个由 PFinal 南丞 维护的后端 
 - [SQL 注入 / XSS / CSRF 攻击原理与防护实战 2026（Go + PHP 双语言实现）](https://friday-go.icu/security/engineering/sql-injection-xss-csrf) — SQL 注入 / XSS / CSRF 三大 Web 漏洞实战 2026：12 个真实攻击案例复现 + Go/PHP 预编译参数化、HTML 转义、Token 校验完整防护代码，附 sqlmap 自动化检测和 WAF 规则配置。
 - [Go 安全开发最佳实践 2026：从代码审计到 CI/CD 自动化防护全流程](https://friday-go.icu/security/engineering/golang-security-best-practices) — Go 语言安全开发全指南：SQL 注入/XSS/CSRF 防御、gosec+semgrep 静态分析 CI 集成、go mod 依赖漏洞扫描、供应链安全与 SBOM 生成，附 GitHub Actions 安全流水线模板。
 - [SSH 安全加固实战 2026：密钥认证 + fail2ban + 双因素认证完整指南](https://friday-go.icu/security/engineering/SSH安全加固完全指南) — SSH 安全加固实战 2026：覆盖密钥认证、密码策略强化、fail2ban 自动封禁、Google Authenticator 双因素、Port Knocking、连接审计 6 大模块，附 30+ 配置示例和暴力破解防护清单。
-- [Go Security Best Practices 2025 - 10个安全陷阱及修复方案](https://friday-go.icu/security/engineering/10个Golang安全陷阱及真正有效的修复方案)
+- [Go Security Best Practices 2026 - 10个安全陷阱及修复方案](https://friday-go.icu/security/engineering/10个Golang安全陷阱及真正有效的修复方案)
 - [Go TLS/SSL 网络安全实战 2026：证书管理 + mTLS + HTTP/3 全链路加密](https://friday-go.icu/security/engineering/golang 中的网络安全TLS SSL的实现) — 从零搭建 Go TLS/SSL 安全通信：涵盖自签证书生成、双向 mTLS 认证、Let's Encrypt 自动续期、HTTP/3 QUIC 加密传输，附生产级配置模板和常见踩坑指南。
-- [Golang Web应用完整安全指南](https://friday-go.icu/security/engineering/golang Web应用完整安全指南) — 详细介绍golang web应用的安全问题，包括输入验证、输出编码、会话管理、文件上传、跨站脚本攻击、SQL注入、密码存储、身份验证、授权、安全配置、日志记录、错误处理、性能优化、安全审计等方面。
+- [Go Web 应用安全指南 2026：从认证授权到 CSRF/XSS 的 12 层防御体系](https://friday-go.icu/security/engineering/golang Web应用完整安全指南) — Go Web 安全 12 层防御体系全解：JWT/OAuth 认证、CSRF Token、XSS 过滤、SQL 注入防护、CORS 策略，附可运行代码与中间件实战。
 - [Go 代码安全审计自动化 2026：gosec + semgrep CI 集成 10 分钟搭建安全扫描流水线](https://friday-go.icu/security/engineering/从手动到自动-Go语言助力快速识别代码中的安全隐患) — 告别手动代码审计！详解如何用 Go 安全工具链（gosec、semgrep、govulncheck）搭建自动化安全扫描流水线，在 CI/CD 中拦截 90% 常见漏洞，附完整 GitHub Actions 配置。
-- [Go语言主流安全库使用指南](https://friday-go.icu/security/engineering/Go语言主流安全库使用指南) — 详细介绍Go语言主流安全库的使用方法，包括crypto、encoding、hash、math、rand、strconv、time等库的使用，帮助开发者更好地保护应用程序的安全性。
+- [Go 安全库选型指南 2026：casbin/rego/coraza 等 8 大库对比与集成实战](https://friday-go.icu/security/engineering/Go语言主流安全库使用指南) — 8 大 Go 安全库深度对比：casbin 权限控制、Open Policy Agent/rego 策略引擎、coraza WAF、go-crypt 等，附选型决策树与生产集成代码。
 
 ### DevOps / 云原生系列
-- [Karmada 从 CNCF 毕业：多集群编排走向 AI 算力调度，v1.19 直击 GPU 训练痛点](https://friday-go.icu/cloud-native/karmada-cncf-graduation-v1-19-ai-scheduling-2026) — 2026-09-08 KubeCon China 官宣毕业；v1.19 分布式 AI 训练多组件调度 + 优先级调度 Beta 默认开启；1,214 贡献者 / 292 组织；多集群 DRA 路线图；选型建议
-- [Cilium 1.20 发布：Gateway API 一统南北向流量，ENI IPAM 补齐 IPv6](https://friday-go.icu/cloud-native/cilium-1-20-gateway-api-tcp-udp-route-eni-ipv6-2026) — Gateway API v1.4→v1.6（ExternalAuth/TCPRoute/UDPRoute/ListenerSets）；Datapath Plugins Beta；ENI IPAM IPv6 Beta；CNI 二进制 76MB→16MB；ztunnel 替代 legacy mTLS
-- [KYAML 实战：Kubernetes 终于受不了 YAML 了，KEP-5295 新配置方言全解析](https://friday-go.icu/devops/kyaml-kubernetes-yaml-dialect-kep-5295-2026) — KEP-5295 YAML 严格子集：1.34 Alpha→1.35 Beta→1.37 GA；Norway Bug 歧义消除；kubectl -o kyaml 输出
+- [KYAML 实战：Kubernetes 终于受不了 YAML 了，KEP-5295 新配置方言全解析](https://friday-go.icu/devops/kyaml-kubernetes-yaml-dialect-kep-5295-2026) — KYAML（KEP-5295）是 SIG CLI 推出的 YAML 严格子集：1.34 Alpha、1.35 Beta 默认开启、v1.37 正式 GA。本文解析 YAML 三宗罪（缩进敏感、静默类型强转、真实生产事故）、KYAML 的规则
+- [Kubernetes Agent Sandbox 深度实战：用 Sandbox CRD 给 AI Agent 造一个「轻量单容器虚拟机」](https://friday-go.icu/devops/kubernetes-agent-sandbox-crd-2026) — 每个编码 Agent 在内核眼里都是"打字极快的不受信用户"。Kubernetes SIG Apps 的 Agent Sandbox 项目给出了上游答案：一个 Sandbox CRD，把有状态、单例、带稳定身份和持久存储的隔离 Pod 封装
+- [ChainDrop npm 蠕虫复盘：keyv 投毒、20 亿月下载量沦陷，而所有「供应链安全」控件都失灵了](https://friday-go.icu/devops/chaindrop-npm-supply-chain-worm-2026) — 2026-08-04 ChainDrop 蠕虫通过劫持 keyv 维护者账号，在 4 小时内污染 444 个包、2212 个版本、波及 20 亿月下载量。本文拆解完整攻击链，并解释为什么 SLSA 签名、npm audit、--ignore
+- [Kubernetes 1.37 正式发布：静态 Pod 禁引 Secret、SELinuxMount 默认开启、IPVS 退场——升级前必做 4 项检查](https://friday-go.icu/devops/kubernetes-1-37-release-highlights-2026) — Kubernetes 1.37 于 2026-08-26 正式 GA。本文聚焦真正会在升级时断裂的变更：静态 Pod 禁止引用 Secret/ConfigMap、SELinuxMount 默认开启、kube-proxy IPVS 模式弃用，
+- [Kubernetes 1.37 深度预览：HPA 原生缩零、IPVS 退场倒计时、DRA 设备污点毕业](https://friday-go.icu/devops/kubernetes-1-37-deep-preview-hpa-scale-to-zero-ipvs-deprecation-dra-2026) — Kubernetes 1.37 计划于 2026 年 8 月 26 日 GA，包含 86 项增强。本文聚焦四个最具实操影响力的变化：HPA Scale-to-Zero 原生支持（无需 KEDA）、kube-proxy IPVS 三年退场路线
+- [从容器编排到智能体编排：Kagent CRD 让 Agent 成为云原生一等公民](https://friday-go.icu/devops/container-to-agent-orchestration-kagent-crd-go-2026) — 2026 年云原生最深刻的范式迁移：从编排容器到编排智能体。本文从 Go 开发者视角深度解析 Kagent——通过 CRD 让 Agent 成为 Kubernetes 一等公民的云原生智能体编排框架，覆盖 Agent CRD 声明式管理、G
+- [Topcoat 深度解析：Tokio 团队的 Rust 全栈响应式 Web 框架，服务端渲染 + 无 WASM 响应式](https://friday-go.icu/devops/topcoat-rust-fullstack-reactive-web-framework-2026) — 2026 年 7 月 22 日，Tokio 团队发布 Topcoat——一个模块化、电池齐全的 Rust 全栈响应式 Web 框架。它完全服务端渲染，通过将 Rust 表达式交叉编译为 JavaScript 实现响应式，无需 WebAsse
+- [Rust 异步运行时七年战争：从 Tokio 垄断到 io_uring 破局，Apache Iggy 迁移实战与生态分裂深度解析](https://friday-go.icu/devops/rust-async-runtime-tokio-vs-io-uring-seven-year-war-2026) — Rust 异步生态七年来被 Tokio 事实垄断，但 io_uring 的崛起、Apache Iggy 从 Tokio 迁移到 thread-per-core 架构的实战、以及 Async Working Group 的回归正在改写格局。本
 - [Docker AI Governance 生产实战：让 AI Agent 在沙箱里"翻箱倒柜"，而你的笔记本毫发无伤](https://friday-go.icu/devops/docker-ai-governance-agent-isolation-2026) — 2026 年 7 月 Docker 发布的 AI Governance 能力深度实战。从默认沙箱（Default Sandbox）到 Hub 治理（Governance in Hub）、MCP 工具级权限、Secret Mount 体系、审
-- [OpenTelemetry CNCF 毕业 90 天替代 Datadog / NewRelic / Splunk 老栈：可观测性实操指南](https://friday-go.icu/devops/opentelemetry-cncf-graduation-replace-vendor-stack-2026)
-- [KubeCon Europe 2026 深度复盘：82% 采用率 vs 7% AI 部署率——云原生的第二次创始时刻](https://friday-go.icu/devops/kubecon-europe-2026-ai-execution-gap-cloud-native-deep-dive)
-- [K8s + WebAssembly 2026 集成实战：SpinKube、containerd Shim 与 RuntimeClass 让 WASM 成为 K8s 一等公民](https://friday-go.icu/devops/kubernetes-wasm-runtime-spinkube-2026)
-- [FinOps 2026 实战：用 Go 语言实现云成本优化全链路（OpenCost + pprof 降本 30%）](https://friday-go.icu/devops/finops-2026-go-cloud-cost-optimization)
+- [OpenTelemetry CNCF 毕业 90 天替代 Datadog / NewRelic / Splunk 老栈：可观测性实操指南](https://friday-go.icu/devops/opentelemetry-cncf-graduation-replace-vendor-stack-2026) — 2026 年 5 月 21 日，OpenTelemetry 在 CNCF Observability Summit 正式毕业，成为继 Kubernetes、Prometheus、Envoy 之后第 7 个顶级 CNCF 项目。本文从'为什么
+- [KubeCon Europe 2026 深度复盘：82% 采用率 vs 7% AI 部署率——云原生的第二次创始时刻](https://friday-go.icu/devops/kubecon-europe-2026-ai-execution-gap-cloud-native-deep-dive) — KubeCon Europe 2026 阿姆斯特丹核心数据：Kubernetes 采用率 82% vs AI 日部署率仅 7%，2/3 生成式 AI 已跑在 K8s 上。本文深度复盘云原生与 AI 的执行差距、K8s 成为 AI 操作系统的
+- [K8s + WebAssembly 2026 集成实战：SpinKube、containerd Shim 与 RuntimeClass 让 WASM 成为 K8s 一等公民](https://friday-go.icu/devops/kubernetes-wasm-runtime-spinkube-2026) — 2026 年 WebAssembly 正式成为 K8s 一等公民。本文从 RuntimeClass 选型、containerd WASM shim 工作机制、SpinKube Operator CRD 实战、KWASM 节点标注、SpinA
+- [FinOps 2026 实战：用 Go 语言实现云成本优化全链路（OpenCost + pprof 降本 30%）](https://friday-go.icu/devops/finops-2026-go-cloud-cost-optimization) — 从 FinOps 核心理念到 Go 实战落地，全面覆盖 FOCUS 1.0 标准、OpenCost 集成、pprof 内存优化、资源自动伸缩。用 Go 语言构建云成本监控与优化系统，帮你每月节省 30-50% 的云开支。
 - [Tailscale 自建 DERP 中继服务器实战 2026](https://friday-go.icu/devops/tailscale-selfhost-derp-server-2026) — Tailscale 国内自建 DERP 中继服务器完整部署，1 核 1G 云主机 + Docker + 反向代理，延迟从 250ms 降到 20ms
 - [OpenTelemetry Go SDK 1.32 实战 2026](https://friday-go.icu/devops/otel-go-sdk-1-32-ebpf-injection-2026) — OTel Go 1.32 重大更新详解：eBPF 自动注入、metric SDK 默认 2000 cardinality 限制、Datadog 联合发布的 AI 工具链实战
-- [Kubernetes v1.36 Haru 深度实战：从安全隔离到 AI 工作负载的 70 项增强](https://friday-go.icu/devops/kubernetes-v1-36-haru-deep-dive-2026)
-- [Platform Engineering 2026 实战：Backstage 构建内部开发者平台（IDP）完整指南](https://friday-go.icu/devops/platform-engineering-backstage-idp-2026)
-- [WASM 2026 服务端实战：WASI Preview 2、Component Model 与容器替代方案](https://friday-go.icu/devops/wasm-2026-server-side-wasi-component-model)
-- [eBPF + Go 云原生可观测性实战 2026：零侵入监控从原理到生产（Cilium/Hubble）](https://friday-go.icu/devops/ebpf-go-observability)
-- [Docker 容器化最佳实践 2026：从镜像优化到 K8s 部署的 12 条生产级法则](https://friday-go.icu/devops/docker-best-practices)
+- [Kubernetes v1.36 Haru 深度实战：从安全隔离到 AI 工作负载的 70 项增强](https://friday-go.icu/devops/kubernetes-v1-36-haru-deep-dive-2026) — 深度解读 Kubernetes v1.36 Haru 的 70 项增强：User Namespaces GA 安全隔离、MutatingAdmissionPolicy GA 声明式变更、DRA 增强、AI/ML 工作负载支持，含完整实战配置
+- [Platform Engineering 2026 实战：Backstage 构建内部开发者平台（IDP）完整指南](https://friday-go.icu/devops/platform-engineering-backstage-idp-2026) — 2026年Platform Engineering完全指南：基于Backstage构建内部开发者平台，涵盖Golden Paths设计、Crawl-Walk-Run实施策略、AI集成与避坑指南，附完整架构设计与Go工具链实践。
+- [WASM 2026 服务端实战：WASI Preview 2、Component Model 与容器替代方案](https://friday-go.icu/devops/wasm-2026-server-side-wasi-component-model) — WebAssembly 2026 服务端实战全指南。覆盖 WASI Preview 2 核心接口（CLI/Filesystem/HTTP/Sockets）、Component Model 1.0 与 WIT 接口定义、Spin 3.0/Wa
+- [eBPF + Go 云原生可观测性实战 2026：零侵入监控从原理到生产（Cilium/Hubble）](https://friday-go.icu/devops/ebpf-go-observability) — 深入讲解 eBPF 技术原理与 Go 语言生态结合，从内核态 Hook 机制到用户态数据处理，实战构建零侵入云原生可观测性方案。覆盖 Cilium、Tetragon、Pixie 等核心工具链，附带可运行 Go 代码示例。
+- [Docker 容器化最佳实践 2026：从镜像优化到 K8s 部署的 12 条生产级法则](https://friday-go.icu/devops/docker-best-practices) — 全面讲解 Docker 容器化最佳实践，涵盖镜像构建优化、多阶段构建、安全加固、编排部署等生产级应用场景。
 
 ### Python 系列
-- [Python 3.15 新特性深度解析：延迟导入、frozendict、Tachyon 采样器与 2026 年最大更新](https://friday-go.icu/dev/backend/python/python-3-15-new-features-2026)
-- [Python AI 框架 2026 全景对比与选型指南](https://friday-go.icu/dev/backend/python/python-ai-frameworks-2026-comparison-guide)
-- [Pydantic AI Type-Safe Agent 框架 2026 实战：用 Python 写生产级 LLM 应用的正确姿势](https://friday-go.icu/dev/backend/python/pydantic-ai-type-safe-agent-framework-2026)
-- [LlamaIndex 4.0 文档 Agent 实战：从 RAG 到 Agentic RAG 的架构跃迁](https://friday-go.icu/dev/backend/python/llamaindex-4-agentic-rag-workflow-2026)
+- [PyTorch 2.14 深度解析：nccl2 落地、容错成为 c10d 一等公民、NVGEMM 与 Apple Silicon 原生线性代数](https://friday-go.icu/dev/backend/python/pytorch-2-14-nccl2-nvgemm-fault-tolerance-2026) — 2026 年 9 月 2 日发布的 PyTorch 2.14（2995 commits / 487 contributors）是一次"栈级"更新：torchcomms 以 nccl2 后端身份进入核心、分布式容错（进程组重配置、单边 RMA
+- [Python 3.14 Free-Threading 正式支持深度解析：PEP 779 之后 GIL 时代的终结](https://friday-go.icu/dev/backend/python/python-3-14-free-threading-pep-779-2026) — 深度解析 Python 3.14 Free-Threading 官方支持（PEP 779）：GIL 正式成为可选项，3.14t 构建安装与使用、性能数据、C 扩展兼容性、与 JIT 的协同。
+- [Python JIT 的生死六个月：Steering Council 最后通牒与 PEP 836 的自救之路](https://friday-go.icu/dev/backend/python/python-jit-steering-council-ultimatum-pep-836-2026) — Python Steering Council 给 JIT 编译器项目下达 6 个月最后通牒：提交 Standards Track PEP 或从主干移除。PEP 836 "JIT Go Brrr" 如何回应？当前 8-9% 提速是否足够？与
+- [Python 3.15 新特性深度解析：延迟导入、frozendict、Tachyon 采样器与 2026 年最大更新](https://friday-go.icu/dev/backend/python/python-3-15-new-features-2026) — Python 3.15 预计 2026 年 10 月正式发布，当前已进入 Beta 2 阶段。这个版本带来了延迟导入 (PEP 810)、frozendict 内置类型 (PEP 814)、Tachyon 百万赫兹采样分析器 (PEP 79
+- [Python AI 框架 2026 全景对比与选型指南](https://friday-go.icu/dev/backend/python/python-ai-frameworks-2026-comparison-guide) — 2026 年 Python AI 框架生态已高度成熟。本文基于 JetBrains 最新调查数据，深度对比 7 大核心框架：TensorFlow、PyTorch、Keras、scikit-learn、LangChain、Hugging Fa
+- [Pydantic AI Type-Safe Agent 框架 2026 实战：用 Python 写生产级 LLM 应用的正确姿势](https://friday-go.icu/dev/backend/python/pydantic-ai-type-safe-agent-framework-2026) — Pydantic 团队 2026 年主推的 AI Agent 框架 Pydantic AI 凭 type-safety、Logfire 可观测、model-agnostic、MCP 原生集成、Temporal/DBOS durable ex
+- [LlamaIndex 4.0 实战 2026：文档 Agent 从 RAG 到 Agentic RAG 的 Workflow API 架构跃迁](https://friday-go.icu/dev/backend/python/llamaindex-4-agentic-rag-workflow-2026) — LlamaIndex 4.0 实战 2026 完全指南：从传统 RAG 到 Agentic RAG 架构升级，深度解析 Workflow API 事件驱动 DAG 执行、DocumentAgent 跨文档查询、Python 生产级完整代码与
 - [Polars vs Pandas vs DuckDB：2026 Python 数据处理引擎终极横评](https://friday-go.icu/dev/backend/python/polars-vs-pandas-vs-duckdb-2026) — 深度对比 Polars、Pandas 3.0 和 DuckDB 三大数据处理引擎，从架构原理、性能基准、内存效率到生产选型，附完整可运行代码示例和实际场景推荐。
-- [Python 自动化脚本实战 2026：10 个场景从文件处理到定时任务调度](https://friday-go.icu/dev/backend/python/python-automation-scripts)
+- [Python 自动化脚本实战 2026：10 个场景从文件处理到定时任务调度](https://friday-go.icu/dev/backend/python/python-automation-scripts) — Python 自动化脚本 10 大实战场景 2026：批量文件重命名、CSV/JSON 数据清洗、requests 爬虫、crontab/APScheduler 定时调度、logging 日志系统、Click 命令行工具。每个场景附带可运行
 - [FastAPI 从零开始构建高性能 API：快速入门指南](https://friday-go.icu/dev/backend/python/FastAPI-从零开始构建高性能API-快速入门指南) — FastAPI 是现代、快速（高性能）的 Web 框架，用于基于标准 Python 类型提示使用 Python 3.8+ 构建 API。本文将从零开始，带你快速上手 FastAPI，构建第一个高性能 RESTful API。
 - [FastAPI 中间件与依赖注入：构建可扩展的 API 架构](https://friday-go.icu/dev/backend/python/FastAPI中间件与依赖注入-构建可扩展的API架构) — 深入理解 FastAPI 的中间件和依赖注入机制，学习如何构建可扩展、可维护的 API 架构。包括自定义中间件、依赖注入、数据库连接、认证授权等高级主题。
-- [FastAPI 实战案例：从零构建企业级 API](https://friday-go.icu/dev/backend/python/FastAPI实战案例-从零构建企业级API) — 通过一个完整的实战案例，学习如何从零开始构建企业级 FastAPI 应用。包括项目架构、数据库设计、认证授权、API 文档、部署上线等完整流程。
+- [FastAPI 企业级 API 实战 2026：异步 ORM + JWT 认证 + Docker 部署全流程指南](https://friday-go.icu/dev/backend/python/FastAPI实战案例-从零构建企业级API) — FastAPI 企业级 API 实战 2026 全流程指南：从项目架构设计、SQLAlchemy 异步 ORM、JWT OAuth2 认证授权、自动生成的 OpenAPI 文档，到 Docker Compose 容器化部署的完整可运行案例。
 - [FastAPI 异步编程与性能优化：打造高并发 API](https://friday-go.icu/dev/backend/python/FastAPI异步编程与性能优化-打造高并发API) — 深入理解 FastAPI 的异步编程机制和性能优化技巧，学习如何打造高并发的 API。包括异步 I/O、数据库优化、缓存策略、并发控制等高级主题。
-- [FastAPI 测试与部署：生产环境最佳实践](https://friday-go.icu/dev/backend/python/FastAPI测试与部署-生产环境最佳实践) — 学习如何测试和部署 FastAPI 应用到生产环境。包括单元测试、集成测试、Docker 部署、Kubernetes 部署、CI/CD 流程等生产环境最佳实践。
+- [FastAPI 测试与部署实战 2026：从单元测试到 Kubernetes 生产环境完整指南](https://friday-go.icu/dev/backend/python/FastAPI测试与部署-生产环境最佳实践) — 学习如何测试和部署 FastAPI 应用到生产环境。包括单元测试、集成测试、Docker 部署、Kubernetes 部署、CI/CD 流程等生产环境最佳实践。
 - [Python TensorFlow 实战：Keras 入门到精通](https://friday-go.icu/dev/backend/python/Python-TensorFlow实战-Keras入门到精通) — 全面掌握 TensorFlow 和 Keras 框架，构建和训练深度学习模型
 - [Python Web 爬虫实战 2026：Requests + BeautifulSoup + Scrapy 完整项目代码](https://friday-go.icu/dev/backend/python/Python-Web爬虫实战-从入门到精通) — 2026 版 Python Web 爬虫实战：从 Requests 入门到 BeautifulSoup/Scrapy 分布式爬虫，附带反爬对策与项目代码。
-- [Python 推荐系统实战：从算法到应用](https://friday-go.icu/dev/backend/python/Python-推荐系统实战-从算法到应用) — 全面掌握推荐系统技术，从协同过滤到深度学习，构建个性化推荐引擎
+- [Python 推荐系统实战 2026：协同过滤 + 深度学习从算法到大规模生产部署](https://friday-go.icu/dev/backend/python/Python-推荐系统实战-从算法到应用) — Python 推荐系统实战 2026 完全指南：从协同过滤、矩阵分解到深度学习召回与排序，涵盖召回-粗排-精排-重排全链路设计，附带大规模生产部署经验与 A/B 实验评估方案。
 - [Python 数据分析入门：Pandas 与 NumPy 基础](https://friday-go.icu/dev/backend/python/Python-数据分析入门-Pandas与NumPy基础) — 深入理解 Pandas 和 NumPy 的核心概念，掌握数据分析的基础技能，从数据处理到可视化完整流程
 - [Python 数据可视化实战：Matplotlib、Seaborn 与 Plotly 完全指南](https://friday-go.icu/dev/backend/python/Python-数据可视化实战-Matplotlib-Seaborn-Plotly完全指南) — 深入掌握三大可视化库的使用技巧，从基础图表到高级可视化，打造专业级数据展示
 - [Python 时间序列分析：从基础到实战](https://friday-go.icu/dev/backend/python/Python-时间序列分析-从基础到实战) — 深入掌握时间序列分析的核心方法，包括趋势分析、季节性分解、预测建模等实用技术
-- [Python 机器学习入门：Scikit-learn 实战指南](https://friday-go.icu/dev/backend/python/Python-机器学习入门-Scikit-learn实战指南) — 从零开始掌握机器学习，使用 Scikit-learn 构建真实世界的机器学习应用
+- [Python 机器学习入门 2026：Scikit-learn 5 个实战项目完整指南](https://friday-go.icu/dev/backend/python/Python-机器学习入门-Scikit-learn实战指南) — 从零开始掌握机器学习，使用 Scikit-learn 构建真实世界的机器学习应用
 - [Python 深度学习入门：PyTorch 实战指南](https://friday-go.icu/dev/backend/python/Python-深度学习入门-PyTorch实战指南) — 从零开始学习 PyTorch 深度学习框架，掌握神经网络、CNN、RNN 等核心技术
 - [Python NLP 实战指南 2026：NLTK + spaCy + Transformers 文本处理](https://friday-go.icu/dev/backend/python/Python-自然语言处理-NLP实战指南) — 2026 版 Python NLP 实战：从 NLTK/spaCy 基础到 Transformers 预训练模型，覆盖文本分类、命名实体识别与情感分析。
-- [Flask轻量级应用构建 - 扩展开发、蓝图设计](https://friday-go.icu/dev/backend/python/Flask轻量级应用构建 - 扩展开发、蓝图设计) — 深入探讨Flask轻量级Web框架的模块化开发实践，涵盖蓝图（Blueprint）的核心机制、扩展开发集成、配置管理策略以及生产环境部署优化，为有经验的开发者提供实战指导
+- [Flask 模块化开发实战 2026：蓝图设计 + 扩展集成 + 生产部署完整指南](https://friday-go.icu/dev/backend/python/Flask轻量级应用构建 - 扩展开发、蓝图设计) — Flask 模块化开发实战 2026 完全指南：从 Blueprint 蓝图拆分大型应用、Flask 扩展生态集成（SQLAlchemy / Migrate / RESTful）、多环境配置管理，到 Gunicorn + Nginx 生产部
 - [Scrapy爬虫框架实战：分布式爬虫与反爬虫对策](https://friday-go.icu/dev/backend/python/Scrapy爬虫框架实战 - 分布式爬虫、反爬虫对策) — 深入探讨Scrapy框架的分布式爬虫实现方案，分析Scrapy-Redis架构原理，并提供实战反爬虫对策与性能优化技巧
 - [FastAPI现代化Web开发：异步开发与自动API文档生成实战](https://friday-go.icu/dev/backend/python/FastAPI现代化Web开发 - 异步开发、自动API文档生成) — 深入探讨FastAPI框架的异步开发核心原理、自动API文档生成机制，以及在实际项目中的性能优化技巧与最佳实践，助力构建高性能现代化Web服务
-- [Python Asyncio 高级模式 2025 - 异步编程从入门到精通](https://friday-go.icu/dev/backend/python/Python-Asyncio-Advanced-Patterns) — 深入探讨Python Asyncio的高级模式，包括异步上下文管理器、异步迭代器、任务组、异步队列等核心概念，通过实战案例展示如何构建高性能异步应用。
-- [Python 数据可视化实战 2025 - Matplotlib 与 Seaborn 从入门到精通](https://friday-go.icu/dev/backend/python/Python-Data-Visualization-Guide) — 深入探讨Python数据可视化的核心库Matplotlib和Seaborn，从基础图表到高级可视化，通过实战案例展示如何创建精美、专业的数据可视化图表。
+- [Python Asyncio 高级模式 2026 - 异步编程从入门到精通](https://friday-go.icu/dev/backend/python/Python-Asyncio-Advanced-Patterns) — 深入探讨Python Asyncio的高级模式，包括异步上下文管理器、异步迭代器、任务组、异步队列等核心概念，通过实战案例展示如何构建高性能异步应用。
+- [Python 数据可视化实战 2026 - Matplotlib 与 Seaborn 从入门到精通](https://friday-go.icu/dev/backend/python/Python-Data-Visualization-Guide) — 深入探讨Python数据可视化的核心库Matplotlib和Seaborn，从基础图表到高级可视化，通过实战案例展示如何创建精美、专业的数据可视化图表。
+- [Python 3.13/3.14 No-GIL 实战 2026：免 GIL 并发性能测试与迁移指南](https://friday-go.icu/dev/backend/python/python-no-gil-pep703-2025) — 深入测试 Python 3.13 实验性与 3.14 正式支持的 free-threading 模式，包含无 GIL 并发基准测试、C 扩展兼容性验证、生产环境迁移可行性评估，附完整代码示例
 - [pyenv 完全指南 2026：Python 多版本管理 + 虚拟环境 + 项目级自动切换](https://friday-go.icu/dev/backend/python/Python版本管理神器之pyenv) — pyenv 从入门到精通 2026：macOS/Linux 安装避坑、Python 版本编译安装、global/local/shell 三级切换、pyenv-virtualenv 虚拟环境管理、.python-version 项目级自动切换
 - [Python Faker 库 - 完整使用指南与常用函数实战](https://friday-go.icu/dev/backend/python/Python-Faker库常用函数) — Faker库常用函数
 - [Python 常用网站搜集 - 使用指南](https://friday-go.icu/dev/backend/python/Python常用网站搜集) — 搜集python常用的网站资源
 
 ### PHP 系列
-- [Laravel 13.32 Mercure 广播驱动上线：SSE 取代 WebSocket 的实时推送方案，FrankenPHP 下零配置](https://friday-go.icu/dev/backend/php/laravel-13-32-mercure-broadcast-driver-2026) — Kévin Dunglas 贡献原生 Mercure 驱动（SSE 而非 WebSocket）；FrankenPHP 内置 hub 零配置；presence channels 与 private-encrypted-* 端到端加密；copyToDisk/moveToDisk；队列 pause/resume 枚举支持；WebSocket vs SSE 选型决策
-- [PHP 8.6 Alpha 1 深度解析：PFA 部分函数应用、clamp 范围守护与 Closure 性能爆发](https://friday-go.icu/dev/backend/php/php-8-6-alpha-pfa-new-features-2026)
-- [PHP 8.5 Pipe Operator 生产实战：函数式编程从语法糖到架构变革](https://friday-go.icu/dev/backend/php/php-8-5-pipe-operator-production-2026)
-- [FrankenPHP 1.4 + Laravel 12 Worker 模式生产实战：3 倍吞吐背后的状态隔离与迁移指南](https://friday-go.icu/dev/backend/php/frankenphp-1-4-laravel-worker-mode-2026)
+- [Laravel AI SDK 0.11 实战：一次 Agent run 一条 correlation ID——让五轮工具调用在日志里现出原形](https://friday-go.icu/dev/backend/php/laravel-ai-sdk-0-11-agent-run-observability-2026) — Laravel AI SDK 0.11.0（2026-08-19，36 个 PR）为每次 Agent run 引入单一 correlation ID 与一组生命周期事件：每次 provider 往返、每次工具调用前后都有事件可挂。解决'五轮
+- [Laravel 13.32 Mercure 广播驱动上线：SSE 取代 WebSocket 的实时推送方案，FrankenPHP 下零配置](https://friday-go.icu/dev/backend/php/laravel-13-32-mercure-broadcast-driver-2026) — Laravel 13.32（2026-09-16）带来由 Kévin Dunglas 贡献的原生 Mercure 广播驱动：基于 SSE 的实时推送、FrankenPHP 内置 hub 零配置、presence 与端到端加密频道开箱即用。本
+- [PHP 8.6.0 Beta 1 深度解析：Io\\Poll 原生轮询、Time\\Duration 与升级必读的会话安全默认值](https://friday-go.icu/dev/backend/php/php-8-6-beta-1-io-poll-duration-2026) — 2026 年 8 月 13 日 PHP 8.6.0 Beta 1 发布，宣告 8.6 特性冻结。本文深度解析相对 Alpha 系列的新增重磅特性：Io\Poll 原生 I/O 轮询 API（epoll/kqueue 支持，替代 stream
+- [Laravel 13.20 第一方图像处理实战：Illuminate\Image 不可变 API 与生产级流水线](https://friday-go.icu/dev/backend/php/laravel-13-20-first-party-image-processing-2026) — Laravel 13.20 引入第一方图像处理组件 Illuminate\Image，提供不可变、驱动式的图像变换 API。本文从安装配置到生产级流水线实战，覆盖头像上传、响应式图片生成、队列处理等场景。
+- [Mago 1.0.0 深度解析：Rust 重写 PHP 工具链，31 倍提速背后的生产级实战](https://friday-go.icu/dev/backend/php/mago-1-0-0-rust-php-toolchain-production-2026) — 深度解析 Mago 1.0.0：Rust 重写的 PHP 静态分析/lint/format 三合一工具链，3.88s 分析 WordPress 全库（比 PHPStan 快 31 倍），135 条 lint 规则、50+ 格式化选项、Gua
+- [Phargo 深度解析：AI 用 Rust 重写 PHP 引擎，跑通 WordPress 的实验与启示](https://friday-go.icu/dev/backend/php/phargo-ai-rust-php-engine-wordpress-2026) — Phargo 是一位不懂 Rust 的开发者用 AI 代理在 Rust 中从头写出的 PHP 引擎，已能渲染 WordPress 并通过 17% 的 PHP-src 测试。本文拆解其工程方法、架构选择、局限与启示。
+- [TypePHP 深度解析：Swoole AOT 更名，PHP 静态编译原生二进制能否让 PHP 重获新生？](https://friday-go.icu/dev/backend/php/typephp-swoole-aot-native-binary-php-2026) — Swoole 团队将 AOT 编译器正式更名为 TypePHP，承诺 PHP 语法兼容、原生二进制、数十倍性能提升，并计划 2026 年国庆全面开源。本文解析其双引擎架构、技术取舍、适用场景与生态风险。
+- [PHP 8.6 Alpha 1 深度解析：PFA 部分函数应用、clamp 范围守护与 Closure 性能爆发](https://friday-go.icu/dev/backend/php/php-8-6-alpha-pfa-new-features-2026) — PHP 8.6 Alpha 1 已于 2026 年 7 月 2 日发布，带来了十年来最大的函数式编程升级——PFA（Partial Function Application）、原生 clamp() 范围守护、Closure 性能 80% 提
+- [PHP 8.5 Pipe Operator 生产实战：函数式编程从语法糖到架构变革](https://friday-go.icu/dev/backend/php/php-8-5-pipe-operator-production-2026) — PHP 8.5 带来了函数式编程社区期待多年的管道操作符 (|>)。这个看似简单的语法糖，在数据变换场景中可以将嵌套函数调用的可读性提升数倍。本文从语法基础、实战模式、Laravel/Symfony 集成到性能分析，全面解析 Pipe Op
+- [FrankenPHP 1.4 + Laravel 12 Worker 模式生产实战：3 倍吞吐背后的状态隔离与迁移指南](https://friday-go.icu/dev/backend/php/frankenphp-1-4-laravel-worker-mode-2026) — FrankenPHP 1.4 在 2026 年正式成为 Laravel 团队生产首选——单二进制 3 倍 PHP-FPM 吞吐、内置 HTTPS/HTTP3、Caddy 2.8 运维闭环。本文从性能基准、Octane 协议、worker 模
 - [PHP 8.5 Fiber 协程实战 2026](https://friday-go.icu/dev/backend/php/php-8-5-fiber-coroutine-2026) — PHP 8.5 Fiber 稳定化 + Swoole 6.0 + FrankenPHP 1.4 协程对比：用真实电商秒杀场景验证 10 万 QPS
-- [Laravel 13 AI SDK 实战：从官方 AI 集成到可中断任务的全栈开发](https://friday-go.icu/dev/backend/php/laravel-13-ai-sdk-interruptible-tasks-2026)
+- [Laravel 13 AI SDK 实战：从官方 AI 集成到可中断任务的全栈开发](https://friday-go.icu/dev/backend/php/laravel-13-ai-sdk-interruptible-tasks-2026) — 深度实战 Laravel 13 AI SDK：统一 AI Provider 接口、Tool Calling、流式输出、可中断任务（Interruptible Tasks）、PHP 8.5 Pipe Operator，从零构建 AI 驱动的 
 - [PHP 8.4 新特性深度解析 2026：property hooks 与 asymmetric visibility 实战](https://friday-go.icu/dev/backend/php/php-8-4-new-features) — PHP 8.4 五大新特性实战：property hooks / asymmetric visibility / array_find / new MyClass()->method() / #[\_] 弃用，附完整迁移指南
-- [PHP旧项目重构实战：从单体到微服务](https://friday-go.icu/dev/backend/php/PHP旧项目重构实战：从单体到微服务) — 深入探讨PHP单体应用如何渐进式重构为微服务架构，涵盖边界识别、技术选型、数据拆分、服务通信等实战要点，帮助有经验的开发者规避常见陷阱
-- [Go 协程 vs PHP Fibers - 并发编程的两种实现对比](https://friday-go.icu/dev/backend/php/Go协程与PHP-Fibers并发编程对比) — 深入对比 Go 协程与 PHP Fibers 两种并发编程模型的技术特点、实现机制和实际应用场景，帮助开发者理解它们的差异和适用场景
+- [PHP 旧项目重构实战 2026：5 步从单体到微服务的迁移指南](https://friday-go.icu/dev/backend/php/PHP旧项目重构实战：从单体到微服务) — 深入探讨PHP单体应用如何渐进式重构为微服务架构，涵盖边界识别、技术选型、数据拆分、服务通信等实战要点，帮助有经验的开发者规避常见陷阱
+- [FrankenPHP + Laravel Octane：PHP 终于有了原生 Worker 模式 2026 实战](https://friday-go.icu/dev/backend/php/frankenphp-laravel-octane-worker-2025) — PHP 8.2+ + FrankenPHP 带来 Go 级并发能力，详解 Worker 模式架构、Octane 集成、性能调优，附从 FPM 迁移的完整实战指南
+- [PHP 8.x 高阶实战 2026 - 架构、性能与工程化完整指南](https://friday-go.icu/dev/backend/php/现代PHP开发实战) — PHP 8.x 高阶实战 2026：Attributes、Enums、Fibers 等新特性深度解析，Laravel 框架、API 设计、并发编程、DevOps 工程化完整指南。
+- [Go 协程 vs PHP Fibers 并发编程对比 2026：2 种模型的性能与适用场景](https://friday-go.icu/dev/backend/php/Go协程与PHP-Fibers并发编程对比) — 深入对比 Go 协程与 PHP Fibers 两种并发编程模型的技术特点、实现机制和实际应用场景，帮助开发者理解它们的差异和适用场景
 - [PHP MCP 扩展 - 开源实践与使用指南](https://friday-go.icu/dev/backend/php/PHP MCP 扩展) — 分享我开发pfinalclub/php-mcp扩展的经历，探讨MCP协议对PHP生态的重要意义，以及为什么选择Workerman作为技术栈。
 - [PHP Coze 扩展包 - 完整使用指南与集成实战](https://friday-go.icu/dev/backend/php/Coze 扩展包 PHP 版本) — Coze 官方提供了 Python,Node,Go 版本的 SDK 就是没有提供 PHP 版本的 于是自己动手搞了个 PHP 版本的
 - [PHP 8.5 NoDiscard 属性 - 告别静默错误，提升代码质量](https://friday-go.icu/dev/backend/php/PHP-8.5-NoDiscard-属性详解) — 详细介绍PHP 8.5新增的#[\NoDiscard]属性，包括其作用、使用方法、实际应用案例和最佳实践，帮助开发者提高代码质量和避免静默错误。
+- [构建可维护的正则表达式系统 pfinal-regex-center 设计与实现](https://friday-go.icu/dev/backend/php/构建可维护的正则表达式系统-pfinal-regex-center设计与实现) — 构建可维护的正则表达式系统实战：pfinal-regex-center 设计与实现，涵盖正则管理、ReDoS 防护、性能优化、团队协作。含完整 PHP 代码和架构设计。
+- [从Go协程池到PHP实现 一次代码重构实战](https://friday-go.icu/dev/backend/php/PHP的协程池) — 从 Go 协程池到 PHP 实现：一次代码重构实战，Workerman 协程调度、Channel 通道、数据库连接池的 PHP 高并发解决方案。含完整重构案例。
 - [PHP $_SESSION 引发的Bug深度分析与解决方案](https://friday-go.icu/dev/backend/php/PHP $_SESSION 引发的Bug) — 深度分析 PHP $_SESSION 引发的Bug，包括常见问题、解决方案、最佳实践和会话管理优化技巧
 - [PHP-FPM 配置详解 2026：30 个核心参数与生产级调优模板](https://friday-go.icu/dev/backend/php/PHP-FPM配置文件详解) — PHP-FPM 30 个核心参数实战：pm / pm.max_children / request_terminate_timeout / 慢日志，生产级配置模板与 502 排查指南
 - [Redis 基础知识 - 使用指南](https://friday-go.icu/dev/backend/php/Redis基本知识总结) — Redis 是一个开源的使用 ANSI C 语言编写、支持网络、可基于内存亦可持久化的日志型、Key-Value 数据库，并提供多种语言的 API。
@@ -334,21 +426,27 @@ PFinalClub（https://friday-go.icu）是一个由 PFinal 南丞 维护的后端 
 - [PHP 错误与异常处理实战 2026：8 种错误类型与生产级 try/catch 模式](https://friday-go.icu/dev/backend/php/PHP 错误与异常处理) — PHP 错误处理完整指南：8 种错误类型 + Error/Exception 区别 + 自定义异常体系 + 错误日志监控 + Sentry 集成实战
 - [PHP 异步处理实战 2026：6 种方案对比 + Swoole 协程最佳实践](https://friday-go.icu/dev/backend/php/PHP之异步处理) — PHP 异步处理 6 大方案对比：curl_multi / pcntl / Swoole / Fiber / amphp / ReactPHP，附秒杀场景 10 万 QPS 案例
 - [PHP $_SERVER 完全指南 - 超全局变量详解与实战](https://friday-go.icu/dev/backend/php/PHP $_SERVER详解) — PHP $_SERVER 超全局变量完全指南，包含所有变量详解、实际应用场景、安全注意事项和最佳实践
-- [PHP Redis 配置详解 - 缓存与会话管理实战](https://friday-go.icu/dev/backend/php/Redis-Configuration-Guide) — 学习Redis配置文件
+- [PHP Redis 配置详解 - 缓存与会话管理实战](https://friday-go.icu/dev/backend/php/Redis-Configuration-Guide) — PHP Redis 配置详解 2025：daemonize、port、maxmemory、持久化 RDB/AOF、安全配置等核心参数完整指南。含生产环境推荐配置和性能优化技巧。
 - [TCP/IP HTTP 学习 - 使用指南](https://friday-go.icu/dev/backend/php/TCP-IP-HTTP学习) — 学习TCP/IP HTTP协议
 - [Laravel 手工构建 - 使用指南](https://friday-go.icu/dev/backend/php/Laravel 手工构建) — 手工构建laravel 框架,详细介绍了从项目初始化到添加各个组件的完整过程。
 
 ### Rust 系列
-- [Rust 2026 Edition 深度解析：Async Closures、异步 Trait 与系统编程新范式](https://friday-go.icu/dev/backend/rust/rust-2026-edition-deep-dive)
+- [Rust never type 稳定化：一个没有值的类型，为何等了 11 年](https://friday-go.icu/dev/backend/rust/rust-never-type-stabilization-11-year-journey-2026)
+- [Rust 1.98.0 发布解读：生命周期缩短、新 lint 与平台晋级](https://friday-go.icu/dev/backend/rust/rust-1-98-release-highlights-2026) — Rust 1.98.0 于 2026 年 8 月 20 日正式发布。本文聚焦本版最易被忽略但影响面极广的改动：不变位置下的 &mut 生命周期缩短、deny-by-default 的 invalid_runtime_symbol_defin
+- [Rust 1.98 新标准库 API 深度解析：Atomic::from_mut、strip_circumfix 与无分配格式化](https://friday-go.icu/dev/backend/rust/rust-1-98-new-stdlib-apis-2026) — 深度解析 Rust 1.98.0 新稳定标准库 API：Atomic::from_mut 家族消除无锁并发的 unsafe 样板、strip_circumfix 对称去包裹、format_into + NumBuffer 无分配整数格式化，
+- [Rust RFC 3323 Restrictions 深度解析：impl/mut 限制让 Sealed trait 成为历史](https://friday-go.icu/dev/backend/rust/rust-rfc-3323-restrictions-impl-mut-2026) — 深度解析 Rust RFC 3323 Restrictions：impl(crate) 让 Sealed trait 模式成为历史，mut(crate) 为 Rust 带来真正的只读字段，nightly 已可测试。
+- [Rust Polonius Alpha 深度解析：下一代借用检查器的流敏感革命](https://friday-go.icu/dev/backend/rust/rust-polonius-alpha-borrow-checker-2026) — 深度解析 Rust 下一代借用检查器 Polonius Alpha：流敏感借用检查如何让 get_mut_or_default 模式通过编译，nightly 启用细节、性能数据与 opt-out 方式。
+- [Rust 1.98 代数浮点运算符深度解析：让编译器放心加速你的数值代码](https://friday-go.icu/dev/backend/rust/rust-1-98-algebraic-float-operators-2026) — 深度解析 Rust 1.98 新特性：algebraic_add/algebraic_mul 等代数浮点运算符如何解锁 SIMD 向量化与运算重排，实测 4 倍求和加速、2 倍 SSD 加速，附完整代码示例与精度权衡指南。
+- [Rust 2026 Edition 深度解析：Async Closures、异步 Trait 与系统编程新范式](https://friday-go.icu/dev/backend/rust/rust-2026-edition-deep-dive) — 深度解析Rust 2026 Edition五大核心特性：Async Closures稳定、原生异步Trait、Field Projection、SIMD标准库与生命周期省略优化，附完整代码示例与迁移指南。
 - [Rust 异步编程从基础到实战：async/await 与 Tokio 详解](https://friday-go.icu/dev/backend/rust/Rust异步编程从基础到实战) — 系统讲解 Rust async/await 异步编程模型，从 Future trait 原理到 Tokio 运行时实战。涵盖异步 I/O、任务调度、异步同步原语、性能调优，以及与 Go goroutine 的对比分析，适合有 Go/Node
 - [Rust 所有权系统深入剖析：零成本抽象的底层原理](https://friday-go.icu/dev/backend/rust/Rust所有权系统深入剖析) — 深入解析 Rust 所有权系统的设计哲学与工作原理，涵盖所有权规则、借用检查器、生命周期标注、智能指针及其在并发安全中的应用。从 C 语言的内存管理演进到 Rust 的所有权革命，帮助 Go 开发者理解为什么 Rust 能同时保证内存安全和
 - [Tauri实战：用Go和Rust构建轻量级桌面应用](https://friday-go.icu/dev/backend/rust/Tauri实战：用Go和Rust构建轻量级桌面应用) — 深入解析Tauri 2.0框架，探讨如何结合Go语言的后端能力与Rust的安全高效，构建跨平台的轻量级桌面应用。涵盖核心概念、Go-Rust集成方案、实战开发步骤、性能优化与打包部署全流程。
 
 ### 开发工具系列
-- [TypeScript 7.0 RC 深度解析：微软用 Go 重写编译器，10倍性能提升背后的架构革命](https://friday-go.icu/tools/typescript-7-go-compiler-2026)
+- [TypeScript 7.0 RC 深度解析：微软用 Go 重写编译器，10倍性能提升背后的架构革命](https://friday-go.icu/tools/typescript-7-go-compiler-2026) — 2026 年 6 月 18 日，微软发布 TypeScript 7.0 RC，代号 Project Corsa。TypeScript 编译器——过去十年一直用自身语言（自托管）编写——被完整移植到了 Go 语言。VS Code 150 万行
 - [Devslog 结构化日志实战 2026：Go 日志可读性提升 10 倍](https://friday-go.icu/tools/Devslog-Structured-Logging) — Go 结构化日志库 Devslog 实战指南：Pretty Print 格式化、级别控制、性能基准测试对比 slog/zap，附带生产环境最佳实践
-- [Docker 部署 Go 项目实践指南](https://friday-go.icu/tools/Docker-Go-Deployment) — 详细介绍如何使用 Docker 容器化部署 Go 项目，包括多阶段构建、镜像优化、Compose 配置等最佳实践。
-- [程序员必备神器：PF-password 密码管理器](https://friday-go.icu/tools/PF-Password-Manager) — 介绍 PF-password 密码管理器的功能特点、技术实现和使用方法，一款专为程序员设计的开源密码管理工具。
+- [Docker 部署 Go 项目实战 2026：多阶段构建 + 镜像体积减少 90% + Compose 编排](https://friday-go.icu/tools/Docker-Go-Deployment) — Docker Go 部署全流程实战：多阶段构建将镜像从 800MB 压到 15MB、Docker Compose 编排、健康检查、非 root 运行等 10 项生产最佳实践。
+- [PF-Password 密码管理器 2026：Go + Alfred Workflow 构建开源密码管理工具](https://friday-go.icu/tools/PF-Password-Manager) — 用 Go + Alfred Workflow 自建开源密码管理器：AES-256 加密、多设备同步、CLI 快捷检索，告别 1Password 订阅费的完整方案。
 - [服务器进程日志分析 2026：Shell + AI 从头皮发麻到 5 秒定位故障](https://friday-go.icu/tools/服务器进程日志分析：从头皮发麻到AI解救) — 维护Web服务器时，面对密密麻麻的进程信息头皮发麻？这篇文章教你用Shell脚本记录服务器状态，配合AI分析，轻松搞定进程分析、性能监控、卡顿排查等问题。
 - [单文件 PHP 部署工具实战 2026：一个文件搞定 Git + SSH 多项目部署](https://friday-go.icu/tools/单文件代码部署工具) — 一个类似 Adminer.php 的单文件 PHP 代码部署工具，支持 Git + SSH 部署，简单易用，一个文件搞定所有部署需求。
 - [Broot 终端文件管理器实战 2026：Rust 写的命令行导航神器，替代 tree + cd](https://friday-go.icu/tools/Broot-高效的命令行文件管理器) — 2026 版 Broot 实战：用 Rust 终端文件管理器替代 tree/cd，支持树状视图、模糊搜索、快速导航与文件预览。
@@ -367,13 +465,13 @@ PFinalClub（https://friday-go.icu）是一个由 PFinal 南丞 维护的后端 
 - [Composer 配置文件详解 2026：composer.json 从入门到生产级调优的完整指南](https://friday-go.icu/tools/Composer配置文件说明) — 介绍Composer配置文件的基本概念和使用方法，包括配置文件的位置、依赖管理、包管理、版本控制等。
 - [PHPStorm 快捷键完整指南 2026：50+ 必学组合提升编码效率 5 倍](https://friday-go.icu/tools/PHPStorm快捷键) — PHPStorm 50+ 高频快捷键实战分类整理：代码编辑、搜索、调试、重构、Git 操作，附 5 大场景速查表（macOS/Windows 双平台）
 - [Tmux 快捷键完整指南 2026：30 个命令从入门到高效远程开发](https://friday-go.icu/tools/Tmux 常用快捷键) — Tmux 30 个核心快捷键实战：会话/窗口/面板管理 + 复制模式 + 脚本化配置，远程开发必备，附带 .tmux.conf 高效模板
-- [🛠️ 开发者在线工具集 - PFinalClub](https://friday-go.icu/tools/online-tools) — PFinalClub 开发者在线工具集合：密码生成器、AI 工具导航、Prompt 模板、节日营销日历、BMI 计算器等，免费使用。
+- [🛠️ 开发者在线工具集](https://friday-go.icu/tools/online-tools) — PFinalClub 开发者在线工具集合：密码生成器、AI 工具导航、Prompt 模板、节日营销日历、BMI 计算器等，免费使用。
 
 ### 开发工具系列
-- [TypeScript 7.0 RC 深度解析：微软用 Go 重写编译器，10倍性能提升背后的架构革命](https://friday-go.icu/Tools/typescript-7-go-compiler-2026)
+- [TypeScript 7.0 RC 深度解析：微软用 Go 重写编译器，10倍性能提升背后的架构革命](https://friday-go.icu/Tools/typescript-7-go-compiler-2026) — 2026 年 6 月 18 日，微软发布 TypeScript 7.0 RC，代号 Project Corsa。TypeScript 编译器——过去十年一直用自身语言（自托管）编写——被完整移植到了 Go 语言。VS Code 150 万行
 - [Devslog 结构化日志实战 2026：Go 日志可读性提升 10 倍](https://friday-go.icu/Tools/Devslog-Structured-Logging) — Go 结构化日志库 Devslog 实战指南：Pretty Print 格式化、级别控制、性能基准测试对比 slog/zap，附带生产环境最佳实践
-- [Docker 部署 Go 项目实践指南](https://friday-go.icu/Tools/Docker-Go-Deployment) — 详细介绍如何使用 Docker 容器化部署 Go 项目，包括多阶段构建、镜像优化、Compose 配置等最佳实践。
-- [程序员必备神器：PF-password 密码管理器](https://friday-go.icu/Tools/PF-Password-Manager) — 介绍 PF-password 密码管理器的功能特点、技术实现和使用方法，一款专为程序员设计的开源密码管理工具。
+- [Docker 部署 Go 项目实战 2026：多阶段构建 + 镜像体积减少 90% + Compose 编排](https://friday-go.icu/Tools/Docker-Go-Deployment) — Docker Go 部署全流程实战：多阶段构建将镜像从 800MB 压到 15MB、Docker Compose 编排、健康检查、非 root 运行等 10 项生产最佳实践。
+- [PF-Password 密码管理器 2026：Go + Alfred Workflow 构建开源密码管理工具](https://friday-go.icu/Tools/PF-Password-Manager) — 用 Go + Alfred Workflow 自建开源密码管理器：AES-256 加密、多设备同步、CLI 快捷检索，告别 1Password 订阅费的完整方案。
 - [服务器进程日志分析 2026：Shell + AI 从头皮发麻到 5 秒定位故障](https://friday-go.icu/Tools/服务器进程日志分析：从头皮发麻到AI解救) — 维护Web服务器时，面对密密麻麻的进程信息头皮发麻？这篇文章教你用Shell脚本记录服务器状态，配合AI分析，轻松搞定进程分析、性能监控、卡顿排查等问题。
 - [单文件 PHP 部署工具实战 2026：一个文件搞定 Git + SSH 多项目部署](https://friday-go.icu/Tools/单文件代码部署工具) — 一个类似 Adminer.php 的单文件 PHP 代码部署工具，支持 Git + SSH 部署，简单易用，一个文件搞定所有部署需求。
 - [Broot 终端文件管理器实战 2026：Rust 写的命令行导航神器，替代 tree + cd](https://friday-go.icu/Tools/Broot-高效的命令行文件管理器) — 2026 版 Broot 实战：用 Rust 终端文件管理器替代 tree/cd，支持树状视图、模糊搜索、快速导航与文件预览。
@@ -392,43 +490,44 @@ PFinalClub（https://friday-go.icu）是一个由 PFinal 南丞 维护的后端 
 - [Composer 配置文件详解 2026：composer.json 从入门到生产级调优的完整指南](https://friday-go.icu/Tools/Composer配置文件说明) — 介绍Composer配置文件的基本概念和使用方法，包括配置文件的位置、依赖管理、包管理、版本控制等。
 - [PHPStorm 快捷键完整指南 2026：50+ 必学组合提升编码效率 5 倍](https://friday-go.icu/Tools/PHPStorm快捷键) — PHPStorm 50+ 高频快捷键实战分类整理：代码编辑、搜索、调试、重构、Git 操作，附 5 大场景速查表（macOS/Windows 双平台）
 - [Tmux 快捷键完整指南 2026：30 个命令从入门到高效远程开发](https://friday-go.icu/Tools/Tmux 常用快捷键) — Tmux 30 个核心快捷键实战：会话/窗口/面板管理 + 复制模式 + 脚本化配置，远程开发必备，附带 .tmux.conf 高效模板
-- [🛠️ 开发者在线工具集 - PFinalClub](https://friday-go.icu/Tools/online-tools) — PFinalClub 开发者在线工具集合：密码生成器、AI 工具导航、Prompt 模板、节日营销日历、BMI 计算器等，免费使用。
+- [🛠️ 开发者在线工具集](https://friday-go.icu/Tools/online-tools) — PFinalClub 开发者在线工具集合：密码生成器、AI 工具导航、Prompt 模板、节日营销日历、BMI 计算器等，免费使用。
 
 ### 系统运维系列
 - [分布式链路追踪最佳实践](https://friday-go.icu/dev/system/distributed-tracing) — 深入理解分布式链路追踪原理与实践，掌握 Trace、Span、Baggage 等核心概念，学习如何在微服务架构中实现全链路追踪和问题定位。
-- [ELK 日志系统实战指南](https://friday-go.icu/dev/system/elk-stack-guide) — 深入学习 ELK Stack（Elasticsearch、Logstash、Kibana）日志系统，掌握日志收集、处理、存储和可视化的完整流程，构建企业级日志分析平台。
+- [ELK 日志系统实战 2026：Elasticsearch + Logstash + Kibana 企业级日志平台全栈部署](https://friday-go.icu/dev/system/elk-stack-guide) — ELK Stack 实战 2026 全栈指南：Filebeat 日志采集 + Logstash 管道处理 + Elasticsearch 全文检索 + Kibana 可视化看板，从单机部署到集群扩容的完整企业级日志平台方案。
 - [GitHub Actions CI/CD 实战指南 2026：工作流 + 矩阵构建 + 缓存优化 + 多环境部署](https://friday-go.icu/dev/system/github-actions-guide) — 2026 版 GitHub Actions 实战：从工作流触发、矩阵构建到缓存优化与多环境部署的完整 CI/CD 指南。
 - [Grafana 可视化实战指南 2026：Dashboard 设计 + Prometheus 告警 + 变量模板](https://friday-go.icu/dev/system/grafana-visualization) — 2026 版 Grafana 监控可视化实战：数据源配置、Dashboard 设计、Prometheus 告警规则与变量模板完整指南。
-- [Loki 日志系统实战指南](https://friday-go.icu/dev/system/loki-logging) — 深入学习 Grafana Loki 日志聚合系统，掌握与 Prometheus 类似的标签索引机制，实现轻量级、低成本的日志收集和查询。
+- [Loki 日志系统实战 2026：Grafana 可观测性栈部署与 LogQL 查询完全指南](https://friday-go.icu/dev/system/loki-logging) — Loki 日志系统实战 2026 完全指南：从 Promtail 日志采集到 Grafana 可视化看板，掌握 LogQL 查询语法、标签索引优化、生产级部署最佳实践，构建轻量级可观测性日志平台。
 - [OpenTelemetry 实战指南](https://friday-go.icu/dev/system/opentelemetry-guide) — 深入学习 OpenTelemetry 可观测性框架，掌握分布式追踪、指标收集、日志关联等核心功能，构建现代化的可观测性体系。
 - [CI/CD 最佳实践：构建高效的持续集成与交付流水线](https://friday-go.icu/dev/system/cicd-best-practices) — 全面讲解 CI/CD 的核心概念、最佳实践和工具选择，帮助团队构建高效、可靠的持续集成与交付流水线。
 - [Prometheus 监控实战：构建现代化的监控体系](https://friday-go.icu/dev/system/prometheus-monitoring) — 深入讲解 Prometheus 监控系统的核心概念、架构设计、指标类型以及实战配置，帮助构建完整的应用监控解决方案。
 - [Docker 基础入门 2026：镜像、容器、Dockerfile、Compose 完整实战手册](https://friday-go.icu/dev/system/docker-basics) — 2026 年 Docker 零基础到生产：镜像构建、容器生命周期、网络与数据卷、Docker Compose 编排、多阶段构建优化完整示例。
 - [Kubernetes 基础入门：从容器编排到生产实践](https://friday-go.icu/dev/system/kubernetes-basics) — 全面讲解 Kubernetes 核心概念、资源对象、部署策略和实战技巧，帮助开发者快速掌握 K8s 容器编排技术
-- [PostgreSQL 10 个鲜为人知功能 2025 - 告别 Elasticsearch 和 MongoDB](https://friday-go.icu/dev/system/database/PostgreSQL-10个鲜为人知的强大功能) — 深入探讨 PostgreSQL 10 个鲜为人知但极其强大的功能，从全文搜索到逻辑复制，让你重新认识这个数据库的威力
-- [MySQL配置文件解析 - 完整使用指南](https://friday-go.icu/dev/system/database/MySQL-Configuration-Analysis) — 详细介绍MySQL配置文件的解析，包括配置文件的位置、常用配置项、优化建议等，帮助开发者更好地管理和优化MySQL数据库。
+- [PostgreSQL 10 个鲜为人知功能 2026 - 告别 Elasticsearch 和 MongoDB](https://friday-go.icu/dev/system/database/PostgreSQL-10个鲜为人知的强大功能) — 深入探讨 PostgreSQL 10 个鲜为人知但极其强大的功能，从全文搜索到逻辑复制，让你重新认识这个数据库的威力
+- [MySQL 8.0 配置优化完全指南 2026：InnoDB + 查询缓存 + 连接池性能调优实战](https://friday-go.icu/dev/system/database/MySQL-Configuration-Analysis) — MySQL 8.0 配置优化完全指南 2026：从 my.cnf 文件详解到 InnoDB 缓冲池、查询缓存、连接池、慢查询日志等核心参数调优，附带生产环境配置模板与性能压测对比数据。
 
 ### 技术思考系列
 - [GitOps 实战：从应用部署到全生命周期管理](https://friday-go.icu/thinking/method/GitOps-Practice-Guide) — 全面讲解 GitOps 核心理念、工具链和实践方法，包括 ArgoCD、Flux 等工具的使用，帮助你实现声明式持续交付。
 - [Go 并发模式实战 2026：Worker Pool + Pipeline + Fan-in/out 等 12 个模式完整指南](https://friday-go.icu/thinking/method/Go-Concurrency-Patterns-Guide) — Go 并发模式实战 2026：系统讲解 12 种高并发模式（Worker Pool/Pipeline/Fan-in/Fan-out/Select 超时/errgroup/CSP/Channel 取消），附 benchmark 性能对比 + 
 - [别再盲接 OTel：Go 可观察性接入的 8 个大坑](https://friday-go.icu/thinking/method/Go-OTel-Pitfalls) — 总结 Go 项目接入 OpenTelemetry 时常见的 8 个坑点，包括性能问题、上下文传播、采样策略等，帮助你少走弯路。
 - [从 trace 到洞察：Go 项目的可观测性闭环实践](https://friday-go.icu/thinking/method/Go-Observability-Practice) — 全面讲解 Go 项目可观测性的三大支柱：日志、指标、追踪，以及如何构建完整的可观测性体系。
-- [2025 年最佳 Go Web 框架深度解析：资深开发者的选择指南](https://friday-go.icu/thinking/method/Go-Web-Framework-2025) — 全面评测 2025 年主流 Go Web 框架：Gin、Echo、Fiber、Chi，从性能、功能、生态等维度分析，帮助你选择最适合项目的框架。
+- [2026 年最佳 Go Web 框架深度解析：资深开发者的选择指南](https://friday-go.icu/thinking/method/Go-Web-Framework-2025) — 全面评测 2025 年主流 Go Web 框架：Gin、Echo、Fiber、Chi，从性能、功能、生态等维度分析，帮助你选择最适合项目的框架。
 - [Go 高性能游戏 API 设计实战：WebSocket + 房间系统 + 万级并发](https://friday-go.icu/thinking/method/High-Performance-Go-Game-API) — Go 游戏后端架构实战：WebSocket 长连接管理、房间状态同步、帧同步 vs 状态同步选型，压测达万级并发，附完整代码
 - [Go 后端现代工程 7 大原则 2026：从架构到交付的实战指南](https://friday-go.icu/thinking/method/Modern-Go-Backend-Engineering) — 构建高质量 Go 后端的 7 大工程原则：Clean Architecture + 依赖注入 + 表驱动测试 + CI/CD，附带真实项目代码组织示例
 - [思考 / 方法论：从0到1构建自己的思考体系](https://friday-go.icu/thinking/method/从0到1构建自己的思考体系) — 本文系统性地介绍从0到1构建个人思考体系的完整方法论，涵盖信息输入、思维模型、决策判断、反思迭代四个核心维度，并提供可操作的实践步骤，帮助经验型开发者建立结构化思维框架，提升问题解决能力与决策质量。
 - [搭建Nginx安全网关：3步堵住90%的Web漏洞！企业级防护实战指南](https://friday-go.icu/thinking/method/nginx-security-gateway-guide) — 从0搭建企业级Nginx安全网关实战指南，通过3个核心步骤实现90% Web漏洞防护。涵盖版本隐藏、敏感文件保护、Host头攻击防护、安全响应头配置等关键安全技术，提供完整配置模板和验证方法，符合等保2.0要求。
-- [测试驱动开发 以测试为引擎的软件工程实践](https://friday-go.icu/thinking/method/测试驱动开发 以测试为引擎的软件工程实践) — 深入探讨测试驱动开发（TDD）的理论基础、实践指南和最佳实践，帮助开发者构建高质量、可维护的软件系统。
+- [Go 可观测性闭环实战 2026：从 Trace 到洞察的 7 步落地指南](https://friday-go.icu/thinking/method/从 trace 到洞察：Go 项目的可观测性闭环实践) — Go 可观测性闭环实战 2026：基于 OpenTelemetry 的 trace、metrics、logs 三信号联动，从数据收集到驱动决策的 7 步落地指南。含 RED/USE 方法论、SLO 告警、Docker 一键部署完整代码。
+- [测试驱动开发 TDD 实战 2026：Go 语言从 Red-Green-Refactor 到生产级测试体系](https://friday-go.icu/thinking/method/测试驱动开发 以测试为引擎的软件工程实践) — TDD 实战 5 步法：Red-Green-Refactor 循环、Go 语言测试驱动开发全流程、测试金字塔分层策略、Mock 与 Stub 区别，从理论到生产级测试体系构建。
 - [Go Socket 高性能游戏服务器实战 2026：TCP 长连接 + 百万并发架构设计](https://friday-go.icu/thinking/method/Golang Socket 通信架构分析与实现-构建高性能游戏服务器) — 万字详解 Go 语言构建高性能游戏服务器：从 TCP Socket 基础到 epoll 事件驱动、Protobuf 消息协议、Goroutine 并发模型、连接池与心跳机制，附可运行的 MMORPG 服务器骨架代码。
 - [PHP 8.x 企业级开发实战指南 从语言特性到生产部署](https://friday-go.icu/thinking/method/PHP 8.x 企业级开发实战指南 从语言特性到生产部署) — 深入探讨PHP 8.x在企业级应用开发中的最佳实践，涵盖架构设计、性能优化、工程化部署等核心话题
-- [2025年Go Web框架深度评测 10大主流框架性能对比与选型指南](https://friday-go.icu/thinking/method/2025年最佳Go-Web框架深度解析：资深开发者的选择指南)
+- [2026年Go Web框架深度评测 10大主流框架性能对比与选型指南](https://friday-go.icu/thinking/method/2025年最佳Go-Web框架深度解析：资深开发者的选择指南) — 2025年最新Go Web框架深度评测：Gin、Fiber、Echo、Hertz、Beego、Go-Chi、FastHTTP、Gorilla等10大主流框架性能对比。从请求处理速度、内存占用、学习曲线、社区活跃度等维度，提供详细的项目选型指
 - [GitOps 生产实战 2026：ArgoCD + Kustomize 从 Jenkins 迁移到全生命周期管理](https://friday-go.icu/thinking/method/GitOps实战-从应用部署到全生命周期管理) — GitOps 生产级实战 2026：Jenkins → ArgoCD 迁移全记录，涵盖 Kustomize 环境分层、多集群 ApplicationSet、Sealed Secrets 密钥管理、PR 预览环境、回滚策略。真实踩坑经验总结，
-- [高质量 Golang 后端的现代软件工程原则](https://friday-go.icu/thinking/method/高质量Golang后端的现代软件工程原则) — 探索构建高质量 Golang 后端的现代软件工程原则，从架构设计到性能优化，从代码质量到团队协作，为你提供实用的技术指南和最佳实践。
-- [Fyne 深度技术解析 - Go 实战指南](https://friday-go.icu/thinking/method/Fyne-深度技术解析-面向资深Go开发者的架构设计分析) — 深入分析 Fyne 框架的架构设计、技术实现和设计模式，为资深 Go 开发者提供技术洞察。
-- [Fyne vs Wails 2025 - Go 桌面框架对比](https://friday-go.icu/thinking/method/Fyne与Wails深度对比-选择最适合你的Go桌面应用框架) — Fyne vs Wails 2025: 深入对比两大 Go 桌面应用框架的架构设计、性能表现、开发体验，帮助开发者选择最适合的技术方案。
-- [基于 golang 的高性能游戏接口设计](https://friday-go.icu/thinking/method/基于golang 的高性能游戏接口设计)
-- [Go语言实现守护进程的技术详解](https://friday-go.icu/thinking/method/Go语言实现守护进程的技术详解) — 本文将详细介绍如何使用Go语言实现守护进程,并探讨其中的关键技术点。
-- [Go Concurrency Patterns 2025 - 7种核心并发模式实战指南](https://friday-go.icu/thinking/method/Go语言并发模式实战指南) — Go Concurrency Patterns 2025: Master 7 essential Go concurrency patterns with practical examples. Includes worker pools,
+- [高质量 Golang 后端的 10 个核心工程原则（2026 实战指南）](https://friday-go.icu/thinking/method/高质量Golang后端的现代软件工程原则) — 高质量 Golang 后端的 10 个核心工程原则 2026：从架构设计、微服务拆分、并发处理到可观测性闭环，每个原则附真实项目代码和踩坑经验。资深 Go 后端工程师的实战总结。
+- [Fyne 深度技术解析 2026 - Go 原生 GUI 框架架构与实战指南](https://friday-go.icu/thinking/method/Fyne-深度技术解析-面向资深Go开发者的架构设计分析) — Fyne 深度技术解析 2026：Go 原生 GUI 框架的架构设计、渲染引擎、Widget 系统完整剖析。含与 Wails 的对比分析、主题定制、跨平台适配实战代码。
+- [基于 golang 的高性能游戏接口设计](https://friday-go.icu/thinking/method/基于golang 的高性能游戏接口设计) — 介绍基于 golang 的高性能游戏接口设计，包括游戏服务器架构、接口设计原则、性能优化和高并发处理。
+- [Go 实现守护进程实战 2026：信号处理、孤儿进程与 systemd 集成完整指南](https://friday-go.icu/thinking/method/Go语言实现守护进程的技术详解) — Go 守护进程实现 3 大关键技术：fork+setsid 双重 fork 原理、信号处理优雅退出、systemd 集成生产部署，附完整可运行代码与生产环境踩坑经验。
+- [Go Concurrency Patterns 2026 - 7种核心并发模式实战指南](https://friday-go.icu/thinking/method/Go语言并发模式实战指南) — Go Concurrency Patterns 2026: Master 7 essential Go concurrency patterns with practical examples. Includes worker pools,
+- [别再盲接 OTel Go 可观察性接入的 8 个大坑](https://friday-go.icu/thinking/method/别再盲接 OTel：Go 可观察性接入的 8 个大坑) — Go 可观察性接入 OTel 的 8 个大坑避坑指南：全局 Provider 覆盖、采样配置、TraceContext 统一、指标高基数、Exporter 超时降级。附可落地默认配置。
 
 ### 独立开发系列
 - [从 Side Project 到月收入 $10000：独立开发商业化完整指南](https://friday-go.icu/indie/从SideProject到月收入10000) — 系统讲解如何将 Side Project 转变为可持续的收入来源，涵盖产品选择、定价策略、付费转化、用户增长、客户成功等商业化全链路。结合多个独立开发者真实案例，提供可复用的增长框架与收入里程碑规划。
@@ -439,10 +538,10 @@ PFinalClub（https://friday-go.icu）是一个由 PFinal 南丞 维护的后端 
 - [MCP 服务器开发实战 2026：Claude + Cursor 工具定义的 5 步完整接入](https://friday-go.icu/data/automation/mcp-server-development) — MCP 服务器开发 5 步实战 2026：协议握手、工具定义、资源暴露、Prompt 模板 + Claude/Cursor 集成，附 TypeScript/Python 双语言项目代码
 - [Prompt Engineering 实战：写出真正有效的 AI 提示词](https://friday-go.icu/data/automation/prompt-engineering) — 从零系统讲解 Prompt Engineering 核心技巧：角色设定、思维链、少样本学习、结构化输出、防止幻觉，以及与 GPT/Claude/DeepSeek 配合的最佳实践。
 - [向量数据库实战 2026：4 种相似度算法 + Milvus/Qdrant RAG 系统构建](https://friday-go.icu/data/automation/vector-database-guide) — 向量数据库 4 种相似度算法实战 2026：Embedding 技术、HNSW 索引、Milvus/Qdrant/Chroma 选型 + RAG 系统构建 7 步完整指南
-- [MCP Server Guide 2025 - 5个提升AI编程效率的核心服务器](https://friday-go.icu/data/automation/MCP服务器精选：提升AI编程效率的5大神器) — MCP Server Guide 2025: 介绍 5 个核心 Model Context Protocol 服务器，帮助开发者在 Cursor、VSCode 等 AI 编辑器中保持高效工作流程。
+- [MCP Server Guide 2026 - 5个提升AI编程效率的核心服务器](https://friday-go.icu/data/automation/MCP服务器精选：提升AI编程效率的5大神器) — MCP Server Guide 2026: 介绍 5 个核心 Model Context Protocol 服务器，帮助开发者在 Cursor、VSCode 等 AI 编辑器中保持高效工作流程。
 - [AutoGen 多 Agent 金融数据分析实战 2026：用 AI 构建自动化投研流水线](https://friday-go.icu/data/automation/autogen-financial-analysis) — 使用微软 AutoGen 框架构建金融数据分析自动化流程：多 Agent 协作架构设计、A 股数据获取与清洗、技术指标计算、自动生成投研报告，让 AI 成为你的 24/7 金融分析师。
 - [Go 构建远程存储MCP服务器实战](https://friday-go.icu/data/automation/Go 构建远程存储MCP服务器实战) — 结合实战案例，详细介绍如何用 Go 语言构建高效的远程存储 MCP 服务器，涵盖架构设计、关键实现、技术挑战与最佳实践。
-- [爬虫加密解密算法 - Python 实战](https://friday-go.icu/data/automation/爬虫常见的加密解密算法) — 爬虫常见的加密解密算法特征收集
+- [爬虫加密解密算法实战 2026：10+ 常见加密算法的 Python 实现](https://friday-go.icu/data/automation/爬虫常见的加密解密算法) — 爬虫加密解密算法实战 2026：AES、RSA、MD5、HMAC 等 10+ 常见加密算法的 Python 实现与逆向分析技巧。含特征识别方法和完整代码示例。
 - [爬虫加密解密算法特征收集 - Python 实战](https://friday-go.icu/data/automation/爬虫常见的加密解密算法特征收集) — 深入分析爬虫中常见的加密解密算法特征，包括 Base64、MD5、AES、RSA 等算法的识别方法与 Python 破解实战，帮助开发者应对反爬虫加密机制
 - [Python爬虫JS逆向实战指南（Webpack加密破解与数据采集）](https://friday-go.icu/data/automation/爬虫JS逆向Webpack技巧记录) — Python爬虫JS逆向实战指南，深入解析Webpack加密机制和破解方法，提供完整的数据采集解决方案和实战案例，帮助开发者掌握JS逆向核心技术。
 - [Python 协程完全指南 2026：async/await + asyncio 并发编程从入门到生产实战](https://friday-go.icu/data/automation/Python协程) — 从零掌握 Python 异步编程：async/await 语法糖原理、asyncio 事件循环机制、Task 并发调度、异步 HTTP 客户端实战（aiohttp/httpx），附 FastAPI 异步接口性能对比测试。
@@ -498,10 +597,10 @@ PFinalClub（https://friday-go.icu）是一个由 PFinal 南丞 维护的后端 
 - [Lesson 5.1: 应急响应流程](https://friday-go.icu/courses/security-engineer/module-5/5-1-incident-response) — 准备、检测、遏制、根除、恢复
 - [Lesson 4.1: 应用打包与分发](https://friday-go.icu/courses/wails-desktop/module-4/4-1-packaging-distribution) — Windows MSI、macOS DMG、Linux AppImage
 - [Lesson 4.2: 性能优化](https://friday-go.icu/courses/wails-desktop/module-4/4-2-performance-optimization) — 启动优化、内存管理、资源压缩
-- [Kubernetes 配置管理：ConfigMap、Secret 与生产最佳实践](https://friday-go.icu/courses/devops-practice/k8s-config) — 掌握 Kubernetes 配置管理的完整方案：ConfigMap 管理非敏感配置、Secret 管理密钥，以及 Vault、External Secrets Operator 等生产级密钥管理方案，含 Go 应用实战示例。
-- [Kubernetes 服务发现与网络：Service、Ingress、DNS 全解析](https://friday-go.icu/courses/devops-practice/k8s-networking) — 深入理解 Kubernetes 网络模型，掌握 ClusterIP/NodePort/LoadBalancer/ExternalName 四种 Service 类型，以及 Ingress 配置实战、CoreDNS 解析原理，含 Nginx 
-- [Kubernetes 工作负载深度解析：Deployment、StatefulSet、DaemonSet](https://friday-go.icu/courses/devops-practice/k8s-workloads) — 掌握 Kubernetes 三大核心工作负载：Deployment 滚动更新与回滚、StatefulSet 有状态应用、DaemonSet 守护进程，以及 Job/CronJob 任务调度，含完整 YAML 示例。
-- [Kubernetes 入门：架构与核心概念全解析](https://friday-go.icu/courses/devops-practice/k8s-architecture) — 深入理解 Kubernetes 架构设计，掌握 Pod、Node、Namespace、控制平面等核心概念，以及 kubectl 常用命令，从零开始入门 K8s。
+- [Kubernetes 配置管理 2026：ConfigMap/Secret 到 Vault 生产级密钥管理](https://friday-go.icu/courses/devops-practice/k8s-config) — K8s 配置管理完整方案：ConfigMap 非敏感配置 + Secret 密钥管理 + Vault/External Secrets Operator 生产级方案，含 Go 应用集成示例代码。
+- [Kubernetes 网络与服务发现 2026：Service/Ingress/CoreDNS 实战全解析](https://friday-go.icu/courses/devops-practice/k8s-networking) — K8s 网络 4 种 Service 类型 + Ingress 配置实战 + CoreDNS 解析原理，含 Nginx Ingress 完整 YAML 示例，2026 生产环境必备网络指南。
+- [Kubernetes 工作负载深度解析 2026：Deployment/StatefulSet/DaemonSet 实战指南](https://friday-go.icu/courses/devops-practice/k8s-workloads) — K8s 3 大核心工作负载实战：Deployment 滚动更新与回滚、StatefulSet 有状态应用部署、DaemonSet 节点守护，含完整 YAML 示例与 Job/CronJob 任务调度。
+- [Kubernetes 入门指南 2026：架构、核心概念与 kubectl 从零到精通](https://friday-go.icu/courses/devops-practice/k8s-architecture) — K8s 架构设计深度解析：Pod/Node/Namespace/控制平面核心概念，kubectl 常用命令大全，从零开始入门 K8s 的 10 个关键步骤。
 
 ### 站点信息
 - [PFinalClub 博客首页](https://friday-go.icu/)
@@ -511,8 +610,8 @@ PFinalClub（https://friday-go.icu）是一个由 PFinal 南丞 维护的后端 
 
 ## 站点统计
 
-- **总文章数**：434 篇原创技术文章
-- **最后更新**：2026-07-20
+- **总文章数**：557 篇原创技术文章
+- **最后更新**：2026-09-19
 - **内容许可**：MIT License（注明作者与原文链接即可）
 - **联系方式**：hello@friday-go.icu
 - **RSS 订阅**：https://friday-go.icu/feed.rss
