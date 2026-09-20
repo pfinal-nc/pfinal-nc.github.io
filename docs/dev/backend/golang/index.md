@@ -118,6 +118,7 @@ tags:
 - [**Go 1.28 开发周期正式启动：从 tree reopen 到首批关键 CL 的工程节奏**](/dev/backend/golang/go-1-28-development-cycle-kicks-off-2026) - 2026-07-27 goversion 28 / doc/next / 首批提案
 - [**Go 官方为函数名吵了两个月：maps.Same 提案正式通过的背后**](/dev/backend/golang/go-maps-same-proposal-identity-comparison-2026) - 2026-07-28 指针比较 / 一条 CMP 指令 / NaN 陷阱 / 泛型签名收缩
 - [**Go 1.28 泛型容器伞形提案 #80590 深度解读：6 个子提案、binary method problem 与工程取舍**](/dev/backend/golang/go-1-28-generic-containers-stdlib-2026) - 2026-08-03 issue #80590 Open / set.Set 透明 map[T]struct{} / heap/v2 重命名 / F-bounded polymorphism
+- [**Go 1.28 arm64 NEON 优化实战：从编译器自动向量化到手写 SIMD 的完整路径**](/dev/backend/golang/go-1-28-arm64-neon-simd-optimization-2026) - 2026-09-20 NEON 存取配对 / 冗余零扩展消除 / GOEXPERIMENT=simd / archsimd 包 / 图像处理实战 / Apple Silicon & Graviton
 - [**Go 1.28 泛型容器实战：Set、Map、Heap 选型与性能对比**](/dev/backend/golang/go-1-28-generic-containers-practical-guide-2026) - 2026-08-28 stdlib 落地 / set.Set vs map[T]struct{} / ordered.Map vs sync.Map / heap/v2 基准 / 选型决策树
 - [**Go 1.27 泛型方法为什么纠结了五年？Release Party 直播实录：Go 团队自曝决策内幕**](/dev/backend/golang/go-1-27-generic-methods-release-party-2026) - 2026-09-06 五人同屏 / 五年博弈 / 泛型接口方法坦承做不到
 - [**Go 1.27 SIMD 加速 ChaCha20 加密实战：7.5 倍性能提升的密码学革命**](/dev/backend/golang/go-1-27-simd-chacha20-encryption-acceleration-2026) - 2026-09-06 AVX512 / archsimd 包 / 7.5x vs stdlib / 略快于 Rust
