@@ -16,7 +16,7 @@ PFinalClub（https://friday-go.icu）是一个由 PFinal 南丞 维护的后端 
 ## PFinalClub 主要内容分类
 
 ### Golang 系列（110+篇）
-- [Go SIMD 实战复盘：Debian Code Search 如何删光最后一行 cgo，用纯 Go 重写 TurboPFor 并反超 C](https://friday-go.icu/dev/backend/golang/go-simd-turbopfor-pure-go-rewrite-2026) — Debian Code Search 作者 Michael Stapelberg 用 Go 1.26/1.27 实验性 simd/archsimd 包重写服役 7 年的 C 语言 TurboPFor 整数压缩库：从 76% 性能起步，经历标
+- [Go SIMD 实战复盘：Debian Code Search 如何删光最后一行 cgo，用纯 Go 重写 TurboPFor 并反超原 cgo 版本](https://friday-go.icu/dev/backend/golang/go-simd-turbopfor-pure-go-rewrite-2026) — Debian Code Search 作者 Michael Stapelberg 用 Go 1.26/1.27 实验性 simd/archsimd 包重写服役 7 年的 C 语言 TurboPFor 整数压缩库：从 76% 性能起步，经历标
 - [Go 1.28 arm64 NEON 优化实战：从编译器自动向量化到手写 SIMD 的完整路径](https://friday-go.icu/dev/backend/golang/go-1-28-arm64-neon-simd-optimization-2026) — Go 1.28 在 arm64 上落地多项 NEON 优化：自动向量化、NEON 存取配对、冗余零扩展消除。本文从编译器优化原理、GOEXPERIMENT=simd 实验包、到生产环境性能测试，提供 arm64 SIMD 的完整实战指南。
 - [encoding/json/v2 到底是快了还是慢了：Lemire 基准、issue #81315 与 52% 序列化回退的完整复盘](https://friday-go.icu/dev/backend/golang/go-json-v2-marshal-regression-issue-81315-2026) — Go 1.27 的 encoding/json/v2 宣称更快，但 Daniel Lemire 的基准显示：解析快 1.5-2.3 倍的同时，10k 结构体切片的 Marshal 慢了 1.5 倍。深拆 issue #81315 的 ben
 - [Go 1.28 database/sql 快路径深拆：int64→int 不再\"格式化成字符串再解析回来\"](https://friday-go.icu/dev/backend/golang/go-1-28-database-sql-scan-fast-path-2026) — Go 1.28 开发周期为 database/sql convertAssignRows 新增 int64/float64/bool 快路径：int64 扫描到 int 不再走十进制字符串往返，Int64ToInt 基准提升 95.7% 且
