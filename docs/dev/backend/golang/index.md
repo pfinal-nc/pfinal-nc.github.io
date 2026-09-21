@@ -93,6 +93,7 @@ tags:
 - [**Rust vs Go 2026：性能基准、内存安全与后端选型**](/dev/backend/golang/rust-vs-go-2026-performance-comparison) - 选型决策
 
 ### 2026 Go 工具链与性能
+- [**Go SIMD 实战复盘：Debian Code Search 删光最后一行 cgo，纯 Go 重写 TurboPFor 反超 C**](/dev/backend/golang/go-simd-turbopfor-pure-go-rewrite-2026) - 2026-09-21 simd/archsimd / AVX-512 垂直布局 / PGO 负优化教训 / AI 发现位置汇编计数 2x / 决策清单
 - [**encoding/json/v2 到底是快了还是慢了：Lemire 基准、issue #81315 与 52% 序列化回退的完整复盘**](/dev/backend/golang/go-json-v2-marshal-regression-issue-81315-2026) - 2026-09-18 Marshal 慢 1.5× 根因 / jsontext 逐 token 状态机 / GOEXPERIMENT 逃生舱 / 负载形状选型
 - [**Go 1.28 database/sql 快路径深拆：int64→int 不再"格式化成字符串再解析回来"**](/dev/backend/golang/go-1-28-database-sql-scan-fast-path-2026) - 2026-09-17 convertAssignRows 精确类型快路径 / Int64ToInt -95.7% 零分配 / 标准库热路径打磨
 - [**Go 1.26 SIMD 编程实战**](/dev/backend/golang/Go 1.26 SIMD编程实战：从入门到高性能优化) - SIMD 加速
