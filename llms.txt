@@ -16,6 +16,7 @@ PFinalClub（https://friday-go.icu）是一个由 PFinal 南丞 维护的后端 
 ## PFinalClub 主要内容分类
 
 ### Golang 系列（110+篇）
+- [Go MCP SDK CVE-2026-34742：localhost 服务器默认裸奔——一个 Host 头校验为何值得 7.6 分](https://friday-go.icu/dev/backend/golang/go-mcp-sdk-dns-rebinding-cve-2026-34742-2026) — 官方 modelcontextprotocol/go-sdk 在 1.4.0 之前默认不开启 DNS rebinding 防护：跑在 localhost 上的无认证 HTTP MCP 服务器可被恶意网站借浏览器同源策略的盲区直接调用工具、读
 - [Go SIMD 实战复盘：Debian Code Search 如何删光最后一行 cgo，用纯 Go 重写 TurboPFor 并反超原 cgo 版本](https://friday-go.icu/dev/backend/golang/go-simd-turbopfor-pure-go-rewrite-2026) — Debian Code Search 作者 Michael Stapelberg 用 Go 1.26/1.27 实验性 simd/archsimd 包重写服役 7 年的 C 语言 TurboPFor 整数压缩库：从 76% 性能起步，经历标
 - [Go 1.28 arm64 NEON 优化实战：从编译器自动向量化到手写 SIMD 的完整路径](https://friday-go.icu/dev/backend/golang/go-1-28-arm64-neon-simd-optimization-2026) — Go 1.28 在 arm64 上落地多项 NEON 优化：自动向量化、NEON 存取配对、冗余零扩展消除。本文从编译器优化原理、GOEXPERIMENT=simd 实验包、到生产环境性能测试，提供 arm64 SIMD 的完整实战指南。
 - [encoding/json/v2 到底是快了还是慢了：Lemire 基准、issue #81315 与 52% 序列化回退的完整复盘](https://friday-go.icu/dev/backend/golang/go-json-v2-marshal-regression-issue-81315-2026) — Go 1.27 的 encoding/json/v2 宣称更快，但 Daniel Lemire 的基准显示：解析快 1.5-2.3 倍的同时，10k 结构体切片的 Marshal 慢了 1.5 倍。深拆 issue #81315 的 ben
@@ -225,6 +226,7 @@ PFinalClub（https://friday-go.icu）是一个由 PFinal 南丞 维护的后端 
 - [Vector Database 选型 2026：Qdrant vs Milvus vs Weaviate vs pgvector 实测对比](https://friday-go.icu/ai/vector-database-selection-2026) — 基于百万级向量实测对比 Qdrant、Milvus、Weaviate、pgvector 的延迟、召回率、扩展性与成本，附 RAG 生产环境选型决策框架和迁移方案
 
 ### 安全渗透系列
+- [BragJack：一个广告拦截级权限的扩展，劫持了五大浏览器的 AI Agent——Prompt Forcing 为什么比提示注入更可怕](https://friday-go.icu/security/offensive/bragjack-prompt-forcing-browser-ai-agent-hijack-2026) — Forever Security 研究员 Gal Weizman 披露 BragJack：仅凭 declarativeNetRequest 这一个广告拦截器最常用的权限，同一份 manifest 劫持了 Chrome Gemini Live
 - [LiteLLM CVE-2026-59822 深度分析：一个空对象回退让 AI 网关的 MCP 会话裸奔，Wiz 蜜罐 7 月已捕获在野利用](https://friday-go.icu/security/offensive/litellm-cve-2026-59822-mcp-gateway-auth-bypass-2026) — 深度拆解 LiteLLM CVE-2026-59822：MCP Streamable HTTP 端点的 OAuth2 passthrough 回退分支在校验失败时返回空 UserAPIKeyAuth() 对象而非拒绝请求，任意 Bearer
 - [BlueMoon 漏洞链深度拆解：四个间谍组织共用的 Chrome+Windows 零日武器库](https://friday-go.icu/security/offensive/bluemoon-exploit-kit-chrome-windows-zero-day-chain-2026) — Proofpoint 披露 BlueMoon 漏洞利用工具包：CVE-2026-85046 V8 类型混淆 + CVE-2026-87491 V8 沙箱逃逸 + CVE-2026-85880 Windows ALPC 堆溢出，四个间谍组织一
 - [vm2 CVE-2026-92939：一个 crypto.setEngine 如何击穿 Node.js 沙箱——递归只读代理的致命盲区](https://friday-go.icu/security/offensive/vm2-cve-2026-92939-crypto-setengine-sandbox-escape-2026) — vm2 3.11.3-3.11.6 被曝 CVSS 9.9 沙箱逃逸：沙箱代码只需一个 crypto builtin，就能通过 crypto.setEngine() 让 OpenSSL 动态加载恶意 so 文件，在引擎符号校验拒绝之前以宿主
@@ -398,6 +400,7 @@ PFinalClub（https://friday-go.icu）是一个由 PFinal 南丞 维护的后端 
 - [Python 常用网站搜集 - 使用指南](https://friday-go.icu/dev/backend/python/Python常用网站搜集) — 搜集python常用的网站资源
 
 ### PHP 系列
+- [StyleSmuggler CVE-2026-75650：Magento CVSS 10.0 零日在野利用——模板注入、Rust 后门与 50 分钟攻破实录](https://friday-go.icu/dev/backend/php/magento-style-smuggler-cve-2026-75650-template-injection-2026) — Adobe Commerce / Magento Open Source 模板引擎注入零日 CVE-2026-75650：无需认证、CVSS 3.1 满分 10.0、范围改变（S:C），Sansec 9 月 4 日捕获在野利用，攻击者投放 
 - [Laravel AI SDK 0.11 实战：一次 Agent run 一条 correlation ID——让五轮工具调用在日志里现出原形](https://friday-go.icu/dev/backend/php/laravel-ai-sdk-0-11-agent-run-observability-2026) — Laravel AI SDK 0.11.0（2026-08-19，36 个 PR）为每次 Agent run 引入单一 correlation ID 与一组生命周期事件：每次 provider 往返、每次工具调用前后都有事件可挂。解决'五轮
 - [Laravel 13.32 Mercure 广播驱动上线：SSE 取代 WebSocket 的实时推送方案，FrankenPHP 下零配置](https://friday-go.icu/dev/backend/php/laravel-13-32-mercure-broadcast-driver-2026) — Laravel 13.32（2026-09-16）带来由 Kévin Dunglas 贡献的原生 Mercure 广播驱动：基于 SSE 的实时推送、FrankenPHP 内置 hub 零配置、presence 与端到端加密频道开箱即用。本
 - [PHP 8.6.0 Beta 1 深度解析：Io\\Poll 原生轮询、Time\\Duration 与升级必读的会话安全默认值](https://friday-go.icu/dev/backend/php/php-8-6-beta-1-io-poll-duration-2026) — 2026 年 8 月 13 日 PHP 8.6.0 Beta 1 发布，宣告 8.6 特性冻结。本文深度解析相对 Alpha 系列的新增重磅特性：Io\Poll 原生 I/O 轮询 API（epoll/kqueue 支持，替代 stream
@@ -616,8 +619,8 @@ PFinalClub（https://friday-go.icu）是一个由 PFinal 南丞 维护的后端 
 
 ## 站点统计
 
-- **总文章数**：563 篇原创技术文章
-- **最后更新**：2026-09-21
+- **总文章数**：566 篇原创技术文章
+- **最后更新**：2026-09-22
 - **内容许可**：MIT License（注明作者与原文链接即可）
 - **联系方式**：hello@friday-go.icu
 - **RSS 订阅**：https://friday-go.icu/feed.rss
