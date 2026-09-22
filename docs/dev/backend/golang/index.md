@@ -87,6 +87,7 @@ tags:
 ## 🔥 2026 热点系列（持续更新）
 
 ### AI × Go 交叉实战
+- [**Go MCP SDK CVE-2026-34742：localhost MCP 服务器默认裸奔，DNS rebinding 一个网页就能调你的工具**](/dev/backend/golang/go-mcp-sdk-dns-rebinding-cve-2026-34742-2026) - 2026-09-22 PR #760 拆解 / LocalAddrContextKey 探测 + Host 头 403 / DisableLocalhostProtection 与反向代理坑 / 1.4.0 Secure by Default
 - [**Go 语言 AI Agent 开发实战**](/ai/ai-agent-development-go) - Function Calling 与多工具编排
 - [**MCP 服务器开发实战：用 Go 构建 AI 工具协议**](/ai/mcp-server-practice) - MCP 协议 Go 实现
 - [**Go Micro v6 Agentic Shift 深度解析：微服务框架转身 AI Agent 运行时**](/dev/backend/golang/go-micro-v6-agentic-shift-ai-agent-runtime-2026) - 2026-07-11 Anthropic赞助 Agent=Service
@@ -150,6 +151,11 @@ tags:
 ## 📖 最新文章
 
 <div class="latest-articles-grid">
+  <a href="/dev/backend/golang/go-mcp-sdk-dns-rebinding-cve-2026-34742-2026" class="latest-article-card">
+    <h3>🛡️ Go MCP SDK CVE-2026-34742</h3>
+    <p>localhost MCP 服务器 DNS rebinding 防护默认开启，PR #760 全拆解</p>
+    <span class="article-date">2026-09</span>
+  </a>
   <a href="/dev/backend/golang/go-json-v2-marshal-regression-issue-81315-2026" class="latest-article-card">
     <h3>⚡ json/v2 性能复盘</h3>
     <p>Lemire 基准 + issue #81315：解析快 2.3×、Marshal 慢 1.5× 的完整拆解与选型</p>

@@ -36,6 +36,7 @@ tags:
 - [代码安全扫描自动化](/security/engineering/从手动到自动-Go语言助力快速识别代码中的安全隐患) - 自动化安全检测
 
 ### 🔥 2026 攻防热点系列
+- **🔥 [BragJack 深度拆解：一个广告拦截级权限的扩展劫持五大浏览器 AI Agent](/security/offensive/bragjack-prompt-forcing-browser-ai-agent-hijack-2026) - 2026-09-22 ⭐ Prompt Forcing ≠ Prompt Injection / DNR + DiNneR Serving 注入特权上下文 / Chrome $7000 CVE-2026-0628 / Edge TOCTOU 竞态 / EDR 检测不了英文指令**
 - **🔥 [wp2shell 深度拆解：WordPress 近十年首个核心 pre-auth RCE 利用链（CVE-2026-63030 + CVE-2026-60137）](/security/offensive/wp2shell-wordpress-preauth-rce-chain-cve-2026-63030-60137-2026) - 2026-09-17 ⭐ 批量路由混淆 + SQL 注入 / 单请求管理员创建 / 1100 万次拦截 / CVSS 评分分歧教训**
 - **🔥 [PaperCut AI Agent 蜂群事件复盘：一个攻击者、数百个 Agent、26 秒攻破 11 家组织](/security/offensive/greynoise-papercut-ai-agent-swarm-395-orgs-2026) - 2026-09-15 ⭐ GreyNoise 实录 / AI 编排攻击首例大规模实证**
 - [2026 H1 漏洞态势报告：供应链与 AI 成主战场](/security/offensive/2026-h1-vulnerability-landscape) - 半年盘点
