@@ -19,13 +19,13 @@ recommend: true
 
 | 目标 | 载体 | CVE | 赏金 | 状态 |
 | --- | --- | --- | --- | --- |
-| Chrome Gemini Live | `chrome://glic` 内嵌 gemini.google.com | CVE-2026-0628（8.8） | $7,000 | Chrome 143.0.7499.192 修复（2026-01） |
+| Chrome Gemini Live | `chrome://glic` 内嵌 gemini.google.com | CVE-2026-0628（8.8） | $7,000 | Chrome 143.0.7499.192/.193 修复（2026-01） |
 | Perplexity Comet | 内置 agent 扩展 | 无 CVE | $7,000 | 已修复 |
 | Edge Copilot (Actions) | 营销页特权 API | CVE-2026-55945（4.2） | $5,000 | 已修复 |
 | Opera Neon | 内置 agent 扩展 | 无 CVE | $900 | 已修复 |
 | Claude in Chrome | Anthropic 浏览器扩展 | 无 CVE | $600 | 已修复（Anthropic 确认为首次报告） |
 
-总赏金约 **20,500 美元**，分配 CVE 的只有两个。五家厂商、四家公司、各自独立开发的 Agent，被同一个技术打穿——这不是某家的实现 bug，而是**架构级共同缺陷**。CSA（云安全联盟）的分析把这一点挑明了：这是继 2026 年 3 月 GlicJack 之后，第二次观察到"同一手法泛化到整个 agentic browser 物种"。
+总赏金约 **20,500 美元**，分配 CVE 的只有两个。五家厂商（Google、Microsoft、Opera、Perplexity、Anthropic）各自独立开发的 Agent，被同一个技术打穿——这不是某家的实现 bug，而是**架构级共同缺陷**。CSA（云安全联盟）的分析把这一点挑明了：这是继 2026 年 3 月 GlicJack 之后，第二次观察到"同一手法泛化到整个 agentic browser 物种"。
 
 ## 二、前提：Agent 的"大脑-身体"模型
 
@@ -70,7 +70,7 @@ DNR 能做两件事，恰好构成一条注入链：
 
 ### 3.2 DiNneR Serving 三步走
 
-Weizman 把"DNR 削弱 + 重定向"的组合技命名为 **DiNneR Serving**（DNS 之外的新颖 Web 攻击，他曾协助多家厂商修复过先前实例）：
+Weizman 把"DNR 削弱 + 重定向"的组合技命名为 **DiNneR Serving**，并在原文中称其为一种新颖的 Web 攻击（novel web attack）；他也提到此前曾协助多家厂商修复过同类实例：
 
 ```
 文字版攻击链
@@ -97,7 +97,7 @@ Weizman 把"DNR 削弱 + 重定向"的组合技命名为 **DiNneR Serving**（DN
 - Weaken：DNR 移除 CSP，并把 `document-isolation-policy` 改为 `isolate-and-credentialless`（允许跨域脚本与 SharedArrayBuffer 共存）；
 - Execute：把页面加载的 `https://www.gstatic.com/feedback/js/help/prod/service/lazy.min.js` 重定向到攻击者的 `execute.js`。
 
-**效果**：代码以 gemini.google.com 源运行在 `chrome://glic` 特权上下文中，可调用 `glicBrowserCreateTab`、`glicBrowserGetContextFromFocusedTab` 等内部命令——读任意网站、读 `file://` 本地文件和 PDF、截屏、读取用户 Profile，Chrome 的媒体能力甚至允许**静默开启摄像头和麦克风**。这就是 CVE-2026-0628 拿到 8.8 分的原因。修复（Chromium Issue 463155954，P1/S1）在 2026 年 1 月的 Chrome 143.0.7499.192 落地——从 2025 年 10 月报告到修复花了约 3 个月。
+**效果**：代码以 gemini.google.com 源运行在 `chrome://glic` 特权上下文中，可调用 `glicBrowserCreateTab`、`glicBrowserGetContextFromFocusedTab` 等内部命令——读任意网站、读 `file://` 本地文件和 PDF、截屏、读取用户 Profile，Chrome 的媒体能力甚至允许**静默开启摄像头和麦克风**。这就是 CVE-2026-0628 拿到 8.8 分的原因（NVD 描述为 "insufficient policy enforcement in the WebView tag"）。修复（Chromium Issue 463155954，P1/S1）在 2026 年 1 月的 Chrome 143.0.7499.192/.193 落地——Weizman 于 2025 年 11 月 23 日报告，到修复约六周。
 
 ### 4.2 Perplexity Comet：信任清单里的一颗雷
 
@@ -124,9 +124,10 @@ Edge 的攻击最体现工程功夫，因为它的防线最多：
 与 Comet 同构，但更简单：`opera.com` 域**根本没有阻止 content script 附着**。攻击者在 opera.com 上下文运行代码后直接调用：
 
 ```js
-chrome.runtime.sendMessage(neonExtensionId, {
+// 基于 Forever Security 披露的消息格式改写（变量名已简化）
+chrome.runtime.sendMessage(neon, {
   type: "neon:open",
-  prompt: "{任意自然语言指令}",
+  prompt: "{攻击者构造的完整提示词}",
   // ...
 });
 ```
@@ -180,7 +181,7 @@ Claude 的方案与前四者不同——它是普通扩展（不是浏览器内�
 3. DLP 对 Agent 代发邮件等动作增加二次确认。
 
 **个人用户**：
-1. 及时更新浏览器（Chrome CVE-2026-0628 已在 143.0.7499.192 修复）；
+1. 及时更新浏览器（Chrome CVE-2026-0628 已在 143.0.7499.192/.193 修复）；
 2. 审视扩展：一个广告拦截器级别的权限列表，理论上就是 BragJack 的入场券。**装扩展前问一句：我真的需要它吗？**
 3. 截至 BragJack 公开时，暂无该技术在野利用的证据——它是责任披露下的研究，但架构缺陷的修复节奏（Comet/Neon/Claude 至今无公开 CVE 与明确修复时间线）提醒我们：同类问题不会一次修完。
 
