@@ -94,6 +94,7 @@ tags:
 - [**Rust vs Go 2026：性能基准、内存安全与后端选型**](/dev/backend/golang/rust-vs-go-2026-performance-comparison) - 选型决策
 
 ### 2026 Go 工具链与性能
+- [**Go 1.28 提案解读：cgo 无需 C 工具链，AI/GPU 库调用迎来架构级松绑**](/dev/backend/golang/go-1-28-cgo-without-c-toolchain-2026) - 2026-09-23 golang/go #81450 / binding 文件 / C ABI trampoline / runtime/cgo 去 C 化 / CUDA/ROCm/TensorRT 意义
 - [**Go SIMD 实战复盘：Debian Code Search 删光最后一行 cgo，纯 Go 重写 TurboPFor 反超原 cgo 版**](/dev/backend/golang/go-simd-turbopfor-pure-go-rewrite-2026) - 2026-09-21 simd/archsimd / 76% 起步 / 256 值垂直布局 3x / PGO 对齐陷阱 -13% / Claude Fable 5 发现位置 popcount 再 2x / 决策清单
 - [**encoding/json/v2 到底是快了还是慢了：Lemire 基准、issue #81315 与 52% 序列化回退的完整复盘**](/dev/backend/golang/go-json-v2-marshal-regression-issue-81315-2026) - 2026-09-18 Marshal 慢 1.5× 根因 / jsontext 逐 token 状态机 / GOEXPERIMENT 逃生舱 / 负载形状选型
 - [**Go 1.28 database/sql 快路径深拆：int64→int 不再"格式化成字符串再解析回来"**](/dev/backend/golang/go-1-28-database-sql-scan-fast-path-2026) - 2026-09-17 convertAssignRows 精确类型快路径 / Int64ToInt -95.7% 零分配 / 标准库热路径打磨
