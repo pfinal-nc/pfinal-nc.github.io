@@ -162,6 +162,7 @@ PFinalClub（https://friday-go.icu）是一个由 PFinal 南丞 维护的后端 
 - [Wails 桌面应用开发 - Go 跨平台框架完整指南](https://friday-go.icu/dev/backend/golang/wails/README) — 全面的Wails桌面应用开发指南，涵盖从入门到实战的完整内容，包括教程系列、实战项目、性能优化、系统集成等，帮助Go开发者构建高性能跨平台桌面应用。
 
 ### AI Agent 系列
+- [MCP 工具输出泄密：你的 settings 工具正在把密钥喂给模型](https://friday-go.icu/ai/mcp-tool-output-secret-leakage-class-2026) — 没有攻击者、没有零日：工程师按文档连接 AI Agent，Agent 调用一次普通的 settings 工具，密钥就进了模型上下文。从 Workloft Labs 披露的厂商事件与 ArcadeDB CVE-2026-67357 出发，分析
 - [Rust 正在接管 Agent 基础设施：从 Codex CLI 到 Kitesurf 的 substrate shift](https://friday-go.icu/ai/rust-eating-agent-infrastructure-2026) — 2026 年，Microsoft、OpenAI、Cloudflare、Vercel 不约而同把 Agent 基础设施押注在 Rust 上。本文解析这一 substrate shift 背后的技术原因：内存压力、沙箱安全、供应链攻击面，以及 
 - [AI 代码 Slop 终于有了数字：Earendil 的 Verbosity 与 Erosion 指标，Agent 写的代码比人类啰嗦一倍、腐化一倍](https://friday-go.icu/ai/agent-code-slop-verbosity-erosion-metrics-2026) — Earendil 9 月 10 日发布量化指标：Agent 生成代码的 verbosity（0.33 vs 0.15）与 erosion（0.68 vs 0.31）均为人类仓库两倍。SlopCodeBench 多轮上下文擦除评测下，SOTA
 - [MCP 治理面成型：ServiceNow、Rubrik、Microsoft 三家企业的协议层 enforcement 实践](https://friday-go.icu/ai/mcp-governance-firewall-enterprise-enforcement-2026) — 2026 年 9 月，ServiceNow、Rubrik、Microsoft 在一周内相继发布 MCP 层策略 enforcement 产品，标志着 MCP 从连接协议进化为企业治理控制面。本文深度解析三家方案的架构差异、覆盖盲区与落地建议
@@ -228,6 +229,8 @@ PFinalClub（https://friday-go.icu）是一个由 PFinal 南丞 维护的后端 
 - [Vector Database 选型 2026：Qdrant vs Milvus vs Weaviate vs pgvector 实测对比](https://friday-go.icu/ai/vector-database-selection-2026) — 基于百万级向量实测对比 Qdrant、Milvus、Weaviate、pgvector 的延迟、召回率、扩展性与成本，附 RAG 生产环境选型决策框架和迁移方案
 
 ### 安全渗透系列
+- [CVE-2026-61560：一个 MCP 默认配置如何变成 GitLab 账号接管链](https://friday-go.icu/security/offensive/cve-2026-61560-gitlab-mcp-unauthenticated-sse-takeover-2026) — @zereight/mcp-gitlab 的 CVE-2026-61560（CVSS 9.8）：未认证 SSE 传输 + 未过滤的 file_path 参数 + 进程内 GitLab 凭据，三环叠加实现完整账号接管。逐环拆解利用链，并给出自
+- [Rust Miri 缓存泄密事件：你的 CI 缓存正在替 PR 偷 secrets](https://friday-go.icu/security/offensive/rust-miri-ci-cache-secret-leak-2026) — Rust 安全响应团队 9 月 21 日披露 Miri 将全部环境变量写入 target/，配合 GitHub Actions 缓存的读权限模型，PR 可读取 main 分支 CI 中的 secrets。拆解攻击链、官方修复方案与四条快速止
 - [CVE-2026-94127 深度分析：F5 BIG-IP APM OAuth 堆溢出 RCE 与 CISA KEV 应急响应](https://friday-go.icu/security/offensive/cve-2026-94127-f5-big-ip-apm-oauth-rce-2026) — 2026 年 9 月 22 日，F5 披露并修复 BIG-IP APM 关键漏洞 CVE-2026-94127：当虚拟服务器同时配置 APM access policy 与 OAuth profile 时，未经认证的远程攻击者可通过堆溢出实
 - [BragJack：一个广告拦截级权限的扩展，劫持了五大浏览器的 AI Agent——Prompt Forcing 为什么比提示注入更可怕](https://friday-go.icu/security/offensive/bragjack-prompt-forcing-browser-ai-agent-hijack-2026) — Forever Security 研究员 Gal Weizman 披露 BragJack：仅凭 declarativeNetRequest 这一个广告拦截器最常用的权限，同一份 manifest 劫持了 Chrome Gemini Live
 - [LiteLLM CVE-2026-59822 深度分析：一个空对象回退让 AI 网关的 MCP 会话裸奔，Wiz 蜜罐 7 月已捕获在野利用](https://friday-go.icu/security/offensive/litellm-cve-2026-59822-mcp-gateway-auth-bypass-2026) — 深度拆解 LiteLLM CVE-2026-59822：MCP Streamable HTTP 端点的 OAuth2 passthrough 回退分支在校验失败时返回空 UserAPIKeyAuth() 对象而非拒绝请求，任意 Bearer
@@ -622,8 +625,8 @@ PFinalClub（https://friday-go.icu）是一个由 PFinal 南丞 维护的后端 
 
 ## 站点统计
 
-- **总文章数**：569 篇原创技术文章
-- **最后更新**：2026-09-23
+- **总文章数**：572 篇原创技术文章
+- **最后更新**：2026-09-24
 - **内容许可**：MIT License（注明作者与原文链接即可）
 - **联系方式**：hello@friday-go.icu
 - **RSS 订阅**：https://friday-go.icu/feed.rss

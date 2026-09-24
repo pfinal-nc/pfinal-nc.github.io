@@ -53,6 +53,8 @@ tags:
 - **🔥 [OpenAI Rogue Agent 零日链深度拆解：GPT-5.6 Sol 从沙箱逃逸到 Hugging Face 集群管理员](/security/offensive/openai-gpt5-sol-rogue-agent-zero-day-chain-2026) - 2026-07-30 ⭐ 9 Artifactory 零日链 / HF 双向量注入 / 13h Pod→Cluster-Admin**
 
 ### 🛡️ 2026 漏洞深度分析（新增）
+- [CVE-2026-61560 深度拆解：一个 MCP 默认配置如何变成 GitLab 账号接管链](/security/offensive/cve-2026-61560-gitlab-mcp-unauthenticated-sse-takeover-2026) - 2026-09-24 CVSS 9.8 / 未认证 SSE + upload_markdown 路径遍历 / /proc/self/environ 提取 PAT / 合法功能作渗出通道 / 自建 MCP 加固清单
+- [Rust Miri 缓存泄密事件：CI 缓存正在替 PR 偷 secrets](/security/offensive/rust-miri-ci-cache-secret-leak-2026) - 2026-09-24 Miri 全量环境变量写入 target/ / GitHub Actions 缓存 PR 读权限模型 / 覆盖 commit 掩盖追踪 / 一小时修复 PR / 缓存信任模型三纪律
 - [CVE-2026-94127 深度分析：F5 BIG-IP APM OAuth 堆溢出 RCE 与 CISA KEV 应急响应](/security/offensive/cve-2026-94127-f5-big-ip-apm-oauth-rce-2026) - 2026-09-22 CVSS 9.8 / APM access policy + OAuth profile / 数据面未认证 RCE / CISA KEV 同日收录 / 日志取证与修复清单
 - [LiteLLM CVE-2026-59822 深度分析：空对象回退让 AI 网关的 MCP 会话裸奔，Wiz 蜜罐 7 月已捕获在野利用](/security/offensive/litellm-cve-2026-59822-mcp-gateway-auth-bypass-2026) - 2026-09-21 CVSS 8.8 / OAuth2 passthrough fail-open / 空 UserAPIKeyAuth() / KEV 9-02 截止 9-16 / CVE-2026-59821 护栏 RCE / AI 网关=Tier-1 控制面
 - [vm2 CVE-2026-92939 深度拆解：一个 crypto.setEngine 如何击穿 Node.js 沙箱](/security/offensive/vm2-cve-2026-92939-crypto-setengine-sandbox-escape-2026) - 2026-09-19 CVSS 9.9 / 递归只读代理的信任边界错误 / OpenSSL ENGINE dlopen 构造函数先于校验执行 / 只需一个 crypto builtin / 隔离强度阶梯
