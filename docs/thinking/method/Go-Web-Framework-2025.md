@@ -1,6 +1,6 @@
 ---
-title: "2026 年最佳 Go Web 框架深度解析：资深开发者的选择指南"
-description: "全面评测 2025 年主流 Go Web 框架：Gin、Echo、Fiber、Chi，从性能、功能、生态等维度分析，帮助你选择最适合项目的框架。"
+title: "Golang Web 框架选型 2026：Gin / Echo / Fiber / Chi 性能对比与选择指南"
+description: "Golang Web 框架怎么选？从性能基准、功能特性、生态成熟度三个维度深度对比 Gin、Echo、Fiber、Chi，附真实压测数据与选型决策表，帮你为项目挑对框架。"
 keywords:
   - Go Web 框架
   - Gin

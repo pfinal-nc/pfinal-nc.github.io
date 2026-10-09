@@ -904,4 +904,11 @@ export default defineConfig({
     });
     pageData.frontmatter.head = safeHead;
   },
+  // ===== sugarat 主题 0.5.28+ 在 vitepress 1.x 下需强制 SSR 内联 @sugarat/theme
+  // 主题 dist 产物包含裸 .vue 导入，默认 externalize 时 SSR 阶段会 ERR_UNKNOWN_FILE_EXTENSION ".vue"
+  vite: {
+    ssr: {
+      noExternal: ['@sugarat/theme', 'vitepress-plugin-product-card']
+    }
+  }
 })

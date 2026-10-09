@@ -1,5 +1,5 @@
 ---
-title: "Golang RAG System Tutorial 2026: Build Production RAG with OpenAI & Qdrant (Complete Guide)"
+title: "Golang RAG 实战 2026：Go + OpenAI + Qdrant 搭建生产级 RAG 系统（完整教程）"
 date: 2025-11-11
 author: PFinal南丞
 tags:
@@ -13,7 +13,7 @@ tags:
   - guide
   - machine-learning
   - semantic-search
-description: "Golang RAG system tutorial 2026: Build a production-grade RAG service with Go, OpenAI API, and Qdrant vector database. Step-by-step code for embeddings, semantic search, and chunking — with production best practices for Go developers."
+description: "用 Golang 从零搭建生产级 RAG 系统：OpenAI Embedding + Qdrant 向量数据库 + 语义检索完整实现。涵盖 embedding、文本分块、混合检索、重排序的 Go 代码与生产调优实践。"
 keywords:
   - golang rag system tutorial 2025
   - golang rag openai qdrant

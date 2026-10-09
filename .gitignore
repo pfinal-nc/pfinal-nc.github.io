@@ -35,3 +35,34 @@ PHASE3_CONTENT_PLAN.md
 
 # OhMyOpenCode session continuation state (local, auto-generated)
 .omo/run-continuation/
+
+# ===== 本地构建/部署产物（根目录副本，源在 docs/public/，CI 从 dist 部署）=====
+/CNAME
+/.nojekyll
+/.spa
+/.htaccess
+/_redirects
+/404.html
+/about.html
+/contact.html
+/article-frontmatter-guide.html
+/ARTICLE_ORGANIZATION_REPORT.html
+/ads.txt
+/BingSiteAuth.xml
+/google.txt
+/gogle.txt
+/feed.xml
+/feed.atom
+/feed.json
+/index.html
+/learning-roadmap.html
+/indexnow-key.txt
+/hashmap.json
+/llms.txt.bak
+/logo.png
+/logo_y.png
+/favicon.ico
+/favicon.png
+/images/
+/dev/
+/package-lock.json

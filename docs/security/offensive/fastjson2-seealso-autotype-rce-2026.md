@@ -1,5 +1,5 @@
 ---
-title: Fastjson2 ≤2.0.62 AutoType RCE 深度分析：SeeAlso 链如何绕过白名单直达类加载器
+title: Fastjson2 RCE 深度分析：AutoType + SeeAlso 链如何绕过白名单直达类加载器
 date: 2026-08-04
 tags:
   - security

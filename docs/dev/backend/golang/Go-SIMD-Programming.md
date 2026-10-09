@@ -1,6 +1,6 @@
 ---
-title: "Go 1.26 SIMD 编程实战：从入门到高性能优化"
-description: "深入讲解 Go 1.26 引入的 SIMD（单指令多数据）编程技术，包括向量指令、性能优化技巧和实战案例。"
+title: "Golang SIMD 编程实战：从入门到高性能优化（Go 1.26+ 向量指令）"
+description: "Golang SIMD（单指令多数据）编程实战：Go 1.26 archsimd 实验包、AVX2/NEON 向量指令、性能基准对比与真实优化案例。含可运行 Go 代码，帮你在计算密集型场景榨干 CPU。"
 keywords:
   - Go SIMD
   - 向量计算
