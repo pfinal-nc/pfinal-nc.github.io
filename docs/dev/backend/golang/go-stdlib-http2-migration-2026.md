@@ -302,4 +302,4 @@ func main() {
 2. [pkg.go.dev: golang.org/x/net/http2 — README 与双实现说明](https://pkg.go.dev/golang.org/x/net/http2)
 3. [Go 1.27 Release Notes](https://go.dev/doc/go1.27)
 4. [golang/go#67819: net/http: move HTTP/2 implementation into the standard library](https://github.com/golang/go/issues/67819)
-5. 本站相关文章：[Go 1.27 encoding/json/v2 迁移实战](/dev/backend/golang/go-1-27-encoding-json-v2-migration-2026.html)、[Go 1.27 泛型方法生产实践](/dev/backend/golang/go-1-27-generic-methods-production-2026.html)、[Go 1.25 Green Tea GC 深度测评](/dev/backend/golang/go-1-25-green-tea-gc-deep-dive-2026.html)
+5. 本站相关文章：[Go 1.27 encoding/json/v2 迁移实战](/dev/backend/golang/go-1-27-encoding-json-v2-migration-2026)、[Go 1.27 泛型方法生产实践](/dev/backend/golang/go-1-27-generic-methods-production-2026)、[Go 1.25 Green Tea GC 深度测评](/dev/backend/golang/go-1-25-green-tea-gc-deep-dive-2026)

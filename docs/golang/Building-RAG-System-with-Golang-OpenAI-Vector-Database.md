@@ -48,9 +48,9 @@ RAG (Retrieval-Augmented Generation) has become one of the hottest AI applicatio
 - ✅ Real-world code examples and case studies
 
 **Quick Links:**
-- 🚀 **[Go Error Handling Best Practices](/golang/Go-Error-Handling-Best-Practices-2025-Complete-Guide)** — Essential for production RAG systems
-- 📊 **[Go Observability Guide](/golang/From-Trace-to-Insight-A-Closed-Loop-Observability-Practice-for-Go-Projects)** — Monitor RAG performance
-- 🤖 **[AI Tools Directory 2025](/Tools/AI-Tools-Directory-2025-Best-AI-Apps-and-Use-Cases)** — Discover more AI tools
+- 🚀 **[Go Error Handling Best Practices](/dev/backend/golang/go-error-handling)** — Essential for production RAG systems
+- 📊 **[Go Observability Guide](/thinking/method/Go-Observability-Practice)** — Monitor RAG performance
+- 🤖 **[AI Tools & Agents](/ai/)** — Discover more AI tools
 
 ---
 
@@ -101,7 +101,7 @@ User Question → Vectorization → Semantic Search → Retrieve Relevant Docume
 
 1. **High Performance**: Concurrent processing of large volumes of documents
 2. **Simple Deployment**: Single binary file
-3. **Excellent Concurrency Model**: Goroutines for parallel tasks (If you want to dive deeper into Go's concurrency capabilities, check out our **[Advanced Go Concurrency Patterns for Scalable Applications](/golang/advanced-go-concurrency-patterns)** guide)
+3. **Excellent Concurrency Model**: Goroutines for parallel tasks (If you want to dive deeper into Go's concurrency capabilities, check out our **[Advanced Go Concurrency Patterns for Scalable Applications](/dev/backend/golang/go-concurrency-patterns-advanced)** guide)
 4. **Rich Ecosystem**: AI-related libraries maturing rapidly
 
 ## 📦 Environment Setup
@@ -139,7 +139,7 @@ docker run -p 6333:6333 -p 6334:6334 \
   qdrant/qdrant
 ```
 
-> 💡 **Pro Tip**: For production deployment, refer to our comprehensive guide on [Go Containerization Best Practices](/golang/Go-Containerization-Best-Practices-Docker-Optimization) to optimize your Docker images and reduce size from 800MB to just 10MB!
+> 💡 **Pro Tip**: For production deployment, refer to our comprehensive guide on [Go Containerization Best Practices](/Tools/Docker-Go-Deployment) to optimize your Docker images and reduce size from 800MB to just 10MB!
 
 ## 💻 Core Implementation
 
@@ -1043,7 +1043,7 @@ func (s *MultiModalService) ExtractImageContent(ctx context.Context, imageURL st
 3. **Monitor Costs**:
    - Track token usage
    - Use caching to reduce API calls
-   - For comprehensive monitoring strategies, see our guide on [Go Project Observability Practice](/golang/From-Trace-to-Insight-A-Closed-Loop-Observability-Practice-for-Go-Projects)
+   - For comprehensive monitoring strategies, see our guide on [Go Project Observability Practice](/thinking/method/Go-Observability-Practice)
 
 4. **Test Retrieval Quality**:
    - Prepare test sets
@@ -1078,7 +1078,7 @@ I hope this article helps you quickly get started with Golang + RAG development 
 **Keywords**: #Golang #RAG #AI #LLM #VectorDatabase #OpenAI #Qdrant #SemanticSearch #Embedding #IntelligentQA
 
 **Related Articles**:
-- [Advanced Go Concurrency Patterns](/golang/advanced-go-concurrency-patterns) - Master concurrent processing for RAG systems
-- [Go Containerization Best Practices](/golang/Go-Containerization-Best-Practices-Docker-Optimization) - Deploy your RAG system efficiently
-- [From Trace to Insight: Go Observability Practice](/golang/From-Trace-to-Insight-A-Closed-Loop-Observability-Practice-for-Go-Projects) - Monitor your RAG system in production
-- [Go CLI Utility Development Practice](/golang/Go-CLI-Utility-Development-Practice) - Build CLI tools for RAG management
+- [Advanced Go Concurrency Patterns](/dev/backend/golang/go-concurrency-patterns-advanced) - Master concurrent processing for RAG systems
+- [Go Containerization Best Practices](/Tools/Docker-Go-Deployment) - Deploy your RAG system efficiently
+- [From Trace to Insight: Go Observability Practice](/thinking/method/Go-Observability-Practice) - Monitor your RAG system in production
+- [Go CLI Utility Development Practice](/dev/backend/golang/用 Go 构建一个类 kubectl 的命令行工具) - Build CLI tools for RAG management

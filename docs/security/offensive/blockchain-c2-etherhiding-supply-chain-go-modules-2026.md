@@ -273,4 +273,4 @@ echo "扫描完成。命中≠恶意，但需要人工复核上下文。"
 2. [Honeynet Mexico Lab：Eight Malicious npm Packages Deliver Overlord RAT（MALFEX）](https://honeynet.org.mx/posts/eight-malicious-npm-packages-downloaded-40-767-times-deliver-overlord-rat-and-stealer-en)（2026-10-07）
 3. [ThreatCluster：Tensorlake npm package compromised by Shai-Hulud](https://threatcluster.io/article/tensorlake-npm-package-compromised-by-shai-hulud-in-latest-s-201b438a)（2026-10-08）
 4. [Go 官方文档：Go Modules Reference — Authentication](https://go.dev/ref/mod#authenticating)
-5. 本站相关文章：[Miasma 供应链蠕虫攻击深度分析](/security/offensive/miasma-supply-chain-worm-attack-2026.html)、[Go SBOM 与供应链安全实践](/dev/backend/golang/go-sbom-supply-chain-security.html)、[llms.txt 供应链安全](/security/offensive/llms-txt-supply-chain-2026.html)
+5. 本站相关文章：[Miasma 供应链蠕虫攻击深度分析](/security/offensive/miasma-supply-chain-worm-attack-2026)、[Go SBOM 与供应链安全实践](/dev/backend/golang/go-sbom-supply-chain-security)、[llms.txt 供应链安全](/security/offensive/llms-txt-supply-chain-2026)

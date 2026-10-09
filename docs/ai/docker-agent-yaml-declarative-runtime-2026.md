@@ -308,4 +308,4 @@ agents:
 2. [Docker 官方文档：Docker Agent Toolsets Reference](https://docs.docker.com/ai/docker-agent/reference/toolsets/)
 3. [AI/TLDR: Docker Agent 1.149 — Skills from GitHub, Evaluator backend](https://ai-tldr.dev/tools/docker-agent)（2026-10-07）
 4. [AI Weekly: Docker Open-Sources YAML AI Agent Builder With MCP and RAG](https://aiweekly.co/alerts/docker-open-sources-yaml-ai-agent-builder-with-mcp-and-rag)
-5. 本站相关文章：[MCP 2.0 无状态协议重写](/ai/mcp-2-0-stateless-protocol-rewrite-2026.html)、[Go MCP 2.0 无状态服务器实战](/dev/backend/golang/go-mcp-2-0-stateless-server-production-2026.html)、[Agent Plugins 1.0.0 统一打包标准](/ai/agent-plugins-1-0-0-unified-packaging-standard-2026.html)
+5. 本站相关文章：[MCP 2.0 无状态协议重写](/ai/mcp-2-0-stateless-protocol-rewrite-2026)、[Go MCP 2.0 无状态服务器实战](/dev/backend/golang/go-mcp-2-0-stateless-server-production-2026)、[Agent Plugins 1.0.0 统一打包标准](/ai/agent-plugins-1-0-0-unified-packaging-standard-2026)
