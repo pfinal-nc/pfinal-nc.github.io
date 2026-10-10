@@ -4,7 +4,7 @@
         <title>PFinalClub Tech Blog</title>
         <link>https://friday-go.icu</link>
         <description>PFinalClub - 专注于 Golang, PHP, Python 的技术博客，分享微服务、云原生、架构设计等实战经验</description>
-        <lastBuildDate>Sat, 10 Oct 2026 02:17:34 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 10 Oct 2026 02:25:23 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-CN</language>
@@ -16,10 +16,46 @@
         <copyright>Copyright (c) 2024-present, PFinalClub</copyright>
         <atom:link href="https://friday-go.icu/feed.xml" rel="self" type="application/rss+xml"/>
         <item>
+            <title><![CDATA[RxJS 实战示例]]></title>
+            <link>https://friday-go.icu/dev/backend/rxjs/real-world-examples</link>
+            <guid>https://friday-go.icu/dev/backend/rxjs/real-world-examples</guid>
+            <pubDate>Sat, 10 Oct 2026 02:25:23 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[RxJS 操作符]]></title>
+            <link>https://friday-go.icu/dev/backend/rxjs/operators</link>
+            <guid>https://friday-go.icu/dev/backend/rxjs/operators</guid>
+            <pubDate>Sat, 10 Oct 2026 02:25:23 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[RxJS 性能优化]]></title>
+            <link>https://friday-go.icu/dev/backend/rxjs/performance</link>
+            <guid>https://friday-go.icu/dev/backend/rxjs/performance</guid>
+            <pubDate>Sat, 10 Oct 2026 02:25:23 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[RxJS 核心概念]]></title>
+            <link>https://friday-go.icu/dev/backend/rxjs/core-concepts</link>
+            <guid>https://friday-go.icu/dev/backend/rxjs/core-concepts</guid>
+            <pubDate>Sat, 10 Oct 2026 02:25:23 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[RxJS 入门]]></title>
+            <link>https://friday-go.icu/dev/backend/rxjs/introduction</link>
+            <guid>https://friday-go.icu/dev/backend/rxjs/introduction</guid>
+            <pubDate>Sat, 10 Oct 2026 02:25:23 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[RxJS 进阶主题]]></title>
+            <link>https://friday-go.icu/dev/backend/rxjs/advanced-topics</link>
+            <guid>https://friday-go.icu/dev/backend/rxjs/advanced-topics</guid>
+            <pubDate>Sat, 10 Oct 2026 02:25:23 GMT</pubDate>
+        </item>
+        <item>
             <title><![CDATA[Wails 桌面应用开发 - Go 跨平台框架完整指南]]></title>
             <link>https://friday-go.icu/dev/backend/golang/wails/README</link>
             <guid>https://friday-go.icu/dev/backend/golang/wails/README</guid>
-            <pubDate>Sat, 10 Oct 2026 02:17:34 GMT</pubDate>
+            <pubDate>Sat, 10 Oct 2026 02:25:23 GMT</pubDate>
             <description><![CDATA[全面的Wails桌面应用开发指南，涵盖从入门到实战的完整内容，包括教程系列、实战项目、性能优化、系统集成等，帮助Go开发者构建高性能跨平台桌面应用。]]></description>
             <content:encoded><![CDATA[全面的Wails桌面应用开发指南，涵盖从入门到实战的完整内容，包括教程系列、实战项目、性能优化、系统集成等，帮助Go开发者构建高性能跨平台桌面应用。]]></content:encoded>
             <category>ai</category>
@@ -33,17 +69,39 @@
             <title><![CDATA[数据库技术专题 2026 - MySQL / PostgreSQL 配置优化与实战]]></title>
             <link>https://friday-go.icu/dev/system/database</link>
             <guid>https://friday-go.icu/dev/system/database</guid>
-            <pubDate>Sat, 10 Oct 2026 02:17:34 GMT</pubDate>
+            <pubDate>Sat, 10 Oct 2026 02:25:23 GMT</pubDate>
             <description><![CDATA[PFinalClub 数据库中文专题导航页：系统整理 MySQL 配置、PostgreSQL 功能、数据库优化等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></description>
             <content:encoded><![CDATA[PFinalClub 数据库中文专题导航页：系统整理 MySQL 配置、PostgreSQL 功能、数据库优化等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></content:encoded>
             <category>database</category>
             <category>dev</category>
         </item>
         <item>
+            <title><![CDATA[测试]]></title>
+            <link>https://friday-go.icu/dev/backend/test</link>
+            <guid>https://friday-go.icu/dev/backend/test</guid>
+            <pubDate>Sat, 10 Oct 2026 02:25:23 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[PHP 开发技术专题 2026 - 从入门到精通的实战指南]]></title>
+            <link>https://friday-go.icu/dev/backend/php</link>
+            <guid>https://friday-go.icu/dev/backend/php</guid>
+            <pubDate>Sat, 10 Oct 2026 02:25:23 GMT</pubDate>
+            <description><![CDATA[PHP开发技术专题：从基础语法到框架应用，涵盖Laravel、ThinkPHP、Yii等主流框架，数据库操作、API开发、性能优化等内容。2025年最新PHP开发实践指南。]]></description>
+            <content:encoded><![CDATA[PHP开发技术专题：从基础语法到框架应用，涵盖Laravel、ThinkPHP、Yii等主流框架，数据库操作、API开发、性能优化等内容。2025年最新PHP开发实践指南。]]></content:encoded>
+            <category>php</category>
+            <category>dev</category>
+        </item>
+        <item>
+            <title><![CDATA[Rust]]></title>
+            <link>https://friday-go.icu/dev/backend/rust</link>
+            <guid>https://friday-go.icu/dev/backend/rust</guid>
+            <pubDate>Sat, 10 Oct 2026 02:25:23 GMT</pubDate>
+        </item>
+        <item>
             <title><![CDATA[Python 开发技术专题 2026 - 从入门到精通的实战指南]]></title>
             <link>https://friday-go.icu/dev/backend/python</link>
             <guid>https://friday-go.icu/dev/backend/python</guid>
-            <pubDate>Sat, 10 Oct 2026 02:17:34 GMT</pubDate>
+            <pubDate>Sat, 10 Oct 2026 02:25:23 GMT</pubDate>
             <description><![CDATA[Python开发技术专题：从基础语法到高级应用，涵盖Django、Flask、FastAPI等主流框架，数据科学、AI、自动化等领域。2025年最新Python开发实践指南。]]></description>
             <content:encoded><![CDATA[Python开发技术专题：从基础语法到高级应用，涵盖Django、Flask、FastAPI等主流框架，数据科学、AI、自动化等领域。2025年最新Python开发实践指南。]]></content:encoded>
             <category>Python</category>
@@ -53,37 +111,117 @@
             <title><![CDATA[Golang 开发技术专题 2026 - 从入门到精通的实战指南]]></title>
             <link>https://friday-go.icu/dev/backend/golang</link>
             <guid>https://friday-go.icu/dev/backend/golang</guid>
-            <pubDate>Sat, 10 Oct 2026 02:17:34 GMT</pubDate>
+            <pubDate>Sat, 10 Oct 2026 02:25:23 GMT</pubDate>
             <description><![CDATA[Golang开发技术专题：从基础语法到高级架构设计，涵盖微服务、并发编程、性能优化等核心主题。2026年最新Golang开发实践指南。]]></description>
             <content:encoded><![CDATA[Golang开发技术专题：从基础语法到高级架构设计，涵盖微服务、并发编程、性能优化等核心主题。2026年最新Golang开发实践指南。]]></content:encoded>
             <category>golang</category>
             <category>dev</category>
         </item>
         <item>
-            <title><![CDATA[PHP 开发技术专题 2026 - 从入门到精通的实战指南]]></title>
-            <link>https://friday-go.icu/dev/backend/php</link>
-            <guid>https://friday-go.icu/dev/backend/php</guid>
-            <pubDate>Sat, 10 Oct 2026 02:17:34 GMT</pubDate>
-            <description><![CDATA[PHP开发技术专题：从基础语法到框架应用，涵盖Laravel、ThinkPHP、Yii等主流框架，数据库操作、API开发、性能优化等内容。2025年最新PHP开发实践指南。]]></description>
-            <content:encoded><![CDATA[PHP开发技术专题：从基础语法到框架应用，涵盖Laravel、ThinkPHP、Yii等主流框架，数据库操作、API开发、性能优化等内容。2025年最新PHP开发实践指南。]]></content:encoded>
-            <category>php</category>
-            <category>dev</category>
-        </item>
-        <item>
             <title><![CDATA[Mojo 开发技术专题]]></title>
             <link>https://friday-go.icu/dev/backend/mojo</link>
             <guid>https://friday-go.icu/dev/backend/mojo</guid>
-            <pubDate>Sat, 10 Oct 2026 02:17:34 GMT</pubDate>
+            <pubDate>Sat, 10 Oct 2026 02:25:23 GMT</pubDate>
             <description><![CDATA[Mojo 语言开发技术专题：LLVM 之父 Chris Lattner 打造的 AI 时代系统语言，Python 语法 + Rust 性能。涵盖 Mojo 1.0 稳定版、编译器开源、KGEN 源码架构等深度解析。]]></description>
             <content:encoded><![CDATA[Mojo 语言开发技术专题：LLVM 之父 Chris Lattner 打造的 AI 时代系统语言，Python 语法 + Rust 性能。涵盖 Mojo 1.0 稳定版、编译器开源、KGEN 源码架构等深度解析。]]></content:encoded>
             <category>mojo</category>
             <category>dev</category>
         </item>
         <item>
+            <title><![CDATA[Module 5]]></title>
+            <link>https://friday-go.icu/courses/rxjs/module-5</link>
+            <guid>https://friday-go.icu/courses/rxjs/module-5</guid>
+            <pubDate>Sat, 10 Oct 2026 02:25:23 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Module 1]]></title>
+            <link>https://friday-go.icu/courses/security-engineer/module-1</link>
+            <guid>https://friday-go.icu/courses/security-engineer/module-1</guid>
+            <pubDate>Sat, 10 Oct 2026 02:25:23 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Module 2]]></title>
+            <link>https://friday-go.icu/courses/security-engineer/module-2</link>
+            <guid>https://friday-go.icu/courses/security-engineer/module-2</guid>
+            <pubDate>Sat, 10 Oct 2026 02:25:23 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Module 3]]></title>
+            <link>https://friday-go.icu/courses/security-engineer/module-3</link>
+            <guid>https://friday-go.icu/courses/security-engineer/module-3</guid>
+            <pubDate>Sat, 10 Oct 2026 02:25:23 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Module 4]]></title>
+            <link>https://friday-go.icu/courses/security-engineer/module-4</link>
+            <guid>https://friday-go.icu/courses/security-engineer/module-4</guid>
+            <pubDate>Sat, 10 Oct 2026 02:25:23 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Module 5]]></title>
+            <link>https://friday-go.icu/courses/security-engineer/module-5</link>
+            <guid>https://friday-go.icu/courses/security-engineer/module-5</guid>
+            <pubDate>Sat, 10 Oct 2026 02:25:23 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Module 4]]></title>
+            <link>https://friday-go.icu/courses/wails-desktop/module-4</link>
+            <guid>https://friday-go.icu/courses/wails-desktop/module-4</guid>
+            <pubDate>Sat, 10 Oct 2026 02:25:23 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[数据库后端]]></title>
+            <link>https://friday-go.icu/dev/backend/database</link>
+            <guid>https://friday-go.icu/dev/backend/database</guid>
+            <pubDate>Sat, 10 Oct 2026 02:25:23 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Module 5]]></title>
+            <link>https://friday-go.icu/courses/golang-backend/module-5</link>
+            <guid>https://friday-go.icu/courses/golang-backend/module-5</guid>
+            <pubDate>Sat, 10 Oct 2026 02:25:23 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[实战项目]]></title>
+            <link>https://friday-go.icu/courses/golang-backend/project</link>
+            <guid>https://friday-go.icu/courses/golang-backend/project</guid>
+            <pubDate>Sat, 10 Oct 2026 02:25:23 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Module 1]]></title>
+            <link>https://friday-go.icu/courses/rxjs/module-1</link>
+            <guid>https://friday-go.icu/courses/rxjs/module-1</guid>
+            <pubDate>Sat, 10 Oct 2026 02:25:23 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Module 3]]></title>
+            <link>https://friday-go.icu/courses/golang-backend/module-3</link>
+            <guid>https://friday-go.icu/courses/golang-backend/module-3</guid>
+            <pubDate>Sat, 10 Oct 2026 02:25:23 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Module 4]]></title>
+            <link>https://friday-go.icu/courses/golang-backend/module-4</link>
+            <guid>https://friday-go.icu/courses/golang-backend/module-4</guid>
+            <pubDate>Sat, 10 Oct 2026 02:25:23 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Module 1：语言核心与内存管理]]></title>
+            <link>https://friday-go.icu/courses/golang-backend/module-1</link>
+            <guid>https://friday-go.icu/courses/golang-backend/module-1</guid>
+            <pubDate>Sat, 10 Oct 2026 02:25:23 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Module 2]]></title>
+            <link>https://friday-go.icu/courses/golang-backend/module-2</link>
+            <guid>https://friday-go.icu/courses/golang-backend/module-2</guid>
+            <pubDate>Sat, 10 Oct 2026 02:25:23 GMT</pubDate>
+        </item>
+        <item>
             <title><![CDATA[安全攻防研究 | Web安全 内网渗透 红蓝对抗实战]]></title>
             <link>https://friday-go.icu/security/offensive</link>
             <guid>https://friday-go.icu/security/offensive</guid>
-            <pubDate>Sat, 10 Oct 2026 02:17:34 GMT</pubDate>
+            <pubDate>Sat, 10 Oct 2026 02:25:23 GMT</pubDate>
             <description><![CDATA[深入的安全攻防研究指南，涵盖Web安全漏洞分析、内网渗透技术、红蓝对抗实战演练、渗透测试方法论等攻防一体实践内容。提供从攻击到防御的完整安全研究体系。]]></description>
             <content:encoded><![CDATA[深入的安全攻防研究指南，涵盖Web安全漏洞分析、内网渗透技术、红蓝对抗实战演练、渗透测试方法论等攻防一体实践内容。提供从攻击到防御的完整安全研究体系。]]></content:encoded>
             <category>offensive</category>
@@ -93,7 +231,7 @@
             <title><![CDATA[技术架构与方法论 | 架构设计 学习路径 工程实践]]></title>
             <link>https://friday-go.icu/thinking/method</link>
             <guid>https://friday-go.icu/thinking/method</guid>
-            <pubDate>Sat, 10 Oct 2026 02:17:34 GMT</pubDate>
+            <pubDate>Sat, 10 Oct 2026 02:25:23 GMT</pubDate>
             <description><![CDATA[深入的技术架构与方法论指南，涵盖架构设计原则、系统化学习路径、工程实践方法论、技术哲学思考等内容。提供从技术深度到思维高度的完整成长体系。]]></description>
             <content:encoded><![CDATA[深入的技术架构与方法论指南，涵盖架构设计原则、系统化学习路径、工程实践方法论、技术哲学思考等内容。提供从技术深度到思维高度的完整成长体系。]]></content:encoded>
             <category>method</category>
@@ -103,7 +241,7 @@
             <title><![CDATA[安全工程实践 | SSH安全 Golang安全 服务器加固]]></title>
             <link>https://friday-go.icu/security/engineering</link>
             <guid>https://friday-go.icu/security/engineering</guid>
-            <pubDate>Sat, 10 Oct 2026 02:17:34 GMT</pubDate>
+            <pubDate>Sat, 10 Oct 2026 02:25:23 GMT</pubDate>
             <description><![CDATA[全面的安全工程实践指南，涵盖SSH安全加固、Golang安全开发、服务器防护、WAF配置、DevOps安全集成等工程化落地方案。提供从基础安全到企业级防护的完整解决方案。]]></description>
             <content:encoded><![CDATA[全面的安全工程实践指南，涵盖SSH安全加固、Golang安全开发、服务器防护、WAF配置、DevOps安全集成等工程化落地方案。提供从基础安全到企业级防护的完整解决方案。]]></content:encoded>
             <category>engineering</category>
@@ -113,27 +251,46 @@
             <title><![CDATA[系统与基础 2026 - 数据库/容器/可观测性技术导航]]></title>
             <link>https://friday-go.icu/dev/system</link>
             <guid>https://friday-go.icu/dev/system</guid>
-            <pubDate>Sat, 10 Oct 2026 02:17:34 GMT</pubDate>
+            <pubDate>Sat, 10 Oct 2026 02:25:23 GMT</pubDate>
             <description><![CDATA[覆盖数据库、Linux、网络、容器等系统基础与实践文章。]]></description>
             <content:encoded><![CDATA[覆盖数据库、Linux、网络、容器等系统基础与实践文章。]]></content:encoded>
             <category>PostgreSQL</category>
             <category>Docker</category>
         </item>
         <item>
+            <title><![CDATA[前端开发]]></title>
+            <link>https://friday-go.icu/dev/fe</link>
+            <guid>https://friday-go.icu/dev/fe</guid>
+            <pubDate>Sat, 10 Oct 2026 02:25:23 GMT</pubDate>
+        </item>
+        <item>
             <title><![CDATA[数据采集与自动化 | 爬虫技术 AI工程 机器人开发]]></title>
             <link>https://friday-go.icu/data/automation</link>
             <guid>https://friday-go.icu/data/automation</guid>
-            <pubDate>Sat, 10 Oct 2026 02:17:34 GMT</pubDate>
+            <pubDate>Sat, 10 Oct 2026 02:25:23 GMT</pubDate>
             <description><![CDATA[专业的数据采集与自动化技术指南，涵盖爬虫开发、AI工程实践、机器人开发、数据生产线构建等实战内容。提供从数据采集到自动化处理的完整技术栈解决方案。]]></description>
             <content:encoded><![CDATA[专业的数据采集与自动化技术指南，涵盖爬虫开发、AI工程实践、机器人开发、数据生产线构建等实战内容。提供从数据采集到自动化处理的完整技术栈解决方案。]]></content:encoded>
             <category>automation</category>
             <category>data</category>
         </item>
         <item>
+            <title><![CDATA[RxJS 响应式编程实战手册 - 完整课程大纲 | 2026]]></title>
+            <link>https://friday-go.icu/courses/rxjs</link>
+            <guid>https://friday-go.icu/courses/rxjs</guid>
+            <pubDate>Sat, 10 Oct 2026 02:25:23 GMT</pubDate>
+            <description><![CDATA[系统学习 RxJS 响应式编程，从 Observable 核心概念到高级操作符应用，包含搜索建议、拖放、状态管理等实战案例，帮助前端开发者掌握异步编程利器。]]></description>
+            <content:encoded><![CDATA[系统学习 RxJS 响应式编程，从 Observable 核心概念到高级操作符应用，包含搜索建议、拖放、状态管理等实战案例，帮助前端开发者掌握异步编程利器。]]></content:encoded>
+            <category>course</category>
+            <category>rxjs</category>
+            <category>typescript</category>
+            <category>frontend</category>
+            <category>reactive-programming</category>
+        </item>
+        <item>
             <title><![CDATA[安全工程师成长路线 - 完整课程大纲 | 2026]]></title>
             <link>https://friday-go.icu/courses/security-engineer</link>
             <guid>https://friday-go.icu/courses/security-engineer</guid>
-            <pubDate>Sat, 10 Oct 2026 02:17:34 GMT</pubDate>
+            <pubDate>Sat, 10 Oct 2026 02:25:23 GMT</pubDate>
             <description><![CDATA[系统学习网络安全与工程安全，从 SSH 加固到 Web 应用防护，从 Go 安全开发到攻防研究，打造攻防一体的安全工程能力。]]></description>
             <content:encoded><![CDATA[系统学习网络安全与工程安全，从 SSH 加固到 Web 应用防护，从 Go 安全开发到攻防研究，打造攻防一体的安全工程能力。]]></content:encoded>
             <category>course</category>
@@ -146,7 +303,7 @@
             <title><![CDATA[Wails 跨平台桌面开发实战 - 完整课程大纲 | 2026]]></title>
             <link>https://friday-go.icu/courses/wails-desktop</link>
             <guid>https://friday-go.icu/courses/wails-desktop</guid>
-            <pubDate>Sat, 10 Oct 2026 02:17:34 GMT</pubDate>
+            <pubDate>Sat, 10 Oct 2026 02:25:23 GMT</pubDate>
             <description><![CDATA[使用 Go 和前端技术栈（Vue/React）构建跨平台桌面应用，从入门到实战，包含抖音直播助手、密码管理器等真实项目案例。]]></description>
             <content:encoded><![CDATA[使用 Go 和前端技术栈（Vue/React）构建跨平台桌面应用，从入门到实战，包含抖音直播助手、密码管理器等真实项目案例。]]></content:encoded>
             <category>course</category>
@@ -159,7 +316,7 @@
             <title><![CDATA[Go 后端工程师成长路线 - 完整课程大纲 | 2026]]></title>
             <link>https://friday-go.icu/courses/golang-backend</link>
             <guid>https://friday-go.icu/courses/golang-backend</guid>
-            <pubDate>Sat, 10 Oct 2026 02:17:34 GMT</pubDate>
+            <pubDate>Sat, 10 Oct 2026 02:25:23 GMT</pubDate>
             <description><![CDATA[系统化的 Go 后端工程师学习路径，从语言基础到微服务架构，涵盖并发编程、性能优化、数据库设计、可观测性体系等核心技能，包含完整实战项目。]]></description>
             <content:encoded><![CDATA[系统化的 Go 后端工程师学习路径，从语言基础到微服务架构，涵盖并发编程、性能优化、数据库设计、可观测性体系等核心技能，包含完整实战项目。]]></content:encoded>
             <category>course</category>
@@ -168,23 +325,10 @@
             <category>learning-path</category>
         </item>
         <item>
-            <title><![CDATA[RxJS 响应式编程实战手册 - 完整课程大纲 | 2026]]></title>
-            <link>https://friday-go.icu/courses/rxjs</link>
-            <guid>https://friday-go.icu/courses/rxjs</guid>
-            <pubDate>Sat, 10 Oct 2026 02:17:34 GMT</pubDate>
-            <description><![CDATA[系统学习 RxJS 响应式编程，从 Observable 核心概念到高级操作符应用，包含搜索建议、拖放、状态管理等实战案例，帮助前端开发者掌握异步编程利器。]]></description>
-            <content:encoded><![CDATA[系统学习 RxJS 响应式编程，从 Observable 核心概念到高级操作符应用，包含搜索建议、拖放、状态管理等实战案例，帮助前端开发者掌握异步编程利器。]]></content:encoded>
-            <category>course</category>
-            <category>rxjs</category>
-            <category>typescript</category>
-            <category>frontend</category>
-            <category>reactive-programming</category>
-        </item>
-        <item>
             <title><![CDATA[DevOps 工程实践 - 完整课程大纲 | 2026]]></title>
             <link>https://friday-go.icu/courses/devops-practice</link>
             <guid>https://friday-go.icu/courses/devops-practice</guid>
-            <pubDate>Sat, 10 Oct 2026 02:17:34 GMT</pubDate>
+            <pubDate>Sat, 10 Oct 2026 02:25:23 GMT</pubDate>
             <description><![CDATA[系统学习 DevOps 工程实践，从 Docker 容器化到 Kubernetes 编排，从 CI/CD 流水线到监控告警体系，打造现代化工程能力。]]></description>
             <content:encoded><![CDATA[系统学习 DevOps 工程实践，从 Docker 容器化到 Kubernetes 编排，从 CI/CD 流水线到监控告警体系，打造现代化工程能力。]]></content:encoded>
             <category>course</category>
@@ -198,16 +342,36 @@
             <title><![CDATA[Web安全 · 工程安全 | 攻防研究 安全工程]]></title>
             <link>https://friday-go.icu/security</link>
             <guid>https://friday-go.icu/security</guid>
-            <pubDate>Sat, 10 Oct 2026 02:17:34 GMT</pubDate>
+            <pubDate>Sat, 10 Oct 2026 02:25:23 GMT</pubDate>
             <description><![CDATA[全面的网络安全体系指南，涵盖Web安全、应用安全、安全工程、攻防研究、服务器加固、密码学等实战内容。提供从防御加固到攻防研究的完整安全知识体系。]]></description>
             <content:encoded><![CDATA[全面的网络安全体系指南，涵盖Web安全、应用安全、安全工程、攻防研究、服务器加固、密码学等实战内容。提供从防御加固到攻防研究的完整安全知识体系。]]></content:encoded>
             <category>security</category>
         </item>
         <item>
+            <title><![CDATA[Golang]]></title>
+            <link>https://friday-go.icu/golang</link>
+            <guid>https://friday-go.icu/golang</guid>
+            <pubDate>Sat, 10 Oct 2026 02:25:23 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[数据库]]></title>
+            <link>https://friday-go.icu/database</link>
+            <guid>https://friday-go.icu/database</guid>
+            <pubDate>Sat, 10 Oct 2026 02:25:23 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[云原生技术专题 2026 - eBPF / WASM / 平台工程实战指南]]></title>
+            <link>https://friday-go.icu/cloud-native</link>
+            <guid>https://friday-go.icu/cloud-native</guid>
+            <pubDate>Sat, 10 Oct 2026 02:25:23 GMT</pubDate>
+            <description><![CDATA[PFinalClub 云原生中文专题导航页：eBPF 可观测性、WASM 组件模型（WASI 0.2/0.3）、Cilium、平台工程（Backstage/Argo CD/Crossplane）等核心文章，按主题快速找到高质量实战内容。]]></description>
+            <content:encoded><![CDATA[PFinalClub 云原生中文专题导航页：eBPF 可观测性、WASM 组件模型（WASI 0.2/0.3）、Cilium、平台工程（Backstage/Argo CD/Crossplane）等核心文章，按主题快速找到高质量实战内容。]]></content:encoded>
+        </item>
+        <item>
             <title><![CDATA[PFinalClub 技术课程体系 - 系统化学习路径 | 2026]]></title>
             <link>https://friday-go.icu/courses</link>
             <guid>https://friday-go.icu/courses</guid>
-            <pubDate>Sat, 10 Oct 2026 02:17:34 GMT</pubDate>
+            <pubDate>Sat, 10 Oct 2026 02:25:23 GMT</pubDate>
             <description><![CDATA[PFinalClub 提供系统化的技术课程体系，涵盖 Go 后端工程师、Wails 桌面开发、RxJS 响应式编程、DevOps 实践、安全工程等完整学习路径，从入门到精通的实战教程。]]></description>
             <content:encoded><![CDATA[PFinalClub 提供系统化的技术课程体系，涵盖 Go 后端工程师、Wails 桌面开发、RxJS 响应式编程、DevOps 实践、安全工程等完整学习路径，从入门到精通的实战教程。]]></content:encoded>
             <category>courses</category>
@@ -216,24 +380,16 @@
             <title><![CDATA[数据科学与工程 | 数据采集 数据分析 数据可视化 AI工程]]></title>
             <link>https://friday-go.icu/data</link>
             <guid>https://friday-go.icu/data</guid>
-            <pubDate>Sat, 10 Oct 2026 02:17:34 GMT</pubDate>
+            <pubDate>Sat, 10 Oct 2026 02:25:23 GMT</pubDate>
             <description><![CDATA[全面的数据科学与工程知识体系，涵盖数据采集、数据分析、数据可视化、AI工程、机器学习等核心领域，提供从数据获取到智能应用的完整技术栈解决方案。]]></description>
             <content:encoded><![CDATA[全面的数据科学与工程知识体系，涵盖数据采集、数据分析、数据可视化、AI工程、机器学习等核心领域，提供从数据获取到智能应用的完整技术栈解决方案。]]></content:encoded>
             <category>data</category>
         </item>
         <item>
-            <title><![CDATA[云原生技术专题 2026 - eBPF / WASM / 平台工程实战指南]]></title>
-            <link>https://friday-go.icu/cloud-native</link>
-            <guid>https://friday-go.icu/cloud-native</guid>
-            <pubDate>Sat, 10 Oct 2026 02:17:34 GMT</pubDate>
-            <description><![CDATA[PFinalClub 云原生中文专题导航页：eBPF 可观测性、WASM 组件模型（WASI 0.2/0.3）、Cilium、平台工程（Backstage/Argo CD/Crossplane）等核心文章，按主题快速找到高质量实战内容。]]></description>
-            <content:encoded><![CDATA[PFinalClub 云原生中文专题导航页：eBPF 可观测性、WASM 组件模型（WASI 0.2/0.3）、Cilium、平台工程（Backstage/Argo CD/Crossplane）等核心文章，按主题快速找到高质量实战内容。]]></content:encoded>
-        </item>
-        <item>
             <title><![CDATA[工具与实用程序中文专题导航 - AI 工具 / 开发工具 / 效率提升 2026]]></title>
             <link>https://friday-go.icu/Tools</link>
             <guid>https://friday-go.icu/Tools</guid>
-            <pubDate>Sat, 10 Oct 2026 02:17:34 GMT</pubDate>
+            <pubDate>Sat, 10 Oct 2026 02:25:23 GMT</pubDate>
             <description><![CDATA[PFinalClub 工具与实用程序中文专题导航页：系统整理 AI 工具目录、开发工具、CLI 工具、Docker 指南、效率技巧等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></description>
             <content:encoded><![CDATA[PFinalClub 工具与实用程序中文专题导航页：系统整理 AI 工具目录、开发工具、CLI 工具、Docker 指南、效率技巧等核心文章，让中文读者可以按专题快速找到高质量实战内容。]]></content:encoded>
             <category>tools</category>
@@ -242,7 +398,7 @@
             <title><![CDATA[🛠️ 开发者在线工具集]]></title>
             <link>https://friday-go.icu/Tools/online-tools</link>
             <guid>https://friday-go.icu/Tools/online-tools</guid>
-            <pubDate>Sat, 10 Oct 2026 02:17:34 GMT</pubDate>
+            <pubDate>Sat, 10 Oct 2026 02:25:23 GMT</pubDate>
             <description><![CDATA[PFinalClub 开发者在线工具集合：密码生成器、AI 工具导航、Prompt 模板、节日营销日历、BMI 计算器等，免费使用。]]></description>
             <content:encoded><![CDATA[PFinalClub 开发者在线工具集合：密码生成器、AI 工具导航、Prompt 模板、节日营销日历、BMI 计算器等，免费使用。]]></content:encoded>
             <category>tools</category>
@@ -266,349 +422,6 @@
             <content:encoded><![CDATA[深度解析 MCP 协议跳转（protocol hopping）攻击：攻击者如何利用智能体间的信任链与协议间授权丢失实现横向移动，附 Go 代码层面的 SSRF 防护实现与零信任加固清单。]]></content:encoded>
             <category>security</category>
             <category>AI</category>
-        </item>
-        <item>
-            <title><![CDATA[Next.js CVE-2026-94545 解剖：一条查询参数打进 ROP 链的 9.5 分 RCE]]></title>
-            <link>https://friday-go.icu/security/offensive/nextjs-cve-2026-94545-og-image-rce-2026</link>
-            <guid>https://friday-go.icu/security/offensive/nextjs-cve-2026-94545-og-image-rce-2026</guid>
-            <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[深度解析 Next.js OG 图片生成接口 RCE 漏洞 CVE-2026-94545：上游转义缺失 + 下游解析器内存缺陷拼接的满分攻击链、复现思路、审计脚本与修复方案。]]></description>
-            <content:encoded><![CDATA[深度解析 Next.js OG 图片生成接口 RCE 漏洞 CVE-2026-94545：上游转义缺失 + 下游解析器内存缺陷拼接的满分攻击链、复现思路、审计脚本与修复方案。]]></content:encoded>
-            <category>security</category>
-        </item>
-        <item>
-            <title><![CDATA[随笔笔记 - AI 编程 工具使用 经验总结]]></title>
-            <link>https://friday-go.icu/thinking/notes</link>
-            <guid>https://friday-go.icu/thinking/notes</guid>
-            <pubDate>Fri, 09 Oct 2026 10:20:00 GMT</pubDate>
-            <description><![CDATA[日常开发中的随笔笔记：AI 编程助手实战（Vibe Coding、Qwen Code）、AI 工具应用（扣子 AI 公众号机器人）、工具使用技巧与经验总结。]]></description>
-            <content:encoded><![CDATA[日常开发中的随笔笔记：AI 编程助手实战（Vibe Coding、Qwen Code）、AI 工具应用（扣子 AI 公众号机器人）、工具使用技巧与经验总结。]]></content:encoded>
-            <category>thinking</category>
-            <category>methodology</category>
-            <category>ai</category>
-        </item>
-        <item>
-            <title><![CDATA[Docker Agent 实战：用 YAML 和 OCI Registry 构建、分发、运行你的 AI Agent 团队]]></title>
-            <link>https://friday-go.icu/ai/docker-agent-yaml-declarative-runtime-2026</link>
-            <guid>https://friday-go.icu/ai/docker-agent-yaml-declarative-runtime-2026</guid>
-            <pubDate>Fri, 09 Oct 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[Docker 官方推出 docker-agent CLI 插件：像写 Dockerfile 一样用 YAML 声明 AI Agent，像拉镜像一样从 OCI Registry 运行 Agent，原生集成 MCP 与多智能体委派。本文覆盖安装、YAML 编写、多 Agent 团队编排、工具集配置与生产化考量，全部附可运行配置。]]></description>
-            <content:encoded><![CDATA[Docker 官方推出 docker-agent CLI 插件：像写 Dockerfile 一样用 YAML 声明 AI Agent，像拉镜像一样从 OCI Registry 运行 Agent，原生集成 MCP 与多智能体委派。本文覆盖安装、YAML 编写、多 Agent 团队编排、工具集配置与生产化考量，全部附可运行配置。]]></content:encoded>
-            <category>ai</category>
-            <category>agent</category>
-            <category>mcp</category>
-            <category>docker</category>
-            <category>devops</category>
-        </item>
-        <item>
-            <title><![CDATA[区块链 C2 崛起：从 EtherHiding 看供应链攻击如何劫持 npm、Terraform 与 Go Modules]]></title>
-            <link>https://friday-go.icu/security/offensive/blockchain-c2-etherhiding-supply-chain-go-modules-2026</link>
-            <guid>https://friday-go.icu/security/offensive/blockchain-c2-etherhiding-supply-chain-go-modules-2026</guid>
-            <pubDate>Fri, 09 Oct 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[2026 年 10 月朝鲜关联组织将供应链攻击推向新高度：恶意代码藏在运行时逻辑里，C2 地址写在以太坊智能合约中。本文深度拆解 EtherHiding 区块链 C2 技术原理、indexed-btree 案例与 Go modules 攻击面，并给出开发者可落地的检测与防御方案。]]></description>
-            <content:encoded><![CDATA[2026 年 10 月朝鲜关联组织将供应链攻击推向新高度：恶意代码藏在运行时逻辑里，C2 地址写在以太坊智能合约中。本文深度拆解 EtherHiding 区块链 C2 技术原理、indexed-btree 案例与 Go modules 攻击面，并给出开发者可落地的检测与防御方案。]]></content:encoded>
-            <category>security</category>
-            <category>supply-chain</category>
-            <category>npm</category>
-            <category>golang</category>
-            <category>blockchain</category>
-            <category>malware</category>
-        </item>
-        <item>
-            <title><![CDATA[HTTP/2 正式进 Go 标准库：x/net/http2 的双实现架构与迁移实战]]></title>
-            <link>https://friday-go.icu/dev/backend/golang/go-stdlib-http2-migration-2026</link>
-            <guid>https://friday-go.icu/dev/backend/golang/go-stdlib-http2-migration-2026</guid>
-            <pubDate>Fri, 09 Oct 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[历经两年、11 个子任务，Go 终于把 HTTP/2 实现从 golang.org/x/net/http2 迁入标准库。本文拆解迁移的工程动机、双实现架构与 http2legacy 构建标签机制，并给出 ConfigureTransport 废弃后的完整迁移代码：Transport/Server 协议配置、h2c 启用、参数调优与迁移检查清单。]]></description>
-            <content:encoded><![CDATA[历经两年、11 个子任务，Go 终于把 HTTP/2 实现从 golang.org/x/net/http2 迁入标准库。本文拆解迁移的工程动机、双实现架构与 http2legacy 构建标签机制，并给出 ConfigureTransport 废弃后的完整迁移代码：Transport/Server 协议配置、h2c 启用、参数调优与迁移检查清单。]]></content:encoded>
-            <category>go</category>
-            <category>golang</category>
-            <category>http2</category>
-            <category>network</category>
-            <category>backend</category>
-        </item>
-        <item>
-            <title><![CDATA[AI Agent Skills over MCP 攻击面深度解析：当 'Skills' 成为新型攻击向量]]></title>
-            <link>https://friday-go.icu/security/offensive/ai-agent-skills-mcp-attack-surface-2026</link>
-            <guid>https://friday-go.icu/security/offensive/ai-agent-skills-mcp-attack-surface-2026</guid>
-            <pubDate>Thu, 08 Oct 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[MCP 2026 路线图中的 Skills over MCP 工作组提出用 Resources 机制分发可复用的 Agent Skills，每个 Skill 包含前置条件、副作用、重试逻辑。本文深度拆解 Skills 的安全模型、新型攻击向量（Skill Poisoning、Resource Hijacking、Retry Storm），并给出企业级防御方案。]]></description>
-            <content:encoded><![CDATA[MCP 2026 路线图中的 Skills over MCP 工作组提出用 Resources 机制分发可复用的 Agent Skills，每个 Skill 包含前置条件、副作用、重试逻辑。本文深度拆解 Skills 的安全模型、新型攻击向量（Skill Poisoning、Resource Hijacking、Retry Storm），并给出企业级防御方案。]]></content:encoded>
-            <category>security</category>
-            <category>ai</category>
-            <category>mcp</category>
-            <category>agent</category>
-            <category>penetration-testing</category>
-            <category>ai-security</category>
-        </item>
-        <item>
-            <title><![CDATA[Go 1.25 Green Tea GC 深度测评：10-40% GC 开销削减背后的小对象分配器]]></title>
-            <link>https://friday-go.icu/dev/backend/golang/go-1-25-green-tea-gc-deep-dive-2026</link>
-            <guid>https://friday-go.icu/dev/backend/golang/go-1-25-green-tea-gc-deep-dive-2026</guid>
-            <pubDate>Thu, 08 Oct 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[Go 1.25 实验性垃圾回收器 Green Tea GC（GOEXPERIMENT=greenteagc）从对象中心转向页中心设计，官方报告 GC CPU 开销下降 10-40%。本文给出生产级 benchmark、可运行对比代码、内存基线 RSS 升高 8-15% 的应对策略，以及 Go 1.27 默认启用前的最佳实践。]]></description>
-            <content:encoded><![CDATA[Go 1.25 实验性垃圾回收器 Green Tea GC（GOEXPERIMENT=greenteagc）从对象中心转向页中心设计，官方报告 GC CPU 开销下降 10-40%。本文给出生产级 benchmark、可运行对比代码、内存基线 RSS 升高 8-15% 的应对策略，以及 Go 1.27 默认启用前的最佳实践。]]></content:encoded>
-            <category>go</category>
-            <category>golang</category>
-            <category>1.25</category>
-            <category>gc</category>
-            <category>performance</category>
-            <category>optimization</category>
-        </item>
-        <item>
-            <title><![CDATA[Go MCP 2.0 无状态服务器实战：从 Statef ul Session 到 Streamable HTTP 的完整迁移]]></title>
-            <link>https://friday-go.icu/dev/backend/golang/go-mcp-2-0-stateless-server-production-2026</link>
-            <guid>https://friday-go.icu/dev/backend/golang/go-mcp-2-0-stateless-server-production-2026</guid>
-            <pubDate>Thu, 08 Oct 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[Model Context Protocol 2026-07-28 规范把核心协议改为无状态，本文用 Go 1.25 + mcp-go SDK 演示如何从有状态 Session 改造为生产级 Streamable HTTP 无状态 MCP Server，包括 Mcp-Method/Mcp-Name 路由、OAuth 2.1 with PKCE、Go 微服务集成与可观测性。]]></description>
-            <content:encoded><![CDATA[Model Context Protocol 2026-07-28 规范把核心协议改为无状态，本文用 Go 1.25 + mcp-go SDK 演示如何从有状态 Session 改造为生产级 Streamable HTTP 无状态 MCP Server，包括 Mcp-Method/Mcp-Name 路由、OAuth 2.1 with PKCE、Go 微服务集成与可观测性。]]></content:encoded>
-            <category>go</category>
-            <category>golang</category>
-            <category>mcp</category>
-            <category>ai</category>
-            <category>agent</category>
-            <category>backend</category>
-        </item>
-        <item>
-            <title><![CDATA[MCP 工具输出泄密：你的 settings 工具正在把密钥喂给模型]]></title>
-            <link>https://friday-go.icu/ai/mcp-tool-output-secret-leakage-class-2026</link>
-            <guid>https://friday-go.icu/ai/mcp-tool-output-secret-leakage-class-2026</guid>
-            <pubDate>Thu, 24 Sep 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[没有攻击者、没有零日：工程师按文档连接 AI Agent，Agent 调用一次普通的 settings 工具，密钥就进了模型上下文。从 Workloft Labs 披露的厂商事件与 ArcadeDB CVE-2026-67357 出发，分析 MCP 工具输出泄密这一'类'问题，附服务端脱敏代码与五分钟自查清单。]]></description>
-            <content:encoded><![CDATA[没有攻击者、没有零日：工程师按文档连接 AI Agent，Agent 调用一次普通的 settings 工具，密钥就进了模型上下文。从 Workloft Labs 披露的厂商事件与 ArcadeDB CVE-2026-67357 出发，分析 MCP 工具输出泄密这一'类'问题，附服务端脱敏代码与五分钟自查清单。]]></content:encoded>
-            <category>ai</category>
-            <category>security</category>
-            <category>mcp</category>
-        </item>
-        <item>
-            <title><![CDATA[CVE-2026-61560：一个 MCP 默认配置如何变成 GitLab 账号接管链]]></title>
-            <link>https://friday-go.icu/security/offensive/cve-2026-61560-gitlab-mcp-unauthenticated-sse-takeover-2026</link>
-            <guid>https://friday-go.icu/security/offensive/cve-2026-61560-gitlab-mcp-unauthenticated-sse-takeover-2026</guid>
-            <pubDate>Thu, 24 Sep 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[@zereight/mcp-gitlab 的 CVE-2026-61560（CVSS 9.8）：未认证 SSE 传输 + 未过滤的 file_path 参数 + 进程内 GitLab 凭据，三环叠加实现完整账号接管。逐环拆解利用链，并给出自建 MCP 服务器的加固清单。]]></description>
-            <content:encoded><![CDATA[@zereight/mcp-gitlab 的 CVE-2026-61560（CVSS 9.8）：未认证 SSE 传输 + 未过滤的 file_path 参数 + 进程内 GitLab 凭据，三环叠加实现完整账号接管。逐环拆解利用链，并给出自建 MCP 服务器的加固清单。]]></content:encoded>
-            <category>security</category>
-            <category>ai</category>
-            <category>mcp</category>
-            <category>gitlab</category>
-        </item>
-        <item>
-            <title><![CDATA[Rust Miri 缓存泄密事件：你的 CI 缓存正在替 PR 偷 secrets]]></title>
-            <link>https://friday-go.icu/security/offensive/rust-miri-ci-cache-secret-leak-2026</link>
-            <guid>https://friday-go.icu/security/offensive/rust-miri-ci-cache-secret-leak-2026</guid>
-            <pubDate>Thu, 24 Sep 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[Rust 安全响应团队 9 月 21 日披露 Miri 将全部环境变量写入 target/，配合 GitHub Actions 缓存的读权限模型，PR 可读取 main 分支 CI 中的 secrets。拆解攻击链、官方修复方案与四条快速止血路径。]]></description>
-            <content:encoded><![CDATA[Rust 安全响应团队 9 月 21 日披露 Miri 将全部环境变量写入 target/，配合 GitHub Actions 缓存的读权限模型，PR 可读取 main 分支 CI 中的 secrets。拆解攻击链、官方修复方案与四条快速止血路径。]]></content:encoded>
-            <category>security</category>
-            <category>rust</category>
-            <category>devops</category>
-        </item>
-        <item>
-            <title><![CDATA[Rust 正在接管 Agent 基础设施：从 Codex CLI 到 Kitesurf 的 substrate shift]]></title>
-            <link>https://friday-go.icu/ai/rust-eating-agent-infrastructure-2026</link>
-            <guid>https://friday-go.icu/ai/rust-eating-agent-infrastructure-2026</guid>
-            <pubDate>Wed, 23 Sep 2026 10:30:00 GMT</pubDate>
-            <description><![CDATA[2026 年，Microsoft、OpenAI、Cloudflare、Vercel 不约而同把 Agent 基础设施押注在 Rust 上。本文解析这一 substrate shift 背后的技术原因：内存压力、沙箱安全、供应链攻击面，以及 Agent 协议栈三层中 Rust 正在接管 runtime infrastructure 层的具体证据。]]></description>
-            <content:encoded><![CDATA[2026 年，Microsoft、OpenAI、Cloudflare、Vercel 不约而同把 Agent 基础设施押注在 Rust 上。本文解析这一 substrate shift 背后的技术原因：内存压力、沙箱安全、供应链攻击面，以及 Agent 协议栈三层中 Rust 正在接管 runtime infrastructure 层的具体证据。]]></content:encoded>
-            <category>ai</category>
-            <category>agent</category>
-            <category>rust</category>
-            <category>infrastructure</category>
-            <category>performance</category>
-        </item>
-        <item>
-            <title><![CDATA[CVE-2026-94127 深度分析：F5 BIG-IP APM OAuth 堆溢出 RCE 与 CISA KEV 应急响应]]></title>
-            <link>https://friday-go.icu/security/offensive/cve-2026-94127-f5-big-ip-apm-oauth-rce-2026</link>
-            <guid>https://friday-go.icu/security/offensive/cve-2026-94127-f5-big-ip-apm-oauth-rce-2026</guid>
-            <pubDate>Wed, 23 Sep 2026 10:00:00 GMT</pubDate>
-            <description><![CDATA[2026 年 9 月 22 日，F5 披露并修复 BIG-IP APM 关键漏洞 CVE-2026-94127：当虚拟服务器同时配置 APM access policy 与 OAuth profile 时，未经认证的远程攻击者可通过堆溢出实现 RCE。CISA 同日将其加入 KEV 目录。本文解析漏洞条件、攻击面、检测方法与修复策略。]]></description>
-            <content:encoded><![CDATA[2026 年 9 月 22 日，F5 披露并修复 BIG-IP APM 关键漏洞 CVE-2026-94127：当虚拟服务器同时配置 APM access policy 与 OAuth profile 时，未经认证的远程攻击者可通过堆溢出实现 RCE。CISA 同日将其加入 KEV 目录。本文解析漏洞条件、攻击面、检测方法与修复策略。]]></content:encoded>
-            <category>security</category>
-            <category>offensive</category>
-            <category>cve</category>
-            <category>network-security</category>
-            <category>oauth</category>
-        </item>
-        <item>
-            <title><![CDATA[Go 1.28 提案解读：cgo 无需 C 工具链，AI/GPU 库调用迎来架构级松绑]]></title>
-            <link>https://friday-go.icu/dev/backend/golang/go-1-28-cgo-without-c-toolchain-2026</link>
-            <guid>https://friday-go.icu/dev/backend/golang/go-1-28-cgo-without-c-toolchain-2026</guid>
-            <pubDate>Wed, 23 Sep 2026 09:30:00 GMT</pubDate>
-            <description><![CDATA[2026 年 9 月，Go 核心开发者 Matloob 提交提案 #81450，计划让 cgo 在调用预编译 C 库时摆脱 C 工具链依赖。本文解析其 binding 文件机制、C ABI trampoline 原理、runtime/cgo 改写路径，以及对 Go 调用 CUDA/ROCm/TensorRT 等 AI-GPU 库的现实意义。]]></description>
-            <content:encoded><![CDATA[2026 年 9 月，Go 核心开发者 Matloob 提交提案 #81450，计划让 cgo 在调用预编译 C 库时摆脱 C 工具链依赖。本文解析其 binding 文件机制、C ABI trampoline 原理、runtime/cgo 改写路径，以及对 Go 调用 CUDA/ROCm/TensorRT 等 AI-GPU 库的现实意义。]]></content:encoded>
-            <category>golang</category>
-            <category>go-1-28</category>
-            <category>cgo</category>
-            <category>compiler</category>
-            <category>ai-infrastructure</category>
-        </item>
-        <item>
-            <title><![CDATA[BragJack：一个广告拦截级权限的扩展，劫持了五大浏览器的 AI Agent——Prompt Forcing 为什么比提示注入更可怕]]></title>
-            <link>https://friday-go.icu/security/offensive/bragjack-prompt-forcing-browser-ai-agent-hijack-2026</link>
-            <guid>https://friday-go.icu/security/offensive/bragjack-prompt-forcing-browser-ai-agent-hijack-2026</guid>
-            <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[Forever Security 研究员 Gal Weizman 披露 BragJack：仅凭 declarativeNetRequest 这一个广告拦截器最常用的权限，同一份 manifest 劫持了 Chrome Gemini Live、Perplexity Comet、Edge Copilot、Opera Neon、Claude in Chrome 五个浏览器 AI Agent。核心是 DiNneR Serving——DNR 削弱 CSP 头 + 重定向 JS 资源，把代码送进特权上下文；再配合 Prompt Forcing 直接接管 Agent 输入通道。累计赏金约 2 万美元，2 个 CVE。EDR 检测不了用英文写的攻击。]]></description>
-            <content:encoded><![CDATA[Forever Security 研究员 Gal Weizman 披露 BragJack：仅凭 declarativeNetRequest 这一个广告拦截器最常用的权限，同一份 manifest 劫持了 Chrome Gemini Live、Perplexity Comet、Edge Copilot、Opera Neon、Claude in Chrome 五个浏览器 AI Agent。核心是 DiNneR Serving——DNR 削弱 CSP 头 + 重定向 JS 资源，把代码送进特权上下文；再配合 Prompt Forcing 直接接管 Agent 输入通道。累计赏金约 2 万美元，2 个 CVE。EDR 检测不了用英文写的攻击。]]></content:encoded>
-            <category>security</category>
-            <category>ai</category>
-            <category>browser</category>
-            <category>agent-security</category>
-            <category>cve</category>
-        </item>
-        <item>
-            <title><![CDATA[StyleSmuggler CVE-2026-75650：Magento CVSS 10.0 零日在野利用——模板注入、Rust 后门与 50 分钟攻破实录]]></title>
-            <link>https://friday-go.icu/dev/backend/php/magento-style-smuggler-cve-2026-75650-template-injection-2026</link>
-            <guid>https://friday-go.icu/dev/backend/php/magento-style-smuggler-cve-2026-75650-template-injection-2026</guid>
-            <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[Adobe Commerce / Magento Open Source 模板引擎注入零日 CVE-2026-75650：无需认证、CVSS 3.1 满分 10.0、范围改变（S:C），Sansec 9 月 4 日捕获在野利用，攻击者投放 Rust Linux 后门与 PHP Web Shell，一台托管 Magento 服务器在首例确认利用后 50 分钟沦陷。Adobe 9/7 发布 Priority 1 热修 VULN-39341 并要求轮换加密密钥，CISA 9/8 收入 KEV。拆解攻击链与 PHP 模板注入防御清单。]]></description>
-            <content:encoded><![CDATA[Adobe Commerce / Magento Open Source 模板引擎注入零日 CVE-2026-75650：无需认证、CVSS 3.1 满分 10.0、范围改变（S:C），Sansec 9 月 4 日捕获在野利用，攻击者投放 Rust Linux 后门与 PHP Web Shell，一台托管 Magento 服务器在首例确认利用后 50 分钟沦陷。Adobe 9/7 发布 Priority 1 热修 VULN-39341 并要求轮换加密密钥，CISA 9/8 收入 KEV。拆解攻击链与 PHP 模板注入防御清单。]]></content:encoded>
-            <category>php</category>
-            <category>security</category>
-            <category>CVE</category>
-            <category>magento</category>
-            <category>ecommerce</category>
-            <category>KEV</category>
-        </item>
-        <item>
-            <title><![CDATA[Go MCP SDK CVE-2026-34742：localhost 服务器默认裸奔——一个 Host 头校验为何值得 7.6 分]]></title>
-            <link>https://friday-go.icu/dev/backend/golang/go-mcp-sdk-dns-rebinding-cve-2026-34742-2026</link>
-            <guid>https://friday-go.icu/dev/backend/golang/go-mcp-sdk-dns-rebinding-cve-2026-34742-2026</guid>
-            <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[官方 modelcontextprotocol/go-sdk 在 1.4.0 之前默认不开启 DNS rebinding 防护：跑在 localhost 上的无认证 HTTP MCP 服务器可被恶意网站借浏览器同源策略的盲区直接调用工具、读取资源。拆解修复 PR #760 的实现——LocalAddrContextKey 运行时探测 + Host 头 403 校验 + 显式 opt-out——以及反向代理场景下的踩坑点。]]></description>
-            <content:encoded><![CDATA[官方 modelcontextprotocol/go-sdk 在 1.4.0 之前默认不开启 DNS rebinding 防护：跑在 localhost 上的无认证 HTTP MCP 服务器可被恶意网站借浏览器同源策略的盲区直接调用工具、读取资源。拆解修复 PR #760 的实现——LocalAddrContextKey 运行时探测 + Host 头 403 校验 + 显式 opt-out——以及反向代理场景下的踩坑点。]]></content:encoded>
-            <category>golang</category>
-            <category>mcp</category>
-            <category>security</category>
-            <category>CVE</category>
-            <category>dns-rebinding</category>
-        </item>
-        <item>
-            <title><![CDATA[AI 代码 Slop 终于有了数字：Earendil 的 Verbosity 与 Erosion 指标，Agent 写的代码比人类啰嗦一倍、腐化一倍]]></title>
-            <link>https://friday-go.icu/ai/agent-code-slop-verbosity-erosion-metrics-2026</link>
-            <guid>https://friday-go.icu/ai/agent-code-slop-verbosity-erosion-metrics-2026</guid>
-            <pubDate>Mon, 21 Sep 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[Earendil 9 月 10 日发布量化指标：Agent 生成代码的 verbosity（0.33 vs 0.15）与 erosion（0.68 vs 0.31）均为人类仓库两倍。SlopCodeBench 多轮上下文擦除评测下，SOTA 模型严格通过率为 0%。本文拆解两个指标的数学定义、AST-Grep 实现、为什么 LLM-as-judge 行不通，以及 Anthropic Boris Cherny 的生产级应对清单。]]></description>
-            <content:encoded><![CDATA[Earendil 9 月 10 日发布量化指标：Agent 生成代码的 verbosity（0.33 vs 0.15）与 erosion（0.68 vs 0.31）均为人类仓库两倍。SlopCodeBench 多轮上下文擦除评测下，SOTA 模型严格通过率为 0%。本文拆解两个指标的数学定义、AST-Grep 实现、为什么 LLM-as-judge 行不通，以及 Anthropic Boris Cherny 的生产级应对清单。]]></content:encoded>
-            <category>ai</category>
-            <category>agent</category>
-            <category>code-quality</category>
-            <category>benchmark</category>
-            <category>slopcodebench</category>
-            <category>ast</category>
-            <category>engineering</category>
-        </item>
-        <item>
-            <title><![CDATA[LiteLLM CVE-2026-59822 深度分析：一个空对象回退让 AI 网关的 MCP 会话裸奔，Wiz 蜜罐 7 月已捕获在野利用]]></title>
-            <link>https://friday-go.icu/security/offensive/litellm-cve-2026-59822-mcp-gateway-auth-bypass-2026</link>
-            <guid>https://friday-go.icu/security/offensive/litellm-cve-2026-59822-mcp-gateway-auth-bypass-2026</guid>
-            <pubDate>Mon, 21 Sep 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[深度拆解 LiteLLM CVE-2026-59822：MCP Streamable HTTP 端点的 OAuth2 passthrough 回退分支在校验失败时返回空 UserAPIKeyAuth() 对象而非拒绝请求，任意 Bearer token 即可建立已认证 MCP 会话。CVSS 8.8，CISA KEV 9/2 收录（联邦截止 9/16），Wiz 蜜罐 7 月 7 日已观察到在野利用。连带 CVE-2026-59821 自定义护栏 Python 代码执行，AI 网关应按 Tier-1 控制面对待。]]></description>
-            <content:encoded><![CDATA[深度拆解 LiteLLM CVE-2026-59822：MCP Streamable HTTP 端点的 OAuth2 passthrough 回退分支在校验失败时返回空 UserAPIKeyAuth() 对象而非拒绝请求，任意 Bearer token 即可建立已认证 MCP 会话。CVSS 8.8，CISA KEV 9/2 收录（联邦截止 9/16），Wiz 蜜罐 7 月 7 日已观察到在野利用。连带 CVE-2026-59821 自定义护栏 Python 代码执行，AI 网关应按 Tier-1 控制面对待。]]></content:encoded>
-            <category>security</category>
-            <category>CVE</category>
-            <category>litellm</category>
-            <category>mcp</category>
-            <category>ai-gateway</category>
-            <category>KEV</category>
-            <category>auth-bypass</category>
-        </item>
-        <item>
-            <title><![CDATA[Go SIMD 实战复盘：Debian Code Search 如何删光最后一行 cgo，用纯 Go 重写 TurboPFor 并反超原 cgo 版本]]></title>
-            <link>https://friday-go.icu/dev/backend/golang/go-simd-turbopfor-pure-go-rewrite-2026</link>
-            <guid>https://friday-go.icu/dev/backend/golang/go-simd-turbopfor-pure-go-rewrite-2026</guid>
-            <pubDate>Mon, 21 Sep 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[Debian Code Search 作者 Michael Stapelberg 用 Go 1.26/1.27 实验性 simd/archsimd 包重写服役 7 年的 C 语言 TurboPFor 整数压缩库：从 76% 性能起步，经历标量优化、PGO 负优化、SIMD 垂直布局，最终借 AI 发现的位置汇编计数技巧反超 C 并删光 cgo。完整工程路径复盘。]]></description>
-            <content:encoded><![CDATA[Debian Code Search 作者 Michael Stapelberg 用 Go 1.26/1.27 实验性 simd/archsimd 包重写服役 7 年的 C 语言 TurboPFor 整数压缩库：从 76% 性能起步，经历标量优化、PGO 负优化、SIMD 垂直布局，最终借 AI 发现的位置汇编计数技巧反超 C 并删光 cgo。完整工程路径复盘。]]></content:encoded>
-            <category>golang</category>
-            <category>simd</category>
-            <category>performance</category>
-            <category>cgo</category>
-            <category>avx512</category>
-            <category>compression</category>
-        </item>
-        <item>
-            <title><![CDATA[MCP 治理面成型：ServiceNow、Rubrik、Microsoft 三家企业的协议层 enforcement 实践]]></title>
-            <link>https://friday-go.icu/ai/mcp-governance-firewall-enterprise-enforcement-2026</link>
-            <guid>https://friday-go.icu/ai/mcp-governance-firewall-enterprise-enforcement-2026</guid>
-            <pubDate>Sun, 20 Sep 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[2026 年 9 月，ServiceNow、Rubrik、Microsoft 在一周内相继发布 MCP 层策略 enforcement 产品，标志着 MCP 从连接协议进化为企业治理控制面。本文深度解析三家方案的架构差异、覆盖盲区与落地建议。]]></description>
-            <content:encoded><![CDATA[2026 年 9 月，ServiceNow、Rubrik、Microsoft 在一周内相继发布 MCP 层策略 enforcement 产品，标志着 MCP 从连接协议进化为企业治理控制面。本文深度解析三家方案的架构差异、覆盖盲区与落地建议。]]></content:encoded>
-            <category>ai</category>
-            <category>mcp</category>
-            <category>governance</category>
-            <category>security</category>
-            <category>enterprise</category>
-            <category>agent</category>
-            <category>firewall</category>
-            <category>zero-trust</category>
-        </item>
-        <item>
-            <title><![CDATA[BlueMoon 漏洞链深度拆解：四个间谍组织共用的 Chrome+Windows 零日武器库]]></title>
-            <link>https://friday-go.icu/security/offensive/bluemoon-exploit-kit-chrome-windows-zero-day-chain-2026</link>
-            <guid>https://friday-go.icu/security/offensive/bluemoon-exploit-kit-chrome-windows-zero-day-chain-2026</guid>
-            <pubDate>Sun, 20 Sep 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[Proofpoint 披露 BlueMoon 漏洞利用工具包：CVE-2026-85046 V8 类型混淆 + CVE-2026-87491 V8 沙箱逃逸 + CVE-2026-85880 Windows ALPC 堆溢出，四个间谍组织一周内共用同一套链。本文从漏洞原理、patch-gap 武器化、AI 辅助开发迹象到企业应急清单，提供完整技术分析。]]></description>
-            <content:encoded><![CDATA[Proofpoint 披露 BlueMoon 漏洞利用工具包：CVE-2026-85046 V8 类型混淆 + CVE-2026-87491 V8 沙箱逃逸 + CVE-2026-85880 Windows ALPC 堆溢出，四个间谍组织一周内共用同一套链。本文从漏洞原理、patch-gap 武器化、AI 辅助开发迹象到企业应急清单，提供完整技术分析。]]></content:encoded>
-            <category>security</category>
-            <category>CVE</category>
-            <category>zero-day</category>
-            <category>exploit-kit</category>
-            <category>Chrome</category>
-            <category>Windows</category>
-            <category>APT</category>
-            <category>CISA-KEV</category>
-        </item>
-        <item>
-            <title><![CDATA[Go 1.28 arm64 NEON 优化实战：从编译器自动向量化到手写 SIMD 的完整路径]]></title>
-            <link>https://friday-go.icu/dev/backend/golang/go-1-28-arm64-neon-simd-optimization-2026</link>
-            <guid>https://friday-go.icu/dev/backend/golang/go-1-28-arm64-neon-simd-optimization-2026</guid>
-            <pubDate>Sun, 20 Sep 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[Go 1.28 在 arm64 上落地多项 NEON 优化：自动向量化、NEON 存取配对、冗余零扩展消除。本文从编译器优化原理、GOEXPERIMENT=simd 实验包、到生产环境性能测试，提供 arm64 SIMD 的完整实战指南。]]></description>
-            <content:encoded><![CDATA[Go 1.28 在 arm64 上落地多项 NEON 优化：自动向量化、NEON 存取配对、冗余零扩展消除。本文从编译器优化原理、GOEXPERIMENT=simd 实验包、到生产环境性能测试，提供 arm64 SIMD 的完整实战指南。]]></content:encoded>
-            <category>golang</category>
-            <category>go-1-28</category>
-            <category>arm64</category>
-            <category>NEON</category>
-            <category>SIMD</category>
-            <category>performance</category>
-            <category>vectorization</category>
-            <category>optimization</category>
-        </item>
-        <item>
-            <title><![CDATA[Claude Code 2.1.271 域级 Bash 沙箱拆解：从会话级白名单到 per-command allowed_domains]]></title>
-            <link>https://friday-go.icu/ai/claude-code-2-1-271-bash-domain-sandboxing-2026</link>
-            <guid>https://friday-go.icu/ai/claude-code-2-1-271-bash-domain-sandboxing-2026</guid>
-            <pubDate>Sat, 19 Sep 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[Claude Code 2.1.271（9/14）把 Bash 沙箱从会话级网络白名单升级为 per-command allowed_domains：每个命令单独审查所需主机、单独放行，其余全部拒绝。深拆新权限模型的工作原理、同一版本修掉的 4 个 Bash permission-check 缺口、9 月 5 个版本的安全主线，以及企业落地配置。]]></description>
-            <content:encoded><![CDATA[Claude Code 2.1.271（9/14）把 Bash 沙箱从会话级网络白名单升级为 per-command allowed_domains：每个命令单独审查所需主机、单独放行，其余全部拒绝。深拆新权限模型的工作原理、同一版本修掉的 4 个 Bash permission-check 缺口、9 月 5 个版本的安全主线，以及企业落地配置。]]></content:encoded>
-            <category>ai</category>
-            <category>security</category>
-            <category>claude</category>
-            <category>agent</category>
-        </item>
-        <item>
-            <title><![CDATA[vm2 CVE-2026-92939：一个 crypto.setEngine 如何击穿 Node.js 沙箱——递归只读代理的致命盲区]]></title>
-            <link>https://friday-go.icu/security/offensive/vm2-cve-2026-92939-crypto-setengine-sandbox-escape-2026</link>
-            <guid>https://friday-go.icu/security/offensive/vm2-cve-2026-92939-crypto-setengine-sandbox-escape-2026</guid>
-            <pubDate>Sat, 19 Sep 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[vm2 3.11.3-3.11.6 被曝 CVSS 9.9 沙箱逃逸：沙箱代码只需一个 crypto builtin，就能通过 crypto.setEngine() 让 OpenSSL 动态加载恶意 so 文件，在引擎符号校验拒绝之前以宿主进程权限执行任意原生代码。深拆递归只读代理的信任边界错误、dlopen 构造函数执行时序与完整防御清单。]]></description>
-            <content:encoded><![CDATA[vm2 3.11.3-3.11.6 被曝 CVSS 9.9 沙箱逃逸：沙箱代码只需一个 crypto builtin，就能通过 crypto.setEngine() 让 OpenSSL 动态加载恶意 so 文件，在引擎符号校验拒绝之前以宿主进程权限执行任意原生代码。深拆递归只读代理的信任边界错误、dlopen 构造函数执行时序与完整防御清单。]]></content:encoded>
-            <category>security</category>
-            <category>nodejs</category>
-            <category>cve</category>
-            <category>sandbox</category>
-        </item>
-        <item>
-            <title><![CDATA[Laravel AI SDK 0.11 实战：一次 Agent run 一条 correlation ID——让五轮工具调用在日志里现出原形]]></title>
-            <link>https://friday-go.icu/dev/backend/php/laravel-ai-sdk-0-11-agent-run-observability-2026</link>
-            <guid>https://friday-go.icu/dev/backend/php/laravel-ai-sdk-0-11-agent-run-observability-2026</guid>
-            <pubDate>Sat, 19 Sep 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[Laravel AI SDK 0.11.0（2026-08-19，36 个 PR）为每次 Agent run 引入单一 correlation ID 与一组生命周期事件：每次 provider 往返、每次工具调用前后都有事件可挂。解决'五轮工具调用的 run 和单轮长得一样''死在网关的 run 无声无息'两大观测痛点，附日志聚合、成本核算、故障排查实战代码。]]></description>
-            <content:encoded><![CDATA[Laravel AI SDK 0.11.0（2026-08-19，36 个 PR）为每次 Agent run 引入单一 correlation ID 与一组生命周期事件：每次 provider 往返、每次工具调用前后都有事件可挂。解决'五轮工具调用的 run 和单轮长得一样''死在网关的 run 无声无息'两大观测痛点，附日志聚合、成本核算、故障排查实战代码。]]></content:encoded>
-            <category>php</category>
-            <category>laravel</category>
-            <category>ai</category>
-            <category>observability</category>
         </item>
     </channel>
 </rss>
