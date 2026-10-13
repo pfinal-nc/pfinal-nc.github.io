@@ -1,9 +1,20 @@
 ---
 title: "VS Code 1.141：从编辑器到 AI Agent 管理控制台的转型——会话工作树、终端沙盒与 Harness SDK 深度解读"
 date: 2026-10-12
-tags: ["AI", "devops"]
-keywords: ["VS Code 1.141", "AI Agent", "Copilot Harness", "终端沙盒", "会话工作树", "Agent 治理", "AI编程工具"]
-category: AI 工具
+tags:
+  - ai
+  - agent
+  - 工具
+  - security
+keywords:
+  - VS Code 1.141
+  - AI Agent 治理
+  - Copilot Harness
+  - 终端沙盒
+  - 会话工作树
+  - Agent 权限最小化
+  - AI 编程工具
+category: ai
 description: "VS Code 1.141 把定位从代码编辑器转向 AI Agent 管理控制台：Agent 会话工作树批量清理、跨平台终端沙盒限制 Agent 文件与网络访问、多会话网格布局、Copilot Harness 统一 SDK。本文逐一拆解新能力并给出企业落地配置建议。"
 ---
 
@@ -79,7 +90,7 @@ done
 
 ### 配置示例
 
-个人开发者建议开启会话级沙盒（settings.json）：
+个人开发者建议开启会话级沙盒（settings.json，下列键名为示意，实际键名以官方 Release Notes 为准）：
 
 ```jsonc
 {
@@ -92,7 +103,7 @@ done
 }
 ```
 
-企业策略层面（组织策略文件）：
+企业策略层面（组织策略文件，`allowBypass: false` 表示用户无法关闭沙盒）：
 
 ```jsonc
 {

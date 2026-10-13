@@ -1,9 +1,21 @@
 ---
 title: "Chrome 155 默认启用 JPEG XL：jxl-rs 纯 Rust 解码器如何用内存安全赢回四年前输掉的战争"
 date: 2026-10-12
-tags: ["security", "AI"]
-keywords: ["JPEG XL", "jxl-rs", "Rust", "内存安全", "Chrome 155", "图像格式", "SIMD", "fuzzing"]
-category: 前端开发
+tags:
+  - rust
+  - 前端开发
+  - security
+  - 性能优化
+keywords:
+  - JPEG XL
+  - jxl-rs
+  - Chrome 155
+  - Rust 内存安全
+  - 图像格式对比
+  - AVIF
+  - cjxl 无损转码
+  - 图片性能优化
+category: dev/fe
 description: "Chrome 155 于 2026 年 10 月 6 日默认启用 JPEG XL，解码器是纯 Rust 编写的 jxl-rs。本文回顾这场格式战争的反转逻辑，拆解 jxl-rs 的内存安全架构与安全 SIMD 抽象层，并给出 Web 开发者的图像管线落地清单。"
 ---
 
@@ -138,8 +150,7 @@ server {
 ### 用 Rust 代码直接调 jxl-rs 解码
 
 ```rust
-// Cargo.toml:
-// jxl-oxide = "0.11"   # 纯 Rust JPEG XL 解码库（jxl-rs 同源生态）
+// Cargo.toml: jxl-oxide = "*"   # 纯 Rust JPEG XL 解码库（与 jxl-rs 同一技术路线，版本以 crates.io 为准）
 use jxl_oxide::Image;
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {

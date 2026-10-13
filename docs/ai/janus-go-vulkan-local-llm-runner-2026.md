@@ -1,9 +1,20 @@
 ---
 title: "Janus：一个 Go 二进制搞定本地 LLM 推理——Vulkan + GGUF + OpenAI 兼容 API 全解析"
 date: 2026-10-12
-tags: ["golang", "AI"]
-keywords: ["Janus", "GGUF", "Vulkan", "本地LLM", "OpenAI兼容API", "llama.cpp", "Go推理服务"]
-category: AI 工具
+tags:
+  - golang
+  - ai
+  - llm
+  - 工具
+keywords:
+  - Janus
+  - GGUF
+  - Vulkan
+  - 本地 LLM 部署
+  - OpenAI 兼容 API
+  - llama.cpp
+  - Go 推理服务
+category: ai
 description: "Janus 用一个约 50MB 的 Go 二进制包办了本地 LLM 推理：llama.cpp Vulkan 后端、OpenAI 兼容 API、模型热切换、云端降级。本文拆解其架构设计、环境变量调优，并与 Ollama、llama.cpp server 正面对比。"
 ---
 
@@ -194,7 +205,7 @@ DeepSeek-R1 类推理模型会在 `<think>` 标签里输出思考过程。Janus 
 
 ## 冷静看待：它还很年轻
 
-必须泼两盆冷水。截至发稿，这个仓库只有 13 颗星、两个 commit、没有打 tag 的 release，也没有任何与 llama.cpp/Vulkan 后端的对比 benchmark。HN 讨论中 Intel GPU 用户反馈：某些驱动版本下 Vulkan 路径的开销可能吃掉并行收益。
+必须泼两盆冷水。项目极其年轻：提交历史只有个位数，GitHub 上没有任何打了 tag 的正式 release，社区 star 数在不同快照里从个位数到几十不等（说明热度尚未稳定沉淀），也**没有任何与 llama.cpp/Vulkan 后端或 CUDA 路径的对比 benchmark**。HN 讨论中 Intel GPU 用户反馈：某些驱动版本下 Vulkan 路径的开销可能吃掉并行收益。
 
 所以我的建议是：**把它当作 CI 和开发环境的效率工具来用，别放进生产**。等它出了 v0.1 正式 release、社区跑过更多硬件组合之后，再评估升级。
 
