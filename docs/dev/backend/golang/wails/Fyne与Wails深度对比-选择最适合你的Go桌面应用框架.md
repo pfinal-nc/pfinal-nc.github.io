@@ -7,7 +7,7 @@ tags:
   - GUI框架
   - 跨平台开发
   - desktop development
-description: "Fyne vs Wails 2026: 深入对比两大 Go 桌面应用框架的架构设计、性能表现、开发体验，帮助开发者选择最适合的技术方案。"
+description: "Fyne vs Wails 怎么选？2026 年 Go 桌面框架深度对比：架构设计（纯 Go 绘制 vs WebView）、渲染性能、打包体积、开发体验全面评测，附选型决策表与真实项目经验，帮你为 Go 桌面应用选对框架。"
 author: PFinal南丞
 keywords:
   - fyne vs wails

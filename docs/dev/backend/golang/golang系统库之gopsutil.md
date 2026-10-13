@@ -1,10 +1,10 @@
 ---
-title: Golang gopsutil 使用指南 - CPU/内存/磁盘/网络指标获取实战
+title: Golang gopsutil 完全指南：CPU/内存/磁盘/网络/进程监控实战（附完整代码）
 date: 2024-09-09 15:13:09
 tags:
   - 工具
   - golang
-description: 详细介绍golang系统库之gopsutil，包括安装配置、进程监控、系统信息获取等核心功能，帮助开发者轻松获取系统信息。
+description: gopsutil 是 Go 生态最流行的跨平台系统信息采集库，一行代码读取 CPU 占用率、内存、磁盘 IO、网络流量与进程指标。本文覆盖安装配置、CPU/内存/磁盘/网络/进程监控完整示例、Docker 容器指标采集与生产环境踩坑经验。
 author: PFinal南丞
 keywords:
   - gopsutil 完整使用指南

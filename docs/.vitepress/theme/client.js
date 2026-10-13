@@ -88,6 +88,7 @@ export default {
           { from: '/golang/Go-WASM构建WebAssembly应用的全新尝试', to: '/dev/backend/golang/Go-WASM构建WebAssembly应用的全新尝试' },
           { from: '/golang/go-restful-api-best-practices', to: '/dev/backend/golang/go-restful-api-best-practices' },
           { from: '/golang/基于wails和Tailwindcss的应用开发', to: '/dev/backend/golang/wails/基于wails和Tailwindcss的应用开发' },
+          { from: '/golang/Fyne-vs-Wails-Deep-Comparison-Choosing-the-Best-Go-Desktop-Framework', to: '/dev/backend/golang/wails/Fyne与Wails深度对比-选择最适合你的Go桌面应用框架' },
           { from: '/golang/加快开发速度的十大必备Go库', to: '/dev/backend/golang/加快开发速度的十大必备Go库' },
           { from: '/golang/go-goroutine-intro', to: '/dev/backend/golang/go-goroutine-intro' },
           { from: '/golang/microservices-architecture', to: '/dev/backend/golang/microservices-architecture' },
