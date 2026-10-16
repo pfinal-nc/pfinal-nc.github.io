@@ -1,9 +1,13 @@
 import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
+import matter from 'gray-matter'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
+
+const SITE_HOST = 'https://friday-go.icu'
+const DOCS_DIR = path.resolve(__dirname, '../docs')
 
 // Sitemap 文件路径
 const sitemapPath = path.resolve(__dirname, '../docs/.vitepress/dist/sitemap.xml')
@@ -90,7 +94,11 @@ while ((match = urlRegex.exec(content)) !== null) {
     changefreq = 'weekly'
   }
   
-  urls.push({ loc: cleanLoc, lastmod, priority, changefreq })
+  // 优先使用文章 frontmatter 的 date 作为 lastmod（实际发布日期），
+  // 回退到 VitePress 原始 lastmod（基于 Git 提交时间）
+  const resolvedLastmod = resolveLastmodFromSource(cleanLoc, lastmod)
+
+  urls.push({ loc: cleanLoc, lastmod: resolvedLastmod, priority, changefreq })
 }
 
 // 生成简洁的 sitemap XML
@@ -114,4 +122,59 @@ const removedCount = originalCount - urls.length
 console.log(`✅ Processed sitemap successfully!`)
 console.log(`📊 Total URLs: ${urls.length}`)
 console.log(`🗑️  Removed: ${removedCount} entries (404, .html, subdomains, query params, HTTP, XML files)`)
+
+// 把 sitemap 中的 URL 反向映射回 docs 目录下的 .md 源文件路径
+// 例如：https://friday-go.icu/dev/backend/golang/foo  → docs/dev/backend/golang/foo.md
+// 目录页（以 / 结尾）：https://friday-go.icu/dev/backend/golang/ → docs/dev/backend/golang/index.md
+// 首页：https://friday-go.icu/ → docs/index.md
+function locToSourcePath(loc) {
+  let p = loc
+  try {
+    p = decodeURIComponent(p)
+  } catch {
+    // 保持原样
+  }
+  if (p.startsWith(SITE_HOST)) p = p.slice(SITE_HOST.length)
+  if (!p || p === '/') return path.join(DOCS_DIR, 'index.md')
+  if (p.endsWith('/')) p = p + 'index.md'
+  else if (!p.endsWith('.md')) p = p + '.md'
+  if (p.startsWith('/')) p = p.slice(1)
+  return path.join(DOCS_DIR, p)
+}
+
+// 将 frontmatter date 统一规范为 ISO 8601 字符串（用于 sitemap lastmod）
+function normalizeDate(value) {
+  if (!value) return null
+  if (value instanceof Date) return value.toISOString()
+  if (typeof value === 'string') {
+    const trimmed = value.trim()
+    if (/^\d{4}-\d{2}-\d{2}$/.test(trimmed)) {
+      return `${trimmed}T00:00:00.000Z`
+    }
+    const parsed = new Date(trimmed)
+    if (!Number.isNaN(parsed.getTime())) return parsed.toISOString()
+    return trimmed
+  }
+  return String(value)
+}
+
+// 优先从文章 frontmatter date 取 lastmod，读不到则回退 fallback
+function resolveLastmodFromSource(loc, fallbackLastmod) {
+  let srcPath
+  try {
+    srcPath = locToSourcePath(loc)
+  } catch {
+    return fallbackLastmod
+  }
+  if (!fs.existsSync(srcPath)) return fallbackLastmod
+  try {
+    const fileContent = fs.readFileSync(srcPath, 'utf-8')
+    const { data } = matter(fileContent)
+    const date = normalizeDate(data && data.date)
+    if (date) return date
+  } catch {
+    // 解析失败则保留 fallback
+  }
+  return fallbackLastmod
+}
 
