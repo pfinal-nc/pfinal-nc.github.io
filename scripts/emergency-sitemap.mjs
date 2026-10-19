@@ -9,6 +9,7 @@ import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import { execSync } from 'child_process'
+import matter from 'gray-matter'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -102,6 +103,32 @@ function getGitLastMod(filePath) {
   return null
 }
 
+// 将 frontmatter date 统一规范为 ISO 8601 字符串（用于 sitemap lastmod）
+function normalizeDate(value) {
+  if (!value) return null
+  if (value instanceof Date) return value.toISOString()
+  if (typeof value === 'string') {
+    const trimmed = value.trim()
+    if (/^\d{4}-\d{2}-\d{2}$/.test(trimmed)) {
+      return `${trimmed}T00:00:00.000Z`
+    }
+    const parsed = new Date(trimmed)
+    if (!Number.isNaN(parsed.getTime())) return parsed.toISOString()
+    return trimmed
+  }
+  return String(value)
+}
+
+// 优先取文章 frontmatter 的 date 作为 lastmod（实际发布日期），读不到返回 null
+function getFrontmatterLastMod(filePath) {
+  try {
+    const { data } = matter(fs.readFileSync(filePath, 'utf-8'))
+    return normalizeDate(data && data.date)
+  } catch {
+    return null
+  }
+}
+
 console.log('🔧 Emergency Sitemap Generator')
 console.log('================================\n')
 
@@ -161,8 +188,8 @@ for (const file of allFiles) {
     changefreq = 'weekly'
   }
   
-  // 获取修改时间
-  let lastmod = getGitLastMod(file.filePath) || getFileLastMod(file.filePath)
+  // 获取修改时间：优先 frontmatter date（实际发布日期），回退 git 提交时间，再回退文件 mtime
+  let lastmod = getFrontmatterLastMod(file.filePath) || getGitLastMod(file.filePath) || getFileLastMod(file.filePath)
   
   urls.push({ loc: fullUrl, lastmod, changefreq, priority })
 }
