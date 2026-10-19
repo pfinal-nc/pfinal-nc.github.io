@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://friday-go.icu</id>
     <title>PFinalClub Tech Blog</title>
-    <updated>2026-10-19T01:41:29.435Z</updated>
+    <updated>2026-10-19T02:40:36.475Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>PFinal南丞</name>
@@ -15,6 +15,91 @@
     <logo>https://friday-go.icu/logo.png</logo>
     <icon>https://friday-go.icu/favicon.ico</icon>
     <rights>Copyright (c) 2024-present, PFinalClub</rights>
+    <entry>
+        <title type="html"><![CDATA[commit 之后响应丢了：重试为什么造出第二个订单，以及'先查再插'为什么不够]]></title>
+        <id>https://friday-go.icu/dev/backend/database/idempotency-commit-response-lost-2026</id>
+        <link href="https://friday-go.icu/dev/backend/database/idempotency-commit-response-lost-2026"/>
+        <updated>2026-10-19T16:40:00.000Z</updated>
+        <summary type="html"><![CDATA[客户端下单，服务端 commit 成功，但在响应到达客户端之前连接断了——客户端看到报错去重试，数据库里却多出一个订单。这个 bug 既不是慢查询也不是事务出错，它藏在 commit 和响应之间的那道缝里。本文用一个只依赖标准库的 Python + SQLite 小程序把这道缝照出来，讲清为什么'先 SELECT 再 INSERT'在并发下不成立、唯一约束为什么才是决定性保护，以及外部副作用为什么让'恰好一次'变成设计问题。]]></summary>
+        <content type="html"><![CDATA[客户端下单，服务端 commit 成功，但在响应到达客户端之前连接断了——客户端看到报错去重试，数据库里却多出一个订单。这个 bug 既不是慢查询也不是事务出错，它藏在 commit 和响应之间的那道缝里。本文用一个只依赖标准库的 Python + SQLite 小程序把这道缝照出来，讲清为什么'先 SELECT 再 INSERT'在并发下不成立、唯一约束为什么才是决定性保护，以及外部副作用为什么让'恰好一次'变成设计问题。]]></content>
+        <author>
+            <name>PFinal南丞</name>
+            <uri>https://friday-go.icu</uri>
+        </author>
+        <category label="backend"/>
+        <category label="database"/>
+        <category label="idempotency"/>
+        <category label="sqlite"/>
+        <category label="api-design"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AI 可见性能像 SEO 排名那样度量吗：把 42% 当成样本统计量而不是一个坐标]]></title>
+        <id>https://friday-go.icu/ai/ai-visibility-measurement-geo-methodology-2026</id>
+        <link href="https://friday-go.icu/ai/ai-visibility-measurement-geo-methodology-2026"/>
+        <updated>2026-10-19T15:30:00.000Z</updated>
+        <summary type="html"><![CDATA[把 AI 可见性当成 SEO 排名来追踪，会制造一种虚假的精确感。本文基于 2026 年多篇测量研究（Don't Measure Once、Quantifying Uncertainty in AI Visibility、GEO at Scale）和 Google/OpenAI/Yandex 官方文档，拆解：AI 答案的生成流水线、同一 prompt 重复问为何结果会漂、跨平台为何有差异，以及一套比'一个可见性百分比'更有用的度量栈。]]></summary>
+        <content type="html"><![CDATA[把 AI 可见性当成 SEO 排名来追踪，会制造一种虚假的精确感。本文基于 2026 年多篇测量研究（Don't Measure Once、Quantifying Uncertainty in AI Visibility、GEO at Scale）和 Google/OpenAI/Yandex 官方文档，拆解：AI 答案的生成流水线、同一 prompt 重复问为何结果会漂、跨平台为何有差异，以及一套比'一个可见性百分比'更有用的度量栈。]]></content>
+        <author>
+            <name>PFinal南丞</name>
+            <uri>https://friday-go.icu</uri>
+        </author>
+        <category label="ai"/>
+        <category label="geo"/>
+        <category label="seo"/>
+        <category label="measurement"/>
+        <category label="llm"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[从原始镜像里挖出被删的 Windows 事件日志：Go 取证库 go-evtx-carver 的 carving 技术拆解]]></title>
+        <id>https://friday-go.icu/security/offensive/evtx-carving-go-forensics-library-2026</id>
+        <link href="https://friday-go.icu/security/offensive/evtx-carving-go-forensics-library-2026"/>
+        <updated>2026-10-19T11:00:00.000Z</updated>
+        <summary type="html"><![CDATA[勒索软件越来越倾向于直接加密整块虚拟磁盘，日志没了、MFT 被毁、分区表丢失——常规解析器直接崩溃或 OOM。本文拆解 Positive Technologies 用 Go 写的 go-evtx-carver：EVTX 的 file→chunk→record 三层结构、'字段名在 chunk 缓存里、值在记录里'这一让 carving 成立的核心原理，以及 chunk/record/LZNT1 三种 carving 策略。]]></summary>
+        <content type="html"><![CDATA[勒索软件越来越倾向于直接加密整块虚拟磁盘，日志没了、MFT 被毁、分区表丢失——常规解析器直接崩溃或 OOM。本文拆解 Positive Technologies 用 Go 写的 go-evtx-carver：EVTX 的 file→chunk→record 三层结构、'字段名在 chunk 缓存里、值在记录里'这一让 carving 成立的核心原理，以及 chunk/record/LZNT1 三种 carving 策略。]]></content>
+        <author>
+            <name>PFinal南丞</name>
+            <uri>https://friday-go.icu</uri>
+        </author>
+        <category label="security"/>
+        <category label="forensics"/>
+        <category label="golang"/>
+        <category label="evtx"/>
+        <category label="incident-response"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Sextant：一个 100% 由 AI 生成的 Kubernetes 客户端，如何一周做到比 Lens 快 4–7 倍、省一半内存]]></title>
+        <id>https://friday-go.icu/ai/sextant-ai-generated-rust-kubernetes-client-2026</id>
+        <link href="https://friday-go.icu/ai/sextant-ai-generated-rust-kubernetes-client-2026"/>
+        <updated>2026-10-19T10:30:00.000Z</updated>
+        <summary type="html"><![CDATA[2026 年 10 月，REES46 的 CTO 用 Claude Code 让 AI 写出了一个完整的 Kubernetes 桌面客户端 Sextant：约 16.5 万行 Rust + TypeScript，一周 184 次提交、10 个版本。本文拆解它的三层架构、Tauri 性能调优、29 工具的 MCP 安全模型，以及它为什么能比 Lens 快 4–7 倍、省一半内存，还诚实列出哪里没赢。]]></summary>
+        <content type="html"><![CDATA[2026 年 10 月，REES46 的 CTO 用 Claude Code 让 AI 写出了一个完整的 Kubernetes 桌面客户端 Sextant：约 16.5 万行 Rust + TypeScript，一周 184 次提交、10 个版本。本文拆解它的三层架构、Tauri 性能调优、29 工具的 MCP 安全模型，以及它为什么能比 Lens 快 4–7 倍、省一半内存，还诚实列出哪里没赢。]]></content>
+        <author>
+            <name>PFinal南丞</name>
+            <uri>https://friday-go.icu</uri>
+        </author>
+        <category label="ai"/>
+        <category label="kubernetes"/>
+        <category label="rust"/>
+        <category label="tauri"/>
+        <category label="mcp"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Claude 30 分钟破解 NIST ECDSA 曲线种子之谜：25 年悬案终结于 drand48 与 1997 年的 Unix 时间戳]]></title>
+        <id>https://friday-go.icu/ai/claude-ecdsa-curve-seeds-nsa-puzzle-2026</id>
+        <link href="https://friday-go.icu/ai/claude-ecdsa-curve-seeds-nsa-puzzle-2026"/>
+        <updated>2026-10-19T10:00:00.000Z</updated>
+        <summary type="html"><![CDATA[2026 年 10 月，Anthropic 的内部研究模型在 30 分钟内推理出困扰密码学界 25 年的 NIST ECDSA 曲线种子来源：它们不是神秘哈希，而是 srand48() + 1997 年的 Unix 时间戳。本文逐层还原 Claude 的破案路径——31 位 PRNG 指纹、LLL 格基约简、状态倒推——并给出我自己跑通、能精确复现 P-256 种子的 20 行 Python 代码。]]></summary>
+        <content type="html"><![CDATA[2026 年 10 月，Anthropic 的内部研究模型在 30 分钟内推理出困扰密码学界 25 年的 NIST ECDSA 曲线种子来源：它们不是神秘哈希，而是 srand48() + 1997 年的 Unix 时间戳。本文逐层还原 Claude 的破案路径——31 位 PRNG 指纹、LLL 格基约简、状态倒推——并给出我自己跑通、能精确复现 P-256 种子的 20 行 Python 代码。]]></content>
+        <author>
+            <name>PFinal南丞</name>
+            <uri>https://friday-go.icu</uri>
+        </author>
+        <category label="ai"/>
+        <category label="cryptography"/>
+        <category label="security"/>
+        <category label="ecdsa"/>
+        <category label="claude"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[MCP Events in ChatGPT 实战：让 Agent 从‘人找它’变成‘事件推它’]]></title>
         <id>https://friday-go.icu/ai/mcp-events-chatgpt-event-driven-agent-2026</id>
@@ -581,82 +666,5 @@
         <category label="ai"/>
         <category label="agent"/>
         <category label="backend"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[MCP 工具输出泄密：你的 settings 工具正在把密钥喂给模型]]></title>
-        <id>https://friday-go.icu/ai/mcp-tool-output-secret-leakage-class-2026</id>
-        <link href="https://friday-go.icu/ai/mcp-tool-output-secret-leakage-class-2026"/>
-        <updated>2026-09-24T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[没有攻击者、没有零日：工程师按文档连接 AI Agent，Agent 调用一次普通的 settings 工具，密钥就进了模型上下文。从 Workloft Labs 披露的厂商事件与 ArcadeDB CVE-2026-67357 出发，分析 MCP 工具输出泄密这一'类'问题，附服务端脱敏代码与五分钟自查清单。]]></summary>
-        <content type="html"><![CDATA[没有攻击者、没有零日：工程师按文档连接 AI Agent，Agent 调用一次普通的 settings 工具，密钥就进了模型上下文。从 Workloft Labs 披露的厂商事件与 ArcadeDB CVE-2026-67357 出发，分析 MCP 工具输出泄密这一'类'问题，附服务端脱敏代码与五分钟自查清单。]]></content>
-        <author>
-            <name>PFinal南丞</name>
-            <uri>https://friday-go.icu</uri>
-        </author>
-        <category label="ai"/>
-        <category label="security"/>
-        <category label="mcp"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[CVE-2026-61560：一个 MCP 默认配置如何变成 GitLab 账号接管链]]></title>
-        <id>https://friday-go.icu/security/offensive/cve-2026-61560-gitlab-mcp-unauthenticated-sse-takeover-2026</id>
-        <link href="https://friday-go.icu/security/offensive/cve-2026-61560-gitlab-mcp-unauthenticated-sse-takeover-2026"/>
-        <updated>2026-09-24T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[@zereight/mcp-gitlab 的 CVE-2026-61560（CVSS 9.8）：未认证 SSE 传输 + 未过滤的 file_path 参数 + 进程内 GitLab 凭据，三环叠加实现完整账号接管。逐环拆解利用链，并给出自建 MCP 服务器的加固清单。]]></summary>
-        <content type="html"><![CDATA[@zereight/mcp-gitlab 的 CVE-2026-61560（CVSS 9.8）：未认证 SSE 传输 + 未过滤的 file_path 参数 + 进程内 GitLab 凭据，三环叠加实现完整账号接管。逐环拆解利用链，并给出自建 MCP 服务器的加固清单。]]></content>
-        <author>
-            <name>PFinal南丞</name>
-            <uri>https://friday-go.icu</uri>
-        </author>
-        <category label="security"/>
-        <category label="ai"/>
-        <category label="mcp"/>
-        <category label="gitlab"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[安全攻防研究 | Web安全 内网渗透 红蓝对抗实战]]></title>
-        <id>https://friday-go.icu/security/offensive</id>
-        <link href="https://friday-go.icu/security/offensive"/>
-        <updated>2026-09-24T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[深入的安全攻防研究指南，涵盖Web安全漏洞分析、内网渗透技术、红蓝对抗实战演练、渗透测试方法论等攻防一体实践内容。提供从攻击到防御的完整安全研究体系。]]></summary>
-        <content type="html"><![CDATA[深入的安全攻防研究指南，涵盖Web安全漏洞分析、内网渗透技术、红蓝对抗实战演练、渗透测试方法论等攻防一体实践内容。提供从攻击到防御的完整安全研究体系。]]></content>
-        <author>
-            <name>PFinal南丞</name>
-            <uri>https://friday-go.icu</uri>
-        </author>
-        <category label="offensive"/>
-        <category label="security"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Rust Miri 缓存泄密事件：你的 CI 缓存正在替 PR 偷 secrets]]></title>
-        <id>https://friday-go.icu/security/offensive/rust-miri-ci-cache-secret-leak-2026</id>
-        <link href="https://friday-go.icu/security/offensive/rust-miri-ci-cache-secret-leak-2026"/>
-        <updated>2026-09-24T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Rust 安全响应团队 9 月 21 日披露 Miri 将全部环境变量写入 target/，配合 GitHub Actions 缓存的读权限模型，PR 可读取 main 分支 CI 中的 secrets。拆解攻击链、官方修复方案与四条快速止血路径。]]></summary>
-        <content type="html"><![CDATA[Rust 安全响应团队 9 月 21 日披露 Miri 将全部环境变量写入 target/，配合 GitHub Actions 缓存的读权限模型，PR 可读取 main 分支 CI 中的 secrets。拆解攻击链、官方修复方案与四条快速止血路径。]]></content>
-        <author>
-            <name>PFinal南丞</name>
-            <uri>https://friday-go.icu</uri>
-        </author>
-        <category label="security"/>
-        <category label="rust"/>
-        <category label="devops"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Rust 正在接管 Agent 基础设施：从 Codex CLI 到 Kitesurf 的 substrate shift]]></title>
-        <id>https://friday-go.icu/ai/rust-eating-agent-infrastructure-2026</id>
-        <link href="https://friday-go.icu/ai/rust-eating-agent-infrastructure-2026"/>
-        <updated>2026-09-23T10:30:00.000Z</updated>
-        <summary type="html"><![CDATA[2026 年，Microsoft、OpenAI、Cloudflare、Vercel 不约而同把 Agent 基础设施押注在 Rust 上。本文解析这一 substrate shift 背后的技术原因：内存压力、沙箱安全、供应链攻击面，以及 Agent 协议栈三层中 Rust 正在接管 runtime infrastructure 层的具体证据。]]></summary>
-        <content type="html"><![CDATA[2026 年，Microsoft、OpenAI、Cloudflare、Vercel 不约而同把 Agent 基础设施押注在 Rust 上。本文解析这一 substrate shift 背后的技术原因：内存压力、沙箱安全、供应链攻击面，以及 Agent 协议栈三层中 Rust 正在接管 runtime infrastructure 层的具体证据。]]></content>
-        <author>
-            <name>PFinal南丞</name>
-            <uri>https://friday-go.icu</uri>
-        </author>
-        <category label="ai"/>
-        <category label="agent"/>
-        <category label="rust"/>
-        <category label="infrastructure"/>
-        <category label="performance"/>
     </entry>
 </feed>
