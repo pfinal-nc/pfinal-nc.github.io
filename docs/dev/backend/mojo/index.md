@@ -1,4 +1,5 @@
 ---
+date: 2026-08-25
 title: "Mojo 开发技术专题"
 description: "Mojo 语言开发技术专题：LLVM 之父 Chris Lattner 打造的 AI 时代系统语言，Python 语法 + Rust 性能。涵盖 Mojo 1.0 稳定版、编译器开源、KGEN 源码架构等深度解析。"
 keywords:

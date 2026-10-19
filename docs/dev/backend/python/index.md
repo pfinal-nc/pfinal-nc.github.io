@@ -1,4 +1,5 @@
 ---
+date: 2026-09-19
 title: "Python 开发技术专题 2026 - 从入门到精通的实战指南"
 description: "Python开发技术专题：从基础语法到高级应用，涵盖Django、Flask、FastAPI等主流框架，数据科学、AI、自动化等领域。2025年最新Python开发实践指南。"
 keywords:

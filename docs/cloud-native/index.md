@@ -1,4 +1,5 @@
 ---
+date: 2026-09-16
 title: "云原生技术专题 2026 - eBPF / WASM / 平台工程实战指南"
 description: "PFinalClub 云原生中文专题导航页：eBPF 可观测性、WASM 组件模型（WASI 0.2/0.3）、Cilium、平台工程（Backstage/Argo CD/Crossplane）等核心文章，按主题快速找到高质量实战内容。"
 head:

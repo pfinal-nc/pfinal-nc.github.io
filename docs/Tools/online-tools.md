@@ -1,4 +1,5 @@
 ---
+date: 2026-09-02
 title: "🛠️ 开发者在线工具集"
 description: "PFinalClub 开发者在线工具集合：密码生成器、AI 工具导航、Prompt 模板、节日营销日历、BMI 计算器等，免费使用。"
 keywords:

@@ -1,4 +1,5 @@
 ---
+date: 2026-09-02
 title: "PFinalClub 技术课程体系 - 系统化学习路径 | 2026"
 description: "PFinalClub 提供系统化的技术课程体系，涵盖 Go 后端工程师、Wails 桌面开发、RxJS 响应式编程、DevOps 实践、安全工程等完整学习路径，从入门到精通的实战教程。"
 keywords:
