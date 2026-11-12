@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://friday-go.icu</id>
     <title>PFinalClub Tech Blog</title>
-    <updated>2026-11-12T09:17:32.349Z</updated>
+    <updated>2026-11-12T23:31:41.778Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>PFinal南丞</name>
@@ -15,6 +15,22 @@
     <logo>https://friday-go.icu/logo.png</logo>
     <icon>https://friday-go.icu/favicon.ico</icon>
     <rights>Copyright (c) 2024-present, PFinalClub</rights>
+    <entry>
+        <title type="html"><![CDATA[Go 1.27.4 拆解：12 个 CVE 里 11 个藏在你 go build 的那一刻]]></title>
+        <id>https://friday-go.icu/dev/backend/golang/go-1-27-4-12-cve-build-time-rce-toolchain-hardening-2026</id>
+        <link href="https://friday-go.icu/dev/backend/golang/go-1-27-4-12-cve-build-time-rce-toolchain-hardening-2026"/>
+        <updated>2026-11-13T07:30:00.000Z</updated>
+        <summary type="html"><![CDATA[2026-11-10 发布的 Go 1.27.4 / 1.26.11 一次修了 12 个安全缺陷，其中 11 个是 cgo 与工具链的构建期代码执行：恶意依赖在你敲下 go build 时就能拿到 CI 机器。本文逐个拆解 CVE 机制、给出升级验收清单，附两个可直接运行的审计脚本。]]></summary>
+        <content type="html"><![CDATA[2026-11-10 发布的 Go 1.27.4 / 1.26.11 一次修了 12 个安全缺陷，其中 11 个是 cgo 与工具链的构建期代码执行：恶意依赖在你敲下 go build 时就能拿到 CI 机器。本文逐个拆解 CVE 机制、给出升级验收清单，附两个可直接运行的审计脚本。]]></content>
+        <author>
+            <name>PFinal南丞</name>
+            <uri>https://friday-go.icu</uri>
+        </author>
+        <category label="golang"/>
+        <category label="cve"/>
+        <category label="供应链安全"/>
+        <category label="安全加固"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[commit 之后响应丢了：重试为什么造出第二个订单，以及'先查再插'为什么不够]]></title>
         <id>https://friday-go.icu/dev/backend/database/idempotency-commit-response-lost-2026</id>
@@ -648,23 +664,5 @@
         <category label="gc"/>
         <category label="performance"/>
         <category label="optimization"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Go MCP 2.0 无状态服务器实战：从 Statef ul Session 到 Streamable HTTP 的完整迁移]]></title>
-        <id>https://friday-go.icu/dev/backend/golang/go-mcp-2-0-stateless-server-production-2026</id>
-        <link href="https://friday-go.icu/dev/backend/golang/go-mcp-2-0-stateless-server-production-2026"/>
-        <updated>2026-10-08T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Model Context Protocol 2026-07-28 规范把核心协议改为无状态，本文用 Go 1.25 + mcp-go SDK 演示如何从有状态 Session 改造为生产级 Streamable HTTP 无状态 MCP Server，包括 Mcp-Method/Mcp-Name 路由、OAuth 2.1 with PKCE、Go 微服务集成与可观测性。]]></summary>
-        <content type="html"><![CDATA[Model Context Protocol 2026-07-28 规范把核心协议改为无状态，本文用 Go 1.25 + mcp-go SDK 演示如何从有状态 Session 改造为生产级 Streamable HTTP 无状态 MCP Server，包括 Mcp-Method/Mcp-Name 路由、OAuth 2.1 with PKCE、Go 微服务集成与可观测性。]]></content>
-        <author>
-            <name>PFinal南丞</name>
-            <uri>https://friday-go.icu</uri>
-        </author>
-        <category label="go"/>
-        <category label="golang"/>
-        <category label="mcp"/>
-        <category label="ai"/>
-        <category label="agent"/>
-        <category label="backend"/>
     </entry>
 </feed>
