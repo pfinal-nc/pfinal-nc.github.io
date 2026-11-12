@@ -219,6 +219,7 @@ tags:
 
 > 按发布时间倒序，包含此前未列入导航的文章。
 
+- [Go 1.27.4 拆解：12 个 CVE 里 11 个藏在你 go build 的那一刻](/dev/backend/golang/go-1-27-4-12-cve-build-time-rce-toolchain-hardening-2026) — 2026-11-13
 - [Go 1.27 平台无关 SIMD 实战：不写汇编也能榨取向量化性能](/dev/backend/golang/go-1-27-portable-simd-practical-guide-2026) — 2026-10-14
 - [HTTP/2 正式进 Go 标准库：x/net/http2 的双实现架构与迁移实战](/dev/backend/golang/go-stdlib-http2-migration-2026) — 2026-10-09
 - [Go MCP 2.0 无状态服务器实战：从 Statef ul Session 到 Streamable HTTP 的完整迁移](/dev/backend/golang/go-mcp-2-0-stateless-server-production-2026) — 2026-10-08
