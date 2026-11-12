@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://friday-go.icu</id>
     <title>PFinalClub Tech Blog</title>
-    <updated>2026-10-19T02:40:36.475Z</updated>
+    <updated>2026-11-12T08:51:56.432Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>PFinal南丞</name>
@@ -162,9 +162,9 @@
             <name>PFinal南丞</name>
             <uri>https://friday-go.icu</uri>
         </author>
-        <category label="AI"/>
-        <category label="MCP"/>
-        <category label="Agent"/>
+        <category label="ai"/>
+        <category label="mcp"/>
+        <category label="agent"/>
         <category label="安全"/>
     </entry>
     <entry>
@@ -189,8 +189,8 @@
             <uri>https://friday-go.icu</uri>
         </author>
         <category label="security"/>
-        <category label="DevOps"/>
-        <category label="Kubernetes"/>
+        <category label="devops"/>
+        <category label="kubernetes"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[LMCache CVE-2026-105192 深度分析：多进程 ZeroMQ 传输层的未认证 RCE——AI 推理基础设施的冷门攻击面]]></title>
@@ -204,8 +204,8 @@
             <uri>https://friday-go.icu</uri>
         </author>
         <category label="security"/>
-        <category label="AI"/>
-        <category label="Python"/>
+        <category label="ai"/>
+        <category label="python"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[Janus：一个 Go 二进制搞定本地 LLM 推理——Vulkan + GGUF + OpenAI 兼容 API 全解析]]></title>
@@ -287,7 +287,7 @@
             <uri>https://friday-go.icu</uri>
         </author>
         <category label="security"/>
-        <category label="DevOps"/>
+        <category label="devops"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[MCP 协议跳转攻击解析：当智能体开始信任智能体]]></title>
@@ -301,7 +301,7 @@
             <uri>https://friday-go.icu</uri>
         </author>
         <category label="security"/>
-        <category label="AI"/>
+        <category label="ai"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[Next.js CVE-2026-94545 解剖：一条查询参数打进 ROP 链的 9.5 分 RCE]]></title>
@@ -517,9 +517,9 @@
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[RxJS 操作符]]></title>
-        <id>https://friday-go.icu/dev/backend/rxjs/operators</id>
-        <link href="https://friday-go.icu/dev/backend/rxjs/operators"/>
+        <title type="html"><![CDATA[RxJS 性能优化]]></title>
+        <id>https://friday-go.icu/dev/backend/rxjs/performance</id>
+        <link href="https://friday-go.icu/dev/backend/rxjs/performance"/>
         <updated>2026-10-10T00:00:00.000Z</updated>
         <author>
             <name>PFinal南丞</name>
@@ -527,9 +527,9 @@
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[RxJS 性能优化]]></title>
-        <id>https://friday-go.icu/dev/backend/rxjs/performance</id>
-        <link href="https://friday-go.icu/dev/backend/rxjs/performance"/>
+        <title type="html"><![CDATA[RxJS 操作符]]></title>
+        <id>https://friday-go.icu/dev/backend/rxjs/operators</id>
+        <link href="https://friday-go.icu/dev/backend/rxjs/operators"/>
         <updated>2026-10-10T00:00:00.000Z</updated>
         <author>
             <name>PFinal南丞</name>
