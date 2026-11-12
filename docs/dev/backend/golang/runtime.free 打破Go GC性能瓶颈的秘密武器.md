@@ -15,7 +15,7 @@ tags:
   - golang
   - 性能优化
   - 内存管理
-  - GC调优
+  - gc调优
 recommend: 后端工程
 ---
 

@@ -323,4 +323,4 @@ brew tap PFinal-tool/pf_tools && brew install pf_tools
 
 ## 相关阅读
 
-- [Docker部署Go项目实践指南](/tools/Docker部署Go项目实践指南)
+- [Docker部署Go项目实践指南](/Tools/Docker部署Go项目实践指南)

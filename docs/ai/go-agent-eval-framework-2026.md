@@ -7,8 +7,8 @@ tags:
   - agent
   - golang
   - 评测框架
-  - AI工程化
-  - Agent Eval
+  - ai工程化
+  - agent eval
   - 基准测试
 category: ai
 recommend: AI工程

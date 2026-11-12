@@ -3,9 +3,9 @@ title: "SonicWall SMA1000 KNUCKLEBALL 零日攻击链深度拆解：Volexity UTA
 date: 2026-07-22
 tags:
   - security
-  - CVE
+  - cve
   - zero-day
-  - VPN
+  - vpn
   - exploit
   - malware
 keywords:

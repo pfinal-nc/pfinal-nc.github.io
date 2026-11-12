@@ -3,11 +3,11 @@ title: 'Docker AI Governance 生产实战：让 AI Agent 在沙箱里"翻箱倒�
 description: '2026 年 7 月 Docker 发布的 AI Governance 能力深度实战。从默认沙箱（Default Sandbox）到 Hub 治理（Governance in Hub）、MCP 工具级权限、Secret Mount 体系、审计回溯。含 5 个生产级配置模板，让 AI Agent 既能自由探索又不越界。'
 date: 2026-07-20
 tags:
-  - Docker
+  - docker
   - ai
-  - DevOps
+  - devops
   - agent
-  - MCP
+  - mcp
   - 安全
   - 沙箱
 category: devops

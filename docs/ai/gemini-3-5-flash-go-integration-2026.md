@@ -5,7 +5,7 @@ tags:
   - ai
   - golang
   - gemini
-  - LLM
+  - llm
   - google
 keywords:
   - Gemini 3.5 Flash

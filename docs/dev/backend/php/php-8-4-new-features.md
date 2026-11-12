@@ -11,8 +11,8 @@ keywords:
   - PHP 属性钩子
 tags:
   - php
-  - PHP8
-  - Tutorial
+  - php8
+  - tutorial
 recommend: 后端工程
 ---
 # PHP 8.4 新特性详解：属性钩子、非对称可见性与更多

@@ -14,4 +14,4 @@ title: Module 1：语言核心与内存管理
 - [Lesson 1.5: 性能分析与优化](1-5-performance-analysis)
 - [Lesson 1.6: Go 1.23+ 新特性](1-6-go-new-features)
 
-返回 [上一级](/golang-backend/)
+返回 [上一级](/courses/golang-backend/)

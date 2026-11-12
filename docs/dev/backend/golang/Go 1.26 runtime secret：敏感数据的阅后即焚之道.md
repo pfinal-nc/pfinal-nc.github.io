@@ -5,7 +5,7 @@ author: PFinal南丞
 description: "深入解析Go 1.26中实验性的runtime/secret包，探讨如何通过运行时机制实现敏感数据的即时擦除，确保前向保密性，降低内存攻击风险"
 keywords: Go 1.26, runtime/secret, 前向保密, 内存安全, 敏感数据擦除, 密码学安全
 tags:
-  - Go语言
+  - go语言
   - 运行时
   - 安全工程
   - 密码学

@@ -3,9 +3,9 @@ title: "FastMCP 3.0 实战：用 Python 构建生产级 MCP Server"
 date: "2026-06-11"
 tags:
   - mcp
-  - Python
+  - python
   - agent
-  - FastMCP
+  - fastmcp
   - llm
 keywords:
   - FastMCP 3.0

@@ -14,8 +14,8 @@ course:
   lesson: 1.3
 tags:
   - 前端开发
-  - JavaScript
-  - RxJS
+  - javascript
+  - rxjs
 recommend: 后端工程
 ---
 # Observer 观察者

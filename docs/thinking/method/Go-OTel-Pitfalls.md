@@ -12,7 +12,7 @@ date: 2026-04-22
 tags:
   - golang
   - opentelemetry
-  - Observability
+  - observability
   - pitfalls
 recommend: 思维方法
 ---

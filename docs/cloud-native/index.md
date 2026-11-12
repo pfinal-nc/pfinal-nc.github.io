@@ -55,3 +55,9 @@ head:
 
 - [DevOps 与云原生专栏](/devops/)：容器编排、可观测性、WASM 更多内容
 - [Golang 开发专题](/dev/backend/golang/)：Go 与云原生工具链结合
+
+## 📚 本目录全部文章
+
+> 按发布时间倒序，包含此前未列入导航的文章。
+
+- [Cilium 1.20 发布：Gateway API 一统南北向流量，ENI IPAM 补齐 IPv6](/cloud-native/cilium-1-20-gateway-api-tcp-udp-route-eni-ipv6-2026) — 2026-09-15

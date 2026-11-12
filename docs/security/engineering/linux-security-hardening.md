@@ -11,10 +11,10 @@ keywords:
   - 安全基线
   - 安全运维
 tags:
-  - Linux
+  - linux
   - security
-  - Hardening
-  - System
+  - hardening
+  - system
 recommend: 安全工程
 ---
 # Linux 系统安全加固：构建安全的生产环境

@@ -3,8 +3,8 @@ title: Go slog 结构化日志：从入门到生产最佳实践（2026）
 date: 2026-06-09
 tags:
   - golang
-  - DevOps
-  - Observability
+  - devops
+  - observability
 keywords:
   - Go slog
   - 结构化日志

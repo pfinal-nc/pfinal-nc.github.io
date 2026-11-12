@@ -11,10 +11,10 @@ keywords:
   - 异步编程
   - 并发模型
 tags:
-  - Rust
+  - rust
   - 异步编程
   - 后端开发
-  - Tokio
+  - tokio
 recommend: 后端工程
 ---
 

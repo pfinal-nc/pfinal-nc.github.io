@@ -12,10 +12,10 @@ keywords:
   - 内存泄漏
 tags:
   - 前端开发
-  - JavaScript
-  - React
-  - RxJS
-  - Tools
+  - javascript
+  - react
+  - rxjs
+  - tools
 recommend: 后端工程
 ---
 # Subscription 订阅与内存管理

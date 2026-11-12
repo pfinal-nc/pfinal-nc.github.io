@@ -10,4 +10,4 @@ title: Module 5
 - [Lesson 5.3: 错误处理](5-3-error-handling)
 - [Lesson 5.4: 热 Observable vs 冷 Observable](5-4-hot-vs-cold)
 
-返回 [上一级](/rxjs/)
+返回 [上一级](/courses/rxjs/)

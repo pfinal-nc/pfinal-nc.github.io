@@ -11,7 +11,7 @@ keywords:
   - Python 数据分析入门：Pandas 与 NumPy 基础
   - PFinalClub
   - 技术博客
-tags: [Python, Pandas, NumPy, 数据分析, 数据科学]
+tags: [python, pandas, numpy, 数据分析, 数据科学]
 difficulty: 🟢 入门
 category: dev/backend/python
 recommend: 后端工程

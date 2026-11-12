@@ -20,11 +20,11 @@ keywords:
 original: true
 tags:
   - ai
-  - Algorithm
-  - Architecture
-  - Crawler
-  - Database
-  - Docker
+  - algorithm
+  - architecture
+  - crawler
+  - database
+  - docker
 ---
 
 # 关于PFinalClub

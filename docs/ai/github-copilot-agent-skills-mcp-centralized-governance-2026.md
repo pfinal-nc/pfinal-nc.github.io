@@ -3,8 +3,8 @@ title: "GitHub Copilot Code Review 实战 2026：Agent Skills + MCP 让 AI 代�
 date: 2026-08-04
 tags:
   - ai
-  - MCP
-  - GitHub
+  - mcp
+  - github
   - copilot
 keywords:
   - GitHub Copilot Code Review

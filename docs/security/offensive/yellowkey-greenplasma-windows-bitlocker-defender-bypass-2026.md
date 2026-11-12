@@ -5,7 +5,7 @@ tags:
   - security
   - windows
   - vulnerability
-  - CVE
+  - cve
   - offensive-security
   - bitlocker
 keywords:

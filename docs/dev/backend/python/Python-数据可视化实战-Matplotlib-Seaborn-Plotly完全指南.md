@@ -12,7 +12,7 @@ keywords:
   - Python 数据可视化实战：Matplotlib、Seaborn 与 Plotly 完全指南
   - PFinalClub
   - 技术博客
-tags: [Python, Matplotlib, Seaborn, Plotly, 数据可视化, 数据分析]
+tags: [python, matplotlib, seaborn, plotly, 数据可视化, 数据分析]
 difficulty: 🟡 进阶
 category: dev/backend/python
 recommend: 后端工程

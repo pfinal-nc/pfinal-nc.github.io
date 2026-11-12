@@ -17,7 +17,7 @@ tags:
   - golang
   - zero-copy
   - io
-  - Performance
+  - performance
   - networking
   - system-call
 readingTime: 15

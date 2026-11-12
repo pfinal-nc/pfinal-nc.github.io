@@ -1,7 +1,7 @@
 ---
 title: Go 泛型实战 2026：类型参数 + 约束 + 3 种容器设计完整指南
 date: 2026-04-27
-tags: [Golang, 泛型, Generics]
+tags: [golang, 泛型, generics]
 description: Go 泛型实战 2026：类型参数、约束接口、泛型函数/类型、3 种容器设计（栈/队列/Map），Go 1.22+ 泛型新特性与性能基准对比
 recommend: 后端工程
 keywords:

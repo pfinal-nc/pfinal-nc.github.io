@@ -3,7 +3,7 @@ title: "Go Flight Recorder 持续执行追踪：零成本事后取证与性能�
 date: 2026-07-13
 tags:
   - golang
-  - Performance
+  - performance
   - tracing
   - debugging
   - go1.25

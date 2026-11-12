@@ -3,7 +3,7 @@ title: Qwen Code 20个实战技巧 让你的编程效率直接起飞！
 date: 2025-09-17 10:00:00
 tags:
   - 工具
-  - Qwen Code
+  - qwen code
   - 阿里云
   - agent
 description: 掌握Qwen Code的20个实战技巧，从基础使用到高级应用，全面提升你的AI编程体验。专为中国开发者优化的AI编程助手实战指南。
@@ -719,4 +719,4 @@ AI不会淘汰程序员，但不会用AI的除外，会用AI的程序员才有�
 
 ## 相关阅读
 
-- [Docker部署Go项目实践指南](/tools/Docker部署Go项目实践指南)
+- [Docker部署Go项目实践指南](/Tools/Docker部署Go项目实践指南)

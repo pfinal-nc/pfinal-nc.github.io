@@ -3,7 +3,7 @@ title: "Go 1.28 database/sql 快路径深拆：int64→int 不再\"格式化成�
 date: 2026-09-17
 tags:
   - golang
-  - Go性能优化
+  - go性能优化
   - database
   - 源码解析
 keywords:

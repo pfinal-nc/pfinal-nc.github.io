@@ -5,7 +5,7 @@ categories:
   - 后端
   - Golang
 tags:
-  - Socket
+  - socket
   - 游戏服务器
   - 高性能
   - 并发编程

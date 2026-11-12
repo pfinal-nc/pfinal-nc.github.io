@@ -4,9 +4,9 @@ date: 2025-01-15 00:00:00
 author: PFinalClub
 description: 手把手教你用最新的前端技术栈开发 Wails 应用，从入门到精通。
 tags:
-  - Wails
-  - Vue3
-  - TypeScript
+  - wails
+  - vue3
+  - typescript
   - 前端开发
   - 桌面应用
 recommend: 后端工程

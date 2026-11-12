@@ -12,9 +12,9 @@ keywords:
   - 高级并发
 tags:
   - golang
-  - Concurrency
-  - Patterns
-  - Advanced
+  - concurrency
+  - patterns
+  - advanced
 recommend: 后端工程
 ---
 # Go 并发模式进阶：高级并发编程技巧

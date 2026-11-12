@@ -4,7 +4,7 @@ date: "2026-09-06"
 tags:
   - golang
   - 泛型
-  - Go 1.27
+  - go 1.27
   - 类型系统
 keywords:
   - Go 1.27

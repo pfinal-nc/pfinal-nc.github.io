@@ -9,12 +9,12 @@ categories:
   - "数据与自动化"
   - "爬虫技术"
 tags:
-  - "Python"
-  - "爬虫"
-  - "js逆向"
-  - "webpack"
-  - "加密破解"
-  - "数据采集"
+  - python
+  - 爬虫
+  - js逆向
+  - webpack
+  - 加密破解
+  - 数据采集
 keywords:
   - "python爬虫教程"
   - "js逆向技巧"

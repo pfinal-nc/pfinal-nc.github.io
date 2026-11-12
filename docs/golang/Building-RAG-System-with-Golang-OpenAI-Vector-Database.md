@@ -1078,6 +1078,9 @@ I hope this article helps you quickly get started with Golang + RAG development 
 **Keywords**: #Golang #RAG #AI #LLM #VectorDatabase #OpenAI #Qdrant #SemanticSearch #Embedding #IntelligentQA
 
 **Related Articles**:
+- [PostgreSQL 17 + pgvector 0.8 RAG 实战 2026](/dev/backend/database/postgresql-17-pgvector-rag-2026) - 用 pgvector 替代 Qdrant 自建向量检索
+- [向量数据库选型 2026：Qdrant vs Milvus vs Weaviate vs pgvector](/ai/vector-database-selection-2026) - 选型对比
+- [RAG 系统架构设计与实现：从原理到生产落地](/ai/rag-system-architecture) - 中文完整架构篇
 - [Advanced Go Concurrency Patterns](/dev/backend/golang/go-concurrency-patterns-advanced) - Master concurrent processing for RAG systems
 - [Go Containerization Best Practices](/Tools/Docker-Go-Deployment) - Deploy your RAG system efficiently
 - [From Trace to Insight: Go Observability Practice](/thinking/method/Go-Observability-Practice) - Monitor your RAG system in production

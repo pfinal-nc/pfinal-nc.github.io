@@ -1,7 +1,7 @@
 ---
 title: "GitHub Spec Kit 规格驱动开发实战：让 AI 编码 Agent 从 Vibe Coding 走向工程化治理"
 date: 2026-07-08T09:00:00+08:00
-tags: [AI, Spec-Kit, GitHub, SDD, Claude-Code, Vibe-Coding, Agent, spec-driven-development]
+tags: [ai, spec-kit, github, sdd, claude-code, vibe-coding, agent, spec-driven-development]
 keywords: [GitHub Spec Kit, Spec-Driven Development, SDD, Vibe Coding, AI 编码 Agent, Claude Code, Copilot, specify CLI, constitution]
 category: ai
 description: "GitHub 在 2026 年 5 月开源的 Spec Kit（11.8k stars）是治理 Vibe Coding 碎片化的工业级答案。本文从 SDD 核心理念（Specify → Plan → Tasks → Implement 四阶段闭环）、specify CLI 工具链、与 Claude Code / Cursor / Gemini CLI 等 30+ AI 编码 Agent 集成、Constitution 项目宪法机制、生产实战工作流五个维度，配合可运行示例，系统拆解 Spec-Driven Development 在 2026 年的工程化路径。"

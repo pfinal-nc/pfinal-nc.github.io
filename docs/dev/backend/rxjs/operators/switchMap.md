@@ -12,11 +12,11 @@ keywords:
   - 异步
 tags:
   - 前端开发
-  - Git
-  - HTTP
-  - JavaScript
-  - Operators
-  - Performance
+  - git
+  - http
+  - javascript
+  - operators
+  - performance
 recommend: 后端工程
 ---
 # switchMap

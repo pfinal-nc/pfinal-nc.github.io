@@ -3,7 +3,7 @@ title: "Nginx 配置文件详解 2026：从入门到生产级优化的完整指�
 date: 2023-04-27 22:10:20
 author: PFinal南丞
 tags:
-  - Nginx
+  - nginx
 description: "Nginx 配置文件深度解读：server/location 匹配规则、反向代理、负载均衡、HTTPS、性能调优 20+ 参数，附生产环境模板"
 keywords:
   - Nginx

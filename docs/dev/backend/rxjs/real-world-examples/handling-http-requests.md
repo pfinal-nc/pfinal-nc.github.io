@@ -12,10 +12,10 @@ keywords:
 tags:
   - ai
   - 前端开发
-  - Git
-  - HTTP
-  - JavaScript
-  - RxJS
+  - git
+  - http
+  - javascript
+  - rxjs
 recommend: 后端工程
 ---
 # HTTP 请求处理实战

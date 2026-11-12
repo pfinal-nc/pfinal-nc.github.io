@@ -5,12 +5,12 @@ author: PFinal南丞
 tags:
   - php
   - ai
-  - Function Calling
+  - function calling
   - 异步编程
   - 大语言模型
-  - Qwen3
-  - Deepseek
-  - GLM4
+  - qwen3
+  - deepseek
+  - glm4
 keywords:
   - PHP异步
   - Function Calling

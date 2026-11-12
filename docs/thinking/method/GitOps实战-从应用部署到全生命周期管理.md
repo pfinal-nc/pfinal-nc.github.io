@@ -2,9 +2,9 @@
 title: "GitOps 生产实战 2026：ArgoCD + Kustomize 从 Jenkins 迁移到全生命周期管理"
 date: 2025-02-09 09:30:00
 tags:
-  - DevOps
-  - Kubernetes
-  - CI/CD
+  - devops
+  - kubernetes
+  - ci/cd
   - 云原生
   - 持续交付
 description: "GitOps 生产级实战 2026：Jenkins → ArgoCD 迁移全记录，涵盖 Kustomize 环境分层、多集群 ApplicationSet、Sealed Secrets 密钥管理、PR 预览环境、回滚策略。真实踩坑经验总结，非理论教程。"

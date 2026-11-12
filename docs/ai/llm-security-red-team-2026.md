@@ -2,7 +2,7 @@
 title: "LLM 安全红队 2026：OWASP LLM Top 10 实战演练与自动化工具链"
 description: "基于 OWASP LLM Top 10 (2025) 的提示注入、敏感信息泄露、供应链漏洞等十大风险的实战红队演练手册，附自动化测试工具链和防护加固清单"
 date: 2026-01-15
-tags: [LLM, 安全, 红队, OWASP, AI安全, 提示注入]
+tags: [llm, 安全, 红队, owasp, ai安全, 提示注入]
 category: [AI, 安全]
 ---
 

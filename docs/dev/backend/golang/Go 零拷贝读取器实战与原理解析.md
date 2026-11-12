@@ -4,7 +4,7 @@ date: 2025-07-03 12:30:00
 tags:
   - golang
   - 零拷贝
-  - IO优化
+  - io优化
   - 编程技术
 description: 结合实战案例，深入浅出地介绍 Go 语言中的零拷贝读取器原理、实现方式、技术挑战与最佳实践。
 author: PFinal南丞

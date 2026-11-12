@@ -14,4 +14,4 @@ title: Module 5
 - [Lesson 5.5: Go 可观测性实战](5-5-go-observability)
 - [Lesson 5.6: 告警与值班](5-6-alerting-oncall)
 
-返回 [上一级](/golang-backend/)
+返回 [上一级](/courses/golang-backend/)

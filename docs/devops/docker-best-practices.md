@@ -3,9 +3,9 @@ title: "Docker 容器化最佳实践 2026：从镜像优化到 K8s 部署的 12 
 date: 2026-04-24
 category: devops
 tags:
-  - Docker
+  - docker
   - 容器化
-  - DevOps
+  - devops
   - 最佳实践
 description: 全面讲解 Docker 容器化最佳实践，涵盖镜像构建优化、多阶段构建、安全加固、编排部署等生产级应用场景。
 recommend: DevOps
@@ -406,4 +406,4 @@ Docker 生产最佳实践：
 
 ## 相关阅读
 
-- [Docker部署Go项目实践指南](/tools/Docker部署Go项目实践指南)
+- [Docker部署Go项目实践指南](/Tools/Docker部署Go项目实践指南)

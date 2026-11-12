@@ -10,10 +10,10 @@ keywords:
   - marble
 tags:
   - 前端开发
-  - JavaScript
-  - RxJS
-  - Testing
-  - Tools
+  - javascript
+  - rxjs
+  - testing
+  - tools
 recommend: 后端工程
 ---
 # RxJS 测试

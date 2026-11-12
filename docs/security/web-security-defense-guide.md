@@ -4,10 +4,10 @@ date: 2026-04-24
 category: security
 tags:
   - 安全
-  - OWASP
-  - SQL 注入
-  - XSS
-  - CSRF
+  - owasp
+  - sql 注入
+  - xss
+  - csrf
 description: Web 安全实战 2026：系统讲解 OWASP Top 10 漏洞原理与防御（SQL 注入/XSS/CSRF/越权/SSRF），附 12 个真实攻击案例 + 15 段可运行防护代码，2026 年最新威胁情报全覆盖。
 recommend: 安全工程
 keywords:

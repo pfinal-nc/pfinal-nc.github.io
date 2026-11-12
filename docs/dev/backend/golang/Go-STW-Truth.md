@@ -13,7 +13,7 @@ tags:
   - golang
   - gc
   - stw
-  - Performance
+  - performance
 recommend: 后端工程
 ---
 # Stop-The-World 其实没停下：Go GC 的微暂停真相

@@ -172,3 +172,19 @@ PFinalClub 团队精心打造的免费在线工具，包括：
 - [AI 工程与自动化](/data/automation/) - 数据采集与自动化实践
 - [Web 安全工程](/security/engineering/) - 安全工具和扫描
 - [后端开发](/dev/) - 开发技术和最佳实践
+
+## 📚 本目录全部文章
+
+> 按发布时间倒序，包含此前未列入导航的文章。
+
+- [PF-Password 密码管理器 2026：Go + Alfred Workflow 构建开源密码管理工具](/Tools/PF-Password-Manager) — 2026-04-22
+- [Devslog 结构化日志实战 2026：Go 日志可读性提升 10 倍](/Tools/Devslog-Structured-Logging) — 2026-04-22
+- [Docker 部署 Go 项目实战 2026：多阶段构建 + 镜像体积减少 90% + Compose 编排](/Tools/Docker-Go-Deployment) — 2026-04-22
+- [服务器进程日志分析 2026：Shell + AI 从头皮发麻到 5 秒定位故障](/Tools/服务器进程日志分析：从头皮发麻到AI解救) — 2025-12-26
+- [单文件 PHP 部署工具实战 2026：一个文件搞定 Git + SSH 多项目部署](/Tools/单文件代码部署工具) — 2025-11-05
+- [每次登录都要翻记事本找密码-我写了个Alfred插件来管理密码](/Tools/程序员必备神器：PF-password密码管理器) — 2025-01-27
+- [Git 高级命令实战 2026：worktree/reflog/bisect 等 12 个效率提升命令详解](/Tools/Git高级命令教程) — 2025-01-15
+- [toilet 终端 ASCII 艺术字工具 2026：让命令行输出瞬间变酷的 8 个技巧](/Tools/开源开发者必备-toilet终端ASCII艺术字工具) — 2024-10-22
+- [Homebrew Tap 发布个人工具实战 2026：Go CLI 一键分发全流程](/Tools/使用Homebrew Tap发布个人工具) — 2024-08-21
+- [Chrome DevTools 浏览器小技巧 30 招 2026：调试与性能分析实战指南](/Tools/浏览器小技巧) — 2023-05-15
+- [Git 基本操作完整指南 2026：30 个必会命令从入门到协作](/Tools/Git 基本操作) — 2022-08-23

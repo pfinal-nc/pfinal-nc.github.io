@@ -122,3 +122,12 @@ tags:
 - **区块链数据验证** - 数据可信度保障
 
 > 💡 **提示**：技术更新迅速，建议关注最新工具和最佳实践，持续学习提升。
+
+## 📚 本目录全部文章
+
+> 按发布时间倒序，包含此前未列入导航的文章。
+
+- [大模型应用开发实战 2026：Prompt + RAG + Function Calling + Agent 全链路指南](/data/automation/llm-application-development) — 2026-04-22
+- [Prompt Engineering 实战：写出真正有效的 AI 提示词](/data/automation/prompt-engineering) — 2026-04-21
+- [向量数据库实战 2026：4 种相似度算法 + Milvus/Qdrant RAG 系统构建](/data/automation/vector-database-guide) — 2026-04-21
+- [MCP 服务器开发实战 2026：Claude + Cursor 工具定义的 5 步完整接入](/data/automation/mcp-server-development) — 2026-04-21

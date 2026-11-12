@@ -4,12 +4,12 @@ description: 'Go 1.28 计划于 2027 年初发布，是 Go 历史上特性最密
 date: 2026-07-20
 tags:
   - golang
-  - Go 1.28
+  - go 1.28
   - 路线图
-  - Cgo
+  - cgo
   - 泛型
-  - Green Tea GC
-  - Wasm
+  - green tea gc
+  - wasm
 category: golang
 outline: deep
 recommend: 后端工程

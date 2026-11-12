@@ -12,11 +12,11 @@ keywords:
   - Sidecar模式
   - Go绑定
 tags:
-  - Rust
+  - rust
   - golang
   - 桌面开发
   - 跨平台开发
-  - Tauri框架
+  - tauri框架
 recommend: 后端工程
 ---
 

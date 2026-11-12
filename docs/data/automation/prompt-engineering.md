@@ -13,7 +13,7 @@ tags:
   - ai
   - prompt
   - llm
-  - Tutorial
+  - tutorial
 recommend: 数据工程
 ---
 # Prompt Engineering 实战：写出真正有效的 AI 提示词

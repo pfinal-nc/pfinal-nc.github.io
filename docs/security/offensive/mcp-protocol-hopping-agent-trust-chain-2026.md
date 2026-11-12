@@ -1,7 +1,7 @@
 ---
 title: "MCP 协议跳转攻击解析：当智能体开始信任智能体"
 date: 2026-10-10
-tags: [security, AI]
+tags: [security, ai]
 keywords: [MCP, 协议跳转, protocol hopping, CVE-2026-97228, SSRF, AI Agent 安全, 提示注入]
 category: security
 description: 深度解析 MCP 协议跳转（protocol hopping）攻击：攻击者如何利用智能体间的信任链与协议间授权丢失实现横向移动，附 Go 代码层面的 SSRF 防护实现与零信任加固清单。

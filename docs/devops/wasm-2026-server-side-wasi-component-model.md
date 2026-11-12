@@ -2,11 +2,11 @@
 title: "WASM 2026 服务端实战：WASI Preview 2、Component Model 与容器替代方案"
 date: 2026-06-12
 tags:
-  - DevOps
+  - devops
   - security
   - golang
-  - WASM
-  - WebAssembly
+  - wasm
+  - webassembly
   - containers
 keywords:
   - WebAssembly 2026

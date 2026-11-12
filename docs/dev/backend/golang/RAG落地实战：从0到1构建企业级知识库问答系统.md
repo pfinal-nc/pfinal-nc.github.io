@@ -12,7 +12,7 @@ keywords:
   - 向量数据库
   - LLM
 tags:
-  - RAG
+  - rag
   - 知识库问答
   - 企业级应用
   - golang

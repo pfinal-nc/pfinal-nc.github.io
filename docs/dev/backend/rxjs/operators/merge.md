@@ -10,9 +10,9 @@ keywords:
   - 合并
 tags:
   - 前端开发
-  - JavaScript
-  - Operators
-  - RxJS
+  - javascript
+  - operators
+  - rxjs
 recommend: 后端工程
 ---
 # merge

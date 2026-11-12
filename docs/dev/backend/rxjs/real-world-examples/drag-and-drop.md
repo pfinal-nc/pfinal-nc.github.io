@@ -11,9 +11,9 @@ keywords:
 tags:
   - ai
   - 前端开发
-  - JavaScript
-  - RxJS
-  - Tools
+  - javascript
+  - rxjs
+  - tools
 recommend: 后端工程
 ---
 # 拖放实现实战

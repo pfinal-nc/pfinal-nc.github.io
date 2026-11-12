@@ -3,10 +3,10 @@ title: "X MCP Server 实战 2026：零配置接入 150+ API 端点 + MCP 托管�
 date: 2026-07-09
 tags:
   - ai
-  - MCP
+  - mcp
   - agent
-  - API
-  - Python
+  - api
+  - python
 keywords:
   - X MCP Server
   - MCP托管服务

@@ -18,11 +18,11 @@ keywords:
 recommend: 后端工程
 tags:
   - ai
-  - Architecture
+  - architecture
   - 后端开发
-  - Database
-  - Docker
-  - HTTP
+  - database
+  - docker
+  - http
 ---
 
 # Laravel 手工构建

@@ -4,12 +4,12 @@ date: 2026-07-09
 author: PFinal南丞
 description: 2026年7月8日，美国商务部批准 OpenAI 面向大众全面推出 GPT-5.6 系列（Sol/Terra/Luna 三档），此前因国家安全担忧推迟。Anthropic 曾因出口管制命令紧急下架 Mythos 5/Fable 5。本文深度解析 GPT-5.6 三档模型架构、Terminal-Bench 91.9% 刷新纪录、全系列首次标记"高风险能力"、多层安全防护体系，以及 AI 出口管制对全球开发者生态的深远影响。
 tags:
-  - GPT-5.6
-  - OpenAI
-  - AI安全
+  - gpt-5.6
+  - openai
+  - ai安全
   - 出口管制
-  - LLM
-  - Anthropic
+  - llm
+  - anthropic
   - 网络安全
 category: ai
 recommend: AI工程

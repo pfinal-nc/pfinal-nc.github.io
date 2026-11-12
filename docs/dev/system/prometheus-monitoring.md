@@ -11,10 +11,10 @@ keywords:
   - DevOps
   - Grafana
 tags:
-  - Prometheus
-  - Monitoring
-  - Observability
-  - DevOps
+  - prometheus
+  - monitoring
+  - observability
+  - devops
 recommend: 后端工程
 ---
 # Prometheus 监控实战：构建现代化的监控体系

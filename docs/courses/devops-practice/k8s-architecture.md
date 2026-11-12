@@ -14,8 +14,8 @@ keywords:
 author: PFinal 南丞
 category: DevOps
 tags:
-  - Kubernetes
-  - DevOps
+  - kubernetes
+  - devops
   - 容器编排
   - 入门教程
 recommend: 课程

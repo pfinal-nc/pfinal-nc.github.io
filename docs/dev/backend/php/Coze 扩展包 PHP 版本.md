@@ -15,10 +15,10 @@ recommend: 后端工程
 tags:
   - ai
   - 后端开发
-  - Git
+  - git
   - golang
-  - HTTP
-  - JavaScript
+  - http
+  - javascript
 ---
 
 ## 背景

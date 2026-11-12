@@ -290,4 +290,4 @@ Arc 提供了丰富的快捷键来提高工作效率，以下是按功能分类�
 
 ## 相关阅读
 
-- [Docker部署Go项目实践指南](/tools/Docker部署Go项目实践指南)
+- [Docker部署Go项目实践指南](/Tools/Docker部署Go项目实践指南)

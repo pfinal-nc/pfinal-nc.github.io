@@ -4,8 +4,8 @@ date: 2026-04-24
 category: dev/backend/golang
 tags:
   - golang
-  - gRPC
-  - Protocol Buffers
+  - grpc
+  - protocol buffers
   - 微服务
 description: 2026 版 Go gRPC 微服务实战：从 .proto 定义到拦截器、双向流式通信，附带完整可运行代码与性能调优技巧。
 recommend: 后端工程

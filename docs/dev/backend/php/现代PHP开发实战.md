@@ -18,7 +18,7 @@ category:
   - 后端开发
 tags:
   - php
-  - Laravel
+  - laravel
   - 架构设计
 date: 2025-12-18 15:30:00
 recommend: 后端工程

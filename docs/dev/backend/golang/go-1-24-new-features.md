@@ -13,7 +13,7 @@ keywords:
 tags:
   - golang
   - go-1.24
-  - Performance
+  - performance
   - memory-management
 recommend: 后端工程
 ---

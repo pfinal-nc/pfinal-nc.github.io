@@ -4,11 +4,11 @@ description: "SSH 安全加固实战 2026：覆盖密钥认证、密码策略强
 date: 2026-04-15 13:30:00
 author: PFinal南丞
 tags:
-  - SSH
+  - ssh
   - 安全加固
   - 服务器安全
   - fail2ban
-  - Linux
+  - linux
   - 运维
 keywords:
   - SSH 安全加固

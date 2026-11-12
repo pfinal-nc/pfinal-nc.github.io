@@ -3,7 +3,7 @@ title: "pyenv 完全指南 2026：Python 多版本管理 + 虚拟环境 + 项目
 date: 2023-04-27 22:10:20
 author: PFinal南丞
 tags:
-  - Python
+  - python
 keywords:
   - Python版本管理
   - pyenv教程

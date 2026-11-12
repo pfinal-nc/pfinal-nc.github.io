@@ -3,8 +3,8 @@ title: 每次登录都要翻记事本找密码-我写了个Alfred插件来管理
 date: 2025-01-27 10:30:00
 tags:
   - 工具
-  - Python
-  - Alfred
+  - python
+  - alfred
   - 密码管理
   - 效率
 description: 作为一个注册了无数网站的程序员，密码管理一直是我的痛点。为了解决这个问题，我开发了一个简单的Alfred插件来管理密码，今天分享给大家。
@@ -527,4 +527,4 @@ git push -u origin main
 
 ## 相关阅读
 
-- [Docker部署Go项目实践指南](/tools/Docker部署Go项目实践指南)
+- [Docker部署Go项目实践指南](/Tools/Docker部署Go项目实践指南)

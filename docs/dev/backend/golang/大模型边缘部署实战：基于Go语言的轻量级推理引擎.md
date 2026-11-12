@@ -11,7 +11,7 @@ keywords:
   - 性能优化
 tags:
   - golang
-  - AI推理
+  - ai推理
   - 边缘计算
   - 模型部署
 recommend: 后端工程

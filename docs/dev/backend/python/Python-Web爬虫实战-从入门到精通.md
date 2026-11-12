@@ -11,7 +11,7 @@ keywords:
   - Python Web 爬虫实战：从入门到精通
   - PFinalClub
   - 技术博客
-tags: [Python, Web爬虫, Scrapy, BeautifulSoup, 数据采集]
+tags: [python, web爬虫, scrapy, beautifulsoup, 数据采集]
 difficulty: 🟡 进阶
 category: dev/backend/python
 recommend: 后端工程

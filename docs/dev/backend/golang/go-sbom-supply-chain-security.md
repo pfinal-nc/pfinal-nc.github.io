@@ -4,7 +4,7 @@ date: 2026-06-08
 tags:
   - golang
   - security
-  - DevOps
+  - devops
   - sbom
   - supply-chain
 keywords:

@@ -2965,4 +2965,4 @@ AutoGen正在重新定义金融数据分析的边界。通过自动化的工作�
 
 ## 相关阅读
 
-- [Docker部署Go项目实践指南](/tools/Docker部署Go项目实践指南)
+- [Docker部署Go项目实践指南](/Tools/Docker部署Go项目实践指南)

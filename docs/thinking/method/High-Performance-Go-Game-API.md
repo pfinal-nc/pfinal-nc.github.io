@@ -13,7 +13,7 @@ tags:
   - golang
   - game-development
   - websocket
-  - Performance
+  - performance
 recommend: 思维方法
 ---
 # 基于 golang 的高性能游戏接口设计

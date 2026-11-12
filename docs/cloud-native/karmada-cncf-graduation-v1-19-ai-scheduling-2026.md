@@ -6,7 +6,7 @@ tags:
   - kubernetes
   - 多集群
   - cloud-native
-  - AI 基础设施
+  - ai 基础设施
 keywords:
   - Karmada 毕业
   - CNCF Graduated

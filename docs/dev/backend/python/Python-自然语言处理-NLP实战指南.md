@@ -11,7 +11,7 @@ keywords:
   - Python 自然语言处理（NLP）实战指南
   - PFinalClub
   - 技术博客
-tags: [Python, NLP, 自然语言处理, Transformers, 深度学习]
+tags: [python, nlp, 自然语言处理, transformers, 深度学习]
 difficulty: 🟡 进阶
 category: dev/backend/python
 recommend: 后端工程

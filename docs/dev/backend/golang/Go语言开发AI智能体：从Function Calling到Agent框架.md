@@ -12,9 +12,9 @@ keywords:
   - go-agent
 tags:
   - golang
-  - AI智能体
-  - Function Calling
-  - Agent框架
+  - ai智能体
+  - function calling
+  - agent框架
 recommend: 后端工程
 ---
 

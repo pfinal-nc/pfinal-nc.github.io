@@ -2,12 +2,12 @@
 title: Python JIT 的生死六个月：Steering Council 最后通牒与 PEP 836 的自救之路
 date: 2026-07-28
 tags:
-  - Python
+  - python
   - jit
   - cpython
   - pep-836
   - governance
-  - Performance
+  - performance
 keywords:
   - Python JIT
   - Steering Council

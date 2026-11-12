@@ -2,11 +2,11 @@
 title: "WASI 0.3 原生异步深度解析：WebAssembly 从回调地狱到 async/await 的范式跃迁"
 date: 2026-09-11
 tags:
-  - WebAssembly
-  - WASI
-  - Rust
+  - webassembly
+  - wasi
+  - rust
   - async
-  - Component-Model
+  - component-model
 keywords:
   - WASI 0.3
   - WebAssembly

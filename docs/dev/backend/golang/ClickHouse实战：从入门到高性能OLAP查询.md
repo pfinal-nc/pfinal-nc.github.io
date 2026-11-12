@@ -11,8 +11,8 @@ keywords:
   - 性能优化
   - 实战
 tags:
-  - ClickHouse
-  - OLAP
+  - clickhouse
+  - olap
   - 数据库
   - golang
   - 性能优化

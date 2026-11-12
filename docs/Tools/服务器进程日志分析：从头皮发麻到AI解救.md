@@ -3,8 +3,8 @@ title: "服务器进程日志分析 2026：Shell + AI 从头皮发麻到 5 秒�
 date: 2025-12-26 11:10:00
 tags:
   - 工具
-  - Shell
-  - Linux
+  - shell
+  - linux
   - 服务器监控
   - ai
 description: 维护Web服务器时，面对密密麻麻的进程信息头皮发麻？这篇文章教你用Shell脚本记录服务器状态，配合AI分析，轻松搞定进程分析、性能监控、卡顿排查等问题。
@@ -285,4 +285,4 @@ echo "现在可以把整个目录打包发给 AI 分析了！"
 
 ## 相关阅读
 
-- [Docker部署Go项目实践指南](/tools/Docker部署Go项目实践指南)
+- [Docker部署Go项目实践指南](/Tools/Docker部署Go项目实践指南)

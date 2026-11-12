@@ -3,7 +3,7 @@ title: VS Code 中 MCP 服务器的开发者快速入门
 date: 2025-07-02 13:00:00
 tags:
   - vscode
-  - MCP
+  - mcp
   - golang
   - 编程技术
 description: 结合实战案例，详细介绍如何在 VS Code 环境下高效开发 MCP 服务器，涵盖环境搭建、调试技巧、常见问题与最佳实践。

@@ -4,7 +4,7 @@ date: 2024-12-19 10:30:00
 tags:
   - golang
   - 桌面应用
-  - GUI框架
+  - gui框架
   - 跨平台开发
   - desktop development
 description: "Fyne vs Wails 怎么选？2026 年 Go 桌面框架深度对比：架构设计（纯 Go 绘制 vs WebView）、渲染性能、打包体积、开发体验全面评测，附选型决策表与真实项目经验，帮你为 Go 桌面应用选对框架。"
@@ -834,6 +834,9 @@ func (a *App) GetCachedData(key string) interface{} {
 
 ## 相关阅读
 
+- [Fyne 深度技术解析：面向资深 Go 开发者的架构设计分析](/thinking/method/Fyne-深度技术解析-面向资深Go开发者的架构设计分析)
+- [Wails 教程系列：从 Webkit 生命周期到前后端开发](/dev/backend/golang/wails/)
+- [Wails + Vue.js 跨平台桌面应用实战](/dev/backend/golang/Wails-Vue-Desktop-App)
 - [Go 零拷贝读取器实战与原理解析](/dev/backend/golang/Go 零拷贝读取器实战与原理解析)
 - [Go 并发模式进阶：高级并发编程技巧](/dev/backend/golang/go-concurrency-patterns-advanced)
 - [Go 内存管理与垃圾回收：深入理解 GC 机制](/dev/backend/golang/go-memory-management-gc)

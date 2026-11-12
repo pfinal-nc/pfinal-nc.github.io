@@ -14,7 +14,7 @@ keywords:
   - 标准库
 tags:
   - golang
-  - Go 1.27
+  - go 1.27
   - 语言特性
   - 性能优化
   - 标准库

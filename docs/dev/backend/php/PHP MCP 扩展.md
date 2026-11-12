@@ -3,10 +3,10 @@ title: "PHP MCP 扩展 - 开源实践与使用指南"
 date: 2025-09-09 10:30:00
 tags:
   - php
-  - MCP
+  - mcp
   - 开源
   - 大语言模型
-  - Workerman
+  - workerman
 description: 分享我开发pfinalclub/php-mcp扩展的经历，探讨MCP协议对PHP生态的重要意义，以及为什么选择Workerman作为技术栈。
 author: PFinal南丞
 keywords:

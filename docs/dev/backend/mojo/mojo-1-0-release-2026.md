@@ -6,7 +6,7 @@ tags:
   - modular
   - ai
   - language-design
-  - Python
+  - python
   - rust
 keywords:
   - Mojo 1.0

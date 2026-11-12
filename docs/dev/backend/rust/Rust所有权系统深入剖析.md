@@ -11,7 +11,7 @@ keywords:
   - 内存安全
   - 并发编程
 tags:
-  - Rust
+  - rust
   - 后端开发
   - 系统编程
   - 内存管理

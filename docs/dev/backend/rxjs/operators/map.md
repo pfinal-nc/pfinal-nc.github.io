@@ -10,10 +10,10 @@ keywords:
   - 转换
 tags:
   - 前端开发
-  - JavaScript
-  - Operators
-  - Performance
-  - RxJS
+  - javascript
+  - operators
+  - performance
+  - rxjs
 recommend: 后端工程
 ---
 # map

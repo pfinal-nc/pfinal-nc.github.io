@@ -15,4 +15,4 @@ title: Module 4
 - [Lesson 4.6: 配置中心](4-6-config-center)
 - [Lesson 4.7: API 网关](4-7-api-gateway)
 
-返回 [上一级](/golang-backend/)
+返回 [上一级](/courses/golang-backend/)

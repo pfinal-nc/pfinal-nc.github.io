@@ -15,11 +15,11 @@ course:
   lesson: 1.2
 tags:
   - 前端开发
-  - HTTP
-  - JavaScript
-  - Performance
-  - RxJS
-  - Tools
+  - http
+  - javascript
+  - performance
+  - rxjs
+  - tools
 recommend: 后端工程
 ---
 # Observable 可观察对象

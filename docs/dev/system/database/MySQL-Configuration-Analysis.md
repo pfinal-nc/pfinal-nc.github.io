@@ -2,7 +2,7 @@
 title: "MySQL 8.0 配置优化完全指南 2026：InnoDB + 查询缓存 + 连接池性能调优实战"
 date: 2022-04-09 11:31:32
 tags:
-  - MySQL
+  - mysql
 description: "MySQL 8.0 配置优化完全指南 2026：从 my.cnf 文件详解到 InnoDB 缓冲池、查询缓存、连接池、慢查询日志等核心参数调优，附带生产环境配置模板与性能压测对比数据。"
 author: PFinal南丞
 keywords:

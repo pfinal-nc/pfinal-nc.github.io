@@ -3,8 +3,8 @@ title: "kubectl cp Windows 路径穿越 RCE 深度分析：客户端漏洞为何
 date: 2026-10-13
 tags:
   - security
-  - DevOps
-  - Kubernetes
+  - devops
+  - kubernetes
 keywords:
   - kubectl cp 漏洞
   - 路径穿越

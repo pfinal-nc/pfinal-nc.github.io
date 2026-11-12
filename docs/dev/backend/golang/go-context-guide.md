@@ -1,7 +1,7 @@
 ---
 title: Go Context 实战 2026：4 种派生模式 + 10 个场景从 HTTP 到 gRPC
 date: 2026-04-27
-tags: [Golang, Context, 并发]
+tags: [golang, context, 并发]
 description: Go Context 4 种派生模式实战 2026：WithCancel/Timeout/Deadline/Value + 10 个真实场景（HTTP/gRPC/DB/MQ），避免 goroutine 泄漏的完整检查清单
 recommend: 后端工程
 keywords:

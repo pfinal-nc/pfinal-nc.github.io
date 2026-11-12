@@ -4,7 +4,7 @@ date: 2026-06-17
 tags:
   - golang
   - generics
-  - Performance
+  - performance
   - toolchain
   - cgo
 keywords:

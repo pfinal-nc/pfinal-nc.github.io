@@ -3,7 +3,7 @@ title: "Git 基本操作完整指南 2026：30 个必会命令从入门到协作
 date: 2022-08-23 22:08:16
 tags:
   - 工具
-  - Git
+  - git
 description: "Git 30 个核心命令实战：clone/commit/branch/merge/rebase/cherry-pick，包含冲突解决、撤销操作、团队协作工作流，新手友好"
 author: PFinal南丞
 keywords:
@@ -431,5 +431,5 @@ s
 
 ## 相关阅读
 
-- [Docker部署Go项目实践指南](/tools/Docker部署Go项目实践指南)
-- [Git Advanced Commands 2025 - 12个提升效率的高级命令完整指南](/tools/Git高级命令教程)
+- [Docker部署Go项目实践指南](/Tools/Docker部署Go项目实践指南)
+- [Git Advanced Commands 2025 - 12个提升效率的高级命令完整指南](/Tools/Git高级命令教程)

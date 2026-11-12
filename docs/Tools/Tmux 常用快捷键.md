@@ -20,8 +20,8 @@ course:
   module: 1
   lesson: 1.4
 tags:
-  - Tools
-  - Tutorial
+  - tools
+  - tutorial
 recommend: 效率工具
 ---
 # Tmux 常用快捷键

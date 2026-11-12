@@ -3,9 +3,9 @@ title: "MCP Server Guide 2026 - 5个提升AI编程效率的核心服务器"
 date: 2025-09-11 10:14:02
 tags:
   - 工具
-  - MCP
+  - mcp
   - agent
-  - AI Tools
+  - ai tools
 description: "MCP Server Guide 2026: 介绍 5 个核心 Model Context Protocol 服务器，帮助开发者在 Cursor、VSCode 等 AI 编辑器中保持高效工作流程。"
 author: PFinal南丞
 keywords:
@@ -538,4 +538,4 @@ Interactive Feedback MCP提供交互式反馈机制，让AI能根据你的反馈
 
 ## 相关阅读
 
-- [Docker部署Go项目实践指南](/tools/Docker部署Go项目实践指南)
+- [Docker部署Go项目实践指南](/Tools/Docker部署Go项目实践指南)

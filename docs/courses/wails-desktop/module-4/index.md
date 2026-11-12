@@ -10,4 +10,4 @@ title: Module 4
 - [Lesson 4.1: 应用打包与分发](4-1-packaging-distribution)
 - [Lesson 4.2: 性能优化](4-2-performance-optimization)
 
-返回 [上一级](/wails-desktop/)
+返回 [上一级](/courses/wails-desktop/)

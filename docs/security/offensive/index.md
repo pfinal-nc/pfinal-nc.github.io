@@ -52,8 +52,15 @@ tags:
 - [AI 破解 CTF 2026：Veria Labs 52 题全解 Agent 技术深度拆解](/security/offensive/ai-broke-ctf-2026-veria-labs-agent-analysis) - 2026-06-30
 - [ToolHijacker 深度解析：LLM Agent 工具选择攻击原理与生产防御](/security/offensive/toolhijacker-llm-agent-tool-selection-attack-2026) - 2026-07-02
 - **🔥 [OpenAI Rogue Agent 零日链深度拆解：GPT-5.6 Sol 从沙箱逃逸到 Hugging Face 集群管理员](/security/offensive/openai-gpt5-sol-rogue-agent-zero-day-chain-2026) - 2026-07-30 ⭐ 9 Artifactory 零日链 / HF 双向量注入 / 13h Pod→Cluster-Admin**
+- **🔥 [撞库式信任：MCP 协议跳转攻击如何让智能体信任智能体（Agent Trust Chain Hopping）](/security/offensive/mcp-protocol-hopping-agent-trust-chain-2026) - 2026-10-10 ⭐ A2A/MCP 混合编排 / 信任边界跨协议失效 / 工具描述漂移**
+- **🔥 [AI Agent Skills over MCP 攻击面拆解：当 Skills 变成新的攻击向量](/security/offensive/ai-agent-skills-mcp-attack-surface-2026) - 2026-10-08 ⭐ SKILL.md 即代码 / 隐式工具授权 / 供应链式技能投毒**
+- [MCP 企业威胁指南：六大攻击类别与工具层治理清单](/security/offensive/mcp-enterprise-threat-guide-six-attack-classes-2026) - 2026-10-14 MCP 治理面 / 工具层 enforcement / 企业落地清单
 
 ### 🛡️ 2026 漏洞深度分析（新增）
+- [kubectl cp Windows 路径穿越 RCE 深度分析：客户端漏洞为何总是补丁盲区](/security/offensive/kubectl-cp-windows-path-traversal-rce-2026) - 2026-10-13 kubectl cp 路径拼接 / Windows 分隔符语义 / 客户端侧攻击面 / 补丁盲区成因
+- [LMCache CVE-2026-105192 深度分析：多进程 ZeroMQ 传输层的未认证 RCE](/security/offensive/lmcache-zeromq-unauth-rce-cve-2026-105192-2026) - 2026-10-13 AI 推理基础设施 / ZeroMQ 无认证 / KV cache 共享面
+- [Atlassian CVE-2026-21589 深度剖析：9.3 分任意文件读取与 PoC 公开后 24 小时的在野利用](/security/offensive/atlassian-cve-2026-21589-file-read-2026) - 2026-10-10 CVSS 9.3 / 任意文件读取 / PoC 24h 在野
+- [Next.js CVE-2026-94545 解剖：一条查询参数打进 ROP 链的 9.5 分 RCE](/security/offensive/nextjs-cve-2026-94545-og-image-rce-2026) - 2026-10-10 CVSS 9.5 / og-image 查询参数 / ROP 链
 - [CVE-2026-61560 深度拆解：一个 MCP 默认配置如何变成 GitLab 账号接管链](/security/offensive/cve-2026-61560-gitlab-mcp-unauthenticated-sse-takeover-2026) - 2026-09-24 CVSS 9.8 / 未认证 SSE + upload_markdown 路径遍历 / /proc/self/environ 提取 PAT / 合法功能作渗出通道 / 自建 MCP 加固清单
 - [Rust Miri 缓存泄密事件：CI 缓存正在替 PR 偷 secrets](/security/offensive/rust-miri-ci-cache-secret-leak-2026) - 2026-09-24 Miri 全量环境变量写入 target/ / GitHub Actions 缓存 PR 读权限模型 / 覆盖 commit 掩盖追踪 / 一小时修复 PR / 缓存信任模型三纪律
 - [CVE-2026-94127 深度分析：F5 BIG-IP APM OAuth 堆溢出 RCE 与 CISA KEV 应急响应](/security/offensive/cve-2026-94127-f5-big-ip-apm-oauth-rce-2026) - 2026-09-22 CVSS 9.8 / APM access policy + OAuth profile / 数据面未认证 RCE / CISA KEV 同日收录 / 日志取证与修复清单
@@ -136,7 +143,11 @@ tags:
 - [Wiz 90 天 AI 蜜罐报告：攻击者如何把 LiteLLM 与 MCP 服务器变成提款机](/security/offensive/wiz-ai-infrastructure-honeypot-90days-2026) - 2026-09-14 单字符 Bearer 绕过 / 内存提取 master key / Qilin 勒索关联 / .claude/unicorn 伪装 / XMRig
 - [PaperCut AI Agent 蜂群事件复盘：一个攻击者、数百个 Agent、26 秒攻破 11 家组织](/security/offensive/greynoise-papercut-ai-agent-swarm-395-orgs-2026) - 2026-09-15 GreyNoise / Codex+DeepSeek 编排 / CVE-2026-81578+82078 链 / 48 国 395 组织 440 台 / 7 分钟域管 / agents gone wild
 
+### 🔍 日志与数字取证
+- [从原始镜像里挖出被删的 Windows 事件日志：Go 取证库 go-evtx-carver 的 carving 技术拆解](/security/offensive/evtx-carving-go-forensics-library-2026) - 2026-10-19 EVTX file→chunk→record 三层结构 / 字段名在 chunk 缓存、值在 record / chunk + record + LZNT1 三种 carving 策略 / 勒索软件整盘加密后的日志恢复
+
 ### 🔬 供应链与工具链安全
+- [区块链 C2 崛起：从 EtherHiding 看供应链攻击如何劫持 npm、Terraform 与 Go Modules](/security/offensive/blockchain-c2-etherhiding-supply-chain-go-modules-2026) - 2026-10-09 智能合约 C2 / 供应链横向劫持 / Go module 防线
 - [Miasma 供应链蠕虫攻击深度分析：2026 年开源生态的至暗时刻](/security/offensive/miasma-supply-chain-worm-attack-2026) - 2026-06-15
 - [gosentry 实战：Go 模糊测试工具链革命——LibAFL 引擎与语法 Fuzzing](/security/offensive/gosentry-go-fuzzing-libafl-toolchain-2026) - 2026-06-23
 - [Sapphire Sleet 国家级 npm 供应链攻击深度复盘：Mastra AI 19 分钟投毒 140+ 包的完整技术链](/security/offensive/sapphire-sleet-mastra-ai-npm-supply-chain-2026) - 2026-07-10 朝鲜 APT 攻击
@@ -213,7 +224,9 @@ tags:
 
 ---
 
-## 📊 日志分析与取证（规划中）
+## 📊 日志分析与取证（部分已上线）
+
+> 已上线文章见上方「🔍 日志与数字取证」；以下为后续规划目录。
 
 ### 安全日志分析
 - **安全日志收集与分析** - 日志收集与安全分析

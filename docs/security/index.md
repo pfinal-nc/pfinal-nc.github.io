@@ -149,3 +149,10 @@ tags:
 - **HackerOne / Bugcrowd** - 众测平台，学习真实漏洞案例
 
 > 💡 **安全提示**：安全研究内容仅供学习和防御之用，未经授权的测试是违法的。在任何系统上进行安全测试前，请确保获得明确的书面授权。
+
+## 📚 本目录全部文章
+
+> 按发布时间倒序，包含此前未列入导航的文章。
+
+- [软件供应链安全 2026：SBOM、SLSA、Sigstore 签名与 AI 时代的信任链加固](/security/supply-chain-sbom-slsa-sigstore-2026) — 2026-06-01
+- [Web 安全实战 2026：OWASP Top 10 漏洞防御完整指南（SQL 注入/XSS/CSRF/越权/SSRF）](/security/web-security-defense-guide) — 2026-04-24

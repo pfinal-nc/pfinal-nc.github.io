@@ -4,7 +4,7 @@ date: 2026-07-01
 tags:
   - ai
   - agent
-  - Claude Code
+  - claude code
   - 工程化
   - 开发工具
 keywords:

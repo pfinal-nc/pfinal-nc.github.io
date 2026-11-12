@@ -22,4 +22,4 @@ title: RxJS 操作符
 - [tap 副作用操作符 - RxJS](tap)
 - [zip 配对组合 - RxJS 操作符](zip)
 
-返回 [上一级](/rxjs/)
+返回 [上一级](/dev/backend/rxjs/)

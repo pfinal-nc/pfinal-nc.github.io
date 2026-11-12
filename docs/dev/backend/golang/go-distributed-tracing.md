@@ -13,7 +13,7 @@ keywords:
 tags:
   - golang
   - distributed-tracing
-  - Observability
+  - observability
   - microservices
 recommend: 后端工程
 ---

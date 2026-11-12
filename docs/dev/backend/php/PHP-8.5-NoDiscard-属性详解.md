@@ -3,7 +3,7 @@ title: PHP 8.5 NoDiscard 属性 - 告别静默错误，提升代码质量
 date: 2025-07-19 10:30:00
 tags:
   - php
-  - PHP8
+  - php8
   - 属性
 keywords:
   - PHP8

@@ -3,7 +3,7 @@ title: "Mago 1.0.0 深度解析：Rust 重写 PHP 工具链，31 倍提速背后
 date: 2026-07-22
 tags:
   - php
-  - Rust
+  - rust
   - toolchain
   - static-analysis
   - dev-tools

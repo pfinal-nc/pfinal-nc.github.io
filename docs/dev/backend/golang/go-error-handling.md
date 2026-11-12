@@ -1,7 +1,7 @@
 ---
 title: Go 错误处理实战 2026：7 种模式从 errors.Is 到生产级 Wrapping
 date: 2026-04-27
-tags: [Golang, 错误处理, 最佳实践]
+tags: [golang, 错误处理, 最佳实践]
 description: Go 错误处理 7 种模式实战 2026：sentinel error、自定义类型、errors.Is/As、wrapping 链、多错误聚合、panic 恢复、生产级日志，附完整代码示例
 recommend: 后端工程
 keywords:

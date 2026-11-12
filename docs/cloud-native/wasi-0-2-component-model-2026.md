@@ -2,7 +2,7 @@
 title: "WASI 0.2 与 Component Model 深度解析：从边缘运行时到 WASI 0.3 原生异步"
 description: "深入解析 WASI 0.2 的 Component Model 与 WIT 接口体系、wasi-http、wasi-sockets 网络能力，结合 wasmCloud、Fermyon Spin 的实践与 WASI 0.3 原生异步的演进路径"
 date: 2026-05-10
-tags: [WebAssembly, WASI, Component-Model, 边缘计算, wasmCloud, Spin, Serverless]
+tags: [webassembly, wasi, component-model, 边缘计算, wasmcloud, spin, serverless]
 category: [云原生]
 ---
 

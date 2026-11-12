@@ -15,7 +15,7 @@ keywords:
 tags:
   - learning-path
   - roadmap
-  - Tutorial
+  - tutorial
 recommend: 后端工程
 ---
 # 🗺️ PFinalClub 学习路线图

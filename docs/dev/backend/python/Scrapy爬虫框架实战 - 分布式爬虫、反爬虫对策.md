@@ -10,8 +10,8 @@ keywords:
   - 爬虫性能优化
   - Python爬虫实战
 tags:
-  - Python
-  - Scrapy
+  - python
+  - scrapy
   - 分布式爬虫
   - 反爬虫
   - 数据采集

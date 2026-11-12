@@ -3,7 +3,7 @@ title: Laravel 13.20 第一方图像处理实战：Illuminate\Image 不可变 AP
 date: 2026-08-05
 tags:
   - php
-  - Laravel
+  - laravel
   - 图像处理
 keywords:
   - Laravel 13.20

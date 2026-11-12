@@ -15,8 +15,8 @@ keywords:
 author: PFinal 南丞
 category: DevOps
 tags:
-  - Kubernetes
-  - DevOps
+  - kubernetes
+  - devops
   - service
   - ingress
   - 网络

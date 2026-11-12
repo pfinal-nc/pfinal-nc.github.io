@@ -6,7 +6,7 @@ tags:
   - security
   - fuzzing
   - gosentry
-  - LibAFL
+  - libafl
   - vulnerability
 keywords:
   - gosentry

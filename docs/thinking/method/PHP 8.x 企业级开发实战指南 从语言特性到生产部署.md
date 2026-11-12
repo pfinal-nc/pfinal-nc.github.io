@@ -19,12 +19,12 @@ course:
   module: 1
   lesson: 1.1
 tags:
-  - Architecture
-  - HTTP
+  - architecture
+  - http
   - php
-  - Performance
+  - performance
   - security
-  - Tutorial
+  - tutorial
 recommend: 思维方法
 ---
 # PHP 8.x 企业级开发实战指南：从语言特性到生产部署

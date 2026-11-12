@@ -12,9 +12,9 @@ keywords:
   - 模块化开发
   - 轻量级框架
 tags:
-  - Python
-  - Flask
-  - Web开发
+  - python
+  - flask
+  - web开发
   - 模块化
   - 蓝图设计
 recommend: 后端工程

@@ -3,7 +3,7 @@ title: "LangChain vs LlamaIndex 2026 深度对比：AI 应用框架选型指南"
 date: 2026-06-06
 tags:
   - ai
-  - Python
+  - python
   - llm
   - rag
 keywords:

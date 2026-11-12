@@ -5,8 +5,8 @@ tags:
   - golang
   - go-1-28
   - arm64
-  - NEON
-  - SIMD
+  - neon
+  - simd
   - performance
   - vectorization
   - optimization

@@ -11,9 +11,9 @@ keywords:
   - 性能优化
 tags:
   - golang
-  - Memory
-  - GC
-  - Performance
+  - memory
+  - gc
+  - performance
 recommend: 后端工程
 ---
 # Go 内存管理与垃圾回收：深入理解 GC 机制

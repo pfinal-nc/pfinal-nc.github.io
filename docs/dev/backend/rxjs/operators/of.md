@@ -10,10 +10,10 @@ keywords:
   - 创建Observable
 tags:
   - 前端开发
-  - JavaScript
-  - Operators
-  - RxJS
-  - Testing
+  - javascript
+  - operators
+  - rxjs
+  - testing
 recommend: 后端工程
 ---
 # of

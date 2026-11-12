@@ -2,7 +2,7 @@
 title: "内部开发者平台 2026：Backstage + Argo CD + Crossplane 三层模型与黄金路径工程实践"
 description: "基于 Gartner 80% 大型组织采用平台的预测，拆解 IDP 三层模型（Backstage 门户、Argo CD GitOps、Crossplane 控制平面）、黄金路径工程、四类反模式与从 0 到 1 的 12 个月落地路线图"
 date: 2026-07-01
-tags: [Platform Engineering, IDP, Backstage, Argo CD, Crossplane, GitOps, 内部开发者平台, 黄金路径]
+tags: [platform engineering, idp, backstage, argo cd, crossplane, gitops, 内部开发者平台, 黄金路径]
 category: [DevOps, 云原生]
 ---
 

@@ -3,7 +3,7 @@ title: 9 个微型 SaaS 理念 2026 - 低竞争高需求的市场机会
 date: 2025-07-07 15:00:00
 tags:
   - golang
-  - SaaS
+  - saas
   - 创业
   - 编程技术
 author: PFinal南丞

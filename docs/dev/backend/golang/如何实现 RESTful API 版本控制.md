@@ -3,8 +3,8 @@ title: Go 3 招 API 版本控制 2026 - 生产环境稳如老狗的实战技巧
 date: 2025-08-18 00:00:00
 tags:
   - golang
-  - RESTful API
-  - API 版本控制
+  - restful api
+  - api 版本控制
   - 微服务
 author: PFinal南丞
 keywords:

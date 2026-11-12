@@ -14,4 +14,4 @@ title: 实战项目
 - [Project 5: 统计模块](project-5-statistics)
 - [Project 6: 部署上线](project-6-deployment)
 
-返回 [上一级](/golang-backend/)
+返回 [上一级](/courses/golang-backend/)

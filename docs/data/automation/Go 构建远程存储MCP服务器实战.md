@@ -4,7 +4,7 @@ date: 2025-07-01 12:00:00
 tags: 
     - golang
     - 远程存储
-    - MCP
+    - mcp
     - 编程技术
 description: 结合实战案例，详细介绍如何用 Go 语言构建高效的远程存储 MCP 服务器，涵盖架构设计、关键实现、技术挑战与最佳实践。
 author: PFinal南丞

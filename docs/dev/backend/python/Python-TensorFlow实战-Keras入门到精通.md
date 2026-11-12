@@ -11,7 +11,7 @@ keywords:
   - Python TensorFlow 实战：Keras 入门到精通
   - PFinalClub
   - 技术博客
-tags: [Python, TensorFlow, Keras, 深度学习, 神经网络]
+tags: [python, tensorflow, keras, 深度学习, 神经网络]
 difficulty: 🟡 进阶
 category: dev/backend/python
 recommend: 后端工程

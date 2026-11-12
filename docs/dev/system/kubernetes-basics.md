@@ -11,9 +11,9 @@ keywords:
   - DevOps
   - 云原生
 tags:
-  - Kubernetes
-  - Docker
-  - DevOps
+  - kubernetes
+  - docker
+  - devops
 recommend: 后端工程
 ---
 # Kubernetes 基础入门：从容器编排到生产实践

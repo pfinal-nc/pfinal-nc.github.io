@@ -17,7 +17,7 @@ keywords:
   - PFinalClub
 recommend: 后端工程
 tags:
-  - Wails
+  - wails
   - dev
 ---
 # Wails 教程系列 - 简介
@@ -305,3 +305,18 @@ err := wails.Run(&options.App{
 ---
 
 如果你已经准备好把 Go 语言的强大能力带到桌面应用领域，这个系列会给你完整的路径。基于官方文档的技术深度，我们会深入探讨每个核心概念的实际应用。开始你的 Wails 之旅吧！
+
+## 📚 本目录全部文章
+
+> 按发布时间倒序，包含此前未列入导航的文章。
+
+- [Wails 桌面应用开发 - Go 跨平台框架完整指南](/dev/backend/golang/wails/README) — 2026-09-02
+- [Wails 教程系列 - WebKit 与生命周期深度解析](/dev/backend/golang/wails/00-webkit-and-lifecycle) — 2025-08-22
+- [Wails 教程系列 - 环境搭建与安装](/dev/backend/golang/wails/01-installation) — 2025-08-22
+- [Wails 教程系列 - 创建你的第一个应用](/dev/backend/golang/wails/02-first-app) — 2025-08-22
+- [Wails 教程系列 - 核心概念详解](/dev/backend/golang/wails/03-core-concepts) — 2025-08-22
+- [Wails 教程系列 - 后端开发 (Go)](/dev/backend/golang/wails/05-backend-development) — 2025-08-22
+- [Go systray 构建系统托盘应用实战 2026 - Wails v2 集成完整指南](/dev/backend/golang/wails/使用-Go-systray-构建智能系统托盘应用-Wails-v2-集成实战) — 2025-01-28
+- [Wails 教程系列 - 前端开发实战指南](/dev/backend/golang/wails/04-frontend-development) — 2025-01-15
+- [Fyne vs Wails 2026：Go 桌面框架选型对比（性能 / 架构 / 开发体验）](/dev/backend/golang/wails/Fyne与Wails深度对比-选择最适合你的Go桌面应用框架) — 2024-12-19
+- [Wails Mac 桌面应用开发实战 2026：原生特性 + App Store 上架完整指南](/dev/backend/golang/wails/基于Wails的Mac桌面应用开发) — 2023-10-18

@@ -11,7 +11,7 @@ keywords:
   - Python 机器学习入门：Scikit-learn 实战指南
   - PFinalClub
   - 技术博客
-tags: [Python, 机器学习, Scikit-learn, 数据科学, AI]
+tags: [python, 机器学习, scikit-learn, 数据科学, ai]
 difficulty: 🟢 入门
 category: dev/backend/python
 recommend: 后端工程

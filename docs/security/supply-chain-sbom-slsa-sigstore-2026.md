@@ -2,7 +2,7 @@
 title: "软件供应链安全 2026：SBOM、SLSA、Sigstore 签名与 AI 时代的信任链加固"
 description: "实操 SBOM 生成、SLSA 分级构建、Sigstore keyless 签名与 Cosign 验证，结合 in-toto 溯源、Kyverno 准入控制和 AI 编码 Agent 带来的新型供应链攻击面，给出 CI 可落地加固方案"
 date: 2026-06-01
-tags: [供应链安全, SBOM, SLSA, Sigstore, Cosign, 容器安全, DevSecOps, AI安全]
+tags: [供应链安全, sbom, slsa, sigstore, cosign, 容器安全, devsecops, ai安全]
 category: [安全]
 ---
 

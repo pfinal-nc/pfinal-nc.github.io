@@ -127,3 +127,11 @@ tags:
 ---
 
 *本页面持续更新，汇集了PFinalClub最优质的PHP技术内容。最后更新：2026年9月*
+
+## 📚 本目录全部文章
+
+> 按发布时间倒序，包含此前未列入导航的文章。
+
+- [构建可维护的正则表达式系统 pfinal-regex-center 设计与实现](/dev/backend/php/构建可维护的正则表达式系统-pfinal-regex-center设计与实现) — 2025-01-28
+- [TCP/IP HTTP 学习 - 使用指南](/dev/backend/php/TCP-IP-HTTP学习) — 2020-06-09
+- [Laravel 手工构建 - 使用指南](/dev/backend/php/Laravel 手工构建) — 2019-01-16

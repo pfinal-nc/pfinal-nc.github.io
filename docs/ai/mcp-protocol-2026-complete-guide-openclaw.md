@@ -7,7 +7,7 @@ tags:
   - agent
   - openclaw
   - golang
-  - Python
+  - python
 keywords:
   - MCP协议
   - Model Context Protocol

@@ -5,7 +5,7 @@ tags:
   - ai
   - mcp
   - security
-  - DevOps
+  - devops
 keywords:
   - MCP协议
   - 无状态MCP

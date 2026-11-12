@@ -3,7 +3,7 @@ title: "Go 1.28 sync.Sharded 分片计数器实战：从缓存行伪共享到百
 date: 2026-07-26
 tags:
   - golang
-  - Performance
+  - performance
   - concurrency
   - go1-28
 keywords:

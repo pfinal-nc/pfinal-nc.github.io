@@ -4,7 +4,7 @@ date: 2026-07-10
 tags:
   - golang
   - go-1.27
-  - Performance
+  - performance
   - compiler
   - memory-allocation
 keywords:

@@ -2,12 +2,12 @@
 title: Rust 异步运行时七年战争：从 Tokio 垄断到 io_uring 破局，Apache Iggy 迁移实战与生态分裂深度解析
 date: 2026-07-24
 tags:
-  - Rust
+  - rust
   - async
   - io_uring
-  - Tokio
-  - DevOps
-  - Performance
+  - tokio
+  - devops
+  - performance
 keywords:
   - Rust async
   - io_uring

@@ -13,10 +13,10 @@ keywords:
   - 性能优化
   - 数据分析
 tags:
-  - Python
-  - Polars
-  - Pandas
-  - DuckDB
+  - python
+  - polars
+  - pandas
+  - duckdb
   - 性能优化
 category: Python
 recommend: 后端工程

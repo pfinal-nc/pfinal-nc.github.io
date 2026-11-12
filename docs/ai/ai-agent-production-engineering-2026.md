@@ -14,8 +14,8 @@ keywords:
 tags:
   - ai
   - agent
-  - MCP
-  - LLM
+  - mcp
+  - llm
   - 工程化
 category: ai
 recommend: AI工程

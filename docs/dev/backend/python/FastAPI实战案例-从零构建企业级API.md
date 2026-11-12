@@ -13,8 +13,8 @@ keywords:
   - API文档
   - 完整流程
 tags:
-  - Python
-  - FastAPI
+  - python
+  - fastapi
   - case-study
   - enterprise
   - architecture

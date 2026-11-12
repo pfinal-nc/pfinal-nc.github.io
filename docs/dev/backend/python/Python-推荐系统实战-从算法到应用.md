@@ -11,7 +11,7 @@ keywords:
   - Python 推荐系统实战：从算法到应用
   - PFinalClub
   - 技术博客
-tags: [Python, 推荐系统, 机器学习, 深度学习, 协同过滤]
+tags: [python, 推荐系统, 机器学习, 深度学习, 协同过滤]
 difficulty: 🟡 进阶
 category: dev/backend/python
 recommend: 后端工程

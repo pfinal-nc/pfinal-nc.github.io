@@ -3,15 +3,15 @@ title: PyTorch 2.14 深度解析：nccl2 落地、容错成为 c10d 一等公民
 date: 2026-09-08
 author: PFinal南丞
 tags:
-  - Python
-  - PyTorch
+  - python
+  - pytorch
   - 深度学习
   - 分布式训练
   - 性能优化
   - nccl2
   - fault-tolerance
   - c10d
-  - NVGEMM
+  - nvgemm
   - apple-silicon
 keywords:
   - PyTorch 2.14

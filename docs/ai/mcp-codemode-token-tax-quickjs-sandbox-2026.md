@@ -2,9 +2,9 @@
 title: "MCP Codemode 模式：解决 Agent 的 Token 税问题——Pi 0.99 的沙箱化工具调用架构解析"
 date: 2026-10-13
 tags:
-  - AI
-  - MCP
-  - Agent
+  - ai
+  - mcp
+  - agent
   - 安全
 keywords:
   - MCP Codemode

@@ -4,13 +4,13 @@ date: 2026-07-09
 author: PFinal南丞
 description: "Grok 4.5 编码 Agent 实战 2026 完全指南：xAI + Cursor 联合训练的 MoE 架构模型，$2/$6 百万 token 定价 + 80 TPS 推理速度 + 4.2× 更少输出 token，Terminal-Bench 83.3% 与 DeepSWE 62% 基准，附 API 实战与性价比策略。"
 tags:
-  - Grok4.5
-  - xAI
-  - Cursor
-  - AI编码
+  - grok4.5
+  - xai
+  - cursor
+  - ai编码
   - agent
-  - LLM
-  - MoE
+  - llm
+  - moe
 category: ai
 recommend: AI工程
 keywords:

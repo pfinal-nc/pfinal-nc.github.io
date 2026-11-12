@@ -1,7 +1,7 @@
 ---
 title: 用 Go 开发 MCP Server：让你的工具成为 AI Agent 的能力
 date: 2026-06-05
-tags: [golang, AI, MCP, Agent]
+tags: [golang, ai, mcp, agent]
 description: 手把手教你用 Go 语言（mcp-go 库）开发一个生产级 MCP Server，涵盖 Tools、Resources、Prompts 三大原语，stdio 与 SSE 双传输模式，并接入 Claude Desktop 实战演示。
 recommend: 后端工程
 keywords:

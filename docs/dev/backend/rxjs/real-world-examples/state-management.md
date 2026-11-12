@@ -10,9 +10,9 @@ keywords:
   - 实战
 tags:
   - 前端开发
-  - JavaScript
-  - React
-  - RxJS
+  - javascript
+  - react
+  - rxjs
 recommend: 后端工程
 ---
 # 状态管理实战

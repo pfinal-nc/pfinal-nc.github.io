@@ -12,7 +12,7 @@ keywords:
   - Python 时间序列分析：从基础到实战
   - PFinalClub
   - 技术博客
-tags: [Python, 时间序列, 数据分析, Pandas, Prophet, 机器学习]
+tags: [python, 时间序列, 数据分析, pandas, prophet, 机器学习]
 difficulty: 🟡 进阶
 category: dev/backend/python
 recommend: 后端工程

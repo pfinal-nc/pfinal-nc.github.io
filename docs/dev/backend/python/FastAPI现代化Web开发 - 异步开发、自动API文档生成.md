@@ -12,10 +12,10 @@ keywords:
   - Python
   - Web开发
 tags:
-  - Python
-  - FastAPI
+  - python
+  - fastapi
   - 异步编程
-  - API文档
+  - api文档
 recommend: 后端工程
 ---
 

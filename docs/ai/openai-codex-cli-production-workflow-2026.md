@@ -5,9 +5,9 @@ tags:
   - ai
   - agent
   - 开发工具
-  - OpenAI
-  - Codex
-  - CLI
+  - openai
+  - codex
+  - cli
 keywords:
   - OpenAI Codex
   - Codex CLI

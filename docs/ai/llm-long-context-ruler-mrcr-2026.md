@@ -1,7 +1,7 @@
 ---
 title: "LLM 长上下文 1M Token 时代：RULER 与 MRCR v2 评测体系深度解读"
 date: 2026-06-25T09:00:00+08:00
-tags: [AI, LLM, 评测, 长上下文, RULER, MRCR, Claude, Gemini, 工具]
+tags: [ai, llm, 评测, 长上下文, ruler, mrcr, claude, gemini, 工具]
 keywords: [LLM, 上下文窗口, RULER, MRCR, 长上下文评测, Claude Opus 4.8, Gemini 3, GPT-5.5]
 category: ai
 description: "2026 年所有旗舰 LLM 都宣称 1M+ token 上下文窗口,但 RULER、MRCR v2、NoLiMa 三大基准测试显示'宣传值'与'有效值'差距高达 30-60 分。本文系统拆解三大评测体系,给出长上下文生产实践指南。"

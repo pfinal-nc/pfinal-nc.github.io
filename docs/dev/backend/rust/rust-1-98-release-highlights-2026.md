@@ -15,7 +15,7 @@ keywords:
   - 升级指南
 tags:
   - rust
-  - Rust 1.98
+  - rust 1.98
   - 语言特性
   - 标准库
   - 兼容性

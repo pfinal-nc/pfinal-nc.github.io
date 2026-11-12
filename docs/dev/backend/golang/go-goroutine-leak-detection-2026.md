@@ -4,7 +4,7 @@ date: "2026-06-13"
 tags:
   - golang
   - concurrency
-  - Performance
+  - performance
   - pprof
   - debugging
 keywords:

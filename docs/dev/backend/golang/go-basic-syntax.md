@@ -11,7 +11,7 @@ keywords:
   - Go 指针
 tags:
   - golang
-  - Tutorial
+  - tutorial
   - backend
 recommend: 后端工程
 ---

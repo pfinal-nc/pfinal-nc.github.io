@@ -1,7 +1,7 @@
 ---
 title: Go 单元测试实战 2026：6 种测试模式 + Fuzz 模糊测试完整接入
 date: 2026-04-27
-tags: [Golang, 测试, 单元测试, TDD]
+tags: [golang, 测试, 单元测试, tdd]
 description: Go 测试 6 种模式实战 2026：表驱动、testify Mock、httptest、Benchmark、Fuzz 模糊测试、子测试，覆盖率从 0 到 90% 的完整路径 + CI 集成
 recommend: 后端工程
 keywords:

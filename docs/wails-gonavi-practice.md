@@ -2,7 +2,7 @@
 title: "Wails 桌面应用实战 2026：GoNavi 多数据库工具 + TinyRDM 深度评测与生态分析"
 date: 2025-03-10 14:30:00
 tags:
-  - Wails
+  - wails
   - golang
   - 桌面应用
   - 工具推荐

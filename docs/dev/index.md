@@ -16,7 +16,7 @@ tags:
   - dev
   - golang
   - php
-  - Python
+  - python
   - 数据库
 sticky: true
 date: 2025-12-19 12:30:00

@@ -8,7 +8,8 @@ cover: /images/covers/ai.svg
 recommend: AI工程
 keywords:
   - ai
-  - ai
+  - AI Agent
+  - MCP
   - 技术博客
   - 开发
 ---
@@ -76,6 +77,14 @@ keywords:
 | 50 | 📉 代码 Slop 量化 | [AI 代码 Slop 终于有了数字：Verbosity 与 Erosion 指标，Agent 代码比人类啰嗦一倍、腐化一倍](/ai/agent-code-slop-verbosity-erosion-metrics-2026) | 2026-09-21 |
 | 51 | 🦀 Rust Agent Runtime | [Rust 正在接管 Agent 基础设施：从 Codex CLI 到 Kitesurf 的 substrate shift](/ai/rust-eating-agent-infrastructure-2026) | 2026-09-23 |
 | 52 | 🔐 工具输出泄密 | [MCP 工具输出泄密：你的 settings 工具正在把密钥喂给模型](/ai/mcp-tool-output-secret-leakage-class-2026) | 2026-09-24 |
+| 53 | 🔐 密码学溯源 | [Claude 30 分钟破解 NIST ECDSA 曲线种子之谜：25 年悬案终结于 drand48 与 1997 年的 Unix 时间戳](/ai/claude-ecdsa-curve-seeds-nsa-puzzle-2026) | 2026-10-19 |
+| 54 | 🦀 AI 生成客户端 | [Sextant：一个 100% 由 AI 生成的 Kubernetes 客户端，如何一周做到比 Lens 快 4–7 倍、省一半内存](/ai/sextant-ai-generated-rust-kubernetes-client-2026) | 2026-10-19 |
+| 55 | 📏 AI 可见性度量 | [AI 可见性能像 SEO 排名那样度量吗：把 42% 当成样本统计量而不是一个坐标](/ai/ai-visibility-measurement-geo-methodology-2026) | 2026-10-19 |
+| 56 | 🐳 Docker Agent | [Docker Agent 实战：用 YAML 和 OCI Registry 构建、分发、运行你的 AI Agent 团队](/ai/docker-agent-yaml-declarative-runtime-2026) | 2026-10-09 |
+| 57 | 🖥️ VS Code 1.141 | [VS Code 1.141：从编辑器到 AI Agent 管理控制台的转型——会话工作树、终端沙盒与 Harness SDK 深度解读](/ai/vscode-141-agent-console-terminal-sandbox-2026) | 2026-10-12 |
+| 58 | 🦀 Janus 本地推理 | [Janus：一个 Go 二进制搞定本地 LLM 推理——Vulkan + GGUF + OpenAI 兼容 API 全解析](/ai/janus-go-vulkan-local-llm-runner-2026) | 2026-10-12 |
+| 59 | 🧮 MCP Codemode | [MCP Codemode 模式：解决 Agent 的 Token 税问题——Pi 0.99 的沙箱化工具调用架构解析](/ai/mcp-codemode-token-tax-quickjs-sandbox-2026) | 2026-10-13 |
+| 60 | 📨 MCP Events | [MCP Events in ChatGPT 实战：让 Agent 从“人找它”变成“事件推它”](/ai/mcp-events-chatgpt-event-driven-agent-2026) | 2026-10-14 |
 
 **学习路径建议**：从 1→7 顺序阅读，1 是入门基础，3 和 5 是 2026 必备技能，7 是前沿探索。8 打通 Agent 到前端最后一公里，9 是 AI 编程工具链巅峰之作。10-12 是 MCP 协议生态最新实战，从协议设计到生产级集成完整覆盖。13-15 聚焦 AI 编程终端 Agent 的工程化、团队治理与协议规范迁移。18-19 进入 Agent 工程化治理与持久化执行的新阶段：18 用 SDD 治理 Vibe Coding 碎片化（GitHub Spec Kit 实战），19 详解 LangGraph 1.0 Durable Execution + Human-in-the-Loop 生产级架构（PostgresSaver/RedisSaver/HITL 中断恢复）。23-27 探索 AI Agent 信息架构新范式、编码 Agent 落地与企业级授权治理：23 Context Engineering 揭示从 Prompt Engineering 到全局信息架构的跃迁，24 X MCP Server 实现零配置托管式 150+ API 端点集成，25 是 Claude Sonnet 5 发布后的生产级 Agent 编码落地指南，26 详解 MCP 企业托管授权（EMA）与 ID-JAG 如何终结企业 MCP 部署的逐服务 OAuth 噩梦，27 深度解读 Bun 用 64 Claude Agent 从 Zig 迁移到 Rust 的 AI 大规模重写事件。30 紧跟 2026-07-28 规范，把 server-rendered UI 和长时任务这两个企业级扩展落地成可运行代码。
 
@@ -119,11 +128,11 @@ keywords:
 
 ## 📊 系列文章统计
 
-- **AI Agent 全栈**：34 篇（2026 年新增 32 篇，含 AG-UI 前端集成、OpenCode 架构、Agent Skills、MCP 路线图、OpenClaw 实战、Harness Engineering、Codex CLI、MCP Spec RC、Safari MCP、AI 漏洞挖掘范式、GitHub Spec Kit、LangGraph 1.0、GPT-5.6 出口管制、Grok 4.5 编码 Agent、ACL 推理漂移评测、Context Engineering、X MCP Server、Claude Sonnet 5、Bun Rust 重写、Kimi K3、AI Agent 记忆投毒、MCP Apps/Tasks 扩展、Codex 0.145、Karpathy Opus 5、Copilot MCP 治理、MCP 记忆生态）
+- **AI Agent 全栈**：60 篇（2026 年新增 58 篇，最新为 10-19 的 ECDSA 曲线种子溯源、Sextant AI 生成 K8s 客户端、AI 可见性度量方法论；含 AG-UI 前端集成、OpenCode 架构、Agent Skills、MCP 路线图、OpenClaw 实战、Harness Engineering、Codex CLI、MCP Spec RC、Safari MCP、AI 漏洞挖掘范式、GitHub Spec Kit、LangGraph 1.0、GPT-5.6 出口管制、Grok 4.5 编码 Agent、ACL 推理漂移评测、Context Engineering、X MCP Server、Claude Sonnet 5、Bun Rust 重写、Kimi K3、AI Agent 记忆投毒、MCP Apps/Tasks 扩展、Codex 0.145、Karpathy Opus 5、Copilot MCP 治理、MCP 记忆生态）
 - **RAG / LLM 应用**：8 篇
 - **模型接入实战**：2 篇（Claude Sonnet 4.6 + Gemini 3.5 Flash）
 - **LLM 评测与协议演进**：4 篇（RULER/MRCR 长上下文 + HSCodeComp 推理漂移 + Go Agent Eval 框架 + OWASP LLM 安全红队）
-- **累计 51 篇**，更新频率：每周 2-3 篇热点文章同步
+- **累计 74 篇**，更新频率：每周 2-3 篇热点文章同步（最近一次批量更新：2026-10-19）
 
 ---
 

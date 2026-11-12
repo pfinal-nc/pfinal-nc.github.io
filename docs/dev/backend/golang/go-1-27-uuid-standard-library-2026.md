@@ -7,7 +7,7 @@ tags:
   - uuid
   - standard-library
   - database
-  - Performance
+  - performance
 keywords:
   - Go 1.27
   - uuid标准库

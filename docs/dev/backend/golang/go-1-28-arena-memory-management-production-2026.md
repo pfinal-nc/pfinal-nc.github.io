@@ -6,7 +6,7 @@ tags:
   - go-1.28
   - arena
   - memory-management
-  - Performance
+  - performance
   - gc
 keywords:
   - Go 1.28

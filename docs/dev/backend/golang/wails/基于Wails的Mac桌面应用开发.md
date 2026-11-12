@@ -3,7 +3,7 @@ title: "Wails Mac 桌面应用开发实战 2026：原生特性 + App Store 上�
 date: 2023-10-18 11:06:22
 tags:
   - golang
-  - Wails
+  - wails
 description: Wails Mac 桌面应用开发实战 2026：macOS 原生特性集成、系统对话框、窗口控制、App Store 发布完整指南。含代码签名和公证流程。
 author: PFinal南丞
 keywords:

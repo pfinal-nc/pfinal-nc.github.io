@@ -2,7 +2,7 @@
 title: "Laravel Carbon 类 - 使用指南"
 date: 2022-07-04 15:29:24
 tags:
-  - Laravel
+  - laravel
   - php
 description: Laravel-Carbon-类使用
 author: PFinal南丞

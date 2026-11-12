@@ -12,11 +12,11 @@ keywords:
   - HTTP请求
 tags:
   - 前端开发
-  - HTTP
-  - JavaScript
-  - Operators
-  - Performance
-  - RxJS
+  - http
+  - javascript
+  - operators
+  - performance
+  - rxjs
 recommend: 后端工程
 ---
 # mergeMap (又名 flatMap)

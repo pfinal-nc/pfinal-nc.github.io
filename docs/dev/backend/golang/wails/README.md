@@ -11,10 +11,10 @@ keywords:
   - Wails性能优化
 tags:
   - ai
-  - Architecture
+  - architecture
   - 后端开发
-  - Desktop
-  - Git
+  - desktop
+  - git
   - golang
 recommend: 后端工程
 ---

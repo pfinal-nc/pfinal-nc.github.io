@@ -16,10 +16,10 @@ course:
   lesson: 1.6
 tags:
   - 前端开发
-  - JavaScript
-  - Operators
-  - Performance
-  - RxJS
+  - javascript
+  - operators
+  - performance
+  - rxjs
   - security
 recommend: 后端工程
 ---

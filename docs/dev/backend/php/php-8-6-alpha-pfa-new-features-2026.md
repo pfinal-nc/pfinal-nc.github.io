@@ -5,7 +5,7 @@ tags:
   - php
   - php-8.6
   - functional-programming
-  - Performance
+  - performance
   - language-features
 keywords:
   - PHP8

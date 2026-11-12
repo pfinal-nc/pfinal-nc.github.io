@@ -4,8 +4,8 @@ description: "RAG 系统架构实战 2026：深入解析检索增强生成 5 大
 date: 2026-04-15 14:00:00
 tags:
   - ai
-  - RAG
-  - LLM
+  - rag
+  - llm
   - 向量数据库
   - 检索系统
   - 知识库

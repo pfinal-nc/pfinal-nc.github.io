@@ -21,10 +21,10 @@ keywords:
 recommend: 后端工程
 tags:
   - ai
-  - Architecture
+  - architecture
   - 后端开发
   - golang
-  - HTTP
+  - http
   - php
 ---
 

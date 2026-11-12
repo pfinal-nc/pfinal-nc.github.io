@@ -1,7 +1,7 @@
 ---
 title: "LangGraph 1.0 Durable Execution 实战：持久化 Agent 工作流引擎的生产级架构与 Human-in-the-Loop 模式"
 date: 2026-07-08T09:00:00+08:00
-tags: [Python, AI, Agent, LangGraph, LangChain, durable-execution, human-in-the-loop]
+tags: [python, ai, agent, langgraph, langchain, durable-execution, human-in-the-loop]
 keywords: [LangGraph 1.0, Durable Execution, Checkpoint, PostgresSaver, Human-in-the-Loop, Pregel, StateGraph, Agent 持久化]
 category: ai
 description: "LangGraph 1.0（2025-10-22 GA）作为首个生产级持久化 Agent 框架，被 Uber、LinkedIn、Klarna、J.P. Morgan 等企业采用。本文从 Durable State 三种持久化模式（sync/async/exit）、Checkpointer 机制（PostgresSaver/RedisSaver/DynamoDBSaver）、Human-in-the-Loop 中断恢复、Pregel 图执行模型四个维度，配合生产级可运行代码，系统拆解 2026 年 Agent 框架的工程化标准。"

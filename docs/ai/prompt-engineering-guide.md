@@ -5,8 +5,8 @@ category: ai
 tags:
   - ai
   - 提示词工程
-  - LLM
-  - ChatGPT
+  - llm
+  - chatgpt
 description: 2026 版 AI 提示词工程实战：掌握零样本、少样本、CoT 思维链、角色设定等技巧，显著提升 LLM 输出质量。
 recommend: AI工程
 keywords:

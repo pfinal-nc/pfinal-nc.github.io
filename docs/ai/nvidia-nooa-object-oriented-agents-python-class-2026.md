@@ -3,10 +3,10 @@ title: Nvidia NOOA 深度解析：一个 Python 类就是一个 AI Agent 的面�
 date: 2026-08-05
 tags:
   - ai
-  - Python
+  - python
   - agent
   - nvidia
-  - MCP
+  - mcp
 keywords:
   - NOOA
   - Object-Oriented Agents

@@ -11,7 +11,7 @@ author: PFinal南丞
 date: 2026-04-22
 tags:
   - golang
-  - Wails
+  - wails
   - live-streaming
   - douyin
 recommend: 后端工程

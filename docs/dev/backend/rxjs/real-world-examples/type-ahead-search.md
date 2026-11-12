@@ -12,10 +12,10 @@ keywords:
   - 实战
 tags:
   - 前端开发
-  - Git
-  - HTTP
-  - JavaScript
-  - RxJS
+  - git
+  - http
+  - javascript
+  - rxjs
 recommend: 后端工程
 ---
 # Type-Ahead 搜索实战

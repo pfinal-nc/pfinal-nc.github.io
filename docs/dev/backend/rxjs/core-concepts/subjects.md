@@ -17,10 +17,10 @@ course:
   lesson: 1.5
 tags:
   - 前端开发
-  - JavaScript
-  - Performance
-  - Reactive
-  - RxJS
+  - javascript
+  - performance
+  - reactive
+  - rxjs
 recommend: 后端工程
 ---
 # Subject 主体

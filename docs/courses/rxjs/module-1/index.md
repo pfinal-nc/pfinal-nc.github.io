@@ -9,4 +9,4 @@ title: Module 1
 
 - [Lesson 1.1: 为什么需要 RxJS](1-1-why-rxjs)
 
-返回 [上一级](/rxjs/)
+返回 [上一级](/courses/rxjs/)

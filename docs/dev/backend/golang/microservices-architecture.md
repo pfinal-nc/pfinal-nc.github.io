@@ -5,7 +5,7 @@ category: dev/backend/golang
 tags:
   - golang
   - 微服务
-  - gRPC
+  - grpc
   - 架构设计
 description: 2026 版 Go 微服务架构全指南：从单体拆分、服务通信、服务发现到配置管理与可观测性，附实战案例。
 recommend: 后端工程

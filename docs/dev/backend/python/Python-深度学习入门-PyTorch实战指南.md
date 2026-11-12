@@ -11,7 +11,7 @@ keywords:
   - Python 深度学习入门：PyTorch 实战指南
   - PFinalClub
   - 技术博客
-tags: [Python, PyTorch, 深度学习, 神经网络, AI]
+tags: [python, pytorch, 深度学习, 神经网络, ai]
 difficulty: 🟡 进阶
 category: dev/backend/python
 recommend: 后端工程

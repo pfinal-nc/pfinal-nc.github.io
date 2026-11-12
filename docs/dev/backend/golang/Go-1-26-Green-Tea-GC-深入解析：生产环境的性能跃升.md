@@ -16,8 +16,8 @@ tags:
   - golang
   - 性能优化
   - 运行时
-  - GC
-  - Go 1.26
+  - gc
+  - go 1.26
 recommend: 后端工程
 ---
 

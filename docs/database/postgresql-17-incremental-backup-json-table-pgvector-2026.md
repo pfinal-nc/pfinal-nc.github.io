@@ -2,7 +2,7 @@
 title: "PostgreSQL 17 实战指南：增量备份、逻辑复制故障转移、JSON_TABLE 与 pgvector"
 description: "深度解析 PostgreSQL 17 的增量备份、逻辑复制故障转移、JSON_TABLE、MERGE RETURNING 等生产级特性，结合 pgvector 与 TimescaleDB 从单体数据库走向 AI 数据平台的实战路径"
 date: 2026-03-20
-tags: [PostgreSQL, pgvector, TimescaleDB, 数据库, 备份, 逻辑复制, JSON]
+tags: [postgresql, pgvector, timescaledb, 数据库, 备份, 逻辑复制, json]
 category: [数据库]
 ---
 

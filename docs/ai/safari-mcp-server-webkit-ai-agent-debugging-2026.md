@@ -3,9 +3,9 @@ title: "Safari MCP Server 实战：苹果 WebKit 的 AI Agent 调试新范式深
 date: 2026-07-06
 tags:
   - ai
-  - MCP
-  - Apple
-  - WebKit
+  - mcp
+  - apple
+  - webkit
   - frontend
   - debugging
 keywords:

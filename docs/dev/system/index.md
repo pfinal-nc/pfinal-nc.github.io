@@ -14,8 +14,8 @@ keywords:
   - Docker
   - 运维
 tags:
-  - PostgreSQL
-  - Docker
+  - postgresql
+  - docker
 recommend: 后端工程
 ---
 # 系统与基础
@@ -83,3 +83,18 @@ recommend: 后端工程
 ---
 
 > 💡 **提示**: 本导航持续更新中，欢迎关注最新系统与基础架构相关内容！
+
+## 📚 本目录全部文章
+
+> 按发布时间倒序，包含此前未列入导航的文章。
+
+- [Prometheus 监控实战：构建现代化的监控体系](/dev/system/prometheus-monitoring) — 2026-04-22
+- [Grafana 可视化实战指南 2026：Dashboard 设计 + Prometheus 告警 + 变量模板](/dev/system/grafana-visualization) — 2026-04-22
+- [GitHub Actions CI/CD 实战指南 2026：工作流 + 矩阵构建 + 缓存优化 + 多环境部署](/dev/system/github-actions-guide) — 2026-04-22
+- [CI/CD 最佳实践：构建高效的持续集成与交付流水线](/dev/system/cicd-best-practices) — 2026-04-22
+- [分布式链路追踪最佳实践](/dev/system/distributed-tracing) — 2026-04-22
+- [OpenTelemetry 实战指南](/dev/system/opentelemetry-guide) — 2026-04-22
+- [ELK 日志系统实战 2026：Elasticsearch + Logstash + Kibana 企业级日志平台全栈部署](/dev/system/elk-stack-guide) — 2026-04-22
+- [Loki 日志系统实战 2026：Grafana 可观测性栈部署与 LogQL 查询完全指南](/dev/system/loki-logging) — 2026-04-22
+- [Kubernetes 基础入门：从容器编排到生产实践](/dev/system/kubernetes-basics) — 2026-04-21
+- [Docker 基础入门 2026：镜像、容器、Dockerfile、Compose 完整实战手册](/dev/system/docker-basics) — 2026-04-21

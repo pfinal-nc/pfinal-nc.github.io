@@ -12,7 +12,7 @@ keywords:
 tags:
   - github-actions
   - cicd
-  - DevOps
+  - devops
   - automation
 recommend: 后端工程
 ---

@@ -2,7 +2,7 @@
 title: "Agentic RAG 架构 2026：从 Naive RAG 到自我纠错检索循环的自适应演进"
 description: "深入解析 Agentic RAG 的五大模式（Self-RAG、CRAG、Adaptive RAG、ReAct、Multi-Hop）、检索即决策的控制循环、LlamaIndex + LangGraph 生产栈与可观测性评估框架"
 date: 2026-07-01
-tags: [RAG, AI Agent, LLM, LangGraph, LlamaIndex, 检索增强生成, 自适应检索]
+tags: [rag, ai agent, llm, langgraph, llamaindex, 检索增强生成, 自适应检索]
 category: [AI]
 ---
 

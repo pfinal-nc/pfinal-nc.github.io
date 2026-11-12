@@ -1,7 +1,7 @@
 ---
 title: "AI 渗透测试 2026：Multi-Agent 自动化攻防框架 + DSPy 编程 + XSS 自动挖掘实战"
 date: 2026-06-05
-tags: [安全, 渗透测试, AI, CTF, Multi-Agent]
+tags: [安全, 渗透测试, ai, ctf, multi-agent]
 description: "2026 AI 驱动渗透测试新范式：Multi-Agent 架构设计、DSPy 编程框架应用、XSS 自动化漏洞挖掘实战，CTF AI 辅助解题工程化落地全流程。"
 recommend: 安全工程
 keywords:

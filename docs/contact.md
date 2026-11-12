@@ -14,10 +14,10 @@ keywords:
   - PFinalClub
 tags:
   - ai
-  - Architecture
-  - Database
-  - Docker
-  - Git
+  - architecture
+  - database
+  - docker
+  - git
   - golang
 ---
 

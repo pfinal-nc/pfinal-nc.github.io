@@ -17,7 +17,7 @@ tags:
   - golang
   - 性能优化
   - 并行计算
-  - SIMD
+  - simd
   - 编译器
 recommend: 后端工程
 ---

@@ -4,7 +4,7 @@ date: 2025-10-15 09:33:00
 tags:
     - 工具
     - 命令行
-    - Rust
+    - rust
 description: 2026 版 Broot 实战：用 Rust 终端文件管理器替代 tree/cd，支持树状视图、模糊搜索、快速导航与文件预览。
 author: PFinal南丞
 keywords:
@@ -378,4 +378,4 @@ Git 集成也是真香，提交代码前 `:git_status` 扫一眼，哪些文件�
 
 ## 相关阅读
 
-- [Docker部署Go项目实践指南](/tools/Docker部署Go项目实践指南)
+- [Docker部署Go项目实践指南](/Tools/Docker部署Go项目实践指南)

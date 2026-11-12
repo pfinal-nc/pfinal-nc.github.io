@@ -11,9 +11,9 @@ keywords:
   - API 设计
 tags:
   - golang
-  - API
-  - REST
-  - Best Practices
+  - api
+  - rest
+  - best practices
 recommend: 后端工程
 ---
 # Go RESTful API 最佳实践：构建高质量 Web 服务

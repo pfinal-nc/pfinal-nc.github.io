@@ -9,12 +9,12 @@ categories:
   - "开发与系统"
   - "Go实战"
 tags:
-  - "golang"
-  - "并发编程"
-  - "高性能"
-  - "goroutine"
-  - "channel"
-  - "并发模式"
+  - golang
+  - 并发编程
+  - 高性能
+  - goroutine
+  - channel
+  - 并发模式
 keywords:
   - go concurrency patterns
   - golang concurrency tutorial

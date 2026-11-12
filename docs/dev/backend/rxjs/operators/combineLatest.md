@@ -10,10 +10,10 @@ keywords:
   - 组合
 tags:
   - 前端开发
-  - JavaScript
-  - Operators
-  - RxJS
-  - Tools
+  - javascript
+  - operators
+  - rxjs
+  - tools
 recommend: 后端工程
 ---
 # combineLatest

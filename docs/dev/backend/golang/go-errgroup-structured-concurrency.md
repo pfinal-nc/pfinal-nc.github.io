@@ -13,9 +13,9 @@ keywords:
   - 错误处理
 tags:
   - golang
-  - Concurrency
+  - concurrency
   - errgroup
-  - Context
+  - context
 category: golang
 recommend: 后端工程
 ---

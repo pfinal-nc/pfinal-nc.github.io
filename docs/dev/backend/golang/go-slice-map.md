@@ -11,7 +11,7 @@ keywords:
   - map 并发安全
 tags:
   - golang
-  - Tutorial
+  - tutorial
   - data-structure
 recommend: 后端工程
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Anthropic Agent Skills 实战：让 AI Agent 掌握专业技能的标准化方案"
 date: 2026-06-25T09:00:00+08:00
-tags: [AI, MCP, Agent, Anthropic, Claude, Skills, 工具]
+tags: [ai, mcp, agent, anthropic, claude, skills, 工具]
 keywords: [AI Agent, MCP, Anthropic, Skills, SKILL.md, Claude, Agent 工具]
 category: ai
 description: "Anthropic 官方开源的 Agent Skills 仓库 138k stars 爆红,本文从 SKILL.md 规范、17 个示例 skill 的设计模式、到自建专业 Skill 全流程实战,系统拆解 2026 年 AI Agent 技能标准化的工程化路径。"

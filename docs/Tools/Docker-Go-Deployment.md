@@ -10,7 +10,7 @@ keywords:
 author: PFinal南丞
 date: 2026-04-22
 tags:
-  - Docker
+  - docker
   - golang
   - deployment
   - container
@@ -298,4 +298,4 @@ Docker 让 Go 应用部署标准化，提高开发运维效率。
 
 ## 相关阅读
 
-- [Docker部署Go项目实践指南](/tools/Docker部署Go项目实践指南)
+- [Docker部署Go项目实践指南](/Tools/Docker部署Go项目实践指南)

@@ -12,10 +12,10 @@ keywords:
   - DevOps
   - Kubernetes
 tags:
-  - DevOps
+  - devops
   - 云原生
   - 持续部署
-  - Kubernetes
+  - kubernetes
 recommend: 后端工程
 ---
 

@@ -3,7 +3,7 @@ title: "VSCode 快捷键完整指南 2026：80 个必学命令覆盖开发全流
 date: 2025-08-21 10:00:00
 tags:
     - 工具
-    - VSCode
+    - vscode
 description: "VSCode 80 个高频快捷键分类实战：编辑、搜索、调试、Git、插件、IntelliJ 习惯迁移，附 4 套主流预设配置（macOS/Windows/Linux）"
 author: PFinal南丞
 keywords:
@@ -185,4 +185,4 @@ recommend: 效率工具
 
 ## 相关阅读
 
-- [Docker部署Go项目实践指南](/tools/Docker部署Go项目实践指南)
+- [Docker部署Go项目实践指南](/Tools/Docker部署Go项目实践指南)

@@ -19,10 +19,10 @@ course:
 tags:
   - ai
   - 后端开发
-  - Desktop
+  - desktop
   - golang
-  - HTTP
-  - Performance
+  - http
+  - performance
 ---
 
 # Wails 教程系列 - 后端开发 (Go)

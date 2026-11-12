@@ -11,9 +11,9 @@ keywords:
   - Promise
 tags:
   - 前端开发
-  - JavaScript
-  - Operators
-  - RxJS
+  - javascript
+  - operators
+  - rxjs
 recommend: 后端工程
 ---
 # from

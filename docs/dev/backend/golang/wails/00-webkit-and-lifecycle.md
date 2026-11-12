@@ -18,11 +18,11 @@ course:
   lesson: 1.1
 tags:
   - ai
-  - Architecture
+  - architecture
   - 后端开发
-  - Desktop
+  - desktop
   - golang
-  - HTTP
+  - http
 ---
 
 # Wails 教程系列 - WebKit 与生命周期深度解析

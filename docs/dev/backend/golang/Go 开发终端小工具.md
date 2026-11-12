@@ -4,7 +4,7 @@ date: 2023-11-09 17:22:37
 tags:
   - golang
   - 工具
-  - CLI
+  - cli
   - cobra
   - termui
 description: >-

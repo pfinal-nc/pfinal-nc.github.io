@@ -5,7 +5,7 @@ author: PFinal南丞
 category: 工具
 tags:
   - agent
-  - ChatGPT
+  - chatgpt
   - 开发效率
 description: >-
   在 Vibe Coding 时代，ChatGPT 5.1 已经坐在你的工位上了。这篇文章聊的不是“会不会被 AI 替代”，而是：如何和 ChatGPT

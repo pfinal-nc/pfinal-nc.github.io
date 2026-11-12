@@ -3,7 +3,7 @@ title: "Go Wails v3 迁移实战 2026：从 v2 到 v3 的 7 个关键变更与�
 date: "2026-06-07"
 tags:
   - golang
-  - Wails
+  - wails
 keywords:
   - Wails v3
   - Wails

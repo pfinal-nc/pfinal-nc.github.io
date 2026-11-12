@@ -3,9 +3,9 @@ title: "eBPF + Go 云原生可观测性实战 2026：零侵入监控从原理到
 date: 2026-06-08
 tags:
   - golang
-  - DevOps
+  - devops
   - ebpf
-  - Observability
+  - observability
 keywords:
   - eBPF
   - golang

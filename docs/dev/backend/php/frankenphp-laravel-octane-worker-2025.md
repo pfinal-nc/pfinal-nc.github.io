@@ -2,7 +2,7 @@
 title: "FrankenPHP + Laravel Octane：PHP 终于有了原生 Worker 模式 2026 实战"
 description: "PHP 8.2+ + FrankenPHP 带来 Go 级并发能力，详解 Worker 模式架构、Octane 集成、性能调优，附从 FPM 迁移的完整实战指南"
 date: 2025-12-20
-tags: [PHP, FrankenPHP, Laravel, Octane, Worker, 并发, PHP84]
+tags: [php, frankenphp, laravel, octane, worker, 并发, php84]
 category: [PHP, 并发编程]
 ---
 

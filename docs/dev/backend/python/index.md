@@ -17,7 +17,7 @@ sidebar: false
 pageClass: python-hub-page
 recommend: 后端工程
 tags:
-  - Python
+  - python
   - dev
 ---
 # 🐍 Python 开发技术专题

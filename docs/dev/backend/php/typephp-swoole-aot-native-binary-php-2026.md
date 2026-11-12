@@ -5,7 +5,7 @@ tags:
   - php
   - swoole
   - typephp
-  - Performance
+  - performance
   - aot
   - native-binary
   - language-engineering

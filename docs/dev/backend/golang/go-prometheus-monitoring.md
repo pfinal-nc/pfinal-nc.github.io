@@ -14,7 +14,7 @@ tags:
   - golang
   - prometheus
   - monitoring
-  - Observability
+  - observability
 recommend: 后端工程
 ---
 # Go 集成 Prometheus 监控

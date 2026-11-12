@@ -3,7 +3,7 @@ title: "Laravel-admin 特殊路由 - 使用指南"
 date: 2022-07-04 15:29:24
 tags:
   - php
-  - Laravel
+  - laravel
 description: Laravel-admin特殊路由操作
 author: PFinal南丞
 keywords:

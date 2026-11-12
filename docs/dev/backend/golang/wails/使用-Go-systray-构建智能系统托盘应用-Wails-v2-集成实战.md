@@ -27,10 +27,10 @@ course:
 tags:
   - ai
   - 后端开发
-  - Desktop
-  - Git
+  - desktop
+  - git
   - golang
-  - HTTP
+  - http
 ---
 
 # Go systray 构建系统托盘应用实战 2025 - Wails v2 集成完整指南

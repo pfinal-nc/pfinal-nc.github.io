@@ -4,7 +4,7 @@ date: 2022-07-06 15:35:40
 author: "PFinal南丞"
 tags:
   - 工具
-  - Docker
+  - docker
 description: "Go 项目 Docker 化全流程：多阶段构建将镜像从 800MB 压缩到 20MB、Alpine vs Scratch 选型、Docker Compose 编排，附 Dockerfile 模板"
 keywords:
   - Docker

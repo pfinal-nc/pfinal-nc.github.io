@@ -3,7 +3,7 @@ title: "Python 自动化脚本实战 2026：10 个场景从文件处理到定时
 date: 2026-04-24
 category: dev/backend/python
 tags:
-  - Python
+  - python
   - 自动化
   - 数据处理
   - 任务调度

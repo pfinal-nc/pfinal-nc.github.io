@@ -5,8 +5,8 @@ tags:
   - ai
   - rust
   - zig
-  - Anthropic
-  - Claude
+  - anthropic
+  - claude
   - engineering
 keywords:
   - Bun Rust重写

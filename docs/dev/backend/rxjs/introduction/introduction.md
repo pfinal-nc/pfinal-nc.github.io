@@ -17,10 +17,10 @@ course:
 tags:
   - ai
   - 前端开发
-  - HTTP
-  - JavaScript
-  - React
-  - RxJS
+  - http
+  - javascript
+  - react
+  - rxjs
 recommend: 后端工程
 ---
 # RxJS 简介

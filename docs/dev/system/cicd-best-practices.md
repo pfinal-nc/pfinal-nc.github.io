@@ -11,10 +11,10 @@ keywords:
   - 自动化
   - 最佳实践
 tags:
-  - CI/CD
-  - DevOps
-  - Best Practices
-  - Automation
+  - ci/cd
+  - devops
+  - best practices
+  - automation
 recommend: 后端工程
 ---
 # CI/CD 最佳实践：构建高效的持续集成与交付流水线

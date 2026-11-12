@@ -5,9 +5,9 @@ tags:
   - ai
   - context-engineering
   - prompt-engineering
-  - AI-Agent
-  - LLM
-  - MCP
+  - ai-agent
+  - llm
+  - mcp
 keywords:
   - Context Engineering
   - 上下文工程

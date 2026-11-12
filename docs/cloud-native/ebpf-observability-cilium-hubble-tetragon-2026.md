@@ -2,7 +2,7 @@
 title: "eBPF 可观测性 2026：Cilium Hubble、Tetragon、Pixie 与零代码自动插桩实战"
 description: "深入解析 eBPF 原理与 CO-RE、Cilium Hubble 网络观测、Tetragon 运行时安全、Pixie 自动插桩与 Grafana Beyla，给出 K8s 生产环境三守护进程架构落地与内核版本适配实战"
 date: 2026-04-05
-tags: [eBPF, 可观测性, Cilium, Hubble, Tetragon, Pixie, Kubernetes, OpenTelemetry]
+tags: [ebpf, 可观测性, cilium, hubble, tetragon, pixie, kubernetes, opentelemetry]
 category: [云原生]
 ---
 

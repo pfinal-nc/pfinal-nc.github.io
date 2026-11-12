@@ -4,7 +4,7 @@ date: 2026-08-05
 tags:
   - ai
   - security
-  - MCP
+  - mcp
 keywords:
   - Rubrik
   - Agent Identity

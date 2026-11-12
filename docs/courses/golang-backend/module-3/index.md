@@ -14,4 +14,4 @@ title: Module 3
 - [Lesson 3.5: GORM 与 sqlx](3-5-gorm-and-sqlx)
 - [Lesson 3.6: 数据库优化实战](3-6-db-optimization)
 
-返回 [上一级](/golang-backend/)
+返回 [上一级](/courses/golang-backend/)

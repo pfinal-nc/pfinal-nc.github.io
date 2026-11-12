@@ -2,7 +2,7 @@
 title: "Vector Database 选型 2026：Qdrant vs Milvus vs Weaviate vs pgvector 实测对比"
 description: "基于百万级向量实测对比 Qdrant、Milvus、Weaviate、pgvector 的延迟、召回率、扩展性与成本，附 RAG 生产环境选型决策框架和迁移方案"
 date: 2025-12-25
-tags: [Vector-Database, RAG, Qdrant, Milvus, Weaviate, pgvector, AI基础设施]
+tags: [vector-database, rag, qdrant, milvus, weaviate, pgvector, ai基础设施]
 category: [AI, 数据库]
 ---
 

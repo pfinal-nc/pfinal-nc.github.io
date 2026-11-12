@@ -11,10 +11,10 @@ keywords:
   - 并行
 tags:
   - 前端开发
-  - HTTP
-  - JavaScript
-  - Operators
-  - RxJS
+  - http
+  - javascript
+  - operators
+  - rxjs
 recommend: 后端工程
 ---
 # forkJoin

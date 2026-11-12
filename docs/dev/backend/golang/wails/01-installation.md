@@ -19,10 +19,10 @@ course:
 tags:
   - ai
   - 后端开发
-  - Desktop
-  - Git
+  - desktop
+  - git
   - golang
-  - HTTP
+  - http
 ---
 
 # Wails 教程系列 - 环境搭建与安装

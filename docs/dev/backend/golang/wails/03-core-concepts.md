@@ -18,10 +18,10 @@ course:
   lesson: 2.1
 tags:
   - ai
-  - Architecture
+  - architecture
   - 后端开发
-  - Desktop
-  - Git
+  - desktop
+  - git
   - golang
 ---
 

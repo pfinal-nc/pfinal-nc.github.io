@@ -2,10 +2,10 @@
 title: PostgreSQL 10 个鲜为人知功能 2026 - 告别 Elasticsearch 和 MongoDB
 date: 2025-01-20 00:00:00
 tags:
-    - PostgreSQL
+    - postgresql
     - 数据库
     - 全文搜索
-    - JSONB
+    - jsonb
     - 性能优化
 description: 深入探讨 PostgreSQL 10 个鲜为人知但极其强大的功能，从全文搜索到逻辑复制，让你重新认识这个数据库的威力
 author: PFinal南丞
