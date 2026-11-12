@@ -46,7 +46,7 @@ function walkDir(dir, results = []) {
     } else if (item.endsWith('.md') && item !== 'index.md') {
       const fm = extractFrontmatter(fp);
       if (!fm) continue;
-      const urlPath = '/' + dir + item.replace('.md', '');
+      const urlPath = ('/' + dir + item.replace('.md', '')).normalize('NFC');
       results.push({
         url: SITE_URL + urlPath,
         title: fm.title,
@@ -70,7 +70,6 @@ const categories = [
   { dir: 'dev/backend/python/', label: 'Python 系列' },
   { dir: 'dev/backend/php/', label: 'PHP 系列' },
   { dir: 'dev/backend/rust/', label: 'Rust 系列' },
-  { dir: 'tools/', label: '开发工具系列' },
   { dir: 'Tools/', label: '开发工具系列' },
   { dir: 'dev/system/', label: '系统运维系列' },
   { dir: 'thinking/method/', label: '技术思考系列' },
@@ -99,8 +98,13 @@ ${SITE_NAME}（${SITE_URL}）是一个由 PFinal 南丞 维护的后端 + DevOps
 `;
 
 const allArticles = [];
+const seenUrls = new Set();
 for (const cat of categories) {
-  const articles = walkDir(cat.dir);
+  const articles = walkDir(cat.dir).filter(a => {
+    if (seenUrls.has(a.url)) return false; // 去重：同一页面只出现一次
+    seenUrls.add(a.url);
+    return true;
+  });
   if (articles.length === 0) continue;
 
   // Sort by date descending (newest first)
