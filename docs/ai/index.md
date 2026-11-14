@@ -112,6 +112,7 @@ keywords:
 |---|------|------|------|
 | 1 | 🟠 Claude | [Claude Sonnet 4.6 Go 集成实战：1M 上下文 + Agent SDK](/ai/claude-sonnet-4-6-go-integration-2026) | 2026-06-21 |
 | 2 | 🔵 Gemini | [Gemini 3.5 Flash + Go 集成实战：4 倍速高性价比 AI 应用](/ai/gemini-3-5-flash-go-integration-2026) | 2026-06-19 |
+| 3 | 🎯 Gemini | [Gemini Decisions API 实战：打分替代生成，重构 RAG 路由与 Agent 护栏](/ai/gemini-decisions-api-rag-routing-agent-guardrails-2026) | 2026-11-14 |
 
 ---
 
@@ -130,9 +131,9 @@ keywords:
 
 - **AI Agent 全栈**：60 篇（2026 年新增 58 篇，最新为 10-19 的 ECDSA 曲线种子溯源、Sextant AI 生成 K8s 客户端、AI 可见性度量方法论；含 AG-UI 前端集成、OpenCode 架构、Agent Skills、MCP 路线图、OpenClaw 实战、Harness Engineering、Codex CLI、MCP Spec RC、Safari MCP、AI 漏洞挖掘范式、GitHub Spec Kit、LangGraph 1.0、GPT-5.6 出口管制、Grok 4.5 编码 Agent、ACL 推理漂移评测、Context Engineering、X MCP Server、Claude Sonnet 5、Bun Rust 重写、Kimi K3、AI Agent 记忆投毒、MCP Apps/Tasks 扩展、Codex 0.145、Karpathy Opus 5、Copilot MCP 治理、MCP 记忆生态）
 - **RAG / LLM 应用**：8 篇
-- **模型接入实战**：2 篇（Claude Sonnet 4.6 + Gemini 3.5 Flash）
+- **模型接入实战**：3 篇（Claude Sonnet 4.6 + Gemini 3.5 Flash + Gemini Decisions API）
 - **LLM 评测与协议演进**：4 篇（RULER/MRCR 长上下文 + HSCodeComp 推理漂移 + Go Agent Eval 框架 + OWASP LLM 安全红队）
-- **累计 74 篇**，更新频率：每周 2-3 篇热点文章同步（最近一次批量更新：2026-10-19）
+- **累计 75 篇**，更新频率：每周 2-3 篇热点文章同步（最近一次批量更新：2026-11-14）
 
 ---
 
