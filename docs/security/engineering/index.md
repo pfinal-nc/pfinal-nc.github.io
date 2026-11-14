@@ -117,6 +117,7 @@ Go 语言因其高性能和简洁语法在后端开发中广受欢迎，但安�
 ### 数据库安全
 
 - **[PostgreSQL Security Best Practices 2025](/dev/system/database/PostgreSQL-Security-Best-Practices-2025)** - 数据库安全加固最佳实践
+- **[Supabase RLS 实战：AI 生成应用为何默认裸奔](/security/engineering/supabase-rls-ai-generated-app-data-exposure-2026)** - 行级安全策略、存储桶 ACL 与 CI 裸奔审计
 
 ### 数据保护要点
 
@@ -184,6 +185,7 @@ Go 语言因其高性能和简洁语法在后端开发中广受欢迎，但安�
 
 > 按发布时间倒序，包含此前未列入导航的文章。
 
+- [Supabase RLS 实战：AI 生成应用为何默认裸奔，20 万条数据泄露复盘](/security/engineering/supabase-rls-ai-generated-app-data-exposure-2026) — 2026-11-15
 - [Go 主流安全库实战指南 2026：7 大组件覆盖认证/加密/审计/漏洞防护](/security/engineering/Go-Security-Libraries) — 2026-04-22
 - [Golang Web 应用安全实战 2026：认证 + 防护 + 安全头完整指南](/security/engineering/Go-Web-Security-Guide) — 2026-04-22
 - [Go 安全陷阱 2026：10 个生产级漏洞场景与修复方案实战](/security/engineering/Go-Security-Pitfalls) — 2026-04-22
