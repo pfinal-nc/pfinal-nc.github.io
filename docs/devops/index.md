@@ -64,6 +64,14 @@ keywords:
 
 ---
 
+## 🔐 CI/CD 供应链安全
+
+| # | 主题 | 文章 | 日期 |
+|---|---|---|---|
+| 1 | 🕵️ Gheist Actions 日志外泄 | [Gheist 复盘：GitHub Actions 日志变外泄通道，CI 凭证加固实战](/devops/gheist-github-actions-log-exfiltration-ci-hardening-2026) | 2026-11-16 |
+
+---
+
 ## 📊 系列文章统计
 
 - **容器化与编排**：11 篇（Docker + K8s 1.36 + KubeCon 2026 + Docker AI Governance + Rust 异步运行时 + Kagent Agent 编排 + K8s 1.37 预览 + K8s 1.37 GA + ChainDrop npm 蠕虫 + Agent Sandbox + KYAML）
@@ -71,7 +79,8 @@ keywords:
 - **WASM 演进**：2 篇（服务端 WASI + K8s SpinKube 集成）
 - **FinOps 云成本**：1 篇（Go + OpenCost）
 - **平台工程与网络**：3 篇（Backstage IDP + Tailscale DERP + Topcoat Rust 全栈框架）
-- **累计 18 篇**，更新频率：每周 1-2 篇
+- **CI/CD 供应链安全**：1 篇（Gheist Actions 日志外泄）
+- **累计 19 篇**，更新频率：每周 1-2 篇
 
 ---
 
