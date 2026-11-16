@@ -4,7 +4,7 @@
         <title>PFinalClub Tech Blog</title>
         <link>https://friday-go.icu</link>
         <description>PFinalClub - 专注于 Golang, PHP, Python 的技术博客，分享微服务、云原生、架构设计等实战经验</description>
-        <lastBuildDate>Thu, 12 Nov 2026 23:31:41 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 16 Nov 2026 01:08:24 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-CN</language>
@@ -15,6 +15,42 @@
         </image>
         <copyright>Copyright (c) 2024-present, PFinalClub</copyright>
         <atom:link href="https://friday-go.icu/feed.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Gheist 复盘：GitHub Actions 日志变外泄通道，CI 凭证加固实战]]></title>
+            <link>https://friday-go.icu/devops/gheist-github-actions-log-exfiltration-ci-hardening-2026</link>
+            <guid>https://friday-go.icu/devops/gheist-github-actions-log-exfiltration-ci-hardening-2026</guid>
+            <pubDate>Mon, 16 Nov 2026 07:30:00 GMT</pubDate>
+            <description><![CDATA[一条 workflow 就能搬走整仓库密钥——Gheist 在 13,500 个分支植入 sync-check，把 secrets 用 base32 打进 Actions 日志再删记录。本文拆解攻击链、复现 base32 绕过脱敏，给出排查命令与 OIDC 加固 YAML。]]></description>
+            <content:encoded><![CDATA[一条 workflow 就能搬走整仓库密钥——Gheist 在 13,500 个分支植入 sync-check，把 secrets 用 base32 打进 Actions 日志再删记录。本文拆解攻击链、复现 base32 绕过脱敏，给出排查命令与 OIDC 加固 YAML。]]></content:encoded>
+            <category>devops</category>
+            <category>ci/cd</category>
+            <category>github-actions</category>
+            <category>供应链安全</category>
+        </item>
+        <item>
+            <title><![CDATA[Supabase RLS 实战：AI 生成应用为何默认裸奔，20 万条数据泄露复盘]]></title>
+            <link>https://friday-go.icu/security/engineering/supabase-rls-ai-generated-app-data-exposure-2026</link>
+            <guid>https://friday-go.icu/security/engineering/supabase-rls-ai-generated-app-data-exposure-2026</guid>
+            <pubDate>Sun, 15 Nov 2026 07:30:00 GMT</pubDate>
+            <description><![CDATA[安全团队扫描 15.9 万个 AI 生成项目，发现数千个站点的 Supabase 数据库与存储桶对匿名访问完全开放，泄露护照信息与 20 万条私聊。本文从 anon key 设计讲起，给出三行 curl 的裸奔自检、正确的 RLS 策略写法，以及可接进 CI 的自动探测脚本。]]></description>
+            <content:encoded><![CDATA[安全团队扫描 15.9 万个 AI 生成项目，发现数千个站点的 Supabase 数据库与存储桶对匿名访问完全开放，泄露护照信息与 20 万条私聊。本文从 anon key 设计讲起，给出三行 curl 的裸奔自检、正确的 RLS 策略写法，以及可接进 CI 的自动探测脚本。]]></content:encoded>
+            <category>安全</category>
+            <category>数据库</category>
+            <category>supabase</category>
+            <category>rls</category>
+        </item>
+        <item>
+            <title><![CDATA[Gemini Decisions API 实战：打分替代生成，重构 RAG 路由与 Agent 护栏]]></title>
+            <link>https://friday-go.icu/ai/gemini-decisions-api-rag-routing-agent-guardrails-2026</link>
+            <guid>https://friday-go.icu/ai/gemini-decisions-api-rag-routing-agent-guardrails-2026</guid>
+            <pubDate>Sat, 14 Nov 2026 07:30:00 GMT</pubDate>
+            <description><![CDATA[2026-11-11 Google 发布 Gemini Decisions API：一次前向打分就能回答最多 1000 个是非题、选择题与评分题，输出不计费。本文拆解它的三种题型与校准机制，给出 RAG 前置路由、Agent 工具选择、输出护栏三条落地路径，附可运行的阈值封装与 ECE 校准脚本。]]></description>
+            <content:encoded><![CDATA[2026-11-11 Google 发布 Gemini Decisions API：一次前向打分就能回答最多 1000 个是非题、选择题与评分题，输出不计费。本文拆解它的三种题型与校准机制，给出 RAG 前置路由、Agent 工具选择、输出护栏三条落地路径，附可运行的阈值封装与 ECE 校准脚本。]]></content:encoded>
+            <category>ai</category>
+            <category>rag</category>
+            <category>agent</category>
+            <category>gemini</category>
+        </item>
         <item>
             <title><![CDATA[Go 1.27.4 拆解：12 个 CVE 里 11 个藏在你 go build 的那一刻]]></title>
             <link>https://friday-go.icu/dev/backend/golang/go-1-27-4-12-cve-build-time-rce-toolchain-hardening-2026</link>
@@ -423,47 +459,6 @@
             <category>golang</category>
             <category>blockchain</category>
             <category>malware</category>
-        </item>
-        <item>
-            <title><![CDATA[HTTP/2 正式进 Go 标准库：x/net/http2 的双实现架构与迁移实战]]></title>
-            <link>https://friday-go.icu/dev/backend/golang/go-stdlib-http2-migration-2026</link>
-            <guid>https://friday-go.icu/dev/backend/golang/go-stdlib-http2-migration-2026</guid>
-            <pubDate>Fri, 09 Oct 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[历经两年、11 个子任务，Go 终于把 HTTP/2 实现从 golang.org/x/net/http2 迁入标准库。本文拆解迁移的工程动机、双实现架构与 http2legacy 构建标签机制，并给出 ConfigureTransport 废弃后的完整迁移代码：Transport/Server 协议配置、h2c 启用、参数调优与迁移检查清单。]]></description>
-            <content:encoded><![CDATA[历经两年、11 个子任务，Go 终于把 HTTP/2 实现从 golang.org/x/net/http2 迁入标准库。本文拆解迁移的工程动机、双实现架构与 http2legacy 构建标签机制，并给出 ConfigureTransport 废弃后的完整迁移代码：Transport/Server 协议配置、h2c 启用、参数调优与迁移检查清单。]]></content:encoded>
-            <category>go</category>
-            <category>golang</category>
-            <category>http2</category>
-            <category>network</category>
-            <category>backend</category>
-        </item>
-        <item>
-            <title><![CDATA[AI Agent Skills over MCP 攻击面深度解析：当 'Skills' 成为新型攻击向量]]></title>
-            <link>https://friday-go.icu/security/offensive/ai-agent-skills-mcp-attack-surface-2026</link>
-            <guid>https://friday-go.icu/security/offensive/ai-agent-skills-mcp-attack-surface-2026</guid>
-            <pubDate>Thu, 08 Oct 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[MCP 2026 路线图中的 Skills over MCP 工作组提出用 Resources 机制分发可复用的 Agent Skills，每个 Skill 包含前置条件、副作用、重试逻辑。本文深度拆解 Skills 的安全模型、新型攻击向量（Skill Poisoning、Resource Hijacking、Retry Storm），并给出企业级防御方案。]]></description>
-            <content:encoded><![CDATA[MCP 2026 路线图中的 Skills over MCP 工作组提出用 Resources 机制分发可复用的 Agent Skills，每个 Skill 包含前置条件、副作用、重试逻辑。本文深度拆解 Skills 的安全模型、新型攻击向量（Skill Poisoning、Resource Hijacking、Retry Storm），并给出企业级防御方案。]]></content:encoded>
-            <category>security</category>
-            <category>ai</category>
-            <category>mcp</category>
-            <category>agent</category>
-            <category>penetration-testing</category>
-            <category>ai-security</category>
-        </item>
-        <item>
-            <title><![CDATA[Go 1.25 Green Tea GC 深度测评：10-40% GC 开销削减背后的小对象分配器]]></title>
-            <link>https://friday-go.icu/dev/backend/golang/go-1-25-green-tea-gc-deep-dive-2026</link>
-            <guid>https://friday-go.icu/dev/backend/golang/go-1-25-green-tea-gc-deep-dive-2026</guid>
-            <pubDate>Thu, 08 Oct 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[Go 1.25 实验性垃圾回收器 Green Tea GC（GOEXPERIMENT=greenteagc）从对象中心转向页中心设计，官方报告 GC CPU 开销下降 10-40%。本文给出生产级 benchmark、可运行对比代码、内存基线 RSS 升高 8-15% 的应对策略，以及 Go 1.27 默认启用前的最佳实践。]]></description>
-            <content:encoded><![CDATA[Go 1.25 实验性垃圾回收器 Green Tea GC（GOEXPERIMENT=greenteagc）从对象中心转向页中心设计，官方报告 GC CPU 开销下降 10-40%。本文给出生产级 benchmark、可运行对比代码、内存基线 RSS 升高 8-15% 的应对策略，以及 Go 1.27 默认启用前的最佳实践。]]></content:encoded>
-            <category>go</category>
-            <category>golang</category>
-            <category>1.25</category>
-            <category>gc</category>
-            <category>performance</category>
-            <category>optimization</category>
         </item>
     </channel>
 </rss>
