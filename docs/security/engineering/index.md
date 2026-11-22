@@ -185,6 +185,7 @@ Go 语言因其高性能和简洁语法在后端开发中广受欢迎，但安�
 
 > 按发布时间倒序，包含此前未列入导航的文章。
 
+- [Ghostscript -dSAFER 逃逸 CVE-2026-125396 实战：上传即执行的上传链自检](/security/engineering/upload2shell-ghostscript-dsafer-bypass-upload-chain-2026) — 2026-11-23
 - [NoisyTCP(CVE-2026-99288) 复盘：11 年潜伏的内核 TCP 竞态与加固](/security/engineering/noisytcp-cve-2026-99288-linux-tcp-race-hardening-2026) — 2026-11-19
 - [Supabase RLS 实战：AI 生成应用为何默认裸奔，20 万条数据泄露复盘](/security/engineering/supabase-rls-ai-generated-app-data-exposure-2026) — 2026-11-15
 - [Go 主流安全库实战指南 2026：7 大组件覆盖认证/加密/审计/漏洞防护](/security/engineering/Go-Security-Libraries) — 2026-04-22
