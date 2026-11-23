@@ -62,6 +62,7 @@ keywords:
 | 2 | 🔗 Tailscale 自建 | [Tailscale 自建 DERP 中继服务器实战：延迟 250ms→20ms](/devops/tailscale-selfhost-derp-server-2026) | 2026-06-23 |
 | 3 | 🦀 Topcoat 全栈框架 | [Topcoat 深度解析：Tokio 团队的 Rust 全栈响应式 Web 框架，服务端渲染 + 无 WASM 响应式](/devops/topcoat-rust-fullstack-reactive-web-framework-2026) | 2026-07-28 |
 | 4 | 🌐 kube-proxy IPVS 退场 | [kube-proxy IPVS 后端 1.40 移除：迁移 nftables 实战清单](/devops/kube-proxy-ipvs-backend-removal-nftables-migration-2026) | 2026-11-20 |
+| 5 | 🧪 Terraform 预演 | [Terraform plan 全绿 apply 炸：AWS Emulator 本地预演实测](/devops/terraform-plan-apply-gap-aws-emulator-local-mock-go-2026) | 2026-11-24 |
 
 ---
 
@@ -79,9 +80,9 @@ keywords:
 - **可观测性**：3 篇（eBPF + OTel Go 1.32 + OTel CNCF 毕业）
 - **WASM 演进**：2 篇（服务端 WASI + K8s SpinKube 集成）
 - **FinOps 云成本**：1 篇（Go + OpenCost）
-- **平台工程与网络**：4 篇（Backstage IDP + Tailscale DERP + Topcoat Rust 全栈框架 + kube-proxy IPVS 退场迁移）
+- **平台工程与网络**：5 篇（Backstage IDP + Tailscale DERP + Topcoat Rust 全栈框架 + kube-proxy IPVS 退场迁移 + Terraform 预演与 AWS Emulator）
 - **CI/CD 供应链安全**：1 篇（Gheist Actions 日志外泄）
-- **累计 20 篇**，更新频率：每周 1-2 篇
+- **累计 21 篇**，更新频率：每周 1-2 篇
 
 ---
 
