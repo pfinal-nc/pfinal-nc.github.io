@@ -67,7 +67,7 @@ recommend: 后端工程
 ### 🟡 第二阶段：Web 开发进阶（4-6周）
 
 #### 2.1 Web 框架
-- [2025年最佳 Go Web 框架深度解析](/dev/backend/golang/2025年将改变我们软件构建方式的6个Go库) 🟡
+- [Go Web 框架选型深度解析](/dev/backend/golang/2025年将改变我们软件构建方式的6个Go库) 🟡
 - [Gin 框架实战指南](/dev/backend/golang/gin-framework-guide) 🟡
 - [Echo 框架从入门到精通](/dev/backend/golang/gin-framework-guide) 🟡
 

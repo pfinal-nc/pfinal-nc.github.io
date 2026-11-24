@@ -199,7 +199,7 @@ DeepSeek-R1 类推理模型会在 `<think>` 标签里输出思考过程。Janus 
 
 **结论很明确**：
 
-- Apple Silicon 用户 → Ollama 的 Metal 加速无可替代，Janus 没有价值
+- Apple Silicon 用户 → Ollama 的 Metal 加速目前难以替代，Janus 没有价值
 - 高并发生产推理 → 用 vLLM/SGLang，别用这三者
 - **CI/CD 流水线、Go 项目集成、AMD/Intel 显卡的 Linux 开发机** → Janus 的单二进制 + 双环境变量是最省事的路径
 

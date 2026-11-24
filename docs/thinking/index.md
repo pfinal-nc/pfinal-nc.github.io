@@ -54,7 +54,7 @@ recommend: 思维方法
 - [别再盲接 OTel：Go 可观察性接入的 8 个大坑](/thinking/method/别再盲接 OTel：Go 可观察性接入的 8 个大坑)
 
 #### 框架深度解析
-- [2025 年最佳 Go Web 框架深度解析：资深开发者的选择指南](/thinking/method/2025年最佳Go-Web框架深度解析：资深开发者的选择指南)
+- [Go Web 框架选型深度解析](/thinking/method/2025年最佳Go-Web框架深度解析：资深开发者的选择指南)
 - [Fyne 深度技术解析 - 面向资深 Go 开发者的架构设计分析](/thinking/method/Fyne-深度技术解析-面向资深Go开发者的架构设计分析)
 - [Fyne 与 Wails 深度对比 - 选择最适合你的 Go 桌面应用框架](/dev/backend/golang/wails/Fyne与Wails深度对比-选择最适合你的Go桌面应用框架)
 

@@ -4,7 +4,7 @@ date: 2024-09-09 15:13:09
 tags:
   - 工具
   - golang
-description: gopsutil 是 Go 生态最流行的跨平台系统信息采集库，一行代码读取 CPU 占用率、内存、磁盘 IO、网络流量与进程指标。本文覆盖安装配置、CPU/内存/磁盘/网络/进程监控完整示例、Docker 容器指标采集与生产环境踩坑经验。
+description: gopsutil 是 Go 生态主流的跨平台系统信息采集库，一行代码读取 CPU 占用率、内存、磁盘 IO、网络流量与进程指标。本文覆盖安装配置、CPU/内存/磁盘/网络/进程监控完整示例、Docker 容器指标采集与生产环境踩坑经验。
 author: PFinal南丞
 keywords:
   - gopsutil 完整使用指南

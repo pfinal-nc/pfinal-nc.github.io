@@ -42,4 +42,4 @@ keywords:
 
 ## 推荐阅读
 
-- [2025 年最佳 Go Web 框架深度解析](/thinking/method/Go-Web-Framework-2025)
+- [Go Web 框架选型深度解析](/thinking/method/Go-Web-Framework-2025)

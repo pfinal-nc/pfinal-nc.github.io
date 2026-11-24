@@ -104,7 +104,7 @@ recommend: 课程
 | 2.6 | gRPC 入门 | Protocol Buffers、服务定义、客户端/服务端 | 📝 |
 
 **推荐文章：**
-- [2025 年最佳 Go Web 框架深度解析](/thinking/method/Go-Web-Framework-2025)
+- [Go Web 框架选型深度解析](/thinking/method/Go-Web-Framework-2025)
 - [如何实现 RESTful API 版本控制](/dev/backend/golang/Go-RESTful-API-Versioning)
 - [接口参数设计 - 多场景复用的优雅之道](/dev/backend/golang/Go-Interface-Parameter-Design)
 - [基于 golang 的高性能游戏接口设计](/thinking/method/High-Performance-Go-Game-API)
