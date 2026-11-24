@@ -94,7 +94,7 @@ recommend: 后端工程
 
 ## 精选文章推荐
 
-- 🔥 [2025 年最佳 Go Web 框架深度解析：资深开发者的选择指南](./backend/golang/)
+- 🔥 [Go Web 框架选型深度解析](./backend/golang/)
 - 🔥 [从 trace 到洞察：Go 项目的可观测性闭环实践](../thinking/method/从 trace 到洞察：Go 项目的可观测性闭环实践.md)
 - 📚 [别再盲接 OTel：Go 可观察性接入的 8 个大坑](../thinking/method/别再盲接 OTel：Go 可观察性接入的 8 个大坑.md)
 - 📚 [高质量 Golang 后端的现代软件工程原则](../thinking/method/高质量Golang后端的现代软件工程原则.md)

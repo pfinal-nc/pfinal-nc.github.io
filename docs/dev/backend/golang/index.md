@@ -32,7 +32,7 @@ tags:
 - [**Go 并发模式进阶：Pipeline、Fan-out/Fan-in 与错误处理**](/dev/backend/golang/go-concurrency-patterns-advanced) - goroutine、channel、select 详解
 
 ### 框架与生态
-- [**2025年最佳Go Web框架深度解析**](/thinking/method/2025年最佳Go-Web框架深度解析：资深开发者的选择指南) - Gin, Echo, Fiber 等框架对比
+- [Go Web 框架选型深度解析](/thinking/method/2025年最佳Go-Web框架深度解析：资深开发者的选择指南) - Gin, Echo, Fiber 等框架对比
 - [**Go 微服务架构实战指南：服务拆分 + gRPC + 服务发现**](/dev/backend/golang/microservices-architecture) - 服务拆分、治理、通信最佳实践
 - [**Go database/sql 实战：连接池与生产级最佳实践**](/dev/backend/golang/go-database-sql) - GORM, SQLx, 连接池配置
 
