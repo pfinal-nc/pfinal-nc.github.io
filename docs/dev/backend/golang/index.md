@@ -219,6 +219,7 @@ tags:
 
 > 按发布时间倒序，包含此前未列入导航的文章。
 
+- [gopsutil 读错容器内存：cgroup v2 指标校准实战](/dev/backend/golang/gopsutil-cgroup-v2-container-metrics-calibration-2026) — 2026-11-25
 - [Go 1.27 goroutineleak 实测：8 类阻塞场景判定与 gopsutil 看门狗](/dev/backend/golang/go-1-27-goroutineleak-leak-detection-matrix-2026) — 2026-11-21
 - [Go 向量检索实战：pgvector、VectorChord、Qdrant 三方对比与 RAG 接入](/dev/backend/golang/go-vector-search-pgvector-qdrant-rag-2026) — 2026-11-17
 - [Go 1.27.4 拆解：12 个 CVE 里 11 个藏在你 go build 的那一刻](/dev/backend/golang/go-1-27-4-12-cve-build-time-rce-toolchain-hardening-2026) — 2026-11-13
