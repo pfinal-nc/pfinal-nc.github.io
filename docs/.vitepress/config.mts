@@ -261,15 +261,19 @@ export default defineConfig({
     const baseUrl = 'https://friday-go.icu';
 
     // 计算当前页面的规范 URL（不带 .html 后缀和 index.html）
-    let currentPath = pageData.relativePath
-      .replace(/\.md$/, '')
+    const rawPath = pageData.relativePath.replace(/\.md$/, '');
+    let currentPath = rawPath
       .replace(/\/index$/, '')
       .replace(/^index$/, '');
 
+    // 目录级索引页（xxx/index.md）与 sitemap 保持一致，规范 URL 带尾斜杠，
+    // 避免「带/不带尾斜杠」两套形态被 Google 判为重复页面。
+    const isDirIndex = rawPath === 'index.md' || /\/index$/.test(rawPath);
+
     // 如果路径为空，说明是根页面
     const canonicalUrl = currentPath
-      ? `${baseUrl}/${currentPath}`
-      : baseUrl;
+      ? `${baseUrl}/${currentPath}${isDirIndex ? '/' : ''}`
+      : `${baseUrl}/`;
 
     // 添加 canonical 标签（最重要的 SEO 标签）
     pageData.frontmatter.head.push([

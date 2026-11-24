@@ -70,6 +70,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs/.vitepress/dist
           commit_message: 'deploy: update site'
-          keep_files: true # 保留已存在的文件
+          keep_files: false # 不保留旧产物：已下线的旧路径/重复 HTML 随每次构建清空，避免残留页面被 Google 重复收录
           enable_jekyll: false
           cname: friday-go.icu # 设置 CNAME

@@ -47,6 +47,9 @@ tags:
 - **[PostgreSQL 10 个鲜为人知的强大功能](/dev/system/database/PostgreSQL-10个鲜为人知的强大功能)**  
   深入探索 PostgreSQL 中 10 个鲜为人知但非常强大的功能，从全文搜索到逻辑复制，提升数据库开发效率。
 
+- **[PostgreSQL 17 实战指南：增量备份、逻辑复制故障转移、JSON_TABLE 与 pgvector](/dev/system/database/postgresql-17-incremental-backup-json-table-pgvector-2026)**  
+  深度解析 PostgreSQL 17 的增量备份、逻辑复制故障转移、JSON_TABLE、MERGE RETURNING 等生产级特性，结合 pgvector 与 TimescaleDB 从单体数据库走向 AI 数据平台的实战路径。
+
 ---
 
 ## 3. 事务、一致性与幂等

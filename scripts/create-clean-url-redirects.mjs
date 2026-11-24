@@ -6,6 +6,7 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
 const distPath = join(__dirname, '../docs/.vitepress/dist')
+const SITE_HOST = 'https://friday-go.icu'
 
 // 重定向规则列表：from 是相对 dist 的路径（无首 /），to 是站点绝对路径（有首 /）
 // 新增于 2026-08-24：修复 GSC 报告的 92 个 404 URL（取前 10 个抽样 + 历史已知）
@@ -73,6 +74,20 @@ const redirectPages = [
   // 中文目录名「工具」下的 Qwen → 真实文章在 thinking/notes（空格必须写 %20）
   { from: '工具/Qwen', to: '/thinking/notes/Qwen%20Code%2030个使用小技巧' },
   { from: '工具/Qwen/index', to: '/thinking/notes/Qwen%20Code%2030个使用小技巧' },
+
+  // 8. 2026-11-24 旧顶层目录清理：docs/golang、docs/database 源码已并入新树
+  // 旧 /golang/Building-RAG... 与新树 RAG 文章为同一篇（重复内容），跳转至新规范 URL
+  { from: 'golang/Building-RAG-System-with-Golang-OpenAI-Vector-Database', to: '/dev/backend/golang/Golang实现RAG系统-从OpenAI到向量数据库' },
+  { from: 'golang/Building-RAG-System-with-Golang-OpenAI-Vector-Database/index', to: '/dev/backend/golang/Golang实现RAG系统-从OpenAI到向量数据库' },
+  // 旧 /golang/ 分类 hub → 新 Go 分类 hub
+  { from: 'golang', to: '/dev/backend/golang/' },
+  { from: 'golang/index', to: '/dev/backend/golang/' },
+  // 旧 /database/ PG17 文章 → 新树数据库目录
+  { from: 'database/postgresql-17-incremental-backup-json-table-pgvector-2026', to: '/dev/system/database/postgresql-17-incremental-backup-json-table-pgvector-2026' },
+  { from: 'database/postgresql-17-incremental-backup-json-table-pgvector-2026/index', to: '/dev/system/database/postgresql-17-incremental-backup-json-table-pgvector-2026' },
+  // 旧 /database/ 分类 hub → 新数据库分类 hub
+  { from: 'database', to: '/dev/system/database/' },
+  { from: 'database/index', to: '/dev/system/database/' },
 ]
 
 function createRedirect(fromPath, toPath) {
@@ -106,7 +121,7 @@ function createRedirect(fromPath, toPath) {
 <head>
   <meta charset="utf-8">
   <meta http-equiv="refresh" content="0; url=${toPath}">
-  <link rel="canonical" href="${toPath}">
+  <link rel="canonical" href="${SITE_HOST}${toPath}">
   <title>重定向到 ${toPath}</title>
 </head>
 <body>
