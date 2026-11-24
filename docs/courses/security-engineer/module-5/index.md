@@ -1,9 +1,10 @@
 ---
 date: 2026-10-10
-title: Module 5
+title: "安全工程师课程 Module 5：应急响应流程"
+description: "梳理安全事件应急响应的标准流程与处置要点。"
 ---
 
-# Module 5
+# 安全工程师课程 Module 5：应急响应流程
 
 本目录共 1 篇文章：
 

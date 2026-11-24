@@ -1,6 +1,7 @@
 ---
 date: 2026-10-10
 title: 数据库后端
+description: "收录 PostgreSQL 17 + pgvector RAG 实战，以及重试导致重复下单等分布式数据一致性问题分析。"
 ---
 
 # 数据库后端

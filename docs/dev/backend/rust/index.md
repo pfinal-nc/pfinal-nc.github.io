@@ -1,6 +1,7 @@
 ---
 date: 2026-10-10
 title: Rust
+description: "涵盖 Rust 异步编程与 Tokio、所有权系统、Tauri 桌面应用、1.98 新标准库与 2026 Edition 等 10 篇 Rust 系统编程文章。"
 ---
 
 # Rust

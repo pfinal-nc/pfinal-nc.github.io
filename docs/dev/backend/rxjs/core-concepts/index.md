@@ -1,6 +1,7 @@
 ---
 date: 2026-10-10
 title: RxJS 核心概念
+description: "讲解 Observable、Observer、Subject、操作符分类与 Subscription 内存管理等 RxJS 核心概念，5 篇建立知识框架。"
 ---
 
 # RxJS 核心概念

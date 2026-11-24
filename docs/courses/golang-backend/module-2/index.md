@@ -1,9 +1,10 @@
 ---
 date: 2026-10-10
-title: Module 2
+title: "Go 后端课程 Module 2：Web 框架与 API 设计"
+description: "涵盖 Web 框架选型、Gin 框架核心、RESTful API 设计、认证授权、中间件开发与 gRPC 入门，6 篇搭建 Go Web 服务端能力。"
 ---
 
-# Module 2
+# Go 后端课程 Module 2：Web 框架与 API 设计
 
 本目录共 6 篇文章：
 
