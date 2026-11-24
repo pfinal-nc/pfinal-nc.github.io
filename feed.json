@@ -353,30 +353,6 @@
             ]
         },
         {
-            "id": "https://friday-go.icu/database",
-            "content_html": "",
-            "url": "https://friday-go.icu/database",
-            "title": "数据库",
-            "date_modified": "2026-10-10T00:00:00.000Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": []
-        },
-        {
-            "id": "https://friday-go.icu/golang",
-            "content_html": "",
-            "url": "https://friday-go.icu/golang",
-            "title": "Golang",
-            "date_modified": "2026-10-10T00:00:00.000Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": []
-        },
-        {
             "id": "https://friday-go.icu/security/offensive/atlassian-cve-2026-21589-file-read-2026",
             "content_html": "解析 Atlassian 全线 Data Center 产品任意文件读取漏洞 CVE-2026-21589：利用条件、受限前提下的真实风险、PoC 公开后的在野利用时间线、修复版本对照表与自查脚本。",
             "url": "https://friday-go.icu/security/offensive/atlassian-cve-2026-21589-file-read-2026",
@@ -753,6 +729,45 @@
                 "golang",
                 "blockchain",
                 "malware"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/dev/backend/golang/go-stdlib-http2-migration-2026",
+            "content_html": "历经两年、11 个子任务，Go 终于把 HTTP/2 实现从 golang.org/x/net/http2 迁入标准库。本文拆解迁移的工程动机、双实现架构与 http2legacy 构建标签机制，并给出 ConfigureTransport 废弃后的完整迁移代码：Transport/Server 协议配置、h2c 启用、参数调优与迁移检查清单。",
+            "url": "https://friday-go.icu/dev/backend/golang/go-stdlib-http2-migration-2026",
+            "title": "HTTP/2 正式进 Go 标准库：x/net/http2 的双实现架构与迁移实战",
+            "summary": "历经两年、11 个子任务，Go 终于把 HTTP/2 实现从 golang.org/x/net/http2 迁入标准库。本文拆解迁移的工程动机、双实现架构与 http2legacy 构建标签机制，并给出 ConfigureTransport 废弃后的完整迁移代码：Transport/Server 协议配置、h2c 启用、参数调优与迁移检查清单。",
+            "date_modified": "2026-10-09T00:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "go",
+                "golang",
+                "http2",
+                "network",
+                "backend"
+            ]
+        },
+        {
+            "id": "https://friday-go.icu/security/offensive/ai-agent-skills-mcp-attack-surface-2026",
+            "content_html": "MCP 2026 路线图中的 Skills over MCP 工作组提出用 Resources 机制分发可复用的 Agent Skills，每个 Skill 包含前置条件、副作用、重试逻辑。本文深度拆解 Skills 的安全模型、新型攻击向量（Skill Poisoning、Resource Hijacking、Retry Storm），并给出企业级防御方案。",
+            "url": "https://friday-go.icu/security/offensive/ai-agent-skills-mcp-attack-surface-2026",
+            "title": "AI Agent Skills over MCP 攻击面深度解析：当 'Skills' 成为新型攻击向量",
+            "summary": "MCP 2026 路线图中的 Skills over MCP 工作组提出用 Resources 机制分发可复用的 Agent Skills，每个 Skill 包含前置条件、副作用、重试逻辑。本文深度拆解 Skills 的安全模型、新型攻击向量（Skill Poisoning、Resource Hijacking、Retry Storm），并给出企业级防御方案。",
+            "date_modified": "2026-10-08T00:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": [
+                "security",
+                "ai",
+                "mcp",
+                "agent",
+                "penetration-testing",
+                "ai-security"
             ]
         }
     ]

@@ -4,7 +4,7 @@
         <title>PFinalClub Tech Blog</title>
         <link>https://friday-go.icu</link>
         <description>PFinalClub - 专注于 Golang, PHP, Python 的技术博客，分享微服务、云原生、架构设计等实战经验</description>
-        <lastBuildDate>Mon, 16 Nov 2026 01:08:24 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 24 Nov 2026 02:05:18 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-CN</language>
@@ -244,18 +244,6 @@
             <category>性能优化</category>
         </item>
         <item>
-            <title><![CDATA[数据库]]></title>
-            <link>https://friday-go.icu/database</link>
-            <guid>https://friday-go.icu/database</guid>
-            <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Golang]]></title>
-            <link>https://friday-go.icu/golang</link>
-            <guid>https://friday-go.icu/golang</guid>
-            <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
-        </item>
-        <item>
             <title><![CDATA[Atlassian CVE-2026-21589 深度剖析：9.3 分任意文件读取与 PoC 公开后 24 小时的在野利用]]></title>
             <link>https://friday-go.icu/security/offensive/atlassian-cve-2026-21589-file-read-2026</link>
             <guid>https://friday-go.icu/security/offensive/atlassian-cve-2026-21589-file-read-2026</guid>
@@ -459,6 +447,33 @@
             <category>golang</category>
             <category>blockchain</category>
             <category>malware</category>
+        </item>
+        <item>
+            <title><![CDATA[HTTP/2 正式进 Go 标准库：x/net/http2 的双实现架构与迁移实战]]></title>
+            <link>https://friday-go.icu/dev/backend/golang/go-stdlib-http2-migration-2026</link>
+            <guid>https://friday-go.icu/dev/backend/golang/go-stdlib-http2-migration-2026</guid>
+            <pubDate>Fri, 09 Oct 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[历经两年、11 个子任务，Go 终于把 HTTP/2 实现从 golang.org/x/net/http2 迁入标准库。本文拆解迁移的工程动机、双实现架构与 http2legacy 构建标签机制，并给出 ConfigureTransport 废弃后的完整迁移代码：Transport/Server 协议配置、h2c 启用、参数调优与迁移检查清单。]]></description>
+            <content:encoded><![CDATA[历经两年、11 个子任务，Go 终于把 HTTP/2 实现从 golang.org/x/net/http2 迁入标准库。本文拆解迁移的工程动机、双实现架构与 http2legacy 构建标签机制，并给出 ConfigureTransport 废弃后的完整迁移代码：Transport/Server 协议配置、h2c 启用、参数调优与迁移检查清单。]]></content:encoded>
+            <category>go</category>
+            <category>golang</category>
+            <category>http2</category>
+            <category>network</category>
+            <category>backend</category>
+        </item>
+        <item>
+            <title><![CDATA[AI Agent Skills over MCP 攻击面深度解析：当 'Skills' 成为新型攻击向量]]></title>
+            <link>https://friday-go.icu/security/offensive/ai-agent-skills-mcp-attack-surface-2026</link>
+            <guid>https://friday-go.icu/security/offensive/ai-agent-skills-mcp-attack-surface-2026</guid>
+            <pubDate>Thu, 08 Oct 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[MCP 2026 路线图中的 Skills over MCP 工作组提出用 Resources 机制分发可复用的 Agent Skills，每个 Skill 包含前置条件、副作用、重试逻辑。本文深度拆解 Skills 的安全模型、新型攻击向量（Skill Poisoning、Resource Hijacking、Retry Storm），并给出企业级防御方案。]]></description>
+            <content:encoded><![CDATA[MCP 2026 路线图中的 Skills over MCP 工作组提出用 Resources 机制分发可复用的 Agent Skills，每个 Skill 包含前置条件、副作用、重试逻辑。本文深度拆解 Skills 的安全模型、新型攻击向量（Skill Poisoning、Resource Hijacking、Retry Storm），并给出企业级防御方案。]]></content:encoded>
+            <category>security</category>
+            <category>ai</category>
+            <category>mcp</category>
+            <category>agent</category>
+            <category>penetration-testing</category>
+            <category>ai-security</category>
         </item>
     </channel>
 </rss>
