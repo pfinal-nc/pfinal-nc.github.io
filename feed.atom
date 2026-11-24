@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://friday-go.icu</id>
     <title>PFinalClub Tech Blog</title>
-    <updated>2026-11-24T04:01:42.248Z</updated>
+    <updated>2026-11-24T06:15:45.895Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>PFinal南丞</name>
@@ -567,6 +567,18 @@
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[RxJS 进阶主题]]></title>
+        <id>https://friday-go.icu/dev/backend/rxjs/advanced-topics</id>
+        <link href="https://friday-go.icu/dev/backend/rxjs/advanced-topics"/>
+        <updated>2026-10-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[涵盖自定义操作符与冷热流转换、Scheduler 选型、Marble Testing 单元测试，3 篇深入 RxJS 进阶实战。]]></summary>
+        <content type="html"><![CDATA[涵盖自定义操作符与冷热流转换、Scheduler 选型、Marble Testing 单元测试，3 篇深入 RxJS 进阶实战。]]></content>
+        <author>
+            <name>PFinal南丞</name>
+            <uri>https://friday-go.icu</uri>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[RxJS 核心概念]]></title>
         <id>https://friday-go.icu/dev/backend/rxjs/core-concepts</id>
         <link href="https://friday-go.icu/dev/backend/rxjs/core-concepts"/>
@@ -591,18 +603,6 @@
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[RxJS 进阶主题]]></title>
-        <id>https://friday-go.icu/dev/backend/rxjs/advanced-topics</id>
-        <link href="https://friday-go.icu/dev/backend/rxjs/advanced-topics"/>
-        <updated>2026-10-10T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[涵盖自定义操作符与冷热流转换、Scheduler 选型、Marble Testing 单元测试，3 篇深入 RxJS 进阶实战。]]></summary>
-        <content type="html"><![CDATA[涵盖自定义操作符与冷热流转换、Scheduler 选型、Marble Testing 单元测试，3 篇深入 RxJS 进阶实战。]]></content>
-        <author>
-            <name>PFinal南丞</name>
-            <uri>https://friday-go.icu</uri>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[RxJS 操作符]]></title>
         <id>https://friday-go.icu/dev/backend/rxjs/operators</id>
         <link href="https://friday-go.icu/dev/backend/rxjs/operators"/>
@@ -615,24 +615,24 @@
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[RxJS 实战示例]]></title>
-        <id>https://friday-go.icu/dev/backend/rxjs/real-world-examples</id>
-        <link href="https://friday-go.icu/dev/backend/rxjs/real-world-examples"/>
-        <updated>2026-10-10T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[收录拖放实现、HTTP 请求处理、状态管理与 Type-Ahead 搜索 4 个 RxJS 真实场景案例。]]></summary>
-        <content type="html"><![CDATA[收录拖放实现、HTTP 请求处理、状态管理与 Type-Ahead 搜索 4 个 RxJS 真实场景案例。]]></content>
-        <author>
-            <name>PFinal南丞</name>
-            <uri>https://friday-go.icu</uri>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[RxJS 性能优化]]></title>
         <id>https://friday-go.icu/dev/backend/rxjs/performance</id>
         <link href="https://friday-go.icu/dev/backend/rxjs/performance"/>
         <updated>2026-10-10T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[讲解 shareReplay 等 RxJS 性能优化手段，减少重复订阅与内存开销。]]></summary>
         <content type="html"><![CDATA[讲解 shareReplay 等 RxJS 性能优化手段，减少重复订阅与内存开销。]]></content>
+        <author>
+            <name>PFinal南丞</name>
+            <uri>https://friday-go.icu</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[RxJS 实战示例]]></title>
+        <id>https://friday-go.icu/dev/backend/rxjs/real-world-examples</id>
+        <link href="https://friday-go.icu/dev/backend/rxjs/real-world-examples"/>
+        <updated>2026-10-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[收录拖放实现、HTTP 请求处理、状态管理与 Type-Ahead 搜索 4 个 RxJS 真实场景案例。]]></summary>
+        <content type="html"><![CDATA[收录拖放实现、HTTP 请求处理、状态管理与 Type-Ahead 搜索 4 个 RxJS 真实场景案例。]]></content>
         <author>
             <name>PFinal南丞</name>
             <uri>https://friday-go.icu</uri>

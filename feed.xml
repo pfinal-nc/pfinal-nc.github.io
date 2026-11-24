@@ -4,7 +4,7 @@
         <title>PFinalClub Tech Blog</title>
         <link>https://friday-go.icu</link>
         <description>PFinalClub - 专注于 Golang, PHP, Python 的技术博客，分享微服务、云原生、架构设计等实战经验</description>
-        <lastBuildDate>Tue, 24 Nov 2026 04:01:42 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 24 Nov 2026 06:15:45 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-CN</language>
@@ -411,6 +411,14 @@
             <content:encoded><![CDATA[收录 Go 单元测试最佳实践（Table-Driven、Mock、覆盖率）与 Testcontainers 集成测试实战两篇文章。]]></content:encoded>
         </item>
         <item>
+            <title><![CDATA[RxJS 进阶主题]]></title>
+            <link>https://friday-go.icu/dev/backend/rxjs/advanced-topics</link>
+            <guid>https://friday-go.icu/dev/backend/rxjs/advanced-topics</guid>
+            <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[涵盖自定义操作符与冷热流转换、Scheduler 选型、Marble Testing 单元测试，3 篇深入 RxJS 进阶实战。]]></description>
+            <content:encoded><![CDATA[涵盖自定义操作符与冷热流转换、Scheduler 选型、Marble Testing 单元测试，3 篇深入 RxJS 进阶实战。]]></content:encoded>
+        </item>
+        <item>
             <title><![CDATA[RxJS 核心概念]]></title>
             <link>https://friday-go.icu/dev/backend/rxjs/core-concepts</link>
             <guid>https://friday-go.icu/dev/backend/rxjs/core-concepts</guid>
@@ -427,14 +435,6 @@
             <content:encoded><![CDATA[RxJS 简介与响应式编程入门指南，理解 Observable、Observer 与响应式数据流的基本概念。]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[RxJS 进阶主题]]></title>
-            <link>https://friday-go.icu/dev/backend/rxjs/advanced-topics</link>
-            <guid>https://friday-go.icu/dev/backend/rxjs/advanced-topics</guid>
-            <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[涵盖自定义操作符与冷热流转换、Scheduler 选型、Marble Testing 单元测试，3 篇深入 RxJS 进阶实战。]]></description>
-            <content:encoded><![CDATA[涵盖自定义操作符与冷热流转换、Scheduler 选型、Marble Testing 单元测试，3 篇深入 RxJS 进阶实战。]]></content:encoded>
-        </item>
-        <item>
             <title><![CDATA[RxJS 操作符]]></title>
             <link>https://friday-go.icu/dev/backend/rxjs/operators</link>
             <guid>https://friday-go.icu/dev/backend/rxjs/operators</guid>
@@ -443,20 +443,20 @@
             <content:encoded><![CDATA[收录 map/filter、merge/concat/combineLatest/forkJoin、switchMap/mergeMap/concatMap/exhaustMap 等 14 篇 RxJS 创建、转换、组合与扁平化操作符详解。]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[RxJS 实战示例]]></title>
-            <link>https://friday-go.icu/dev/backend/rxjs/real-world-examples</link>
-            <guid>https://friday-go.icu/dev/backend/rxjs/real-world-examples</guid>
-            <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[收录拖放实现、HTTP 请求处理、状态管理与 Type-Ahead 搜索 4 个 RxJS 真实场景案例。]]></description>
-            <content:encoded><![CDATA[收录拖放实现、HTTP 请求处理、状态管理与 Type-Ahead 搜索 4 个 RxJS 真实场景案例。]]></content:encoded>
-        </item>
-        <item>
             <title><![CDATA[RxJS 性能优化]]></title>
             <link>https://friday-go.icu/dev/backend/rxjs/performance</link>
             <guid>https://friday-go.icu/dev/backend/rxjs/performance</guid>
             <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[讲解 shareReplay 等 RxJS 性能优化手段，减少重复订阅与内存开销。]]></description>
             <content:encoded><![CDATA[讲解 shareReplay 等 RxJS 性能优化手段，减少重复订阅与内存开销。]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[RxJS 实战示例]]></title>
+            <link>https://friday-go.icu/dev/backend/rxjs/real-world-examples</link>
+            <guid>https://friday-go.icu/dev/backend/rxjs/real-world-examples</guid>
+            <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[收录拖放实现、HTTP 请求处理、状态管理与 Type-Ahead 搜索 4 个 RxJS 真实场景案例。]]></description>
+            <content:encoded><![CDATA[收录拖放实现、HTTP 请求处理、状态管理与 Type-Ahead 搜索 4 个 RxJS 真实场景案例。]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[随笔笔记 - AI 编程 工具使用 经验总结]]></title>

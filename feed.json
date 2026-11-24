@@ -622,6 +622,19 @@
             "tags": []
         },
         {
+            "id": "https://friday-go.icu/dev/backend/rxjs/advanced-topics",
+            "content_html": "涵盖自定义操作符与冷热流转换、Scheduler 选型、Marble Testing 单元测试，3 篇深入 RxJS 进阶实战。",
+            "url": "https://friday-go.icu/dev/backend/rxjs/advanced-topics",
+            "title": "RxJS 进阶主题",
+            "summary": "涵盖自定义操作符与冷热流转换、Scheduler 选型、Marble Testing 单元测试，3 篇深入 RxJS 进阶实战。",
+            "date_modified": "2026-10-10T00:00:00.000Z",
+            "author": {
+                "name": "PFinal南丞",
+                "url": "https://friday-go.icu"
+            },
+            "tags": []
+        },
+        {
             "id": "https://friday-go.icu/dev/backend/rxjs/core-concepts",
             "content_html": "讲解 Observable、Observer、Subject、操作符分类与 Subscription 内存管理等 RxJS 核心概念，5 篇建立知识框架。",
             "url": "https://friday-go.icu/dev/backend/rxjs/core-concepts",
@@ -648,19 +661,6 @@
             "tags": []
         },
         {
-            "id": "https://friday-go.icu/dev/backend/rxjs/advanced-topics",
-            "content_html": "涵盖自定义操作符与冷热流转换、Scheduler 选型、Marble Testing 单元测试，3 篇深入 RxJS 进阶实战。",
-            "url": "https://friday-go.icu/dev/backend/rxjs/advanced-topics",
-            "title": "RxJS 进阶主题",
-            "summary": "涵盖自定义操作符与冷热流转换、Scheduler 选型、Marble Testing 单元测试，3 篇深入 RxJS 进阶实战。",
-            "date_modified": "2026-10-10T00:00:00.000Z",
-            "author": {
-                "name": "PFinal南丞",
-                "url": "https://friday-go.icu"
-            },
-            "tags": []
-        },
-        {
             "id": "https://friday-go.icu/dev/backend/rxjs/operators",
             "content_html": "收录 map/filter、merge/concat/combineLatest/forkJoin、switchMap/mergeMap/concatMap/exhaustMap 等 14 篇 RxJS 创建、转换、组合与扁平化操作符详解。",
             "url": "https://friday-go.icu/dev/backend/rxjs/operators",
@@ -674,11 +674,11 @@
             "tags": []
         },
         {
-            "id": "https://friday-go.icu/dev/backend/rxjs/real-world-examples",
-            "content_html": "收录拖放实现、HTTP 请求处理、状态管理与 Type-Ahead 搜索 4 个 RxJS 真实场景案例。",
-            "url": "https://friday-go.icu/dev/backend/rxjs/real-world-examples",
-            "title": "RxJS 实战示例",
-            "summary": "收录拖放实现、HTTP 请求处理、状态管理与 Type-Ahead 搜索 4 个 RxJS 真实场景案例。",
+            "id": "https://friday-go.icu/dev/backend/rxjs/performance",
+            "content_html": "讲解 shareReplay 等 RxJS 性能优化手段，减少重复订阅与内存开销。",
+            "url": "https://friday-go.icu/dev/backend/rxjs/performance",
+            "title": "RxJS 性能优化",
+            "summary": "讲解 shareReplay 等 RxJS 性能优化手段，减少重复订阅与内存开销。",
             "date_modified": "2026-10-10T00:00:00.000Z",
             "author": {
                 "name": "PFinal南丞",
@@ -687,11 +687,11 @@
             "tags": []
         },
         {
-            "id": "https://friday-go.icu/dev/backend/rxjs/performance",
-            "content_html": "讲解 shareReplay 等 RxJS 性能优化手段，减少重复订阅与内存开销。",
-            "url": "https://friday-go.icu/dev/backend/rxjs/performance",
-            "title": "RxJS 性能优化",
-            "summary": "讲解 shareReplay 等 RxJS 性能优化手段，减少重复订阅与内存开销。",
+            "id": "https://friday-go.icu/dev/backend/rxjs/real-world-examples",
+            "content_html": "收录拖放实现、HTTP 请求处理、状态管理与 Type-Ahead 搜索 4 个 RxJS 真实场景案例。",
+            "url": "https://friday-go.icu/dev/backend/rxjs/real-world-examples",
+            "title": "RxJS 实战示例",
+            "summary": "收录拖放实现、HTTP 请求处理、状态管理与 Type-Ahead 搜索 4 个 RxJS 真实场景案例。",
             "date_modified": "2026-10-10T00:00:00.000Z",
             "author": {
                 "name": "PFinal南丞",
