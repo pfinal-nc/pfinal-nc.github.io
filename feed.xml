@@ -4,7 +4,7 @@
         <title>PFinalClub Tech Blog</title>
         <link>https://friday-go.icu</link>
         <description>PFinalClub - 专注于 Golang, PHP, Python 的技术博客，分享微服务、云原生、架构设计等实战经验</description>
-        <lastBuildDate>Tue, 24 Nov 2026 03:20:41 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 24 Nov 2026 04:01:42 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-CN</language>
@@ -184,6 +184,8 @@
             <link>https://friday-go.icu/dev/fe</link>
             <guid>https://friday-go.icu/dev/fe</guid>
             <pubDate>Tue, 13 Oct 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[收录 Svelte 5 Runes 迁移、Vue 3.6 Vapor Mode 实战、Chrome JPEG XL 纯 Rust 解码器等前端框架与浏览器新技术文章。]]></description>
+            <content:encoded><![CDATA[收录 Svelte 5 Runes 迁移、Vue 3.6 Vapor Mode 实战、Chrome JPEG XL 纯 Rust 解码器等前端框架与浏览器新技术文章。]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[kubectl cp Windows 路径穿越 RCE 深度分析：客户端漏洞为何总是补丁盲区]]></title>
@@ -273,142 +275,188 @@
             <category>security</category>
         </item>
         <item>
-            <title><![CDATA[Module 1：语言核心与内存管理]]></title>
+            <title><![CDATA[Go 后端课程 Module 1：语言核心与内存管理]]></title>
             <link>https://friday-go.icu/courses/golang-backend/module-1</link>
             <guid>https://friday-go.icu/courses/golang-backend/module-1</guid>
             <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[覆盖 Go 内存管理与分配、并发编程核心与模式、GC 机制调优、性能分析及 Go 1.23+ 新特性，6 篇循序渐进打牢 Go 后端语言基础。]]></description>
+            <content:encoded><![CDATA[覆盖 Go 内存管理与分配、并发编程核心与模式、GC 机制调优、性能分析及 Go 1.23+ 新特性，6 篇循序渐进打牢 Go 后端语言基础。]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Module 2]]></title>
+            <title><![CDATA[Go 后端课程 Module 2：Web 框架与 API 设计]]></title>
             <link>https://friday-go.icu/courses/golang-backend/module-2</link>
             <guid>https://friday-go.icu/courses/golang-backend/module-2</guid>
             <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[涵盖 Web 框架选型、Gin 框架核心、RESTful API 设计、认证授权、中间件开发与 gRPC 入门，6 篇搭建 Go Web 服务端能力。]]></description>
+            <content:encoded><![CDATA[涵盖 Web 框架选型、Gin 框架核心、RESTful API 设计、认证授权、中间件开发与 gRPC 入门，6 篇搭建 Go Web 服务端能力。]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Module 3]]></title>
+            <title><![CDATA[Go 后端课程 Module 3：数据库与缓存实战]]></title>
             <link>https://friday-go.icu/courses/golang-backend/module-3</link>
             <guid>https://friday-go.icu/courses/golang-backend/module-3</guid>
             <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[讲解 MySQL 进阶、PostgreSQL 实战、Redis 缓存设计、ClickHouse OLAP、GORM/sqlx 及数据库优化，6 篇覆盖后端数据存储全链路。]]></description>
+            <content:encoded><![CDATA[讲解 MySQL 进阶、PostgreSQL 实战、Redis 缓存设计、ClickHouse OLAP、GORM/sqlx 及数据库优化，6 篇覆盖后端数据存储全链路。]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Module 4]]></title>
+            <title><![CDATA[Go 后端课程 Module 4：微服务架构与服务治理]]></title>
             <link>https://friday-go.icu/courses/golang-backend/module-4</link>
             <guid>https://friday-go.icu/courses/golang-backend/module-4</guid>
             <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[涵盖微服务架构设计、服务通信、服务发现注册、负载均衡、服务治理、配置中心与 API 网关，7 篇系统讲解 Go 微服务落地。]]></description>
+            <content:encoded><![CDATA[涵盖微服务架构设计、服务通信、服务发现注册、负载均衡、服务治理、配置中心与 API 网关，7 篇系统讲解 Go 微服务落地。]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Module 5]]></title>
+            <title><![CDATA[Go 后端课程 Module 5：可观测性与告警]]></title>
             <link>https://friday-go.icu/courses/golang-backend/module-5</link>
             <guid>https://friday-go.icu/courses/golang-backend/module-5</guid>
             <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[讲解可观测性基础、日志系统设计、指标监控、分布式追踪、Go 可观测性实战与告警值班，6 篇构建服务线上观测体系。]]></description>
+            <content:encoded><![CDATA[讲解可观测性基础、日志系统设计、指标监控、分布式追踪、Go 可观测性实战与告警值班，6 篇构建服务线上观测体系。]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[实战项目]]></title>
+            <title><![CDATA[Go 后端课程：综合实战项目]]></title>
             <link>https://friday-go.icu/courses/golang-backend/project</link>
             <guid>https://friday-go.icu/courses/golang-backend/project</guid>
             <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[从项目搭建、用户模块、文章模块、互动模块、统计模块到部署上线，6 篇完成一个完整 Go 后端项目的端到端实战。]]></description>
+            <content:encoded><![CDATA[从项目搭建、用户模块、文章模块、互动模块、统计模块到部署上线，6 篇完成一个完整 Go 后端项目的端到端实战。]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Module 1]]></title>
+            <title><![CDATA[RxJS 课程 Module 1：为什么需要 RxJS]]></title>
             <link>https://friday-go.icu/courses/rxjs/module-1</link>
             <guid>https://friday-go.icu/courses/rxjs/module-1</guid>
             <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[介绍响应式编程与 RxJS 的适用场景，理解为什么需要用 Observable 管理异步与事件流。]]></description>
+            <content:encoded><![CDATA[介绍响应式编程与 RxJS 的适用场景，理解为什么需要用 Observable 管理异步与事件流。]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Module 5]]></title>
+            <title><![CDATA[RxJS 课程 Module 5：错误处理与冷热流]]></title>
             <link>https://friday-go.icu/courses/rxjs/module-5</link>
             <guid>https://friday-go.icu/courses/rxjs/module-5</guid>
             <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[涵盖错误处理机制，以及热 Observable 与冷 Observable 的区别和相互转换。]]></description>
+            <content:encoded><![CDATA[涵盖错误处理机制，以及热 Observable 与冷 Observable 的区别和相互转换。]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Module 1]]></title>
+            <title><![CDATA[安全工程师课程 Module 1：安全基线与 SSH 加固]]></title>
             <link>https://friday-go.icu/courses/security-engineer/module-1</link>
             <guid>https://friday-go.icu/courses/security-engineer/module-1</guid>
             <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[涵盖服务器安全基线检查与 SSH 安全加固实践，2 篇打好主机安全入门基础。]]></description>
+            <content:encoded><![CDATA[涵盖服务器安全基线检查与 SSH 安全加固实践，2 篇打好主机安全入门基础。]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Module 2]]></title>
+            <title><![CDATA[安全工程师课程 Module 2：OWASP Top 10]]></title>
             <link>https://friday-go.icu/courses/security-engineer/module-2</link>
             <guid>https://friday-go.icu/courses/security-engineer/module-2</guid>
             <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[系统讲解 OWASP Top 10 常见 Web 安全风险与对应防护要点。]]></description>
+            <content:encoded><![CDATA[系统讲解 OWASP Top 10 常见 Web 安全风险与对应防护要点。]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Module 3]]></title>
+            <title><![CDATA[安全工程师课程 Module 3：随机数、依赖安全与代码审计]]></title>
             <link>https://friday-go.icu/courses/security-engineer/module-3</link>
             <guid>https://friday-go.icu/courses/security-engineer/module-3</guid>
             <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[涵盖安全随机数、依赖组件安全与代码审计方法，3 篇提升应用安全审查能力。]]></description>
+            <content:encoded><![CDATA[涵盖安全随机数、依赖组件安全与代码审计方法，3 篇提升应用安全审查能力。]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Module 4]]></title>
+            <title><![CDATA[安全工程师课程 Module 4：渗透测试方法论]]></title>
             <link>https://friday-go.icu/courses/security-engineer/module-4</link>
             <guid>https://friday-go.icu/courses/security-engineer/module-4</guid>
             <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[讲解渗透测试的标准流程与方法论，建立系统化的安全测试思路。]]></description>
+            <content:encoded><![CDATA[讲解渗透测试的标准流程与方法论，建立系统化的安全测试思路。]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Module 5]]></title>
+            <title><![CDATA[安全工程师课程 Module 5：应急响应流程]]></title>
             <link>https://friday-go.icu/courses/security-engineer/module-5</link>
             <guid>https://friday-go.icu/courses/security-engineer/module-5</guid>
             <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[梳理安全事件应急响应的标准流程与处置要点。]]></description>
+            <content:encoded><![CDATA[梳理安全事件应急响应的标准流程与处置要点。]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Module 4]]></title>
+            <title><![CDATA[Wails 桌面课程 Module 4：打包分发与性能优化]]></title>
             <link>https://friday-go.icu/courses/wails-desktop/module-4</link>
             <guid>https://friday-go.icu/courses/wails-desktop/module-4</guid>
             <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[涵盖 Wails 应用打包分发流程与桌面端性能优化实践，2 篇完成 Go 桌面应用上线前准备。]]></description>
+            <content:encoded><![CDATA[涵盖 Wails 应用打包分发流程与桌面端性能优化实践，2 篇完成 Go 桌面应用上线前准备。]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[数据库后端]]></title>
             <link>https://friday-go.icu/dev/backend/database</link>
             <guid>https://friday-go.icu/dev/backend/database</guid>
             <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[收录 PostgreSQL 17 + pgvector RAG 实战，以及重试导致重复下单等分布式数据一致性问题分析。]]></description>
+            <content:encoded><![CDATA[收录 PostgreSQL 17 + pgvector RAG 实战，以及重试导致重复下单等分布式数据一致性问题分析。]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Rust]]></title>
             <link>https://friday-go.icu/dev/backend/rust</link>
             <guid>https://friday-go.icu/dev/backend/rust</guid>
             <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[涵盖 Rust 异步编程与 Tokio、所有权系统、Tauri 桌面应用、1.98 新标准库与 2026 Edition 等 10 篇 Rust 系统编程文章。]]></description>
+            <content:encoded><![CDATA[涵盖 Rust 异步编程与 Tokio、所有权系统、Tauri 桌面应用、1.98 新标准库与 2026 Edition 等 10 篇 Rust 系统编程文章。]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[测试]]></title>
             <link>https://friday-go.icu/dev/backend/test</link>
             <guid>https://friday-go.icu/dev/backend/test</guid>
             <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[RxJS 进阶主题]]></title>
-            <link>https://friday-go.icu/dev/backend/rxjs/advanced-topics</link>
-            <guid>https://friday-go.icu/dev/backend/rxjs/advanced-topics</guid>
-            <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[收录 Go 单元测试最佳实践（Table-Driven、Mock、覆盖率）与 Testcontainers 集成测试实战两篇文章。]]></description>
+            <content:encoded><![CDATA[收录 Go 单元测试最佳实践（Table-Driven、Mock、覆盖率）与 Testcontainers 集成测试实战两篇文章。]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[RxJS 核心概念]]></title>
             <link>https://friday-go.icu/dev/backend/rxjs/core-concepts</link>
             <guid>https://friday-go.icu/dev/backend/rxjs/core-concepts</guid>
             <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[讲解 Observable、Observer、Subject、操作符分类与 Subscription 内存管理等 RxJS 核心概念，5 篇建立知识框架。]]></description>
+            <content:encoded><![CDATA[讲解 Observable、Observer、Subject、操作符分类与 Subscription 内存管理等 RxJS 核心概念，5 篇建立知识框架。]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[RxJS 入门]]></title>
             <link>https://friday-go.icu/dev/backend/rxjs/introduction</link>
             <guid>https://friday-go.icu/dev/backend/rxjs/introduction</guid>
             <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[RxJS 简介与响应式编程入门指南，理解 Observable、Observer 与响应式数据流的基本概念。]]></description>
+            <content:encoded><![CDATA[RxJS 简介与响应式编程入门指南，理解 Observable、Observer 与响应式数据流的基本概念。]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[RxJS 进阶主题]]></title>
+            <link>https://friday-go.icu/dev/backend/rxjs/advanced-topics</link>
+            <guid>https://friday-go.icu/dev/backend/rxjs/advanced-topics</guid>
+            <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[涵盖自定义操作符与冷热流转换、Scheduler 选型、Marble Testing 单元测试，3 篇深入 RxJS 进阶实战。]]></description>
+            <content:encoded><![CDATA[涵盖自定义操作符与冷热流转换、Scheduler 选型、Marble Testing 单元测试，3 篇深入 RxJS 进阶实战。]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[RxJS 操作符]]></title>
             <link>https://friday-go.icu/dev/backend/rxjs/operators</link>
             <guid>https://friday-go.icu/dev/backend/rxjs/operators</guid>
             <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[RxJS 性能优化]]></title>
-            <link>https://friday-go.icu/dev/backend/rxjs/performance</link>
-            <guid>https://friday-go.icu/dev/backend/rxjs/performance</guid>
-            <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[收录 map/filter、merge/concat/combineLatest/forkJoin、switchMap/mergeMap/concatMap/exhaustMap 等 14 篇 RxJS 创建、转换、组合与扁平化操作符详解。]]></description>
+            <content:encoded><![CDATA[收录 map/filter、merge/concat/combineLatest/forkJoin、switchMap/mergeMap/concatMap/exhaustMap 等 14 篇 RxJS 创建、转换、组合与扁平化操作符详解。]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[RxJS 实战示例]]></title>
             <link>https://friday-go.icu/dev/backend/rxjs/real-world-examples</link>
             <guid>https://friday-go.icu/dev/backend/rxjs/real-world-examples</guid>
             <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[收录拖放实现、HTTP 请求处理、状态管理与 Type-Ahead 搜索 4 个 RxJS 真实场景案例。]]></description>
+            <content:encoded><![CDATA[收录拖放实现、HTTP 请求处理、状态管理与 Type-Ahead 搜索 4 个 RxJS 真实场景案例。]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[RxJS 性能优化]]></title>
+            <link>https://friday-go.icu/dev/backend/rxjs/performance</link>
+            <guid>https://friday-go.icu/dev/backend/rxjs/performance</guid>
+            <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[讲解 shareReplay 等 RxJS 性能优化手段，减少重复订阅与内存开销。]]></description>
+            <content:encoded><![CDATA[讲解 shareReplay 等 RxJS 性能优化手段，减少重复订阅与内存开销。]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[随笔笔记 - AI 编程 工具使用 经验总结]]></title>

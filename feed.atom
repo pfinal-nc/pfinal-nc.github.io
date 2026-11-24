@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://friday-go.icu</id>
     <title>PFinalClub Tech Blog</title>
-    <updated>2026-11-24T03:20:41.226Z</updated>
+    <updated>2026-11-24T04:01:42.248Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>PFinal南丞</name>
@@ -236,6 +236,8 @@
         <id>https://friday-go.icu/dev/fe</id>
         <link href="https://friday-go.icu/dev/fe"/>
         <updated>2026-10-13T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[收录 Svelte 5 Runes 迁移、Vue 3.6 Vapor Mode 实战、Chrome JPEG XL 纯 Rust 解码器等前端框架与浏览器新技术文章。]]></summary>
+        <content type="html"><![CDATA[收录 Svelte 5 Runes 迁移、Vue 3.6 Vapor Mode 实战、Chrome JPEG XL 纯 Rust 解码器等前端框架与浏览器新技术文章。]]></content>
         <author>
             <name>PFinal南丞</name>
             <uri>https://friday-go.icu</uri>
@@ -361,140 +363,168 @@
         <category label="security"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Module 1：语言核心与内存管理]]></title>
+        <title type="html"><![CDATA[Go 后端课程 Module 1：语言核心与内存管理]]></title>
         <id>https://friday-go.icu/courses/golang-backend/module-1</id>
         <link href="https://friday-go.icu/courses/golang-backend/module-1"/>
         <updated>2026-10-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[覆盖 Go 内存管理与分配、并发编程核心与模式、GC 机制调优、性能分析及 Go 1.23+ 新特性，6 篇循序渐进打牢 Go 后端语言基础。]]></summary>
+        <content type="html"><![CDATA[覆盖 Go 内存管理与分配、并发编程核心与模式、GC 机制调优、性能分析及 Go 1.23+ 新特性，6 篇循序渐进打牢 Go 后端语言基础。]]></content>
         <author>
             <name>PFinal南丞</name>
             <uri>https://friday-go.icu</uri>
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Module 2]]></title>
+        <title type="html"><![CDATA[Go 后端课程 Module 2：Web 框架与 API 设计]]></title>
         <id>https://friday-go.icu/courses/golang-backend/module-2</id>
         <link href="https://friday-go.icu/courses/golang-backend/module-2"/>
         <updated>2026-10-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[涵盖 Web 框架选型、Gin 框架核心、RESTful API 设计、认证授权、中间件开发与 gRPC 入门，6 篇搭建 Go Web 服务端能力。]]></summary>
+        <content type="html"><![CDATA[涵盖 Web 框架选型、Gin 框架核心、RESTful API 设计、认证授权、中间件开发与 gRPC 入门，6 篇搭建 Go Web 服务端能力。]]></content>
         <author>
             <name>PFinal南丞</name>
             <uri>https://friday-go.icu</uri>
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Module 3]]></title>
+        <title type="html"><![CDATA[Go 后端课程 Module 3：数据库与缓存实战]]></title>
         <id>https://friday-go.icu/courses/golang-backend/module-3</id>
         <link href="https://friday-go.icu/courses/golang-backend/module-3"/>
         <updated>2026-10-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[讲解 MySQL 进阶、PostgreSQL 实战、Redis 缓存设计、ClickHouse OLAP、GORM/sqlx 及数据库优化，6 篇覆盖后端数据存储全链路。]]></summary>
+        <content type="html"><![CDATA[讲解 MySQL 进阶、PostgreSQL 实战、Redis 缓存设计、ClickHouse OLAP、GORM/sqlx 及数据库优化，6 篇覆盖后端数据存储全链路。]]></content>
         <author>
             <name>PFinal南丞</name>
             <uri>https://friday-go.icu</uri>
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Module 4]]></title>
+        <title type="html"><![CDATA[Go 后端课程 Module 4：微服务架构与服务治理]]></title>
         <id>https://friday-go.icu/courses/golang-backend/module-4</id>
         <link href="https://friday-go.icu/courses/golang-backend/module-4"/>
         <updated>2026-10-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[涵盖微服务架构设计、服务通信、服务发现注册、负载均衡、服务治理、配置中心与 API 网关，7 篇系统讲解 Go 微服务落地。]]></summary>
+        <content type="html"><![CDATA[涵盖微服务架构设计、服务通信、服务发现注册、负载均衡、服务治理、配置中心与 API 网关，7 篇系统讲解 Go 微服务落地。]]></content>
         <author>
             <name>PFinal南丞</name>
             <uri>https://friday-go.icu</uri>
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Module 5]]></title>
+        <title type="html"><![CDATA[Go 后端课程 Module 5：可观测性与告警]]></title>
         <id>https://friday-go.icu/courses/golang-backend/module-5</id>
         <link href="https://friday-go.icu/courses/golang-backend/module-5"/>
         <updated>2026-10-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[讲解可观测性基础、日志系统设计、指标监控、分布式追踪、Go 可观测性实战与告警值班，6 篇构建服务线上观测体系。]]></summary>
+        <content type="html"><![CDATA[讲解可观测性基础、日志系统设计、指标监控、分布式追踪、Go 可观测性实战与告警值班，6 篇构建服务线上观测体系。]]></content>
         <author>
             <name>PFinal南丞</name>
             <uri>https://friday-go.icu</uri>
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[实战项目]]></title>
+        <title type="html"><![CDATA[Go 后端课程：综合实战项目]]></title>
         <id>https://friday-go.icu/courses/golang-backend/project</id>
         <link href="https://friday-go.icu/courses/golang-backend/project"/>
         <updated>2026-10-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[从项目搭建、用户模块、文章模块、互动模块、统计模块到部署上线，6 篇完成一个完整 Go 后端项目的端到端实战。]]></summary>
+        <content type="html"><![CDATA[从项目搭建、用户模块、文章模块、互动模块、统计模块到部署上线，6 篇完成一个完整 Go 后端项目的端到端实战。]]></content>
         <author>
             <name>PFinal南丞</name>
             <uri>https://friday-go.icu</uri>
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Module 1]]></title>
+        <title type="html"><![CDATA[RxJS 课程 Module 1：为什么需要 RxJS]]></title>
         <id>https://friday-go.icu/courses/rxjs/module-1</id>
         <link href="https://friday-go.icu/courses/rxjs/module-1"/>
         <updated>2026-10-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[介绍响应式编程与 RxJS 的适用场景，理解为什么需要用 Observable 管理异步与事件流。]]></summary>
+        <content type="html"><![CDATA[介绍响应式编程与 RxJS 的适用场景，理解为什么需要用 Observable 管理异步与事件流。]]></content>
         <author>
             <name>PFinal南丞</name>
             <uri>https://friday-go.icu</uri>
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Module 5]]></title>
+        <title type="html"><![CDATA[RxJS 课程 Module 5：错误处理与冷热流]]></title>
         <id>https://friday-go.icu/courses/rxjs/module-5</id>
         <link href="https://friday-go.icu/courses/rxjs/module-5"/>
         <updated>2026-10-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[涵盖错误处理机制，以及热 Observable 与冷 Observable 的区别和相互转换。]]></summary>
+        <content type="html"><![CDATA[涵盖错误处理机制，以及热 Observable 与冷 Observable 的区别和相互转换。]]></content>
         <author>
             <name>PFinal南丞</name>
             <uri>https://friday-go.icu</uri>
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Module 1]]></title>
+        <title type="html"><![CDATA[安全工程师课程 Module 1：安全基线与 SSH 加固]]></title>
         <id>https://friday-go.icu/courses/security-engineer/module-1</id>
         <link href="https://friday-go.icu/courses/security-engineer/module-1"/>
         <updated>2026-10-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[涵盖服务器安全基线检查与 SSH 安全加固实践，2 篇打好主机安全入门基础。]]></summary>
+        <content type="html"><![CDATA[涵盖服务器安全基线检查与 SSH 安全加固实践，2 篇打好主机安全入门基础。]]></content>
         <author>
             <name>PFinal南丞</name>
             <uri>https://friday-go.icu</uri>
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Module 2]]></title>
+        <title type="html"><![CDATA[安全工程师课程 Module 2：OWASP Top 10]]></title>
         <id>https://friday-go.icu/courses/security-engineer/module-2</id>
         <link href="https://friday-go.icu/courses/security-engineer/module-2"/>
         <updated>2026-10-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[系统讲解 OWASP Top 10 常见 Web 安全风险与对应防护要点。]]></summary>
+        <content type="html"><![CDATA[系统讲解 OWASP Top 10 常见 Web 安全风险与对应防护要点。]]></content>
         <author>
             <name>PFinal南丞</name>
             <uri>https://friday-go.icu</uri>
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Module 3]]></title>
+        <title type="html"><![CDATA[安全工程师课程 Module 3：随机数、依赖安全与代码审计]]></title>
         <id>https://friday-go.icu/courses/security-engineer/module-3</id>
         <link href="https://friday-go.icu/courses/security-engineer/module-3"/>
         <updated>2026-10-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[涵盖安全随机数、依赖组件安全与代码审计方法，3 篇提升应用安全审查能力。]]></summary>
+        <content type="html"><![CDATA[涵盖安全随机数、依赖组件安全与代码审计方法，3 篇提升应用安全审查能力。]]></content>
         <author>
             <name>PFinal南丞</name>
             <uri>https://friday-go.icu</uri>
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Module 4]]></title>
+        <title type="html"><![CDATA[安全工程师课程 Module 4：渗透测试方法论]]></title>
         <id>https://friday-go.icu/courses/security-engineer/module-4</id>
         <link href="https://friday-go.icu/courses/security-engineer/module-4"/>
         <updated>2026-10-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[讲解渗透测试的标准流程与方法论，建立系统化的安全测试思路。]]></summary>
+        <content type="html"><![CDATA[讲解渗透测试的标准流程与方法论，建立系统化的安全测试思路。]]></content>
         <author>
             <name>PFinal南丞</name>
             <uri>https://friday-go.icu</uri>
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Module 5]]></title>
+        <title type="html"><![CDATA[安全工程师课程 Module 5：应急响应流程]]></title>
         <id>https://friday-go.icu/courses/security-engineer/module-5</id>
         <link href="https://friday-go.icu/courses/security-engineer/module-5"/>
         <updated>2026-10-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[梳理安全事件应急响应的标准流程与处置要点。]]></summary>
+        <content type="html"><![CDATA[梳理安全事件应急响应的标准流程与处置要点。]]></content>
         <author>
             <name>PFinal南丞</name>
             <uri>https://friday-go.icu</uri>
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Module 4]]></title>
+        <title type="html"><![CDATA[Wails 桌面课程 Module 4：打包分发与性能优化]]></title>
         <id>https://friday-go.icu/courses/wails-desktop/module-4</id>
         <link href="https://friday-go.icu/courses/wails-desktop/module-4"/>
         <updated>2026-10-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[涵盖 Wails 应用打包分发流程与桌面端性能优化实践，2 篇完成 Go 桌面应用上线前准备。]]></summary>
+        <content type="html"><![CDATA[涵盖 Wails 应用打包分发流程与桌面端性能优化实践，2 篇完成 Go 桌面应用上线前准备。]]></content>
         <author>
             <name>PFinal南丞</name>
             <uri>https://friday-go.icu</uri>
@@ -505,6 +535,8 @@
         <id>https://friday-go.icu/dev/backend/database</id>
         <link href="https://friday-go.icu/dev/backend/database"/>
         <updated>2026-10-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[收录 PostgreSQL 17 + pgvector RAG 实战，以及重试导致重复下单等分布式数据一致性问题分析。]]></summary>
+        <content type="html"><![CDATA[收录 PostgreSQL 17 + pgvector RAG 实战，以及重试导致重复下单等分布式数据一致性问题分析。]]></content>
         <author>
             <name>PFinal南丞</name>
             <uri>https://friday-go.icu</uri>
@@ -515,6 +547,8 @@
         <id>https://friday-go.icu/dev/backend/rust</id>
         <link href="https://friday-go.icu/dev/backend/rust"/>
         <updated>2026-10-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[涵盖 Rust 异步编程与 Tokio、所有权系统、Tauri 桌面应用、1.98 新标准库与 2026 Edition 等 10 篇 Rust 系统编程文章。]]></summary>
+        <content type="html"><![CDATA[涵盖 Rust 异步编程与 Tokio、所有权系统、Tauri 桌面应用、1.98 新标准库与 2026 Edition 等 10 篇 Rust 系统编程文章。]]></content>
         <author>
             <name>PFinal南丞</name>
             <uri>https://friday-go.icu</uri>
@@ -525,16 +559,8 @@
         <id>https://friday-go.icu/dev/backend/test</id>
         <link href="https://friday-go.icu/dev/backend/test"/>
         <updated>2026-10-10T00:00:00.000Z</updated>
-        <author>
-            <name>PFinal南丞</name>
-            <uri>https://friday-go.icu</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[RxJS 进阶主题]]></title>
-        <id>https://friday-go.icu/dev/backend/rxjs/advanced-topics</id>
-        <link href="https://friday-go.icu/dev/backend/rxjs/advanced-topics"/>
-        <updated>2026-10-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[收录 Go 单元测试最佳实践（Table-Driven、Mock、覆盖率）与 Testcontainers 集成测试实战两篇文章。]]></summary>
+        <content type="html"><![CDATA[收录 Go 单元测试最佳实践（Table-Driven、Mock、覆盖率）与 Testcontainers 集成测试实战两篇文章。]]></content>
         <author>
             <name>PFinal南丞</name>
             <uri>https://friday-go.icu</uri>
@@ -545,6 +571,8 @@
         <id>https://friday-go.icu/dev/backend/rxjs/core-concepts</id>
         <link href="https://friday-go.icu/dev/backend/rxjs/core-concepts"/>
         <updated>2026-10-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[讲解 Observable、Observer、Subject、操作符分类与 Subscription 内存管理等 RxJS 核心概念，5 篇建立知识框架。]]></summary>
+        <content type="html"><![CDATA[讲解 Observable、Observer、Subject、操作符分类与 Subscription 内存管理等 RxJS 核心概念，5 篇建立知识框架。]]></content>
         <author>
             <name>PFinal南丞</name>
             <uri>https://friday-go.icu</uri>
@@ -555,6 +583,20 @@
         <id>https://friday-go.icu/dev/backend/rxjs/introduction</id>
         <link href="https://friday-go.icu/dev/backend/rxjs/introduction"/>
         <updated>2026-10-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[RxJS 简介与响应式编程入门指南，理解 Observable、Observer 与响应式数据流的基本概念。]]></summary>
+        <content type="html"><![CDATA[RxJS 简介与响应式编程入门指南，理解 Observable、Observer 与响应式数据流的基本概念。]]></content>
+        <author>
+            <name>PFinal南丞</name>
+            <uri>https://friday-go.icu</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[RxJS 进阶主题]]></title>
+        <id>https://friday-go.icu/dev/backend/rxjs/advanced-topics</id>
+        <link href="https://friday-go.icu/dev/backend/rxjs/advanced-topics"/>
+        <updated>2026-10-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[涵盖自定义操作符与冷热流转换、Scheduler 选型、Marble Testing 单元测试，3 篇深入 RxJS 进阶实战。]]></summary>
+        <content type="html"><![CDATA[涵盖自定义操作符与冷热流转换、Scheduler 选型、Marble Testing 单元测试，3 篇深入 RxJS 进阶实战。]]></content>
         <author>
             <name>PFinal南丞</name>
             <uri>https://friday-go.icu</uri>
@@ -565,16 +607,8 @@
         <id>https://friday-go.icu/dev/backend/rxjs/operators</id>
         <link href="https://friday-go.icu/dev/backend/rxjs/operators"/>
         <updated>2026-10-10T00:00:00.000Z</updated>
-        <author>
-            <name>PFinal南丞</name>
-            <uri>https://friday-go.icu</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[RxJS 性能优化]]></title>
-        <id>https://friday-go.icu/dev/backend/rxjs/performance</id>
-        <link href="https://friday-go.icu/dev/backend/rxjs/performance"/>
-        <updated>2026-10-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[收录 map/filter、merge/concat/combineLatest/forkJoin、switchMap/mergeMap/concatMap/exhaustMap 等 14 篇 RxJS 创建、转换、组合与扁平化操作符详解。]]></summary>
+        <content type="html"><![CDATA[收录 map/filter、merge/concat/combineLatest/forkJoin、switchMap/mergeMap/concatMap/exhaustMap 等 14 篇 RxJS 创建、转换、组合与扁平化操作符详解。]]></content>
         <author>
             <name>PFinal南丞</name>
             <uri>https://friday-go.icu</uri>
@@ -585,6 +619,20 @@
         <id>https://friday-go.icu/dev/backend/rxjs/real-world-examples</id>
         <link href="https://friday-go.icu/dev/backend/rxjs/real-world-examples"/>
         <updated>2026-10-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[收录拖放实现、HTTP 请求处理、状态管理与 Type-Ahead 搜索 4 个 RxJS 真实场景案例。]]></summary>
+        <content type="html"><![CDATA[收录拖放实现、HTTP 请求处理、状态管理与 Type-Ahead 搜索 4 个 RxJS 真实场景案例。]]></content>
+        <author>
+            <name>PFinal南丞</name>
+            <uri>https://friday-go.icu</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[RxJS 性能优化]]></title>
+        <id>https://friday-go.icu/dev/backend/rxjs/performance</id>
+        <link href="https://friday-go.icu/dev/backend/rxjs/performance"/>
+        <updated>2026-10-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[讲解 shareReplay 等 RxJS 性能优化手段，减少重复订阅与内存开销。]]></summary>
+        <content type="html"><![CDATA[讲解 shareReplay 等 RxJS 性能优化手段，减少重复订阅与内存开销。]]></content>
         <author>
             <name>PFinal南丞</name>
             <uri>https://friday-go.icu</uri>
