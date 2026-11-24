@@ -240,6 +240,6 @@ CREATE TABLE chunks_2026q2 PARTITION OF chunks
 
 ## 相关阅读
 
-- [Golang RAG 实战 2026：Go + OpenAI + Qdrant 搭建生产级 RAG 系统](/golang/Building-RAG-System-with-Golang-OpenAI-Vector-Database)
+- [Golang RAG 系统实战 2026：OpenAI + Qdrant 从零构建生产级检索（完整代码）](/dev/backend/golang/Golang实现RAG系统-从OpenAI到向量数据库)
 - [向量数据库选型 2026：Qdrant vs Milvus vs Weaviate vs pgvector](/ai/vector-database-selection-2026)
 - [RAG 系统架构设计与实现：从原理到生产落地](/ai/rag-system-architecture)
