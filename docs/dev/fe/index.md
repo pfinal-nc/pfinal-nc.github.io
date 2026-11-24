@@ -1,6 +1,7 @@
 ---
 date: 2026-10-13
 title: 前端开发
+description: "收录 Svelte 5 Runes 迁移、Vue 3.6 Vapor Mode 实战、Chrome JPEG XL 纯 Rust 解码器等前端框架与浏览器新技术文章。"
 ---
 
 # 前端开发

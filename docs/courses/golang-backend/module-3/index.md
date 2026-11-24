@@ -1,9 +1,10 @@
 ---
 date: 2026-10-10
-title: Module 3
+title: "Go 后端课程 Module 3：数据库与缓存实战"
+description: "讲解 MySQL 进阶、PostgreSQL 实战、Redis 缓存设计、ClickHouse OLAP、GORM/sqlx 及数据库优化，6 篇覆盖后端数据存储全链路。"
 ---
 
-# Module 3
+# Go 后端课程 Module 3：数据库与缓存实战
 
 本目录共 6 篇文章：
 

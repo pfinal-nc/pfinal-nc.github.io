@@ -1,6 +1,7 @@
 ---
 date: 2026-10-10
 title: RxJS 操作符
+description: "收录 map/filter、merge/concat/combineLatest/forkJoin、switchMap/mergeMap/concatMap/exhaustMap 等 14 篇 RxJS 创建、转换、组合与扁平化操作符详解。"
 ---
 
 # RxJS 操作符

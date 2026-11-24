@@ -1,6 +1,7 @@
 ---
 date: 2026-10-10
 title: 测试
+description: "收录 Go 单元测试最佳实践（Table-Driven、Mock、覆盖率）与 Testcontainers 集成测试实战两篇文章。"
 ---
 
 # 测试

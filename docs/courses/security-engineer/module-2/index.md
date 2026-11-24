@@ -1,9 +1,10 @@
 ---
 date: 2026-10-10
-title: Module 2
+title: "安全工程师课程 Module 2：OWASP Top 10"
+description: "系统讲解 OWASP Top 10 常见 Web 安全风险与对应防护要点。"
 ---
 
-# Module 2
+# 安全工程师课程 Module 2：OWASP Top 10
 
 本目录共 1 篇文章：
 

@@ -1,9 +1,10 @@
 ---
 date: 2026-10-10
-title: Module 5
+title: "RxJS 课程 Module 5：错误处理与冷热流"
+description: "涵盖错误处理机制，以及热 Observable 与冷 Observable 的区别和相互转换。"
 ---
 
-# Module 5
+# RxJS 课程 Module 5：错误处理与冷热流
 
 本目录共 2 篇文章：
 

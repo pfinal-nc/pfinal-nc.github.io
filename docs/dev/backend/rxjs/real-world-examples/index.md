@@ -1,6 +1,7 @@
 ---
 date: 2026-10-10
 title: RxJS 实战示例
+description: "收录拖放实现、HTTP 请求处理、状态管理与 Type-Ahead 搜索 4 个 RxJS 真实场景案例。"
 ---
 
 # RxJS 实战示例

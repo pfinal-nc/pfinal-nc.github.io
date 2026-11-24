@@ -1,6 +1,7 @@
 ---
 date: 2026-10-10
 title: RxJS 进阶主题
+description: "涵盖自定义操作符与冷热流转换、Scheduler 选型、Marble Testing 单元测试，3 篇深入 RxJS 进阶实战。"
 ---
 
 # RxJS 进阶主题
