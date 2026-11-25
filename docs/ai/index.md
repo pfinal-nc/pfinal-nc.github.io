@@ -87,6 +87,7 @@ keywords:
 | 60 | 📨 MCP Events | [MCP Events in ChatGPT 实战：让 Agent 从“人找它”变成“事件推它”](/ai/mcp-events-chatgpt-event-driven-agent-2026) | 2026-10-14 |
 | 61 | 🔐 凭证隔离 | [别再把 token 塞进沙箱：给 coding agent 做凭证代理的 Go 实战](/ai/coding-agent-credential-isolation-broker-2026) | 2026-11-18 |
 | 62 | 🧰 工具规模化 | [Agent 工具规模化实战：3000 个工具 68 万 token，Go 实测检索降本](/ai/agent-tool-scale-deferred-tool-search-go-2026) | 2026-11-22 |
+| 63 | 🧬 轨迹编译 | [AI Agent 重复规划太贵：用 Go 编译轨迹成工作流实测](/ai/agent-trace-compile-workflow-replay-go-2026) | 2026-11-26 |
 
 **学习路径建议**：从 1→7 顺序阅读，1 是入门基础，3 和 5 是 2026 必备技能，7 是前沿探索。8 打通 Agent 到前端最后一公里，9 是 AI 编程工具链巅峰之作。10-12 是 MCP 协议生态最新实战，从协议设计到生产级集成完整覆盖。13-15 聚焦 AI 编程终端 Agent 的工程化、团队治理与协议规范迁移。18-19 进入 Agent 工程化治理与持久化执行的新阶段：18 用 SDD 治理 Vibe Coding 碎片化（GitHub Spec Kit 实战），19 详解 LangGraph 1.0 Durable Execution + Human-in-the-Loop 生产级架构（PostgresSaver/RedisSaver/HITL 中断恢复）。23-27 探索 AI Agent 信息架构新范式、编码 Agent 落地与企业级授权治理：23 Context Engineering 揭示从 Prompt Engineering 到全局信息架构的跃迁，24 X MCP Server 实现零配置托管式 150+ API 端点集成，25 是 Claude Sonnet 5 发布后的生产级 Agent 编码落地指南，26 详解 MCP 企业托管授权（EMA）与 ID-JAG 如何终结企业 MCP 部署的逐服务 OAuth 噩梦，27 深度解读 Bun 用 64 Claude Agent 从 Zig 迁移到 Rust 的 AI 大规模重写事件。30 紧跟 2026-07-28 规范，把 server-rendered UI 和长时任务这两个企业级扩展落地成可运行代码。
 
@@ -131,11 +132,11 @@ keywords:
 
 ## 📊 系列文章统计
 
-- **AI Agent 全栈**：62 篇（2026 年新增 60 篇，最新为 11-22 的 agent 工具规模化（deferred tool search + BM25 实测）、11-18 的 coding agent 凭证隔离与命令代理、11-17 的 Go 向量检索（归 Golang 目录）；含 AG-UI 前端集成、OpenCode 架构、Agent Skills、MCP 路线图、OpenClaw 实战、Harness Engineering、Codex CLI、MCP Spec RC、Safari MCP、AI 漏洞挖掘范式、GitHub Spec Kit、LangGraph 1.0、GPT-5.6 出口管制、Grok 4.5 编码 Agent、ACL 推理漂移评测、Context Engineering、X MCP Server、Claude Sonnet 5、Bun Rust 重写、Kimi K3、AI Agent 记忆投毒、MCP Apps/Tasks 扩展、Codex 0.145、Karpathy Opus 5、Copilot MCP 治理、MCP 记忆生态）
+- **AI Agent 全栈**：63 篇（2026 年新增 61 篇，最新为 11-26 的 agent 轨迹编译与工作流回放（Go 实测）、11-22 的 agent 工具规模化（deferred tool search + BM25 实测）、11-18 的 coding agent 凭证隔离与命令代理、11-17 的 Go 向量检索（归 Golang 目录）；含 AG-UI 前端集成、OpenCode 架构、Agent Skills、MCP 路线图、OpenClaw 实战、Harness Engineering、Codex CLI、MCP Spec RC、Safari MCP、AI 漏洞挖掘范式、GitHub Spec Kit、LangGraph 1.0、GPT-5.6 出口管制、Grok 4.5 编码 Agent、ACL 推理漂移评测、Context Engineering、X MCP Server、Claude Sonnet 5、Bun Rust 重写、Kimi K3、AI Agent 记忆投毒、MCP Apps/Tasks 扩展、Codex 0.145、Karpathy Opus 5、Copilot MCP 治理、MCP 记忆生态）
 - **RAG / LLM 应用**：8 篇
 - **模型接入实战**：3 篇（Claude Sonnet 4.6 + Gemini 3.5 Flash + Gemini Decisions API）
 - **LLM 评测与协议演进**：4 篇（RULER/MRCR 长上下文 + HSCodeComp 推理漂移 + Go Agent Eval 框架 + OWASP LLM 安全红队）
-- **累计 77 篇**，更新频率：每周 2-3 篇热点文章同步（最近一次更新：2026-11-22）
+- **累计 78 篇**，更新频率：每周 2-3 篇热点文章同步（最近一次更新：2026-11-26）
 
 ---
 
