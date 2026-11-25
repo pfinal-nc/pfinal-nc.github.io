@@ -4,7 +4,7 @@
         <title>PFinalClub Tech Blog</title>
         <link>https://friday-go.icu</link>
         <description>PFinalClub - 专注于 Golang, PHP, Python 的技术博客，分享微服务、云原生、架构设计等实战经验</description>
-        <lastBuildDate>Tue, 24 Nov 2026 06:15:45 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 25 Nov 2026 01:47:25 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-CN</language>
@@ -15,6 +15,123 @@
         </image>
         <copyright>Copyright (c) 2024-present, PFinalClub</copyright>
         <atom:link href="https://friday-go.icu/feed.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[gopsutil 读错容器内存：cgroup v2 指标校准实战]]></title>
+            <link>https://friday-go.icu/dev/backend/golang/gopsutil-cgroup-v2-container-metrics-calibration-2026</link>
+            <guid>https://friday-go.icu/dev/backend/golang/gopsutil-cgroup-v2-container-metrics-calibration-2026</guid>
+            <pubDate>Wed, 25 Nov 2026 07:00:00 GMT</pubDate>
+            <description><![CDATA[gopsutil 在容器里读到的是主机内存，不是你的 cgroup 限额。本文用 Go 1.27 + gopsutil v4.26.10 实测对比 /proc/meminfo 与 memory.max/current/stat，给出 workingSet 校准公式、GOMEMLIMIT 设置与踩坑清单。]]></description>
+            <content:encoded><![CDATA[gopsutil 在容器里读到的是主机内存，不是你的 cgroup 限额。本文用 Go 1.27 + gopsutil v4.26.10 实测对比 /proc/meminfo 与 memory.max/current/stat，给出 workingSet 校准公式、GOMEMLIMIT 设置与踩坑清单。]]></content:encoded>
+            <category>golang</category>
+            <category>gopsutil</category>
+            <category>cgroup</category>
+            <category>kubernetes</category>
+            <category>monitoring</category>
+        </item>
+        <item>
+            <title><![CDATA[Terraform plan 全绿 apply 炸：AWS Emulator 本地预演实测]]></title>
+            <link>https://friday-go.icu/devops/terraform-plan-apply-gap-aws-emulator-local-mock-go-2026</link>
+            <guid>https://friday-go.icu/devops/terraform-plan-apply-gap-aws-emulator-local-mock-go-2026</guid>
+            <pubDate>Tue, 24 Nov 2026 07:00:00 GMT</pubDate>
+            <description><![CDATA[Terraform plan 通过、apply 报错的断层无法靠静态检查填平。本文用 Go 自建 mock 端点与 AWS Emulator 两条路线实测：关掉账号探测后 plan 0 次服务端请求，apply 每资源 6 次、10 个资源 60 次，并给出 PR 阶段预演 apply 的流水线改造与踩坑。]]></description>
+            <content:encoded><![CDATA[Terraform plan 通过、apply 报错的断层无法靠静态检查填平。本文用 Go 自建 mock 端点与 AWS Emulator 两条路线实测：关掉账号探测后 plan 0 次服务端请求，apply 每资源 6 次、10 个资源 60 次，并给出 PR 阶段预演 apply 的流水线改造与踩坑。]]></content:encoded>
+            <category>terraform</category>
+            <category>devops</category>
+            <category>aws</category>
+            <category>iac</category>
+            <category>testing</category>
+        </item>
+        <item>
+            <title><![CDATA[Ghostscript -dSAFER 逃逸 CVE-2026-125396 上传链自检]]></title>
+            <link>https://friday-go.icu/security/engineering/upload2shell-ghostscript-dsafer-bypass-upload-chain-2026</link>
+            <guid>https://friday-go.icu/security/engineering/upload2shell-ghostscript-dsafer-bypass-upload-chain-2026</guid>
+            <pubDate>Mon, 23 Nov 2026 07:30:00 GMT</pubDate>
+            <description><![CDATA[一个改名成 .png 的 EPS 文件就能把不可信输入送进 Ghostscript 解释器。本文按 Upload2Shell（CVE-2026-125396）拆开 -dSAFER 边界为何被内存破坏绕过，实测 Pillow 与 ImageMagick 两条上传链，并给出可运行的 Go 自检脚本与加固清单。]]></description>
+            <content:encoded><![CDATA[一个改名成 .png 的 EPS 文件就能把不可信输入送进 Ghostscript 解释器。本文按 Upload2Shell（CVE-2026-125396）拆开 -dSAFER 边界为何被内存破坏绕过，实测 Pillow 与 ImageMagick 两条上传链，并给出可运行的 Go 自检脚本与加固清单。]]></content:encoded>
+            <category>security</category>
+            <category>cve</category>
+            <category>ghostscript</category>
+            <category>upload</category>
+            <category>hardening</category>
+        </item>
+        <item>
+            <title><![CDATA[Agent 工具规模化实战：3000 个工具 68 万 token，Go 实测检索降本]]></title>
+            <link>https://friday-go.icu/ai/agent-tool-scale-deferred-tool-search-go-2026</link>
+            <guid>https://friday-go.icu/ai/agent-tool-scale-deferred-tool-search-go-2026</guid>
+            <pubDate>Sun, 22 Nov 2026 07:30:00 GMT</pubDate>
+            <description><![CDATA[HubSpot 用 20 行 Java 就能起一个 agent，但工具涨到 3000 个时上下文被 schema 撑爆。本文拿 Go 实测三笔账：工具注入从 680k token 压到 94k、纯 Go BM25 检索召回 34/40、transcript 跨 provider 重映射 20/20 修复。]]></description>
+            <content:encoded><![CDATA[HubSpot 用 20 行 Java 就能起一个 agent，但工具涨到 3000 个时上下文被 schema 撑爆。本文拿 Go 实测三笔账：工具注入从 680k token 压到 94k、纯 Go BM25 检索召回 34/40、transcript 跨 provider 重映射 20/20 修复。]]></content:encoded>
+            <category>agent</category>
+            <category>mcp</category>
+            <category>go</category>
+            <category>llm</category>
+            <category>tooling</category>
+        </item>
+        <item>
+            <title><![CDATA[Go 1.27 goroutineleak：8 类阻塞场景判定与 gopsutil 看门狗]]></title>
+            <link>https://friday-go.icu/dev/backend/golang/go-1-27-goroutineleak-leak-detection-matrix-2026</link>
+            <guid>https://friday-go.icu/dev/backend/golang/go-1-27-goroutineleak-leak-detection-matrix-2026</guid>
+            <pubDate>Sat, 21 Nov 2026 07:00:00 GMT</pubDate>
+            <description><![CDATA[Go 1.27 的 goroutineleak profile 到底能把哪些阻塞判定为泄漏？本文用 Go 1.27.4 实测 8 类阻塞场景的判定结果、首查不完整的稳定性问题、采集耗时与 2.8KB/goroutine 的内存账，并给出一套基于 gopsutil 的看门狗接入代码与真实运行日志。]]></description>
+            <content:encoded><![CDATA[Go 1.27 的 goroutineleak profile 到底能把哪些阻塞判定为泄漏？本文用 Go 1.27.4 实测 8 类阻塞场景的判定结果、首查不完整的稳定性问题、采集耗时与 2.8KB/goroutine 的内存账，并给出一套基于 gopsutil 的看门狗接入代码与真实运行日志。]]></content:encoded>
+            <category>go</category>
+            <category>golang</category>
+            <category>concurrency</category>
+            <category>pprof</category>
+            <category>observability</category>
+        </item>
+        <item>
+            <title><![CDATA[kube-proxy IPVS 后端 1.40 移除：迁移 nftables 实战清单]]></title>
+            <link>https://friday-go.icu/devops/kube-proxy-ipvs-backend-removal-nftables-migration-2026</link>
+            <guid>https://friday-go.icu/devops/kube-proxy-ipvs-backend-removal-nftables-migration-2026</guid>
+            <pubDate>Fri, 20 Nov 2026 07:30:00 GMT</pubDate>
+            <description><![CDATA[kube-proxy 的 ipvs 后端自 1.35 弃用、1.40 移除，仍在用的集群必须在这个窗口内迁到 nftables 或 iptables。本文拆清 IPVS 与 Service API 的结构性错配，给出模式识别脚本、kubeadm 切换步骤与验证清单，并列出六个迁移坑。]]></description>
+            <content:encoded><![CDATA[kube-proxy 的 ipvs 后端自 1.35 弃用、1.40 移除，仍在用的集群必须在这个窗口内迁到 nftables 或 iptables。本文拆清 IPVS 与 Service API 的结构性错配，给出模式识别脚本、kubeadm 切换步骤与验证清单，并列出六个迁移坑。]]></content:encoded>
+            <category>devops</category>
+            <category>kubernetes</category>
+            <category>kube-proxy</category>
+            <category>nftables</category>
+            <category>网络</category>
+        </item>
+        <item>
+            <title><![CDATA[NoisyTCP(CVE-2026-99288) 复盘：11 年潜伏的内核 TCP 竞态与加固]]></title>
+            <link>https://friday-go.icu/security/engineering/noisytcp-cve-2026-99288-linux-tcp-race-hardening-2026</link>
+            <guid>https://friday-go.icu/security/engineering/noisytcp-cve-2026-99288-linux-tcp-race-hardening-2026</guid>
+            <pubDate>Thu, 19 Nov 2026 07:30:00 GMT</pubDate>
+            <description><![CDATA[潜伏 11 年的 Linux TCP 竞态 CVE-2026-99288 解禁：无需认证，只要能连上监听端口就能打崩内核，容器宿主会连带整机宕机。本文拆解 request_sock 复用 ABA 的成因，给出零依赖的 Go 暴露面巡检器与四套缓解方案，并说明关 SYN cookie 与单队列降级的代价。]]></description>
+            <content:encoded><![CDATA[潜伏 11 年的 Linux TCP 竞态 CVE-2026-99288 解禁：无需认证，只要能连上监听端口就能打崩内核，容器宿主会连带整机宕机。本文拆解 request_sock 复用 ABA 的成因，给出零依赖的 Go 暴露面巡检器与四套缓解方案，并说明关 SYN cookie 与单队列降级的代价。]]></content:encoded>
+            <category>安全</category>
+            <category>cve</category>
+            <category>linux</category>
+            <category>内核</category>
+            <category>应急响应</category>
+        </item>
+        <item>
+            <title><![CDATA[别再把 token 塞进沙箱：给 coding agent 做凭证代理的 Go 实战]]></title>
+            <link>https://friday-go.icu/ai/coding-agent-credential-isolation-broker-2026</link>
+            <guid>https://friday-go.icu/ai/coding-agent-credential-isolation-broker-2026</guid>
+            <pubDate>Wed, 18 Nov 2026 07:30:00 GMT</pubDate>
+            <description><![CDATA[coding agent 跑在一次性 VM 上很方便，但凭证怎么办？把 token 拷进沙箱、ssh -A 转发私钥，都是把权限一次性交出去。本文拆解 11 月这波"agent 不碰凭证"的讨论，给出四条路线对比、Go 实现的策略化命令代理与 HTTP 凭证注入反代，并实测代理层开销。]]></description>
+            <content:encoded><![CDATA[coding agent 跑在一次性 VM 上很方便，但凭证怎么办？把 token 拷进沙箱、ssh -A 转发私钥，都是把权限一次性交出去。本文拆解 11 月这波"agent 不碰凭证"的讨论，给出四条路线对比、Go 实现的策略化命令代理与 HTTP 凭证注入反代，并实测代理层开销。]]></content:encoded>
+            <category>ai agent</category>
+            <category>golang</category>
+            <category>凭证管理</category>
+            <category>安全</category>
+            <category>mcp</category>
+        </item>
+        <item>
+            <title><![CDATA[Go 向量检索实战：pgvector、VectorChord、Qdrant 三方对比与 RAG 接入]]></title>
+            <link>https://friday-go.icu/dev/backend/golang/go-vector-search-pgvector-qdrant-rag-2026</link>
+            <guid>https://friday-go.icu/dev/backend/golang/go-vector-search-pgvector-qdrant-rag-2026</guid>
+            <pubDate>Tue, 17 Nov 2026 07:30:00 GMT</pubDate>
+            <description><![CDATA[这周向量层又热了——VectorChord 分叉、对象存储内嵌向量库、记忆层讨论接连出现，而 Go 侧的实战资料最少。本文用 2 核实测精确扫描的崩塌曲线，给出 pgvector/VectorChord 与 Qdrant 两套可直接跑的 Go 接入代码、HNSW 参数调法与六个生产踩坑。]]></description>
+            <content:encoded><![CDATA[这周向量层又热了——VectorChord 分叉、对象存储内嵌向量库、记忆层讨论接连出现，而 Go 侧的实战资料最少。本文用 2 核实测精确扫描的崩塌曲线，给出 pgvector/VectorChord 与 Qdrant 两套可直接跑的 Go 接入代码、HNSW 参数调法与六个生产踩坑。]]></content:encoded>
+            <category>golang</category>
+            <category>向量数据库</category>
+            <category>rag</category>
+            <category>pgvector</category>
+            <category>qdrant</category>
+        </item>
         <item>
             <title><![CDATA[Gheist 复盘：GitHub Actions 日志变外泄通道，CI 凭证加固实战]]></title>
             <link>https://friday-go.icu/devops/gheist-github-actions-log-exfiltration-ci-hardening-2026</link>
@@ -425,103 +542,6 @@
             <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[讲解 Observable、Observer、Subject、操作符分类与 Subscription 内存管理等 RxJS 核心概念，5 篇建立知识框架。]]></description>
             <content:encoded><![CDATA[讲解 Observable、Observer、Subject、操作符分类与 Subscription 内存管理等 RxJS 核心概念，5 篇建立知识框架。]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[RxJS 入门]]></title>
-            <link>https://friday-go.icu/dev/backend/rxjs/introduction</link>
-            <guid>https://friday-go.icu/dev/backend/rxjs/introduction</guid>
-            <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[RxJS 简介与响应式编程入门指南，理解 Observable、Observer 与响应式数据流的基本概念。]]></description>
-            <content:encoded><![CDATA[RxJS 简介与响应式编程入门指南，理解 Observable、Observer 与响应式数据流的基本概念。]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[RxJS 操作符]]></title>
-            <link>https://friday-go.icu/dev/backend/rxjs/operators</link>
-            <guid>https://friday-go.icu/dev/backend/rxjs/operators</guid>
-            <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[收录 map/filter、merge/concat/combineLatest/forkJoin、switchMap/mergeMap/concatMap/exhaustMap 等 14 篇 RxJS 创建、转换、组合与扁平化操作符详解。]]></description>
-            <content:encoded><![CDATA[收录 map/filter、merge/concat/combineLatest/forkJoin、switchMap/mergeMap/concatMap/exhaustMap 等 14 篇 RxJS 创建、转换、组合与扁平化操作符详解。]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[RxJS 性能优化]]></title>
-            <link>https://friday-go.icu/dev/backend/rxjs/performance</link>
-            <guid>https://friday-go.icu/dev/backend/rxjs/performance</guid>
-            <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[讲解 shareReplay 等 RxJS 性能优化手段，减少重复订阅与内存开销。]]></description>
-            <content:encoded><![CDATA[讲解 shareReplay 等 RxJS 性能优化手段，减少重复订阅与内存开销。]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[RxJS 实战示例]]></title>
-            <link>https://friday-go.icu/dev/backend/rxjs/real-world-examples</link>
-            <guid>https://friday-go.icu/dev/backend/rxjs/real-world-examples</guid>
-            <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[收录拖放实现、HTTP 请求处理、状态管理与 Type-Ahead 搜索 4 个 RxJS 真实场景案例。]]></description>
-            <content:encoded><![CDATA[收录拖放实现、HTTP 请求处理、状态管理与 Type-Ahead 搜索 4 个 RxJS 真实场景案例。]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[随笔笔记 - AI 编程 工具使用 经验总结]]></title>
-            <link>https://friday-go.icu/thinking/notes</link>
-            <guid>https://friday-go.icu/thinking/notes</guid>
-            <pubDate>Fri, 09 Oct 2026 10:20:00 GMT</pubDate>
-            <description><![CDATA[日常开发中的随笔笔记：AI 编程助手实战（Vibe Coding、Qwen Code）、AI 工具应用（扣子 AI 公众号机器人）、工具使用技巧与经验总结。]]></description>
-            <content:encoded><![CDATA[日常开发中的随笔笔记：AI 编程助手实战（Vibe Coding、Qwen Code）、AI 工具应用（扣子 AI 公众号机器人）、工具使用技巧与经验总结。]]></content:encoded>
-            <category>thinking</category>
-            <category>methodology</category>
-            <category>ai</category>
-        </item>
-        <item>
-            <title><![CDATA[Docker Agent 实战：用 YAML 和 OCI Registry 构建、分发、运行你的 AI Agent 团队]]></title>
-            <link>https://friday-go.icu/ai/docker-agent-yaml-declarative-runtime-2026</link>
-            <guid>https://friday-go.icu/ai/docker-agent-yaml-declarative-runtime-2026</guid>
-            <pubDate>Fri, 09 Oct 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[Docker 官方推出 docker-agent CLI 插件：像写 Dockerfile 一样用 YAML 声明 AI Agent，像拉镜像一样从 OCI Registry 运行 Agent，原生集成 MCP 与多智能体委派。本文覆盖安装、YAML 编写、多 Agent 团队编排、工具集配置与生产化考量，全部附可运行配置。]]></description>
-            <content:encoded><![CDATA[Docker 官方推出 docker-agent CLI 插件：像写 Dockerfile 一样用 YAML 声明 AI Agent，像拉镜像一样从 OCI Registry 运行 Agent，原生集成 MCP 与多智能体委派。本文覆盖安装、YAML 编写、多 Agent 团队编排、工具集配置与生产化考量，全部附可运行配置。]]></content:encoded>
-            <category>ai</category>
-            <category>agent</category>
-            <category>mcp</category>
-            <category>docker</category>
-            <category>devops</category>
-        </item>
-        <item>
-            <title><![CDATA[区块链 C2 崛起：从 EtherHiding 看供应链攻击如何劫持 npm、Terraform 与 Go Modules]]></title>
-            <link>https://friday-go.icu/security/offensive/blockchain-c2-etherhiding-supply-chain-go-modules-2026</link>
-            <guid>https://friday-go.icu/security/offensive/blockchain-c2-etherhiding-supply-chain-go-modules-2026</guid>
-            <pubDate>Fri, 09 Oct 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[2026 年 10 月朝鲜关联组织将供应链攻击推向新高度：恶意代码藏在运行时逻辑里，C2 地址写在以太坊智能合约中。本文深度拆解 EtherHiding 区块链 C2 技术原理、indexed-btree 案例与 Go modules 攻击面，并给出开发者可落地的检测与防御方案。]]></description>
-            <content:encoded><![CDATA[2026 年 10 月朝鲜关联组织将供应链攻击推向新高度：恶意代码藏在运行时逻辑里，C2 地址写在以太坊智能合约中。本文深度拆解 EtherHiding 区块链 C2 技术原理、indexed-btree 案例与 Go modules 攻击面，并给出开发者可落地的检测与防御方案。]]></content:encoded>
-            <category>security</category>
-            <category>supply-chain</category>
-            <category>npm</category>
-            <category>golang</category>
-            <category>blockchain</category>
-            <category>malware</category>
-        </item>
-        <item>
-            <title><![CDATA[HTTP/2 正式进 Go 标准库：x/net/http2 的双实现架构与迁移实战]]></title>
-            <link>https://friday-go.icu/dev/backend/golang/go-stdlib-http2-migration-2026</link>
-            <guid>https://friday-go.icu/dev/backend/golang/go-stdlib-http2-migration-2026</guid>
-            <pubDate>Fri, 09 Oct 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[历经两年、11 个子任务，Go 终于把 HTTP/2 实现从 golang.org/x/net/http2 迁入标准库。本文拆解迁移的工程动机、双实现架构与 http2legacy 构建标签机制，并给出 ConfigureTransport 废弃后的完整迁移代码：Transport/Server 协议配置、h2c 启用、参数调优与迁移检查清单。]]></description>
-            <content:encoded><![CDATA[历经两年、11 个子任务，Go 终于把 HTTP/2 实现从 golang.org/x/net/http2 迁入标准库。本文拆解迁移的工程动机、双实现架构与 http2legacy 构建标签机制，并给出 ConfigureTransport 废弃后的完整迁移代码：Transport/Server 协议配置、h2c 启用、参数调优与迁移检查清单。]]></content:encoded>
-            <category>go</category>
-            <category>golang</category>
-            <category>http2</category>
-            <category>network</category>
-            <category>backend</category>
-        </item>
-        <item>
-            <title><![CDATA[AI Agent Skills over MCP 攻击面深度解析：当 'Skills' 成为新型攻击向量]]></title>
-            <link>https://friday-go.icu/security/offensive/ai-agent-skills-mcp-attack-surface-2026</link>
-            <guid>https://friday-go.icu/security/offensive/ai-agent-skills-mcp-attack-surface-2026</guid>
-            <pubDate>Thu, 08 Oct 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[MCP 2026 路线图中的 Skills over MCP 工作组提出用 Resources 机制分发可复用的 Agent Skills，每个 Skill 包含前置条件、副作用、重试逻辑。本文深度拆解 Skills 的安全模型、新型攻击向量（Skill Poisoning、Resource Hijacking、Retry Storm），并给出企业级防御方案。]]></description>
-            <content:encoded><![CDATA[MCP 2026 路线图中的 Skills over MCP 工作组提出用 Resources 机制分发可复用的 Agent Skills，每个 Skill 包含前置条件、副作用、重试逻辑。本文深度拆解 Skills 的安全模型、新型攻击向量（Skill Poisoning、Resource Hijacking、Retry Storm），并给出企业级防御方案。]]></content:encoded>
-            <category>security</category>
-            <category>ai</category>
-            <category>mcp</category>
-            <category>agent</category>
-            <category>penetration-testing</category>
-            <category>ai-security</category>
         </item>
     </channel>
 </rss>
