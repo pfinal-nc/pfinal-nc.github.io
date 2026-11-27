@@ -1,5 +1,5 @@
 ---
-title: Rust 1.98 新标准库 API 深度解析：Atomic::from_mut、strip_circumfix 与无分配格式化
+title: "Rust 1.98 新标准库 API 深度解析：Atomic::from_mut、strip_circumfix 与无分配格式化"
 date: 2026-08-19 00:00:00
 tags:
   - rust
