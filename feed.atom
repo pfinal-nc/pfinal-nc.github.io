@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://friday-go.icu</id>
     <title>PFinalClub Tech Blog</title>
-    <updated>2026-11-25T01:47:25.051Z</updated>
+    <updated>2026-11-27T01:14:12.758Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>PFinal南丞</name>
@@ -15,6 +15,40 @@
     <logo>https://friday-go.icu/logo.png</logo>
     <icon>https://friday-go.icu/favicon.ico</icon>
     <rights>Copyright (c) 2024-present, PFinalClub</rights>
+    <entry>
+        <title type="html"><![CDATA[NFS2root CVE-2026-99362：Go 盘点 nfsd 暴露面与 2049 加固]]></title>
+        <id>https://friday-go.icu/security/engineering/nfs2root-cve-2026-99362-nfsd-exposure-inventory-hardening-2026</id>
+        <link href="https://friday-go.icu/security/engineering/nfs2root-cve-2026-99362-nfsd-exposure-inventory-hardening-2026"/>
+        <updated>2026-11-27T07:00:00.000Z</updated>
+        <summary type="html"><![CDATA[nfsd 里躺了 12 年的预认证堆溢出（CVE-2026-99362，CVSS 9.8），一条到 2049 的 TCP 连接就能拿 root，默认的 NFSv4.1/4.2 正好中招。本文拆根因，用 Go 写暴露面盘点工具实测 4 种版本组合与扫描性能，再给升级、防火墙、检测三层加固顺序。]]></summary>
+        <content type="html"><![CDATA[nfsd 里躺了 12 年的预认证堆溢出（CVE-2026-99362，CVSS 9.8），一条到 2049 的 TCP 连接就能拿 root，默认的 NFSv4.1/4.2 正好中招。本文拆根因，用 Go 写暴露面盘点工具实测 4 种版本组合与扫描性能，再给升级、防火墙、检测三层加固顺序。]]></content>
+        <author>
+            <name>PFinal南丞</name>
+            <uri>https://friday-go.icu</uri>
+        </author>
+        <category label="security"/>
+        <category label="linux"/>
+        <category label="nfs"/>
+        <category label="golang"/>
+        <category label="kernel"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AI Agent 重复规划太贵：用 Go 编译轨迹成工作流实测]]></title>
+        <id>https://friday-go.icu/ai/agent-trace-compile-workflow-replay-go-2026</id>
+        <link href="https://friday-go.icu/ai/agent-trace-compile-workflow-replay-go-2026"/>
+        <updated>2026-11-26T07:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Agent 每天做同一件事却每天重新规划一遍，钱都花在重复思考上。本文拆解 Hotpath 的轨迹编译思路，并用 Go 实现记录→编译→回放三段式：20 条轨迹编成 5 步工作流，模型调用 2→1、prompt 省 62.7%，6 类漂移全部拦截。]]></summary>
+        <content type="html"><![CDATA[Agent 每天做同一件事却每天重新规划一遍，钱都花在重复思考上。本文拆解 Hotpath 的轨迹编译思路，并用 Go 实现记录→编译→回放三段式：20 条轨迹编成 5 步工作流，模型调用 2→1、prompt 省 62.7%，6 类漂移全部拦截。]]></content>
+        <author>
+            <name>PFinal南丞</name>
+            <uri>https://friday-go.icu</uri>
+        </author>
+        <category label="ai"/>
+        <category label="agent"/>
+        <category label="golang"/>
+        <category label="workflow"/>
+        <category label="cost"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[gopsutil 读错容器内存：cgroup v2 指标校准实战]]></title>
         <id>https://friday-go.icu/dev/backend/golang/gopsutil-cgroup-v2-container-metrics-calibration-2026</id>
@@ -714,30 +748,6 @@
         <updated>2026-10-10T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[收录 Go 单元测试最佳实践（Table-Driven、Mock、覆盖率）与 Testcontainers 集成测试实战两篇文章。]]></summary>
         <content type="html"><![CDATA[收录 Go 单元测试最佳实践（Table-Driven、Mock、覆盖率）与 Testcontainers 集成测试实战两篇文章。]]></content>
-        <author>
-            <name>PFinal南丞</name>
-            <uri>https://friday-go.icu</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[RxJS 进阶主题]]></title>
-        <id>https://friday-go.icu/dev/backend/rxjs/advanced-topics</id>
-        <link href="https://friday-go.icu/dev/backend/rxjs/advanced-topics"/>
-        <updated>2026-10-10T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[涵盖自定义操作符与冷热流转换、Scheduler 选型、Marble Testing 单元测试，3 篇深入 RxJS 进阶实战。]]></summary>
-        <content type="html"><![CDATA[涵盖自定义操作符与冷热流转换、Scheduler 选型、Marble Testing 单元测试，3 篇深入 RxJS 进阶实战。]]></content>
-        <author>
-            <name>PFinal南丞</name>
-            <uri>https://friday-go.icu</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[RxJS 核心概念]]></title>
-        <id>https://friday-go.icu/dev/backend/rxjs/core-concepts</id>
-        <link href="https://friday-go.icu/dev/backend/rxjs/core-concepts"/>
-        <updated>2026-10-10T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[讲解 Observable、Observer、Subject、操作符分类与 Subscription 内存管理等 RxJS 核心概念，5 篇建立知识框架。]]></summary>
-        <content type="html"><![CDATA[讲解 Observable、Observer、Subject、操作符分类与 Subscription 内存管理等 RxJS 核心概念，5 篇建立知识框架。]]></content>
         <author>
             <name>PFinal南丞</name>
             <uri>https://friday-go.icu</uri>

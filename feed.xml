@@ -4,7 +4,7 @@
         <title>PFinalClub Tech Blog</title>
         <link>https://friday-go.icu</link>
         <description>PFinalClub - 专注于 Golang, PHP, Python 的技术博客，分享微服务、云原生、架构设计等实战经验</description>
-        <lastBuildDate>Wed, 25 Nov 2026 01:47:25 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 27 Nov 2026 01:14:12 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-CN</language>
@@ -15,6 +15,32 @@
         </image>
         <copyright>Copyright (c) 2024-present, PFinalClub</copyright>
         <atom:link href="https://friday-go.icu/feed.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[NFS2root CVE-2026-99362：Go 盘点 nfsd 暴露面与 2049 加固]]></title>
+            <link>https://friday-go.icu/security/engineering/nfs2root-cve-2026-99362-nfsd-exposure-inventory-hardening-2026</link>
+            <guid>https://friday-go.icu/security/engineering/nfs2root-cve-2026-99362-nfsd-exposure-inventory-hardening-2026</guid>
+            <pubDate>Fri, 27 Nov 2026 07:00:00 GMT</pubDate>
+            <description><![CDATA[nfsd 里躺了 12 年的预认证堆溢出（CVE-2026-99362，CVSS 9.8），一条到 2049 的 TCP 连接就能拿 root，默认的 NFSv4.1/4.2 正好中招。本文拆根因，用 Go 写暴露面盘点工具实测 4 种版本组合与扫描性能，再给升级、防火墙、检测三层加固顺序。]]></description>
+            <content:encoded><![CDATA[nfsd 里躺了 12 年的预认证堆溢出（CVE-2026-99362，CVSS 9.8），一条到 2049 的 TCP 连接就能拿 root，默认的 NFSv4.1/4.2 正好中招。本文拆根因，用 Go 写暴露面盘点工具实测 4 种版本组合与扫描性能，再给升级、防火墙、检测三层加固顺序。]]></content:encoded>
+            <category>security</category>
+            <category>linux</category>
+            <category>nfs</category>
+            <category>golang</category>
+            <category>kernel</category>
+        </item>
+        <item>
+            <title><![CDATA[AI Agent 重复规划太贵：用 Go 编译轨迹成工作流实测]]></title>
+            <link>https://friday-go.icu/ai/agent-trace-compile-workflow-replay-go-2026</link>
+            <guid>https://friday-go.icu/ai/agent-trace-compile-workflow-replay-go-2026</guid>
+            <pubDate>Thu, 26 Nov 2026 07:00:00 GMT</pubDate>
+            <description><![CDATA[Agent 每天做同一件事却每天重新规划一遍，钱都花在重复思考上。本文拆解 Hotpath 的轨迹编译思路，并用 Go 实现记录→编译→回放三段式：20 条轨迹编成 5 步工作流，模型调用 2→1、prompt 省 62.7%，6 类漂移全部拦截。]]></description>
+            <content:encoded><![CDATA[Agent 每天做同一件事却每天重新规划一遍，钱都花在重复思考上。本文拆解 Hotpath 的轨迹编译思路，并用 Go 实现记录→编译→回放三段式：20 条轨迹编成 5 步工作流，模型调用 2→1、prompt 省 62.7%，6 类漂移全部拦截。]]></content:encoded>
+            <category>ai</category>
+            <category>agent</category>
+            <category>golang</category>
+            <category>workflow</category>
+            <category>cost</category>
+        </item>
         <item>
             <title><![CDATA[gopsutil 读错容器内存：cgroup v2 指标校准实战]]></title>
             <link>https://friday-go.icu/dev/backend/golang/gopsutil-cgroup-v2-container-metrics-calibration-2026</link>
@@ -526,22 +552,6 @@
             <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[收录 Go 单元测试最佳实践（Table-Driven、Mock、覆盖率）与 Testcontainers 集成测试实战两篇文章。]]></description>
             <content:encoded><![CDATA[收录 Go 单元测试最佳实践（Table-Driven、Mock、覆盖率）与 Testcontainers 集成测试实战两篇文章。]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[RxJS 进阶主题]]></title>
-            <link>https://friday-go.icu/dev/backend/rxjs/advanced-topics</link>
-            <guid>https://friday-go.icu/dev/backend/rxjs/advanced-topics</guid>
-            <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[涵盖自定义操作符与冷热流转换、Scheduler 选型、Marble Testing 单元测试，3 篇深入 RxJS 进阶实战。]]></description>
-            <content:encoded><![CDATA[涵盖自定义操作符与冷热流转换、Scheduler 选型、Marble Testing 单元测试，3 篇深入 RxJS 进阶实战。]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[RxJS 核心概念]]></title>
-            <link>https://friday-go.icu/dev/backend/rxjs/core-concepts</link>
-            <guid>https://friday-go.icu/dev/backend/rxjs/core-concepts</guid>
-            <pubDate>Sat, 10 Oct 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[讲解 Observable、Observer、Subject、操作符分类与 Subscription 内存管理等 RxJS 核心概念，5 篇建立知识框架。]]></description>
-            <content:encoded><![CDATA[讲解 Observable、Observer、Subject、操作符分类与 Subscription 内存管理等 RxJS 核心概念，5 篇建立知识框架。]]></content:encoded>
         </item>
     </channel>
 </rss>
