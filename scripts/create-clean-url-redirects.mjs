@@ -112,6 +112,14 @@ const redirectPages = [
   // 9.5 旧 /zh/golang/ 中文框架评测 slug → thinking/method 新树（同一篇）
   { from: 'zh/golang/2025年最佳Go-Web框架深度解析：资深开发者的选择指南', to: '/thinking/method/2025年最佳Go-Web框架深度解析：资深开发者的选择指南' },
   { from: 'zh/golang/2025年最佳Go-Web框架深度解析：资深开发者的选择指南/index', to: '/thinking/method/2025年最佳Go-Web框架深度解析：资深开发者的选择指南' },
+
+  // 10. 2026-11-27 排查补充：GSC 抽样发现的两条遗漏同源旧 slug（目标均线上 200，同一篇）
+  // 10.1 旧英文 kubectl CLI 教程 slug → 新树 Go 后端目录（同一篇）
+  { from: 'golang/building-kubectl-like-cli-tools-with-go', to: '/dev/backend/golang/用%20Go%20构建一个类%20kubectl%20的命令行工具' },
+  { from: 'golang/building-kubectl-like-cli-tools-with-go/index', to: '/dev/backend/golang/用%20Go%20构建一个类%20kubectl%20的命令行工具' },
+  // 10.2 旧 /zh/golang/ 守护进程中文 slug → thinking/method 新树（同一篇）
+  { from: 'zh/golang/Go语言实现守护进程的技术详解', to: '/thinking/method/Go语言实现守护进程的技术详解' },
+  { from: 'zh/golang/Go语言实现守护进程的技术详解/index', to: '/thinking/method/Go语言实现守护进程的技术详解' },
 ]
 
 function createRedirect(fromPath, toPath) {
