@@ -47,9 +47,9 @@ const redirectPages = [
   { from: 'zh/golang/Building-RAG-System-with-Golang-OpenAI-Vector-Database', to: '/ai/rag-system-architecture' },
   { from: 'zh/golang/Building-RAG-System-with-Golang-OpenAI-Vector-Database/index', to: '/ai/rag-system-architecture' },
 
-  // 5. 中文 slug 路径迁移：原文已下线，回落到 Go 分类 hub（原 to 目标是死链）
-  { from: 'golang/2025年最佳Go-Web框架深度解析：资深开发者的选择指南', to: '/dev/backend/golang/' },
-  { from: 'golang/2025年最佳Go-Web框架深度解析：资深开发者的选择指南/index', to: '/dev/backend/golang/' },
+  // 5. 中文 slug 路径迁移：原文已并入 thinking/method 新树（同源文章，不再回落到 hub）
+  { from: 'golang/2025年最佳Go-Web框架深度解析：资深开发者的选择指南', to: '/thinking/method/2025年最佳Go-Web框架深度解析：资深开发者的选择指南' },
+  { from: 'golang/2025年最佳Go-Web框架深度解析：资深开发者的选择指南/index', to: '/thinking/method/2025年最佳Go-Web框架深度解析：资深开发者的选择指南' },
 
   // 6. 历史已知 404（来自 8/7 GSC 报告）
   { from: 'zh/golang/Cleaner-Go-Code-in-2025-Compact-Error-Handling', to: '/dev/backend/golang/' },
@@ -88,6 +88,30 @@ const redirectPages = [
   // 旧 /database/ 分类 hub → 新数据库分类 hub
   { from: 'database', to: '/dev/system/database/' },
   { from: 'database/index', to: '/dev/system/database/' },
+
+  // 9. 2026-11-27 周五复盘：GSC 404/高曝光旧 slug 同源迁移补 301 型跳转
+  //    每条均已核验：目标新文章线上 200，旧路径与新树为同一篇文章。
+  // 9.1 旧「工具/」中文目录下的三篇 → 分别归入 notes / Tools / method 新树
+  { from: '工具/Qwen Code 30个使用小技巧', to: '/thinking/notes/Qwen%20Code%2030个使用小技巧' },
+  { from: '工具/Qwen Code 30个使用小技巧/index', to: '/thinking/notes/Qwen%20Code%2030个使用小技巧' },
+  { from: '工具/Arc 浏览器更符合开发者', to: '/Tools/Arc%20浏览器更符合开发者' },
+  { from: '工具/Arc 浏览器更符合开发者/index', to: '/Tools/Arc%20浏览器更符合开发者' },
+  { from: '工具/测试驱动开发 以测试为引擎的软件工程实践', to: '/thinking/method/测试驱动开发%20以测试为引擎的软件工程实践' },
+  { from: '工具/测试驱动开发 以测试为引擎的软件工程实践/index', to: '/thinking/method/测试驱动开发%20以测试为引擎的软件工程实践' },
+  // 9.2 旧顶层 /golang/ 文章 → 新树 Go 后端目录（同一篇）
+  { from: 'golang/Stop-The-World-其实没停下-Go-GC-的微暂停真相', to: '/dev/backend/golang/Stop-The-World-其实没停下-Go-GC-的微暂停真相' },
+  { from: 'golang/Stop-The-World-其实没停下-Go-GC-的微暂停真相/index', to: '/dev/backend/golang/Stop-The-World-其实没停下-Go-GC-的微暂停真相' },
+  // 9.3 旧英文 ThinkPHP slug（/php/ 与 /zh/php/ 两个变体）→ 新树 PHP 目录（同一篇）
+  { from: 'php/ThinkPHP-20-Years-of-Chinese-Web-Development', to: '/dev/backend/php/ThinkPHP近20年-中国Web开发的时代印记' },
+  { from: 'php/ThinkPHP-20-Years-of-Chinese-Web-Development/index', to: '/dev/backend/php/ThinkPHP近20年-中国Web开发的时代印记' },
+  { from: 'zh/php/ThinkPHP-20-Years-of-Chinese-Web-Development', to: '/dev/backend/php/ThinkPHP近20年-中国Web开发的时代印记' },
+  { from: 'zh/php/ThinkPHP-20-Years-of-Chinese-Web-Development/index', to: '/dev/backend/php/ThinkPHP近20年-中国Web开发的时代印记' },
+  // 9.4 旧英文 Fyne/Wails 对比 slug → 新树 wails 目录（同一篇）
+  { from: 'golang/Fyne-vs-Wails-Deep-Comparison-Choosing-the-Best-Go-Desktop-Framework', to: '/dev/backend/golang/wails/Fyne与Wails深度对比-选择最适合你的Go桌面应用框架' },
+  { from: 'golang/Fyne-vs-Wails-Deep-Comparison-Choosing-the-Best-Go-Desktop-Framework/index', to: '/dev/backend/golang/wails/Fyne与Wails深度对比-选择最适合你的Go桌面应用框架' },
+  // 9.5 旧 /zh/golang/ 中文框架评测 slug → thinking/method 新树（同一篇）
+  { from: 'zh/golang/2025年最佳Go-Web框架深度解析：资深开发者的选择指南', to: '/thinking/method/2025年最佳Go-Web框架深度解析：资深开发者的选择指南' },
+  { from: 'zh/golang/2025年最佳Go-Web框架深度解析：资深开发者的选择指南/index', to: '/thinking/method/2025年最佳Go-Web框架深度解析：资深开发者的选择指南' },
 ]
 
 function createRedirect(fromPath, toPath) {
